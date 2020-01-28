@@ -1,8 +1,8 @@
-# Pan-Cancer Metadata Database
+# Cognition Explorer Metadata Database
 -------------------------------------------------------
 
 
-[![CircleCI](https://circleci.com/gh/utsw-bicf/pandiseased.svg?style=svg)](https://circleci.com/gh/utsw-bicf/pandiseased)
+[![CircleCI](https://circleci.com/gh/utsw-bicf/cognitionexplorer.svg?style=svg)](https://circleci.com/gh/utsw-bicf/cognitionexplorer)
 
 ## Setting Up Your Environment
 
