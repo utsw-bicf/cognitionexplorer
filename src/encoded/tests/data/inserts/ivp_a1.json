@@ -1,0 +1,24 @@
+[
+    {
+        "reason": "1 To participate in a research study",
+        "refersc": "1 Self-referral",
+        "prestat": "2 Control or normal",
+        "prespart": "2 Longitudinal follow-up planned",
+        "source": "1 Primarily ADC-funded (Clinical Core, Satellite Core, or other ADC Core or project)",
+        "birthmo": 8,
+        "birthyr": 1928,
+        "sex": "2 Female",
+        "hispanic": "0 No (If No, SKIP TO QUESTION 9)",
+        "race": "1 White",
+        "racesec": "88 None reported",
+        "raceter": "88 None reported",
+        "primlang": "1 English",
+        "educ": 16,
+        "maristat": "1 Married",
+        "independ": "1 Able to live independently",
+        "residenc": "1 Single - or multi-family private residence (apartment, condo, house)",
+        "zip": 750,
+        "handed": "2 Right-handed",
+        "uuid":"824cd6fd-ec55-4336-94ff-5529e5b01ae7"
+      }
+]
