@@ -22,12 +22,9 @@ import re
 class Ivp_a1(Item):
     item_type = "ivp_a1"
     schema = load_schema("encoded:schemas/ivp_a1.json")
-    # name_key = "uuid"
     embedded = [
-        # "ihc",
     ]
     rev = {
-        # "ihc": ("Ihc", "pathology_report"),
     }
     audit_inherit = []
     set_status_up = []

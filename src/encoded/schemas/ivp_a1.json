@@ -37,6 +37,10 @@
             "$ref": "mixins.json#/submitted"
         },
         {
+            "$ref": "mixins.json#/standard_status"
+        },
+       
+        {
             "$ref": "mixins.json#/uuid"
         }
     ],
@@ -309,6 +313,9 @@
       }
     },
     "facets": {
+        "status": {
+            "title": "Status"
+        },
         "reason": {
             "title": "1. Primary reason for coming to ADC"
           },
