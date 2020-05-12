@@ -19,6 +19,7 @@
         "residenc": "1 Single - or multi-family private residence (apartment, condo, house)",
         "zip": 750,
         "handed": "2 Right-handed",
+        "status":"released",
         "uuid":"824cd6fd-ec55-4336-94ff-5529e5b01ae7"
       }
 ]
