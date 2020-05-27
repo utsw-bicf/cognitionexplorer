@@ -1,6 +1,6 @@
 {
   "title": "ivp_a1",
-  "description": "Schema for submitting UDS ivp_A1 form information.\r INSTRUCTIONS: This form is to be completed by intake interviewer based on ADC scheduling records, subject interview, medical records, and proxy co-participant report (as needed). For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form A1. Check only one box per question.Link to http://www.alz.washington.edu/NONMEMBER/UDS/DOCS/VER3/UDS3_ivp_guidebook.pdf",
+  "description": "Schema for submitting UDS ivp_A1 form information.\n INSTRUCTIONS: This form is to be completed by intake interviewer based on ADC scheduling records, subject interview, medical records, and proxy co-participant report (as needed). For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form A1. Check only one box per question.Link to http://www.alz.washington.edu/NONMEMBER/UDS/DOCS/VER3/UDS3_ivp_guidebook.pdf",
   "id": "/profiles/ivp_a1.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "identifyingProperties": [
@@ -113,18 +113,17 @@
     },
     "birthmo": {
       "title": "6a. Subject's month of birth(MM)",
-      "description": "Date can be submitted as MM/YYYY.",
+      "description": "Date can be submitted as MM.",
       "type": "integer",
       "minimum": 1,
       "maximum": 12
     },
     "birthyr": {
       "title": "6b. Subject's year of birth(YYYY)",
-      "description": "Date can be submitted as MM/YYYY.",
+      "description": "Date can be submitted as YYYY.",
       "type": "integer",
       "minimum": 1900,
-      "maximum": 2090,
-      "pattern": "[0-9][0-9][0-9][0-9]"
+      "maximum": 2090
     },
     "sex": {
       "title": "7. Subject's sex:",
