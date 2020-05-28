@@ -134,102 +134,113 @@
         }
     },
     "header": {
+       
+        "ptid": {
+            "title": "ADC Subject ID",
+            "description": "ADC subject ID,Patient ID,",
+            "type": "string",
+            "linkTo": "Master_id"
+        },
+       
         "formver": {
-            "title": "Form Version Number for UDS3",
+            "title": "Form Version Number",
             "description": "Form Version Number for UDS3",
             "type": "string",
             "enum": [
-                "3 3",
-                "3.1 B5 v3.1"
+                "3",
+                "B5 v3.1"
             ]
         },
-
+        "redcap_event_name": {
+            "title": "Event Name",
+            "description": "Redcap form type",
+            "type": "string",
+            "enum": [
+                "Initial Visit",
+                "Follow-up Visit"
+            ]
+        },
         "adcid": {
             "title": "Center ID",
             "description": "Center ID, ADC name",
             "type": "string",
             "enum": [
-                "2, Boston University",
-                "3, Case Western University",
-                "4, Columbia University",
-                "5, Duke University",
-                "6, Emory University",
-                "7, Massachusetts ADRC",
-                "8, Indiana University",
-                "9, Johns Hopkins University",
-                "10, Mayo Clinic",
-                "11, Mount Sinai",
-                "12, New York University",
-                "13, Northwestern University",
-                "14, Oregon Health & Science University",
-                "15, Rush University",
-                "16, University of California, Davis",
-                "17, University of California, Los Angeles",
-                "18, University of California, San Diego",
-                "19, University of Kentucky",
-                "20, University of Michigan",
-                "21, University of Pennsylvania",
-                "22, University of Pittsburgh",
-                "25, University of Texas Southwestern ",
-                "26, University of Washington",
-                "27, Washington University in Saint Louis",
-                "28, University of Alabama",
-                "30, University of Southern California",
-                "31, University of California, Irvine",
-                "32, Stanford University",
-                "33, Arizona ADC",
-                "34, University of Arkansas",
-                "35, University of California, San Francisco",
-                "36, Florida ADC",
-                "37, University of Wisconsin",
-                "38, University of Kansas",
-                "39, Stanford University #2 ",
-                "40, Yale University",
-                "41, Florida ADRC",
-                "42, Wake Forest University",
-                "43, Univeristy of Michigan ADC"
+                "Boston University",
+                "Case Western University",
+                "Columbia University",
+                "Duke University",
+                "Emory University",
+                "Massachusetts ADRC",
+                "Indiana University",
+                "Johns Hopkins University",
+                "Mayo Clinic",
+                "Mount Sinai",
+                "New York University",
+                "Northwestern University",
+                "Oregon Health & Science University",
+                "Rush University",
+                "University of California, Davis",
+                "University of California, Los Angeles",
+                "University of California, San Diego",
+                "University of Kentucky",
+                "University of Michigan",
+                "University of Pennsylvania",
+                "University of Pittsburgh",
+                "University of Texas Southwestern",
+                "University of Washington",
+                "Washington University in Saint Louis",
+                "University of Alabama",
+                "University of Southern California",
+                "University of California, Irvine",
+                "Stanford University",
+                "Arizona ADC",
+                "University of Arkansas",
+                "University of California, San Francisco",
+                "Florida ADC",
+                "University of Wisconsin",
+                "University of Kansas",
+                "Stanford University #2",
+                "Yale University",
+                "Florida ADRC",
+                "Wake Forest University",
+                "Univeristy of Michigan ADC"
             ]
         },
-        "subject_id":{
-            "title": "ADC Subject ID",
-            "description": "ADC subject ID, same as ptid(patientID)",
-            "type": "string",
-            "linkTo": "Master_id"
-        },
+       
         "visitmo": {
             "title": "Form date - month",
-            "description": "Form produced day of month",
-            "type": "number",
+            "description": "Patient visit date - month,sugest MM",
+            "type": "integer",
             "minimum": 1,
             "maximum": 12
         },
         "visitday": {
             "title": "Form date - day",
-            "description": "Form produced day of date",
-            "type": "number",
+            "description": "Patient visit date - day, suggest DD",
+            "type": "integer",
             "minimum": 1,
             "maximum": 31
         },
         "visityr": {
             "title": "Form date - year",
-            "description": "Form produced year of date",
-            "type": "number",
-            "minimum": 1900,
-            "maximum": 2090
+            "description": "Patient visit date - year, suggest YYYY",
+            "type": "integer",
+            "minimum": 1900
         },
         "visitnum": {
             "title": "ADC Visit #",
             "description": "Visit numbers used inside ADC system, for example, 1 for ivp, 2 for fvp...",
             "type": "string",
-            "pattern": "^([0-9][0-9]?[0-9]?)$"
+            "pattern": "^([0-9]?[0-9]?[0-9])$"
         },
         "initials": {
             "title": "Examiner's initials (xxx)",
             "description": "Examiner's initials,format XXX.",
             "type": "string",
-            "pattern": "^([A-Z][A-Z][A-Z]?)$"
+            "pattern": "^([A-Z].([A-Z].)?[A-Z].)$"
         }
     },
+
     "review": { 
         "review": {
             "title": "Characterization review",
