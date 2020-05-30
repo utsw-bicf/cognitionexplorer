@@ -2,6 +2,7 @@
     {
         "reason": "1 To participate in a research study",
         "refersc": "1 Self-referral",
+        "learned":"1 ADC advertisement (e.g., website, mailing, newspaper ad, community presentation)",
         "prestat": "2 Control or normal",
         "prespart": "2 Longitudinal follow-up planned",
         "source": "1 Primarily ADC-funded (Clinical Core, Satellite Core, or other ADC Core or project)",
@@ -57,6 +58,8 @@
   {
     "reason": "1 To participate in a research study",
     "refersc": "1 Self-referral",
+    "learned":"3 Conference or community event (e.g., community memory walk)",
+
     "prestat": "2 Control or normal",
     "prespart": "2 Longitudinal follow-up planned",
     "source": "1 Primarily ADC-funded (Clinical Core, Satellite Core, or other ADC Core or project)",
@@ -82,6 +85,8 @@
   {
     "reason": "2 To have a clinical evaluation",
     "refersc": "2 Non-professional contact (spouse/partner, relative, friend, coworker, etc.)",
+    "learned":"2 News article or TV program mentioning the ADC study",
+
     "prestat": "1 Case, patient, or proband",
     "prespart": "2 Longitudinal follow-up planned",
     "source": "1 Primarily ADC-funded (Clinical Core, Satellite Core, or other ADC Core or project)",
