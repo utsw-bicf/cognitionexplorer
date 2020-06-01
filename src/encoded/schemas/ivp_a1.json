@@ -389,7 +389,36 @@
           }
         }
       ]
-    }
+    },
+    {
+      "properties": {
+        "hispanic": {
+          "enum": [
+            "1 Yes"
+          ]
+        }
+      },
+      "required": [
+        "hispor"
+      ]
+    }, {
+      "properties": {
+          "hispanic": {
+              "enum": [
+                "0 No (If No, SKIP TO QUESTION 9)", 
+                "9 Unknown (If Unknown, SKIP TO QUESTION 9)"
+              ]
+          }
+      },
+     
+      "allOf": [
+          {
+              "not": {
+                  "required": ["hispor"]
+              }
+          }
+      ]
+  }  
   ],
   "facets": {
     "status": {
