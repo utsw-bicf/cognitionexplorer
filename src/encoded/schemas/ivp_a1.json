@@ -123,7 +123,8 @@
       "title": "6b. Subject's year of birth(YYYY)",
       "description": "Date can be submitted as YYYY.",
       "type": "integer",
-      "minimum": 1900
+      "minimum": 1900,
+      "maximum":2100
     },
     "sex": {
       "title": "7. Subject's sex:",
