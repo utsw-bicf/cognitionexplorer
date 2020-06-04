@@ -97,6 +97,18 @@
             ]
         }
     },
+    "form_status": {
+        "form_status": {
+            "title": "Form Status",
+            "type": "string",
+            "default": "inverified",
+            "enum" : [
+                "Incomplete",
+                "Complete",
+                "Inverified"
+            ]
+        }
+    },
     "shared_status": {
         "status": {
             "title": "Status",
