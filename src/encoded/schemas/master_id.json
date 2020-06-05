@@ -38,16 +38,21 @@
         "ptid": {
             "title": "ADC Subject ID",
             "description": "ADC Subject ID,Patient ID, Accession",
+            "comment": "CE personnel are allowed to set this value.",
             "type": "string",
             "permission": "import_items"
         },
         "utsw_mrn": {
             "title": "UTSW MRN",
-            "description": "",
-            "type": "string"
+            "description": "UTSouthwestern hospital Medical Number",
+            "comment": "CE personnel are allowed to set this value.",
+            "type": "string",
+            "permission": "import_items",
+            "uniqueKey": true
         },
         "pic": {
             "title": "Patient Initial Category",
+            "description": "Which catagory patient belong to",
             "type": "string",
             "enum": [
                 "ADC Core",
@@ -64,18 +69,22 @@
         },
         "first": {
             "title": "First Name",
+            "description": "Patient's first name.",
             "type": "string"
         },
         "mi": {
             "title": "Middle Initial",
+            "description": "Patient's middle name.",
             "type": "string"
         },
         "last": {
             "title": "Last Name",
+            "description": "Patient's last name.",
             "type": "string"
         },
         "gender": {
             "title": "Gender",
+            "description": "Patient's gender.",
             "type": "string",
             "enum": [
                 "Male",
@@ -84,18 +93,17 @@
         },
         "dob": {
             "title": "Date of Birth",
-            "description": "Patient's date of birth.Date can be submitted as mm/dd/yyyy.",
+            "description": "Patient's date of birth.Date can be submitted as MM/DD/YYYY.",
             "type": "string"
         },
         "ssnmed": {
             "title": "Social Security Number",
-            "description": "",
+            "description": "Patient's social secuirity number",
             "type": "string"
         },
         "edu": {
             "title": "Years of education",
             "description": "(Enter '99' if Unknown)",
-            "comment": "",
             "type": "integer"
         },
         "retard": {
@@ -109,14 +117,12 @@
         },
         "occ": {
             "title": "Occupation (during most of adult life)",
-            "description": "",
-            "comment": "",
+            "description": "Patient's occupation (during most of adult life)",
             "type": "string"
         },
         "lang": {
             "title": "Language to be used for testing",
             "description": "only one may be checked and used throughout the study",
-            "comment": "",
             "type": "string",
             "enum": [
                 "English",
@@ -126,8 +132,7 @@
         },
         "ethn": {
             "title": "Ethnicity (self-reported)/Is subject Spanish, Hispanic or Latino",
-            "description": "",
-            "comment": "",
+            "description": "Patient's ethnicity",
             "type": "string",
             "enum": [
                 "Yes",
@@ -137,8 +142,7 @@
         },
         "racial": {
             "title": "Racial Category",
-            "description": "",
-            "comment": "",
+            "description": "Patient's racial category. If select Other,  please specify in next question,'Other, please specify' field",
             "type": "string",
             "enum": [
                 "Alaskan Native",
@@ -154,14 +158,12 @@
         },
         "racial_other": {
             "title": "Other, please specify",
-            "description": "",
-            "comment": "",
+            "description": "Continue to fill this field if you select 'Other' in 'Racial category'",
             "type": "string"
         },
         "tribe": {
             "title": "What tribe?",
-            "description": "",
-            "comment": "",
+            "description": "Patient's tribe. If select Other, please specify in next question,'Other, please specify' field",
             "type": "string",
             "enum": [
                 "Cherokee",
@@ -173,41 +175,35 @@
         },
         "tribe_other": {
             "title": "Other, please specify",
-            "description": "",
+            "description": "Continue to fill this field if you select 'Other' in 'What tribe?'",
             "type": "string"
         },
         "percent": {
             "title": "% Native American",
-            "description": "",
+            "description": "If you are American Indian, what's the percentage as Native American?",
             "type": "string"
         },
         "p_info": {
-            "title": "contact information",
-            "description": "contact information",
+            "title": "Contact Information",
+            "description": "Patient's contact information",
             "type": "object",
             "properties": {
                 "p_addr1": {
                     "title": "Patient Address",
-                    "description": "",
-                    "comment": "",
+                    "description": "Patient's Address",
                     "type": "string"
                 },
                 "p_addr2": {
                     "title": "Apt #/ Unit #",
-                    "description": "",
-                    "comment": "",
+                    "description": "Patient's apartment Number",
                     "type": "string"
                 },
                 "p_city": {
                     "title": "City",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "p_state": {
                     "title": "State",
-                    "description": "",
-                    "comment": "",
                     "type": "string",
                     "enum": [
                         "AL",
@@ -265,26 +261,18 @@
                 },
                 "p_zip": {
                     "title": "Zip",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "p_phone": {
                     "title": "Phone",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "p_phoneext": {
                     "title": "Alt Phone",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "p_email": {
                     "title": "Email",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 }
             }
@@ -296,32 +284,22 @@
             "properties": {
                 "c_name": {
                     "title": "Name",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_relat": {
                     "title": "Relationship to patient",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_addr1": {
                     "title": "Address",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_addr2": {
                     "title": "Apt #/ Unit #",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_city": {
                     "title": "City",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_state": {
@@ -385,38 +363,26 @@
                 },
                 "c_zip": {
                     "title": "Zip",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_phone": {
                     "title": "Phone",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_phoneext": {
                     "title": "Phone ext",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_altphone": {
                     "title": "Alt Phone",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_altphoneext2": {
                     "title": "Alt Phone ext",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "c_email": {
                     "title": "Email",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 }
             }
@@ -428,32 +394,22 @@
             "properties": {
                 "alt_name": {
                     "title": "Name",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_relation": {
                     "title": "Relationship to patient",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_addr": {
                     "title": "Address",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_addr2": {
                     "title": "Apt #/ Unit #",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_city": {
                     "title": "City",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_state": {
@@ -517,81 +473,62 @@
                 },
                 "alt_zip": {
                     "title": "Zip",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_hmphone": {
                     "title": "Home Phone",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_hmphoneext": {
                     "title": "Home Phone ext",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_phone": {
                     "title": "Phone",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_altphone": {
                     "title": "Phone ext",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "alt_email": {
                     "title": "Email",
-                    "description": "",
-                    "comment": "",
-                    "type": "string"
+                    "type": "string",
+                    "anyOf":[{
+                        "format":"email"
+                    }]
+
                 }
             }
         },
         "lar_auth_repr": {
-            "title": "contact information",
-            "description": "contact information",
+            "title": "Legally Authorized Representative (LAR) ",
+            "description": "Legally Authorized Representative (LAR) contact information",
             "type": "object",
             "properties": {
                 "lar": {
                     "title": "Name",
                     "description": "(If same as Alternate Contact, write 'same')",
-                    "comment": "",
                     "type": "string"
                 },
                 "larrelation": {
                     "title": "Relationship to patient",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "laraddr": {
                     "title": "Address",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "laraddr2": {
                     "title": "Apt #/ Unit #",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "larcity": {
                     "title": "City",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
                 },
                 "larstate": {
                     "title": "State",
-                    "description": "",
-                    "comment": "",
                     "type": "string",
                     "enum": [
                         "AL",
@@ -649,43 +586,142 @@
                 },
                 "larzip": {
                     "title": "Zip",
-                    "description": "",
-                    "comment": "",
                     "type": "string"
+
                 },
                 "lar_hmphone": {
                     "title": "Home Phone",
-                    "description": "",
-                    "comment": "",
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
                 },
                 "lar_hmext": {
                     "title": "Home Phone ext",
-                    "description": "",
-                    "comment": "",
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+                    
+
                 },
                 "larphone": {
                     "title": "Alt Phone",
-                    "description": "",
-                    "comment": "",
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+
                 },
                 "laraltphone": {
                     "title": "Alt Phone ext",
-                    "description": "",
-                    "comment": "",
-                    "type": "string"
+                    "type": "string",
+                    "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
+
                 },
                 "laremail": {
                     "title": "Email",
-                    "description": "",
-                    "comment": "",
-                    "type": "string"
+                    "type": "string",
+                    "anyOf":[{
+                        "format":"email"
+                    }]
                 }
             }
         }
     },
+    "oneOf": [
+        {
+            "properties": {
+                "racial": {
+                    "enum": [
+                        "Other"
+                    ]
+                }
+            },
+            "required": [
+                "racial_other"
+            ]
+        },
+        {
+            "properties": {
+                "racial": {
+                    "enum": [
+                        "American Indian"
+                    ]
+                },
+                "tribe": {
+                    "enum": [
+                        "Cherokee",
+                        "Choctaw",
+                        "Creek",
+                        "Chickasaw"
+                    ]
+                }
+            },
+            "required": [
+                "tribe",
+                "percent"
+            ]
+        },
+        {
+            "properties": {
+                "racial": {
+                    "enum": [
+                        "American Indian"
+                    ]
+                },
+                "tribe": {
+                    "enum": [
+                        "Other"
+                    ]
+                }
+            },
+            "required": [
+                "tribe_other",
+                "percent"
+            ]
+        },
+        {
+            "properties": {
+                "racial": {
+                    "enum": [
+                        "Alaskan Native",
+                        "Black or African American",
+                        "White",
+                        "Asian",
+                        "Native Hawaiian or other Pacific Islander",
+                        "Multiple races",
+                        "Unknown or not reported"
+                    ]
+                }
+            },
+            "allOf": [
+                {
+                    "not": {
+                        "required": [
+                            "racial_other"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "tribe"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "tribe_other"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "percent"
+                        ]
+                    }
+                }
+            ]
+        }
+    ],
+
     "facets": {
         "status": {
             "title": "Status"

@@ -6,6 +6,10 @@
         "first": "New1",
         "last": "Zzztest",
         "dob": "2/1/1999",
+        "racial":"American Indian",
+        "tribe":"Other",
+        "tribe_other":"xxxx",
+        "percent":"30",
         "p_info": {
             "p_addr1": "TEST STREET",
             "p_city": "DALLAS",
@@ -16,6 +20,10 @@
         },
         "c_cont1": {
             "c_phone": "214-346-7878"
+        },
+        "lar_auth_repr":{
+            "lar_hmphone":"123-456-7890",
+            "laremail":"callme@hotmail.com"
         },
         "form_status": "Complete",
         "status": "released",
@@ -143,12 +151,14 @@
             "c_phone": "(972) 215-2525",
             "c_phoneext": "(972) 215-2525"
         },
+        
         "form_status": "Incomplete",
         "status": "in progress",
         "uuid": "0870a6da-caa5-4a65-8b96-f3eb1f810d21"
     },
     {
         "ptid": "16",
+        "pic": "ADC Core",
         "utsw_mrn": "71969306",
         "dob": "3/3/2020",
         "form_status": "Incomplete",
