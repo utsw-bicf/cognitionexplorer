@@ -133,6 +133,114 @@
             "permission": "import_items"
         }
     },
+    "header": {
+       
+        "ptid": {
+            "title": "ADC Subject ID",
+            "description": "ADC subject ID,Patient ID,",
+            "type": "string",
+            "linkTo": "Master_id"
+        },
+       
+        "formver": {
+            "title": "Form Version Number",
+            "description": "Form Version Number for UDS3",
+            "type": "string",
+            "enum": [
+                "3",
+                "B5 v3.1"
+            ]
+        },
+        "redcap_event_name": {
+            "title": "Event Name",
+            "description": "Redcap form type",
+            "type": "string",
+            "enum": [
+                "Initial Visit",
+                "Follow-up Visit"
+            ]
+        },
+        "adcid": {
+            "title": "Center ID",
+            "description": "Center ID, ADC name",
+            "type": "string",
+            "enum": [
+                "Boston University",
+                "Case Western University",
+                "Columbia University",
+                "Duke University",
+                "Emory University",
+                "Massachusetts ADRC",
+                "Indiana University",
+                "Johns Hopkins University",
+                "Mayo Clinic",
+                "Mount Sinai",
+                "New York University",
+                "Northwestern University",
+                "Oregon Health & Science University",
+                "Rush University",
+                "University of California, Davis",
+                "University of California, Los Angeles",
+                "University of California, San Diego",
+                "University of Kentucky",
+                "University of Michigan",
+                "University of Pennsylvania",
+                "University of Pittsburgh",
+                "University of Texas Southwestern",
+                "University of Washington",
+                "Washington University in Saint Louis",
+                "University of Alabama",
+                "University of Southern California",
+                "University of California, Irvine",
+                "Stanford University",
+                "Arizona ADC",
+                "University of Arkansas",
+                "University of California, San Francisco",
+                "Florida ADC",
+                "University of Wisconsin",
+                "University of Kansas",
+                "Stanford University #2",
+                "Yale University",
+                "Florida ADRC",
+                "Wake Forest University",
+                "Univeristy of Michigan ADC"
+            ]
+        },
+       
+        "visitmo": {
+            "title": "Form date - month",
+            "description": "Patient visit date - month,sugest MM",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+        },
+        "visitday": {
+            "title": "Form date - day",
+            "description": "Patient visit date - day, suggest DD",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 31
+        },
+        "visityr": {
+            "title": "Form date - year",
+            "description": "Patient visit date - year, suggest YYYY",
+            "type": "integer",
+            "minimum": 1900
+        },
+        "visitnum": {
+            "title": "ADC Visit #",
+            "description": "Visit numbers used inside ADC system, for example, 1 for ivp, 2 for fvp...",
+            "type": "string",
+            "pattern": "^([0-9]?[0-9]?[0-9])$"
+        },
+        "initials": {
+            "title": "Examiner's initials (xxx)",
+            "description": "Examiner's initials,format XXX.",
+            "type": "string",
+            "pattern": "^([A-Z].([A-Z].)?[A-Z].)$"
+        }
+    },
+
     "review": { 
         "review": {
             "title": "Characterization review",
