@@ -19,7 +19,8 @@ ORDER = [
     'image',
     'page',
     'master_id',
-
+    'ivp_a1',
+    'fvp_a1',
     'patient',
     'surgery',
     'medication',
