@@ -13,7 +13,7 @@ import re
 
 @collection(
     name="master_id",
-    unique_key="uuid",
+    unique_key="ptid",
     properties={
         "title": "Redcap_master_id Forms",
         "description": "Redcap master_id forms: Basic patient information pages",
@@ -22,6 +22,7 @@ import re
 class Master_id(Item):
     item_type = "master_id"
     schema = load_schema("encoded:schemas/master_id.json")
+    name_key = 'ptid'
     embedded = [
     ]
     rev = {
