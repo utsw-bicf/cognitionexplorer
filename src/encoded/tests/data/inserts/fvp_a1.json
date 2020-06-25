@@ -1,50 +1,58 @@
 [
-    {
-        "fu_birthmo": 4,
-        "fu_birthyr": 1940,
-        "fu_maristat": "2 Widowed",
-        "fu_sex": "2 Female",
-        "fu_livsitua": "1 Lives alone",
-        "fu_independ": "1 Able to live independently",
-        "fu_residenc": "1 Single-, or multi-family private residence (apartment, condo, house)",
-        "fu_zip": "752",
-        "status":"released",
-        "uuid":"4ccbb5c2-2230-484b-be1e-d87f6b98ff10"
-      },
-      {
-        "fu_birthmo": 10,
-        "fu_birthyr": 1955,
-        "fu_maristat": "1 Married",
-        "fu_sex": "1 Male",
-        "fu_livsitua": "2 Lives with one other person: a spouse or partner",
-        "fu_independ": "1 Able to live independently",
-        "fu_residenc": "1 Single-, or multi-family private residence (apartment, condo, house)",
-        "fu_zip": "754",
-        "status":"released",
-        "uuid":"a8654d87-951a-41db-831d-ef3c37090a72"
-      },
-      {
-        "fu_birthmo": 6,
-        "fu_birthyr": 1930,
-        "fu_maristat": "2 Widowed",
-        "fu_sex": "1 Male",
-        "fu_livsitua": "3 Lives with one other person: a relative, friend, or roomate",
-        "fu_independ": "3 Requires some assistance with basic activities",
-        "fu_residenc": "1 Single-, or multi-family private residence (apartment, condo, house)",
-        "fu_zip": "766",
-        "status":"released",
-        "uuid":"75fd609a-8275-40de-981f-36ed684eb249"
-      },
-      {
-        "fu_birthmo": 3,
-        "fu_birthyr": 1999,
-        "fu_maristat": "3 Divorced",
-        "fu_sex": "2 Female",
-        "fu_livsitua": "4 Lives with caregiver who is not spouse/partner, relative or friend",
-        "fu_independ": "2 Requires some assistance with complex activities",
-        "fu_residenc": "2 Retirement community or independent group living",
-        "fu_zip": "799",
-        "status":"released",
-        "uuid":"0aa6bb88-2287-4d66-b8a6-9a15745d8cb3"
-      }
+  {
+    "master_id": "c5189bbe-5b65-4b24-8927-1da40177230c",
+    "adcid": "25 University of Texas Southwestern",
+    "visitmo": 5,
+    "visitday": 23,
+    "visityr": 1980,
+    "visitnum": "1",
+    "initials": "JAR",
+    "header_complete": "Complete",
+    "fu_birthmo": 8,
+    "fu_birthyr": 1928,
+    "fu_maristat": "2 Widowed",
+    "fu_sex": "2 Female",
+    "fu_livsitua": "1 Lives alone",
+    "fu_independ": "1 Able to live independently",
+    "fu_residenc": "1 Single-, or multi-family private residence (apartment, condo, house)",
+    "fu_zip": "752",
+    "status": "released",
+    "uuid": "4ccbb5c2-2230-484b-be1e-d87f6b98ff10"
+  },
+  {
+    "fu_birthmo": 10,
+    "fu_birthyr": 1955,
+    "fu_maristat": "1 Married",
+    "fu_sex": "1 Male",
+    "fu_livsitua": "2 Lives with one other person: a spouse or partner",
+    "fu_independ": "1 Able to live independently",
+    "fu_residenc": "1 Single-, or multi-family private residence (apartment, condo, house)",
+    "fu_zip": "754",
+    "status": "released",
+    "uuid": "a8654d87-951a-41db-831d-ef3c37090a72"
+  },
+  {
+    "fu_birthmo": 6,
+    "fu_birthyr": 1930,
+    "fu_maristat": "2 Widowed",
+    "fu_sex": "1 Male",
+    "fu_livsitua": "3 Lives with one other person: a relative, friend, or roomate",
+    "fu_independ": "3 Requires some assistance with basic activities",
+    "fu_residenc": "1 Single-, or multi-family private residence (apartment, condo, house)",
+    "fu_zip": "766",
+    "status": "released",
+    "uuid": "75fd609a-8275-40de-981f-36ed684eb249"
+  },
+  {
+    "fu_birthmo": 3,
+    "fu_birthyr": 1999,
+    "fu_maristat": "3 Divorced",
+    "fu_sex": "2 Female",
+    "fu_livsitua": "4 Lives with caregiver who is not spouse/partner, relative or friend",
+    "fu_independ": "2 Requires some assistance with complex activities",
+    "fu_residenc": "2 Retirement community or independent group living",
+    "fu_zip": "799",
+    "status": "released",
+    "uuid": "0aa6bb88-2287-4d66-b8a6-9a15745d8cb3"
+  }
 ]

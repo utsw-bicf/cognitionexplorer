@@ -24,10 +24,13 @@ class Master_id(Item):
     schema = load_schema("encoded:schemas/master_id.json")
     name_key ='uuid'
     embedded = [
-        'ivp_a1'
+        'ivp_a1',
+        'fvp_a1'
     ]
     rev = {
         'ivp_a1': ('Ivp_a1', 'master_id'),
+        'fvp_a1': ('Fvp_a1', 'master_id'),
+
     }
 
     audit_inherit = []
@@ -44,3 +47,15 @@ class Master_id(Item):
     })
     def ivp_a1(self, request, ivp_a1):
         return paths_filtered_by_status(request, ivp_a1)
+    
+    
+    @calculated_property(schema={
+        "title": "Fvp_a1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_a1"
+        },
+    })
+    def fvp_a1(self, request, fvp_a1):
+        return paths_filtered_by_status(request, fvp_a1)
