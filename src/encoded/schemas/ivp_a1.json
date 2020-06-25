@@ -5,10 +5,10 @@
   "id": "/profiles/ivp_a1.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "identifyingProperties": [
-    "uuid","ptid"
+    "uuid","master_id"
   ],
   "required": [
-    "ptid","adcid","visitmo","visitday","visityr","visitnum","initials","header_complete",
+    "master_id","adcid","visitmo","visitday","visityr","visitnum","initials","header_complete",
     "reason",
     "refersc",
     "prestat",
@@ -55,13 +55,7 @@
     "schema_version": {
       "default": "1"
     },
-    "ptid": {
-      "title": "ADC Subject ID",
-      "description": "ADC subject ID,Patient ID,",
-      "type": "string",
-      "permission": "import_items",
-      "linkTo": "Master_id"
-  },
+
     "reason": {
       "title": "1. Primary reason for coming to ADC:",
       "type": "string",
