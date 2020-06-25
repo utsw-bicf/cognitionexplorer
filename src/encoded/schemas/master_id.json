@@ -5,7 +5,7 @@
     "id": "/profiles/master_id.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
-        "uuid"
+        "uuid","ptid"
     ],
     "required": [
         "ptid",
@@ -54,6 +54,7 @@
             "title": "Patient Initial Category",
             "description": "Which catagory patient belong to",
             "type": "string",
+            "pattern":"^[0-9]{6}$",
             "enum": [
                 "1 ADC Core",
                 "2 Consult",
