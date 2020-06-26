@@ -167,7 +167,7 @@
         },
         "ineduc": {
             "title": "7. Co-participant's years of education -- use the codes below to report the level achieved; if an attempted level is not completed, enter the number of years completed:",
-            "description": "12 = High school or GED,16 = Bachelor's degree,18 = Master's degree;20 = Doctorate, >20 = Other,99 = Unknown(0-36, 99=unknown)",
+            "description": "12 = High school or GED,16 = Bachelor's degree,18 = Master's degree;20 = Doctorate, >20 = Other,99 = Unknown(0-36, 99=unknown).If '21 >20', CONTINUE TO 'Years of education' and 'Type of degrees (eg. MPH, MBA, etc.)'.",
             "type": "string",
             "enum": [
                 "0 0",
@@ -220,8 +220,7 @@
         },
         "ineduc_type": {
             "title": "Type of degrees (eg. MPH, MBA, etc.)",
-            "description": "",
-            "comment": "",
+            "description": "Type of degrees if years of education is more than 20",
             "type": "string"
         },
         "inrelto": {
@@ -245,6 +244,7 @@
         },
         "inlivwth": {
             "title": "9. Does the co-participant live with the subject?",
+            "description": "If '0 No', CONTINUE TO 9a and 9b",
             "type": "string",
             "enum": [
                 "0 No",
