@@ -759,6 +759,44 @@
             "title": "What tribe?"
         }
     },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "pic": {
+            "title": "Patient Initial Category"
+        },
+        "gender": {
+            "title": "Gender"
+        },
+        "dob": {
+            "title": "Date of Birth"
+        },
+        "ssnmed": {
+            "title": "Social Security Number"
+        },
+        "edu": {
+            "title": "Years of education"
+        },
+        "retard": {
+            "title": "If less than 6 years of education does the subject have a work history sufficient to exclude mental retardation?"
+        },
+        "occ": {
+            "title": "Occupation (during most of adult life)"
+        },
+        "lang": {
+            "title": "Language to be used for testing"
+        },
+        "ethn": {
+            "title": "Ethnicity (self-reported)/Is subject Spanish, Hispanic or Latino"
+        },
+        "racial": {
+            "title": "Racial Category"
+        },
+        "tribe": {
+            "title": "What tribe?"
+        }
+    },
     "boost_values": {
         "status": 1.0,
         "ptid": 1.0,
