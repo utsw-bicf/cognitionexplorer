@@ -2,9 +2,7 @@
   {
     "master_id":"c5189bbe-5b65-4b24-8927-1da40177230c",
     "adcid": "25 University of Texas Southwestern",
-    "visitmo": 5,
-    "visitday": 20,
-    "visityr": 1979,
+    "visit_date":"1979-05-20",
     "visitnum": "1",
     "initials": "JAR",
     "header_complete": "Complete",
@@ -35,9 +33,9 @@
   {
     "master_id": "91a678dc-fc86-4405-8bd2-fbd9f0f594a0",
     "adcid": "25 University of Texas Southwestern",
-    "visitmo": 6,
-    "visitday": 24,
-    "visityr": 1986,
+  
+    "visit_date":"1986-06-24",
+
     "visitnum": "1",
     "initials": "JAR",
     "header_complete": "Complete",
@@ -73,9 +71,9 @@
   {
     "master_id": "674099eb-2bdd-483c-a48f-132b1857de72",
     "adcid": "25 University of Texas Southwestern",
-    "visitmo": 2,
-    "visitday": 11,
-    "visityr": 1992,
+ 
+    "visit_date":"1992-02-11",
+
     "visitnum": "1",
     "initials": "KMC",
     "header_complete": "Complete",
@@ -108,9 +106,9 @@
   {
     "master_id": "f6b0c759-7b6b-41be-9734-052ff7d578a3",
     "adcid": "25 University of Texas Southwestern",
-    "visitmo": 5,
-    "visitday": 20,
-    "visityr": 1997,
+ 
+    "visit_date":"1997-05-20",
+
     "visitnum": "1",
     "initials": "JAR",
     "header_complete": "Complete",

@@ -10,9 +10,7 @@
     "required": [
         "master_id",
         "adcid",
-        "visitmo",
-        "visitday",
-        "visityr",
+        "visit_date",
         "visitnum",
         "initials",
         "header_complete",
@@ -43,6 +41,9 @@
         },
         {
             "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
         },
         {
             "$ref": "mixins.json#/form_status"
@@ -358,7 +359,7 @@
             ]
         },
         {
-            "oneOf":[
+            "oneOf": [
                 {
                     "properties": {
                         "inrace": {
@@ -393,7 +394,7 @@
             ]
         },
         {
-            "oneOf":[
+            "oneOf": [
                 {
                     "properties": {
                         "inrasec": {
@@ -427,9 +428,9 @@
                     }
                 }
             ]
-        }, 
+        },
         {
-            "oneOf":[
+            "oneOf": [
                 {
                     "properties": {
                         "inrater": {
@@ -465,7 +466,7 @@
             ]
         },
         {
-            "oneOf":[
+            "oneOf": [
                 {
                     "properties": {
                         "ineduc": {
@@ -528,7 +529,7 @@
             ]
         },
         {
-            "oneOf":[
+            "oneOf": [
                 {
                     "properties": {
                         "inlivwth": {
