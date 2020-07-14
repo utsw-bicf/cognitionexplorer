@@ -93,7 +93,12 @@
         "dob": {
             "title": "Date of Birth",
             "description": "Patient's date of birth.Date can be submitted as MM/DD/YYYY.",
-            "type": "string"
+            "type": "string",
+            "anyOf": [
+                {
+                    "format": "date"
+                }
+            ]
         },
         "ssnmed": {
             "title": "Social Security Number",
