@@ -8,7 +8,7 @@
     "uuid","master_id"
   ],
   "required": [
-    "master_id","adcid","visitmo","visitday","visityr","visitnum","initials","header_complete",
+    "master_id","adcid","visit_date","visitnum","initials","header_complete",
     "reason",
     "refersc",
     "prestat",
@@ -43,6 +43,9 @@
     },
     {
       "$ref": "mixins.json#/header"
+    },
+    {
+      "$ref": "mixins.json#/examinier_initials"
     },
     {
       "$ref": "mixins.json#/form_status"
@@ -135,6 +138,18 @@
       "minimum": 1900,
       "maximum":2100
     },
+    "birth_date": {
+      "title": "Surgery date",
+      "description": "Date of surgery.",
+      "comment": "Date can be submitted as YYYY-MM-DD.",
+      "type": "string",
+      "anyOf": [
+          {
+              "format": "YYYY-MM"
+          }
+      ]
+     
+  },
     "sex": {
       "title": "7. Subject's sex:",
       "type": "string",
