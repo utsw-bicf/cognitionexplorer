@@ -1,16 +1,15 @@
 [
     {
-        
         "ptid": "000001",
         "utsw_mrn": "72648682",
         "pic": "1 ADC Core",
         "first": "John",
         "last": "What",
         "dob": "1928-02-01",
-        "racial":"4 American Indian",
-        "tribe":"5 Other",
-        "tribe_other":"xxxx",
-        "percent":"30",
+        "racial": "4 American Indian",
+        "tribe": "5 Other",
+        "tribe_other": "xxxx",
+        "percent": "30",
         "p_info": {
             "p_addr1": "TEST STREET",
             "p_city": "DALLAS",
@@ -22,9 +21,9 @@
         "c_cont1": {
             "c_phone": "214-346-7878"
         },
-        "lar_auth_repr":{
-            "lar_hmphone":"123-456-7890",
-            "laremail":"callme@hotmail.com"
+        "lar_auth_repr": {
+            "lar_hmphone": "123-456-7890",
+            "laremail": "callme@hotmail.com"
         },
         "form_status": "Complete",
         "status": "released",
@@ -41,7 +40,7 @@
         "ptid": "000010",
         "pic": "1 ADC Core",
         "first": "John",
-        "mi":"Ok",
+        "mi": "Ok",
         "last": "What",
         "gender": "1 Male",
         "dob": "1929-01-27",
@@ -155,7 +154,6 @@
             "c_phone": "(972) 215-2525",
             "c_phoneext": "(972) 215-2525"
         },
-        
         "form_status": "Complete",
         "status": "released",
         "uuid": "0870a6da-caa5-4a65-8b96-f3eb1f810d21"

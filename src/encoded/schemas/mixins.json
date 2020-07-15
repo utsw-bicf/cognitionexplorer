@@ -104,35 +104,12 @@
             "default": "Incomplete",
             "enum": [
                 "Incomplete",
-                "Inverified",
+                "Unverified",
                 "Complete"
             ]
         }
     },
-    "redcap_event_name": {
-        "redcap_event_name": {
-            "title": "Event Name",
-            "description": "Redcap form type",
-            "type": "string",
-            "enum": [
-                "Initial Visit",
-                "Follow-up Visit 1",
-                "Follow-up Visit 2",
-                "Follow-up Visit 3",
-                "Follow-up Visit 4",
-                "Follow-up Visit 5",
-                "Follow-up Visit 6",
-                "Follow-up Visit 7",
-                "Follow-up Visit 8",
-                "Follow-up Visit 9",
-                "Follow-up Visit 10",
-                "Follow-up Visit 11",
-                "Follow-up Visit 12",
-                "Follow-up Visit 13",
-                "Follow-up Visit 14"
-            ]
-        }
-    },
+   
     "shared_status": {
         "status": {
             "title": "Status",
@@ -248,7 +225,7 @@
         
         "visit_date": {
             "title": "Visit date",
-            "description": "Date of visit.",
+            "description": "Date of visit,format as YYYY-MM-DD",
             "comment": "Date can be submitted as YYYY-MM-DD.",
             "type": "string",
             "anyOf": [
