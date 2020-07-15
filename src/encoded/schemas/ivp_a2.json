@@ -1,6 +1,6 @@
 {
     "title": "NACC UNIFORM DATA SET (UDS) -INITIAL VISIT PACKET Form A2: Co-participant Demographics Link to NACC Coding Guidebook",
-    "description": "<i>INSTRUCTIONS: This form is to be completed by intake interviewer based on co-participant's report. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form A2. Check only <u>one</u> box per question<i>, Link to <a href='http://www.alz.washington.edu/NONMEMBER/UDS/DOCS/VER3/UDS3_ivp_guidebook.pdf' target='_blank'> NACC Coding Guidebook </a>",
+    "description": "INSTRUCTIONS: This form is to be completed by intake interviewer based on co-participant's report. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form A2. Check only one box per question, Link to NACC Coding Guidebook 'http://www.alz.washington.edu/NONMEMBER/UDS/DOCS/VER3/UDS3_ivp_guidebook.pdf'",
     "comment": "Schema for submitting UDS_ivp_A2 form information.",
     "id": "/profiles/ivp_a2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

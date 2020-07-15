@@ -5,7 +5,8 @@
     "id": "/profiles/master_id.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
-        "uuid","ptid"
+        "uuid",
+        "ptid"
     ],
     "required": [
         "ptid",
@@ -501,10 +502,11 @@
                 "alt_email": {
                     "title": "Email",
                     "type": "string",
-                    "anyOf":[{
-                        "format":"email"
-                    }]
-
+                    "anyOf": [
+                        {
+                            "format": "email"
+                        }
+                    ]
                 }
             }
         },
@@ -594,7 +596,6 @@
                 "larzip": {
                     "title": "Zip",
                     "type": "string"
-
                 },
                 "lar_hmphone": {
                     "title": "Home Phone",
@@ -605,27 +606,25 @@
                     "title": "Home Phone ext",
                     "type": "string",
                     "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
-                    
-
                 },
                 "larphone": {
                     "title": "Alt Phone",
                     "type": "string",
                     "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
-
                 },
                 "laraltphone": {
                     "title": "Alt Phone ext",
                     "type": "string",
                     "pattern": "^[0-9]{3}-[0-9]{3}-[0-9]{4}$"
-
                 },
                 "laremail": {
                     "title": "Email",
                     "type": "string",
-                    "anyOf":[{
-                        "format":"email"
-                    }]
+                    "anyOf": [
+                        {
+                            "format": "email"
+                        }
+                    ]
                 }
             }
         }
@@ -728,7 +727,6 @@
             ]
         }
     ],
-
     "facets": {
         "status": {
             "title": "Status"
