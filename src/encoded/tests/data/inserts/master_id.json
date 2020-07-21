@@ -1,16 +1,15 @@
 [
     {
-        
         "ptid": "000001",
         "utsw_mrn": "72648682",
         "pic": "1 ADC Core",
         "first": "John",
         "last": "What",
-        "dob": "2/1/1928",
-        "racial":"4 American Indian",
-        "tribe":"5 Other",
-        "tribe_other":"xxxx",
-        "percent":"30",
+        "dob": "1928-02-01",
+        "racial": "4 American Indian",
+        "tribe": "5 Other",
+        "tribe_other": "xxxx",
+        "percent": "30",
         "p_info": {
             "p_addr1": "TEST STREET",
             "p_city": "DALLAS",
@@ -22,16 +21,16 @@
         "c_cont1": {
             "c_phone": "214-346-7878"
         },
-        "lar_auth_repr":{
-            "lar_hmphone":"123-456-7890",
-            "laremail":"callme@hotmail.com"
+        "lar_auth_repr": {
+            "lar_hmphone": "123-456-7890",
+            "laremail": "callme@hotmail.com"
         },
         "form_status": "Complete",
         "status": "released",
         "uuid": "c5189bbe-5b65-4b24-8927-1da40177230c"
     },
     {
-        "ptid": "000002",
+        "ptid": "090002",
         "pic": "1 ADC Core",
         "form_status": "Complete",
         "status": "released",
@@ -41,10 +40,10 @@
         "ptid": "000010",
         "pic": "1 ADC Core",
         "first": "John",
-        "mi":"Ok",
+        "mi": "Ok",
         "last": "What",
         "gender": "1 Male",
-        "dob": "1/27/1929",
+        "dob": "1929-01-27",
         "edu": 14,
         "retard": "0 No",
         "occ": "teacher",
@@ -65,7 +64,7 @@
         "mi": "M",
         "last": "The cat",
         "gender": "1 Male",
-        "dob": "6/17/1952",
+        "dob": "1952-06-17",
         "edu": 14,
         "retard": "0 No",
         "occ": "guard",
@@ -98,7 +97,7 @@
         "mi": "M",
         "last": "Moore",
         "gender": "1 Male",
-        "dob": "1/20/1938",
+        "dob": "1938-01-20",
         "edu": 16,
         "occ": "Mechanic",
         "lang": "1 English",
@@ -131,7 +130,7 @@
         "first": "Al",
         "last": "Pacino",
         "gender": "1 Male",
-        "dob": "2/2/1945",
+        "dob": "1945-02-02",
         "edu": 16,
         "occ": "Actor",
         "lang": "1 English",
@@ -155,7 +154,6 @@
             "c_phone": "(972) 215-2525",
             "c_phoneext": "(972) 215-2525"
         },
-        
         "form_status": "Complete",
         "status": "released",
         "uuid": "0870a6da-caa5-4a65-8b96-f3eb1f810d21"
@@ -164,7 +162,7 @@
         "ptid": "000016",
         "pic": "1 ADC Core",
         "utsw_mrn": "71969306",
-        "dob": "3/3/2020",
+        "dob": "2020-02-02",
         "form_status": "Incomplete",
         "status": "in progress",
         "uuid": "52845f96-238d-4f61-8dbd-97f608baad3e"
