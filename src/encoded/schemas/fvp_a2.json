@@ -379,6 +379,51 @@
                             "oneOf": [
                                 {
                                     "properties": {
+                                        
+                                        "fu_inhisp": {
+                                            "enum": [
+                                                "1 Yes"
+                                            ]
+                                        },
+                                        "fu_inhispor": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inhisporx"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inhisp": {
+                                            "enum": [
+                                                "1 Yes"
+                                            ]
+                                        },
+                                        "fu_inhispor": {
+                                            "enum": [
+                                                "1 Mexican/Chicano/Mexican-American",
+                                                "2 Puerto Rican",
+                                                "3 Cuban",
+                                                "4 Dominican",
+                                                "5 Central American",
+                                                "6 South American",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "not": {
+                                        "required": [
+                                            "fu_inhispox"
+                                        ]
+                                    }
+                                    
+                                },
+                                {
+                                    "properties": {
                                         "fu_inhisp": {
                                             "enum": [
                                                 "0 No (If No, SKIP TO QUESTION 5)",
@@ -402,64 +447,9 @@
                                             }
                                         }
                                     ]
-                                },
-                                {
-                                    "properties": {
-                                        
-                                        "fu_inhisp": {
-                                            "enum": [
-                                                "1 Yes"
-                                            ]
-                                        }
-                                        
-                                    },
-                                    "required": [
-                                        "fu_inhispor"
-                                    ]
-                                   
                                 }
                                
-                            ]
-                        },
-                        {
-                            "oneOf": [
                                
-                                {
-                                    "properties": {
-                                        
-                                       
-                                        "fu_inhispor": {
-                                            "enum": [
-                                                "1 Mexican/Chicano/Mexican-American",
-                                                "2 Puerto Rican",
-                                                "3 Cuban",
-                                                "4 Dominican",
-                                                "5 Central American",
-                                                "6 South American",
-                                                "99 Unknown"
-                                            ]
-                                        }
-                                    },
-                                    "not": {
-                                        "required": [
-                                            "fu_inhispox"
-                                        ]
-                                    }
-                                    
-                                },
-                                {
-                                    "properties": {
-                                        
-                                        "fu_inhispor": {
-                                            "enum": [
-                                                "50 Other (specify)"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "fu_inhisporx"
-                                    ]
-                                }
                             ]
                         },
                         {
