@@ -274,7 +274,124 @@
             ]
         }
     },
-    
+  
+    "allOf":[
+        {
+            "oneOf": [
+                {
+                    "properties": {
+                        "fu_newinf": {
+                            "enum": [
+                                "0 No (If No, SKIP TO QUESTION 9)"
+                            ]
+                        }
+                    },
+                    "allOf": [
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inhisp"
+                                ]
+                            }
+                        },
+                       
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inrace"
+                                ]
+                            }
+                        },
+                       
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inrasec"
+                                ]
+                            }
+                        },
+                        
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inrater"
+                                ]
+                            }
+                        },
+                       
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_ineduc"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "properties": {
+                        "fu_newinf": {
+                            "enum": [
+                                "1 Yes"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "fu_inhisp",
+                        "fu_inrace",
+                        "fu_inrasec",
+                        "fu_inrater",
+                        "fu_ineduc"
+                    ]
+                   
+                    
+                }
+            ]
+        },
+        {
+            "oneOf": [
+                {
+                    "properties": {
+                        "fu_inlivwth": {
+                            "enum": [
+                                "1 Yes (If Yes, SKIP TO QUESTION 11)"
+                            ]
+                        }
+                    },
+                    "allOf": [
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_invisits"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_incalls"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "properties": {
+                        "fu_inlivwth": {
+                            "enum": [
+                                "0 No"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "fu_invisits",
+                        "fu_incalls"
+                    ]
+                }
+            ]
+        }
+    ],
+   
     "facets": {
         "status": {
             "title": "Status"
