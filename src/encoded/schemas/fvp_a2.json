@@ -734,6 +734,69 @@
         }
     },
     "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_inbirmo": {
+            "title": "1a. Co-participant's month of birth"
+        },
+        "fu_inbiryr": {
+            "title": "1b. Co-participant's year of birth"
+        },
+        "fu_insex": {
+            "title": "2. Co-participant's sex:"
+        },
+        "fu_newinf": {
+            "title": "3. Is this a new co-participant -- i.e., one who was not a co-participant at any past UDS visit?"
+        },
+        "fu_inhisp": {
+            "title": "4. Does the co-participant report being of Hispanic/Latino ethnicity (i.e., having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "fu_inhispor": {
+            "title": "4a. If yes, what are the co-participant's reported origins?"
+        },
+        "fu_inhispox": {
+            "title": "4a1. If other ethnic origins please specify:"
+        },
+        "fu_inrace": {
+            "title": "5. What does co-participant report as his or her race?"
+        },
+        "fu_inracex": {
+            "title": "5a.  If other race, please specify:"
+        },
+        "fu_inrasec": {
+            "title": "6. What additional race does the co-participant report?"
+        },
+        "fu_inrasecx": {
+            "title": "6a. If other 2nd race, please specify:"
+        },
+        "fu_inrater": {
+            "title": "7. What additional race, beyond those reported in questions 5 and 6, does the co-participant report?"
+        },
+        "fu_inraterx": {
+            "title": "7a. If other 3rd race, please specify:"
+        },
+        "fu_ineduc": {
+            "title": "8. Co-participant's years of education -- use the codes below to report the level achieved; if an attempted level is not completed, enter the number of years completed:"
+        },
+        "fu_inrelto": {
+            "title": "9. What is co-participant's relationship to the subject?"
+        },
+        "fu_inknown": {
+            "title": "9a. How long has the co-participant known the subject?"
+        },
+        "fu_inlivwth": {
+            "title": "10. Does the co-participant live with the subject?"
+        },
+        "fu_invisits": {
+            "title": "10a. If no, approximate frequency of in-person visits:"
+        },
+        "fu_incalls": {
+            "title": "10b. If no, approximate frequency of telephone contact:"
+        },
+        "fu_inrely": {
+            "title": "11. Is there a question about the co-participant's reliability?"
+        }
     },
     "boost_values": {
         "fu_inbirmo": 1.0,
