@@ -294,7 +294,20 @@
                                 ]
                             }
                         },
-                       
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inhispor"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inhispox"
+                                ]
+                            }
+                        },
                         {
                             "not": {
                                 "required": [
@@ -302,7 +315,13 @@
                                 ]
                             }
                         },
-                       
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inracex"
+                                ]
+                            }
+                        },
                         {
                             "not": {
                                 "required": [
@@ -310,7 +329,13 @@
                                 ]
                             }
                         },
-                        
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inrasecx"
+                                ]
+                            }
+                        },
                         {
                             "not": {
                                 "required": [
@@ -318,7 +343,13 @@
                                 ]
                             }
                         },
-                       
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inraterx"
+                                ]
+                            }
+                        },
                         {
                             "not": {
                                 "required": [
@@ -342,8 +373,263 @@
                         "fu_inrasec",
                         "fu_inrater",
                         "fu_ineduc"
+                    ],
+                    "allOf": [
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                        "fu_inhisp": {
+                                            "enum": [
+                                                "0 No (If No, SKIP TO QUESTION 5)",
+                                                "9 Unknown (If Unknown, SKIP TO QUESTION 5)"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inhispor"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inhispox"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inhisp": {
+                                            "enum": [
+                                                "1 Yes"
+                                            ]
+                                        }
+                                        
+                                    },
+                                    "required": [
+                                        "fu_inhispor"
+                                    ]
+                                   
+                                }
+                               
+                            ]
+                        },
+                        {
+                            "oneOf": [
+                               
+                                {
+                                    "properties": {
+                                        
+                                       
+                                        "fu_inhispor": {
+                                            "enum": [
+                                                "1 Mexican/Chicano/Mexican-American",
+                                                "2 Puerto Rican",
+                                                "3 Cuban",
+                                                "4 Dominican",
+                                                "5 Central American",
+                                                "6 South American",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "not": {
+                                        "required": [
+                                            "fu_inhispox"
+                                        ]
+                                    }
+                                    
+                                },
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inhispor": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inhisporx"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                       
+                                        "fu_inrace": {
+                                            "enum": [
+                                                "1 White",
+                                                "2 Black or African American",
+                                                "3 American Indian or Alaska Native",
+                                                "4 Native Hawaiian or Other Pacific Islander",
+                                                "5 Asian",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inracex"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inrace": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inracex"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inrasec": {
+                                            "enum": [
+                                                "1 White",
+                                                "2 Black or African American",
+                                                "3 American Indian or Alaska Native",
+                                                "4 Native Hawaiian or Other Pacific Islander",
+                                                "5 Asian",
+                                                "88 None Reported",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inrasecx"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                       
+                                        "fu_inrasec": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inrasecx"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                       
+                                        "fu_inrater": {
+                                            "enum": [
+                                                "1 White",
+                                                "2 Black or African American",
+                                                "3 American Indian or Alaska Native",
+                                                "4 Native Hawaiian or other Pacific Islander",
+                                                "5 Asian",
+                                                "88 None Reported",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inraterx"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inrater": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inraterx"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                        "fu_inlivwth": {
+                                            "enum": [
+                                                "1 Yes (If Yes, SKIP TO QUESTION 11)"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_invisits"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_incalls"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        "fu_inlivwth": {
+                                            "enum": [
+                                                "0 No"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_invisits",
+                                        "fu_incalls"
+                                    ]
+                                }
+                            ]
+                        }
                     ]
-                   
                     
                 }
             ]
