@@ -392,7 +392,7 @@
                                         }
                                     },
                                     "required": [
-                                        "fu_inhisporx"
+                                        "fu_inhispox"
                                     ]
                                 },
                                 {
@@ -576,49 +576,8 @@
                                     ]
                                 }
                             ]
-                        },
-                        {
-                            "oneOf": [
-                                {
-                                    "properties": {
-                                        "fu_inlivwth": {
-                                            "enum": [
-                                                "1 Yes (If Yes, SKIP TO QUESTION 11)"
-                                            ]
-                                        }
-                                    },
-                                    "allOf": [
-                                        {
-                                            "not": {
-                                                "required": [
-                                                    "fu_invisits"
-                                                ]
-                                            }
-                                        },
-                                        {
-                                            "not": {
-                                                "required": [
-                                                    "fu_incalls"
-                                                ]
-                                            }
-                                        }
-                                    ]
-                                },
-                                {
-                                    "properties": {
-                                        "fu_inlivwth": {
-                                            "enum": [
-                                                "0 No"
-                                            ]
-                                        }
-                                    },
-                                    "required": [
-                                        "fu_invisits",
-                                        "fu_incalls"
-                                    ]
-                                }
-                            ]
                         }
+                        
                     ]
                     
                 }
