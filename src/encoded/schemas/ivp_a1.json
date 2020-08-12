@@ -11,7 +11,7 @@
   "required": [
     "master_id",
     "adcid",
-    "visit_date",
+    "visdate",
     "visitnum",
     "initials",
     "header_complete",
