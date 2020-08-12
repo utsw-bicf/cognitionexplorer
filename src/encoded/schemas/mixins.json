@@ -223,7 +223,7 @@
             ]
         },
         
-        "visit_date": {
+        "visdate": {
             "title": "Visit date",
             "description": "Date of visit,format as YYYY-MM-DD",
             "comment": "Date can be submitted as YYYY-MM-DD.",
