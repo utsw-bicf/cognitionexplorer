@@ -6,10 +6,10 @@
   "$schema": "http://json-schema.org/draft-04/schema#",
   "identifyingProperties": [
     "uuid",
-    "master_id"
+    "ptid"
   ],
   "required": [
-    "master_id",
+    "ptid",
     "adcid",
     "visdate",
     "visitnum",
@@ -747,7 +747,7 @@
     }
   },
   "boost_values": {
-    "master_id": 1.0,
+    "ptid": 1.0,
     "reason": 1.0,
     "refersc": 1.0,
     "prestat": 1.0,

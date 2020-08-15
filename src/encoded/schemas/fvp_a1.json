@@ -5,10 +5,10 @@
   "id": "/profiles/fvp_a1.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "identifyingProperties": [
-    "uuid"
+    "uuid","ptid"
   ],
   "required": [
-    "master_id",
+    "ptid",
     "adcid",
     "visdate",
     "visitnum",
@@ -178,7 +178,7 @@
     }
   },
   "boost_values": {
-    "master_id": 1.0,
+    "ptid": 1.0,
     "fu_maristat": 1.0,
     "fu_sex": 1.0,
     "fu_livsitua": 1.0,

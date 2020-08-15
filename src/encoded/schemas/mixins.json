@@ -159,11 +159,12 @@
         }
     },
     "header": {
-        "master_id": {
+        "ptid": {
             "title": "ADC Subject ID",
             "description": "ADC subject ID,Patient ID,",
             "type": "string",
             "permission": "import_items",
+            "uniqueKey": true,
             "linkTo": "Master_id"
             
         },

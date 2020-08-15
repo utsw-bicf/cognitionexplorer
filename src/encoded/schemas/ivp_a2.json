@@ -5,10 +5,11 @@
     "id": "/profiles/ivp_a2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
-        "uuid"
+        "uuid",
+        "ptid"
     ],
     "required": [
-        "master_id",
+        "ptid",
         "adcid",
         "visdate",
         "visitnum",
@@ -642,6 +643,7 @@
         }
     },
     "boost_values": {
+        "ptid":1.0,
         "insex": 1.0,
         "inhisp": 1.0,
         "inhispor": 1.0,
