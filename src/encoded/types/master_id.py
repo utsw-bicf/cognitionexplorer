@@ -8,12 +8,13 @@ from .base import (
     # SharedItem,
     paths_filtered_by_status,
 )
+from pyramid.traversal import find_root, resource_path
+
 import re
 
-
 @collection(
-    name="master_id",
-    unique_key="uuid",
+    name="master_ids",
+    unique_key="ptid",
     properties={
         "title": "Redcap_master_id Forms",
         "description": "Redcap master_id forms: Basic patient information pages",
@@ -22,17 +23,20 @@ import re
 class Master_id(Item):
     item_type = "master_id"
     schema = load_schema("encoded:schemas/master_id.json")
-    name_key ='uuid'
+    name_key ='ptid'
     embedded = [
         'ivp_a1',
         'fvp_a1',
         'ivp_a2',
+        'fvp_a2'
 
     ]
     rev = {
-        'ivp_a1': ('Ivp_a1', 'master_id'),
-        'fvp_a1': ('Fvp_a1', 'master_id'),
-        'ivp_a2': ('Ivp_a2', 'master_id'),
+        'ivp_a1': ('Ivp_a1', 'ptid'),
+        'fvp_a1': ('Fvp_a1', 'ptid'),
+        'ivp_a2': ('Ivp_a2', 'ptid'),
+        'fvp_a2': ('Fvp_a2', 'ptid')
+
 
 
     }
@@ -74,3 +78,15 @@ class Master_id(Item):
     })
     def ivp_a2(self, request, ivp_a2):
         return paths_filtered_by_status(request, ivp_a2)
+
+    @calculated_property(schema={
+        "title": "Fvp_a2",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_a2"
+        },
+    })
+    def fvp_a2(self, request, fvp_a2):
+        return paths_filtered_by_status(request, fvp_a2)
+    
