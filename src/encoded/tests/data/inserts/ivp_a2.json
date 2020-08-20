@@ -1,6 +1,6 @@
 [
   {
-    "ptid": "000001",
+    "master_id": "000001",
     "adcid": "25 University of Texas Southwestern",
     "visdate": "2019-12-02",
     "visitnum": "1",
@@ -30,7 +30,7 @@
     "uuid": "5f6bda55-7932-475f-9819-caa910db221f"
   },
   {
-    "ptid": "000010",
+    "master_id": "000010",
     "adcid": "25 University of Texas Southwestern",
     "visdate": "2019-12-02",
     "visitnum": "1",

@@ -4,10 +4,10 @@
     "id": "/profiles/uds_fvp_a2.json", 
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
-        "uuid","ptid"
+        "uuid","master_id"
     ],
     "required": [
-        "ptid",
+        "master_id",
         "adcid",
         "visdate",
         "visitnum",
@@ -758,7 +758,7 @@
         }
     },
     "boost_values": {
-        "ptid":1.0,
+        "master_id":1.0,
         "fu_inbirmo": 1.0,
         "fu_inbiryr": 1.0,
         "fu_insex": 1.0,

@@ -12,8 +12,8 @@ import re
 
 
 @collection(
-    name="ivp_a1",
-    unique_key="ptid",
+    name="ivp_a1s",
+    # unique_key="master_id",
     properties={
         "title": "UDS_IVP_A1 Forms",
         "description": "UDS Initial visiting patients A1 forms results pages",
@@ -22,9 +22,9 @@ import re
 class Ivp_a1(Item):
     item_type = "ivp_a1"
     schema = load_schema("encoded:schemas/ivp_a1.json")
-    name_key = 'ptid'
+    # name_key = 'ptid'
     embedded = [
-        # "master_id"
+        # "ptid"
     ]
     rev = {
     }

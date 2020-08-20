@@ -12,8 +12,8 @@ import re
 
 
 @collection(
-    name="fvp_a2",
-    unique_key="ptid",
+    name="fvp_a2s",
+    # unique_key="master_id",
     properties={
         "title": "UDS_FVP_A2 Forms",
         "description": "UDS follow-up visiting patients A2 forms results pages",
@@ -22,8 +22,9 @@ import re
 class Fvp_a2(Item):
     item_type = "fvp_a2"
     schema = load_schema("encoded:schemas/fvp_a2.json")
-    name_key = 'ptid'
+    # name_key = 'ptid'
     embedded = [
+        # "ptid"
     ]
     rev = {
     }

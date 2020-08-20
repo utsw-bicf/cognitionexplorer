@@ -14,7 +14,7 @@ import re
 
 @collection(
     name="master_ids",
-    unique_key="ptid",
+    unique_key="accession",
     properties={
         "title": "Redcap_master_id Forms",
         "description": "Redcap master_id forms: Basic patient information pages",
@@ -23,7 +23,7 @@ import re
 class Master_id(Item):
     item_type = "master_id"
     schema = load_schema("encoded:schemas/master_id.json")
-    name_key ='ptid'
+    name_key ="accession"
     embedded = [
         'ivp_a1',
         'fvp_a1',
@@ -32,16 +32,18 @@ class Master_id(Item):
 
     ]
     rev = {
-        'ivp_a1': ('Ivp_a1', 'ptid'),
-        'fvp_a1': ('Fvp_a1', 'ptid'),
-        'ivp_a2': ('Ivp_a2', 'ptid'),
-        'fvp_a2': ('Fvp_a2', 'ptid')
+        'ivp_a1': ('Ivp_a1', 'master_id'),
+        'fvp_a1': ('Fvp_a1', 'master_id'),
+        'ivp_a2': ('Ivp_a2', 'master_id'),
+        'fvp_a2': ('Fvp_a2', 'master_id')
 
 
 
     }
 
-    audit_inherit = []
+    audit_inherit = [
+        
+    ]
     set_status_up = []
     set_status_down = []
 

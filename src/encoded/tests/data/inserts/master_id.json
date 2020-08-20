@@ -1,6 +1,6 @@
 [
     {
-        "ptid": "000001",
+        "accession": "000001",
         "utsw_mrn": "72648682",
         "pic": "1 ADC Core",
         "first": "John",
@@ -30,14 +30,14 @@
         "uuid": "c5189bbe-5b65-4b24-8927-1da40177230c"
     },
     {
-        "ptid": "090002",
+        "accession": "090002",
         "pic": "1 ADC Core",
         "form_status": "Complete",
         "status": "released",
         "uuid": "40e59f1b-6976-4124-98a0-ff2229a0f342"
     },
     {
-        "ptid": "000010",
+        "accession": "000010",
         "pic": "1 ADC Core",
         "first": "John",
         "mi": "Ok",
@@ -58,7 +58,7 @@
         "uuid": "91a678dc-fc86-4405-8bd2-fbd9f0f594a0"
     },
     {
-        "ptid": "000013",
+        "accession": "000013",
         "pic": "1 ADC Core",
         "first": "Milo",
         "mi": "M",
@@ -91,7 +91,7 @@
         "uuid": "674099eb-2bdd-483c-a48f-132b1857de72"
     },
     {
-        "ptid": "000014",
+        "accession": "000014",
         "pic": "1 ADC Core",
         "first": "Robert",
         "mi": "M",
@@ -125,7 +125,7 @@
         "uuid": "f6b0c759-7b6b-41be-9734-052ff7d578a3"
     },
     {
-        "ptid": "000015",
+        "accession": "000015",
         "pic": "7 Autopsied demented relative of ADC patient",
         "first": "Al",
         "last": "Pacino",
@@ -159,7 +159,7 @@
         "uuid": "0870a6da-caa5-4a65-8b96-f3eb1f810d21"
     },
     {
-        "ptid": "000016",
+        "accession": "000016",
         "pic": "1 ADC Core",
         "utsw_mrn": "71969306",
         "dob": "2020-02-02",
