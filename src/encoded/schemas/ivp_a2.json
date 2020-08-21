@@ -575,6 +575,12 @@
         "status": {
             "title": "Status"
         },
+        "inbirmo": {
+            "title": "1a. Co-participant's month of birth:"
+        },
+        "inbiryr": {
+            "title": "1b. Co-participant's year of birth:"
+        },
         "insex": {
             "title": "2. Co-participant's sex:"
         },
@@ -610,6 +616,12 @@
         "status": {
             "title": "Status"
         },
+        "inbirmo": {
+            "title": "1a. Co-participant's month of birth:"
+        },
+        "inbiryr": {
+            "title": "1b. Co-participant's year of birth:"
+        },
         "insex": {
             "title": "2. Co-participant's sex:"
         },
@@ -643,6 +655,8 @@
     },
     "boost_values": {
         "master_id":1.0,
+        "inbirmo": 1.0,
+        "inbiryr": 1.0,
         "insex": 1.0,
         "inhisp": 1.0,
         "inhispor": 1.0,
