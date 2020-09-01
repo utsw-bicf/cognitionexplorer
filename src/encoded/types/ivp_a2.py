@@ -12,7 +12,7 @@ import re
 
 
 @collection(
-    name="ivp_a2",
+    name="ivp_a2s",
     unique_key="uuid",
     properties={
         "title": "UDS_IVP_A2 Forms",
@@ -23,6 +23,7 @@ class Ivp_a2(Item):
     item_type = "ivp_a2"
     schema = load_schema("encoded:schemas/ivp_a2.json")
     embedded = [
+       
     ]
     rev = {
     }

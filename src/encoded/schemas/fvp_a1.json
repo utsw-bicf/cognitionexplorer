@@ -5,12 +5,12 @@
   "id": "/profiles/fvp_a1.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "identifyingProperties": [
-    "uuid"
+    "uuid","master_id"
   ],
   "required": [
     "master_id",
     "adcid",
-    "visit_date",
+    "visdate",
     "visitnum",
     "initials",
     "header_complete",
@@ -135,6 +135,12 @@
     "status": {
       "title": "Status"
     },
+    "fu_birthmo": {
+      "title": "1a. Subject's month of birth(MM)"
+    },
+    "fu_birthyr": {
+      "title": "1b. Subject's year of birth(YYYY)"
+    },
     "fu_maristat": {
       "title": "2. Subject's current marital status:"
     },
@@ -158,6 +164,12 @@
     "status": {
       "title": "Status"
     },
+    "fu_birthmo": {
+      "title": "1a. Subject's month of birth(MM)"
+    },
+    "fu_birthyr": {
+      "title": "1b. Subject's year of birth(YYYY)"
+    },
     "fu_maristat": {
       "title": "2. Subject's current marital status:"
     },
@@ -179,6 +191,8 @@
   },
   "boost_values": {
     "master_id": 1.0,
+    "fu_birthmo": 1.0,
+    "fu_birthyr": 1.0,
     "fu_maristat": 1.0,
     "fu_sex": 1.0,
     "fu_livsitua": 1.0,
