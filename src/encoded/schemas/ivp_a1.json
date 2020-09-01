@@ -5,13 +5,12 @@
   "id": "/profiles/ivp_a1.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "identifyingProperties": [
-    "uuid",
-    "master_id"
+    "uuid","master_id"
   ],
   "required": [
     "master_id",
     "adcid",
-    "visit_date",
+    "visdate",
     "visitnum",
     "initials",
     "header_complete",
@@ -143,17 +142,7 @@
       "minimum": 1900,
       "maximum": 2100
     },
-    "birth_date": {
-      "title": "Surgery date",
-      "description": "Date of surgery.",
-      "comment": "Date can be submitted as YYYY-MM-DD.",
-      "type": "string",
-      "anyOf": [
-        {
-          "format": "YYYY-MM"
-        }
-      ]
-    },
+    
     "sex": {
       "title": "7. Subject's sex:",
       "type": "string",
@@ -653,6 +642,12 @@
     "source": {
       "title": "5. ADC enrollment type:"
     },
+    "birthmo": {
+      "title": "6a. Subject's month of birth(MM)"
+    },
+    "birthyr": {
+      "title": "6b. Subject's year of birth(YYYY)"
+    },
     "sex": {
       "title": "7. Subject's sex:"
     },
@@ -709,6 +704,12 @@
     "source": {
       "title": "5. ADC enrollment type:"
     },
+    "birthmo": {
+      "title": "6a. Subject's month of birth(MM)"
+    },
+    "birthyr": {
+      "title": "6b. Subject's year of birth(YYYY)"
+    },
     "sex": {
       "title": "7. Subject's sex:"
     },
@@ -753,6 +754,8 @@
     "prestat": 1.0,
     "prespart": 1.0,
     "source": 1.0,
+    "birthmo": 1.0,
+    "birthyr": 1.0,
     "sex": 1.0,
     "hispanic": 1.0,
     "race": 1.0,

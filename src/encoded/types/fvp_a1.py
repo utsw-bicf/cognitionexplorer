@@ -12,7 +12,7 @@ import re
 
 
 @collection(
-    name="fvp_a1",
+    name="fvp_a1s",
     unique_key="uuid",
     properties={
         "title": "UDS_FVP_A1 Forms",

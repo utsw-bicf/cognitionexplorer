@@ -163,7 +163,6 @@
             "title": "ADC Subject ID",
             "description": "ADC subject ID,Patient ID,",
             "type": "string",
-            "permission": "import_items",
             "linkTo": "Master_id"
             
         },
@@ -223,7 +222,7 @@
             ]
         },
         
-        "visit_date": {
+        "visdate": {
             "title": "Visit date",
             "description": "Date of visit,format as YYYY-MM-DD",
             "comment": "Date can be submitted as YYYY-MM-DD.",
