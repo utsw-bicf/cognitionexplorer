@@ -159,11 +159,11 @@
         }
     },
     "header": {
-        "master_id": {
+        "patient": {
             "title": "ADC Subject ID",
             "description": "ADC subject ID,Patient ID,",
             "type": "string",
-            "linkTo": "Master_id"
+            "linkTo": "patient"
             
         },
         "formver": {
