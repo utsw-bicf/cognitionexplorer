@@ -2,10 +2,10 @@
     {
         "name": "First cohort",
         "elements": [
-            "/patients/KCEPT359MHZ/",
-            "/patients/KCEPT873QVK/",
-            "/patients/KCEPT802XRB/",
-            "/patients/KCEPT186NZW/"
+            "/patients/000015/",
+            "/patients/000014/",
+            "/patients/000013/",
+            "/patients/000010/"
         ],
         "identifier": "venkat-malladi-first-cohort",
         "submitted_by": "vsmalladi@gmail.com",
@@ -13,3 +13,4 @@
         "uuid": "d8850d88-946b-43e0-9199-efee2c8f5303"
     }
 ]
+

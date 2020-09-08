@@ -5,10 +5,10 @@
   "id": "/profiles/ivp_a1.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "identifyingProperties": [
-    "uuid","master_id"
+    "uuid"
   ],
   "required": [
-    "master_id",
+    "patient",
     "adcid",
     "visdate",
     "visitnum",
@@ -748,7 +748,7 @@
     }
   },
   "boost_values": {
-    "master_id": 1.0,
+    "patient": 1.0,
     "reason": 1.0,
     "refersc": 1.0,
     "prestat": 1.0,
