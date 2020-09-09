@@ -64,6 +64,12 @@
     "schema_version": {
       "default": "1"
     },
+    "patient": {
+      "title": "Patient",
+      "description": "The patient the form belongs for.",
+      "type": "string",
+      "linkTo": "Patient"
+    },
     "reason": {
       "title": "1. Primary reason for coming to ADC:",
       "type": "string",
