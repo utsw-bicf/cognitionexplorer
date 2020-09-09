@@ -9,6 +9,8 @@ import formatMeasurement from './../libs/formatMeasurement';
 import { CartToggle } from './cart';
 import Status from './status';
 import CollapsiblePanel from './collapsiblePanel';
+import FormsTable from './formsTable';
+
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
 
@@ -56,6 +58,11 @@ class Patient extends React.Component {
       { id: <i>{context.accession}</i> },
     ];
     const crumbsReleased = (context.status === 'released');
+    let hasForms =false;
+        if (this.props.context.ivp_a1.length > 0) {
+            hasForms = true;
+        }
+    
 
 
 
@@ -96,6 +103,7 @@ class Patient extends React.Component {
             </dl>
           </PanelBody>
         </Panel>
+        { hasForms && <FormsTable data={context} tableTitle="Patient Forms"></FormsTable>}
       </div>
     );
   }
@@ -111,4 +119,5 @@ Patient.defaultProps = {
 };
 
 globals.contentViews.register(Patient, 'Patient');
+
 

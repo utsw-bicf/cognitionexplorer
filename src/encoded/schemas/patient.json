@@ -1,6 +1,6 @@
 {
     "title": "Patient",
-    "description": "Patient info from form NACC Uniform Data Set (UDS) - Master ID in redcap",
+    "description": "Patient infomation",
     "comment": "Schema of patient information from redcap.",
     "id": "/profiles/patient.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
