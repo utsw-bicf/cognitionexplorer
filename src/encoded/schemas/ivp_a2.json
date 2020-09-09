@@ -57,6 +57,12 @@
         "schema_version": {
             "default": "1"
         },
+	"patient": {
+            "title": "Patient",
+	    "description": "The patient the form belongs for.",
+            "type": "string",
+            "linkTo": "Patient"
+        },
         "inbirmo": {
             "title": "1a. Co-participant's month of birth:",
             "description": "Date can be submitted as MM.((MM) 1-12, 99 = Unknown)",
