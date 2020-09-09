@@ -23,6 +23,7 @@ import { DbxrefList } from './dbxref';
 import Status from './status';
 import { svgIcon } from '../libs/svg-icons';
 import { BiosampleSummaryString, BiosampleOrganismNames } from './typeutils';
+import { valueOnly } from './objectutils';
 
 
 // Should really be singular...
@@ -543,13 +544,13 @@ class PatientComponent extends React.Component {
                   </div>
                   <div className="accession">
                       <a href={result['@id']}>
-                          {`${result.accession} (`}
+                          {`${result.accession}`}
                           
                       </a>
                   </div>
                   <div className="data-row">
-                      <div><strong>Gender: </strong>{result.gender}</div>
-                      <div><strong>Race: </strong>{result.racial}</div>
+                      {result.gender && <div><strong>Gender: </strong>{valueOnly(result.gender)}</div>}
+                      {result.racial && <div><strong>Race: </strong>{valueOnly(result.racial)}</div>}
                   </div>
               </div>
               {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
@@ -2184,4 +2185,5 @@ Search.lastRegion = {
 };
 
 globals.contentViews.register(Search, 'Search');
+
 
