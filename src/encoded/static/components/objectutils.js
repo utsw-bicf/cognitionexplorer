@@ -793,3 +793,9 @@ DocTypeTitle.defaultProps = {
 DocTypeTitle.contextTypes = {
     profilesTitles: PropTypes.object,
 };
+
+// Return text value only without numbering 
+export function valueOnly(str) {
+    return str.substr(str.indexOf(' ')+1);;
+}
+
