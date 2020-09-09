@@ -16,7 +16,7 @@ import re
     name="patients",
     unique_key="accession",
     properties={
-        "title": "Redcap_master_id Forms",
+        "title": "Patients",
         "description": "Redcap master_id forms: Basic patient information pages",
     },
 )
@@ -92,3 +92,4 @@ class Patient(Item):
     def fvp_a2(self, request, fvp_a2):
         return paths_filtered_by_status(request, fvp_a2)
     
+
