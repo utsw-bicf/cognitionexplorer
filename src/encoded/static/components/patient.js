@@ -10,6 +10,7 @@ import { CartToggle } from './cart';
 import Status from './status';
 import CollapsiblePanel from './collapsiblePanel';
 import FormsTable from './formsTable';
+import { valueOnly } from './objectutils';
 
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faAngleDoubleUp } from "@fortawesome/free-solid-svg-icons";
@@ -91,14 +92,38 @@ class Patient extends React.Component {
                 <dt>Status</dt>
                 <dd><Status item={context} inline /></dd>
               </div>
-              <div data-test="gender">
+              {context.pic &&<div data-test="pic">
+                <dt>Patient Initial Category</dt>
+                <dd>{valueOnly(context.pic)}</dd>
+              </div>}
+              {context.gender && <div data-test="gender">
                 <dt>Gender</dt>
-                <dd>{context.gender}</dd>
-              </div>
-              <div data-test="racial">
+                <dd>{valueOnly(context.gender)}</dd>
+              </div>}
+              { context.racial && <div data-test="racial">
                 <dt>Race</dt>
-                <dd>{context.racial}</dd>
-              </div>
+                <dd>{valueOnly(context.racial)}</dd>
+              </div>}
+              { context.ethn && <div data-test="ethn">
+                <dt>Spanish, Hispanic or Latino</dt>
+                <dd>{valueOnly(context.ethn)}</dd>
+              </div>}
+              { context.tribe && <div data-test="tribe">
+                <dt>Tribe</dt>
+                <dd>{valueOnly(context.tribe)}</dd>
+              </div>}
+              { context.edu && <div data-test="edu">
+                <dt>Years of education</dt>
+                <dd>{context.edu}</dd>
+              </div>}
+              { context.retard && <div data-test="retard">
+                <dt>Exclude Mental Retardation</dt>
+                <dd>{valueOnly(context.retard)}</dd>
+              </div>}
+              {context.occ && <div data-test="occ">
+                <dt>Occupation</dt>
+                <dd>{valueOnly(context.occ)}</dd>
+              </div>}
 
             </dl>
           </PanelBody>
@@ -119,5 +144,6 @@ Patient.defaultProps = {
 };
 
 globals.contentViews.register(Patient, 'Patient');
+
 
 
