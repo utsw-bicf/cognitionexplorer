@@ -796,6 +796,12 @@ DocTypeTitle.contextTypes = {
 
 // Return text value only without numbering 
 export function valueOnly(str) {
-    return str.substr(str.indexOf(' ')+1);;
+    if (typeof str == "string") {
+        return str.substr(str.indexOf(' ')+1);;
+    } else {
+        return ""
+    }
+    
 }
+
 
