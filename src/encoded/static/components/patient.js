@@ -129,6 +129,8 @@ class Patient extends React.Component {
           </PanelBody>
         </Panel>
         { hasForms && <FormsTable data={context} tableTitle="Patient Forms"></FormsTable>}
+        <button onClick={this.topFunction} id="scrollUpButton" title="Go to top"><FontAwesomeIcon icon={faAngleDoubleUp} size="2x" /></button>
+
       </div>
     );
   }
@@ -144,6 +146,7 @@ Patient.defaultProps = {
 };
 
 globals.contentViews.register(Patient, 'Patient');
+
 
 
 
