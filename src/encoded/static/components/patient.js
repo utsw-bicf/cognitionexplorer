@@ -60,10 +60,13 @@ class Patient extends React.Component {
     ];
     const crumbsReleased = (context.status === 'released');
     let hasForms =false;
-        if (this.props.context.ivp_a1.length > 0) {
-            hasForms = true;
-        }
-    
+    if (this.props.context.ivp_a1.length > 0) {
+        hasForms = true;
+    }
+    const NACCFormsPanelBody = (
+      <FormsTable data={context} ></FormsTable>
+
+    );
 
 
 
@@ -128,7 +131,7 @@ class Patient extends React.Component {
             </dl>
           </PanelBody>
         </Panel>
-        { hasForms && <FormsTable data={context} tableTitle="Patient Forms"></FormsTable>}
+        {hasForms && <CollapsiblePanel panelId="NACCFormsTable" title="NACC Forms" content={NACCFormsPanelBody} />}
         <button onClick={this.topFunction} id="scrollUpButton" title="Go to top"><FontAwesomeIcon icon={faAngleDoubleUp} size="2x" /></button>
 
       </div>
