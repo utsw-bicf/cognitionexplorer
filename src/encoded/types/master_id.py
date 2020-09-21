@@ -28,6 +28,7 @@ class Master_id(Item):
         'ivp_a1',
         'fvp_a1',
         'ivp_a2',
+        'ivp_a5',
         'fvp_a2'
 
     ]
@@ -35,6 +36,7 @@ class Master_id(Item):
         'ivp_a1': ('Ivp_a1', 'master_id'),
         'fvp_a1': ('Fvp_a1', 'master_id'),
         'ivp_a2': ('Ivp_a2', 'master_id'),
+        'ivp_a5': ('Ivp_a2', 'master_id'),
         'fvp_a2': ('Fvp_a2', 'master_id')
 
 
@@ -91,4 +93,15 @@ class Master_id(Item):
     })
     def fvp_a2(self, request, fvp_a2):
         return paths_filtered_by_status(request, fvp_a2)
+
+    @calculated_property(schema={
+        "title": "Ivp_a5",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Ivp_a5"
+        },
+    })
+    def ivp_a5(self, request, ivp_a5):
+        return paths_filtered_by_status(request, ivp_a5)
     
