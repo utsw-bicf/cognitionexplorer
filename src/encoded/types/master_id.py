@@ -36,7 +36,7 @@ class Master_id(Item):
         'ivp_a1': ('Ivp_a1', 'master_id'),
         'fvp_a1': ('Fvp_a1', 'master_id'),
         'ivp_a2': ('Ivp_a2', 'master_id'),
-        'ivp_a5': ('Ivp_a2', 'master_id'),
+        'ivp_a5': ('Ivp_a5', 'master_id'),
         'fvp_a2': ('Fvp_a2', 'master_id')
 
 
