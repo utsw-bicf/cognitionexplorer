@@ -1,7 +1,7 @@
 {
     "title": "uds_ivp_a5",
     "description": "Schema for submitting UDS ivp_A5 form information.INSTRUCTIONS: This form is to be completed by the clinician or ADC staff. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form A5. Check only one box per question.Link to 'http: //www.alz.washington.edu/NONMEMBER/UDS/DOCS/VER3/UDS3_fvp_guidebook.pdf', NACC Coding Guidebook </a>",
-    "comment": "",
+    "comment": "Schema for submitting UDS_ivp_A5 form information.",
     "id": "/profiles/ivp_a5.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
