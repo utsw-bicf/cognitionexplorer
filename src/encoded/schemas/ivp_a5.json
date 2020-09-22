@@ -816,18 +816,498 @@
     "facets": {
         "status": {
             "title": "Status"
+        },
+        "His_of_cig_alc.cig_smok.tobac30": {
+            "title": "1a. Has subject smoked within last 30 days?"
+        },
+        "His_of_cig_alc.cig_smok.tobac100": {
+            "title": "1b. Has subject smoked more than 100 cigarettes in his/her life?"
+        },
+        "His_of_cig_alc.cig_smok.smokyrs": {
+            "title": "1c. Total years smoked:"
+        },
+        "His_of_cig_alc.cig_smok.packsper": {
+            "title": "1d. Average number of packs smoked per day:"
+        },
+        "His_of_cig_alc.cig_smok.quitsmok": {
+            "title": "1e. If the subject quit smoking, specify the age at which he/she last smoked (i.e., quit) "
+        },
+        "His_of_cig_alc.alc_use.alcoccas": {
+            "title": "1f. In the past three months, has the subject consumed any alcohol?"
+        },
+        "His_of_cig_alc.alc_use.alcfreq": {
+            "title": "1g. During the past three months, how often did the subject have at least one drink of any alcoholic beverage such as wine, beer, malt liquor, or spirits?"
+        },
+        "cardi_dise.cvhatt": {
+            "title": "2a. Heart attack / cardiac arrest "
+        },
+        "cardi_dise.hattmult": {
+            "title": "2a1. More than one heart attack?"
+        },
+        "cardi_dise.hattyear": {
+            "title": "2a2. Year of most recent heart attack"
+        },
+        "cardi_dise.cvafib": {
+            "title": "2b. Atrial fibrillation"
+        },
+        "cardi_dise.cvangio": {
+            "title": "2c. Angioplasty / endarterectomy / stent"
+        },
+        "cardi_dise.cvbypass": {
+            "title": "2d. Cardiac bypass procedure"
+        },
+        "cardi_dise.cvpacdef": {
+            "title": "2e. Pacemaker and/or defibrillator"
+        },
+        "cardi_dise.cvchf": {
+            "title": "2f. Congestive heart failure"
+        },
+        "cardi_dise.cvangina": {
+            "title": "2g. Angina"
+        },
+        "cardi_dise.cvhvalve": {
+            "title": "2h. Heart valve replacement or repair"
+        },
+        "cardi_dise.cvothr": {
+            "title": "2i. Other cardiovascular disease (specify)"
+        },
+        "cardi_dise.cvothrx": {
+            "title": "2i1. Other cardiovascular disease (specify):"
+        },
+        "cere_dise.cbstroke": {
+            "title": "3a. Stroke-by history, not exam (imaging is not required)"
+        },
+        "cere_dise.strokmul": {
+            "title": "3a1. More than one stroke?"
+        },
+        "cere_dise.strokyr": {
+            "title": "3a2. Year of most recent stroke"
+        },
+        "cere_dise.cbtia": {
+            "title": "3b. Transient ischemic attack (TIA)"
+        },
+        "cere_dise.tiamult": {
+            "title": "3b1. More than one TIA?"
+        },
+        "cere_dise.tiayear": {
+            "title": "3b2. Year of most recent TIA"
+        },
+        "neuro_cond.pd": {
+            "title": "4a. Parkinson's disease (PD)"
+        },
+        "neuro_cond.pdyr": {
+            "title": "4a1. Year of PD diagnosis"
+        },
+        "neuro_cond.pdothr": {
+            "title": "4b. Other parkinsonism disorder (e.g., PSP, CBD)"
+        },
+        "neuro_cond.pdothryr": {
+            "title": "4b1. Year of parkinsonism disorder diagnosis"
+        },
+        "neuro_cond.seizures": {
+            "title": "4c. Seizures"
+        },
+        "neuro_cond.tbi": {
+            "title": "4d. Traumatic brain injury (TBI)"
+        },
+        "neuro_cond.tbibrief": {
+            "title": "4d1. TBI with brief loss of consciousness (< 5 minutes)"
+        },
+        "neuro_cond.tbiexten": {
+            "title": "4d2. TBI with extended loss of consciousness (≥5 minutes)"
+        },
+        "neuro_cond.tbiwolos": {
+            "title": "4d3. TBI without loss of consciousness (as might result from military detonations or sports injuries)?"
+        },
+        "neuro_cond.tbiyear": {
+            "title": "4d4. Year of most recent TBI"
+        },
+        "medi_cond.diabetes": {
+            "title": "5a. Diabetes"
+        },
+        "medi_cond.diabtype": {
+            "title": "5a1. If Recent/active or Remote/inactive, which type?"
+        },
+        "medi_cond.hyperten": {
+            "title": "5b. Hypertension"
+        },
+        "medi_cond.hypercho": {
+            "title": "5c. Hypercholesterolemia"
+        },
+        "medi_cond.b12def": {
+            "title": "5d. B12 deficiency"
+        },
+        "medi_cond.thyroid": {
+            "title": "5e. Thyroid disease"
+        },
+        "medi_cond.arthrit": {
+            "title": "5f. Arthritis "
+        },
+        "medi_cond.arthtype": {
+            "title": "5f1. Type of Arthritis"
+        },
+        "medi_cond.arthtypx": {
+            "title": "5f1a. Other Arthritis (specify)"
+        },
+        "medi_cond.note_a5": {
+            "title": "5f2. Region(s) affected (check all that apply):"
+        },
+        "medi_cond.arthupex": {
+            "title": "5f2a. Region affected: upper extremity"
+        },
+        "medi_cond.arthloex": {
+            "title": "5f2b. Region affected: lower extremity"
+        },
+        "medi_cond.arthspin": {
+            "title": "5f2c. Region affected: spine"
+        },
+        "medi_cond.arthunk": {
+            "title": "5f2d. Region affected: Unknown"
+        },
+        "medi_cond.incontu": {
+            "title": "5g. Incontinence -- Urinary"
+        },
+        "medi_cond.incontf": {
+            "title": "5h. Incontinence -- Bowel"
+        },
+        "medi_cond.apnea": {
+            "title": "5i. Sleep apnea"
+        },
+        "medi_cond.rbd": {
+            "title": "5j. REM sleep behavior disorder(RBD)"
+        },
+        "medi_cond.insomn": {
+            "title": "5k. Hyposomnia/insomnia"
+        },
+        "medi_cond.othsleep": {
+            "title": "5l. Other sleep disorder"
+        },
+        "medi_cond.othsleex": {
+            "title": "5l1. Other sleep disorder (specify)"
+        },
+        "sub_abus.alcohol": {
+            "title": "6a. Alcohol abuse: clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social."
+        },
+        "sub_abus.abusothr": {
+            "title": "6b. Other abused substances:Clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social."
+        },
+        "sub_abus.abusx": {
+            "title": "6b1. If recent/active or remote/inactive, specify abused substance: "
+        },
+        "psych_cond.ptsd": {
+            "title": "7a. Post-traumatic stress disorder (PTSD)"
+        },
+        "psych_cond.bipolar": {
+            "title": "7b. Bipolar disorder"
+        },
+        "psych_cond.schiz": {
+            "title": "7c. Schizophrenia"
+        },
+        "psych_cond.dep2yrs": {
+            "title": "7d1. Active depression in the last two years"
+        },
+        "psych_cond.depothr": {
+            "title": "7d2. Depression episodes more than two years ago"
+        },
+        "psych_cond.anxiety": {
+            "title": "7e. Anxiety"
+        },
+        "psych_cond.ocd": {
+            "title": "7f. Obsessive-complusive disorder (OCD)"
+        },
+        "psych_cond.npsydev": {
+            "title": "7g. Developmental neuropsychiatric disorders (e.g.,autism spectrum disorder [ASD], attention-deficit hyperactivity disorder [ADHD], dyslexia)"
+        },
+        "psych_cond.psycdis": {
+            "title": "7h. Other psychiatric disorders (If absent or unknown, END FORM HERE.)"
+        },
+        "psych_cond.psycdisx": {
+            "title": "7h1. If recent/active or remote/inactive, specify disorder:"
         }
-       
     },
     "columns": {
         "status": {
             "title": "Status"
+        },
+        "His_of_cig_alc.cig_smok.tobac30": {
+            "title": "1a. Has subject smoked within last 30 days?"
+        },
+        "His_of_cig_alc.cig_smok.tobac100": {
+            "title": "1b. Has subject smoked more than 100 cigarettes in his/her life?"
+        },
+        "His_of_cig_alc.cig_smok.smokyrs": {
+            "title": "1c. Total years smoked:"
+        },
+        "His_of_cig_alc.cig_smok.packsper": {
+            "title": "1d. Average number of packs smoked per day:"
+        },
+        "His_of_cig_alc.cig_smok.quitsmok": {
+            "title": "1e. If the subject quit smoking, specify the age at which he/she last smoked (i.e., quit) "
+        },
+        "His_of_cig_alc.alc_use.alcoccas": {
+            "title": "1f. In the past three months, has the subject consumed any alcohol?"
+        },
+        "His_of_cig_alc.alc_use.alcfreq": {
+            "title": "1g. During the past three months, how often did the subject have at least one drink of any alcoholic beverage such as wine, beer, malt liquor, or spirits?"
+        },
+        "cardi_dise.cvhatt": {
+            "title": "2a. Heart attack / cardiac arrest "
+        },
+        "cardi_dise.hattmult": {
+            "title": "2a1. More than one heart attack?"
+        },
+        "cardi_dise.hattyear": {
+            "title": "2a2. Year of most recent heart attack"
+        },
+        "cardi_dise.cvafib": {
+            "title": "2b. Atrial fibrillation"
+        },
+        "cardi_dise.cvangio": {
+            "title": "2c. Angioplasty / endarterectomy / stent"
+        },
+        "cardi_dise.cvbypass": {
+            "title": "2d. Cardiac bypass procedure"
+        },
+        "cardi_dise.cvpacdef": {
+            "title": "2e. Pacemaker and/or defibrillator"
+        },
+        "cardi_dise.cvchf": {
+            "title": "2f. Congestive heart failure"
+        },
+        "cardi_dise.cvangina": {
+            "title": "2g. Angina"
+        },
+        "cardi_dise.cvhvalve": {
+            "title": "2h. Heart valve replacement or repair"
+        },
+        "cardi_dise.cvothr": {
+            "title": "2i. Other cardiovascular disease (specify)"
+        },
+        "cardi_dise.cvothrx": {
+            "title": "2i1. Other cardiovascular disease (specify):"
+        },
+        "cere_dise.cbstroke": {
+            "title": "3a. Stroke-by history, not exam (imaging is not required)"
+        },
+        "cere_dise.strokmul": {
+            "title": "3a1. More than one stroke?"
+        },
+        "cere_dise.strokyr": {
+            "title": "3a2. Year of most recent stroke"
+        },
+        "cere_dise.cbtia": {
+            "title": "3b. Transient ischemic attack (TIA)"
+        },
+        "cere_dise.tiamult": {
+            "title": "3b1. More than one TIA?"
+        },
+        "cere_dise.tiayear": {
+            "title": "3b2. Year of most recent TIA"
+        },
+        "neuro_cond.pd": {
+            "title": "4a. Parkinson's disease (PD)"
+        },
+        "neuro_cond.pdyr": {
+            "title": "4a1. Year of PD diagnosis"
+        },
+        "neuro_cond.pdothr": {
+            "title": "4b. Other parkinsonism disorder (e.g., PSP, CBD)"
+        },
+        "neuro_cond.pdothryr": {
+            "title": "4b1. Year of parkinsonism disorder diagnosis"
+        },
+        "neuro_cond.seizures": {
+            "title": "4c. Seizures"
+        },
+        "neuro_cond.tbi": {
+            "title": "4d. Traumatic brain injury (TBI)"
+        },
+        "neuro_cond.tbibrief": {
+            "title": "4d1. TBI with brief loss of consciousness (< 5 minutes)"
+        },
+        "neuro_cond.tbiexten": {
+            "title": "4d2. TBI with extended loss of consciousness (≥5 minutes)"
+        },
+        "neuro_cond.tbiwolos": {
+            "title": "4d3. TBI without loss of consciousness (as might result from military detonations or sports injuries)?"
+        },
+        "neuro_cond.tbiyear": {
+            "title": "4d4. Year of most recent TBI"
+        },
+        "medi_cond.diabetes": {
+            "title": "5a. Diabetes"
+        },
+        "medi_cond.diabtype": {
+            "title": "5a1. If Recent/active or Remote/inactive, which type?"
+        },
+        "medi_cond.hyperten": {
+            "title": "5b. Hypertension"
+        },
+        "medi_cond.hypercho": {
+            "title": "5c. Hypercholesterolemia"
+        },
+        "medi_cond.b12def": {
+            "title": "5d. B12 deficiency"
+        },
+        "medi_cond.thyroid": {
+            "title": "5e. Thyroid disease"
+        },
+        "medi_cond.arthrit": {
+            "title": "5f. Arthritis "
+        },
+        "medi_cond.arthtype": {
+            "title": "5f1. Type of Arthritis"
+        },
+        "medi_cond.arthtypx": {
+            "title": "5f1a. Other Arthritis (specify)"
+        },
+        "medi_cond.note_a5": {
+            "title": "5f2. Region(s) affected (check all that apply):"
+        },
+        "medi_cond.arthupex": {
+            "title": "5f2a. Region affected: upper extremity"
+        },
+        "medi_cond.arthloex": {
+            "title": "5f2b. Region affected: lower extremity"
+        },
+        "medi_cond.arthspin": {
+            "title": "5f2c. Region affected: spine"
+        },
+        "medi_cond.arthunk": {
+            "title": "5f2d. Region affected: Unknown"
+        },
+        "medi_cond.incontu": {
+            "title": "5g. Incontinence -- Urinary"
+        },
+        "medi_cond.incontf": {
+            "title": "5h. Incontinence -- Bowel"
+        },
+        "medi_cond.apnea": {
+            "title": "5i. Sleep apnea"
+        },
+        "medi_cond.rbd": {
+            "title": "5j. REM sleep behavior disorder(RBD)"
+        },
+        "medi_cond.insomn": {
+            "title": "5k. Hyposomnia/insomnia"
+        },
+        "medi_cond.othsleep": {
+            "title": "5l. Other sleep disorder"
+        },
+        "medi_cond.othsleex": {
+            "title": "5l1. Other sleep disorder (specify)"
+        },
+        "sub_abus.alcohol": {
+            "title": "6a. Alcohol abuse: clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social."
+        },
+        "sub_abus.abusothr": {
+            "title": "6b. Other abused substances:Clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social."
+        },
+        "sub_abus.abusx": {
+            "title": "6b1. If recent/active or remote/inactive, specify abused substance: "
+        },
+        "psych_cond.ptsd": {
+            "title": "7a. Post-traumatic stress disorder (PTSD)"
+        },
+        "psych_cond.bipolar": {
+            "title": "7b. Bipolar disorder"
+        },
+        "psych_cond.schiz": {
+            "title": "7c. Schizophrenia"
+        },
+        "psych_cond.dep2yrs": {
+            "title": "7d1. Active depression in the last two years"
+        },
+        "psych_cond.depothr": {
+            "title": "7d2. Depression episodes more than two years ago"
+        },
+        "psych_cond.anxiety": {
+            "title": "7e. Anxiety"
+        },
+        "psych_cond.ocd": {
+            "title": "7f. Obsessive-complusive disorder (OCD)"
+        },
+        "psych_cond.npsydev": {
+            "title": "7g. Developmental neuropsychiatric disorders (e.g.,autism spectrum disorder [ASD], attention-deficit hyperactivity disorder [ADHD], dyslexia)"
+        },
+        "psych_cond.psycdis": {
+            "title": "7h. Other psychiatric disorders (If absent or unknown, END FORM HERE.)"
+        },
+        "psych_cond.psycdisx": {
+            "title": "7h1. If recent/active or remote/inactive, specify disorder:"
         }
-        
     },
     "boost_values": {
-        "master_id":1.0
-        
+        "master_id":1.0,
+        "His_of_cig_alc.cig_smok.tobac30": 1.0,
+        "His_of_cig_alc.cig_smok.tobac100": 1.0,
+        "His_of_cig_alc.cig_smok.smokyrs": 1.0,
+        "His_of_cig_alc.cig_smok.packsper": 1.0,
+        "His_of_cig_alc.cig_smok.quitsmok": 1.0,
+        "His_of_cig_alc.alc_use.alcoccas": 1.0,
+        "His_of_cig_alc.alc_use.alcfreq": 1.0,
+        "cardi_dise.cvhatt": 1.0,
+        "cardi_dise.hattmult": 1.0,
+        "cardi_dise.hattyear": 1.0,
+        "cardi_dise.cvafib": 1.0,
+        "cardi_dise.cvangio": 1.0,
+        "cardi_dise.cvbypass": 1.0,
+        "cardi_dise.cvpacdef": 1.0,
+        "cardi_dise.cvchf": 1.0,
+        "cardi_dise.cvangina": 1.0,
+        "cardi_dise.cvhvalve": 1.0,
+        "cardi_dise.cvothr": 1.0,
+        "cardi_dise.cvothrx": 1.0,
+        "cere_dise.cbstroke": 1.0,
+        "cere_dise.strokmul": 1.0,
+        "cere_dise.strokyr": 1.0,
+        "cere_dise.cbtia": 1.0,
+        "cere_dise.tiamult": 1.0,
+        "cere_dise.tiayear": 1.0,
+        "neuro_cond.pd": 1.0,
+        "neuro_cond.pdyr": 1.0,
+        "neuro_cond.pdothr": 1.0,
+        "neuro_cond.pdothryr": 1.0,
+        "neuro_cond.seizures": 1.0,
+        "neuro_cond.tbi": 1.0,
+        "neuro_cond.tbibrief": 1.0,
+        "neuro_cond.tbiexten": 1.0,
+        "neuro_cond.tbiwolos": 1.0,
+        "neuro_cond.tbiyear": 1.0,
+        "medi_cond.diabetes": 1.0,
+        "medi_cond.diabtype": 1.0,
+        "medi_cond.hyperten": 1.0,
+        "medi_cond.hypercho": 1.0,
+        "medi_cond.b12def": 1.0,
+        "medi_cond.thyroid": 1.0,
+        "medi_cond.arthrit": 1.0,
+        "medi_cond.arthtype": 1.0,
+        "medi_cond.arthtypx": 1.0,
+        "medi_cond.note_a5": 1.0,
+        "medi_cond.arthupex": 1.0,
+        "medi_cond.arthloex": 1.0,
+        "medi_cond.arthspin": 1.0,
+        "medi_cond.arthunk": 1.0,
+        "medi_cond.incontu": 1.0,
+        "medi_cond.incontf": 1.0,
+        "medi_cond.apnea": 1.0,
+        "medi_cond.rbd": 1.0,
+        "medi_cond.insomn": 1.0,
+        "medi_cond.othsleep": 1.0,
+        "medi_cond.othsleex": 1.0,
+        "sub_abus.alcohol": 1.0,
+        "sub_abus.abusothr": 1.0,
+        "sub_abus.abusx": 1.0,
+        "psych_cond.ptsd": 1.0,
+        "psych_cond.bipolar": 1.0,
+        "psych_cond.schiz": 1.0,
+        "psych_cond.dep2yrs": 1.0,
+        "psych_cond.depothr": 1.0,
+        "psych_cond.anxiety": 1.0,
+        "psych_cond.ocd": 1.0,
+        "psych_cond.npsydev": 1.0,
+        "psych_cond.psycdis": 1.0,
+        "psych_cond.psycdisx": 1.0
     },
     "changelog": "/profiles/changelogs/ivp_A5.md"
 }
