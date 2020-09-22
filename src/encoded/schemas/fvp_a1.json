@@ -5,10 +5,10 @@
   "id": "/profiles/fvp_a1.json",
   "$schema": "http://json-schema.org/draft-04/schema#",
   "identifyingProperties": [
-    "uuid","master_id"
+    "uuid"
   ],
   "required": [
-    "master_id",
+    "patient",
     "adcid",
     "visdate",
     "visitnum",
@@ -52,6 +52,12 @@
   "properties": {
     "schema_version": {
       "default": "1"
+    },
+    "patient": {
+      "title": "Patient",
+      "description": "The patient the form belongs for.",
+      "type": "string",
+      "linkTo": "Patient"
     },
     "fu_birthmo": {
       "title": "1a. Subject's month of birth(MM)",
@@ -190,7 +196,7 @@
     }
   },
   "boost_values": {
-    "master_id": 1.0,
+    "patient": 1.0,
     "fu_birthmo": 1.0,
     "fu_birthyr": 1.0,
     "fu_maristat": 1.0,
