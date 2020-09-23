@@ -29,7 +29,7 @@ class Patient(Item):
         'fvp_a1',
         'ivp_a2',
         'fvp_a2',
-        'ivp_b1',
+        'ivp_b1'
 
 
     ]
@@ -38,7 +38,7 @@ class Patient(Item):
         'fvp_a1': ('Fvp_a1', 'patient'),
         'ivp_a2': ('Ivp_a2', 'patient'),
         'fvp_a2': ('Fvp_a2', 'patient'),
-        'ivp_b1': ('Ivp_b1', 'patient'),
+        'ivp_b1': ('Ivp_b1', 'patient')
 
 
 

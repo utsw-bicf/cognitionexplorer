@@ -23,7 +23,7 @@ ORDER = [
     'fvp_a1',
     'ivp_a2',
     'fvp_a2',
-    'Ivp_b1',
+    'ivp_b1',
     'cart'
 ]
 
