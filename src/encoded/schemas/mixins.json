@@ -160,11 +160,10 @@
     },
     "header": {
         "patient": {
-            "title": "ADC Subject ID",
-            "description": "ADC subject ID,Patient ID,",
+            "title": "Patient",
+	    "description": "PID. The patient the form belongs for.",
             "type": "string",
-            "linkTo": "patient"
-            
+            "linkTo": "Patient"
         },
         "formver": {
             "title": "Form Version Number",
