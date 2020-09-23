@@ -4,8 +4,8 @@ from jsonschema_serialize_fork import FormatChecker
 from pyramid.threadlocal import get_current_request
 from uuid import UUID
 
-accession_re = re.compile(r'^KCE(FF|SR|AB|BS|DO|GM|LB|PL|PT)[0-9][0-9][0-9][A-Z][A-Z][A-Z]$')
-test_accession_re = re.compile(r'^TST(FF|SR|AB|BS|DO|GM|LB|PL|PT)[0-9][0-9][0-9]([0-9][0-9][0-9]|[A-Z][A-Z][A-Z])$')
+accession_re = re.compile(r'^[0-9][0-9][0-9][0-9][0-9][0-9]$')
+test_accession_re = re.compile(r'^[0-9][0-9][0-9][0-9][0-9][0-9]$')
 uuid_re = re.compile(r'(?i)\{?(?:[0-9a-f]{4}-?){8}\}?')
 
 
@@ -68,3 +68,4 @@ def is_uri(instance):
         # We want only absolute uris
         return False
     return rfc3987.parse(instance, rule="URI_reference")
+

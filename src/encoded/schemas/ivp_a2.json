@@ -5,10 +5,10 @@
     "id": "/profiles/ivp_a2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
-        "uuid","master_id"
+        "uuid"
     ],
     "required": [
-        "master_id",
+        "patient",
         "adcid",
         "visdate",
         "visitnum",
@@ -56,6 +56,12 @@
     "properties": {
         "schema_version": {
             "default": "1"
+        },
+	"patient": {
+            "title": "Patient",
+	    "description": "The patient the form belongs for.",
+            "type": "string",
+            "linkTo": "Patient"
         },
         "inbirmo": {
             "title": "1a. Co-participant's month of birth:",
@@ -654,7 +660,7 @@
         }
     },
     "boost_values": {
-        "master_id":1.0,
+        "patient":1.0,
         "inbirmo": 1.0,
         "inbiryr": 1.0,
         "insex": 1.0,

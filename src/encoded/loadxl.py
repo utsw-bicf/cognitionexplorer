@@ -18,24 +18,12 @@ ORDER = [
     'lab',
     'image',
     'page',
-    'master_id',
+    'patient',
     'ivp_a1',
     'fvp_a1',
     'ivp_a2',
     'ivp_a5',
     'fvp_a2',
-
-
-    'patient',
-    'surgery',
-    'medication',
-    'supportive_medication',
-    # 'lab_results',
-    # 'vital_results',
-    'germline',
-    'consent',
-    'radiation',
-    'medical_imaging',
     'cart'
 ]
 
@@ -699,3 +687,4 @@ def load_test_data(app):
     inserts = resource_filename('encoded', 'tests/data/inserts/')
     docsdir = [resource_filename('encoded', 'tests/data/documents/')]
     load_all(testapp, inserts, docsdir)
+
