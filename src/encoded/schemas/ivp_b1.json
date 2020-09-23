@@ -1,6 +1,6 @@
 {
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B1: EVALUATION FORM - PHYSICAL",
-    "description": "INSTRUCTIONS: This form is to be completed by the clinician. For additional clarification and examples, see UDS \nCoding Guidebook for Initial Visit Packet, Form B1. Check only one box per question.\n\n\nLink to NACC Coding Guidebook",
+    "description": "INSTRUCTIONS: This form is to be completed by the clinician. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form B1. Check only one box per question.\nLink to NACC Coding Guidebook",
     "id": "/profiles/uds_ivp_b1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
@@ -39,6 +39,7 @@
         "schema_version": {
             "default": "1"
         },
+       
         "subj_phys_meas": {
             "title": "Subject physical measurements",
             "description": "",
@@ -75,7 +76,7 @@
                     "title": "4. Subject resting heart rate (pulse)",
                     "description": "((33-160; 888 = Not Assessed))",
                     "type": "string",
-                    "pattern": "^[3][6-9].[0-9]|[4-7][0-9].[0-9]|[8][0-7].[0-9]|88.8|99.9$"
+                    "pattern": "^[3][3]|[4-9][0-9]|[1][0-5][0-9]|[1][6][0]|888$"
 
                 }
             },
