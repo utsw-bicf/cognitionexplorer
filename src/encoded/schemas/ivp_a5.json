@@ -5,7 +5,7 @@
     "id": "/profiles/ivp_a5.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
-        "uuid","master_id"
+        "uuid"
     ],
     "required": [
         "master_id",
