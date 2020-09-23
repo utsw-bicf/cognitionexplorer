@@ -8,7 +8,7 @@
         "uuid"
     ],
     "required": [
-        "master_id",
+        "patient",
         "adcid",
         "visdate",
         "visitnum",
@@ -1238,7 +1238,7 @@
         }
     },
     "boost_values": {
-        "master_id":1.0,
+        "patient":1.0,
         "His_of_cig_alc.cig_smok.tobac30": 1.0,
         "His_of_cig_alc.cig_smok.tobac100": 1.0,
         "His_of_cig_alc.cig_smok.smokyrs": 1.0,
