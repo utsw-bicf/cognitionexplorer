@@ -126,10 +126,10 @@ class ColumnSortDir extends React.Component {
     }
 
     render() {
-        const { columnId, thClass, title, columnClass } = this.props;
+        const { columnId, thClass, title, columnClass, colSpan } = this.props;
 
         return (
-            <th key={columnId} className={thClass} onClick={this.handleClick}>
+            <th key={columnId} className={thClass} onClick={this.handleClick} colSpan={colSpan}>
                 <span>{title}<i className={columnClass} /></span>
             </th>
         );
@@ -260,6 +260,7 @@ export class SortTable extends React.Component {
             const sortedList = this.state.mounted ? list.sort(this.sortColumn) : list;
 
             return (
+               
                 <table className={`table table-sortable${css ? ` ${css}` : ''}`}>
                     <thead>
                         {this.props.title ? <tr className="table-section" key="title"><th colSpan={colCount}>{this.props.title}</th></tr> : null}
@@ -276,9 +277,10 @@ export class SortTable extends React.Component {
                                             columnClass = null;
                                         }
                                         const title = (typeof columns[columnId].title === 'function') ? columns[columnId].title(list, columns, meta) : columns[columnId].title;
+                                        const columnSpan = columns[columnId].span;
                                         const thClass = `${(columns[columnId].sorter !== false) ? 'tcell-sortable' : ''}${columns[columnId].headerCss ? ` ${columns[columnId].headerCss}` : ''}`;
 
-                                        return <ColumnSortDir key={columnId} sortDir={this.sortDir} columnId={columnId} thClass={thClass} title={title} columnClass={columnClass} />;
+                                        return <ColumnSortDir key={columnId} sortDir={this.sortDir} columnId={columnId} thClass={thClass} title={title} columnClass={columnClass} colSpan={columnSpan} />;
                                     }
 
                                     // Column hidden
@@ -324,6 +326,7 @@ export class SortTable extends React.Component {
                         </tr>
                     </tfoot>
                 </table>
+                
             );
         }
 
@@ -369,3 +372,4 @@ SortTable.defaultProps = {
     footer: null,
     collapsed: false,
 };
+
