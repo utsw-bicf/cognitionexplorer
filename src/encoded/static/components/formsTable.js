@@ -13,6 +13,7 @@ class FormsTable extends React.Component {
         let visitObj = {
             visit_number: 1,
             visit_name: "Initial Visit",
+            visit_date: data.ivp_a1[0]['visdate'],
             a1_name: "ivp_a1",
             a1_id: data.ivp_a1[0]['@id'],
             a2_name: "",  
@@ -63,6 +64,7 @@ class FormsTable extends React.Component {
             let visitObj = {
                 visit_number: i + 2,
                 visit_name: "Fllow Up Visit " + (i + 1),
+                visit_date: followUpVisistTimes[i],
                 a1_name: "",
                 a1_id: "",
                 a2_name: "",  
@@ -144,6 +146,10 @@ class FormsTable extends React.Component {
                 title: 'Visit',
                 
             },
+            visit_date: {
+                title: 'Visit Date',
+                
+            },
             a1_id: {
                 title: 'Form A',
                 display: form => <div>{form.a1_id &&<span><a href={form.a1_id}>{form.a1_name}</a> </span>}
@@ -210,6 +216,7 @@ componentDidMount() {
 }
 
 export default FormsTable;
+
 
 
 
