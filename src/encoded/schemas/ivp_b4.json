@@ -114,15 +114,19 @@
                     "title": "7. CDR SUM OF BOXES",
                     "type": "string"
                 },
+
                 "note_cdrglob": {
                     "title": "Link to Global CDR calculation tool",
-                    "links": [
+                    "description": "https://www.alz.washington.edu/cdrnacc.html",
+                    "format":"uri",
+                    "default":"https://www.alz.washington.edu/cdrnacc.html",
+                    "permission": "import_items",
+                    "type": "string",
+                    "links": 
                         {
-                            "rel": "Global CDR calculation tool",
-                            "href": "{href='https://www.alz.washington.edu/cdrnacc.html'}"
+                            "href": "https://www.alz.washington.edu/cdrnacc.html"
                         }
-                    ],
-                    "type": "string"
+                    
                 },
                 "cdrglob": {
                     "title": "8. GLOBAL CDR",
