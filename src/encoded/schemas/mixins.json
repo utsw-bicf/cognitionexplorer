@@ -109,7 +109,6 @@
             ]
         }
     },
-   
     "shared_status": {
         "status": {
             "title": "Status",
@@ -150,7 +149,7 @@
             "permission": "import_items"
         }
     },
-    "examinier_initials":{
+    "examinier_initials": {
         "initials": {
             "title": "Examiner's initials (xxx)",
             "description": "Examiner's initials,format XXX.",
@@ -161,7 +160,7 @@
     "header": {
         "patient": {
             "title": "Patient",
-	    "description": "PID. The patient the form belongs for.",
+            "description": "PID. The patient the form belongs for.",
             "type": "string",
             "linkTo": "Patient"
         },
@@ -220,14 +219,15 @@
                 "43 Univeristy of Michigan ADC"
             ]
         },
-        
         "visdate": {
             "title": "Visit date",
             "description": "Date of visit,format as YYYY-MM-DD",
             "comment": "Date can be submitted as YYYY-MM-DD.",
             "type": "string",
             "anyOf": [
-                {"format": "date"}
+                {
+                    "format": "date"
+                }
             ]
         },
         "visitnum": {
@@ -236,7 +236,6 @@
             "type": "string",
             "pattern": "^([0-9]?[0-9]?[0-9])$"
         },
-        
         "header_complete": {
             "title": "Header_complete",
             "type": "string",
