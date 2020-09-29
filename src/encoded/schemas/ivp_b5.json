@@ -9,31 +9,18 @@
     ],
     "required": [
         "npiqinf",
-        "npiqinfx",
         "del",
-        "delsev",
         "hall",
-        "hallsev",
         "agit",
-        "agitsev",
         "depd",
-        "depdsev",
         "anx",
-        "anxsev",
         "elat",
-        "elatsev",
         "apa",
-        "apasev",
         "disn",
-        "disnsev",
         "irr",
-        "irrsev",
         "mot",
-        "motsev",
         "nite",
-        "nitesev",
-        "app",
-        "appsev"
+        "app"
     ],
     "additionalProperties": false,
     "mixinProperties": [
@@ -484,7 +471,6 @@
        
     },
     "boost_values": {
-        "accession": 1.0,
         "npiqinf": 1.0,
         "npiqinfx": 1.0,
         "del": 1.0,
