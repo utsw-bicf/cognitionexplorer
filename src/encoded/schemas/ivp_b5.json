@@ -471,6 +471,7 @@
        
     },
     "boost_values": {
+        "patient": 1.0,
         "npiqinf": 1.0,
         "npiqinfx": 1.0,
         "del": 1.0,
