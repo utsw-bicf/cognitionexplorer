@@ -6,8 +6,7 @@
         "uuid"
     ],
     "required": [
-        "nogds",
-        "note_b6_2"
+
     ],
     "additionalProperties": false,
     "mixinProperties": [],
@@ -18,309 +17,167 @@
         },
         "nogds": {
             "title": "Check this box and enter \"88\" below for the Total GDS Score if and only if the subject: 1.) does not attempt the GDS, or 2.) answers fewer than 12 questions.",
-            "type": "boolean",
+            "type": "string",
             "enum": [
-                false,
-                true
-            ],
-            "enumNames": [
-                "NO",
-                "YES"
-            ],
-            "default": false
-        },
-        "note_b6_2": {
-            "title": "Instruction for the subject:",
-            "description": "Instruct the subject: \"In the next part of this interview, I will ask you questions about your feelings.\nSome of the questions I will ask you may not apply, and some may make you feel uncomfortable.For each question, please answer \"yes\" or \"no,\" depending on how you have been feeling in past week, including today.\"",
-            "type": "object",
-            "properties": {
-                "satis": {
-                    "title": "1. Are you basically satisfied with your life?",
-                    "description": "",
-                    "comment": "",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "dropact": {
-                    "title": "2. Have you dropped many of your activities and interests?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "empty": {
-                    "title": "3. Do you feel that your life is empty?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "bored": {
-                    "title": "4. Do you often get bored?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "spirits": {
-                    "title": "5. Are you in good spirits most of the time?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "afraid": {
-                    "title": "6. Are you afraid that something bad is going to happen to you?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "happy": {
-                    "title": "7. Do you feel happy most of the time?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "helpless": {
-                    "title": "8. Do you often feel helpless?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "stayhome": {
-                    "title": "9. Do you prefer to stay at home, rather than going out and doing new things?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "memprob": {
-                    "title": "10. Do you feel you have more problems with memory than most?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "wondrful": {
-                    "title": "11. Do you think it is wonderful to be alive now?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "wrthless": {
-                    "title": "12. Do you feel pretty worthless the way you are now?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "energy": {
-                    "title": "13. Do you feel full of energy?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "hopeless": {
-                    "title": "14. Do you feel that your situation is hopeless?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "better": {
-                    "title": "15. Do you think that most people are better off than you are?",
-                    "type": "string",
-                    "enum": [
-                        "0 Yes",
-                        "1 No",
-                        "9 Did not answer"
-                    ]
-                },
-                "gds": {
-                    "title": "16. Sum all checked answers for a Total GDS Score",
-                    "description": "((max score=15; did not complete = 88))",
-                    "type": "string",
-                    "pattern": "^([0-9]|[1][0-5]|88)$"
-                }
-            },
-            "required": [
-                "satis",
-                "dropact",
-                "empty",
-                "bored",
-                "spirits",
-                "afraid",
-                "happy",
-                "helpless",
-                "stayhome",
-                "memprob",
-                "wondrful",
-                "wrthless",
-                "energy",
-                "hopeless",
-                "better",
-                "gds"
+               "0","1"
             ]
+        },
+        "satis": {
+            "title": "1. Are you basically satisfied with your life?",
+            "description": "",
+            "comment": "",
+            "type": "string",
+            "enum": [
+                "0 Yes",
+                "1 No",
+                "9 Did not answer"
+            ]
+        },
+        "dropact": {
+            "title": "2. Have you dropped many of your activities and interests?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "empty": {
+            "title": "3. Do you feel that your life is empty?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "bored": {
+            "title": "4. Do you often get bored?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "spirits": {
+            "title": "5. Are you in good spirits most of the time?",
+            "type": "string",
+            "enum": [
+                "0 Yes",
+                "1 No",
+                "9 Did not answer"
+            ]
+        },
+        "afraid": {
+            "title": "6. Are you afraid that something bad is going to happen to you?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "happy": {
+            "title": "7. Do you feel happy most of the time?",
+            "type": "string",
+            "enum": [
+                "0 Yes",
+                "1 No",
+                "9 Did not answer"
+            ]
+        },
+        "helpless": {
+            "title": "8. Do you often feel helpless?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "stayhome": {
+            "title": "9. Do you prefer to stay at home, rather than going out and doing new things?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "memprob": {
+            "title": "10. Do you feel you have more problems with memory than most?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "wondrful": {
+            "title": "11. Do you think it is wonderful to be alive now?",
+            "type": "string",
+            "enum": [
+                "0 Yes",
+                "1 No",
+                "9 Did not answer"
+            ]
+        },
+        "wrthless": {
+            "title": "12. Do you feel pretty worthless the way you are now?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "energy": {
+            "title": "13. Do you feel full of energy?",
+            "type": "string",
+            "enum": [
+                "0 Yes",
+                "1 No",
+                "9 Did not answer"
+            ]
+        },
+        "hopeless": {
+            "title": "14. Do you feel that your situation is hopeless?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "better": {
+            "title": "15. Do you think that most people are better off than you are?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Did not answer"
+            ]
+        },
+        "gds": {
+            "title": "16. Sum all checked answers for a Total GDS Score",
+            "description": "((max score=15; did not complete = 88))",
+            "type": "string",
+            "pattern": "^[0-9]|[1][0-5]|88$"
         }
     },
     "facets": {
         "status": {
             "title": "Status"
-        },
-        "note_b6_2.satis": {
-            "title": "1. Are you basically satisfied with your life?"
-        },
-        "note_b6_2.dropact": {
-            "title": "2. Have you dropped many of your activities and interests?"
-        },
-        "note_b6_2.empty": {
-            "title": "3. Do you feel that your life is empty?"
-        },
-        "note_b6_2.bored": {
-            "title": "4. Do you often get bored?"
-        },
-        "note_b6_2.spirits": {
-            "title": "5. Are you in good spirits most of the time?"
-        },
-        "note_b6_2.afraid": {
-            "title": "6. Are you afraid that something bad is going to happen to you?"
-        },
-        "note_b6_2.happy": {
-            "title": "7. Do you feel happy most of the time?"
-        },
-        "note_b6_2.helpless": {
-            "title": "8. Do you often feel helpless?"
-        },
-        "note_b6_2.stayhome": {
-            "title": "9. Do you prefer to stay at home, rather than going out and doing new things?"
-        },
-        "note_b6_2.memprob": {
-            "title": "10. Do you feel you have more problems with memory than most?"
-        },
-        "note_b6_2.wondrful": {
-            "title": "11. Do you think it is wonderful to be alive now?"
-        },
-        "note_b6_2.wrthless": {
-            "title": "12. Do you feel pretty worthless the way you are now?"
-        },
-        "note_b6_2.energy": {
-            "title": "13. Do you feel full of energy?"
-        },
-        "note_b6_2.hopeless": {
-            "title": "14. Do you feel that your situation is hopeless"
-        },
-        "note_b6_2.better": {
-            "title": "15. Do you think that most people are better off than you are?"
-        },
-        "note_b6_2.gds": {
-            "title": "16. Sum all checked answers for a Total GDS Score"
         }
     },
     "columns": {
         "status": {
             "title": "Status"
-        },
-        "note_b6_2.satis": {
-            "title": "1. Are you basically satisfied with your life?"
-        },
-        "note_b6_2.dropact": {
-            "title": "2. Have you dropped many of your activities and interests?"
-        },
-        "note_b6_2.empty": {
-            "title": "3. Do you feel that your life is empty?"
-        },
-        "note_b6_2.bored": {
-            "title": "4. Do you often get bored?"
-        },
-        "note_b6_2.spirits": {
-            "title": "5. Are you in good spirits most of the time?"
-        },
-        "note_b6_2.afraid": {
-            "title": "6. Are you afraid that something bad is going to happen to you?"
-        },
-        "note_b6_2.happy": {
-            "title": "7. Do you feel happy most of the time?"
-        },
-        "note_b6_2.helpless": {
-            "title": "8. Do you often feel helpless?"
-        },
-        "note_b6_2.stayhome": {
-            "title": "9. Do you prefer to stay at home, rather than going out and doing new things?"
-        },
-        "note_b6_2.memprob": {
-            "title": "10. Do you feel you have more problems with memory than most?"
-        },
-        "note_b6_2.wondrful": {
-            "title": "11. Do you think it is wonderful to be alive now?"
-        },
-        "note_b6_2.wrthless": {
-            "title": "12. Do you feel pretty worthless the way you are now?"
-        },
-        "note_b6_2.energy": {
-            "title": "13. Do you feel full of energy?"
-        },
-        "note_b6_2.hopeless": {
-            "title": "14. Do you feel that your situation is hopeless"
-        },
-        "note_b6_2.better": {
-            "title": "15. Do you think that most people are better off than you are?"
-        },
-        "note_b6_2.gds": {
-            "title": "16. Sum all checked answers for a Total GDS Score"
         }
     },
     "boost_values": {
-        "note_b6_2.satis": 1.0,
-        "note_b6_2.dropact": 1.0,
-        "note_b6_2.empty": 1.0,
-        "note_b6_2.bored": 1.0,
-        "note_b6_2.spirits": 1.0,
-        "note_b6_2.afraid": 1.0,
-        "note_b6_2.happy": 1.0,
-        "note_b6_2.helpless": 1.0,
-        "note_b6_2.stayhome": 1.0,
-        "note_b6_2.memprob": 1.0,
-        "note_b6_2.wondrful": 1.0,
-        "note_b6_2.wrthless": 1.0,
-        "note_b6_2.energy": 1.0,
-        "note_b6_2.hopeless": 1.0,
-        "note_b6_2.better": 1.0,
-        "note_b6_2.gds": 1.0
+        "patient": 1.0
     },
     "changelog": "/profiles/changelogs/ivp_b6.md"
 }

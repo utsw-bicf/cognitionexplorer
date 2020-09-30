@@ -25,6 +25,7 @@ ORDER = [
     'ivp_a5',
     'fvp_a2',
     'ivp_b5',
+    'ivp_b6',
 
     'cart'
 ]
