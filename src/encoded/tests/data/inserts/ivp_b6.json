@@ -5,7 +5,7 @@
     "visitnum": "1",
     "initials": "JAR",
     "header_complete": "Complete",
-    "nogds":"0",
+    "nogds":false,
     "satis": "0 Yes",
     "dropact": "0 No",
     "empty": "0 No",
@@ -21,7 +21,7 @@
     "energy": "0 Yes",
     "hopeless": "0 No",
     "better": "0 No",
-    "gds": "88",
+    "gds": "1",
     "form_status": "Complete",
     "status": "released",
     "uuid": "fa51ea98-3d6f-4614-b331-34bd90aa9102"
