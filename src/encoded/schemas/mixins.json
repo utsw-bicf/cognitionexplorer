@@ -178,6 +178,7 @@
             "title": "Center ID",
             "description": "Center ID, ADC name",
             "type": "string",
+            "default": "25 University of Texas Southwestern",
             "enum": [
                 "2 Boston University",
                 "3 Case Western University",
