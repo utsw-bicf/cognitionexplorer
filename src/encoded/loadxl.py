@@ -24,6 +24,10 @@ ORDER = [
     'ivp_a2',
     'ivp_a5',
     'fvp_a2',
+    'ivp_b5',
+    'ivp_b6',
+    'ivp_b4',
+    'ivp_b1',
     'cart'
 ]
 
