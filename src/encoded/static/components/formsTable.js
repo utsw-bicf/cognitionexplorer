@@ -113,6 +113,13 @@ class FormsTable extends React.Component {
             forms[index].a2_name = "fvp_a2"
 
         }
+        for (let i = 0; i < data.ivp_b1.length; i++) {
+            let index = followUpVisistTimes.indexOf(data.ivp_b1[i]["visdate"]) + 1;
+            console.log(index)
+            forms[index].b1_id = data.ivp_b1[i]['@id']
+            forms[index].b1_name = "ivp_b1"
+
+        }
 
 
         return forms
@@ -159,7 +166,7 @@ class FormsTable extends React.Component {
             b1_id: {
                 title: 'Form B',
                 display: form => <div>{form.b1_id &&<span><a href={form.b1_id}>{form.b1_name}</a> </span>}
-                {form.b4_id &&<span><a href={form.b4_id}>{form.a4_name}</a> </span>}
+                {form.b4_id &&<span><a href={form.b4_id}>{form.b4_name}</a> </span>}
                 {form.b5_id &&<span><a href={form.b5_id}>{form.b5_name}</a> </span>}
                 {form.b6_id &&<span><a href={form.b6_id}>{form.b6_name}</a> </span>}
                 {form.b7_id &&<span><a href={form.b7_id}>{form.b7_name}</a> </span>}
