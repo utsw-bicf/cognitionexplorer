@@ -8,16 +8,7 @@
         "uuid"
     ],
     "required": [
-        "bills",
-        "taxes",
-        "shopping",
-        "games",
-        "stove",
-        "mealprep",
-        "events",
-        "payattn",
-        "remdates",
-        "travel"
+        "form_description"
     ],
     "additionalProperties": false,
     "mixinProperties": [
