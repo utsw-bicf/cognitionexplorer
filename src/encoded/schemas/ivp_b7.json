@@ -1,0 +1,274 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
+    "description": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
+    "comment": " ",
+    "id": "/profiles/uds_ivp_b7.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "bills",
+        "taxes",
+        "shopping",
+        "games",
+        "stove",
+        "mealprep",
+        "events",
+        "payattn",
+        "remdates",
+        "travel"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "form_description": {
+            "title": "In the past four weeks, did the subject have difficulty or need help with:",
+            "type": "object",
+            "properties": {
+                "bills": {
+                    "title": "1. Writing checks, paying bills, or balancing a checkbook",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "taxes": {
+                    "title": "2. Assembling tax records, business affairs, or other papers",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "shopping": {
+                    "title": "3. Shopping alone for clothes, household necessities, or groceries",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "games": {
+                    "title": "4. Playing a game of skill such as bridge or chess, working on a hobby",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "stove": {
+                    "title": "5. Heating water, making a cup of coffee, turning off the stove",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "mealprep": {
+                    "title": "6. Preparing a balanced meal",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "events": {
+                    "title": "7. Keeping track of current events",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "payattn": {
+                    "title": "8. Paying attention to and understanding a TV program, book, or magazine",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "remdates": {
+                    "title": "9. Remembering appointments, family occasions, holidays, medications",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "travel": {
+                    "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                }
+            },
+            "required": [
+                "bills",
+                "taxes",
+                "shopping",
+                "games",
+                "stove",
+                "mealprep",
+                "events",
+                "payattn",
+                "remdates",
+                "travel"
+            ]
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "form_description.bills": {
+            "title": "1. Writing checks, paying bills, or balancing a checkbook"
+        },
+        "form_description.taxes": {
+            "title": "2. Assembling tax records, business affairs, or other papers"
+        },
+        "form_description.shopping": {
+            "title": "3. Shopping alone for clothes, household necessities, or groceries"
+        },
+        "form_description.games": {
+            "title": "4. Playing a game of skill such as bridge or chess, working on a hobby"
+        },
+        "form_description.stove": {
+            "title": "5. Heating water, making a cup of coffee, turning off the stove"
+        },
+        "form_description.mealprep": {
+            "title": "6. Preparing a balanced meal"
+        },
+        "form_description.events": {
+            "title": "7. Keeping track of current events"
+        },
+        "form_description.payattn": {
+            "title": "8. Paying attention to and understanding a TV program, book, or magazine"
+        },
+        "form_description.remdates": {
+            "title": "9. Remembering appointments, family occasions, holidays, medications"
+        },
+        "form_description.travel": {
+            "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "form_description.bills": {
+            "title": "1. Writing checks, paying bills, or balancing a checkbook"
+        },
+        "form_description.taxes": {
+            "title": "2. Assembling tax records, business affairs, or other papers"
+        },
+        "form_description.shopping": {
+            "title": "3. Shopping alone for clothes, household necessities, or groceries"
+        },
+        "form_description.games": {
+            "title": "4. Playing a game of skill such as bridge or chess, working on a hobby"
+        },
+        "form_description.stove": {
+            "title": "5. Heating water, making a cup of coffee, turning off the stove"
+        },
+        "form_description.mealprep": {
+            "title": "6. Preparing a balanced meal"
+        },
+        "form_description.events": {
+            "title": "7. Keeping track of current events"
+        },
+        "form_description.payattn": {
+            "title": "8. Paying attention to and understanding a TV program, book, or magazine"
+        },
+        "form_description.remdates": {
+            "title": "9. Remembering appointments, family occasions, holidays, medications"
+        },
+        "form_description.travel": {
+            "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "form_description.bills": 1.0,
+        "form_description.taxes": 1.0,
+        "form_description.shopping": 1.0,
+        "form_description.games": 1.0,
+        "form_description.stove": 1.0,
+        "form_description.mealprep": 1.0,
+        "form_description.events": 1.0,
+        "form_description.payattn": 1.0,
+        "form_description.remdates": 1.0,
+        "form_description.travel": 1.0
+    },
+    "changelog": "/profiles/changelogs/ivp_b7.md"
+}
