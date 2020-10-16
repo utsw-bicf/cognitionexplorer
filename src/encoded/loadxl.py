@@ -29,6 +29,7 @@ ORDER = [
     'ivp_b4',
     'ivp_b1',
     'ivp_b7',
+    'ivp_b8',
     'cart'
 ]
 
