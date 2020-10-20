@@ -72,6 +72,10 @@ class FormsTable extends React.Component {
             visitObj.b7_id = data.ivp_b7[0]['@id']
             visitObj.b7_name = "ivp_b7" 
         } 
+        if (data.ivp_b8.length > 0) {
+            visitObj.b8_id = data.ivp_b8[0]['@id']
+            visitObj.b8_name = "ivp_b8" 
+        } 
         forms[0] = visitObj
         let followUpVisistTimes = this.getFollowUpVisitTimes(data)
 
