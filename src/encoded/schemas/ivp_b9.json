@@ -187,7 +187,7 @@
                     "type": "string"
                 },
                 "cogfpred": {
-                    "title": "5. Indicate the <i>predominant</i> symptom that was first recognized as a decline in the subject's cognition:",
+                    "title": "5. Indicate the predominant symptom that was first recognized as a decline in the subject's cognition:",
                     "type": "string",
                     "enum": [
                         "1 Memory",
@@ -335,7 +335,7 @@
                     ]
                 },
                 "beagit": {
-                    "title": "9f. <i>Agitation</i>: Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?",
+                    "title": "9f. Agitation: Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?",
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -344,7 +344,7 @@
                     ]
                 },
                 "beperch": {
-                    "title": "9g. <i>Personality change</i>: Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?",
+                    "title": "9g. Personality change: Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?",
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -662,7 +662,7 @@
             "title": "4h1. If yes, there are other cognitive symptoms, specify:"
         },
         "meaningful_impair.cogfpred": {
-            "title": "5. Indicate the <i>predominant</i> symptom that was first recognized as a decline in the subject's cognition:"
+            "title": "5. Indicate the predominant symptom that was first recognized as a decline in the subject's cognition:"
         },
         "meaningful_impair.cogfprex": {
             "title": "5a. If there are other predominant symptoms, specify:"
@@ -707,10 +707,10 @@
             "title": "9e. Irritability: Does the subject overreact, e.g., by shouting at family members or others?"
         },
         "psych.beagit": {
-            "title": "9f. <i>Agitation</i>: Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?"
+            "title": "9f. Agitation: Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?"
         },
         "psych.beperch": {
-            "title": "9g. <i>Personality change</i>: Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?"
+            "title": "9g. Personality change: Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?"
         },
         "psych.berem": {
             "title": "9h. REM sleep behavior disorder: While sleeping, does the subject appear to act out his/her dreams (e.g., punch or flail their arms, shout, or scream)?"
@@ -841,7 +841,7 @@
             "title": "4h1. If yes, there are other cognitive symptoms, specify:"
         },
         "meaningful_impair.cogfpred": {
-            "title": "5. Indicate the <i>predominant</i> symptom that was first recognized as a decline in the subject's cognition:"
+            "title": "5. Indicate the predominant symptom that was first recognized as a decline in the subject's cognition:"
         },
         "meaningful_impair.cogfprex": {
             "title": "5a. If there are other predominant symptoms, specify:"
@@ -877,7 +877,7 @@
             "title": "9c2. Auditory hallucinations"
         },
         "psych.bedel": {
-            "title": "9c3. Abnormal, false, or delusional beliefs"
+            "title": "9c3. Abnormal, false, or delusional beliefs" 
         },
         "psych.bedisin": {
             "title": "9d. Disinhibition: Does the subject use inappropriate coarse language or exhibit inappropriate speech or behaviors in public or in the home? Does s/he talk personally to strangers or have disregard for personal hygiene?"
@@ -886,10 +886,10 @@
             "title": "9e. Irritability: Does the subject overreact, e.g., by shouting at family members or others?"
         },
         "psych.beagit": {
-            "title": "9f. <i>Agitation</i>: Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?"
+            "title": "9f. Agitation: Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?"
         },
         "psych.beperch": {
-            "title": "9g. <i>Personality change</i>: Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?"
+            "title": "9g. Personality change: Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?"
         },
         "psych.berem": {
             "title": "9h. REM sleep behavior disorder: While sleeping, does the subject appear to act out his/her dreams (e.g., punch or flail their arms, shout, or scream)?"
