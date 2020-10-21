@@ -142,7 +142,7 @@
                     ]
                 },
                 "arth": {
-                    "title": "11. Arthritis <i>If No or Not assessed, </i><b>SKIP TO QUESTION 12</b>",
+                    "title": "11. Arthritis If No or Not assessed, SKIP TO QUESTION 12",
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -397,7 +397,7 @@
             "title": "10. Thyroid disease"
         },
         "sele_note.arth": {
-            "title": "11. Arthritis <i>If No or Not assessed, </i><b>SKIP TO QUESTION 12</b>"
+            "title": "11. Arthritis If No or Not assessed, SKIP TO QUESTION 12"
         },
         "sele_note.artype": {
             "title": "11a. If yes, what type?"
@@ -504,7 +504,7 @@
             "title": "10. Thyroid disease"
         },
         "sele_note.arth": {
-            "title": "11. Arthritis <i>If No or Not assessed, </i><b>SKIP TO QUESTION 12</b>"
+            "title": "11. Arthritis If No or Not assessed, SKIP TO QUESTION 12"
         },
         "sele_note.artype": {
             "title": "11a. If yes, what type?"
