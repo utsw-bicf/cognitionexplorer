@@ -36,6 +36,7 @@ class Patient(Item):
         'ivp_b1',
         'ivp_b7',
         'ivp_b8',
+        'ivp_b9',
         'ivp_d2',
     ]
     rev = {
@@ -50,9 +51,8 @@ class Patient(Item):
         'ivp_b4': ('Ivp_b4', 'patient'),
         'ivp_b7': ('Ivp_b7', 'patient'),
         'ivp_b8': ('Ivp_b8', 'patient'),
+        'ivp_b9': ('Ivp_b9', 'patient'),
         'ivp_d2': ('Ivp_d2', 'patient'),
-
-
     }
 
     audit_inherit = [
@@ -183,6 +183,17 @@ class Patient(Item):
     def ivp_b8(self, request, ivp_b8):
         return paths_filtered_by_status(request, ivp_b8)
 
+    @calculated_property(schema={
+        "title": "Ivp_b9",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Ivp_b9"
+        },
+    })
+    def ivp_b9(self, request, ivp_b9):
+        return paths_filtered_by_status(request, ivp_b9)
+      
     @calculated_property(schema={
         "title": "Ivp_d2",
         "type": "array",
