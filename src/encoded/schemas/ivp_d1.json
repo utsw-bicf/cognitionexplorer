@@ -324,10 +324,8 @@
                     "properties": {
                         "note_d1_11": {
                             "title": "Section 2 must be completed for all subjects.",
-                            "type": "string",
-                            "options": {
-                                "hidden": true
-                            }
+                            "type": "string"
+                            
                         },
                         "amylpet": {
                             "title": "6a. Abnormally elevated amyloid on PET",
