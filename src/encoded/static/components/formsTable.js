@@ -80,7 +80,10 @@ class FormsTable extends React.Component {
             visitObj.b9_id = data.ivp_b9[0]['@id']
             visitObj.b9_name = "ivp_b9" 
         } 
-        
+        if (data.ivp_d1.length > 0) {
+            visitObj.d1_id = data.ivp_d1[0]['@id']
+            visitObj.d1_name = "ivp_d1" 
+        }  
         if (data.ivp_d2.length > 0) {
             visitObj.d2_id = data.ivp_d2[0]['@id']
             visitObj.d2_name = "ivp_d2" 
