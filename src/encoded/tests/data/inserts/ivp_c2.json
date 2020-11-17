@@ -12,14 +12,14 @@
             "mocalan": "1 English",
             "mocavis": "0 No",
             "mocahear": "0 No",
-            "mocatots": "04",
+            "mocatots": "4",
             "mocatrai": "0",
             "mocacube": "0",
             "mocacloc": "1",
             "mocaclon": "0",
             "mocacloh": "0",
             "mocanami": "2",
-            "mocaregi": "00",
+            "mocaregi": "0",
             "mocadigi": "0",
             "mocalett": "0",
             "mocaser7": "0",
@@ -41,40 +41,40 @@
             "npsylan_c2": "1 English"
         },
         "crft_stry_recl": {
-            "craftvrs": "00",
-            "crafturs": "00"
+            "craftvrs": "0",
+            "crafturs": "0"
         },
         "bens_cplx_figr": {
             "udsbentc": "14"
         },
         "numb_span_test_fwd": {
-            "digforct": "03",
-            "digforsl": "04"
+            "digforct": "3",
+            "digforsl": "4"
         },
         "numb_span_test_bkwd": {
-            "digbacct": "00",
-            "digbacls": "00"
+            "digbacct": "0",
+            "digbacls": "0"
         },
         "category_fluency": {
-            "animals_c2": "00",
-            "veg_c2": "00"
+            "animals_c2": "0",
+            "veg_c2": "0"
         },
         "trail_make_test": {
-            "traila_c2": "001",
-            "trailarr_c2": "04",
-            "trailali_c2": "04",
-            "trailb_c2": "002",
-            "trailbrr_c2": "01",
-            "trailbli_c2": "02"
+            "traila_c2": "1",
+            "trailarr_c2": "4",
+            "trailali_c2": "4",
+            "trailb_c2": "2",
+            "trailbrr_c2": "1",
+            "trailbli_c2": "2"
         },
         "crft_stry_recl_dely": {
-            "craftdvr": "00",
-            "craftdre": "00",
+            "craftdvr": "0",
+            "craftdre": "0",
             "craftdti": "13",
             "craftcue": "1 Yes"
         },
         "bens_cplx_figr_recl": {
-            "udsbentd": "02",
+            "udsbentd": "2",
             "udsbenrs": "0 No"
         },
         "mint": {
@@ -82,19 +82,19 @@
             "minttotw": "25",
             "mintscng": "00",
             "mintscnc": "88 = Not applicable",
-            "mintpcng": "07",
-            "mintpcnc": "01"
+            "mintpcng": "7",
+            "mintpcnc": "1"
         },
         "verb_fluency_phone_test": {
-            "udsverfc": "01",
-            "udsverfn": "00",
-            "udsvernf": "00",
-            "udsverlc": "01",
-            "udsverlr": "01",
-            "udsverln": "00",
-            "udsvertn": "02",
-            "udsverte": "00",
-            "udsverti": "00"
+            "udsverfc": "1",
+            "udsverfn": "0",
+            "udsvernf": "0",
+            "udsverlc": "1",
+            "udsverlr": "1",
+            "udsverln": "0",
+            "udsvertn": "2",
+            "udsverte": "0",
+            "udsverti": "0"
         },
         "overall_aprsl": {
             "cogstat_c2": "1 Better than normal for age"
