@@ -1,0 +1,241 @@
+{
+    "title": "Fvp B1",
+    "description": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B1: EVALUATION FORM - PHYSICAL\nINSTRUCTIONS: This form is to be completed by the clinician. For additional clarification and examples, see UDSCoding Guidebook for Follow-up Visit Packet, Form B1. Link to NACC Coding Guidebook Check only one box perquestion.",
+    "comment": " ",
+    "id": "/profiles/uds_fvp_b1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "phys_measr",
+        "addi_obser"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "phys_measr": {
+            "title": "Subject physical measurements",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "fu_height": {
+                    "title": "1. Subject height (inches)",
+                    "description": "((36.0-87.9; 88.8 = Not Assessed))",
+                    "type": "string",
+                    "pattern": "^(36.[0-9])$|^([3-7][0-9].[0-9])$|^(8[0-7].[0-9])$|^88.8$"
+                },
+                "fu_weight": {
+                    "title": "2. Subject weight (lbs.)",
+                    "description": "((50-400; 888 = Not Assessed))",
+                    "type": "string",
+                    "pattern": "^[5-9][0-9]$|^[0-3][0-9][0-9]$|^400$|^888$"
+                },
+                "fu_bpsys": {
+                    "title": "3a. Subject blood pressure at initial reading (sitting), systolic",
+                    "description": "((70-230; 888 = Not Assessed))",
+                    "type": "string",
+                    "pattern": "^[0-1][0-9][0-9]$|^[7-9][0-9]$|^2[0-2][0-9]$|^230$|^888$"
+                },
+                "fu_bpdias": {
+                    "title": "3b. Subject blood pressure at initial reading (sitting), diastolic",
+                    "description": "((30-140; 888 = Not Assessed))",
+                    "type": "string",
+                    "pattern": "^[3-9][0-9]$|^1[0-3][0-9]$|^140$|^888$"
+                },
+                "fu_hrate": {
+                    "title": "4. Subject resting heart rate (pulse)",
+                    "description": "((33-160; 888 = Not Assessed))",
+                    "type": "string",
+                    "pattern": "^3[3-9]$|^[4-9][0-9]$|^1[0-5][0-9]$|^160$|^888$"
+                }
+            }
+           
+        },
+        "addi_obser": {
+            "title": "Additional physical observations",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "fu_vision": {
+                    "title": "5. Without corrective lenses, is the subject's vision functionally normal?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_viscorr": {
+                    "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7</i>)",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_viswcorr": {
+                    "title": "6a. If yes, is the subject's vision functionally normal with corrective lenses?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_hearing": {
+                    "title": "7. Without a hearing aid(s), is the subject's hearing functionally normal?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_hearaid": {
+                    "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE</i>)",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_hearwaid": {
+                    "title": "8a. If yes, is the subject's hearing functionally normal with a hearing aid(s)?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                }
+            }
+            
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "phys_measr.fu_height": {
+            "title": "1. Subject height (inches)"
+        },
+        "phys_measr.fu_weight": {
+            "title": "2. Subject weight (lbs.)"
+        },
+        "phys_measr.fu_bpsys": {
+            "title": "3a. Subject blood pressure at initial reading (sitting), systolic"
+        },
+        "phys_measr.fu_bpdias": {
+            "title": "3b. Subject blood pressure at initial reading (sitting), diastolic"
+        },
+        "phys_measr.fu_hrate": {
+            "title": "4. Subject resting heart rate (pulse)"
+        },
+        "addi_obser.fu_vision": {
+            "title": "5. Without corrective lenses, is the subject's vision functionally normal?"
+        },
+        "addi_obser.fu_viscorr": {
+            "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7</i>)"
+        },
+        "addi_obser.fu_viswcorr": {
+            "title": "6a. If yes, is the subject's vision functionally normal with corrective lenses?"
+        },
+        "addi_obser.fu_hearing": {
+            "title": "7. Without a hearing aid(s), is the subject's hearing functionally normal?"
+        },
+        "addi_obser.fu_hearaid": {
+            "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE</i>)"
+        },
+        "addi_obser.fu_hearwaid": {
+            "title": "8a. If yes, is the subject's hearing functionally normal with a hearing aid(s)?"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "phys_measr.fu_height": {
+            "title": "1. Subject height (inches)"
+        },
+        "phys_measr.fu_weight": {
+            "title": "2. Subject weight (lbs.)"
+        },
+        "phys_measr.fu_bpsys": {
+            "title": "3a. Subject blood pressure at initial reading (sitting), systolic"
+        },
+        "phys_measr.fu_bpdias": {
+            "title": "3b. Subject blood pressure at initial reading (sitting), diastolic"
+        },
+        "phys_measr.fu_hrate": {
+            "title": "4. Subject resting heart rate (pulse)"
+        },
+        "addi_obser.fu_vision": {
+            "title": "5. Without corrective lenses, is the subject's vision functionally normal?"
+        },
+        "addi_obser.fu_viscorr": {
+            "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7</i>)"
+        },
+        "addi_obser.fu_viswcorr": {
+            "title": "6a. If yes, is the subject's vision functionally normal with corrective lenses?"
+        },
+        "addi_obser.fu_hearing": {
+            "title": "7. Without a hearing aid(s), is the subject's hearing functionally normal?"
+        },
+        "addi_obser.fu_hearaid": {
+            "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE</i>)"
+        },
+        "addi_obser.fu_hearwaid": {
+            "title": "8a. If yes, is the subject's hearing functionally normal with a hearing aid(s)?"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "phys_measr.fu_height": 1.0,
+        "phys_measr.fu_weight": 1.0,
+        "phys_measr.fu_bpsys": 1.0,
+        "phys_measr.fu_bpdias": 1.0,
+        "phys_measr.fu_hrate": 1.0,
+        "addi_obser.fu_vision": 1.0,
+        "addi_obser.fu_viscorr": 1.0,
+        "addi_obser.fu_viswcorr": 1.0,
+        "addi_obser.fu_hearing": 1.0,
+        "addi_obser.fu_hearaid": 1.0,
+        "addi_obser.fu_hearwaid": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_b1.md"
+}
