@@ -331,90 +331,90 @@
                             "title": "6a. Abnormally elevated amyloid on PET",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "amylcsf": {
                             "title": "6b. Abnormally low amyloid in CSF",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "fdgad": {
                             "title": "6c. FDG-PET pattern of AD",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "hippatr": {
                             "title": "6d. Hippocampal atrophy",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "taupetad": {
                             "title": "6e. Tau PET evidence for AD",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "csftau": {
                             "title": "6f. Abnormally elevated CSF tau or ptau",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "fdgftld": {
                             "title": "6g. FDG-PET evidence for frontal or anterior temporal hypometabolism for FTLD",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "tpetftld": {
                             "title": "6h. Tau PET evidence for FTLD",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "mrftld": {
                             "title": "6i. Structural MR evidence for frontal or anterior temporal atrophy for FTLD",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "datscan": {
                             "title": "6j. Dopamine transporter scan (DATscan) evidence for Lewy body disease",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown, not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
                             ]
                         },
                         "othbiom": {
@@ -439,54 +439,54 @@
                             "title": "7a. Large vessel infarct(s)",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown/not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "imaglac": {
                             "title": "7b. Lacunar infarct(s)",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown/not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "imagmach": {
                             "title": "7c. Macrohemorrhage(s)",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown/not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "imagmich": {
                             "title": "7d. Microhemorrhage(s)",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown/not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "imagmwmh": {
                             "title": "7e. Moderate white-matter hyperintensity (CHS score 5-6)",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown/not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "imagewmh": {
                             "title": "7f. Extensive white-matter hyperintensity (CHS score 7-8+)",
                             "type": "string",
                             "enum": [
-                                "No 0",
-                                "Yes 1",
-                                "Unknown/not assessed 8"
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
                             ]
                         }
                     }
