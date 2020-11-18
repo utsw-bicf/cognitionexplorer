@@ -94,7 +94,7 @@
                     ]
                 },
                 "fu_viscorr": {
-                    "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7</i>)",
+                    "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7)",
                     "description": "",
                     "type": "string",
                     "enum": [
@@ -124,7 +124,7 @@
                     ]
                 },
                 "fu_hearaid": {
-                    "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE</i>)",
+                    "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE)",
                     "description": "",
                     "type": "string",
                     "enum": [
@@ -170,7 +170,7 @@
             "title": "5. Without corrective lenses, is the subject's vision functionally normal?"
         },
         "addi_obser.fu_viscorr": {
-            "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7</i>)"
+            "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7)"
         },
         "addi_obser.fu_viswcorr": {
             "title": "6a. If yes, is the subject's vision functionally normal with corrective lenses?"
@@ -179,7 +179,7 @@
             "title": "7. Without a hearing aid(s), is the subject's hearing functionally normal?"
         },
         "addi_obser.fu_hearaid": {
-            "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE</i>)"
+            "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE)"
         },
         "addi_obser.fu_hearwaid": {
             "title": "8a. If yes, is the subject's hearing functionally normal with a hearing aid(s)?"
@@ -208,7 +208,7 @@
             "title": "5. Without corrective lenses, is the subject's vision functionally normal?"
         },
         "addi_obser.fu_viscorr": {
-            "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7</i>)"
+            "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7)"
         },
         "addi_obser.fu_viswcorr": {
             "title": "6a. If yes, is the subject's vision functionally normal with corrective lenses?"
@@ -217,7 +217,7 @@
             "title": "7. Without a hearing aid(s), is the subject's hearing functionally normal?"
         },
         "addi_obser.fu_hearaid": {
-            "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE</i>)"
+            "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE)"
         },
         "addi_obser.fu_hearwaid": {
             "title": "8a. If yes, is the subject's hearing functionally normal with a hearing aid(s)?"
