@@ -14,11 +14,11 @@
             "fu_homehobb": "0 - None Life at home, hobbies, and intellectual interests well maintained.",
             "fu_perscare": "0 - None / Questionable - 0Fully capable of self-care (=0).",
             "fu_cdrsum": 456,
-            "fu_cdrglob": "0.5 = Questionable impariment",
+            "fu_cdrglob": "0.5 = Questionable impariment"
         },
         "sec2": {
             "fu_comport": "0.5 - Questionable Questionable changes in comportment, empathy, appropriateness of actions.",
-            "fu_cdrlang": "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading.",
+            "fu_cdrlang": "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading."
         },
         "form_status": "Complete",
         "status": "released",
@@ -39,11 +39,11 @@
             "fu_homehobb": "0 - None Life at home, hobbies, and intellectual interests well maintained.",
             "fu_perscare": "0 - None / Questionable - 0Fully capable of self-care (=0).",
             "fu_cdrsum": 789,
-            "fu_cdrglob": "0.5 = Questionable impariment",
+            "fu_cdrglob": "0.5 = Questionable impariment"
         },
         "sec2": {
             "fu_comport": "0.5 - Questionable Questionable changes in comportment, empathy, appropriateness of actions.",
-            "fu_cdrlang": "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading.",
+            "fu_cdrlang": "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading."
         },
         "form_status": "Complete",
         "status": "released",

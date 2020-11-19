@@ -45,7 +45,7 @@
             "type": "object",
             "properties": {
                 "fu_memory": {
-                    "title": "1. MEMOR",
+                    "title": "1. MEMORY",
                     "type": "string",
                     "enum": [
                         "0 - None No memory loss, or slight inconsistent forgetfulness.",
@@ -56,7 +56,7 @@
                     ]
                 },
                 "fu_orient": {
-                    "title": "2. ORIENTATIO",
+                    "title": "2. ORIENTATION",
                     "type": "string",
                     "enum": [
                         "0 - None Fully oriented",
@@ -67,7 +67,7 @@
                     ]
                 },
                 "fu_judgment": {
-                    "title": "3. JUDGMENT & PROBLEM SOLVIN",
+                    "title": "3. JUDGMENT & PROBLEM SOLVING",
                     "type": "string",
                     "enum": [
                         "0 - None Solves everyday problems, handles business & financial affairs well; judgment good in relation to past performance.",
@@ -78,7 +78,7 @@
                     ]
                 },
                 "fu_commun": {
-                    "title": "4. COMMUNITY AFFAIR",
+                    "title": "4. COMMUNITY AFFAIRS",
                     "type": "string",
                     "enum": [
                         "0 - None Independent function at usual level in job, shopping, volunteer and social groups.",
@@ -89,7 +89,7 @@
                     ]
                 },
                 "fu_homehobb": {
-                    "title": "5. HOME & HOBBIE",
+                    "title": "5. HOME & HOBBIES",
                     "type": "string",
                     "enum": [
                         "0 - None Life at home, hobbies, and intellectual interests well maintained.",
@@ -100,7 +100,7 @@
                     ]
                 },
                 "fu_perscare": {
-                    "title": "6. PERSONAL CAR",
+                    "title": "6. PERSONAL CARE",
                     "type": "string",
                     "enum": [
                         "0 - None / Questionable - 0Fully capable of self-care (=0).",
@@ -110,12 +110,12 @@
                     ]
                 },
                 "fu_cdrsum": {
-                    "title": "7. CDR SUM OF BOXE",
+                    "title": "7. CDR SUM OF BOXES",
                     "description": "Link to Global CDR calculation tool: https://www.alz.washington.edu/cdrnacc.html",
                     "type": "number"
                 },
                 "fu_cdrglob": {
-                    "title": "8. GLOBAL CD",
+                    "title": "8. GLOBAL CDR",
                     "type": "string",
                     "enum": [
                         "0.0 = No Impairment",
@@ -132,7 +132,7 @@
             "type": "object",
             "properties": {
                 "fu_comport": {
-                    "title": "9. BEHAVIOR, COMPORTMENT AND PERSONALIT",
+                    "title": "9. BEHAVIOR, COMPORTMENT AND PERSONALITY 2",
                     "type": "string",
                     "enum": [
                         "0 - None Socially appropriate behavior.",
@@ -143,7 +143,7 @@
                     ]
                 },
                 "fu_cdrlang": {
-                    "title": "10. LANGUAG",
+                    "title": "10. LANGUAG 3",
                     "type": "string",
                     "enum": [
                         "0 - None No language difficulty or occasional mild tip-of-the-tongue.",
