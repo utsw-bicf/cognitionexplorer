@@ -46,7 +46,7 @@
             ]
         },
         "fu_note_b6": {
-            "title": " Instruct the subject: \"In the next part of this interview, I will ask you questions about your feelings. Some of the questions I will ask you may not apply, and some may make you feel uncomfortable. For each question, please answer \"\"yes\"\" or \"\"no,\"\" depending on how you have been feeling  in the past week, including today.\"",
+            "title": " Instruct the subject: \"In the next part of this interview, I will ask you questions about your feelings. Some of the questions I will ask you may not apply, and some may make you feel uncomfortable. For each question, please answer \"yes\" or \"no\", depending on how you have been feeling  in the past week, including today.\"",
             "type": "object",
             "properties": {
                 "fu_satis": {
