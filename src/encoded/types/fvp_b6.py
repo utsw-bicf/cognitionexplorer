@@ -15,7 +15,7 @@ import re
     name="fvp_b6s",
     unique_key="uuid",
     properties={
-        "title": "UDS_FVP_A2 Forms",
+        "title": "UDS_FVP_B6 Forms",
         "description": "UDS follow-up visiting patients B6 forms results pages",
     },
 )
