@@ -1,0 +1,355 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B6: BEHAVIORAL ASSESSMENT - GERIATRIC DEPRESSION SCALE (GDS[1])",
+    "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional, based on subject response. For additional clarification and examples, see UDS Coding Guidebook for Follow-up Visit Packet, Form B6. Link to NACC Coding Guidebook Check only one answer per question.",
+    "id": "/profiles/uds_fvp_b6.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "fu_note_b6"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "fu_nogds": {
+            "title": "Check this box and enter \"88\" below for the Total GDS Score if and only if the subject: 1.) does not attempt the GDS, or 2.) answers fewer than 12 questions.",
+            "type": "string",
+            "enum": [
+                "1"
+            ]
+        },
+        "fu_note_b6": {
+            "title": " Instruct the subject: \"In the next part of this interview, I will ask you questions about your feelings. Some of the questions I will ask you may not apply, and some may make you feel uncomfortable. For each question, please answer \"\"yes\"\" or \"\"no,\"\" depending on how you have been feeling  in the past week, including today.\"",
+            "type": "object",
+            "properties": {
+                "fu_satis": {
+                    "title": "1. Are you basically satisfied with your life?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_dropact": {
+                    "title": "2. Have you dropped many of your activities and interests?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_empty": {
+                    "title": "3. Do you feel that your life is empty?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_bored": {
+                    "title": "4. Do you often get bored?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_spirits": {
+                    "title": "5. Are you in good spirits most of the time?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_afraid": {
+                    "title": "6. Are you afraid that something bad is going to happen to you?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_happy": {
+                    "title": "7. Do you feel happy most of the time?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_helpless": {
+                    "title": "8. Do you often feel helpless?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_stayhome": {
+                    "title": "9. Do you prefer to stay at home, rather than going out and doing new things?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_memprob": {
+                    "title": "10. Do you feel you have more problems with memory than most?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_wondrful": {
+                    "title": "11. Do you think it is wonderful to be alive now?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_wrthless": {
+                    "title": "12. Do you feel pretty worthless the way you are now?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_energy": {
+                    "title": "13. Do you feel full of energy?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_hopeless": {
+                    "title": "14. Do you feel that your situation is hopeless?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_better": {
+                    "title": "15. Do you think that most people are better off than you are?",
+                    "description": "",
+                    "type": "string",
+                    "enum": [
+                        "0 Yes",
+                        "1 No ",
+                        "9 Did not answer"
+                    ]
+                },
+                "fu_gds": {
+                    "title": "16. Sum of all checked answers for a Total GDS Score",
+                    "description": "max score = 15;did not complete = 88",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-5]$|^88$"
+                }
+            },
+            "required": [
+                "fu_satis",
+                "fu_dropact",
+                "fu_empty",
+                "fu_bored",
+                "fu_spirits",
+                "fu_afraid",
+                "fu_happy",
+                "fu_helpless",
+                "fu_stayhome",
+                "fu_memprob",
+                "fu_wondrful",
+                "fu_wrthless",
+                "fu_energy",
+                "fu_hopeless",
+                "fu_better"
+            ]
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_note_b6.fu_satis": {
+            "title": "1. Are you basically satisfied with your life?"
+        },
+        "fu_note_b6.fu_dropact": {
+            "title": "2. Have you dropped many of your activities and interests?"
+        },
+        "fu_note_b6.fu_empty": {
+            "title": "3. Do you feel that your life is empty?"
+        },
+        "fu_note_b6.fu_bored": {
+            "title": "4. Do you often get bored?"
+        },
+        "fu_note_b6.fu_spirits": {
+            "title": "5. Are you in good spirits most of the time?"
+        },
+        "fu_note_b6.fu_afraid": {
+            "title": "6. Are you afraid that something bad is going to happen to you?"
+        },
+        "fu_note_b6.fu_happy": {
+            "title": "7. Do you feel happy most of the time?"
+        },
+        "fu_note_b6.fu_helpless": {
+            "title": "8. Do you often feel helpless?"
+        },
+        "fu_note_b6.fu_stayhome": {
+            "title": "9. Do you prefer to stay at home, rather than going out and doing new things?"
+        },
+        "fu_note_b6.fu_memprob": {
+            "title": "10. Do you feel you have more problems with memory than most?"
+        },
+        "fu_note_b6.fu_wondrful": {
+            "title": "11. Do you think it is wonderful to be alive now?"
+        },
+        "fu_note_b6.fu_wrthless": {
+            "title": "12. Do you feel pretty worthless the way you are now?"
+        },
+        "fu_note_b6.fu_energy": {
+            "title": "13. Do you feel full of energy?"
+        },
+        "fu_note_b6.fu_hopeless": {
+            "title": "14. Do you feel that your situation is hopeless?"
+        },
+        "fu_note_b6.fu_better": {
+            "title": "15. Do you think that most people are better off than you are?"
+        },
+        "fu_note_b6.fu_gds": {
+            "title": "16. Sum of all checked answers for a Total GDS Score"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_note_b6.fu_satis": {
+            "title": "1. Are you basically satisfied with your life?"
+        },
+        "fu_note_b6.fu_dropact": {
+            "title": "2. Have you dropped many of your activities and interests?"
+        },
+        "fu_note_b6.fu_empty": {
+            "title": "3. Do you feel that your life is empty?"
+        },
+        "fu_note_b6.fu_bored": {
+            "title": "4. Do you often get bored?"
+        },
+        "fu_note_b6.fu_spirits": {
+            "title": "5. Are you in good spirits most of the time?"
+        },
+        "fu_note_b6.fu_afraid": {
+            "title": "6. Are you afraid that something bad is going to happen to you?"
+        },
+        "fu_note_b6.fu_happy": {
+            "title": "7. Do you feel happy most of the time?"
+        },
+        "fu_note_b6.fu_helpless": {
+            "title": "8. Do you often feel helpless?"
+        },
+        "fu_note_b6.fu_stayhome": {
+            "title": "9. Do you prefer to stay at home, rather than going out and doing new things?"
+        },
+        "fu_note_b6.fu_memprob": {
+            "title": "10. Do you feel you have more problems with memory than most?"
+        },
+        "fu_note_b6.fu_wondrful": {
+            "title": "11. Do you think it is wonderful to be alive now?"
+        },
+        "fu_note_b6.fu_wrthless": {
+            "title": "12. Do you feel pretty worthless the way you are now?"
+        },
+        "fu_note_b6.fu_energy": {
+            "title": "13. Do you feel full of energy?"
+        },
+        "fu_note_b6.fu_hopeless": {
+            "title": "14. Do you feel that your situation is hopeless?"
+        },
+        "fu_note_b6.fu_better": {
+            "title": "15. Do you think that most people are better off than you are?"
+        },
+        "fu_note_b6.fu_gds": {
+            "title": "16. Sum of all checked answers for a Total GDS Score"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "fu_nogds": 1.0,
+        "fu_note_b6.fu_satis": 1.0,
+        "fu_note_b6.fu_dropact": 1.0,
+        "fu_note_b6.fu_empty": 1.0,
+        "fu_note_b6.fu_bored": 1.0,
+        "fu_note_b6.fu_spirits": 1.0,
+        "fu_note_b6.fu_afraid": 1.0,
+        "fu_note_b6.fu_happy": 1.0,
+        "fu_note_b6.fu_helpless": 1.0,
+        "fu_note_b6.fu_stayhome": 1.0,
+        "fu_note_b6.fu_memprob": 1.0,
+        "fu_note_b6.fu_wondrful": 1.0,
+        "fu_note_b6.fu_wrthless": 1.0,
+        "fu_note_b6.fu_energy": 1.0,
+        "fu_note_b6.fu_hopeless": 1.0,
+        "fu_note_b6.fu_better": 1.0,
+        "fu_note_b6.fu_gds": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_b6.md"
+}
