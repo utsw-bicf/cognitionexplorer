@@ -7,7 +7,7 @@
         "visitnum": "1",
         "header_complete": "Complete",
         "initials": "OK",
-        "fu_nogds": "1",
+        "fu_nogds": true,
         "fu_note_b6": {
             "fu_satis": "0 Yes",
             "fu_dropact": "1 No ",
@@ -38,7 +38,7 @@
         "visitnum": "2",
         "header_complete": "Complete",
         "initials": "OK",
-        "fu_nogds": "1",
+        "fu_nogds": true,
         "fu_note_b6": {
             "fu_satis": "0 Yes",
             "fu_dropact": "1 No ",
