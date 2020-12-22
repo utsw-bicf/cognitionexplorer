@@ -148,6 +148,7 @@ class FormsTable extends React.Component {
             let index = followUpVisistTimes.indexOf(data.fvp_d2[i]["visdate"]) + 1;
             forms[index].d2_id = data.fvp_d2[i]['@id']
             forms[index].d2_name = "fvp_d2"
+        }
         for (let i = 0; i < data.fvp_b8.length; i++) {
             let index = followUpVisistTimes.indexOf(data.fvp_b8[i]["visdate"]) + 1;
             // console.log(index)
