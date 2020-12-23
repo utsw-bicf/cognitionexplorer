@@ -1,4 +1,4 @@
-import React from 'react';
+import React from 'react';' 
 import { SortTablePanel, SortTable } from './sorttable';
 
 class FormsTable extends React.Component {
@@ -80,7 +80,10 @@ class FormsTable extends React.Component {
             visitObj.b9_id = data.ivp_b9[0]['@id']
             visitObj.b9_name = "ivp_b9" 
         } 
-        
+        if (data.ivp_d1.length > 0) {
+            visitObj.d1_id = data.ivp_d1[0]['@id']
+            visitObj.d1_name = "ivp_d1" 
+        }  
         if (data.ivp_d2.length > 0) {
             visitObj.d2_id = data.ivp_d2[0]['@id']
             visitObj.d2_name = "ivp_d2" 
@@ -144,14 +147,30 @@ class FormsTable extends React.Component {
             forms[index].a2_name = "fvp_a2"
 
         }
+
         for (let i = 0; i < data.fvp_b5.length; i++) {
             let index = followUpVisistTimes.indexOf(data.fvp_b5[i]["visdate"]) + 1;
             forms[index].b5_id = data.fvp_b5[i]['@id']
             forms[index].b5_name = "fvp_b5"
 
         }
-        
 
+        for (let i = 0; i < data.fvp_b1.length; i++) {
+            let index = followUpVisistTimes.indexOf(data.fvp_b1[i]["visdate"]) + 1;
+            // console.log(index)
+            // console.log("data",data);
+            forms[index].b1_id = data.fvp_b1[i]['@id']
+            forms[index].b1_name = "fvp_b1"
+        for (let i = 0; i < data.fvp_d2.length; i++) {
+            let index = followUpVisistTimes.indexOf(data.fvp_d2[i]["visdate"]) + 1;
+            forms[index].d2_id = data.fvp_d2[i]['@id']
+            forms[index].d2_name = "fvp_d2"
+        for (let i = 0; i < data.fvp_b8.length; i++) {
+            let index = followUpVisistTimes.indexOf(data.fvp_b8[i]["visdate"]) + 1;
+            // console.log(index)
+            forms[index].b8_id = data.fvp_b8[i]['@id']
+            forms[index].b8_name = "fvp_b8"
+        }
 
         return forms
     }
@@ -161,6 +180,9 @@ class FormsTable extends React.Component {
         data.fvp_a1.forEach(element => followUpVisistTimes.push(element["visdate"]))
         data.fvp_a2.forEach(element => followUpVisistTimes.push(element["visdate"]))
         data.fvp_b5.forEach(element => followUpVisistTimes.push(element["visdate"]))
+        data.fvp_b1.forEach(element => followUpVisistTimes.push(element["visdate"]))
+        data.fvp_d2.forEach(element => followUpVisistTimes.push(element["visdate"]))
+        data.fvp_b8.forEach(element => followUpVisistTimes.push(element["visdate"]))
         followUpVisistTimes = [...new Set(followUpVisistTimes)];
         followUpVisistTimes = Array.from(followUpVisistTimes);
         followUpVisistTimes.sort(function (a, b) {
