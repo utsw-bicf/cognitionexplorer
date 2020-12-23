@@ -36,7 +36,7 @@ class Patient(Item):
         'ivp_b1',
         'ivp_b7',
         'ivp_b8',
-        'ivp_b9',r 
+        'ivp_b9',
         'ivp_d1',
         'ivp_d2',
         'fvp_b7',
@@ -250,7 +250,7 @@ class Patient(Item):
     def fvp_b5(self, request, fvp_b5):
         return paths_filtered_by_status(request, fvp_b5)
       
-      @calculated_property(schema={
+    @calculated_property(schema={
         "title": "Fvp_b1",
         "type": "array",
         "items": {
