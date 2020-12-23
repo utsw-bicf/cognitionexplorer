@@ -1,4 +1,4 @@
-import React from 'react';' 
+import React from 'react'; 
 import { SortTablePanel, SortTable } from './sorttable';
 
 class FormsTable extends React.Component {
@@ -54,40 +54,40 @@ class FormsTable extends React.Component {
         }
         if (data.ivp_a5.length > 0) {
             visitObj.a5_id = data.ivp_a5[0]['@id']
-            visitObj.a5_name = "ivp_a5" 
-        } 
+            visitObj.a5_name = "ivp_a5"
+        }
         if (data.ivp_b4.length > 0) {
             visitObj.b4_id = data.ivp_b4[0]['@id']
             visitObj.b4_name = "ivp_b4"
         }
         if (data.ivp_b5.length > 0) {
             visitObj.b5_id = data.ivp_b5[0]['@id']
-            visitObj.b5_name = "ivp_b5" 
-        } 
+            visitObj.b5_name = "ivp_b5"
+        }
         if (data.ivp_b6.length > 0) {
             visitObj.b6_id = data.ivp_b6[0]['@id']
-            visitObj.b6_name = "ivp_b6" 
-        } 
+            visitObj.b6_name = "ivp_b6"
+        }
         if (data.ivp_b7.length > 0) {
             visitObj.b7_id = data.ivp_b7[0]['@id']
-            visitObj.b7_name = "ivp_b7" 
-        } 
+            visitObj.b7_name = "ivp_b7"
+        }
         if (data.ivp_b8.length > 0) {
             visitObj.b8_id = data.ivp_b8[0]['@id']
-            visitObj.b8_name = "ivp_b8" 
-        } 
+            visitObj.b8_name = "ivp_b8"
+        }
         if (data.ivp_b9.length > 0) {
             visitObj.b9_id = data.ivp_b9[0]['@id']
-            visitObj.b9_name = "ivp_b9" 
-        } 
+            visitObj.b9_name = "ivp_b9"
+        }
         if (data.ivp_d1.length > 0) {
             visitObj.d1_id = data.ivp_d1[0]['@id']
-            visitObj.d1_name = "ivp_d1" 
-        }  
+            visitObj.d1_name = "ivp_d1"
+        }
         if (data.ivp_d2.length > 0) {
             visitObj.d2_id = data.ivp_d2[0]['@id']
-            visitObj.d2_name = "ivp_d2" 
-        }  
+            visitObj.d2_name = "ivp_d2"
+        }
         forms[0] = visitObj
         let followUpVisistTimes = this.getFollowUpVisitTimes(data)
 
@@ -151,7 +151,7 @@ class FormsTable extends React.Component {
             let index = followUpVisistTimes.indexOf(data.fvp_b7[i]["visdate"]) + 1;
             forms[index].b7_id = data.fvp_b7[i]['@id']
             forms[index].b7_name = "fvp_b7"
-
+        }
         for (let i = 0; i < data.fvp_b5.length; i++) {
             let index = followUpVisistTimes.indexOf(data.fvp_b5[i]["visdate"]) + 1;
             forms[index].b5_id = data.fvp_b5[i]['@id']
@@ -166,10 +166,12 @@ class FormsTable extends React.Component {
             // console.log("data",data);
             forms[index].b1_id = data.fvp_b1[i]['@id']
             forms[index].b1_name = "fvp_b1"
+        }
         for (let i = 0; i < data.fvp_d2.length; i++) {
             let index = followUpVisistTimes.indexOf(data.fvp_d2[i]["visdate"]) + 1;
             forms[index].d2_id = data.fvp_d2[i]['@id']
             forms[index].d2_name = "fvp_d2"
+        }
         for (let i = 0; i < data.fvp_b8.length; i++) {
             let index = followUpVisistTimes.indexOf(data.fvp_b8[i]["visdate"]) + 1;
             // console.log(index)
@@ -213,7 +215,7 @@ class FormsTable extends React.Component {
             },
             visit_date: {
                 title: 'Visit Date',
-                
+
             },
             a1_id: {
                 title: 'Form A',
