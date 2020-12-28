@@ -42,6 +42,8 @@ class FormsTable extends React.Component {
             c2_id: "",
             d1_name: "",
             d1_id: "",
+            t1_name: "",
+            t1_id: "",
             d2_name: "",
             d2_id: "",
             z1x_name: "",
@@ -127,6 +129,8 @@ class FormsTable extends React.Component {
                 d1_id: "",
                 d2_name: "",
                 d2_id: "",
+                t1_name: "",
+                t1_id: "",
                 z1x_name: "",
                 z1x_id: ""
             }
@@ -186,7 +190,7 @@ class FormsTable extends React.Component {
         }
         for (let i = 0; i < data.tvp_t1.length; i++) {
             let index = followUpVisitTimes.indexOf(data.tvp_t1[i]["visdate"]) + 1;
-            // console.log(index)
+            console.log(index)
             forms[index].t1_id = data.tvp_t1[i]['@id']
             forms[index].t1_name = "tvp_t1"
         }
@@ -268,6 +272,10 @@ class FormsTable extends React.Component {
             z1x_id: {
                 title: 'Form Z1x',
                 display: form => <a href={form.z1x_id}>{form.z1x_name}</a>,
+            },
+            t1_id: {
+                title: 'Form T1',
+                display: form => <a href={form.t1_id}>{form.t1_name}</a>,
             },
 
 
