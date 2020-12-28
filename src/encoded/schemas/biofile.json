@@ -1,0 +1,755 @@
+{
+    "title": "Data File",
+    "description": "Schema for submitting metadata for a data file.",
+    "id": "/profiles/biofile.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "type": "object",
+    "required": ["biodataset", "file_format", "output_type", "md5sum"],
+    "identifyingProperties": ["uuid", "accession", "aliases"],
+    "additionalProperties": false,
+    "mixinProperties": [
+        { "$ref": "mixins.json#/schema_version" },
+        { "$ref": "mixins.json#/uuid" },
+        { "$ref": "mixins.json#/accession" },
+        { "$ref": "mixins.json#/accessioned_status" },
+        { "$ref": "mixins.json#/submitted" },
+        { "$ref": "mixins.json#/notes" },
+        { "$ref": "mixins.json#/attribution" },
+        { "$ref": "mixins.json#/aliases" },
+        { "$ref": "mixins.json#/submitter_comment" }
+    ],
+    "facets": {
+        "status": {
+            "title": "Status",
+            "open_on_load": true
+        },
+        "output_type": {
+            "title": "Output type"
+        },
+        "file_format": {
+            "title": "File format",
+            "open_on_load": true
+        },
+        "file_format_type": {
+            "title": "File format type"
+        },
+        "platform.term_name": {
+            "title": "Platform"
+        },
+        "assembly": {
+            "title": "Genome assembly"
+        },
+        "assay_term_name": {
+            "title": "Assay term name",
+            "type": "typeahead"
+        }
+    },
+    "dependencies": {
+        "paired_with": {
+            "comment": "Only paired-ended files should have paired_with value.",
+            "required": ["run_type"],
+            "allOf": [
+                {
+                    "not": {
+                        "properties": {
+                            "platform": {
+                                "linkTo": "Platform",
+                                "linkEnum": [
+                                    "ced61406-dcc6-43c4-bddd-4c977cc676e8",
+                                    "c7564b38-ab4f-4c42-a401-3de48689a998"
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "properties": {
+                        "run_type": {
+                            "enum": ["paired-ended"]
+                        }
+                    }
+                }
+            ]
+        },
+        "run_type": {
+            "comment": "run_type should not be specified for PacBio platform FASTQ files. Illumina produced paired-ended files should have paired_end value specified.",
+            "required": ["platform"],
+            "allOf": [
+                {
+                    "not": {
+                        "properties": {
+                            "platform": {
+                                "linkTo": "Platform",
+                                "linkEnum": [
+                                    "ced61406-dcc6-43c4-bddd-4c977cc676e8",
+                                    "c7564b38-ab4f-4c42-a401-3de48689a998"
+                                ]
+                            }
+                        }
+                    }
+                },
+                {
+                    "oneOf": [
+                        {
+                            "properties": {
+                                "run_type": {
+                                    "enum": ["single-ended"]
+                                }
+                            }
+                        },
+                        {
+                            "required": ["paired_end"],
+                            "properties": {
+                                "run_type": {
+                                    "enum": ["paired-ended"]
+                                },
+                                "paired_end":{
+                                    "enum": ["1", "2", "1,2"]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "revoke_detail": {
+            "comment": "Only revoked files can have revoke_detail specified.",
+            "properties": {
+                "status": {
+                    "enum": ["revoked"]
+                }
+            }
+        },
+        "read_name_details": {
+            "comment": "Only fastq files can have read_name_details specified.",
+            "properties": {
+                "file_format": {
+                    "enum": ["fastq"]
+                }
+            }
+        },
+        "output_type":{
+            "comment": "Files with output_type reads and file format fastq, fatsa, csfasta, csqual and sra require read_length to be specified, unless the file was produced by PacBio platform. Files of output_type restriction enzyme site locations require specification of restriction_enzymes",
+            "oneOf":[
+                {
+                    "properties": {
+                        "output_type": {
+                            "enum": ["reads"]
+                        }
+                    },
+                    "oneOf": [
+                        {
+                            "not": {
+                                "required": ["read_length"]
+                            },
+                            "properties": {
+                                "file_format": {
+                                    "enum": ["fastq"]
+                                },
+                                "platform": {
+                                    "linkTo": "Platform",
+                                    "linkEnum": [
+                                        "c7564b38-ab4f-4c42-a401-3de48689a998"
+                                    ]
+                                }
+
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": ["read_length"]
+                            },
+                            "properties": {
+                                "file_format": {
+                                    "enum": ["fastq"]
+                                },
+                                "platform": {
+                                    "linkTo": "Platform",
+                                    "linkEnum": [
+                                        "ced61406-dcc6-43c4-bddd-4c977cc676e8"
+                                    ]
+                                }
+
+                            }
+                        },
+                        {
+                            "required": ["read_length"],
+                            "properties": {
+                                "file_format": {
+                                    "enum": ["fastq"]
+                                },
+                                "not": {
+                                    "platform": {
+                                        "linkTo": "Platform",
+                                        "linkEnum": [
+                                            "ced61406-dcc6-43c4-bddd-4c977cc676e8",
+                                            "c7564b38-ab4f-4c42-a401-3de48689a998"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "assembly": {
+            "not": {
+                "anyOf": [
+                    {
+                        "properties": {
+                            "output_type": {
+                                "enum": ["reads"]
+                            }
+                        }
+                    },
+                    {
+                        "properties": {
+                            "output_type": {
+                                "enum": ["rejected reads"]
+                            }
+                        }
+                    }
+                ]
+            }
+        },
+        "platform": {
+            "not": {
+                "required": ["run_type", "paired_end", "read_length"],
+                "properties": {
+                    "platform": {
+                        "linkTo": "Platform",
+                        "linkEnum": [
+                            "ced61406-dcc6-43c4-bddd-4c977cc676e8",
+                            "c7564b38-ab4f-4c42-a401-3de48689a998"
+                        ]
+                    }
+                }
+            }
+        },
+        "read_length": {
+            "oneOf": [
+                {
+                    "not": {
+                        "required":["platform"]
+                    }
+                },
+                {
+                    "not": {
+                        "properties": {
+                            "platform": {
+                                "linkTo": "Platform",
+                                "linkEnum": [
+                                    "ced61406-dcc6-43c4-bddd-4c977cc676e8",
+                                    "c7564b38-ab4f-4c42-a401-3de48689a998"
+                                ]
+                            }
+                        }
+                    }
+                }
+            ]
+        },
+        "status": {
+            "comment": "file_size is required in files with statuses in progress, revoked, archived and released unless the file is not available from the portal.",
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "required": ["file_size"],
+                            "properties": {
+                                "status": {
+                                    "enum": ["in progress",  "revoked", "archived", "released"]
+                                 }
+                            }
+
+
+                        },
+
+                        {
+                            "properties": {
+                                "status": {
+                                    "enum": ["uploading", "upload failed", "deleted", "replaced", "content error"]
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        },
+        "paired_end": {
+            "comment": "Files with paired-end value 2 require a paired_with value and files with paired_end specified require run_type to be specified as paired-ended",
+            "oneOf": [
+                {
+                    "required": ["run_type"],
+                    "properties": {
+                        "paired_end": {
+                            "enum": ["2"]
+                        },
+                        "run_type": {
+                            "enum": ["paired-ended"]
+                        }
+                    }
+                },
+                {
+                    "required": ["run_type"],
+                    "properties": {
+                        "paired_end": {
+                            "enum": ["1"]
+                        },
+                        "run_type": {
+                            "enum": ["paired-ended"]
+                        }
+                    }
+                },
+                {
+                    "required": ["run_type"],
+                    "properties": {
+                        "file_format": {
+                            "enum": ["sra"]
+                        },
+                        "paired_end": {
+                            "enum": ["1,2"]
+                        },
+                        "run_type": {
+                            "enum": ["paired-ended"]
+                        }
+                    }
+                }
+            ]
+        },
+        "file_format":{
+            "comment": "Fastq files require run_type and replicate but should not have assembly. Raw data files require platform to be specified. Processed files require assembly to be specified.",
+            "allOf": [
+                {
+                    "oneOf": [
+                        {
+                            "required": [ "bioreplicate", "platform", "sequencing_replicate_number"],
+                            "properties": {
+                                "file_format": {
+                                    "enum": [
+                                        "idat",
+                                        "fastq",
+                                        "sra"
+                                    ]
+                                }
+                            }
+                        },
+
+                        {
+                            "required": [
+                                "file_format_type",
+                                "assembly"
+                            ],
+                            "properties": {
+                                "file_format": {
+                                    "enum": [
+                                        "gff"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "required": ["assembly"],
+                            "properties": {
+                                "file_format": {
+                                    "enum": [
+                                        "bam",
+                                        "sam",
+                                        "gtf",
+                                        "idx"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "not": {
+                                "properties": {
+                                    "file_format": {
+                                        "enum": [
+                                            "idat",
+                                            "fastq",
+                                            "gff",
+                                            "gtf",
+                                            "bam",
+                                            "sam",
+                                            "idx"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                },
+                {
+                    "anyOf": [
+                        {
+                            "properties": {
+                                "file_format": {
+                                    "enum": [
+                                        "idat",
+                                        "fastq",
+                                        "tsv",
+                                        "tar"
+                                    ]
+                                },
+                                "output_type": {
+                                    "enum": [
+                                        "idat green channel",
+                                        "idat red channel",
+                                        "intensity values",
+                                        "reads",
+                                        "rejected reads"
+                                    ]
+                                }
+                            }
+                        },
+                        {
+                            "properties": {
+                                "file_format": {
+                                    "enum": [
+                                        "bam",
+                                        "csv",
+                                        "gff",
+                                        "gtf",
+                                        "idx",
+                                        "sam",
+                                        "tar",
+                                        "tsv",
+                                        "vcf"
+                                    ]
+                                },
+                                "output_type": {
+                                    "not": {
+                                        "enum": [
+                                            "idat green channel",
+                                            "idat red channel",
+                                            "reads",
+                                            "rejected reads",
+                                            "raw data"
+                                        ]
+                                    }
+                                }
+                            }
+                        }
+                    ]
+                }
+            ]
+        }
+    },
+    "properties": {
+         "date_created": {
+            "rdfs:subPropertyOf": "dc:created",
+            "title": "Date created",
+            "decription": "The date the object was created.",
+            "comment": "Do not submit. The date the object is created is assigned by the server.",
+            "type": "string",
+            "format": "date-time",
+            "serverDefault": "now",
+            "permission": "import_items"
+        },
+        "schema_version": {
+            "default": "1"
+        },
+        "accession": {
+            "accessionType": "FF"
+        },
+        "biodataset": {
+            "title": "Biodataset",
+            "description": "The dataset or experiment the file belongs to.",
+            "comment": "See biodataset.json for available identifiers.",
+            "type": "string",
+            "linkTo": "Biodataset"
+        },
+        "bioreplicate": {
+            "title": "Bioreplicate",
+            "description": "The experimental replicate designation for the file.",
+            "comment": "See bioreplicate.json for available identifiers.",
+            "type": "string",
+            "linkTo": "Bioreplicate"
+        },
+        "sequencing_replicate_number": {
+            "title": "Sequencing replicate",
+            "description": "Sequencing data collection under the same biolibrary.",
+            "type": "integer",
+            "default": 1,
+            "minimum": 1
+        },
+        "file_format": {
+            "title": "File format",
+            "type": "string",
+            "oneOf": [
+                {
+                    "comment": "This field is required.",
+                    "enum": [
+                        "bam",
+                        "csv",
+                        "fastq",
+                        "gff",
+                        "gtf",
+                        "idat",
+                        "sam",
+                        "tar",
+                        "tsv",
+                        "vcf",
+                        "idx",
+                        "txt"
+                    ]
+                }
+            ]
+        },
+        "file_format_type": {
+            "title": "File format type",
+            "description": "Files of type bed and gff require further specification",
+            "type": "string",
+            "oneOf": [
+                {
+                    "enum": [
+                        "gff2",
+                        "gff3"
+                    ]
+                }
+           ]
+        },
+        "restricted": {
+            "title": "Restricted file",
+            "permission":"import_items",
+            "description": "A flag to indicate whether this file is subject to restricted access",
+            "comment": "Do not submit. This value can only be set by admins.",
+            "type": "boolean"
+        },
+        "submitted_file_name": {
+            "title": "Original file name",
+            "description": "The local file name used at time of submission.",
+            "comment": "Although this is not required. It is highly recommended.",
+            "type": "string"
+        },
+        "md5sum": {
+            "title": "MD5sum",
+            "description": "The md5sum of the file being transferred.",
+            "comment": "Warning: This value can vary for files of same content gzipped at different times",
+            "type": "string",
+            "format": "hex",
+            "maxLength": 32,
+            "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"
+        },
+        "file_size": {
+            "title": "File size",
+            "description": "File size specified in bytes.",
+            "comment": "Required.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "platform": {
+            "title": "Platform",
+            "description": "The measurement device used to collect data.",
+            "comment": "This field is required for fastq and idat file formats. See platform.json for identifer format.",
+            "type": "string",
+            "linkTo": "Platform"
+        },
+        "read_length": {
+            "title": "Read length",
+            "description": "For high-throughput sequencing, the number of contiguous nucleotides determined by sequencing.",
+            "comment": "This field is required for fastq, and sra file formats containing sequencing reads.",
+            "type": "integer",
+            "minimum": 0
+        },
+        "run_type": {
+            "title": "Run type",
+            "description": "Indicates if file is part of a single or paired end sequencing run",
+            "comment": "This field is required for sra and fastq files.",
+            "type": "string",
+            "enum": [
+                "single-ended",
+                "paired-ended"
+            ]
+        },
+        "paired_end": {
+            "title": "Paired end identifier",
+            "description": "Which read of the pair the file represents (in case of paired end sequencing run)",
+            "comment": "This field is required if run_type is paired-ended.",
+            "type": "string",
+            "enum": [
+                "1",
+                "2",
+                "1,2"
+            ]
+        },
+        "paired_with": {
+            "title": "Paired with",
+            "description": "The paired end fastq that corresponds with this file.",
+            "comment": "This is required for files with paired_end 2 and is calculated for files with paired_end 1.",
+            "type": "string",
+            "linkTo": "Biofile"
+        },
+        "output_type": {
+            "title": "Output type",
+            "description": "A description of the file's purpose or contents.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "enum": [
+                        "alignments",
+                        "exon quantifications",
+                        "gene alignments",
+                        "gene quantifications",
+                        "genome index",
+                        "genome reference",
+                        "reads",
+                        "reference variants",
+                        "spike-in sequence",
+                        "splice junctions",
+                        "transcript quantifications",
+                        "transcriptome alignments",
+                        "transcriptome index",
+                        "transcriptome reference",
+                        "unfiltered alignments",
+                        "variant calls"
+                    ]
+                }
+            ]
+        },
+        "derived_from": {
+            "title": "Derived from",
+            "description": "The files participating as inputs into software to produce this output file.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                    "comment": "See biofile.json for a list of available identifiers.",
+                    "type": "string",
+                    "linkTo": "Biofile"
+                    }
+        },
+        "controlled_by": {
+            "title": "Controlled by",
+            "description": "The files which should be used as a control for this file. ",
+            "comment": "This is used to find files that should be used in downstream processing (i.e. tumor and normal matched).",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                    "comment": "See biofile.json for a list of available identifiers.",
+                    "type": "string",
+                    "linkTo": "Biofile"
+            }
+        },
+        "supersedes": {
+            "title": "Supersedes" ,
+            "description": "The files that this file supersedes.",
+            "comment": "The files in this list should be obsolete and the superseeding file object should be used instead.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                    "comment": "The files in this list should be archived or revoked.",
+                    "type": "string",
+                    "linkTo": "Biofile"
+            }
+        },
+        "assembly": {
+            "title": "Genome assembly",
+            "description": "Genome assembly that files were mapped to.",
+            "comment": "Required property for bam, sam, gtf, idx, gff, bed and bigBed file format files. This property should not be submitted with sra or fastq files.",
+            "type": "string",
+            "enum": [
+                "GRCh38"
+                ]
+        },
+        "genome_annotation": {
+            "title": "Genome annotation",
+            "description": "Genome annotation that file was generated with.",
+            "comment": "Applies to files created using annotations.",
+            "type": "string",
+            "enum": [
+                "ENSEMBL V65",
+                "None"
+                ]
+        },
+        "status": {
+            "title": "Status",
+            "type": "string",
+            "permission": "import_items",
+            "default": "uploading",
+            "description": "The status of the file object.",
+            "comment": "Do not submit.  This is set by admins along the process of file submission.",
+            "enum" : [
+                "uploading",
+                "upload failed",
+                "in progress",
+                "released",
+                "archived",
+                "deleted",
+                "replaced",
+                "revoked",
+                "content error"
+                ]
+        },
+        "revoke_detail": {
+            "title": "Revoke error detail",
+            "description": "Explanation of why the file was revoked.",
+            "comment": "Do not submit. The field would be posted by admins.",
+            "type": "string",
+            "permission": "import_items"
+        }
+    },
+    "columns": {
+        "accession": {
+            "title": "Accession"
+        },
+        "dataset": {
+            "title": "Dataset"
+        },
+        "assembly": {
+            "title": "Genome assembly"
+        },
+        "technical_replicates": {
+            "title": "Technical replicates"
+        },
+        "biological_replicates": {
+            "title": "Biological replicates"
+        },
+        "sequencing_replicate_number": {
+            "title": "Sequencing replicates"
+        },
+        "file_format": {
+            "title": "File format"
+        },
+        "file_format_type": {
+            "title": "File format type"
+        },
+        "file_size": {
+            "title": "File size"
+        },
+        "assay_term_name": {
+            "title": "Assay term name"
+        },
+        "bioreplicate.biolibrary.accession": {
+            "title": "Biolibrary"
+        },
+        "output_type": {
+            "title": "Output type"
+        },
+        "paired_end": {
+            "title": "Paired end identifier"
+        },
+        "paired_with": {
+            "title": "Paired with"
+        },
+        "output_type": {
+            "title": "Output type"
+        },
+        "date_created": {
+            "title": "Date created"
+        },
+        "status": {
+            "title": "Status"
+        }
+    },
+    "boost_values": {
+        "accession": 20.0,
+        "@type": 1.0,
+        "assembly": 5.0,
+        "file_format": 5.0,
+        "file_format_type": 5.0,
+        "output_type": 2.0,
+        "status": 1.0
+    },
+    "changelog": "/profiles/changelogs/biofile.md"
+}

@@ -68,4 +68,3 @@ def is_uri(instance):
         # We want only absolute uris
         return False
     return rfc3987.parse(instance, rule="URI_reference")
-

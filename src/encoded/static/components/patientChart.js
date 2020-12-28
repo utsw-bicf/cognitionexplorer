@@ -113,7 +113,7 @@ class PatientChart extends React.Component {
         for (let i = 0; i < this.features.length; i++) {
             let feature = this.features[i];
             let filteredData = this.data[this.features[i]];
-            let filteredDates = this.data[this.features[i]].map(i => {return i.date;});
+            let filteredDates = this.data[this.features[i]].map(i => {return i.date;}).sort();
             let filteredDatesUnix = filteredDates.map(i => { return this.parseTime(i) });
             let values = [];
             let rangeValues = [];
@@ -199,13 +199,13 @@ class PatientChart extends React.Component {
                 fixedrange: true
               },
               xaxis: {
-                range: [startDate, endDate],
+                range: [startDate - 1000*60*60*24*30, endDate + 1000*60*60*24*30],
                 showgrid: false,
                 showline: true,
               },
               hovermode: "closest",
               font: {
-                family: "Roboto,sans-serif",
+                family: "Raleway, sans-serif",
                 size:10,
               },
               margin: {
@@ -235,3 +235,4 @@ class PatientChart extends React.Component {
 }
 
 export default PatientChart;
+

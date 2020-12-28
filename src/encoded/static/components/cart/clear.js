@@ -6,7 +6,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import { removeMultipleFromCartAndSave } from './actions';
-import { Modal, ModalHeader, ModalBody, ModalFooter } from '../../libs/bootstrap/modal';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from '../../libs/ui/modal';
 
 
 /**
@@ -31,13 +31,13 @@ class CartClearModalComponent extends React.Component {
         const { cartName, closeClickHandler, inProgress } = this.props;
         return (
             <Modal labelId="clear-cart-label" descriptionId="clear-cart-description" focusId="clear-cart-close">
-                <ModalHeader labelId="clear-cart-label" title={`Clear entire cart contents${cartName ? `: ${cartName}` : ''}`} closeModal={closeClickHandler} />
+                <ModalHeader labelId="clear-cart-label" title={`Clear entire cohort contents${cartName ? `: ${cartName}` : ''}`} closeModal={closeClickHandler} />
                 <ModalBody>
-                    <p id="clear-cart-description">Clearing the cart is not reversible.</p>
+                    <p id="clear-cart-description">Clearing the cohort is not reversible.</p>
                 </ModalBody>
                 <ModalFooter
-                    closeModal={<button id="clear-cart-close" onClick={closeClickHandler} className="btn btn-info">Cancel</button>}
-                    submitBtn={<button onClick={this.handleConfirmClearClick} disabled={inProgress} className="btn btn-info" id="clear-cart-submit">Clear</button>}
+                    closeModal={<button id="clear-cart-close" onClick={closeClickHandler} className="btn btn-default">Cancel</button>}
+                    submitBtn={<button onClick={this.handleConfirmClearClick} disabled={inProgress} className="btn btn-danger" id="clear-cart-submit">Clear</button>}
                     dontClose
                 />
             </Modal>
@@ -120,14 +120,14 @@ class CartClearButtonComponent extends React.Component {
 
     render() {
         const { elements, inProgress } = this.props;
-        if (elements.length > 0) {
+        if (elements.length > 0 && !this.props.locked) {
             return (
-                <span>
-                    <button disabled={inProgress} onClick={this.handleClearCartClick} id="clear-cart-actuator" className="btn btn-info btn-sm">Clear cart</button>
+                <React.Fragment>
+                    <button disabled={inProgress} onClick={this.handleClearCartClick} id="clear-cart-actuator" className="btn btn-danger btn-sm btn-inline">Clear cohort</button>
                     {this.state.modalOpen ?
                         <CartClearModal closeClickHandler={this.handleCloseClick} />
                     : null}
-                </span>
+                </React.Fragment>
             );
         }
         return null;
@@ -139,16 +139,20 @@ CartClearButtonComponent.propTypes = {
     elements: PropTypes.array,
     /** True if cart updating operation is in progress */
     inProgress: PropTypes.bool,
+    /** True if cart is locked */
+    locked: PropTypes.bool,
 };
 
 CartClearButtonComponent.defaultProps = {
     elements: [],
     inProgress: false,
+    locked: false,
 };
 
 CartClearButtonComponent.mapStateToProps = state => ({
     elements: state.elements,
     inProgress: state.inProgress,
+    locked: state.locked,
 });
 const CartClearButton = connect(CartClearButtonComponent.mapStateToProps)(CartClearButtonComponent);
 

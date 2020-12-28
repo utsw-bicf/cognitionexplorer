@@ -5,7 +5,7 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { connect } from 'react-redux';
 import url from 'url';
-import { Modal, ModalHeader, ModalBody, ModalFooter } from '../../libs/bootstrap/modal';
+import { Modal, ModalHeader, ModalBody, ModalFooter } from '../../libs/ui/modal';
 
 
 /**
@@ -53,7 +53,7 @@ class CartShareComponent extends React.Component {
 
         return (
             <Modal closeModal={closeShareCart} labelId="share-cart-label" descriptionId="share-cart-description" focusId="share-cart-close">
-                <ModalHeader title={`Share cart: ${userCart.name}`} labelId="share-cart-label" closeModal={closeShareCart} />
+                <ModalHeader title={`Share cohort: ${userCart.name}`} labelId="share-cart-label" closeModal={closeShareCart} />
                 <ModalBody>
                     <p id="share-cart-description" role="document">
                         Copy the URL below to share with other people. Some items might not appear
@@ -61,13 +61,13 @@ class CartShareComponent extends React.Component {
                     </p>
                     <div className="cart__share-url">
                         <input ref={(input) => { this.cartUrlBox = input; }} type="text" aria-label="Sharable cart URL" value={sharableUrl} readOnly />
-                        <button id="cart-share-url-trigger" aria-label="Copy shared cart URL" onClick={this.copyUrl} className="btn btn-info btn-sm"><i className="icon icon-clipboard" />&nbsp;Copy</button>
+                        <button id="cart-share-url-trigger" aria-label="Copy shared cart URL" onClick={this.copyUrl} className="btn btn-sm"><i className="icon icon-clipboard" />&nbsp;Copy</button>
                     </div>
                 </ModalBody>
                 <ModalFooter
                     closeModal={closeShareCart}
                     cancelTitle="Close"
-                    submitBtn={<a data-bypass="true" target="_self" className="btn btn-info" href={sharableUrl}>Visit sharable cart</a>}
+                    submitBtn={<a data-bypass="true" target="_self" className="btn btn-info" href={sharableUrl}>Visit sharable cohort</a>}
                     closeId="share-cart-close"
                 />
             </Modal>
