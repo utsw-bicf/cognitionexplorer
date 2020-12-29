@@ -123,12 +123,12 @@
             "type": "string",
             "enum": [
                 "Acquired cystic disease-associated renal cell carcinoma",
-                "Angiomyolipoma", 
+                "Angiomyolipoma",
                 "Chromophobe renal cell carcinoma",
-                "Chromophobe renal cell carcinoma, hybrid type", 
-                "Chromophobe renal cell carcinoma, classic",   
-                "Chromophobe renal cell carcinoma, eosinophilic", 
-                "Clear cell papillary renal cell carcinoma", 
+                "Chromophobe renal cell carcinoma, hybrid type",
+                "Chromophobe renal cell carcinoma, classic",
+                "Chromophobe renal cell carcinoma, eosinophilic",
+                "Clear cell papillary renal cell carcinoma",
                 "Clear cell renal cell carcinoma",
                 "Collecting duct carcinoma",
                 "Cystic nephroma",
@@ -136,14 +136,14 @@
                 "Metanephric adenoma",
                 "MiT family translocation renal cell carcinoma",
                 "Mucinous tubular and spindle cell carcinoma",
-                "Multilocular cystic renal neoplasm of low malignant potential", 
+                "Multilocular cystic renal neoplasm of low malignant potential",
                 "Oncocytic renal neoplasm, not further classified",
                 "Oncocytic renal neoplasm, favor RO",
                 "Oncocytic renal neoplasm, favor ChRCC",
                 "Oncocytoma",
                 "Poorly differentiated malignancy",
                 "Sarcomatoid, NOS",
-                "Papillary renal cell carcinoma", 
+                "Papillary renal cell carcinoma",
                 "Papillary renal cell carcinoma, type 1",
                 "Papillary renal cell carcinoma, type 2",
                 "Renal cell carcinoma, not further classified",
@@ -512,13 +512,6 @@
         "micro_adrenal": {
             "title": "Ipsilateral Adrenal Gland Involvement"
         },
-
-        "ihc.antibody": {
-            "title": "IHC/FISH (Clinical lab)"
-        },
-        "ihc.result": {
-            "title": "IHC/FISH results"
-        },
         "status": {
             "title": "Status"
         }
@@ -593,12 +586,6 @@
         "micro_adrenal": {
             "title": "Ipsilateral Adrenal Gland Involvement"
         },
-        "ihc.antibody": {
-            "title": "IHC/FISH (Clinical lab)"
-        },
-        "ihc.result": {
-            "title": "IHC/FISH results"
-        },
         "status": {
             "title": "Status"
         }
@@ -624,13 +611,7 @@
         "lvi": 1.0,
         "micro_perinephric": 1.0,
         "micro_vein": 1.0,
-        "micro_adrenal": 1.0,
-        "ihc.antibody": 1.0,
-        "ihc.result": 1.0
+        "micro_adrenal": 1.0
     },
     "changelog": "/profiles/changelogs/pathology_report.md"
 }
-
-
-
-

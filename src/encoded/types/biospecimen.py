@@ -24,7 +24,6 @@ class Biospecimen(Item):
     name_key = 'accession'
     rev = {
         'biolibrary': ('Biolibrary', 'biospecimen'),
-        'ihc':('Ihc','biospecimen')
     }
     embedded = [
         'biolibrary',
@@ -33,7 +32,6 @@ class Biospecimen(Item):
         'surgery',
         'surgery.pathology_report',
         'surgery.surgery_procedure',
-        'ihc',
         'award',
         'documents'
     ]
@@ -54,17 +52,6 @@ class Biospecimen(Item):
     })
     def biolibrary(self, request, biolibrary):
         return paths_filtered_by_status(request, biolibrary)
-
-    @calculated_property(schema={
-        "title": "Biospecimen IHC",
-        "type": "array",
-        "items": {
-            "type": 'string',
-            "linkTo": "Ihc"
-        },
-    })
-    def ihc(self, request, ihc):
-        return paths_filtered_by_status(request, ihc)
 
     matrix = {
         'y': {

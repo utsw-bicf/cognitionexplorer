@@ -26,10 +26,8 @@ class PathologyReport(Item):
     schema = load_schema("encoded:schemas/pathology_report.json")
     name_key = "accession"
     embedded = [
-        "ihc",
     ]
     rev = {
-        "ihc": ("Ihc", "pathology_report"),
     }
     audit_inherit = []
     set_status_up = []
@@ -58,15 +56,6 @@ class PathologyReport(Item):
         return pathology_report_tumor_range
 
 
-    @calculated_property(
-        schema={
-            "title": "ihc link PR",
-            "type": "array",
-            "items": {"type": "string", "linkTo": "Ihc"},
-        }
-    )
-    def ihc(self, request, ihc):
-        return paths_filtered_by_status(request, ihc)
 
     @calculated_property(
         schema={
@@ -76,7 +65,5 @@ class PathologyReport(Item):
         }
     )
     def histology_filter(self, request, histology):
-        
+
         return histology_filters.get(histology)
-
-

@@ -682,7 +682,17 @@ globals.listingViews.register(PathologyReport, 'PathologyReport');
 class SurgeryComponent extends React.Component {
     render() {
         const result = this.props.context;
-
+        const surgeryProcedure = result.surgery_procedure;
+        let type1 = [];
+        for (let i = 0; i < surgeryProcedure.length; i++) {
+            type1.push(<div><strong>Surgery Procedure: </strong>{surgeryProcedure[i].procedure_type}</div>);
+        }
+        return (
+            < li className={resultItemClass(result)}>
+                <div className="result-item">
+                    <div className="result-item__data">
+                        <a href={result['@id']} className="result-item__link">
+                            {`${result.accession} `}
                         </a>
                     </div>
                     <div className="data-row">
