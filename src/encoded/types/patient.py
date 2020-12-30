@@ -37,8 +37,15 @@ class Patient(Item):
         'ivp_b7',
         'ivp_b8',
         'ivp_b9',
+        'ivp_d1',
         'ivp_d2',
         'fvp_b9',
+        'fvp_b7',
+        'fvp_b5',
+        'fvp_b1',
+        'fvp_d2',
+        'fvp_b8',
+        'tvp_a1',
     ]
     rev = {
         'ivp_a1': ('Ivp_a1', 'patient'),
@@ -53,8 +60,15 @@ class Patient(Item):
         'ivp_b7': ('Ivp_b7', 'patient'),
         'ivp_b8': ('Ivp_b8', 'patient'),
         'ivp_b9': ('Ivp_b9', 'patient'),
+        'ivp_d1': ('Ivp_d1', 'patient'),
         'ivp_d2': ('Ivp_d2', 'patient'),
         'fvp_b9': ('Fvp_b9', 'patient'),
+        'fvp_b7': ('Fvp_b7', 'patient'),
+        'fvp_b5': ('Fvp_b5', 'patient'),
+        'fvp_b1': ('Fvp_b1', 'patient'),
+        'fvp_d2': ('Fvp_d2', 'patient'),
+        'fvp_b8': ('Fvp_b8', 'patient'),
+        'tvp_a1': ('Tvp_a1', 'patient'),
     }
 
     audit_inherit = [
@@ -195,6 +209,17 @@ class Patient(Item):
     })
     def ivp_b9(self, request, ivp_b9):
         return paths_filtered_by_status(request, ivp_b9)
+
+    @calculated_property(schema={
+        "title": "Ivp_d1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Ivp_d1"
+        },
+    })
+    def ivp_d1(self, request, ivp_d1):
+        return paths_filtered_by_status(request, ivp_d1)
       
     @calculated_property(schema={
         "title": "Ivp_d2",
@@ -217,3 +242,69 @@ class Patient(Item):
     })
     def fvp_b9(self, request, fvp_b9):
         return paths_filtered_by_status(request, fvp_b9)
+      
+    @calculated_property(schema={
+        "title": "Fvp_b7",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_b7"
+        },
+    })
+    def fvp_b7(self, request, fvp_b7):
+        return paths_filtered_by_status(request, fvp_b7)
+      
+    @calculated_property(schema={
+        "title": "Fvp_b5",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_b5"
+        },
+    })
+    def fvp_b5(self, request, fvp_b5):
+        return paths_filtered_by_status(request, fvp_b5)
+      
+    @calculated_property(schema={
+        "title": "Fvp_b1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_b1"
+        },
+    })
+    def fvp_b1(self, request, fvp_b1):
+        return paths_filtered_by_status(request, fvp_b1)
+
+    @calculated_property(schema={   
+        "title": "Fvp_d2",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_d2"
+        },
+    })
+    def fvp_d2(self, request, fvp_d2):
+        return paths_filtered_by_status(request, fvp_d2)
+      
+    @calculated_property(schema={
+        "title": "Fvp_b8",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_b8"
+        },
+    })
+    def fvp_b8(self, request, fvp_b8):
+        return paths_filtered_by_status(request, fvp_b8)
+
+    @calculated_property(schema={
+        "title": "Tvp_a1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Tvp_a1"
+        },
+    })
+    def tvp_a1(self, request, tvp_a1):
+        return paths_filtered_by_status(request, tvp_a1)
