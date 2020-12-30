@@ -39,6 +39,9 @@ ORDER = [
     'fvp_d2',
     'fvp_b8',
     'tvp_a1',
+    'tvp_z1x',
+    'ivp_z1x',
+    'fvp_z1x',
     'cart'
 ]
 
