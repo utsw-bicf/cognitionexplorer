@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React from 'react';
 import { SortTablePanel, SortTable } from './sorttable';
 
 class FormsTable extends React.Component {
@@ -190,7 +190,6 @@ class FormsTable extends React.Component {
         }
         for (let i = 0; i < data.tvp_z1x.length; i++) {
             let index = followUpVisitTimes.indexOf(data.tvp_z1x[i]["visdate"]) + 1;
-            // console.log(index)
             forms[index].z1x_id = data.tvp_z1x[i]['@id']
             forms[index].z1x_name = "tvp_z1x"
         }
