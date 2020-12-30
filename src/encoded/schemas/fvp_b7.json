@@ -1,0 +1,264 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP Form B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
+    "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional, based on information provided by the co-participant. For further information, see UDS Coding Guidebook for Follow-up Visit Packet, Form B7. Link to NACC Coding Guidebook Indicate the level of performance for each activity by checking the one appropriate response.",
+    "id": "/profiles/uds_fvp_b7.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "help_with"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "help_with": {
+            "title": "In the past four weeks, did the subject have difficulty or need help with:",
+            "type": "object",
+            "properties": {
+                "fu_bills": {
+                    "title": "1. Writing checks, paying bills, or balancing a checkbook",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_taxes": {
+                    "title": "2. Assembling tax records, business affairs, or other papers",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_shopping": {
+                    "title": "3. Shopping alone for clothes, household necessities, or groceries",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_games": {
+                    "title": "4. Playing a game of skill such as bridge or chess, working on a hobby",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_stove": {
+                    "title": "5. Heating water, making a cup of coffee, turning off the stove",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_mealprep": {
+                    "title": "6. Preparing a balanced meal",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_events": {
+                    "title": "7. Keeping track of current events",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_payattn": {
+                    "title": "8. Paying attention to and understanding a TV program, book, or magazine",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_remdates": {
+                    "title": "9. Remembering appointments, family occasions, holidays, medications",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_travel": {
+                    "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                }
+            },
+            "required": [
+                "fu_bills",
+                "fu_taxes",
+                "fu_shopping",
+                "fu_games",
+                "fu_stove",
+                "fu_mealprep",
+                "fu_events",
+                "fu_payattn",
+                "fu_remdates",
+                "fu_travel"
+            ]
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "help_with.fu_bills": {
+            "title": "1. Writing checks, paying bills, or balancing a checkbook"
+        },
+        "help_with.fu_taxes": {
+            "title": "2. Assembling tax records, business affairs, or other papers"
+        },
+        "help_with.fu_shopping": {
+            "title": "3. Shopping alone for clothes, household necessities, or groceries"
+        },
+        "help_with.fu_games": {
+            "title": "4. Playing a game of skill such as bridge or chess, working on a hobby"
+        },
+        "help_with.fu_stove": {
+            "title": "5. Heating water, making a cup of coffee, turning off the stove"
+        },
+        "help_with.fu_mealprep": {
+            "title": "6. Preparing a balanced meal"
+        },
+        "help_with.fu_events": {
+            "title": "7. Keeping track of current events"
+        },
+        "help_with.fu_payattn": {
+            "title": "8. Paying attention to and understanding a TV program, book, or magazine"
+        },
+        "help_with.fu_remdates": {
+            "title": "9. Remembering appointments, family occasions, holidays, medications"
+        },
+        "help_with.fu_travel": {
+            "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "help_with.fu_bills": {
+            "title": "1. Writing checks, paying bills, or balancing a checkbook"
+        },
+        "help_with.fu_taxes": {
+            "title": "2. Assembling tax records, business affairs, or other papers"
+        },
+        "help_with.fu_shopping": {
+            "title": "3. Shopping alone for clothes, household necessities, or groceries"
+        },
+        "help_with.fu_games": {
+            "title": "4. Playing a game of skill such as bridge or chess, working on a hobby"
+        },
+        "help_with.fu_stove": {
+            "title": "5. Heating water, making a cup of coffee, turning off the stove"
+        },
+        "help_with.fu_mealprep": {
+            "title": "6. Preparing a balanced meal"
+        },
+        "help_with.fu_events": {
+            "title": "7. Keeping track of current events"
+        },
+        "help_with.fu_payattn": {
+            "title": "8. Paying attention to and understanding a TV program, book, or magazine"
+        },
+        "help_with.fu_remdates": {
+            "title": "9. Remembering appointments, family occasions, holidays, medications"
+        },
+        "help_with.fu_travel": {
+            "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "help_with.fu_bills": 1.0,
+        "help_with.fu_taxes": 1.0,
+        "help_with.fu_shopping": 1.0,
+        "help_with.fu_games": 1.0,
+        "help_with.fu_stove": 1.0,
+        "help_with.fu_mealprep": 1.0,
+        "help_with.fu_events": 1.0,
+        "help_with.fu_payattn": 1.0,
+        "help_with.fu_remdates": 1.0,
+        "help_with.fu_travel": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_b7.md"
+}
