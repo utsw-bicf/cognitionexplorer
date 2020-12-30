@@ -33,13 +33,17 @@ ORDER = [
     'ivp_b9',
     'ivp_d1',
     'ivp_d2',
+    'fvp_c1',
+    'fvp_b9',
     'fvp_b7',
     'fvp_b5',
     'fvp_b1',
     'fvp_d2',
+    'fvp_d1',
     'fvp_b8',
     'tvp_a1',
     'tvp_b5',
+    'tvp_a2',
     'cart'
 ]
 
