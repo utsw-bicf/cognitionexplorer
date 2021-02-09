@@ -269,8 +269,7 @@
                         "momageo": {
                             "title": "5a7. Mother - Age of onset",
                             "description": "(999 = Unknown)",
-                            "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                            "type": "string"
                         }
                     }
                 },
@@ -384,8 +383,7 @@
                         "dadageo": {
                             "title": "5b7. Father - Age of onset",
                             "description": "(999 = Unknown)",
-                            "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                            "type": "string"
                         }
                     }
                 }
@@ -515,8 +513,7 @@
                                 "sib1ago": {
                                     "title": "6a7. Sibling 1 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -629,8 +626,7 @@
                                 "sib2ago": {
                                     "title": "6b7. Sibling 2 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -743,8 +739,7 @@
                                 "sib3ago": {
                                     "title": "6c7. Sibling 3 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -857,8 +852,7 @@
                                 "sib4ago": {
                                     "title": "6d7. Sibling 4 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -971,8 +965,7 @@
                                 "sib5ago": {
                                     "title": "6e7. Sibling 5 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1085,8 +1078,7 @@
                                 "sib6ago": {
                                     "title": "6f7. Sibling 6 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1199,8 +1191,7 @@
                                 "sib7ago": {
                                     "title": "6g7. Sibling 7 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1313,8 +1304,7 @@
                                 "sib8ago": {
                                     "title": "6h7. Sibling 8 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1427,8 +1417,7 @@
                                 "sib9ago": {
                                     "title": "6i7. Sibling 9 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1541,8 +1530,7 @@
                                 "sib10ago": {
                                     "title": "6j7. Sibling 10 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1655,8 +1643,7 @@
                                 "sib11ago": {
                                     "title": "6k7. Sibling 11 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1769,8 +1756,7 @@
                                 "sib12ago": {
                                     "title": "6l7. Sibling 12 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1883,8 +1869,7 @@
                                 "sib13ago": {
                                     "title": "6m7. Sibling 13 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -1997,8 +1982,7 @@
                                 "sib14ago": {
                                     "title": "6n7. Sibling 14 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -2111,8 +2095,7 @@
                                 "sib15ago": {
                                     "title": "6o7. Sibling 15 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -2225,8 +2208,7 @@
                                 "sib16ago": {
                                     "title": "6p7. Sibling 16 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -2339,8 +2321,7 @@
                                 "sib17ago": {
                                     "title": "6q7. Sibling 17 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -2453,8 +2434,7 @@
                                 "sib18ago": {
                                     "title": "6r7. Sibling 18 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -2567,8 +2547,7 @@
                                 "sib19ago": {
                                     "title": "6s7. Sibling 19 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -2681,8 +2660,7 @@
                                 "sib20ago": {
                                     "title": "6t7. Sibling 20 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         }
@@ -2806,8 +2784,7 @@
                                 "kid1ago": {
                                     "title": "7a7. Child 1 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -2920,8 +2897,7 @@
                                 "kid2ago": {
                                     "title": "7b7. Child 2 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3034,8 +3010,7 @@
                                 "kid3ago": {
                                     "title": "7c7. Child 3 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3148,8 +3123,7 @@
                                 "kid4ago": {
                                     "title": "7d7. Child 4 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3262,8 +3236,7 @@
                                 "kid5ago": {
                                     "title": "7e7. Child 5 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3376,8 +3349,7 @@
                                 "kid6ago": {
                                     "title": "7f7. Child 6 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3490,8 +3462,7 @@
                                 "kid7ago": {
                                     "title": "7g7. Child 7 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3604,8 +3575,7 @@
                                 "kid8ago": {
                                     "title": "7h7. Child 8 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3718,8 +3688,7 @@
                                 "kid9ago": {
                                     "title": "7i7. Child 9 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3832,8 +3801,7 @@
                                 "kid10ago": {
                                     "title": "7j7. Child 10 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -3946,8 +3914,7 @@
                                 "kid11ago": {
                                     "title": "7k7. Child 11 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -4060,8 +4027,7 @@
                                 "kid12ago": {
                                     "title": "7l7. Child 12 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -4174,8 +4140,7 @@
                                 "kid13ago": {
                                     "title": "7m7. Child 13 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -4288,8 +4253,7 @@
                                 "kid14ago": {
                                     "title": "7n7. Child 14 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         },
@@ -4402,8 +4366,7 @@
                                 "kid15ago": {
                                     "title": "7o7. Child 15 - Age of onset",
                                     "description": "(999 = Unknown)",
-                                    "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "type": "string"
                                 }
                             }
                         }
