@@ -61,18 +61,18 @@
                     "sib2moe": "3 Medical record review from formal dementia evaluation",
                     "sib2ago": "62"
                 }
-            }
-        },
-        "biological_children": {
-            "kids": "1",
-            "child1": {
-                "kid1mob": "06",
-                "kid1yob": "1950",
-                "kid1agd": "888",
-                "kid1neu": "8 N/A, no neurological problem or psychiatric condition",
-                "kid1pdx": "490 Other neuropathologic diagnosis not listed above",
-                "kid1moe": "2 Examination",
-                "kid1ago": "999"
+            },
+            "biological_children": {
+                "kids": "1",
+                "child1": {
+                    "kid1mob": "06",
+                    "kid1yob": "1950",
+                    "kid1agd": "888",
+                    "kid1neu": "8 N/A, no neurological problem or psychiatric condition",
+                    "kid1pdx": "490 Other neuropathologic diagnosis not listed above",
+                    "kid1moe": "2 Examination",
+                    "kid1ago": "999"
+                }
             }
         },
         "form_status": "Complete",
