@@ -25,38 +25,39 @@ class SummaryChart extends React.Component {
 
     render() {
         return (
-          <div>
-            <header>
-              <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-            </header>
-            <div className="flex-container" >
-    
-              <div className="chart-main" >
-                <div id={this.props.chartId}  >
-    
-                </div>
-              </div>
-            </div>
-          </div>)
+            <div id={this.props.chartId}  ></div>
+
+        )
     
     }
 
     drawChart() {
-        var data = [{
-            values: [19, 26, 55],
-            labels: ['Residential', 'Non-Residential', 'Utility'],
-            type: 'pie'
-          }];
           
-          var layout = {
-            height: 400,
-            width: 500
+        let layout = {
+            title: {
+                text:this.props.title,
+                font: {
+                  size: 16
+                },
+                xref: 'paper',
+                x: 0.05,
+            },
+            height: 500,
+            width: 500,
+            margin: {
+                l: 80,
+                r: 20,
+                b: 60,
+                t: 80
+              }
         };
         
-        this.plotly.newPlot(this.props.chartId, data, layout, this.plotlyConfig);
+        this.plotly.newPlot(this.props.chartId, this.props.data, layout, this.plotlyConfig);
         
 
     }
+
+
 
     componentDidMount() {
       if(typeof window.Plotly !== "undefined"){
@@ -74,5 +75,6 @@ class SummaryChart extends React.Component {
 }
 
 export default SummaryChart;
+
 
 

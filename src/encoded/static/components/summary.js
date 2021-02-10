@@ -9,9 +9,10 @@ import { faHospitalUser } from "@fortawesome/free-solid-svg-icons";
 import { faVial } from "@fortawesome/free-solid-svg-icons";
 import { faDna } from "@fortawesome/free-solid-svg-icons";
 import { faDisease } from "@fortawesome/free-solid-svg-icons";
-import { PieChart, Pie} from 'recharts';
-import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, Legend } from 'recharts';
 import SummaryChart from './summaryChart';
+
+
+
 
 
 class SummaryBody extends React.Component {
@@ -66,14 +67,16 @@ class SummaryBody extends React.Component {
             fontSize: "20px"
         }
 
-        const stageData = this.getStageData(facets)
-        const subtypeData = this.getSubtypeData(facets)
-        const specimenData = this.getSpecimenData(facets)
-        let renderSpecimenLabel = function(entry) {
-            return entry.total;
-        }
+        const stageData = this.getPieChartData(facets, "dominant_tumor.stage")
+        const subtypeData = this.getPieChartData(facets, "dominant_tumor.histology_filter")
+        const specimenData = this.getBarChartData(facets, "biospecimen.tissue_derivatives")
+        const metsData = this.getBarChartData(facets, "metastasis.site")
+
         return (
             <div className="summary-header">
+                <header>
+                    <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+                </header>
                 <div className="summary-header__title_control">
                     <div className="summary-header__title">
                         <h1>{this.props.context.title}</h1>
@@ -108,84 +111,97 @@ class SummaryBody extends React.Component {
                             <li><span style={numberStyle}>0</span><span>&nbsp;</span><span>&nbsp;</span><FontAwesomeIcon icon={faDna} size="4x" /></li>
                             <li><span style={noteStyle}>Patients with Genomics Data</span></li>
                             </ul>
-                        </label>
-
-
-                        
+                        </label>                        
                     </div>
-                    <h4>Histologic Subtypes</h4>
-                    <PieChart width={400} height={400}>
-                        <Pie
-                        data={subtypeData}
-                        cx={200}
-                        cy={200}
-                        fill="#8884d8"
-                        dataKey="value"
-                        >
-                        </Pie>
-                    </PieChart>
+                    <hr/>
+                    <Panel>
+                        <PanelBody addClasses="panel__split">
+                            <div className="panel__split-element">
+                                <SummaryChart  title="Dominant Tumor Histologic Subtypes" chartId="summaryChart1" data={subtypeData} ></SummaryChart>
+                            </div>
+                            <div className="panel__split-element">
+                                <SummaryChart  title="Dominant Tumor Stage" chartId="summaryChart2" data={stageData} ></SummaryChart>
+                            </div>
+                        
+                        </PanelBody>
+                        <hr/>
+                        <PanelBody addClasses="panel__split">
+                            <div className="panel__split-element">
+                                <SummaryChart  title="Metastatic Site" chartId="summaryChart3" data={metsData} ></SummaryChart>
+                            </div>
+                            <div className="panel__split-element">
+                                <SummaryChart  title="Biospecimen Inventory" chartId="summaryChart4" data={specimenData} ></SummaryChart>
+                            </div>
 
-                    <h4>Stages at Diagnosis</h4>
-                    <PieChart width={400} height={400}>
-                        <Pie
-                        data={stageData}
-                        cx={200}
-                        cy={200}
-                        fill="#8884d8"
-                        dataKey="value"
-                        >
-                        </Pie>
-                    </PieChart>
-
-                    <h4>Specimen Inventory</h4>
-
-                    <BarChart
-                        width={500}
-                        height={300}
-                        data={specimenData}
-                        margin={{
-                        top: 5, right: 30, left: 20, bottom: 5,
-                        }}
-                    >
-                        <CartesianGrid 
-                            vertical={false}
-                            stroke="#ebf3f0"
-                        />
-                        <XAxis dataKey="name" />
-                        <YAxis hide/>
-                        <Tooltip />
-                        <Legend />
-                        <Bar dataKey="total" fill="#8884d8" />
-                    </BarChart>
-
-                    <SummaryChart chartId="summaryChart" data={context} ></SummaryChart>
-
+                        </PanelBody>
+                    </Panel>                  
+                    <hr/>
                 </div>
             </div>
         );
     }
 
-    getSubtypeData(facets){
+
+    getPieChartData(facets, field){
         let data = [];
-        let subtypes = facets.filter(obj => {
-            return obj.field === "dominant_tumor.histology_filter"
+        let values = [];
+        let labels = [];
+        let results =  facets.filter(obj => {
+            return obj.field === field
           })
-        if (subtypes && subtypes.length > 0){
-            let terms = subtypes[0].terms;
+        if (results && results.length > 0){
+            let terms = results[0].terms;
             let i;
             for (i = 0; i < terms.length; i++) {
-                let subtype = terms[i];
-                data.push({
-                    name: subtype.key,
-                    value: subtype.doc_count
-                });
+                let result = terms[i];
+                values.push(result.doc_count);
+                labels.push(result.key)
+
 
             }
 
         }
+        data = [{
+            values: values,
+            labels: labels,
+            type: 'pie'
+          }
+
+        ]
         return data;
 
     }
+
+    getBarChartData(facets, field){
+        let data = [];
+        let x = [];
+        let y = [];
+        let results =  facets.filter(obj => {
+            return obj.field === field
+          })
+        if (results && results.length > 0){
+            let terms = results[0].terms;
+            let i;
+            for (i = 0; i < terms.length; i++) {
+                let result = terms[i];
+                y.push(result.doc_count);
+                x.push(result.key)
+
+
+            }
+
+        }
+        data = [{
+            x: x,
+            y: y,
+            type: 'bar'
+          }
+
+        ]
+        return data;
+
+    }
+
     getStageData(facets){
         let data = [];
         let stages = facets.filter(obj => {
@@ -280,6 +296,7 @@ Summary.propTypes = {
 };
 
 globals.contentViews.register(Summary, 'Summary');
+
 
 
 
