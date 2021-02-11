@@ -27,6 +27,11 @@ class SummaryBody extends React.Component {
         let numOfTumorgraftSample = 0
 
         let facets = context.facets;
+        let filters = context.filters;
+        let isKidneySampleIncluded = this.getIsIncluded(filters, "biospecimen.anatomic_site", "Kidney, NOS");
+
+        let isMouseSampleIncluded = this.getIsIncluded(filters, "biospecimen.species", "Mouse");
+
         let anatomic_site = facets.filter(obj => {
             return obj.field === "biospecimen.anatomic_site"
           })
@@ -36,7 +41,12 @@ class SummaryBody extends React.Component {
                 return obj.key === "Kidney, NOS"
             })
             if (result && result.length > 0) {
-                numOfKidneySamples = result[0].doc_count;
+                if (isKidneySampleIncluded) {
+                    numOfKidneySamples = result[0].doc_count;
+                } else {
+                    numOfKidneySamples = 0;
+                }
+                
             }
         }
         let species = facets.filter(obj => {
@@ -48,7 +58,12 @@ class SummaryBody extends React.Component {
                 return obj.key === "Mouse"
             })
             if (result && result.length > 0) {
-                numOfTumorgraftSample = result[0].doc_count;
+                if (isMouseSampleIncluded) {
+                    numOfTumorgraftSample = result[0].doc_count;
+                } else {
+                    numOfTumorgraftSample = 0;
+                }
+                
             }
         }
         
@@ -66,11 +81,14 @@ class SummaryBody extends React.Component {
         let noteStyle = {
             fontSize: "20px"
         }
-
-        const stageData = this.getPieChartData(facets, "dominant_tumor.stage")
-        const subtypeData = this.getPieChartData(facets, "dominant_tumor.histology_filter")
-        const specimenData = this.getBarChartData(facets, "biospecimen.tissue_derivatives")
-        const metsData = this.getBarChartData(facets, "metastasis.site")
+        const selectedStageTerms = this.getSelectedTerms(facets, filters, "dominant_tumor.stage")
+        const stageData = this.getPieChartData(facets, "dominant_tumor.stage", selectedStageTerms)
+        const selectedsubtypeTerms = this.getSelectedTerms(facets, filters, "dominant_tumor.histology_filter")
+        const subtypeData = this.getPieChartData(facets, "dominant_tumor.histology_filter", selectedsubtypeTerms)
+        const selectedSpecimenTerms = this.getSelectedTerms(facets, filters, "biospecimen.tissue_derivatives")
+        const specimenData = this.getBarChartData(facets, "biospecimen.tissue_derivatives",selectedSpecimenTerms )
+        const selectedMetsTerms = this.getSelectedTerms(facets, filters, "metastasis.site")
+        const metsData = this.getBarChartData(facets, "metastasis.site", selectedMetsTerms)
 
         return (
             <div className="summary-header">
@@ -142,7 +160,7 @@ class SummaryBody extends React.Component {
     }
 
 
-    getPieChartData(facets, field){
+    getPieChartData(facets, field, selectedTerms){
         let data = [];
         let values = [];
         let labels = [];
@@ -154,8 +172,11 @@ class SummaryBody extends React.Component {
             let i;
             for (i = 0; i < terms.length; i++) {
                 let result = terms[i];
-                values.push(result.doc_count);
-                labels.push(result.key)
+                if (selectedTerms.includes(result.key)) {
+                    values.push(result.doc_count);
+                    labels.push(result.key);
+                }
+                
 
 
             }
@@ -172,7 +193,7 @@ class SummaryBody extends React.Component {
 
     }
 
-    getBarChartData(facets, field){
+    getBarChartData(facets, field, selectedTerms){
         let data = [];
         let x = [];
         let y = [];
@@ -184,10 +205,10 @@ class SummaryBody extends React.Component {
             let i;
             for (i = 0; i < terms.length; i++) {
                 let result = terms[i];
-                y.push(result.doc_count);
-                x.push(result.key)
-
-
+                if (selectedTerms.includes(result.key)) {
+                    y.push(result.doc_count);
+                    x.push(result.key)
+                }
             }
 
         }
@@ -202,45 +223,90 @@ class SummaryBody extends React.Component {
 
     }
 
-    getStageData(facets){
-        let data = [];
-        let stages = facets.filter(obj => {
-            return obj.field === "dominant_tumor.stage"
-          })
-        if (stages && stages.length > 0){
-            let terms = stages[0].terms;
-            let i;
-            for (i = 0; i < terms.length; i++) {
-                let stage = terms[i];
-                data.push({
-                    name: stage.key,
-                    value: stage.doc_count
-                });
 
+    getIsIncluded(filters, field, term) {
+        let isIncluded = true;
+        let excludeField = field + "!";
+        let results = filters.filter(obj => {
+            return obj.field === excludeField;
+        })
+        if (results && results.length > 0){
+            for (let i = 0; i < results.length; i++) {
+                if (results[i].term === term) {
+                    return false;
+                }
             }
 
         }
-        return data;
+        results = filters.filter(obj => {
+                    return obj.field === field;
+                })
+                
+        if (results && results.length > 0){
+            let hasTerm = false;
+            for (let i = 0; i < results.length; i++) {
+                if (results[i].term === term) {
+                    hasTerm = true;
+                    break;
+                }
+            }
+            if (!hasTerm){
+                return false
+            }
+            
+        }
+
+        return isIncluded;
     }
-    getSpecimenData(facets){
-        let data = [];
-        let samples = facets.filter(obj => {
-            return obj.field === "biospecimen.tissue_derivatives"
-          })
-        if (samples && samples.length > 0){
-            let terms = samples[0].terms;
-            let i;
-            for (i = 0; i < terms.length; i++) {
-                let sample = terms[i];
-                data.push({
-                    name: sample.key,
-                    total: sample.doc_count
-                });
 
+    getSelectedTerms(facets, filters, field){
+        let allterms = [];
+        let selectedTerms = [];
+        let excludeField = field + "!";
+        
+        let results = filters.filter(obj => {
+            return obj.field === field;
+        })
+        if (results && results.length > 0){
+            for (let i = 0; i < results.length; i++) {    
+                selectedTerms.push(results[i].term);    
             }
 
         }
-        return data;
+
+
+        results =  facets.filter(obj => {
+            return obj.field === field
+          })
+        if (results && results.length > 0){
+            let terms = results[0].terms;
+            let i;
+            for (i = 0; i < terms.length; i++) {
+                let result = terms[i];
+               
+                allterms.push(result.key);
+            }
+
+        }
+
+        results = filters.filter(obj => {
+            return obj.field === excludeField;
+        })
+        if (results && results.length > 0){
+            for (let i = 0; i < results.length; i++) {  
+                allterms = allterms.filter(x=>x!=results[i].term); 
+                   
+            }
+
+        }
+
+        if (selectedTerms.length > 0) {
+            
+            return selectedTerms;
+ 
+        } else {
+            return allterms;
+        }
     }
 
 }
@@ -296,6 +362,7 @@ Summary.propTypes = {
 };
 
 globals.contentViews.register(Summary, 'Summary');
+
 
 
 
