@@ -4,12 +4,33 @@ import { Panel, PanelBody } from '../libs/ui/panel';
 import * as globals from './globals';
 import { FacetList } from './search';
 import { ViewControls } from './view_controls';
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faHospitalUser } from "@fortawesome/free-solid-svg-icons";
-import { faVial } from "@fortawesome/free-solid-svg-icons";
-import { faDna } from "@fortawesome/free-solid-svg-icons";
-import { faDisease } from "@fortawesome/free-solid-svg-icons";
-import SummaryChart from './summaryChart';
+
+
+/**
+ * Generate an array of data from one facet bucket for displaying in a chart, with one array entry
+ * per experiment status. The order of the entries in the resulting array correspond to the order
+ * of the statuses in `labels`.
+ *
+ * @param {array} buckets - Buckets for one facet returned in summary search results.
+ * @param {array} labels - Experiment status labels.
+ * @return {array} - Data extracted from buckets with an order of values corresponding to `labels`.
+ */
+function generateStatusData(buckets, labels) {
+    // Fill the array to the proper length with zeroes to start with. Actual non-zero data will
+    // overwrite the appropriate entries.
+    const statusData = Array.from({ length: labels.length }, (() => 0));
+
+    // Convert statusData to a form createBarChart understands.
+    if (buckets && buckets.length > 0) {
+        buckets.forEach((bucketItem) => {
+            const statusIndex = labels.indexOf(bucketItem.key);
+            if (statusIndex !== -1) {
+                statusData[statusIndex] = bucketItem.doc_count;
+            }
+        });
+    }
+    return statusData;
+}
 
 
 
@@ -309,6 +330,75 @@ class SummaryBody extends React.Component {
         }
     }
 
+    chooseOrganism(e) {
+        this.setState({
+            selectedOrganism: e.currentTarget.id,
+        });
+        const parsedUrl = url.parse(this.props.context['@id']);
+        const query = new QueryString(parsedUrl.query);
+        
+  
+        query.replaceKeyValue(organismField, e.currentTarget.id, '');
+        const href = `?${query.format()}`;
+        this.context.navigate(href);
+    }
+    render() {
+        const searchQuery = url.parse(this.props.context['@id']).search;
+        const query = new QueryString(searchQuery);
+        const nonPersistentQuery = query.clone();
+        nonPersistentQuery.deleteKeyValue('?type');
+        const clearButton = nonPersistentQuery.queryCount() > 0 && query.queryCount('?type') > 0;
+        return (
+            <div className="summary-header">
+                <div className="summary-header__title_control">
+                    <div className="summary-header__title">
+                        <h1>{this.props.context.title}</h1>
+                    </div>
+                    <ClearFilters searchUri={this.props.context.clear_filters} enableDisplay={!!clearButton} />
+                </div>
+                <div className="summary-controls">
+                    <div className="organism-button-instructions">Choose an organism:</div>
+                    <div className="organism-button-container">
+                        {organismTerms.map(term =>
+                            <button
+                                id={term}
+                                onClick={e => this.chooseOrganism(e)}
+                                className={`organism-button ${term.replace(' ', '-')} ${this.state.selectedOrganism === term ? 'active' : ''}`}
+                                key={term}
+                            >
+                                
+                                <span>{term}</span>
+                            </button>
+                        )}
+                    </div>
+                    <div className={`results-controls ${this.state.selectedOrganism.length > 0 ? `${this.state.selectedOrganism.replace(' ', '-')}` : ''}`}>
+                        <div className="results-count">There {this.props.context.total > 1 ? 'are' : 'is'} <b className="bold-total">{this.props.context.total}</b> result{this.props.context.total > 1 ? 's' : ''}.</div>
+                        <div className="view-controls-container">
+                            <ViewControls results={this.props.context} alternativeNames={['Search list', 'Tabular report', 'Summary matrix']} />
+                        </div>
+                    </div>
+                    {(this.state.selectedOrganism === 'Homo sapiens') ?
+                        <React.Fragment>
+                            <div className="flex-container">
+                               
+                                <SummaryData context={this.props.context} displayCharts={'donuts'} />
+                            </div>
+                            <div className="summary-content">
+                                <SummaryData context={this.props.context} displayCharts={'area'} />
+                            </div>
+                        </React.Fragment>
+                    :
+                        <React.Fragment>
+                            <SummaryHorizontalFacets context={this.props.context} facetList={'all'} />
+                            <div className="summary-content">
+                                <SummaryData context={this.props.context} displayCharts={'all'} />
+                            </div>
+                        </React.Fragment>
+                    }
+                </div>
+            </div>
+        );
+    }
 }
 
 SummaryBody.propTypes = {
