@@ -41,10 +41,9 @@ const portal = {
             title: 'Data',
             children: [
                 { id: 'patientsearch', title: 'Patient Search', url: '/search/?type=Patient&status=released' },
+                { id: 'Surgerysearch', title: 'Surgery/Pathreports Search', url: '/search/?type=Surgery&status=released' },
                 { id: 'samplesearch', title: 'Biospecimen Search', url: '/search/?type=Biospecimen&status=released' },
                 { id: 'bioexperimentsearch', title: 'Bioexperiment Search', url: '/search/?type=Bioexperiment&status=released' },
-                // { id: 'biodatasetsearch', title: 'Biodataset Search', url: '/search/?type=Biodataset&status=released' },
-                { id: 'Surgerysearch', title: 'Surgery/Pathreports Search', url: '/search/?type=Surgery&status=released' },
                 { id: 'sep-mm-1' },
                 { id: 'patientmatrix', title: 'Patient Matrix', url: '/matrix/?type=Patient&status=released' },
                 { id: 'sampletmatrix', title: 'Biospecimen Matrix', url: '/matrix/?type=Biospecimen&status=released' },
@@ -1145,7 +1144,7 @@ class App extends React.Component {
                     <link rel="canonical" href={canonical} />
                     <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200;400;500;600;700&family=Oswald:wght@200;300;400;500&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
                     <script async src="//www.google-analytics.com/analytics.js" />
-                    
+
                     {this.props.inline ? <script data-prop-name="inline" dangerouslySetInnerHTML={{ __html: this.props.inline }} /> : null}
                     {this.props.styles ? <link rel="stylesheet" href={this.props.styles} /> : null}
                     {newsHead(this.props, `${hrefUrl.protocol}//${hrefUrl.host}`)}
@@ -1245,4 +1244,3 @@ module.exports.getRenderedProps = function getRenderedProps(document) {
     }
     return props;
 };
-
