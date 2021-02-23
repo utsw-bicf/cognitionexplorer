@@ -202,6 +202,12 @@ class FormsTable extends React.Component {
             forms[index].a1_id = data.tvp_a1[i]['@id']
             forms[index].a1_name = "tvp_a1"
         }
+        for (let i = 0; i < data.tvp_a3.length; i++) {
+            let index = followUpVisitTimes.indexOf(data.tvp_a3[i]["visdate"]) + 1;
+            // console.log(index)
+            forms[index].a3_id = data.tvp_a3[i]['@id']
+            forms[index].a3_name = "tvp_a3"
+        }
         for (let i = 0; i < data.tvp_b7.length; i++) {
             let index = followUpVisitTimes.indexOf(data.tvp_b7[i]["visdate"]) + 1;
             // console.log(index)
@@ -229,6 +235,7 @@ class FormsTable extends React.Component {
         data.tvp_a1.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_a2.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.tvp_a2.forEach(element => followUpVisitTimes.push(element["visdate"]))
+        data.tvp_a3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_b1.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_b5.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.tvp_b5.forEach(element => followUpVisitTimes.push(element["visdate"]))
