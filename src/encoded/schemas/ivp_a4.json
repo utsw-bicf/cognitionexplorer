@@ -9258,7 +9258,7 @@
         ]
       },
       "not_listed_drugs": {
-        "title": "If a medication is not listed above, specify the drug or brand name and determine its drugID by using the Lookup Tool on NACC website at <a href=\"https://www.alz.washington.edu/MEMBER/DrugCodeLookUp.html\" target=\"_blank\"> NACC online Drug Lookup </a>",
+        "title": "If a medication is not listed above, specify the drug or brand name and determine its drugID by using the Lookup Tool on NACC website at NACC online Drug Lookup",
         "description": "",
         "type": "object",
         "properties": {
