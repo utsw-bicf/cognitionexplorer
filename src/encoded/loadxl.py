@@ -46,6 +46,7 @@ ORDER = [
     'tvp_b5',
     'tvp_a2',
     'fvp_a4',
+    'tvp_a4',
     'cart'
 ]
 
