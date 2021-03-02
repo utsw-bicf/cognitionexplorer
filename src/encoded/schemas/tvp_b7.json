@@ -1,0 +1,253 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP Form B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
+    "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional, based on information provided by the co-participant. For further information, see UDS Coding Guidebook for Follow-up Visit Packet, Form B7. Link to NACC Coding Guidebook Indicate the level of performance for each activity by checking the one appropriate response.",
+    "id": "/profiles/uds_tvp_b7.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "tele_help_with"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "tele_help_with": {
+            "title": "In the past four weeks, did the subject have difficulty or need help with:",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "tele_bills": {
+                    "title": "1. Writing checks, paying bills, or balancing a checkbook",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_taxes": {
+                    "title": "2. Assembling tax records, business affairs, or other papers",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_shopping": {
+                    "title": "3. Shopping alone for clothes, household necessities, or groceries",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_games": {
+                    "title": "4. Playing a game of skill such as bridge or chess, working on a hobby",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_stove": {
+                    "title": "5. Heating water, making a cup of coffee, turning off the stove",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_mealprep": {
+                    "title": "6. Preparing a balanced meal",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_events": {
+                    "title": "7. Keeping track of current events",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_payattn": {
+                    "title": "8. Paying attention to and understanding a TV program, book, or magazine",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_remdates": {
+                    "title": "9. Remembering appointments, family occasions, holidays, medications",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                },
+                "tele_travel": {
+                    "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation",
+                    "type": "string",
+                    "enum": [
+                        "8 Not applicable (e.g., never did)",
+                        "0 Normal",
+                        "1 Has difficulty, but does by self",
+                        "2 Requires assistance",
+                        "3 Dependent",
+                        "9 Unknown"
+                    ]
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "tele_help_with.tele_bills": {
+            "title": "1. Writing checks, paying bills, or balancing a checkbook"
+        },
+        "tele_help_with.tele_taxes": {
+            "title": "2. Assembling tax records, business affairs, or other papers"
+        },
+        "tele_help_with.tele_shopping": {
+            "title": "3. Shopping alone for clothes, household necessities, or groceries"
+        },
+        "tele_help_with.tele_games": {
+            "title": "4. Playing a game of skill such as bridge or chess, working on a hobby"
+        },
+        "tele_help_with.tele_stove": {
+            "title": "5. Heating water, making a cup of coffee, turning off the stove"
+        },
+        "tele_help_with.tele_mealprep": {
+            "title": "6. Preparing a balanced meal"
+        },
+        "tele_help_with.tele_events": {
+            "title": "7. Keeping track of current events"
+        },
+        "tele_help_with.tele_payattn": {
+            "title": "8. Paying attention to and understanding a TV program, book, or magazine"
+        },
+        "tele_help_with.tele_remdates": {
+            "title": "9. Remembering appointments, family occasions, holidays, medications"
+        },
+        "tele_help_with.tele_travel": {
+            "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "tele_help_with.tele_bills": {
+            "title": "1. Writing checks, paying bills, or balancing a checkbook"
+        },
+        "tele_help_with.tele_taxes": {
+            "title": "2. Assembling tax records, business affairs, or other papers"
+        },
+        "tele_help_with.tele_shopping": {
+            "title": "3. Shopping alone for clothes, household necessities, or groceries"
+        },
+        "tele_help_with.tele_games": {
+            "title": "4. Playing a game of skill such as bridge or chess, working on a hobby"
+        },
+        "tele_help_with.tele_stove": {
+            "title": "5. Heating water, making a cup of coffee, turning off the stove"
+        },
+        "tele_help_with.tele_mealprep": {
+            "title": "6. Preparing a balanced meal"
+        },
+        "tele_help_with.tele_events": {
+            "title": "7. Keeping track of current events"
+        },
+        "tele_help_with.tele_payattn": {
+            "title": "8. Paying attention to and understanding a TV program, book, or magazine"
+        },
+        "tele_help_with.tele_remdates": {
+            "title": "9. Remembering appointments, family occasions, holidays, medications"
+        },
+        "tele_help_with.tele_travel": {
+            "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "tele_help_with.tele_bills": 1.0,
+        "tele_help_with.tele_taxes": 1.0,
+        "tele_help_with.tele_shopping": 1.0,
+        "tele_help_with.tele_games": 1.0,
+        "tele_help_with.tele_stove": 1.0,
+        "tele_help_with.tele_mealprep": 1.0,
+        "tele_help_with.tele_events": 1.0,
+        "tele_help_with.tele_payattn": 1.0,
+        "tele_help_with.tele_remdates": 1.0,
+        "tele_help_with.tele_travel": 1.0
+    },
+    "changelog": "/profiles/changelogs/tvp_b7.md"
+}
