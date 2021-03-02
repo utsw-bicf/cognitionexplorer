@@ -1,0 +1,178 @@
+[
+    {
+        "patient": "000001",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-01",
+        "visitnum": "1",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "fu_decl_memo": {
+            "fu_decsub": "1 Yes",
+            "fu_decin": "0 No"
+        },
+        "fu_cogn_symp": {
+            "fu_decclcog": "1 Yes"
+        },
+        "fu_meaning_impair": {
+            "fu_cogmem": "0 No",
+            "fu_cogori": "1 Yes",
+            "fu_cogjudg": "0 No",
+            "fu_coglang": "9 Unknown",
+            "fu_cogvis": "9 Unknown",
+            "fu_cogattn": "0 No",
+            "fu_cogfluc": "0 No",
+            "fu_display_cogflago": {
+                "fu_cogflago": "18"
+            },
+            "fu_cogothr": "1 Yes",
+            "fu_cogfpred": "0 Assessed at a previous UDS visit",
+            "fu_cogmode": "1 Gradual",
+            "fu_decage": "777"
+        },
+        "fu_bhvr_symp": {
+            "fu_decclbe": "1 Yes",
+            "fu_bhvr_change": {
+                "fu_beapathy": "0 No",
+                "fu_bedep": "1 Yes",
+                "fu_pcycho": {
+                    "properties": {
+                        "fu_bevhall": "9 Unknown",
+                        "fu_bevwell": "0 No",
+                        "fu_bevhago": "68",
+                        "fu_beahall": "9 Unknown",
+                        "fu_bedel": "0 No"
+                    }
+                },
+                "fu_bedisin": "0 No",
+                "fu_beirrit": "9 Unknown",
+                "fu_beagit": "1 Yes",
+                "fu_beperch": "9 Unknown",
+                "fu_berem": "1 Yes",
+                "fu_beremago": "72",
+                "fu_beanx": "0 No",
+                "fu_beothr": "1 Yes"
+            },
+            "fu_befpred": "1 Apathy/withdrawal",
+            "fu_bemode": "1 Gradual",
+            "fu_beage": "15"
+        },
+        "fu_motor_symp": {
+            "fu_decclmot": "1 Yes",
+            "fu_motor_meaning_change": {
+                "fu_mogait": "1 Yes",
+                "fu_mofalls": "0 No",
+                "fu_motrem": "9 Unknown",
+                "fu_moslow": "0 No"
+            },
+            "fu_mofrst": "3 Tremor",
+            "fu_momode": "3 Abrupt",
+            "fu_momopark": "0 No",
+            "fu_parkage": "777",
+            "fu_momoals": "1 Yes",
+            "fu_alsage": "777",
+            "fu_moage": "68"
+        },
+        "fu_overall_course": {
+            "fu_course": "4 Fluctuating",
+            "fu_frstchg": "2 Behavior"
+        },
+        "fu_candidate": {
+            "properties": {
+                "fu_lbdeval": "1 Yes",
+                "fu_ftldeval": "0 No"
+            }
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "267496cf-e864-4f39-9551-3d60c56ef82f"
+    },
+    {
+        "patient": "000001",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-04",
+        "visitnum": "2",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "fu_decl_memo": {
+            "fu_decsub": "1 Yes",
+            "fu_decin": "0 No"
+        },
+        "fu_cogn_symp": {
+            "fu_decclcog": "1 Yes"
+        },
+        "fu_meaning_impair": {
+            "fu_cogmem": "0 No",
+            "fu_cogori": "1 Yes",
+            "fu_cogjudg": "0 No",
+            "fu_coglang": "9 Unknown",
+            "fu_cogvis": "9 Unknown",
+            "fu_cogattn": "0 No",
+            "fu_cogfluc": "0 No",
+            "fu_display_cogflago": {
+                "fu_cogflago": "27"
+            },
+            "fu_cogothr": "1 Yes",
+            "fu_cogfpred": "0 Assessed at a previous UDS visit",
+            "fu_cogmode": "1 Gradual",
+            "fu_decage": "777"
+        },
+        "fu_bhvr_symp": {
+            "fu_decclbe": "1 Yes",
+            "fu_bhvr_change": {
+                "fu_beapathy": "0 No",
+                "fu_bedep": "1 Yes",
+                "fu_pcycho": {
+                    "properties": {
+                        "fu_bevhall": "9 Unknown",
+                        "fu_bevwell": "0 No",
+                        "fu_bevhago": "99",
+                        "fu_beahall": "9 Unknown",
+                        "fu_bedel": "0 No"
+                    }
+                },
+                "fu_bedisin": "0 No",
+                "fu_beirrit": "9 Unknown",
+                "fu_beagit": "1 Yes",
+                "fu_beperch": "9 Unknown",
+                "fu_berem": "1 Yes",
+                "fu_beremago": "72",
+                "fu_beanx": "0 No",
+                "fu_beothr": "1 Yes"
+            },
+            "fu_befpred": "1 Apathy/withdrawal",
+            "fu_bemode": "1 Gradual",
+            "fu_beage": "15"
+        },
+        "fu_motor_symp": {
+            "fu_decclmot": "1 Yes",
+            "fu_motor_meaning_change": {
+                "fu_mogait": "1 Yes",
+                "fu_mofalls": "0 No",
+                "fu_motrem": "9 Unknown",
+                "fu_moslow": "0 No"
+            },
+            "fu_mofrst": "3 Tremor",
+            "fu_momode": "3 Abrupt",
+            "fu_momopark": "0 No",
+            "fu_parkage": "777",
+            "fu_momoals": "1 Yes",
+            "fu_alsage": "777",
+            "fu_moage": "68"
+        },
+        "fu_overall_course": {
+            "fu_course": "4 Fluctuating",
+            "fu_frstchg": "2 Behavior"
+        },
+        "fu_candidate": {
+            "properties": {
+                "fu_lbdeval": "1 Yes",
+                "fu_ftldeval": "0 No"
+            }
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "f39c9fd2-c7b3-4527-8047-6643cc62b46d"
+    }
+]
