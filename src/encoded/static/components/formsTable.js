@@ -8,8 +8,9 @@ class FormsTable extends React.Component {
     }
 
     transformData(data) {
+        
         let forms = []
-
+        console.log("data",data);
         let visitObj = {
             visit_number: 1,
             visit_name: "Initial Visit",
@@ -78,7 +79,12 @@ class FormsTable extends React.Component {
         }
         if (data.ivp_b9.length > 0) {
             visitObj.b9_id = data.ivp_b9[0]['@id']
-            visitObj.b9_name = "ivp_b9"
+            visitObj.b9_name = "ivp_b9" 
+        } 
+        if (data.ivp_c2.length > 0) {
+            visitObj.c2_id = data.ivp_c2[0]['@id']
+            visitObj.c2_name = "ivp_c2" 
+        }  
         }
         if (data.ivp_d1.length > 0) {
             visitObj.d1_id = data.ivp_d1[0]['@id']
