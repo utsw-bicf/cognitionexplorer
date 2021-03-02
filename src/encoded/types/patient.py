@@ -51,6 +51,7 @@ class Patient(Item):
         'ivp_d1',
         'fvp_d1',
         'ivp_d2',
+        'fvp_b4',
         'fvp_d2',
     ]
     rev = {
@@ -80,6 +81,7 @@ class Patient(Item):
         'ivp_d1': ('Ivp_d1', 'patient'),
         'fvp_d1': ('Fvp_d1', 'patient'),
         'ivp_d2': ('Ivp_d2', 'patient'),
+        'fvp_b4': ('Fvp_b4', 'patient'),
         'fvp_d2': ('Fvp_d2', 'patient'),
     }
 
@@ -255,6 +257,17 @@ class Patient(Item):
     def ivp_d2(self, request, ivp_d2):
         return paths_filtered_by_status(request, ivp_d2)
 
+    @calculated_property(schema={
+        "title": "Fvp_b4",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_b4"
+        },
+    })
+    def fvp_b4(self, request, fvp_b4):
+        return paths_filtered_by_status(request, fvp_b4)
+    
     @calculated_property(schema={
         "title": "Fvp_c1",
         "type": "array",
