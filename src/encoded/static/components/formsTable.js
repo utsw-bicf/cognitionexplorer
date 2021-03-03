@@ -455,8 +455,3 @@ class FormsTable extends React.Component {
 }
 
 export default FormsTable;
-
-
-
-
-
