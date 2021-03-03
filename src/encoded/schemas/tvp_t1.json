@@ -1,0 +1,182 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - TELEPHONE FOLLOW-UPFORM T1: INCLUSION FORM",
+    "description": "INSTRUCTIONS: This form is to be completed by the clinician or clinical interviewer who will participate in the telephone follow-up. For additional clarification and examples, see UDS Coding Guidebook for Telephone Follow-up Packet, Form T1. Link to NACC Coding Guidebook \nTo print a copy of data previously collected for this form, go to \nhttps://www.alz.washington.edu/MEMBER/siteprint.html \nPlease complete the following before continuing with the Telephone Follow-up Packet.",
+    "id": "/profiles/uds_tvp_t1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "tvp_reason",
+        "telinper",
+        "telmile"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "tvp_reason": {
+            "title": "1. Why is the UDS telephone follow-up protocol being used to obtain data about the subject?",
+            "type": "object",
+            "properties": {
+                "telcog": {
+                    "title": "a. Subject is too cognitively impaired for an in-person UDS visit.",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "telill": {
+                    "title": "b. Subject is too physically impaired (medical illness or injury) to attend an in-person UDS visit.",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "telhome": {
+                    "title": "c. Subject is homebound or in a nursing home and cannot travel.",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "telrefu": {
+                    "title": "d. Subject or co-participant refused an in-person UDS visit.",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "telothr": {
+                    "title": "e. Other reason why the UDS telephone follow-up being used",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "telothrx": {
+                    "title": "e1. Other reason specification: (ADC staff convenience is not an acceptable reason.)",
+                    "type": "string"
+                }
+            }
+        },
+        "telinper": {
+            "title": "2. Is the subject likely to resume in-person UDS follow-up evaluation?  \nIf Yes or Unknown, and this is the first telephone packet submitted for the subject, then END FORM HERE. \nIf No or Unknown but two or more consecutive telephone packets have been submitted for this subject, then CONTINUE TO QUESTION 3.",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "9 Unknown"
+            ]
+        },
+        "telmile": {
+            "title": "3. Has a Milestone Form documenting the change to telephone follow-up been completed? (If No, complete a Milestones Form now.)",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "9 Unknown"
+            ]
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "tvp_reason.telcog": {
+            "title": "a. Subject is too cognitively impaired for an in-person UDS visit."
+        },
+        "tvp_reason.telill": {
+            "title": "b. Subject is too physically impaired (medical illness or injury) to attend an in-person UDS visit."
+        },
+        "tvp_reason.telhome": {
+            "title": "c. Subject is homebound or in a nursing home and cannot travel."
+        },
+        "tvp_reason.telrefu": {
+            "title": "d. Subject or co-participant refused an in-person UDS visit."
+        },
+        "tvp_reason.telothr": {
+            "title": "e. Other reason why the UDS telephone follow-up being used"
+        },
+        "tvp_reason.telothrx": {
+            "title": "e1. Other reason specification: (ADC staff convenience is not an acceptable reason.)"
+        },
+        "telinper": {
+            "title": "2. Is the subject likely to resume in-person UDS follow-up evaluation?  \nIf Yes or Unknown, and this is the first telephone packet submitted for the subject, then END FORM HERE. \nIf No or Unknown but two or more consecutive telephone packets have been submitted for this subject, then CONTINUE TO QUESTION 3."
+        },
+        "telmile": {
+            "title": "3. Has a Milestone Form documenting the change to telephone follow-up been completed? (If No, complete a Milestones Form now.)"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "tvp_reason.telcog": {
+            "title": "a. Subject is too cognitively impaired for an in-person UDS visit."
+        },
+        "tvp_reason.telill": {
+            "title": "b. Subject is too physically impaired (medical illness or injury) to attend an in-person UDS visit."
+        },
+        "tvp_reason.telhome": {
+            "title": "c. Subject is homebound or in a nursing home and cannot travel."
+        },
+        "tvp_reason.telrefu": {
+            "title": "d. Subject or co-participant refused an in-person UDS visit."
+        },
+        "tvp_reason.telothr": {
+            "title": "e. Other reason why the UDS telephone follow-up being used"
+        },
+        "tvp_reason.telothrx": {
+            "title": "e1. Other reason specification: (ADC staff convenience is not an acceptable reason.)"
+        },
+        "telinper": {
+            "title": "2. Is the subject likely to resume in-person UDS follow-up evaluation?  \nIf Yes or Unknown, and this is the first telephone packet submitted for the subject, then END FORM HERE. \nIf No or Unknown but two or more consecutive telephone packets have been submitted for this subject, then CONTINUE TO QUESTION 3."
+        },
+        "telmile": {
+            "title": "3. Has a Milestone Form documenting the change to telephone follow-up been completed? (If No, complete a Milestones Form now.)"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "tvp_reason.telcog": 1.0,
+        "tvp_reason.telill": 1.0,
+        "tvp_reason.telhome": 1.0,
+        "tvp_reason.telrefu": 1.0,
+        "tvp_reason.telothr": 1.0,
+        "tvp_reason.telothrx": 1.0,
+        "telinper": 1.0,
+        "telmile": 1.0
+    },
+    "changelog": "/profiles/changelogs/tvp_t1.md"
+}

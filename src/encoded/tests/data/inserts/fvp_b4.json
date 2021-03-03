@@ -1,0 +1,52 @@
+[
+    {
+        "patient": "000001",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "1980-05-23",
+        "visitnum": "1",
+        "initials": "JAR",
+        "header_complete": "Complete",
+        "sec1": {
+            "fu_memory": "0 - None No memory loss, or slight inconsistent forgetfulness.",
+            "fu_orient": "0.5 - Questionable Fully oriented except for slight difficulty with time relationships.",
+            "fu_judgment": "1 - Mild Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained.",
+            "fu_commun": "0 - None Independent function at usual level in job, shopping, volunteer and social groups.",
+            "fu_homehobb": "0 - None Life at home, hobbies, and intellectual interests well maintained.",
+            "fu_perscare": "0 - None / Questionable - 0Fully capable of self-care (=0).",
+            "fu_cdrsum": 456,
+            "fu_cdrglob": "0.5 = Questionable impariment"
+        },
+        "sec2": {
+            "fu_comport": "0.5 - Questionable Questionable changes in comportment, empathy, appropriateness of actions.",
+            "fu_cdrlang": "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading."
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "2abb094d-2a3d-4fe3-99e9-70031351f0dc"
+    },
+    {
+        "patient": "000001",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "1981-05-24",
+        "visitnum": "2",
+        "initials": "JAR",
+        "header_complete": "Complete",
+        "sec1": {
+            "fu_memory": "0 - None No memory loss, or slight inconsistent forgetfulness.",
+            "fu_orient": "0.5 - Questionable Fully oriented except for slight difficulty with time relationships.",
+            "fu_judgment": "1 - Mild Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained.",
+            "fu_commun": "0 - None Independent function at usual level in job, shopping, volunteer and social groups.",
+            "fu_homehobb": "0 - None Life at home, hobbies, and intellectual interests well maintained.",
+            "fu_perscare": "0 - None / Questionable - 0Fully capable of self-care (=0).",
+            "fu_cdrsum": 789,
+            "fu_cdrglob": "0.5 = Questionable impariment"
+        },
+        "sec2": {
+            "fu_comport": "0.5 - Questionable Questionable changes in comportment, empathy, appropriateness of actions.",
+            "fu_cdrlang": "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading."
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "2178fc7a-ff3e-4eec-9943-c876b91f186e"
+    }
+]
