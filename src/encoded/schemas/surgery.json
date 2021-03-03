@@ -81,7 +81,7 @@
         "pathology_report.grade": {
             "title": "Tumor Grade"
         },
-        "pathology_report.ajcc_p_stage": {
+        "pathology_report.t_stage": {
             "title": "pT Stage"
         },
         "pathology_report.n_stage": {
@@ -138,12 +138,6 @@
         "accession": {
             "title": "Accession"
         },
-        "date": {
-            "title": "Surgery Procedure"
-        },
-        "hospital_location": {
-            "title": "Surgery Hospital Location"
-        },
         "surgery_procedure.procedure_type": {
             "title": "Surgery Procedure"
         },
@@ -159,7 +153,7 @@
         "pathology_report.grade": {
             "title": "Tumor Grade"
         },
-        "pathology_report.ajcc_p_stage": {
+        "pathology_report.t_stage": {
             "title": "pT Stage (at presentation)"
         },
         "pathology_report.n_stage": {
@@ -167,12 +161,6 @@
         },
         "pathology_report.m_stage": {
             "title": "pM Stage (at presentation)"
-        },
-        "pathology_report.metasis_details.site": {
-            "title": "Metastatic Site (Pathology)"
-        },
-        "pathology_report.metasis_details.type": {
-            "title": "Metastasis Type (Pathology)"
         },
         "pathology_report.ajcc_version": {
             "title": "AJCC Version"
@@ -215,7 +203,7 @@
         "accession": 1.0,
         "patient": 1.0,
         "surgery_procedure.procedure_type": 1.0,
-        "pathology_report.ajcc_p_stage": 1.0,
+        "pathology_report.t_stage": 1.0,
         "pathology_report.n_stage": 1.0,
         "pathology_report.m_stage": 1.0,
         "pathology_report.metasis_details.site": 1.0,

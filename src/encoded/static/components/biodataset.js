@@ -13,11 +13,10 @@ import { auditDecor } from './audit';
 import Status from './status';
 import pubReferenceList from './reference';
 import { donorDiversity, publicDataset, AlternateAccession, DisplayAsJson, InternalTags } from './objectutils';
-import { softwareVersionList } from './software';
 import { SortTablePanel, SortTable } from './sorttable';
 import { ProjectBadge } from './image';
 import { DocumentsPanelReq } from './doc';
-import { FileGallery, DatasetFiles } from './filegallery';
+import { FileGallery1, DatasetFiles } from './filegallery1';
 import { AwardRef, ReplacementAccessions, ControllingExperiments } from './typeutils';
 
 
@@ -149,7 +148,7 @@ class BioreferenceComponent extends React.Component {
                 </Panel>
 
                 {/* Display the file widget with the facet, graph, and tables */}
-                <FileGallery context={context} encodevers={globals.encodeVersion(context)} hideGraph altFilterDefault />
+                <FileGallery1 context={context} encodevers={globals.encodeVersion(context)} hideGraph altFilterDefault />
 
                 <FetchedItems {...this.props} url={experimentsUrl} Component={ControllingExperiments} />
                 {datasetDocuments.length>0?<DocumentsPanelReq documents={datasetDocuments} />:null}
@@ -304,7 +303,7 @@ class BioprojectComponent extends React.Component {
                 </Panel>
 
                 {/* Display the file widget with the facet, graph, and tables */}
-                <FileGallery context={context} encodevers={globals.encodeVersion(context)} hideGraph />
+                <FileGallery1 context={context} encodevers={globals.encodeVersion(context)} hideGraph />
 
                 <FetchedItems {...this.props} url={experimentsUrl} Component={ControllingExperiments} />
                 {datasetDocuments.length>0?<DocumentsPanelReq documents={datasetDocuments} />:null}
@@ -638,3 +637,4 @@ BioseriesComponent.contextTypes = {
 const Bioseries = auditDecor(BioseriesComponent);
 
 globals.contentViews.register(Bioseries, 'Bioseries');
+

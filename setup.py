@@ -60,7 +60,7 @@ tests_require = [
 
 setup(
     name='encoded',
-    version='0.1',
+    version='1.0',
     description='Metadata database for KCE',
     long_description=README + '\n\n' + CHANGES,
     packages=find_packages('src'),

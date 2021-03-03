@@ -4,9 +4,9 @@ import { Panel, PanelBody, PanelHeading } from '../libs/ui/panel';
 import * as globals from './globals';
 import { Breadcrumbs } from './navigation';
 import Status from './status';
-import { PanelLookup, ItemAccessories } from './objectutils';
-import CollapsiblePanel from './collapsiblePanel';
+import { ItemAccessories } from './objectutils';
 import PathologyReportTable from './pathologyReportTable';
+import SurgeryProcedureTable from './surgeryProcedureTable';
 // import IHCTable from './ihcTable';
 
 
@@ -27,13 +27,14 @@ class Surgery extends React.Component {
 
 
         let hasPathology=false;
+        let hasProcedure = false;
 
         if (Object.keys(this.props.context.pathology_report).length > 0) {
           hasPathology = true;
-
         }
-
-
+        if (Object.keys(this.props.context.surgery_procedure).length > 0) {
+            hasProcedure = true;
+        }
          return (
             <div className={itemClass}>
                 <header className="row">
@@ -46,7 +47,7 @@ class Surgery extends React.Component {
                 </header>
                 <Panel>
                     <PanelHeading>
-                        <h4>Surgery view</h4>
+                        <h4>Surgery View</h4>
                     </PanelHeading>
                     <PanelBody>
                     <dl className="key-value">
@@ -70,6 +71,7 @@ class Surgery extends React.Component {
                     </dl>
                     </PanelBody>
                 </Panel>
+                {hasProcedure && <SurgeryProcedureTable data={context.surgery_procedure} tableTitle="Surgery Procedure"></SurgeryProcedureTable>}
                 {hasPathology && <PathologyReportTable data={context.pathology_report} tableTitle="Pathology Report " ></PathologyReportTable>}
 
             </div>

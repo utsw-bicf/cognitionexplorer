@@ -1,4 +1,3 @@
-
 assay_terms = {
       'ChIP-seq': 'OBI:0000716',
       'RNA-seq': 'OBI:0001271',

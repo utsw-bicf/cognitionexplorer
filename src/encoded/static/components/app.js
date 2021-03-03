@@ -40,13 +40,13 @@ const portal = {
             id: 'data',
             title: 'Data',
             children: [
-                { id: 'patientsearch', title: 'Patient search', url: '/search/?type=Patient&status=released' },
-                { id: 'samplesearch', title: 'Biospecimen search', url: '/search/?type=Biospecimen&status=released' },
-                { id: 'genomicssearch', title: 'Biodatasets/Bioexperiments', url: '/search/?type=Biodataset&status=released' },
-                { id: 'Surgerysearch', title: 'Surgery/Pathreports search', url: '/search/?type=Surgery&status=released' },
+                { id: 'patientsearch', title: 'Patient Search', url: '/search/?type=Patient&status=released' },
+                { id: 'Surgerysearch', title: 'Surgery/Pathreports Search', url: '/search/?type=Surgery&status=released' },
+                { id: 'samplesearch', title: 'Biospecimen Search', url: '/search/?type=Biospecimen&status=released' },
+                { id: 'bioexperimentsearch', title: 'Bioexperiment Search', url: '/search/?type=Bioexperiment&status=released' },
                 { id: 'sep-mm-1' },
-                { id: 'patientmatrix', title: 'Patient matrix', url: '/matrix/?type=Patient&status=released' },
-                { id: 'sampletmatrix', title: 'Biospecimen matrix', url: '/matrix/?type=Biospecimen&status=released' },
+                { id: 'patientmatrix', title: 'Patient Matrix', url: '/matrix/?type=Patient&status=released' },
+                { id: 'sampletmatrix', title: 'Biospecimen Matrix', url: '/matrix/?type=Biospecimen&status=released' },
                 { id: 'sep-mm-2' },
                 { id: 'publications', title: 'Publications', url: '/search/?type=Publication&status=released' },
             ],
@@ -55,10 +55,10 @@ const portal = {
             id: 'materialsmethods',
             title: 'Materials & Methods',
             children: [
-                { id: 'datastandards', title: 'Assays and standards', url: '/data-standards/' },
-                { id: 'fileformats', title: 'File formats', url: '/help/file-formats/' },
+                { id: 'datastandards', title: 'Assays and Standards', url: '/data-standards/' },
+                { id: 'fileformats', title: 'File Formats', url: '/help/file-formats/' },
                 { id: 'sep-mm-1' },
-                { id: 'dataorg', title: 'Data organization', url: '/help/data-organization/' },
+                { id: 'dataorg', title: 'Data Organization', url: '/help/data-organization/' },
                 { id: 'profiles', title: 'Schemas', url: '/profiles/' },
             ],
         },
@@ -67,6 +67,7 @@ const portal = {
             title: 'Help',
             children: [
                 { id: 'gettingstarted', title: 'Using the Portal', url: '/help/getting-started/' },
+                { id: 'dictionary', title: 'Dictionary', url: '/help/dictionary' },
                 { id: 'cart', title: 'Cohort', url: '/help/cart/' },
                 { id: 'restapi', title: 'REST API', url: '/help/rest-api/' },
                 { id: 'citingkce', title: 'Citing KCE', url: '/help/citing-kce' },
@@ -1143,20 +1144,11 @@ class App extends React.Component {
                     <link rel="canonical" href={canonical} />
                     <link href="https://fonts.googleapis.com/css2?family=Mada:wght@200;400;500;600;700&family=Oswald:wght@200;300;400;500&family=Quicksand:wght@300;400;600&display=swap" rel="stylesheet" />
                     <script async src="//www.google-analytics.com/analytics.js" />
-                    <script async src={`https://cdn.walkme.com/users/8c7ff9322d01408798869806f9f5a132/${globals.isProductionHost(this.props.href) ? '' : 'test/'}walkme_8c7ff9322d01408798869806f9f5a132_https.js`} />
+
                     {this.props.inline ? <script data-prop-name="inline" dangerouslySetInnerHTML={{ __html: this.props.inline }} /> : null}
                     {this.props.styles ? <link rel="stylesheet" href={this.props.styles} /> : null}
                     {newsHead(this.props, `${hrefUrl.protocol}//${hrefUrl.host}`)}
-                    {this.state.context && this.state.context['@type'] && this.state.context['@type'].some(type => ['experiment', 'functionalcharacterizationexperiment', 'annotation'].includes(type.toLowerCase())) ?
-                        <script
-                            data-prop-name="context"
-                            type="application/ld+json"
-                            dangerouslySetInnerHTML={{
-                                __html: `\n\n${jsonScriptEscape(JSON.stringify(jsonldFormatter(this.state.context, hrefUrl.host)))}\n\n`,
-                            }}
-                        />
-                    : null
-                    }
+
                 </head>
                 <body onClick={this.handleClick} onSubmit={this.handleSubmit}>
                     <script
@@ -1243,3 +1235,4 @@ module.exports.getRenderedProps = function getRenderedProps(document) {
     }
     return props;
 };
+
