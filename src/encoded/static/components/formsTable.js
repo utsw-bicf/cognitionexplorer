@@ -48,7 +48,9 @@ class FormsTable extends React.Component {
             d2_name: "",
             d2_id: "",
             z1x_name: "",
-            z1x_id: ""
+            z1x_id: "",
+            m1_name: "",
+            m1_id: ""
 
         }
         if (data.ivp_a2.length > 0) {
@@ -100,9 +102,14 @@ class FormsTable extends React.Component {
             visitObj.d2_id = data.ivp_d2[0]['@id']
             visitObj.d2_name = "ivp_d2"
         }
+        if (data.m1.length > 0) {
+            visitObj.m1_id = data.m1[0]['@id']
+            visitObj.m1_name = "m1"
+        }
         if (data.ivp_a4.length > 0) {
             visitObj.a4_id = data.ivp_a4[0]['@id']
             visitObj.a4_name = "ivp_a4"
+        }
         if (data.ivp_z1x.length > 0) {
             visitObj.z1x_id = data.ivp_z1x[0]['@id']
             visitObj.z1x_name = "ivp_z1x"
@@ -151,7 +158,9 @@ class FormsTable extends React.Component {
                 t1_name: "",
                 t1_id: "",
                 z1x_name: "",
-                z1x_id: ""
+                z1x_id: "",
+                m1_name: "",
+                m1_id: ""
             }
             forms.push(visitObj)
         }
@@ -408,6 +417,10 @@ class FormsTable extends React.Component {
             z1x_id: {
                 title: 'Form Z1x',
                 display: form => <a href={form.z1x_id}>{form.z1x_name}</a>,
+            },
+            m1_id: {
+                title: 'Form M1',
+                display: form => <a href={form.m1_id}>{form.m1_name}</a>,
             },
             t1_id: {
                 title: 'Form T1',
