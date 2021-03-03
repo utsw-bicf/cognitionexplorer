@@ -1,4 +1,0 @@
-0000000000000000000000000000000000000000 fe4dc9f29d46d662ce288f097788cb27cf5920e2 Sensecode <mznie@hotmail.com> 1605889682 -0600	branch: Created from HEAD
-fe4dc9f29d46d662ce288f097788cb27cf5920e2 2853dbe8ae661c53c22682d1dbc24290c59aae30 Sensecode <mznie@hotmail.com> 1605891654 -0600	commit: add fvp_b6 schema, link with patient, put on showpage
-2853dbe8ae661c53c22682d1dbc24290c59aae30 64d7b6ae70ea7fef41b22f547022a6a66e8c4137 Sensecode <mznie@hotmail.com> 1605892408 -0600	commit: fix search name
-64d7b6ae70ea7fef41b22f547022a6a66e8c4137 9d63868c202f62f844fffa6046317f8063d04e8d Sensecode <mznie@hotmail.com> 1606927387 -0600	commit: change fu_nogds type to boolean

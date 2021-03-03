@@ -1,4 +1,0 @@
-0000000000000000000000000000000000000000 30eb6ac01c05d64f92783edcb77f18b5b04a59e9 Sensecode <mznie@hotmail.com> 1603232979 -0500	branch: Created from HEAD
-30eb6ac01c05d64f92783edcb77f18b5b04a59e9 f39908708dcd0dbc5e6149cefbff98d17d03f364 Sensecode <mznie@hotmail.com> 1603253771 -0500	commit: readd ivp_b9 schema, link with patient and showpage
-f39908708dcd0dbc5e6149cefbff98d17d03f364 e6c45d468c1c08dc1309dd493bc8fb703769def6 Sensecode <mznie@hotmail.com> 1603254367 -0500	commit: readd py files, lost when switch branch
-e6c45d468c1c08dc1309dd493bc8fb703769def6 193bd81373b67447a915827ac16b8fb764708338 Sensecode <mznie@hotmail.com> 1603255072 -0500	commit: edit schema typo

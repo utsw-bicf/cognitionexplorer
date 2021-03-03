@@ -1,5 +1,0 @@
-0000000000000000000000000000000000000000 fd9fcbc9e620b26e2a9a5e4ffd2c3642db7b892b Sensecode <mznie@hotmail.com> 1601325406 -0500	branch: Created from HEAD
-fd9fcbc9e620b26e2a9a5e4ffd2c3642db7b892b 0d184d532bd4c146059d9ab7357eef5836d157ef Sensecode <mznie@hotmail.com> 1601332429 -0500	commit: add ivp_b5 and ivp_b6 schema
-0d184d532bd4c146059d9ab7357eef5836d157ef c92114264f5fb038e2f835da623c97b72bbb82e2 Sensecode <mznie@hotmail.com> 1601350407 -0500	commit: add ivp_b5 schema, connet with patient and embed in show page
-c92114264f5fb038e2f835da623c97b72bbb82e2 48dbfe031d6f8d10c7b945690281b498a07b7e85 Sensecode <mznie@hotmail.com> 1601435317 -0500	commit: add ivp_b6 schema, cannot connect
-48dbfe031d6f8d10c7b945690281b498a07b7e85 5d1285bdc19a1a99eee463d1108b6874e2417ad3 Sensecode <mznie@hotmail.com> 1601436548 -0500	commit: connecting ivp_b6 and put in show page

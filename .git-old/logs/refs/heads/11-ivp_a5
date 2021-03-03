@@ -1,9 +1,0 @@
-0000000000000000000000000000000000000000 7d1a1cfd02082ce6aa54a3941f90aa22b70b06c4 Sensecode <mznie@hotmail.com> 1600494327 -0500	branch: Created from HEAD
-7d1a1cfd02082ce6aa54a3941f90aa22b70b06c4 d21490386a4f004ac5b03c7a2f0902d7d61a5ec8 Sensecode <mznie@hotmail.com> 1600720126 -0500	commit: add ivp-a5 all parts
-d21490386a4f004ac5b03c7a2f0902d7d61a5ec8 5620c6d9444525d294b9c7d40ebba8062f41437c Sensecode <mznie@hotmail.com> 1600728019 -0500	commit: try to fix schema type mapping issue
-5620c6d9444525d294b9c7d40ebba8062f41437c 198983d8a086089764d94d0f35b3d255882d3017 Sensecode <mznie@hotmail.com> 1600754567 -0500	commit: fix mapping
-198983d8a086089764d94d0f35b3d255882d3017 e68614ac413b8a9460e81facd6ac86b86e39cdd4 Sensecode <mznie@hotmail.com> 1600782303 -0500	commit: add facets and columns, boost_value
-e68614ac413b8a9460e81facd6ac86b86e39cdd4 53002bb17fe894cf583bba19e9f088a42f557ea0 Sensecode <mznie@hotmail.com> 1600831536 -0500	commit: correct identified field
-53002bb17fe894cf583bba19e9f088a42f557ea0 583c3478b740299dcdabd1ca97b760420b6c6450 Sensecode <mznie@hotmail.com> 1600882224 -0500	pull origin 11-ivp_a5: Fast-forward
-583c3478b740299dcdabd1ca97b760420b6c6450 614b1bed2c1a479e53ed6daad21b8f0bd523a275 Sensecode <mznie@hotmail.com> 1600883456 -0500	commit: test and fix merge
-614b1bed2c1a479e53ed6daad21b8f0bd523a275 5eee6c4af89da2c5c7c80344b15f34f98b4867db Sensecode <mznie@hotmail.com> 1600900870 -0500	commit: change title

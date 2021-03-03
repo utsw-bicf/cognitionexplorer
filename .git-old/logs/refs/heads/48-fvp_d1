@@ -1,4 +1,0 @@
-0000000000000000000000000000000000000000 4bac9d76959b6866a803a04b308c7c1c4ba40b3f Sensecode <mznie@hotmail.com> 1608654610 -0600	branch: Created from HEAD
-4bac9d76959b6866a803a04b308c7c1c4ba40b3f 968a0930ace01acaf97ab4d7e270b40d6e67efbf Sensecode <mznie@hotmail.com> 1608654749 -0600	commit: fix merge
-968a0930ace01acaf97ab4d7e270b40d6e67efbf a66ba4927a412ccd8c5d64068d3af88619ac33a8 Sensecode <mznie@hotmail.com> 1608701124 -0600	commit: add fvp_d1, connect with patient, put in showpage
-a66ba4927a412ccd8c5d64068d3af88619ac33a8 6fb4204bcbae426004deeef6578c02aa1889d346 Sensecode <mznie@hotmail.com> 1608705532 -0600	commit: add facets and columns, boost value
