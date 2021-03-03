@@ -24,24 +24,9 @@ import { valueOnly } from './objectutils';
 // Should really be singular...
 const types = {
     patient: { title: 'Patients' },
-    surgery: { title: 'Surgery and Pathology Reports' },
-    annotation: { title: 'Annotation file set' },
-    biospecimen: { title: 'Biospecimens' },
-    // bioexperiment: { title: 'Bioexperiments' },
-    // bioseries: { title: 'Series File set' },
-    // biofileSet: { title: 'File set' },
-    // bioexperimentSeries: { title: 'Experiment Series'},
-    biodataset: { title: 'Biodatasets' },
-    bioexperiment: { title: 'Bioexperiments' },
-    bioseries: { title: 'Bioserieses' },
-    biofileSet: { title: 'BiofileSets' },
-    bioexperimentSeries:{title:'BioexperimentSereieses'},
-    image: { title: 'Images' },
     publication: { title: 'Publications' },
     page: { title: 'Web page' },
-    bioproject: { title: 'Project file set' },
     publication_data: { title: 'Publication file set' },
-    bioreference: { title: 'Reference file set' },
 };
 
 const datasetTypes = {
