@@ -1,0 +1,52 @@
+[
+    {
+        "patient": "000001",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-01",
+        "visitnum": "1",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "tele_anymeds": "1 Yes",
+        "tele_drugid_1": "100049 acetaminophen (Anacin, Tempra, Tylenol)",
+        "tele_drugid_2": "103428 acetaminophen - HYDROcodone (Vicodin)",
+        "tele_drugid_3": "200051 Adalat",
+        "tele_drugid_4": "200015 Advil",
+        "tele_not_listed_drugs": {
+            "tele_drugid_31": "test",
+            "tele_drug_name_31": "test",
+            "tele_drugid_32": "test-test",
+            "tele_drug_name_32": "test-test",
+            "tele_drugid_33": "test-test-test",
+            "tele_drug_name_33": "test-test-test"
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "b58f9b52-e39f-4052-b964-f2c2149a89c3"
+    },
+    {
+        "patient": "000001",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-04",
+        "visitnum": "2",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "tele_anymeds": "1 Yes",
+        "tele_drugid_1": "100049 acetaminophen (Anacin, Tempra, Tylenol)",
+        "tele_drugid_2": "103428 acetaminophen - HYDROcodone (Vicodin)",
+        "tele_drugid_3": "200051 Adalat",
+        "tele_drugid_4": "200015 Advil",
+        "tele_not_listed_drugs": {
+            "tele_drugid_31": "test",
+            "tele_drug_name_31": "test",
+            "tele_drugid_32": "test-test",
+            "tele_drug_name_32": "test-test",
+            "tele_drugid_33": "test-test-test",
+            "tele_drug_name_33": "test-test-test"
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "b7fce6ef-c50c-4b16-a8cf-d93977263b5c"
+    }
+]

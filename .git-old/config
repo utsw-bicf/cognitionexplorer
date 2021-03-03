@@ -1,0 +1,17 @@
+[core]
+	repositoryformatversion = 0
+	filemode = true
+	bare = false
+	logallrefupdates = true
+[remote "origin"]
+	url = https://github.com/utsw-bicf/cognitionexplorer.git
+	fetch = +refs/heads/*:refs/remotes/origin/*
+[branch "ce"]
+	remote = origin
+	merge = refs/heads/ce
+[branch "36-a2_fvp"]
+	remote = origin
+	merge = refs/heads/36_a2-fvp
+[branch "67-patient"]
+	remote = origin
+	merge = refs/heads/67-patient

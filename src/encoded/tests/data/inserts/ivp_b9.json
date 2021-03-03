@@ -1,0 +1,57 @@
+{
+    "patient": "000001",
+    "adcid": "25 University of Texas Southwestern",
+    "visdate": "1979-05-20",
+    "visitnum": "1",
+    "initials": "JAR",
+    "header_complete": "Complete",
+    "decl_in_memo": {
+        "decsub": "1 Yes",
+        "decin": "1 Yes",
+        "decclin": "1 yes"
+    },
+    "cogn_symp": {},
+    "meaningful_impair": {
+        "cogmem": "1 Yes",
+        "cogjudg": "1 Yes",
+        "coglang": "1 Yes",
+        "cogvis": "0 No",
+        "cogattn": "0 No",
+        "cogothr": "0 No",
+        "cogmode": "1 Gradual",
+        "decage": 76
+    },
+    "beha_symp": {},
+    "chge_in_behv": {
+        "beapathy": "0 No",
+        "bedep": "0 No"
+    },
+    "psych": {
+        "bevhall": "0 No",
+        "beahall": "0 No",
+        "bedel": "0 No",
+        "bedisin": "0 No",
+        "beirrit": "0 No",
+        "beagit": "0 No",
+        "beperch": "0 No",
+        "beothr": "0 No",
+        "bemode": "88 N/A"
+    },
+    "moto_symp": {},
+    "motor_func": {
+        "mogait": "0 No",
+        "mofalls": "0 No",
+        "motrem": "0 No",
+        "moslow": "0 No",
+        "mofrst": "88 N/A",
+        "momode": "88 N/A"
+    },
+    "overall": {
+        "course": "1 Gradually progressive",
+        "frstchg": "1 Cognition"
+    },
+    "candidate": {},
+    "form_status": "Complete",
+    "status": "released",
+    "uuid": "b1a14b86-1a47-43fb-9b08-c2fa4932300e"
+}

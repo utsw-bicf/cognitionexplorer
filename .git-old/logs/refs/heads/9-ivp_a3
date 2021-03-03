@@ -1,0 +1,7 @@
+0000000000000000000000000000000000000000 cf0991d0777d8900c0ab2783b6fa4ad592958972 Sensecode <mznie@hotmail.com> 1612876057 -0600	branch: Created from HEAD
+cf0991d0777d8900c0ab2783b6fa4ad592958972 3764e383c0283bbbb1156911aaeb55e03d1a7331 Sensecode <mznie@hotmail.com> 1612879159 -0600	commit: add ivp_a3, connect with patient, put in showpage
+3764e383c0283bbbb1156911aaeb55e03d1a7331 d71b3ab1253ef9a9950948067614ef3a50608da9 Sensecode <mznie@hotmail.com> 1612888595 -0600	commit: switch the order with type and pattern in ivp_a3 schema
+d71b3ab1253ef9a9950948067614ef3a50608da9 e4c5f9f75fcaca276413ceaaeaa26465eb599430 Sensecode <mznie@hotmail.com> 1612904968 -0600	commit: edit the subschema
+e4c5f9f75fcaca276413ceaaeaa26465eb599430 850891c6bae61b28e70cdd4e0c02c08f020e39b3 Sensecode <mznie@hotmail.com> 1612911682 -0600	commit: fix mapping, simplify facets, columns and boost value
+850891c6bae61b28e70cdd4e0c02c08f020e39b3 c7cb33411a9bd683768a748832fd1b6fcaa0436c Sensecode <mznie@hotmail.com> 1612913245 -0600	commit: add pattern to age of onset
+c7cb33411a9bd683768a748832fd1b6fcaa0436c efd4757cd98ef2778b5f7e82c4e27f5f89d5c2d7 Sensecode <mznie@hotmail.com> 1612914222 -0600	commit: remove pattern for age of onset, fix mapping

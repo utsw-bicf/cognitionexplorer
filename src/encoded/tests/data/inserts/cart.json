@@ -1,0 +1,16 @@
+[
+    {
+        "name": "First cohort",
+        "elements": [
+            "/patients/000015/",
+            "/patients/000014/",
+            "/patients/000013/",
+            "/patients/000010/"
+        ],
+        "identifier": "venkat-malladi-first-cohort",
+        "submitted_by": "vsmalladi@gmail.com",
+        "status": "current",
+        "uuid": "d8850d88-946b-43e0-9199-efee2c8f5303"
+    }
+]
+
