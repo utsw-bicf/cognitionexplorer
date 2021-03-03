@@ -1,0 +1,152 @@
+[
+    {
+        "patient": "000001",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-01",
+        "visitnum": "1",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "fu_note_z1x_1": {
+            "fu_langa1": "2 Spanish"
+        },
+        "fu_note_z1x_2": {
+            "fu_a2sub": "1 Yes",
+            "fu_a2not": "96 - Cognitive/behavior problem",
+            "fu_langa2": "1 English"
+        },
+        "fu_note_z1x_3": {
+            "fu_a3sub": "0 No",
+            "fu_a3not": "95 - Physical problem",
+            "fu_langa3": "2 Spanish"
+        },
+        "fu_note_z1x_4": {
+            "fu_a4sub": "1 Yes",
+            "fu_a4not": "97 - Other problem",
+            "fu_langa4": "1 English"
+        },
+        "fu_note_z1x_5": {
+            "fu_b1sub": "1 Yes",
+            "fu_b1not": "97 - Other problem",
+            "fu_langb1": "1 English"
+        },
+        "fu_note_z1x_6": {
+            "fu_langb4": "1 English"
+        },
+        "fu_note_z1x_7": {
+            "fu_b5sub": "0 No",
+            "fu_b5not": "98 - Verbal refusal",
+            "fu_langb5": "1 English"
+        },
+        "fu_note_z1x_8": {
+            "fu_b6sub": "1 Yes",
+            "fu_b6not": "95 - Physical problem",
+            "fu_langb6": "1 English"
+        },
+        "fu_note_z1x_9": {
+            "fu_b7sub": "1 Yes",
+            "fu_b7not": "96 - Cognitive/behavior problem",
+            "fu_langb7": "1 English"
+        },
+        "fu_note_z1x_10": {
+            "fu_langb8": "1 English"
+        },
+        "fu_note_z1x_11": {
+            "fu_langb9": "2 Spanish"
+        },
+        "fu_note_z1x_12": {
+            "fu_langc1": "1 English"
+        },
+        "fu_note_z1x_13": {
+            "fu_langc2": "1 English"
+        },
+        "fu_note_z1x_14": {
+            "fu_langd": "2 Spanish"
+        },
+        "fu_note_z1x_15": {
+            "fu_langd2": "1 English"
+        },
+        "fu_cls_form": {
+            "fu_clssub": "1 Yes",
+            "fu_langcls": "2 Spanish"
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "bf3c87bd-4548-4deb-81c9-79a9f6ecdba3"
+    },
+    {
+        "patient": "000001",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-04",
+        "visitnum": "2",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "fu_note_z1x_1": {
+            "fu_langa1": "1 English"
+        },
+        "fu_note_z1x_2": {
+            "fu_a2sub": "1 Yes",
+            "fu_a2not": "95 - Physical problem",
+            "fu_langa2": "1 English"
+        },
+        "fu_note_z1x_3": {
+            "fu_a3sub": "0 No",
+            "fu_a3not": "96 - Cognitive/behavior problem",
+            "fu_langa3": "2 Spanish"
+        },
+        "fu_note_z1x_4": {
+            "fu_a4sub": "1 Yes",
+            "fu_a4not": "97 - Other problem",
+            "fu_langa4": "1 English"
+        },
+        "fu_note_z1x_5": {
+            "fu_b1sub": "1 Yes",
+            "fu_b1not": "97 - Other problem",
+            "fu_langb1": "1 English"
+        },
+        "fu_note_z1x_6": {
+            "fu_langb4": "1 English"
+        },
+        "fu_note_z1x_7": {
+            "fu_b5sub": "0 No",
+            "fu_b5not": "98 - Verbal refusal",
+            "fu_langb5": "1 English"
+        },
+        "fu_note_z1x_8": {
+            "fu_b6sub": "1 Yes",
+            "fu_b6not": "95 - Physical problem",
+            "fu_langb6": "1 English"
+        },
+        "fu_note_z1x_9": {
+            "fu_b7sub": "1 Yes",
+            "fu_b7not": "96 - Cognitive/behavior problem",
+            "fu_langb7": "1 English"
+        },
+        "fu_note_z1x_10": {
+            "fu_langb8": "1 English"
+        },
+        "fu_note_z1x_11": {
+            "fu_langb9": "2 Spanish"
+        },
+        "fu_note_z1x_12": {
+            "fu_langc1": "1 English"
+        },
+        "fu_note_z1x_13": {
+            "fu_langc2": "1 English"
+        },
+        "fu_note_z1x_14": {
+            "fu_langd": "2 Spanish"
+        },
+        "fu_note_z1x_15": {
+            "fu_langd2": "1 English"
+        },
+        "fu_cls_form": {
+            "fu_clssub": "1 Yes",
+            "fu_langcls": "2 Spanish"
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "8bb572e6-0ea3-4647-971d-d0d89a99bb8e"
+    }
+]
