@@ -1,0 +1,126 @@
+[
+    {
+        "patient": "000001",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-25",
+        "visitnum": "1",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "tele_note_z1x_1": {
+            "tele_langt": "1 English"
+        },
+        "tele_note_z1x_2": {
+            "tele_langa": "1 English"
+        },
+        "tele_note_z1x_3": {
+            "tele_langa": "2 Spanish"
+        },
+        "tele_note_z1x_4": {
+            "title": "A3 Subject Family History",
+            "type": "object",
+            "properties": {
+                "tele_a3sub": "1 Yes",
+                "tele_a3not": "95 - Physical problem",
+                "tele_langa": "1 English"
+            }
+        },
+        "tele_note_z1x_5": {
+            "tele_a4sub": "1 Yes",
+            "tele_a4not": "96 - Cognitive/behavior problem",
+            "tele_langa": "2 Spanish"
+        },
+        "tele_note_z1x_6": {
+            "tele_langb": "1 English"
+        },
+        "tele_note_z1x_7": {
+            "title": "B5 BEHAVIORAL ASSESSMENT NPI-Q",
+            "tele_b5sub": "1 Yes",
+            "tele_b5not": "97 - Other problem",
+            "tele_langb": "2 Spanish"
+        },
+        "tele_note_z1x_8": {
+            "tele_b7sub": "0 No",
+            "tele_b7not": "98 - Verbal refusal",
+            "tele_langb": "2 Spanish"
+        },
+        "tele_note_z1x_9": {
+            "tele_langb": "1 English"
+        },
+        "tele_note_z1x_10": {
+            "tele_langd": "1 English"
+        },
+        "tele_note_z1x_11": {
+            "tele_langd": "2 Spanish"
+        },
+        "tele_cls_form": {
+            "tele_clssub": "0 No",
+            "tele_langcls": "1 English"
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "41c3a036-22b1-40fc-9b73-3423606d3628"
+    },
+    {
+        "patient": "000001",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-14",
+        "visitnum": "2",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "tele_note_z1x_1": {
+            "tele_langt": "2 Spanish"
+        },
+        "tele_note_z1x_2": {
+            "tele_langa": "2 Spanish"
+        },
+        "tele_note_z1x_3": {
+            "tele_langa": "1 English"
+        },
+        "tele_note_z1x_4": {
+            "title": "A3 Subject Family History",
+            "type": "object",
+            "properties": {
+                "tele_a3sub": "1 Yes",
+                "tele_a3not": "95 - Physical problem",
+                "tele_langa": "1 English"
+            }
+        },
+        "tele_note_z1x_5": {
+            "tele_a4sub": "1 Yes",
+            "tele_a4not": "96 - Cognitive/behavior problem",
+            "tele_langa": "2 Spanish"
+        },
+        "tele_note_z1x_6": {
+            "tele_langb": "1 English"
+        },
+        "tele_note_z1x_7": {
+            "title": "B5 BEHAVIORAL ASSESSMENT NPI-Q",
+            "tele_b5sub": "1 Yes",
+            "tele_b5not": "97 - Other problem",
+            "tele_langb": "2 Spanish"
+        },
+        "tele_note_z1x_8": {
+            "tele_b7sub": "0 No",
+            "tele_b7not": "98 - Verbal refusal",
+            "tele_langb": "2 Spanish"
+        },
+        "tele_note_z1x_9": {
+            "tele_langb": "1 English"
+        },
+        "tele_note_z1x_10": {
+            "tele_langd": "1 English"
+        },
+        "tele_note_z1x_11": {
+            "tele_langd": "2 Spanish"
+        },
+        "tele_cls_form": {
+            "tele_clssub": "0 No",
+            "tele_langcls": "1 English"
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "97c2c023-8418-4a95-b5af-2d572137f66c"
+    }
+]
