@@ -1,0 +1,463 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - TELEPHONE FOLLOW-UP Form Z1: Form Checklist",
+    "description": "INSTRUCCIONES: Este formulario debe ser completado por el personal cl&#237nico. El NACC espera que todos los formularios UDS se administren a todos los sujetos evaluados, pero entendemos que esto puede ser imposible cuando el sujeto est&#225 en estado terminal, cuando no hay informante, o por otras razones. Se requiere una explicaci&#243n abajo para los formatos no presentados. CLAVE: Si el formulario especificado no se complet&#243, por favor asigne uno de los siguientes c&#243digos: 95 = Problema f&#237sico 96 = Problema cognitivo/conductal 97 = Otro problema 98 = Rechazo verbal",
+    "id": "/profiles/uds_tvp_z1x.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "tele_note_z1x_1",
+        "tele_note_z1x_2",
+        "tele_note_z1x_3",
+        "tele_note_z1x_4",
+        "tele_note_z1x_5",
+        "tele_note_z1x_6",
+        "tele_note_z1x_7",
+        "tele_note_z1x_8",
+        "tele_note_z1x_9",
+        "tele_note_z1x_10",
+        "tele_note_z1x_11",
+        "tele_cls_form"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "tele_note_z1x_1": {
+            "title": "T1 Inclusion Form",
+            "type": "object",
+            "properties": {
+                "tele_langt": {
+                    "title": "1a. Language used for T1 Inclusion Form",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_2": {
+            "title": "A1 Subject Demographics",
+            "type": "object",
+            "properties": {
+                "tele_langa": {
+                    "title": "2a. Language used for A1 Subject Demographics",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_3": {
+            "title": "A2 Co-participant Demographics",
+            "type": "object",
+            "properties": {
+                "tele_langa": {
+                    "title": "3a. Language used for A2 Co-participant Demographics",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_4": {
+            "title": "A3 Subject Family History",
+            "type": "object",
+            "properties": {
+                "tele_a3sub": {
+                    "title": "4b. Submitted A3 Subject Family History",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "tele_a3not": {
+                    "title": "4c. If A3not submitted, specify reason (see Key)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal"
+                    ]
+                },
+                "tele_langa": {
+                    "title": "4a. Language used for A3 Subject Family History",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_5": {
+            "title": "A4 Subject Medications",
+            "type": "object",
+            "properties": {
+                "tele_a4sub": {
+                    "title": "5b. Submitted A4 Subject Medications",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "tele_a4not": {
+                    "title": "5c. If A4 not submitted, specify reason (see Key)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal"
+                    ]
+                },
+                "tele_langa": {
+                    "title": "5a. Language used for A4 Subject Medications",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_6": {
+            "title": "B4 Global Staging - CDR: Standard and supplemental",
+            "type": "object",
+            "properties": {
+                "tele_langb": {
+                    "title": "6a. Language used for B4  CDR® plus NACC FTLD",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_7": {
+            "title": "B5 BEHAVIORAL ASSESSMENT NPI-Q",
+            "type": "object",
+            "properties": {
+                "tele_b5sub": {
+                    "title": "7b. Submitted B5 BEHAVIORAL ASSESSMENT NPI-Q",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "tele_b5not": {
+                    "title": "7c. If B5 not submitted, specify reason (see Key)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal"
+                    ]
+                },
+                "tele_langb": {
+                    "title": "7a. Language used for B5 Behavioral Assessment NPI-Q",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_8": {
+            "title": "B7 FUNCTIONAL ASSESSMENT - FAS",
+            "type": "object",
+            "properties": {
+                "tele_b7sub": {
+                    "title": "8b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "tele_b7not": {
+                    "title": "8c. If B7 not submitted, specify reason (see Key)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal"
+                    ]
+                },
+                "tele_langb": {
+                    "title": "8a. Language used for B7 Functional Assessment - FAS",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_9": {
+            "title": "B9 Clinician Judgment of Symptoms",
+            "type": "object",
+            "properties": {
+                "tele_langb": {
+                    "title": "9a. Language used for B9 Clinician Judgment of Symptoms",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_10": {
+            "title": "D1 Clinician Diagnosis",
+            "type": "object",
+            "properties": {
+                "tele_langd": {
+                    "title": "10a. Language used for D1 Clinician Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_note_z1x_11": {
+            "title": "D2 Clinician-assessed Medical Conditions",
+            "type": "object",
+            "properties": {
+                "tele_langd": {
+                    "title": "11a. Language used for D2 Clinician-assessed Medical Conditions",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "tele_cls_form": {
+            "title": "CLS Form",
+            "type": "object",
+            "properties": {
+                "tele_clssub": {
+                    "title": "12b. Submitted CLS Linguistic History of Subject",
+                    "description": "(Submit only once)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "tele_langcls": {
+                    "title": "12a. Language used for CLS",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "tele_note_z1x_1.tele_langt": {
+            "title": "1a. Language used for T1 Inclusion Form"
+        },
+        "tele_note_z1x_2.tele_langa": {
+            "title": "2a. Language used for A1 Subject Demographics"
+        },
+        "tele_note_z1x_3.tele_langa": {
+            "title": "3a. Language used for A2 Co-participant Demographics"
+        },
+        "tele_note_z1x_4.tele_a3sub": {
+            "title": "4b. Submitted A3 Subject Family History"
+        },
+        "tele_note_z1x_4.tele_a3not": {
+            "title": "4c. If A3not submitted, specify reason (see Key)"
+        },
+        "tele_note_z1x_4.tele_langa": {
+            "title": "4a. Language used for A3 Subject Family History"
+        },
+        "tele_note_z1x_5.tele_a4sub": {
+            "title": "5b. Submitted A4 Subject Medications"
+        },
+        "tele_note_z1x_5.tele_a4not": {
+            "title": "5c. If A4 not submitted, specify reason (see Key)"
+        },
+        "tele_note_z1x_5.tele_langa": {
+            "title": "5a. Language used for A4 Subject Medications"
+        },
+        "tele_note_z1x_6.tele_langb": {
+            "title": "6a. Language used for B4  CDR® plus NACC FTLD"
+        },
+        "tele_note_z1x_7.tele_b5sub": {
+            "title": "7b. Submitted B5 BEHAVIORAL ASSESSMENT NPI-Q"
+        },
+        "tele_note_z1x_7.tele_b5not": {
+            "title": "7c. If B5 not submitted, specify reason (see Key)"
+        },
+        "tele_note_z1x_7.tele_langb": {
+            "title": "7a. Language used for B5 Behavioral Assessment NPI-Q"
+        },
+        "tele_note_z1x_8.tele_b7sub": {
+            "title": "8b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS"
+        },
+        "tele_note_z1x_8.tele_b7not": {
+            "title": "8c. If B7 not submitted, specify reason (see Key)"
+        },
+        "tele_note_z1x_8.tele_langb": {
+            "title": "8a. Language used for B7 Functional Assessment - FAS"
+        },
+        "tele_note_z1x_9.tele_langb": {
+            "title": "9a. Language used for B9 Clinician Judgment of Symptoms"
+        },
+        "tele_note_z1x_10.tele_langd": {
+            "title": "10a. Language used for D1 Clinician Diagnosis"
+        },
+        "tele_note_z1x_11.tele_langd": {
+            "title": "11a. Language used for D2 Clinician-assessed Medical Conditions"
+        },
+        "tele_cls_form.tele_clssub": {
+            "title": "12b. Submitted CLS Linguistic History of Subject"
+        },
+        "tele_cls_form.tele_langcls": {
+            "title": "12a. Language used for CLS"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "tele_note_z1x_1.tele_langt": {
+            "title": "1a. Language used for T1 Inclusion Form"
+        },
+        "tele_note_z1x_2.tele_langa": {
+            "title": "2a. Language used for A1 Subject Demographics"
+        },
+        "tele_note_z1x_3.tele_langa": {
+            "title": "3a. Language used for A2 Co-participant Demographics"
+        },
+        "tele_note_z1x_4.tele_a3sub": {
+            "title": "4b. Submitted A3 Subject Family History"
+        },
+        "tele_note_z1x_4.tele_a3not": {
+            "title": "4c. If A3not submitted, specify reason (see Key)"
+        },
+        "tele_note_z1x_4.tele_langa": {
+            "title": "4a. Language used for A3 Subject Family History"
+        },
+        "tele_note_z1x_5.tele_a4sub": {
+            "title": "5b. Submitted A4 Subject Medications"
+        },
+        "tele_note_z1x_5.tele_a4not": {
+            "title": "5c. If A4 not submitted, specify reason (see Key)"
+        },
+        "tele_note_z1x_5.tele_langa": {
+            "title": "5a. Language used for A4 Subject Medications"
+        },
+        "tele_note_z1x_6.tele_langb": {
+            "title": "6a. Language used for B4  CDR® plus NACC FTLD"
+        },
+        "tele_note_z1x_7.tele_b5sub": {
+            "title": "7b. Submitted B5 BEHAVIORAL ASSESSMENT NPI-Q"
+        },
+        "tele_note_z1x_7.tele_b5not": {
+            "title": "7c. If B5 not submitted, specify reason (see Key)"
+        },
+        "tele_note_z1x_7.tele_langb": {
+            "title": "7a. Language used for B5 Behavioral Assessment NPI-Q"
+        },
+        "tele_note_z1x_8.tele_b7sub": {
+            "title": "8b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS"
+        },
+        "tele_note_z1x_8.tele_b7not": {
+            "title": "8c. If B7 not submitted, specify reason (see Key)"
+        },
+        "tele_note_z1x_8.tele_langb": {
+            "title": "8a. Language used for B7 Functional Assessment - FAS"
+        },
+        "tele_note_z1x_9.tele_langb": {
+            "title": "9a. Language used for B9 Clinician Judgment of Symptoms"
+        },
+        "tele_note_z1x_10.tele_langd": {
+            "title": "10a. Language used for D1 Clinician Diagnosis"
+        },
+        "tele_note_z1x_11.tele_langd": {
+            "title": "11a. Language used for D2 Clinician-assessed Medical Conditions"
+        },
+        "tele_cls_form.tele_clssub": {
+            "title": "12b. Submitted CLS Linguistic History of Subject"
+        },
+        "tele_cls_form.tele_langcls": {
+            "title": "12a. Language used for CLS"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "tele_note_z1x_1.tele_langt": 1.0,
+        "tele_note_z1x_2.tele_langa": 1.0,
+        "tele_note_z1x_3.tele_langa": 1.0,
+        "tele_note_z1x_4.tele_a3sub": 1.0,
+        "tele_note_z1x_4.tele_a3not": 1.0,
+        "tele_note_z1x_4.tele_langa": 1.0,
+        "tele_note_z1x_5.tele_a4sub": 1.0,
+        "tele_note_z1x_5.tele_a4not": 1.0,
+        "tele_note_z1x_5.tele_langa": 1.0,
+        "tele_note_z1x_6.tele_langb": 1.0,
+        "tele_note_z1x_7.tele_b5sub": 1.0,
+        "tele_note_z1x_7.tele_b5not": 1.0,
+        "tele_note_z1x_7.tele_langb": 1.0,
+        "tele_note_z1x_8.tele_b7sub": 1.0,
+        "tele_note_z1x_8.tele_b7not": 1.0,
+        "tele_note_z1x_8.tele_langb": 1.0,
+        "tele_note_z1x_9.tele_langb": 1.0,
+        "tele_note_z1x_10.tele_langd": 1.0,
+        "tele_note_z1x_11.tele_langd": 1.0,
+        "tele_cls_form.tele_clssub": 1.0,
+        "tele_cls_form.tele_langcls": 1.0
+    },
+    "changelog": "/profiles/changelogs/tvp_z1x.md"
+}
