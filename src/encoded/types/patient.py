@@ -127,7 +127,6 @@ class Patient(Item):
         'fvp_b7',
         'tvp_b7',
         'ivp_b8',
-        'fvp_b8',
         'ivp_b9',
         'ivp_c2',
         'fvp_b9',
@@ -156,7 +155,6 @@ class Patient(Item):
     rev = {
         'ivp_a1': ('Ivp_a1', 'patient'),
         'fvp_a1': ('Fvp_a1', 'patient'),
-        'tvp_a1': ('Tvp_a1', 'patient'),
         'ivp_a2': ('Ivp_a2', 'patient'),
         'ivp_a3': ('Ivp_a3', 'patient'),
         'tvp_a2': ('Tvp_a2', 'patient'),
@@ -191,7 +189,6 @@ class Patient(Item):
         'fvp_a4': ('Fvp_a4', 'patient'),
         'tvp_a4': ('Tvp_a4', 'patient'),
         'fvp_a3': ('Fvp_a3', 'patient'),
-        'fvp_b8': ('Fvp_b8', 'patient'),
         'tvp_a1': ('Tvp_a1', 'patient'),
         'tvp_z1x': ('Tvp_z1x', 'patient'),
         'ivp_z1x': ('Ivp_z1x', 'patient'),
