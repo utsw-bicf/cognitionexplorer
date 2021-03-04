@@ -19,6 +19,8 @@ import { DbxrefList } from './dbxref';
 import Status from './status';
 import { BiosampleSummaryString, BiosampleOrganismNames } from './typeutils';
 import { valueOnly } from './objectutils';
+import { BatchDownloadControls, ViewControls } from './view_controls';
+import { BrowserSelector } from './vis_defines';
 
 
 // Should really be singular...
@@ -196,41 +198,31 @@ globals.listingViews.register(Target, 'Target');
 /* eslint-disable react/prefer-stateless-function */
 class PatientComponent extends React.Component {
     render() {
-        const { cartControls } = this.props;
         const result = this.props.context;
-        let age = result.diagnosis.age;
-        const hasAge = (age != "Unknown") ? true : false;
-        const ageUnit = (result.diagnosis.age_unit && hasAge && age != "90 or above") ? ` ${result.diagnosis.age_unit}` : '';
 
         return (
-            <li className={resultItemClass(result)}>
-                <div className="result-item">
-                    <div className="result-item__data">
-                        <a href={result['@id']} className="result-item__link">
-                            {`${result.accession}`}
-                            {hasAge && `(${age}${ageUnit})`}
-                        </a>
-                        <div className="result-item__data-row">
-                            <div><strong>Sex: </strong>{result.sex}</div>
-                            <div><strong>Ethnicity: </strong>{result.ethnicity}</div>
-                            <div><strong>Race: </strong>{result.race}</div>
-                        </div>
-                    </div>
-                    <div className="result-item__meta">
-                        <div className="result-item__meta-title">Patient</div>
-                        <div className="result-item__meta-id">{` ${result.accession}`}</div>
-                        <Status item={result.status} badgeSize="small" css="result-table__status" />
-                        {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
-                    </div>
-                    {cartControls ?
-                        <div className="result-item__cart-control">
-                            <CartToggle element={result} />
-                        </div>
-                    : null}
-                    <PickerActions {...this.props} />
-                </div>
-                {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
-            </li>
+          <li>
+              <div className="clearfix">
+                  <PickerActions {...this.props} />
+                  <div className="pull-right search-meta">
+                      <p className="type meta-title">Patient</p>
+                      <p className="type">{` ${result.accession}`}</p>
+                      <Status item={result.status} badgeSize="small" css="result-table__status" />
+                      {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
+                  </div>
+                  <div className="accession">
+                      <a href={result['@id']}>
+                          {`${result.accession}`}
+                          
+                      </a>
+                  </div>
+                  <div className="data-row">
+                      {result.gender && <div><strong>Gender: </strong>{valueOnly(result.gender)}</div>}
+                      {result.racial && <div><strong>Race: </strong>{valueOnly(result.racial)}</div>}
+                  </div>
+              </div>
+              {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
+          </li>
         );
     }
 }
@@ -908,3 +900,4 @@ Search.lastRegion = {
 };
 
 globals.contentViews.register(Search, 'Search');
+
