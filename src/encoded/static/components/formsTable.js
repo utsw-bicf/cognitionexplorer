@@ -92,7 +92,7 @@ class FormsTable extends React.Component {
         if (data.ivp_c2.length > 0) {
             visitObj.c2_id = data.ivp_c2[0]['@id']
             visitObj.c2_name = "ivp_c2" 
-        }  
+        
         }
         if (data.ivp_d1.length > 0) {
             visitObj.d1_id = data.ivp_d1[0]['@id']
@@ -261,6 +261,7 @@ class FormsTable extends React.Component {
             // console.log(index)
             forms[index].a3_id = data.tvp_a3[i]['@id']
             forms[index].a3_name = "tvp_a3"
+        }
         for (let i = 0; i < data.tvp_z1x.length; i++) {
             let index = followUpVisitTimes.indexOf(data.tvp_z1x[i]["visdate"]) + 1;
             forms[index].z1x_id = data.tvp_z1x[i]['@id']
@@ -271,6 +272,7 @@ class FormsTable extends React.Component {
             // console.log(index)
             forms[index].z1x_id = data.fvp_z1x[i]['@id']
             forms[index].z1x_name = "fvp_z1x"
+        }
         for (let i = 0; i < data.tvp_d2.length; i++) {
             let index = followUpVisitTimes.indexOf(data.tvp_d2[i]["visdate"]) + 1;
             // console.log(index)
