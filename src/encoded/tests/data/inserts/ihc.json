@@ -1,0 +1,62 @@
+[
+  {
+    "patient": "KCEPT708IJT",
+    "path_id": "PR708IJT",
+    "pathology_report": "KCEPR708FIJ",
+    "service_date": "1855-01-05",
+    "antibody": "AE1/AE3",
+    "result": "Positive",
+    "status": "released",
+    "uuid": "3b72101c-4ddd-11ea-b77f-2e728ce88125"
+  },
+  {
+    "patient": "KCEPT708IJT",
+    "path_id": "PR708IJT",
+    "pathology_report": "KCEPR708FIK",
+    "service_date": "1855-01-05",
+    "antibody": "CAM 5.2",
+    "result": "Positive",
+    "status": "released",
+    "uuid": "ac8cd4c7-52f6-4f38-945c-d1efaa8be1c1"
+  },
+  {
+    "patient": "KCEPT708IJT",
+    "path_id": "PR708IJT",
+    "biospecimen": "KCEBS000AAB",
+    "service_date": "1855-01-05",
+    "antibody": "CAM 5.2",
+    "result": "Positive",
+    "status": "released",
+    "uuid": "238e5838-314a-4f48-b432-d048f1c70f20"
+  },
+  {
+    "patient": "KCEPT480NBU",
+    "path_id": "PR480NBU",
+    "pathology_report": "KCEPR480NBU",
+    "service_date": "1836-05-08",
+    "antibody": "CAM 5.2",
+    "result": "Rare Focal Positive",
+    "status": "released",
+    "uuid": "3b721666-4ddd-11ea-b77f-2e728ce88125"
+  },
+  {
+    "patient": "KCEPT802XRB",
+    "path_id": "PR802XRB",
+    "pathology_report": "KCEPR802XRB",
+    "service_date": "1862-02-03",
+    "antibody": "Carbonic Anhydrase IX",
+    "result": "Focal Loss",
+    "status": "released",
+    "uuid": "3b72179c-4ddd-11ea-b77f-2e728ce88125"
+  },
+  {
+    "patient": "KCEPT359MHZ",
+    "path_id": "PR359MHZ",
+    "pathology_report": "KCEPR359TRS",
+    "service_date": "1860-06-03",
+    "antibody": "Cathepsin-K",
+    "result": "Positive",
+    "status": "released",
+    "uuid": "3b7218c8-4ddd-11ea-b77f-2e728ce88125"
+  }
+]

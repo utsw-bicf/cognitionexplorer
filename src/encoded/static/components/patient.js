@@ -1,12 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Panel, PanelBody, PanelHeading } from '../libs/bootstrap/panel';
+import { Panel, PanelBody, PanelHeading } from '../libs/ui/panel';
 import * as globals from './globals';
 import { Breadcrumbs } from './navigation';
-import { RelatedItems } from './item';
-import { DisplayAsJson } from './objectutils';
-import formatMeasurement from './../libs/formatMeasurement';
-import { CartToggle } from './cart';
 import Status from './status';
 import CollapsiblePanel from './collapsiblePanel';
 import FormsTable from './formsTable';
@@ -149,7 +145,4 @@ Patient.defaultProps = {
 };
 
 globals.contentViews.register(Patient, 'Patient');
-
-
-
 

@@ -440,7 +440,7 @@ def attachment(path):
     filename = os.path.basename(path)
     mime_type, encoding = mimetypes.guess_type(path)
     major, minor = mime_type.split('/')
-    detected_type = magic.from_file(path, mime=True).decode('ascii')
+    detected_type = magic.from_file(path, mime=True).encode().decode('ascii')
 
     # XXX This validation logic should move server-side.
     if not (detected_type == mime_type or
@@ -725,4 +725,3 @@ def load_test_data(app):
     inserts = resource_filename('encoded', 'tests/data/inserts/')
     docsdir = [resource_filename('encoded', 'tests/data/documents/')]
     load_all(testapp, inserts, docsdir)
-

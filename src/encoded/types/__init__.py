@@ -53,18 +53,6 @@ class Award(Item):
     }
 
 
-@collection(
-    name='organisms',
-    unique_key='organism:name',
-    properties={
-        'title': 'Organisms',
-        'description': 'Listing of all registered organisms',
-    })
-class Organism(Item):
-    item_type = 'organism'
-    schema = load_schema('encoded:schemas/organism.json')
-    name_key = 'name'
-
 
 @collection(
     name='sources',
@@ -77,25 +65,6 @@ class Source(Item):
     item_type = 'source'
     schema = load_schema('encoded:schemas/source.json')
     name_key = 'name'
-
-
-@collection(
-    name='treatments',
-    properties={
-        'title': 'Treatments',
-        'description': 'Listing Biosample Treatments',
-    })
-class Treatment(Item):
-    item_type = 'treatment'
-    schema = load_schema('encoded:schemas/treatment.json')
-    embedded = [
-    ]
-    set_status_up = [
-        'biosamples_used',
-        'antibodies_used',
-    ]
-    set_status_down = []
-
 
 @collection(
     name='documents',
@@ -130,99 +99,6 @@ class Platform(Item):
 
 
 @collection(
-    name='libraries',
-    unique_key='accession',
-    properties={
-        'title': 'Libraries',
-        'description': 'Listing of Libraries',
-    })
-class Library(Item):
-    item_type = 'library'
-    schema = load_schema('encoded:schemas/library.json')
-    name_key = 'accession'
-    embedded = [
-        'biosample',
-        'biosample.donor',
-        'biosample.donor.organism',
-        'biosample.biosample_ontology'
-    ]
-    set_status_up = [
-        'biosample',
-        'documents',
-        'source',
-        'treatments',
-    ]
-    set_status_down = []
-    rev = {'replicates': ('Replicate', 'library')}
-
-    @calculated_property(condition='nucleic_acid_term_name', schema={
-        "title": "Nucleic acid term ID",
-        "type": "string",
-    })
-    def nucleic_acid_term_id(self, request, nucleic_acid_term_name):
-        term_lookup = {
-            'DNA': 'SO:0000352',
-            'RNA': 'SO:0000356',
-            'polyadenylated mRNA': 'SO:0000871',
-            'miRNA': 'SO:0000276',
-            'protein': 'SO:0000104'
-        }
-        term_id = None
-        if nucleic_acid_term_name in term_lookup:
-            term_id = term_lookup.get(nucleic_acid_term_name)
-        return term_id
-
-    @calculated_property(condition='depleted_in_term_name', schema={
-        "title": "Depleted in term ID",
-        "type": "string",
-    })
-    def depleted_in_term_id(self, request, depleted_in_term_name):
-        term_lookup = {
-            'rRNA': 'SO:0000252',
-            'polyadenylated mRNA': 'SO:0000871',
-            'capped mRNA': 'SO:0000862'
-        }
-        term_id = list()
-        for term_name in depleted_in_term_name:
-            if term_name in term_lookup:
-                term_id.append(term_lookup.get(term_name))
-            else:
-                term_id.append('Term ID unknown')
-        return term_id
-
-    @calculated_property(schema={
-        "title": "Replicates",
-        "type": "array",
-        "uniqueItems": True,
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "Replicate.library",
-        },
-    })
-    def replicates(self, request, replicates):
-        return paths_filtered_by_status(request, replicates)
-
-    @calculated_property(condition='replicates', schema={
-        "title": "Antibodies",
-        "description": "For Immunoprecipitation assays, the antibody used.",
-        "comment": "See antibody_lot.json for available identifiers.",
-        "type": "array",
-        "uniqueItems": True,
-        "items": {
-            "type": "string",
-            "linkTo": "AntibodyLot"
-        }
-    })
-    def antibodies(self, request, replicates):
-        antibodies = []
-        for rep_id in replicates:
-            rep = request.embed(rep_id, '@@object?skip_calculated=true')
-            if 'antibody' in rep:
-                antibodies.append(rep['antibody'])
-        return antibodies or None
-
-
-@collection(
     name='publications',
     unique_key='publication:identifier',
     properties={
@@ -232,7 +108,9 @@ class Library(Item):
 class Publication(Item):
     item_type = 'publication'
     schema = load_schema('encoded:schemas/publication.json')
-    embedded = ['datasets']
+    rev = {
+        
+    }
 
     def unique_keys(self, properties):
         keys = super(Publication, self).unique_keys(properties)
@@ -242,57 +120,16 @@ class Publication(Item):
 
     @calculated_property(condition='date_published', schema={
         "title": "Publication year",
-        "type": "string",
+        "type": "integer",
     })
     def publication_year(self, date_published):
-        return date_published.partition(' ')[0]
+        likely_year = date_published[:4]
+        if likely_year.isdigit():
+            return int(date_published[:4])
+        else:
+            return None
 
 
-@collection(
-    name='software',
-    unique_key='software:name',
-    properties={
-        'title': 'Software',
-        'description': 'Software pages',
-    })
-class Software(Item):
-    item_type = 'software'
-    schema = load_schema('encoded:schemas/software.json')
-    name_key = 'name'
-    embedded = [
-        'references',
-        'versions'
-    ]
-    rev = {
-        'versions': ('SoftwareVersion', 'software')
-    }
-
-    @calculated_property(schema={
-        "title": "Versions",
-        "type": "array",
-        "items": {
-            "type": "string",
-            "linkTo": "SoftwareVersion",
-        },
-    })
-    def versions(self, request, versions):
-        return paths_filtered_by_status(request, versions)
 
 
-@collection(
-    name='software-versions',
-    properties={
-        'title': 'Software version',
-        'description': 'Software version pages',
-    })
-class SoftwareVersion(Item):
-    item_type = 'software_version'
-    schema = load_schema('encoded:schemas/software_version.json')
-    embedded = ['software', 'software.references']
 
-    def __ac_local_roles__(self):
-        # Use lab/award from parent software object for access control.
-        properties = self.upgrade_properties()
-        root = find_root(self)
-        software = root.get_by_uuid(properties['software'])
-        return software.__ac_local_roles__()

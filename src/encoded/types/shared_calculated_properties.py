@@ -2,10 +2,13 @@ from snovault import calculated_property
 from snovault.util import ensurelist
 from .assay_data import assay_terms
 from urllib.parse import urljoin
-from ..vis_defines import (
+from encoded.vis_defines import (
     vis_format_url,
     browsers_available
     )
+from .base import (
+    paths_filtered_by_status
+)
 
 
 class CalculatedAssaySynonyms:
@@ -170,6 +173,7 @@ class CalculatedAssayTermID:
             term_id = assay_terms.get(assay_term_name)
         return term_id
 
+
 class CalculatedVisualize:
     @calculated_property(condition='hub', category='page', schema={
         "title": "Visualize Data",
@@ -200,3 +204,250 @@ class CalculatedVisualize:
             return viz
         else:
             return None
+
+
+class CalculatedReplicates:
+    @calculated_property(schema={
+        "title": "Replicates",
+        "type": "array",
+        "items": {
+            "type": ['string', 'object'],
+            "linkFrom": "Replicate.experiment",
+        },
+    })
+    def replicates(self, request, replicates):
+        return paths_filtered_by_status(request, replicates)
+
+
+class CalculatedAssaySlims:
+    @calculated_property(condition='assay_term_name', schema={
+        "title": "Assay type",
+        "type": "array",
+        "items": {
+            "type": "string",
+        },
+    })
+    def assay_slims(self, registry, assay_term_name):
+        assay_term_id = assay_terms.get(assay_term_name, None)
+        if assay_term_id in registry['ontology']:
+            return registry['ontology'][assay_term_id]['assay']
+        return []
+
+
+class CalculatedAssayTitle:
+    @calculated_property(condition='assay_term_name', schema={
+        "title": "Assay title",
+        "type": "string",
+    })
+    def assay_title(self, request, registry, assay_term_name,
+                    control_type=None, replicates=None, target=None):
+        # This is the preferred name in generate_ontology.py if exists
+        assay_term_id = assay_terms.get(assay_term_name, None)
+        if assay_term_id in registry['ontology']:
+            preferred_name = registry['ontology'][assay_term_id].get('preferred_name',
+                                                                     assay_term_name)
+            if preferred_name == 'RNA-seq' and replicates is not None:
+                for rep in replicates:
+                    replicate_object = request.embed(rep, '@@object')
+                    if replicate_object['status'] == 'deleted':
+                        continue
+                    if 'libraries' in replicate_object:
+                        preferred_name = 'total RNA-seq'
+                        for lib in replicate_object['libraries']:
+                            library_object = request.embed(lib, '@@object')
+                            if 'size_range' in library_object and \
+                            library_object['size_range'] == '<200':
+                                preferred_name = 'small RNA-seq'
+                                break
+                        else:
+                            continue
+                        break
+            elif preferred_name == 'ChIP-seq':
+                preferred_name = 'Control ChIP-seq'
+                if not control_type and target is not None:
+                    target_object = request.embed(target,'@@object')
+                    target_categories = target_object['investigated_as']
+                    if 'histone' in target_categories:
+                        preferred_name = 'Histone ChIP-seq'
+                    else:
+                        preferred_name = 'TF ChIP-seq'
+            elif preferred_name == 'CRISPR screen' and not control_type and replicates is not None:
+                CRISPR_gms = []
+                for rep in replicates:
+                    replicate_object = request.embed(rep, '@@object?skip_calculated=true')
+                    if replicate_object['status'] in ('deleted', 'revoked'):
+                        continue
+                    if 'library' in replicate_object:
+                        library_object = request.embed(replicate_object['library'], '@@object?skip_calculated=true')
+                        if library_object['status'] in ('deleted', 'revoked'):
+                            continue
+                        if 'biosample' in library_object:
+                            biosample_object = request.embed(library_object['biosample'], '@@object')
+                            if biosample_object['status'] in ('deleted', 'revoked'):
+                                continue
+                            genetic_modifications = biosample_object.get('applied_modifications')
+                            if genetic_modifications:
+                                for gm in genetic_modifications:
+                                    gm_object = request.embed(gm, '@@object?skip_calculated=true')
+                                    if gm_object.get('purpose') == 'characterization' and gm_object.get('method') == 'CRISPR':
+                                        CRISPR_gms.append(gm_object['category'])
+                # Return a specific CRISPR assay title if there is only one category type for CRISPR characterization genetic modifications for all replicate biosample genetic modifications
+                if len(set(CRISPR_gms)) == 1:
+                    if 'activation' in CRISPR_gms:
+                        preferred_name = 'CRISPR activation screen'
+                    elif 'deletion' in CRISPR_gms:
+                        preferred_name = 'CRISPR deletion screen'
+                    elif 'disruption' in CRISPR_gms:
+                        preferred_name = 'CRISPR disruption screen'
+                    elif 'inhibition' in CRISPR_gms:
+                        preferred_name = 'CRISPR inhibition screen'
+                    elif 'interference' in CRISPR_gms:
+                        preferred_name = 'CRISPR interference screen'
+                    elif 'knockout' in CRISPR_gms:
+                        preferred_name = 'CRISPR knockout screen'
+                # If there is more than one category type for CRISPR characterization genetic modifications we cannot return a specific CRISPR assay title
+                if len(set(CRISPR_gms)) > 1:
+                    preferred_name = 'CRISPR screen'
+            elif control_type and assay_term_name in ['eCLIP', 'MPRA', 'CRISPR screen', 'STARR-seq', 'Mint-ChIP-seq']:
+                preferred_name = 'Control {}'.format(assay_term_name)
+            return preferred_name or assay_term_name
+        return assay_term_name
+
+
+class CalculatedCategorySlims:
+    @calculated_property(condition='assay_term_name', schema={
+        "title": "Assay category",
+        "type": "array",
+        "items": {
+            "type": "string",
+        },
+    })
+    def category_slims(self, registry, assay_term_name):
+        assay_term_id = assay_terms.get(assay_term_name, None)
+        if assay_term_id in registry['ontology']:
+            return registry['ontology'][assay_term_id]['category']
+        return []
+
+
+class CalculatedTypeSlims:
+    @calculated_property(condition='assay_term_name', schema={
+        "title": "Assay type slims",
+        "type": "array",
+        "items": {
+            "type": "string",
+        },
+    })
+    def type_slims(self, registry, assay_term_name):
+        assay_term_id = assay_terms.get(assay_term_name, None)
+        if assay_term_id in registry['ontology']:
+            return registry['ontology'][assay_term_id]['types']
+        return []
+
+
+class CalculatedObjectiveSlims:
+    @calculated_property(condition='assay_term_name', schema={
+        "title": "Assay objective",
+        "type": "array",
+        "items": {
+            "type": "string",
+        },
+    })
+    def objective_slims(self, registry, assay_term_name):
+        assay_term_id = assay_terms.get(assay_term_name, None)
+        if assay_term_id in registry['ontology']:
+            return registry['ontology'][assay_term_id]['objectives']
+        return []
+
+
+class CalculatedReplicationType:
+    @calculated_property(schema={
+        "title": "Replication type",
+        "description": "Calculated field that indicates the replication model",
+        "type": "string"
+    })
+    def replication_type(self, request, replicates=None, assay_term_name=None):
+        # ENCD-5185 decided to return None for replication type for all
+        # pooled clone sequencing
+        if assay_term_name == 'pooled clone sequencing':
+            return None
+        # ENCD-4251 loop through replicates and select one replicate, which has
+        # the smallest technical_replicate_number, per biological replicate.
+        # That replicate should have a libraries property which, as calculated
+        # in replicate.libraries (ENCD-4251), should have collected all
+        # possible technical replicates belong to the biological replicate.
+        # TODO: change this once we remove technical_replicate_number.
+        bio_rep_dict = {}
+        for rep in replicates:
+            replicate_object = request.embed(rep, '@@object')
+            if replicate_object['status'] == 'deleted':
+                continue
+            bio_rep_num = replicate_object['biological_replicate_number']
+            if bio_rep_num not in bio_rep_dict:
+                bio_rep_dict[bio_rep_num] = replicate_object
+                continue
+            tech_rep_num = replicate_object['technical_replicate_number']
+            if tech_rep_num < bio_rep_dict[bio_rep_num]['technical_replicate_number']:
+                bio_rep_dict[bio_rep_num] = replicate_object
+
+        # Compare the biosamples to see if for humans they are the same donor and for
+        # model organisms if they are sex-matched and age-matched
+        biosample_donor_list = []
+        biosample_number_list = []
+
+        for replicate_object in bio_rep_dict.values():
+            if 'libraries' in replicate_object and replicate_object['libraries']:
+                biosamples = request.select_distinct_values(
+                    'biosample', *replicate_object['libraries']
+                )
+                if biosamples:
+                    for b in biosamples:
+                        biosample_object = request.embed(b, '@@object')
+                        biosample_donor_list.append(
+                            biosample_object.get('donor')
+                        )
+                        biosample_number_list.append(
+                            replicate_object.get('biological_replicate_number')
+                        )
+                        biosample_species = biosample_object.get('organism')
+                        biosample_type_object = request.embed(
+                            biosample_object['biosample_ontology'],
+                            '@@object'
+                        )
+                        biosample_type = biosample_type_object.get('classification')
+                else:
+                    # special treatment for "RNA Bind-n-Seq" they will be called unreplicated
+                    # untill we change our mind
+                    if assay_term_name == 'RNA Bind-n-Seq':
+                        return 'unreplicated'
+                    # If I have a library without a biosample,
+                    # I cannot make a call about replicate structure
+                    return None
+            else:
+                # REPLICATES WITH NO LIBRARIES WILL BE CAUGHT BY AUDIT (TICKET 3268)
+                # If I have a replicate without a library,
+                # I cannot make a call about the replicate structure
+                return None
+
+        #  exclude ENCODE2
+        if (len(set(biosample_number_list)) < 2):
+            return 'unreplicated'
+
+        if biosample_type == 'cell line':
+            return 'isogenic'
+
+        # Since we are not looking for model organisms here, we likely need audits
+        if biosample_species != '/organisms/human/':
+            if len(set(biosample_donor_list)) == 1:
+                return 'isogenic'
+            else:
+                return 'anisogenic'
+
+        if len(set(biosample_donor_list)) == 0:
+            return None
+        if len(set(biosample_donor_list)) == 1:
+            if None in biosample_donor_list:
+                return None
+            else:
+                return 'isogenic'
+
+        return 'anisogenic'

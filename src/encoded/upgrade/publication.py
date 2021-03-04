@@ -1,4 +1,7 @@
-from snovault import upgrade_step
+from snovault import (
+    CONNECTION,
+    upgrade_step,
+)
 
 
 @upgrade_step('publication', '', '2')
@@ -63,3 +66,26 @@ def publication_5_6(value, system):
         value['status'] = 'in progress'
     else:
         pass
+
+
+@upgrade_step('publication', '6', '7')
+def publication_7_8(value, system):
+    # https://encodedcc.atlassian.net/browse/ENCD-5381
+    notes = value.get('notes', '')
+    if 'date_published' in value:
+        likely_year = value['date_published'][:4]
+        if not likely_year.isdigit():
+            value['notes'] = (notes + 'Incorrect date_published formatting: ' + value['date_published']).strip()
+            value.pop('date_published')
+
+
+@upgrade_step('publication', '7', '8')
+def publication_8_9(value,system):
+    # https://encodedcc.atlassian.net/browse/ENCD-5386
+    if 'datasets' in value:
+        if value['datasets'] != []:
+            datasets = ', '.join(value['datasets'])
+            old_notes = value.get('notes', '')
+            value['notes'] = (old_notes + 'Publication datasets: ' + datasets).strip()
+        value.pop('datasets')
+

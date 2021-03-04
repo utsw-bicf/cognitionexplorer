@@ -777,8 +777,11 @@
         "pic": {
             "title": "Patient Initial Category"
         },
-        "gender": {
-            "title": "Gender"
+        "diagnosis.follow_up_duration_range": {
+            "title": "Follow Up Duration"
+        },
+        "sex": {
+            "title": "Sex"
         },
         "dob": {
             "title": "Date of Birth"
@@ -821,4 +824,3 @@
     },
     "changelog": "/profiles/changelogs/patient.md"
 }
-
