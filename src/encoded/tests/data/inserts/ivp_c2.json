@@ -80,8 +80,8 @@
         "mint": {
             "minttots": "25",
             "minttotw": "25",
-            "mintscng": "00",
-            "mintscnc": "88 = Not applicable",
+            "mintscng": "0",
+            "mintscnc": "88",
             "mintpcng": "7",
             "mintpcnc": "1"
         },
