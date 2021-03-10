@@ -180,7 +180,9 @@ class Patient(Item):
         'surgery',
         'surgery.surgery_procedure',
         'surgery.pathology_report',
-        'biospecimen']
+        'biospecimen',
+        'biospecimen.biofile',
+        ]
     rev = {
         'labs': ('LabResult', 'patient'),
         'vitals': ('VitalResult', 'patient'),
@@ -1794,3 +1796,4 @@ def patient_basic_view(context, request):
         except KeyError:
             pass
     return filtered
+

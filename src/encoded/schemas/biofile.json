@@ -246,6 +246,10 @@
             "comment": "Although this is not required. It is highly recommended.",
             "type": "string"
         },
+        "file_path": {
+            "title": "File path",
+            "type": "string"
+        },
         "md5sum": {
             "title": "MD5sum",
             "description": "The md5sum of the file being transferred.",
@@ -701,4 +705,5 @@
     },
     "changelog": "/profiles/changelogs/biofile.md"
 }
+
 
