@@ -35,8 +35,6 @@ class Bioexperiment(Biodataset,
     item_type = 'bioexperiment'
     schema = load_schema('encoded:schemas/bioexperiment.json')
     embedded = Biodataset.embedded + [
-        'award',
-        'lab',
         "submitted_by",
         'documents',
         'bioreplicate',
@@ -48,7 +46,6 @@ class Bioexperiment(Biodataset,
         'possible_controls',
         'bioreplicate.biolibrary.biospecimen.documents',
         "references",
-        "files",
         "files.platform",
         'related_series',
 
@@ -239,3 +236,4 @@ class Bioexperiment(Biodataset,
     })
     def related_series(self, request, related_series):
         return paths_filtered_by_status(request, related_series)
+

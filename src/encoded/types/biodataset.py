@@ -53,6 +53,7 @@ class Biodataset(Item):
     base_types = ['Biodataset'] + Item.base_types
     embedded = [
         'files',
+        'files.biospecimen',
         'files.bioreplicate',
         'files.bioreplicate.bioexperiment',
         'files.bioreplicate.bioexperiment.lab',
@@ -418,3 +419,4 @@ class BioexperimentSeries(Bioseries):
     })
     def contributors(self, request, related_datasets):
         return request.select_distinct_values('lab', *related_datasets)
+

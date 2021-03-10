@@ -86,6 +86,7 @@
     {
         "accession": "KCEFF365GYT",
         "biodataset": "KCEBE000UIY", 
+        "biospecimen": "KCEBS708IJT",
         "library_type": "DNA",   
         "file_format": "fastq",
         "md5sum": "35042bf1404f32dcb5879015cd57fbe2",
@@ -98,6 +99,7 @@
     {
         "accession": "KCEFF745GYT",
         "biodataset": "KCEBE000UIY", 
+        "biospecimen": "KCEBS708IJT",
         "library_type": "DNA",   
         "file_format": "fastq",
         "md5sum": "9c8a24ee73e74c5c18e17f83b50a0eaf",
