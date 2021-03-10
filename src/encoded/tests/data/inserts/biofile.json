@@ -1,6 +1,7 @@
 [
     {
         "accession": "KCEFF398MYM",
+        "award": "Kidney-SPORE",
         "bioreplicate": "18a45454-8f13-4bf2-842b-64a75613136a",
         "biodataset": "KCEBE000AES",
         "run_type": "single-ended",
@@ -16,6 +17,7 @@
     },
     {
         "accession": "KCEFF287RDC",
+        "award": "Kidney-SPORE",
         "bioreplicate": "454c26c2-4252-49d7-a904-4ae479eb6743",
         "biodataset": "KCEBE000ADH",
         "file_format": "fastq",
@@ -33,6 +35,7 @@
     },
     {
         "accession": "KCEFF365RCT",
+        "award": "Kidney-SPORE",
         "bioreplicate": "1d8d4a65-1db6-4400-ba95-6db3d98fb55f",
         "biodataset": "KCEBE000ADH",
         "file_size": 20,
@@ -50,6 +53,7 @@
     },
     {
         "accession": "KCEFF365SCT",
+        "award": "Kidney-SPORE",
         "bioreplicate": "d667fe93-c86a-4293-86ca-feba95176d0c",
 
         "biodataset": "KCEBE000BJW",
@@ -67,6 +71,7 @@
     },
     {
         "accession": "KCEFF365SCU",
+        "award": "Kidney-SPORE",
         "bioreplicate": "71c692e5-3161-4f38-acb7-fc3d1f64003f",
 
         "biodataset": "KCEBE000BJX",
