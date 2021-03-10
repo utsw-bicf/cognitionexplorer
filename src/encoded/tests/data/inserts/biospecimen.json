@@ -35,9 +35,6 @@
         "specimen_lineage": "New",
         "activity_status": "Active",
         "species": "Human",
-        "documents": [
-            "kce:K562_BAC_transfection_White_protocol"
-        ],
         "surgery": "KCESX708FIJ"
     },
     {
@@ -53,9 +50,6 @@
         "tissue_type":"Malignant",
         "anatomic_site":"Liver",
         "uuid": "c58dd4d7-418a-4482-84c8-4d5ee6f29ea5",
-        "documents": [
-            "kce:EPC_Stam_protocol"
-        ],
         "status": "released",
         "species": "Human",
         "specimen_lineage": "New",
