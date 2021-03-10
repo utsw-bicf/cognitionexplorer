@@ -4,7 +4,7 @@
     "id": "/profiles/biofile.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["biodataset", "file_format", "md5sum"],
+    "required": ["biodataset", "file_format", "md5sum", "award"],
     "identifyingProperties": ["uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [

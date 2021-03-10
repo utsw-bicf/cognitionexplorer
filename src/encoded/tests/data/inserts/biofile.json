@@ -85,6 +85,7 @@
 
     {
         "accession": "KCEFF365GYT",
+        "award": "Double-Mutants",
         "biodataset": "KCEBE000UIY", 
         "biospecimen": "KCEBS708IJT",
         "library_type": "DNA",   
@@ -100,6 +101,7 @@
 
     {
         "accession": "KCEFF745GYT",
+        "award": "Double-Mutants",
         "biodataset": "KCEBE000UIY", 
         "biospecimen": "KCEBS708IJT",
         "library_type": "DNA",   

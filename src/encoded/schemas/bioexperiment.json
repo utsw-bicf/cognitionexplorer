@@ -5,7 +5,7 @@
     "id": "/profiles/bioexperiment.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": [ "award", "lab", "assay_term_name"],
+    "required": ["lab", "assay_term_name"],
     "identifyingProperties": [ "uuid", "accession", "aliases"],
     "additionalProperties": false,
     "mixinProperties": [
