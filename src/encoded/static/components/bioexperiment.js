@@ -356,7 +356,28 @@ class Bioexperiment extends React.Component {
 
         const experimentsUrl = `/search/?type=Bioexperiment&possible_controls.accession=${context.accession}`;
 
-        const biospecimen_summary = context.biospecimen_summary;
+        let biospecimen_summary = [];
+        let awards = [];
+        let files = context.files;
+
+        for (let i = 0; i < files.length; i++) {
+            let biospecimen = files[i].biospecimen;
+            let award = files[i].award;
+            biospecimen_summary.push(biospecimen);
+            awards.push(award)
+        }
+        let uniqueBiospecimen_summary = Array.from(new Set(biospecimen_summary.map(a => a.accession)))
+        .map(accession => {
+        return biospecimen_summary.find(a => a.accession === accession)
+        });
+        biospecimen_summary = uniqueBiospecimen_summary;
+        
+        let uniqueAwards = Array.from(new Set(awards.map(a => a.uuid)))
+        .map(uuid => {
+        return awards.find(a => a.uuid === uuid)
+        });
+        awards = uniqueAwards;
+
         let show_specimen_summary = (<div>
             <dt>biospecimen_summary</dt>
             <dd><strong>Accession: </strong>{biospecimen_summary[0].accession}</dd>
@@ -462,7 +483,7 @@ class Bioexperiment extends React.Component {
                         <div className="panel__split-element">
                             <div className="panel__split-heading panel__split-heading--experiment">
                                 <h4>Attribution</h4>
-                                <ProjectBadge award={context.award} addClasses="badge-heading" />
+                                <ProjectBadge award={awards[0]} addClasses="badge-heading" />
                             </div>
                             <dl className="key-value">
                                 <div data-test="lab">
@@ -474,7 +495,7 @@ class Bioexperiment extends React.Component {
 
                                 <div data-test="project">
                                     <dt>Project</dt>
-                                    <dd>{context.award.project}</dd>
+                                    <dd>{awards[0].project}</dd>
                                 </div>
 
                                 {context.dbxrefs.length ?
@@ -701,3 +722,4 @@ RelatedSeriesItem.propTypes = {
 RelatedSeriesItem.defaultProps = {
     detailOpen: false,
 };
+
