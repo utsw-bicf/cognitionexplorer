@@ -440,7 +440,7 @@
         }
     },
     "properties": {
-         "date_created": {
+        "date_created": {
             "rdfs:subPropertyOf": "dc:created",
             "title": "Date created",
             "decription": "The date the object was created.",
@@ -455,6 +455,12 @@
         },
         "accession": {
             "accessionType": "FF"
+        },
+        "biospecimen": {
+            "title": "Biospecimen",
+            "description": "The Biospecimen the file belongs to.",
+            "type": "string",
+            "linkTo": "Biospecimen"
         },
         "biodataset": {
             "title": "Biodataset",

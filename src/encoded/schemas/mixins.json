@@ -418,7 +418,8 @@
                 "DNA methylation profiling by array assay",
                 "RNA-seq",
                 "whole genome sequencing assay",
-                "whole-genome shotgun bisulfite sequencing"
+                "whole-genome shotgun bisulfite sequencing",
+                "whole exome sequencing"
             ]
         }
     },

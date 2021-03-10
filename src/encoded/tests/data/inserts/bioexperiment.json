@@ -117,5 +117,14 @@
     "aliases": [
       "james-brugarolas:experiment_RB884_681_3"
     ]
+  },
+  {
+    "accession": "KCEBE000UIY",
+    "assay_term_name": "whole exome sequencing",
+    "award": "Double-Mutants",
+    "lab": "james-brugarolas",
+    "status": "released",
+    "submitted_by": "amet.fusce@est.fermentum",
+    "uuid": "11fed14e-ba79-4ca2-a8c8-374dd11f9b5b"
   }
 ]
