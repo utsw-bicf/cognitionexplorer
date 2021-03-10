@@ -24,9 +24,11 @@ class Biospecimen(Item):
     name_key = 'accession'
     rev = {
         'biolibrary': ('Biolibrary', 'biospecimen'),
-        'ihc':('Ihc','biospecimen')
+        'ihc':('Ihc','biospecimen'),
+        'biofile': ('Biofile', 'biospecimen'),
     }
     embedded = [
+        'biofile',
         'biolibrary',
         'biolibrary.biofile',
         'biolibrary.bioreplicate',
@@ -54,6 +56,17 @@ class Biospecimen(Item):
     })
     def biolibrary(self, request, biolibrary):
         return paths_filtered_by_status(request, biolibrary)
+
+    @calculated_property(schema={
+        "title": "Biofile",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Biofile"
+        },
+    })
+    def biofile(self, request, biofile):
+        return paths_filtered_by_status(request, biofile)
 
     @calculated_property(schema={
         "title": "Biospecimen IHC",
@@ -98,3 +111,4 @@ class Biospecimen(Item):
             'label': 'histology',
         },
     }
+
