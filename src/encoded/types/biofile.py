@@ -137,7 +137,7 @@ class Biofile(Item):
             "reference"
         ]
     })
-    def output_category(self, output_type):
+    def output_category(self, output_type=None):
         return self.schema['output_type_output_category'].get(output_type)
 
     @calculated_property(schema={
@@ -256,7 +256,7 @@ class Biofile(Item):
     #     step_version_uuid = step_run_obj.__json__(request).get('analysis_step_version')
     #     if step_version_uuid is not None:
     #         return request.resource_path(root[step_version_uuid])
-
+"""
     @calculated_property(schema={
         "title": "Biological replicates",
         "description": "The biological replicate numbers associated with this file.",
@@ -323,7 +323,7 @@ class Biofile(Item):
             for uuid in replicates
         }
         return sorted(techreps)
-
+"""
     # @calculated_property(
     #     condition=show_cloud_metadata,
     #     schema={
@@ -356,3 +356,4 @@ class Biofile(Item):
     #         'file_size': file_size
     #     }
         
+

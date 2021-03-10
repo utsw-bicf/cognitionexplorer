@@ -81,5 +81,31 @@
         "status": "released",
         "sequencing_replicate_number": 1,
         "uuid": "0fb8b069-dd0a-46a5-b198-53854295dd32"
+    },
+
+    {
+        "accession": "KCEFF365GYT",
+        "biodataset": "KCEBE000UIY", 
+        "library_type": "DNA",   
+        "file_format": "fastq",
+        "md5sum": "35042bf1404f32dcb5879015cd57fbe2",
+        "run_type": "paired-ended",
+        "paired_end": "1",
+        "status": "released",
+        "uuid": "3ac55830-bf9e-435d-9952-434a3a76396a"
+    },
+
+    {
+        "accession": "KCEFF745GYT",
+        "biodataset": "KCEBE000UIY", 
+        "library_type": "DNA",   
+        "file_format": "fastq",
+        "md5sum": "9c8a24ee73e74c5c18e17f83b50a0eaf",
+        "run_type": "paired-ended",
+        "paired_end": "2",
+        "paired_with": "KCEFF365GYT",
+        "status": "released",
+        "uuid": "47bf6887-91c4-4d8e-a758-7e36b78f734f"
     }
 ]
+
