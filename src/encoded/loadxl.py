@@ -26,13 +26,8 @@ ORDER = [
     'surgery_procedure',
     'biospecimen',
     'bioreference',
-    'bioproject',
     'bioexperiment',
-    'platform',
-    'biolibrary',
-    'bioreplicate',
     'biofile',
-    'bioexperiment_series',
     'ihc',
     'medication',
     'supportive_medication',
@@ -587,4 +582,5 @@ def load_test_data(app):
     inserts = resource_filename('encoded', 'tests/data/inserts/')
     docsdir = [resource_filename('encoded', 'tests/data/documents/')]
     load_all(testapp, inserts, docsdir)
+
 

@@ -23,15 +23,11 @@ class Biospecimen(Item):
     schema = load_schema('encoded:schemas/biospecimen.json')
     name_key = 'accession'
     rev = {
-        'biolibrary': ('Biolibrary', 'biospecimen'),
         'ihc':('Ihc','biospecimen'),
         'biofile': ('Biofile', 'biospecimen'),
     }
     embedded = [
         'biofile',
-        'biolibrary',
-        'biolibrary.biofile',
-        'biolibrary.bioreplicate',
         'surgery',
         'surgery.pathology_report',
         'surgery.surgery_procedure',
@@ -45,17 +41,6 @@ class Biospecimen(Item):
         'originated_from',
     ]
     set_status_down = []
-
-    @calculated_property(schema={
-        "title": "Biolibrary",
-        "type": "array",
-        "items": {
-            "type": 'string',
-            "linkTo": "Biolibrary"
-        },
-    })
-    def biolibrary(self, request, biolibrary):
-        return paths_filtered_by_status(request, biolibrary)
 
     @calculated_property(schema={
         "title": "Biofile",
@@ -90,9 +75,6 @@ class Biospecimen(Item):
                 'species',
                 'specimen_lineage',
                 'activity_status',
-                'biolibrary.nucleic_acid_term_name',
-                'biolibrary.biofile.file_format',
-                'biolibrary.biofile.output_type',
                 'sur_path_tumor_size',
                 'surgery.surgery_procedure.procedure_type',
                 'surgery.pathology_report.t_stage',
@@ -111,4 +93,5 @@ class Biospecimen(Item):
             'label': 'histology',
         },
     }
+
 

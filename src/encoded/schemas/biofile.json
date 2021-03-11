@@ -26,21 +26,9 @@
         "output_type": {
             "title": "Output type"
         },
-        "output_category": {
-            "title": "Output category"
-        },
         "file_format": {
             "title": "File format",
             "open_on_load": true
-        },
-        "file_format_type": {
-            "title": "File format type"
-        },
-        "platform.term_name": {
-            "title": "Platform"
-        },
-        "assembly": {
-            "title": "Genome assembly"
         },
         "assay_term_name": {
             "title": "Assay term name",
@@ -70,37 +58,6 @@
                 }
             }
         },
-        "read_name_details": {
-            "comment": "Only fastq files can have read_name_details specified.",
-            "properties": {
-                "file_format": {
-                    "enum": ["fastq"]
-                }
-            }
-        },
-
-        "assembly": {
-            "not": {
-                "anyOf": [
-                    {
-                        "properties": {
-                            "output_type": {
-                                "enum": ["reads"]
-                            }
-                        }
-                    },
-                    {
-                        "properties": {
-                            "output_type": {
-                                "enum": ["rejected reads"]
-                            }
-                        }
-                    }
-                ]
-            }
-        },
-
-
 
         "paired_end": {
             "comment": "Files with paired-end value 2 require a paired_with value and files with paired_end specified require run_type to be specified as paired-ended",
@@ -180,20 +137,6 @@
             "type": "string",
             "linkTo": "Biodataset"
         },
-        "bioreplicate": {
-            "title": "Bioreplicate",
-            "description": "The experimental replicate designation for the file.",
-            "comment": "See bioreplicate.json for available identifiers.",
-            "type": "string",
-            "linkTo": "Bioreplicate"
-        },
-        "sequencing_replicate_number": {
-            "title": "Sequencing replicate",
-            "description": "Sequencing data collection under the same biolibrary.",
-            "type": "integer",
-            "default": 1,
-            "minimum": 1
-        },
         "file_format": {
             "title": "File format",
             "type": "string",
@@ -233,6 +176,7 @@
                 }
            ]
         },
+
         "restricted": {
             "title": "Restricted file",
             "permission":"import_items",
@@ -259,27 +203,7 @@
             "maxLength": 32,
             "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"
         },
-        "file_size": {
-            "title": "File size",
-            "description": "File size specified in bytes.",
-            "comment": "Required.",
-            "type": "integer",
-            "minimum": 0
-        },
-        "platform": {
-            "title": "Platform",
-            "description": "The measurement device used to collect data.",
-            "comment": "This field is required for fastq and idat file formats. See platform.json for identifer format.",
-            "type": "string",
-            "linkTo": "Platform"
-        },
-        "read_length": {
-            "title": "Read length",
-            "description": "For high-throughput sequencing, the number of contiguous nucleotides determined by sequencing.",
-            "comment": "This field is required for fastq, and sra file formats containing sequencing reads.",
-            "type": "integer",
-            "minimum": 0
-        },
+
         "run_type": {
             "title": "Run type",
             "description": "Indicates if file is part of a single or paired end sequencing run",
@@ -370,44 +294,7 @@
                     "linkTo": "Biofile"
             }
         },
-        "assembly": {
-            "title": "Genome assembly",
-            "description": "Genome assembly that files were mapped to.",
-            "comment": "Required property for bam, sam, gtf, idx, gff, bed and bigBed file format files. This property should not be submitted with sra or fastq files.",
-            "type": "string",
-            "enum": [
-                "GRCh38"
-                ]
-        },
-        "genome_annotation": {
-            "title": "Genome annotation",
-            "description": "Genome annotation that file was generated with.",
-            "comment": "Applies to files created using annotations.",
-            "type": "string",
-            "enum": [
-                "ENSEMBL V65",
-                "None"
-                ]
-        },
-        "mapped_run_type": {
-            "title": "Mapped run type for bam files",
-            "description": "The mapped run type of the alignment file which may differ from the fastqs it is derived from.",
-            "comment": "When the control and experiment run types do not match, one may be changed in order to meet pipeline requirements.",
-            "permission": "import_items",
-            "type": "string",
-            "enum": [
-                "single-ended",
-                "paired-ended"
-            ]
-        },
-        "external_accession": {
-            "title": "External accession",
-            "description": "For files that were not accessioned at our site but have an accession elsewhere.",
-            "comment": "Do not submit. Only admins are allowed to set or update this value.",
-            "type": "string",
-            "permission": "import_items",
-            "uniqueKey": "accession"
-        },
+
         "status": {
             "title": "Status",
             "type": "string",
@@ -442,32 +329,11 @@
         "dataset": {
             "title": "Dataset"
         },
-        "assembly": {
-            "title": "Genome assembly"
-        },
-        "technical_replicates": {
-            "title": "Technical replicates"
-        },
-        "biological_replicates": {
-            "title": "Biological replicates"
-        },
-        "sequencing_replicate_number": {
-            "title": "Sequencing replicates"
-        },
         "file_format": {
             "title": "File format"
         },
-        "file_format_type": {
-            "title": "File format type"
-        },
-        "file_size": {
-            "title": "File size"
-        },
         "assay_term_name": {
             "title": "Assay term name"
-        },
-        "bioreplicate.biolibrary.accession": {
-            "title": "Biolibrary"
         },
         "output_type": {
             "title": "Output type"
@@ -480,9 +346,6 @@
         },
         "paired_with": {
             "title": "Paired with"
-        },
-        "href": {
-            "title": "Download URL"
         },
         "date_created": {
             "title": "Date created"
@@ -697,7 +560,6 @@
     "boost_values": {
         "accession": 20.0,
         "@type": 1.0,
-        "assembly": 5.0,
         "file_format": 5.0,
         "file_format_type": 5.0,
         "output_type": 2.0,
@@ -705,5 +567,6 @@
     },
     "changelog": "/profiles/changelogs/biofile.md"
 }
+
 
 

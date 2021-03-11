@@ -59,13 +59,13 @@ class Biofile(Item):
         'superseded_by': ('Biofile', 'supersedes'),
     }
     embedded = [
-        'platform',
+        #'platform',
         'award',
-        'bioreplicate',
-        'bioreplicate.bioexperiment',
-        'bioreplicate.biolibrary',
+        #'bioreplicate',
+        #'bioreplicate.bioexperiment',
+        #'bioreplicate.biolibrary',
         'submitted_by',
-        'biolibrary',
+        #'biolibrary',
         # 'bioquality_metrics',
         # 'analysis_step_version.analysis_step',
         # 'analysis_step_version.analysis_step.pipelines',
@@ -82,7 +82,7 @@ class Biofile(Item):
     ]
     set_status_up = [
         # 'bioquality_metrics',
-        'platform',
+        #'platform',
 
 
 
@@ -124,6 +124,38 @@ class Biofile(Item):
         return request.resource_path(item)
 
     @calculated_property(schema={
+        "title": "File type",
+        "description": "The concatenation of file_format and file_format_type",
+        "comment": "Do not submit. This field is calculated from file_format and file_format_type.",
+        "type": "string"
+    })
+    def file_type(self, file_format, file_format_type=None):
+        if file_format_type is None:
+            return file_format
+        else:
+            return file_format + ' ' + file_format_type
+    
+    @calculated_property(
+        condition='biodataset',
+        define=True,
+        schema={
+            "title": "Assay term name",
+            "type": "string",
+            "notSubmittable": True
+        }
+    )
+    def assay_term_name(self, request, biodataset):
+        return take_one_or_return_none(
+            ensure_list_and_filter_none(
+                try_to_get_field_from_item_with_skip_calculated_first(
+                    request,
+                    'assay_term_name',
+                    biodataset
+                )
+            )
+        )
+"""
+    @calculated_property(schema={
         "title": "Output category",
         "description": "The overall catagory of the file content.",
         "comment": "Do not submit.  This field is calculated from output_type_output_category.",
@@ -152,6 +184,7 @@ class Biofile(Item):
     def read_length_units(self, read_length=None, mapped_read_length=None):
         if read_length is not None or mapped_read_length is not None:
             return "nt"
+
     @calculated_property(schema={
         "title": "Download URL",
         "description": "The download path for S3 to obtain the actual file.",
@@ -163,17 +196,6 @@ class Biofile(Item):
         file_extension = self.schema['file_format_file_extension'][file_format]
         filename = '{}{}'.format(accession, file_extension)
         return request.resource_path(self, '@@download', filename)
-    @calculated_property(schema={
-        "title": "File type",
-        "description": "The concatenation of file_format and file_format_type",
-        "comment": "Do not submit. This field is calculated from file_format and file_format_type.",
-        "type": "string"
-    })
-    def file_type(self, file_format, file_format_type=None):
-        if file_format_type is None:
-            return file_format
-        else:
-            return file_format + ' ' + file_format_type
 
     @calculated_property(
          condition='bioreplicate',
@@ -188,26 +210,7 @@ class Biofile(Item):
      )
     def biolibrary(self, request, bioreplicate):
         return request.embed(bioreplicate, '@@object?skip_calculated=true').get('biolibrary')
-
-    @calculated_property(
-        condition='biodataset',
-        define=True,
-        schema={
-            "title": "Assay term name",
-            "type": "string",
-            "notSubmittable": True
-        }
-    )
-    def assay_term_name(self, request, biodataset):
-        return take_one_or_return_none(
-            ensure_list_and_filter_none(
-                try_to_get_field_from_item_with_skip_calculated_first(
-                    request,
-                    'assay_term_name',
-                    biodataset
-                )
-            )
-        )
+"""
     # @calculated_property(
     #     condition='biodataset',
     #     define=True,
@@ -356,4 +359,5 @@ class Biofile(Item):
     #         'file_size': file_size
     #     }
         
+
 
