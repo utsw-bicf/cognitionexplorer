@@ -193,7 +193,8 @@
                 "Roadmap",
                 "ENCORE",
                 "Kidney SPORE",
-                "Double Mutants"
+                "Double Mutants",
+                "T_Th"
             ]
         },
         "project": {
@@ -209,7 +210,8 @@
                 "Roadmap",
                 "ENCORE",
                 "Kidney SPORE",
-                "Double Mutants"
+                "Double Mutants",
+                "T_Th"
             ]
         },
         "viewing_group": {
@@ -277,3 +279,4 @@
     },
     "changelog": "/profiles/changelogs/award.md"
 }
+

@@ -60,7 +60,7 @@ class Biofile(Item):
     embedded = [
         'award',
         'submitted_by',
-        'bioexperiment.assay_term_name',
+        'biodataset',
     ]
     audit_inherit = [
     ]
@@ -340,5 +340,6 @@ class Biofile(Item):
     #         'file_size': file_size
     #     }
         
+
 
 
