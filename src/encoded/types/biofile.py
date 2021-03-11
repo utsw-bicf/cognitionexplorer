@@ -55,35 +55,16 @@ class Biofile(Item):
     name_key = 'accession'
     rev = {
         'paired_with': ('Biofile', 'paired_with'),
-        # 'bioquality_metrics': ('BioqualityMetric', 'bioquality_metric_of'),
         'superseded_by': ('Biofile', 'supersedes'),
     }
     embedded = [
-        #'platform',
         'award',
-        #'bioreplicate',
-        #'bioreplicate.bioexperiment',
-        #'bioreplicate.biolibrary',
         'submitted_by',
-        #'biolibrary',
-        # 'bioquality_metrics',
-        # 'analysis_step_version.analysis_step',
-        # 'analysis_step_version.analysis_step.pipelines',
-        # 'analysis_step_version.software_versions',
-        # 'analysis_step_version.software_versions.software',
-
+        'bioexperiment.assay_term_name',
     ]
     audit_inherit = [
-        # 'analysis_step_version.analysis_step',
-        # 'analysis_step_version.analysis_step.pipelines',
-        # 'analysis_step_version.analysis_step.versions',
-        # 'analysis_step_version.software_versions',
-        # 'analysis_step_version.software_versions.software'
     ]
     set_status_up = [
-        # 'bioquality_metrics',
-        #'platform',
-
 
 
     ]

@@ -4,8 +4,7 @@
     "id": "/profiles/biofile.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "required": ["biodataset", "file_format", "md5sum", "award"],
-    "identifyingProperties": ["uuid", "accession", "aliases"],
+    "required": ["biodataset", "file_format", "md5sum", "award", "submitted_file_name", "biospecimen"],
     "additionalProperties": false,
     "mixinProperties": [
         { "$ref": "mixins.json#/schema_version" },
@@ -18,6 +17,224 @@
         { "$ref": "mixins.json#/aliases" },
         { "$ref": "mixins.json#/submitter_comment" }
     ],
+    "properties": {
+        "date_created": {
+            "rdfs:subPropertyOf": "dc:created",
+            "title": "Date created",
+            "decription": "The date the object was created.",
+            "comment": "Do not submit. The date the object is created is assigned by the server.",
+            "type": "string",
+            "format": "date-time",
+            "serverDefault": "now",
+            "permission": "import_items"
+        },
+        "schema_version": {
+            "default": "1"
+        },
+        "accession": {
+            "accessionType": "FF"
+        },
+        "library_type": {
+            "title": "Library type",
+            "type": "string",
+            "enum": ["DNA",  "RNA"]
+        },
+        "biospecimen": {
+            "title": "Biospecimen",
+            "description": "The Biospecimen the file belongs to.",
+            "type": "string",
+            "linkTo": "Biospecimen"
+        },
+        "biodataset": {
+            "title": "Biodataset",
+            "description": "The dataset or experiment the file belongs to.",
+            "comment": "See biodataset.json for available identifiers.",
+            "type": "string",
+            "linkTo": "Biodataset"
+        },
+        "file_format": {
+            "title": "File format",
+            "type": "string",
+            "oneOf": [
+                {
+                    "comment": "This field is required.",
+                    "enum": [
+                        "bam",
+                        "csv",
+                        "fastq",
+                        "gff",
+                        "gtf",
+                        "idat",
+                        "sam",
+                        "tar",
+                        "tsv",
+                        "vcf",
+                        "idx",
+                        "txt",
+                        "bigBed",
+                        "bigWig",
+                        "hic"
+                    ]
+                }
+            ]
+        },
+        "file_format_type": {
+            "title": "File format type",
+            "description": "Files of type bed and gff require further specification",
+            "type": "string",
+            "oneOf": [
+                {
+                    "enum": [
+                        "gff2",
+                        "gff3"
+                    ]
+                }
+           ]
+        },
+        "submitted_file_name": {
+            "title": "Original file name",
+            "description": "The local file name used at time of submission.",
+            "comment": "Although this is not required. It is highly recommended.",
+            "type": "string"
+        },
+        "file_path": {
+            "title": "File path",
+            "type": "string"
+        },
+        "md5sum": {
+            "title": "MD5sum",
+            "description": "The md5sum of the file being transferred.",
+            "comment": "Warning: This value can vary for files of same content gzipped at different times",
+            "type": "string",
+            "format": "hex",
+            "maxLength": 32,
+            "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"
+        },
+
+        "run_type": {
+            "title": "Run type",
+            "description": "Indicates if file is part of a single or paired end sequencing run",
+            "comment": "This field is required for sra and fastq files.",
+            "type": "string",
+            "enum": [
+                "single-ended",
+                "paired-ended"
+            ]
+        },
+        "paired_end": {
+            "title": "Paired end identifier",
+            "description": "Which read of the pair the file represents (in case of paired end sequencing run)",
+            "comment": "This field is required if run_type is paired-ended.",
+            "type": "string",
+            "enum": [
+                "1",
+                "2",
+                "1,2"
+            ]
+        },
+        "paired_with": {
+            "title": "Paired with",
+            "description": "The paired end fastq that corresponds with this file.",
+            "comment": "This is required for files with paired_end 2 and is calculated for files with paired_end 1.",
+            "type": "string",
+            "linkTo": "Biofile"
+        },
+        "restricted": {
+            "title": "Restricted file",
+            "permission":"import_items",
+            "description": "A flag to indicate whether this file is subject to restricted access",
+            "comment": "Do not submit. This value can only be set by admins.",
+            "type": "boolean"
+        },
+        "output_type": {
+            "title": "Output type",
+            "description": "A description of the file's purpose or contents.",
+            "type": "string",
+            "oneOf": [
+                {
+                    "enum": [
+                        "alignments",
+                        "exon quantifications",
+                        "gene alignments",
+                        "gene quantifications",
+                        "genome index",
+                        "genome reference",
+                        "reads",
+                        "reference variants",
+                        "spike-in sequence",
+                        "splice junctions",
+                        "transcript quantifications",
+                        "transcriptome alignments",
+                        "transcriptome index",
+                        "transcriptome reference",
+                        "unfiltered alignments",
+                        "variant calls"
+                    ]
+                }
+            ]
+        },
+        "derived_from": {
+            "title": "Derived from",
+            "description": "The files participating as inputs into software to produce this output file.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                    "comment": "See biofile.json for a list of available identifiers.",
+                    "type": "string",
+                    "linkTo": "Biofile"
+                    }
+        },
+        "controlled_by": {
+            "title": "Controlled by",
+            "description": "The files which should be used as a control for this file. ",
+            "comment": "This is used to find files that should be used in downstream processing (i.e. tumor and normal matched).",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                    "comment": "See biofile.json for a list of available identifiers.",
+                    "type": "string",
+                    "linkTo": "Biofile"
+            }
+        },
+        "supersedes": {
+            "title": "Supersedes" ,
+            "description": "The files that this file supersedes.",
+            "comment": "The files in this list should be obsolete and the superseeding file object should be used instead.",
+            "type": "array",
+            "uniqueItems": true,
+            "items": {
+                    "comment": "The files in this list should be archived or revoked.",
+                    "type": "string",
+                    "linkTo": "Biofile"
+            }
+        },
+        "revoke_detail": {
+            "title": "Revoke error detail",
+            "description": "Explanation of why the file was revoked.",
+            "comment": "Do not submit. The field would be posted by admins.",
+            "type": "string",
+            "permission": "import_items"
+        },
+        "status": {
+            "title": "Status",
+            "type": "string",
+            "permission": "import_items",
+            "default": "uploading",
+            "description": "The status of the file object.",
+            "comment": "Do not submit.  This is set by admins along the process of file submission.",
+            "enum" : [
+                "uploading",
+                "upload failed",
+                "in progress",
+                "released",
+                "archived",
+                "deleted",
+                "replaced",
+                "revoked",
+                "content error"
+                ]
+        }
+    },
     "facets": {
         "status": {
             "title": "Status",
@@ -101,226 +318,6 @@
             ]
         }
 
-    },
-    "properties": {
-        "date_created": {
-            "rdfs:subPropertyOf": "dc:created",
-            "title": "Date created",
-            "decription": "The date the object was created.",
-            "comment": "Do not submit. The date the object is created is assigned by the server.",
-            "type": "string",
-            "format": "date-time",
-            "serverDefault": "now",
-            "permission": "import_items"
-        },
-        "schema_version": {
-            "default": "1"
-        },
-        "accession": {
-            "accessionType": "FF"
-        },
-        "library_type": {
-            "title": "Library type",
-            "type": "string",
-            "enum": ["DNA",  "RNA"]
-        },
-        "biospecimen": {
-            "title": "Biospecimen",
-            "description": "The Biospecimen the file belongs to.",
-            "type": "string",
-            "linkTo": "Biospecimen"
-        },
-        "biodataset": {
-            "title": "Biodataset",
-            "description": "The dataset or experiment the file belongs to.",
-            "comment": "See biodataset.json for available identifiers.",
-            "type": "string",
-            "linkTo": "Biodataset"
-        },
-        "file_format": {
-            "title": "File format",
-            "type": "string",
-            "oneOf": [
-                {
-                    "comment": "This field is required.",
-                    "enum": [
-                        "bam",
-                        "csv",
-                        "fastq",
-                        "gff",
-                        "gtf",
-                        "idat",
-                        "sam",
-                        "tar",
-                        "tsv",
-                        "vcf",
-                        "idx",
-                        "txt",
-                        "bigBed",
-                        "bigWig",
-                        "hic"
-                    ]
-                }
-            ]
-        },
-        "file_format_type": {
-            "title": "File format type",
-            "description": "Files of type bed and gff require further specification",
-            "type": "string",
-            "oneOf": [
-                {
-                    "enum": [
-                        "gff2",
-                        "gff3"
-                    ]
-                }
-           ]
-        },
-
-        "restricted": {
-            "title": "Restricted file",
-            "permission":"import_items",
-            "description": "A flag to indicate whether this file is subject to restricted access",
-            "comment": "Do not submit. This value can only be set by admins.",
-            "type": "boolean"
-        },
-        "submitted_file_name": {
-            "title": "Original file name",
-            "description": "The local file name used at time of submission.",
-            "comment": "Although this is not required. It is highly recommended.",
-            "type": "string"
-        },
-        "file_path": {
-            "title": "File path",
-            "type": "string"
-        },
-        "md5sum": {
-            "title": "MD5sum",
-            "description": "The md5sum of the file being transferred.",
-            "comment": "Warning: This value can vary for files of same content gzipped at different times",
-            "type": "string",
-            "format": "hex",
-            "maxLength": 32,
-            "pattern": "[a-f\\d]{32}|[A-F\\d]{32}"
-        },
-
-        "run_type": {
-            "title": "Run type",
-            "description": "Indicates if file is part of a single or paired end sequencing run",
-            "comment": "This field is required for sra and fastq files.",
-            "type": "string",
-            "enum": [
-                "single-ended",
-                "paired-ended"
-            ]
-        },
-        "paired_end": {
-            "title": "Paired end identifier",
-            "description": "Which read of the pair the file represents (in case of paired end sequencing run)",
-            "comment": "This field is required if run_type is paired-ended.",
-            "type": "string",
-            "enum": [
-                "1",
-                "2",
-                "1,2"
-            ]
-        },
-        "paired_with": {
-            "title": "Paired with",
-            "description": "The paired end fastq that corresponds with this file.",
-            "comment": "This is required for files with paired_end 2 and is calculated for files with paired_end 1.",
-            "type": "string",
-            "linkTo": "Biofile"
-        },
-        "output_type": {
-            "title": "Output type",
-            "description": "A description of the file's purpose or contents.",
-            "type": "string",
-            "oneOf": [
-                {
-                    "enum": [
-                        "alignments",
-                        "exon quantifications",
-                        "gene alignments",
-                        "gene quantifications",
-                        "genome index",
-                        "genome reference",
-                        "reads",
-                        "reference variants",
-                        "spike-in sequence",
-                        "splice junctions",
-                        "transcript quantifications",
-                        "transcriptome alignments",
-                        "transcriptome index",
-                        "transcriptome reference",
-                        "unfiltered alignments",
-                        "variant calls"
-                    ]
-                }
-            ]
-        },
-        "derived_from": {
-            "title": "Derived from",
-            "description": "The files participating as inputs into software to produce this output file.",
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                    "comment": "See biofile.json for a list of available identifiers.",
-                    "type": "string",
-                    "linkTo": "Biofile"
-                    }
-        },
-        "controlled_by": {
-            "title": "Controlled by",
-            "description": "The files which should be used as a control for this file. ",
-            "comment": "This is used to find files that should be used in downstream processing (i.e. tumor and normal matched).",
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                    "comment": "See biofile.json for a list of available identifiers.",
-                    "type": "string",
-                    "linkTo": "Biofile"
-            }
-        },
-        "supersedes": {
-            "title": "Supersedes" ,
-            "description": "The files that this file supersedes.",
-            "comment": "The files in this list should be obsolete and the superseeding file object should be used instead.",
-            "type": "array",
-            "uniqueItems": true,
-            "items": {
-                    "comment": "The files in this list should be archived or revoked.",
-                    "type": "string",
-                    "linkTo": "Biofile"
-            }
-        },
-
-        "status": {
-            "title": "Status",
-            "type": "string",
-            "permission": "import_items",
-            "default": "uploading",
-            "description": "The status of the file object.",
-            "comment": "Do not submit.  This is set by admins along the process of file submission.",
-            "enum" : [
-                "uploading",
-                "upload failed",
-                "in progress",
-                "released",
-                "archived",
-                "deleted",
-                "replaced",
-                "revoked",
-                "content error"
-                ]
-        },
-        "revoke_detail": {
-            "title": "Revoke error detail",
-            "description": "Explanation of why the file was revoked.",
-            "comment": "Do not submit. The field would be posted by admins.",
-            "type": "string",
-            "permission": "import_items"
-        }
     },
     "columns": {
         "accession": {

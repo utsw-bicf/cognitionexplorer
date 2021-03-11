@@ -298,13 +298,22 @@
         "url": "https://projectreporter.nih.gov/project_info_description.cfm?aid=9247374&icde=32923597&ddparam=&ddvalue=&ddsub=&cr=1&csb=default&cs=ASC&pball=",
         "viewing_group": "ENCODE4"
     },
-        {
+    {
         "name": "Double-Mutants",
         "project": "Double Mutants",
         "rfa": "Double Mutants",
         "status": "current",
         "title": "Double Mutants",
         "uuid": "2342f44a-30d4-41ff-8865-d1827d39d65d",
+        "viewing_group": "Kidney SPORE"
+    },
+    {
+        "name": "T_Th",
+        "project": "T_Th",
+        "rfa": "T_Th",
+        "status": "current",
+        "title": "T_Th",
+        "uuid": "08c90ec8-65ac-4dec-89e9-8c3c4e9e63c4",
         "viewing_group": "Kidney SPORE"
     }
 ]
