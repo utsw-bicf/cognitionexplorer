@@ -28,34 +28,15 @@ class Bioexperiment extends React.Component {
     render() {
 
         const context = this.props.context;
-        const itemClass = globals.itemClass(context, 'view-item');
   
         const loggedIn = !!(this.context.session && this.context.session['auth.userid']);
         const adminUser = !!(this.context.session_properties && this.context.session_properties.admin);
-
-        // Determine this experiment's ENCODE version.
-        const encodevers = globals.encodeVersion(context);
 
         // Make list of statuses.
         const statuses = [{ status: context.status, title: 'Status' }];
         if (adminUser && context.internal_status) {
             statuses.push({ status: context.internal_status, title: 'Internal' });
         }
-
-        // Determine whether the experiment is isogenic or anisogenic. No replication_type
-        // indicates isogenic.
-        const anisogenic = context.replication_type ? (anisogenicValues.indexOf(context.replication_type) !== -1) : false;
-
-        // Get a list of related datasets, possibly filtering on their status.
-        let seriesList = [];
-        if (context.related_series && context.related_series.length) {
-            seriesList = _(context.related_series).filter(biodataset => loggedIn || biodataset.status === 'released');
-        }
-
-
-        // Make a list of reference links, if any.
-        const references = pubReferenceList(context.references);
-
         // Set up breadcrumbs
         // Set up the breadcrumbs.
         const assayTerm = context.assay_term_name ? 'assay_term_name' : 'assay_term_id';
@@ -68,20 +49,16 @@ class Bioexperiment extends React.Component {
 
         ];
 
-
         const crumbsReleased = (context.status === 'released');
-
-        const experimentsUrl = `/search/?type=Bioexperiment&possible_controls.accession=${context.accession}`;
-
         let biospecimen_summary = [];
-        let awards = [];
+        let projectSet = new Set();
         let files = context.files;
 
         for (let i = 0; i < files.length; i++) {
             let biospecimen = files[i].biospecimen;
-            let award = files[i].award;
+            let project = files[i].award.project;
             biospecimen_summary.push(biospecimen);
-            awards.push(award)
+            projectSet.add(project)
         }
         let uniqueBiospecimen_summary = Array.from(new Set(biospecimen_summary.map(a => a.accession)))
         .map(accession => {
@@ -89,11 +66,6 @@ class Bioexperiment extends React.Component {
         });
         biospecimen_summary = uniqueBiospecimen_summary;
         
-        let uniqueAwards = Array.from(new Set(awards.map(a => a.uuid)))
-        .map(uuid => {
-        return awards.find(a => a.uuid === uuid)
-        });
-        awards = uniqueAwards;
 
         let show_specimen_summary = (<div>
             <dt>biospecimen_summary</dt>
@@ -159,7 +131,7 @@ class Bioexperiment extends React.Component {
 
                                 <div data-test="project">
                                     <dt>Project</dt>
-                                    <dd>{awards[0].project}</dd>
+                                    <dd>{[...projectSet].join(', ')}</dd>
                                 </div>
 
 
@@ -191,6 +163,7 @@ Bioexperiment.defaultProps = {
 };
 
 globals.contentViews.register(Bioexperiment, 'Bioexperiment');
+
 
 
 
