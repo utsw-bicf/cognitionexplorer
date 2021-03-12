@@ -415,10 +415,10 @@
             "description": "OBI (Ontology for Biomedical Investigations) ontology term for the assay.",
             "type": "string",
             "enum": [
-                "DNA methylation profiling by array assay",
+                "Methylation Array",
                 "RNA-seq",
-                "whole genome sequencing assay",
-                "whole-genome shotgun bisulfite sequencing",
+                "whole genome sequencing",
+                "Targeted",
                 "whole exome sequencing"
             ]
         }

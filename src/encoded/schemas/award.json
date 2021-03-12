@@ -193,8 +193,30 @@
                 "Roadmap",
                 "ENCORE",
                 "Kidney SPORE",
+                
+                
+                "Anaplastic ChRCC",
+                "Arrowhead PDX",
+                "CMET",
                 "Double Mutants",
-                "T_Th"
+                "Genentech - Unknown",
+                "HIF2I Resistance",
+                "HLRCC",
+                "Juan",
+                "Kakajan Komurov",
+                "Medgenome",
+                "mTOR treated",
+                "non-ccRCC",
+                "OPRCC",
+                "Pancreatic mets",
+                "Pink Tumor",
+                "SPORE 2",
+                "T_TG",
+                "T_Th",
+                "T_Th - 2018",
+                "tRCC Human",
+                "Wakeland"
+
             ]
         },
         "project": {
@@ -210,8 +232,28 @@
                 "Roadmap",
                 "ENCORE",
                 "Kidney SPORE",
+                
+                "Anaplastic ChRCC",
+                "Arrowhead PDX",
+                "CMET",
                 "Double Mutants",
-                "T_Th"
+                "Genentech - Unknown",
+                "HIF2I Resistance",
+                "HLRCC",
+                "Juan",
+                "Kakajan Komurov",
+                "Medgenome",
+                "mTOR treated",
+                "non-ccRCC",
+                "OPRCC",
+                "Pancreatic mets",
+                "Pink Tumor",
+                "SPORE 2",
+                "T_TG",
+                "T_Th",
+                "T_Th - 2018",
+                "tRCC Human",
+                "Wakeland"
             ]
         },
         "viewing_group": {
@@ -279,4 +321,5 @@
     },
     "changelog": "/profiles/changelogs/award.md"
 }
+
 
