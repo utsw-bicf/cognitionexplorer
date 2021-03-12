@@ -35,7 +35,7 @@
     },
     {
         "accession": "KCEFF586YYT",
-        "award": "T_Th",
+        "award": "T-Th",
         "biodataset": "KCEBE000UIY", 
         "biospecimen": "KCEBS708IJT",
         "library_type": "DNA",   
@@ -51,12 +51,12 @@
 
     {
         "accession": "KCEFF307UYT",
-        "award": "T_Th",
+        "award": "T-Th",
         "biodataset": "KCEBE000UIY", 
         "biospecimen": "KCEBS708IJT",
         "library_type": "DNA",   
         "file_format": "fastq",
-        "md5sum": "9c8a24ee73e74c5c18e17f83b50a0eag",
+        "md5sum": "befc88129d683f7ab55a0c0a5c20f5ca",
         "run_type": "paired-ended",
         "paired_end": "2",
         "paired_with": "KCEFF586YYT",
@@ -67,7 +67,7 @@
     },
     {
         "accession": "KCEFF432HYT",
-        "award": "T_Th",
+        "award": "T-Th",
         "biodataset": "KCEBE765UIY", 
         "biospecimen": "KCEBS708IJT",
         "library_type": "RNA",   
@@ -83,12 +83,12 @@
 
     {
         "accession": "KCEFF904UYT",
-        "award": "T_Th",
+        "award": "T-Th",
         "biodataset": "KCEBE765UIY", 
         "biospecimen": "KCEBS708IJT",
         "library_type": "RNA",   
         "file_format": "fastq",
-        "md5sum": "9c8a24ee73e74c5c18e47f83b50a0eag",
+        "md5sum": "68b048daf86213e312b3f6ab75edb8fa",
         "run_type": "paired-ended",
         "paired_end": "2",
         "paired_with": "KCEFF432HYT",
