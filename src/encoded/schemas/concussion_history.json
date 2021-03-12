@@ -1,0 +1,1059 @@
+{
+    "title": "Concussion History",
+    "description": "",
+    "id": "/profiles/concussion_history.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "concuss"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "concuss": {
+            "title": "1. Have you ever had a hit to your head that caused a concussion?",
+            "description": "By a concussion, we mean that after getting hit on your head, you had symptoms such as: loss of consciousness, headache, dizziness, nausea/vomiting, balance problems, ringing in the ears, changes with vision or eyesight, change in mood, difficulty concentrating, remembering, thinking clearly, speaking clearly, etc.",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "q1_if_yes": {
+            "title": "If Yes",
+            "type": "object",
+            "properties": {
+                "concuss_number": {
+                    "title": "How many concussions have you had?",
+                    "description": "If yes",
+                    "type": "string",
+                    "enum": [
+                        "1 1",
+                        "2 2",
+                        "3 3",
+                        "4 4",
+                        "5 5",
+                        "6 6",
+                        "7 7",
+                        "8 8",
+                        "9 9",
+                        "10 10"
+                    ]
+                },
+                "concuss_age1": {
+                    "title": "How old were you when you had your concussion?",
+                    "description": "(age in years)",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "concuss_age2": {
+                    "title": "How old were you when you had your concussion(s)?",
+                    "description": "(age in years)",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "concuss_age3": {
+                    "title": "How old were you when you had your concussion(s)?",
+                    "description": "(age in years)",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                }
+            }
+        },
+        "multiple_hits": {
+            "title": "2. Have you ever had a period of time in which you experienced multiple, repeated hits to your head (e.g. contact sports, military duty)?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "q2_if_yes": {
+            "title": "If Yes,",
+            "type": "object",
+            "properties": {
+                "multiple_hits_begin": {
+                    "title": "2a. How old were you when this began?",
+                    "description": "(age in years)",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "multiple_hits_end": {
+                    "title": "2a. How old were you when this ended?",
+                    "description": "(age in years)",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 100
+                },
+                "multiple_hits_ctx": {
+                    "title": "2b. What was the context? (e.g. football, soccer, military, etc)",
+                    "type": "string"
+                }
+            }
+        },
+        "loc": {
+            "title": "3. Loss of Consciousness (LOC)",
+            "description": "At any time when you hit your head, did you lose consciousness or were you knocked out?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "q3_if_yes": {
+            "title": "If Yes,",
+            "type": "object",
+            "properties": {
+                "num_times_loc": {
+                    "title": "How many times did you lose consciousness?",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 3
+                },
+                "loc_age": {
+                    "title": "How old were you? (age in years)",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "loc_dur": {
+                    "title": "LOC duration",
+                    "type": "string",
+                    "enum": [
+                        "1 <5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                },
+                "loc_age_2": {
+                    "title": "How old were you? (age in years)",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "loc_dur_2": {
+                    "title": "LOC duration",
+                    "type": "string",
+                    "enum": [
+                        "1 <5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                },
+                "loc_age_3": {
+                    "title": "How old were you? (age in years)",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 100
+                },
+                "loc_dur_3": {
+                    "title": "3 LOC duration",
+                    "type": "string",
+                    "enum": [
+                        "1 <5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                }
+            }
+        },
+        "q3_if_no": {
+            "title": "If No or Don't Know about LOC",
+            "type": "object",
+            "properties": {
+                "loc_no_dk": {
+                    "title": "At any time after you hit your head did you feel dazed or confused?",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Don't know"
+                    ]
+                },
+                "loc_dazed": {
+                    "title": "How many times has this happened to you?",
+                    "type": "integer",
+                    "minimum": 0,
+                    "maximum": 10
+                },
+                "loc_dazed_durat": {
+                    "title": "How long did this last (enter longest)?",
+                    "type": "string",
+                    "enum": [
+                        "1 <5 min",
+                        "2 5-10 min",
+                        "3 >10 min",
+                        "9 Don't know"
+                    ]
+                }
+            }
+        },
+        "q4": {
+            "title": "4. In which of the following situations have you ever injured your head and had a concussion? Check all that apply.",
+            "type": "object",
+            "properties": {
+                "sitfall": {
+                    "title": "A fall(e.g. from a bike or a horse)",
+                    "type": "boolean"
+                },
+                "sitcar": {
+                    "title": "A car accident (or motorcycle or ATV)",
+                    "type": "boolean"
+                },
+                "sitobj": {
+                    "title": "Being struck by an object (e.g. hit by a rock)",
+                    "type": "boolean"
+                },
+                "sitplay": {
+                    "title": "A playground accident",
+                    "type": "boolean"
+                },
+                "sitabuse": {
+                    "title": "Physical assault/abuse",
+                    "type": "boolean"
+                },
+                "sitblast": {
+                    "title": "Being near an explosion or blast",
+                    "type": "boolean"
+                },
+                "sitsprt": {
+                    "title": "Contact sports",
+                    "type": "boolean"
+                }
+            }
+        },
+        "concuss_doc": {
+            "title": "5. At any time after you hit your head, did you see a doctor?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "q5_if_yes": {
+            "title": "If Yes,",
+            "type": "object",
+            "properties": {
+                "concuss_er": {
+                    "title": "Did you go to the emergency room?",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Don't know"
+                    ]
+                },
+                "concuss_ovrnght": {
+                    "title": "Did you have to stay in the hospital overnight?",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Don't know"
+                    ]
+                },
+                "concuss_dx": {
+                    "title": "Were you diagnosed by a doctor as having a concussion or brain injury at the time?",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Don't know"
+                    ]
+                }
+            }
+        },
+        "concuss_new_prob": {
+            "title": "6. At any time after you hit your head, did you (or a teacher or family member) notice any new problems?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "q6_if_yes": {
+            "title": "If Yes,",
+            "type": "object",
+            "properties": {
+                "physical": {
+                    "title": "Physical problems.",
+                    "description": "Check all that apply.",
+                    "type": "object",
+                    "properties": {
+                        "phyhead": {
+                            "title": "Headache",
+                            "type": "boolean"
+                        },
+                        "phydizzy": {
+                            "title": "Dizziness",
+                            "type": "boolean"
+                        },
+                        "phynaus": {
+                            "title": "Nausea/vomiting",
+                            "type": "boolean"
+                        },
+                        "phybal": {
+                            "title": "Balance problems",
+                            "type": "boolean"
+                        },
+                        "phyring": {
+                            "title": "Ringing in the ears",
+                            "type": "boolean"
+                        },
+                        "physleep": {
+                            "title": "Difficulty sleeping",
+                            "type": "boolean"
+                        },
+                        "phyvision": {
+                            "title": "Changes with vision or eyesight",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "behavioral": {
+                    "title": "Behavioral problems.",
+                    "description": "Check all that apply.",
+                    "type": "object",
+                    "properties": {
+                        "behirrit": {
+                            "title": "Irritability/loss of temper",
+                            "type": "boolean"
+                        },
+                        "behdep": {
+                            "title": "Feeling depressed or down",
+                            "type": "boolean"
+                        },
+                        "behanx": {
+                            "title": "Feeling anxious or nervous",
+                            "type": "boolean"
+                        },
+                        "behselfcare": {
+                            "title": "Ability to care for yourself",
+                            "type": "boolean"
+                        },
+                        "behrelate": {
+                            "title": "Relationships with others",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "cognitive": {
+                    "title": "Cognitive problems.",
+                    "description": "Check all that apply. ",
+                    "type": "object",
+                    "properties": {
+                        "cogconcen": {
+                            "title": "Difficulty concentrating",
+                            "type": "boolean"
+                        },
+                        "cogmemnew": {
+                            "title": "Difficulty remembering or learning new information",
+                            "type": "boolean"
+                        },
+                        "cogmemold": {
+                            "title": "Difficulty remembering how to do things you once could do",
+                            "type": "boolean"
+                        },
+                        "cogsolve": {
+                            "title": "Difficulty solving problems or making decisions",
+                            "type": "boolean"
+                        },
+                        "cogtask": {
+                            "title": "Difficulty in getting tasks started",
+                            "type": "boolean"
+                        },
+                        "cogslow": {
+                            "title": "Thinking more slowly, feeling slowed down",
+                            "type": "boolean"
+                        },
+                        "cogspeech": {
+                            "title": "Changes in your speech or trouble finding words",
+                            "type": "boolean"
+                        },
+                        "cogfunct": {
+                            "title": "Ability to function at work or school",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "concuss_sympt_recov": {
+            "title": "7. How long did it take for your symptoms to fully recover?",
+            "description": "Choose one. (If you have had multiple concussions, answer based on your worst injury.)",
+            "type": "string",
+            "enum": [
+                "1, < 24 hrs",
+                "2 1-6 days",
+                "3 7-14 days",
+                "4 3-4 weeks",
+                "5 1-6 months",
+                "6 7-12 months",
+                "7 >1 year or never fully recovered",
+                "9 Don't know"
+            ]
+        },
+        "q8": {
+            "title": "8. Before your head injury or concussion, were you ever diagnosed with any of the following or suspected of having any of the following? ",
+            "description": "Check all that apply.",
+            "type": "object",
+            "properties": {
+                "dxadhd": {
+                    "title": "ADHD/ADD",
+                    "type": "boolean"
+                },
+                "dxldis": {
+                    "title": "Learning disability",
+                    "type": "boolean"
+                },
+                "dxdep": {
+                    "title": "Depression",
+                    "type": "boolean"
+                },
+                "dxanx": {
+                    "title": "Anxiety",
+                    "type": "boolean"
+                },
+                "dxbip": {
+                    "title": "Bipolar disorder",
+                    "type": "boolean"
+                },
+                "dxschiz": {
+                    "title": "Schizophrenia",
+                    "type": "boolean"
+                },
+                "dxalcoh": {
+                    "title": "Alcohol or drug abuse",
+                    "type": "boolean"
+                },
+                "dxsleep": {
+                    "title": "Sleep disorder",
+                    "type": "boolean"
+                },
+                "dxmigrain": {
+                    "title": "Migraines/chronic headaches",
+                    "type": "boolean"
+                }
+            }
+        },
+        "concuss_hist_demen": {
+            "title": "9. Do you have a family history of dementia?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "q9_if_yes": {
+            "title": "If Yes",
+            "description": "Check all that apply.",
+            "type": "object",
+            "properties": {
+                "demmom": {
+                    "title": "Mother",
+                    "type": "boolean"
+                },
+                "demdad": {
+                    "title": "Father",
+                    "type": "boolean"
+                },
+                "demgmom": {
+                    "title": "Grandmother",
+                    "type": "boolean"
+                },
+                "demgdad": {
+                    "title": "Grandfather",
+                    "type": "boolean"
+                },
+                "demaunt": {
+                    "title": "Aunt",
+                    "type": "boolean"
+                },
+                "demuncle": {
+                    "title": "Uncle",
+                    "type": "boolean"
+                },
+                "dembro": {
+                    "title": "Brother",
+                    "type": "boolean"
+                },
+                "demsis": {
+                    "title": "Sister",
+                    "type": "boolean"
+                }
+            }
+        },
+        "concuss_clin_sig": {
+            "title": "Clinician's signature (required)",
+            "type": "string"
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "concuss": {
+            "title": "1. Have you ever had a hit to your head that caused a concussion?"
+        },
+        "q1_if_yes.concuss_number": {
+            "title": "How many concussions have you had?"
+        },
+        "q1_if_yes.concuss_age1": {
+            "title": "How old were you when you had your concussion?"
+        },
+        "q1_if_yes.concuss_age2": {
+            "title": "How old were you when you had your concussion(s)?"
+        },
+        "q1_if_yes.concuss_age3": {
+            "title": "How old were you when you had your concussion(s)?"
+        },
+        "multiple_hits": {
+            "title": "2. Have you ever had a period of time in which you experienced multiple, repeated hits to your head (e.g. contact sports, military duty)?"
+        },
+        "q2_if_yes.multiple_hits_begin": {
+            "title": "2a. How old were you when this began?"
+        },
+        "q2_if_yes.multiple_hits_end": {
+            "title": "2a. How old were you when this ended?"
+        },
+        "q2_if_yes.multiple_hits_ctx": {
+            "title": "2b. What was the context? (e.g. football, soccer, military, etc)"
+        },
+        "loc": {
+            "title": "3. Loss of Consciousness (LOC)"
+        },
+        "q3_if_yes.num_times_loc": {
+            "title": "How many times did you lose consciousness?"
+        },
+        "q3_if_yes.loc_age": {
+            "title": "How old were you? (age in years)"
+        },
+        "q3_if_yes.loc_dur": {
+            "title": "LOC duration"
+        },
+        "q3_if_yes.loc_age_2": {
+            "title": "How old were you? (age in years)"
+        },
+        "q3_if_yes.loc_dur_2": {
+            "title": "LOC duration"
+        },
+        "q3_if_yes.loc_age_3": {
+            "title": "How old were you? (age in years)"
+        },
+        "q3_if_yes.loc_dur_3": {
+            "title": "3 LOC duration"
+        },
+        "q3_if_no.loc_no_dk": {
+            "title": "At any time after you hit your head did you feel dazed or confused?"
+        },
+        "q3_if_no.loc_dazed": {
+            "title": "How many times has this happened to you?"
+        },
+        "q3_if_no.loc_dazed_durat": {
+            "title": "How long did this last (enter longest)?"
+        },
+        "q4.sitfall": {
+            "title": "A fall(e.g. from a bike or a horse)"
+        },
+        "q4.sitcar": {
+            "title": "A car accident (or motorcycle or ATV)"
+        },
+        "q4.sitobj": {
+            "title": "Being struck by an object (e.g. hit by a rock)"
+        },
+        "q4.sitplay": {
+            "title": "A playground accident"
+        },
+        "q4.sitabuse": {
+            "title": "Physical assault/abuse"
+        },
+        "q4.sitblast": {
+            "title": "Being near an explosion or blast"
+        },
+        "q4.sitsprt": {
+            "title": "Contact sports"
+        },
+        "concuss_doc": {
+            "title": "5. At any time after you hit your head, did you see a doctor?"
+        },
+        "q5_if_yes.concuss_er": {
+            "title": "Did you go to the emergency room?"
+        },
+        "q5_if_yes.concuss_ovrnght": {
+            "title": "Did you have to stay in the hospital overnight?"
+        },
+        "q5_if_yes.concuss_dx": {
+            "title": "Were you diagnosed by a doctor as having a concussion or brain injury at the time?"
+        },
+        "concuss_new_prob": {
+            "title": "6. At any time after you hit your head, did you (or a teacher or family member) notice any new problems?"
+        },
+        "q6_if_yes.physical.phyhead": {
+            "title": "Headache"
+        },
+        "q6_if_yes.physical.phydizzy": {
+            "title": "Dizziness"
+        },
+        "q6_if_yes.physical.phynaus": {
+            "title": "Nausea/vomiting"
+        },
+        "q6_if_yes.physical.phybal": {
+            "title": "Balance problems"
+        },
+        "q6_if_yes.physical.phyring": {
+            "title": "Ringing in the ears"
+        },
+        "q6_if_yes.physical.physleep": {
+            "title": "Difficulty sleeping"
+        },
+        "q6_if_yes.physical.phyvision": {
+            "title": "Changes with vision or eyesight"
+        },
+        "q6_if_yes.behavioral.behirrit": {
+            "title": "Irritability/loss of temper"
+        },
+        "q6_if_yes.behavioral.behdep": {
+            "title": "Feeling depressed or down"
+        },
+        "q6_if_yes.behavioral.behanx": {
+            "title": "Feeling anxious or nervous"
+        },
+        "q6_if_yes.behavioral.behselfcare": {
+            "title": "Ability to care for yourself"
+        },
+        "q6_if_yes.behavioral.behrelate": {
+            "title": "Relationships with others"
+        },
+        "q6_if_yes.cognitive.cogconcen": {
+            "title": "Difficulty concentrating"
+        },
+        "q6_if_yes.cognitive.cogmemnew": {
+            "title": "Difficulty remembering or learning new information"
+        },
+        "q6_if_yes.cognitive.cogmemold": {
+            "title": "Difficulty remembering how to do things you once could do"
+        },
+        "q6_if_yes.cognitive.cogsolve": {
+            "title": "Difficulty solving problems or making decisions"
+        },
+        "q6_if_yes.cognitive.cogtask": {
+            "title": "Difficulty in getting tasks started"
+        },
+        "q6_if_yes.cognitive.cogslow": {
+            "title": "Thinking more slowly, feeling slowed down"
+        },
+        "q6_if_yes.cognitive.cogspeech": {
+            "title": "Changes in your speech or trouble finding words"
+        },
+        "q6_if_yes.cognitive.cogfunct": {
+            "title": "Ability to function at work or school"
+        },
+        "concuss_sympt_recov": {
+            "title": "7. How long did it take for your symptoms to fully recover?"
+        },
+        "q8.dxadhd": {
+            "title": "ADHD/ADD"
+        },
+        "q8.dxldis": {
+            "title": "Learning disability"
+        },
+        "q8.dxdep": {
+            "title": "Depression"
+        },
+        "q8.dxanx": {
+            "title": "Anxiety"
+        },
+        "q8.dxbip": {
+            "title": "Bipolar disorder"
+        },
+        "q8.dxschiz": {
+            "title": "Schizophrenia"
+        },
+        "q8.dxalcoh": {
+            "title": "Alcohol or drug abuse"
+        },
+        "q8.dxsleep": {
+            "title": "Sleep disorder"
+        },
+        "q8.dxmigrain": {
+            "title": "Migraines/chronic headaches"
+        },
+        "concuss_hist_demen": {
+            "title": "9. Do you have a family history of dementia?"
+        },
+        "q9_if_yes.demmom": {
+            "title": "Mother"
+        },
+        "q9_if_yes.demdad": {
+            "title": "Father"
+        },
+        "q9_if_yes.demgmom": {
+            "title": "Grandmother"
+        },
+        "q9_if_yes.demgdad": {
+            "title": "Grandfather"
+        },
+        "q9_if_yes.demaunt": {
+            "title": "Aunt"
+        },
+        "q9_if_yes.demuncle": {
+            "title": "Uncle"
+        },
+        "q9_if_yes.dembro": {
+            "title": "Brother"
+        },
+        "q9_if_yes.demsis": {
+            "title": "Sister"
+        },
+        "concuss_clin_sig": {
+            "title": "Clinician's signature (required)"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "concuss": {
+            "title": "1. Have you ever had a hit to your head that caused a concussion?"
+        },
+        "q1_if_yes.concuss_number": {
+            "title": "How many concussions have you had?"
+        },
+        "q1_if_yes.concuss_age1": {
+            "title": "How old were you when you had your concussion?"
+        },
+        "q1_if_yes.concuss_age2": {
+            "title": "How old were you when you had your concussion(s)?"
+        },
+        "q1_if_yes.concuss_age3": {
+            "title": "How old were you when you had your concussion(s)?"
+        },
+        "multiple_hits": {
+            "title": "2. Have you ever had a period of time in which you experienced multiple, repeated hits to your head (e.g. contact sports, military duty)?"
+        },
+        "q2_if_yes.multiple_hits_begin": {
+            "title": "2a. How old were you when this began?"
+        },
+        "q2_if_yes.multiple_hits_end": {
+            "title": "2a. How old were you when this ended?"
+        },
+        "q2_if_yes.multiple_hits_ctx": {
+            "title": "2b. What was the context? (e.g. football, soccer, military, etc)"
+        },
+        "loc": {
+            "title": "3. Loss of Consciousness (LOC)"
+        },
+        "q3_if_yes.num_times_loc": {
+            "title": "How many times did you lose consciousness?"
+        },
+        "q3_if_yes.loc_age": {
+            "title": "How old were you? (age in years)"
+        },
+        "q3_if_yes.loc_dur": {
+            "title": "LOC duration"
+        },
+        "q3_if_yes.loc_age_2": {
+            "title": "How old were you? (age in years)"
+        },
+        "q3_if_yes.loc_dur_2": {
+            "title": "LOC duration"
+        },
+        "q3_if_yes.loc_age_3": {
+            "title": "How old were you? (age in years)"
+        },
+        "q3_if_yes.loc_dur_3": {
+            "title": "3 LOC duration"
+        },
+        "q3_if_no.loc_no_dk": {
+            "title": "At any time after you hit your head did you feel dazed or confused?"
+        },
+        "q3_if_no.loc_dazed": {
+            "title": "How many times has this happened to you?"
+        },
+        "q3_if_no.loc_dazed_durat": {
+            "title": "How long did this last (enter longest)?"
+        },
+        "q4.sitfall": {
+            "title": "A fall(e.g. from a bike or a horse)"
+        },
+        "q4.sitcar": {
+            "title": "A car accident (or motorcycle or ATV)"
+        },
+        "q4.sitobj": {
+            "title": "Being struck by an object (e.g. hit by a rock)"
+        },
+        "q4.sitplay": {
+            "title": "A playground accident"
+        },
+        "q4.sitabuse": {
+            "title": "Physical assault/abuse"
+        },
+        "q4.sitblast": {
+            "title": "Being near an explosion or blast"
+        },
+        "q4.sitsprt": {
+            "title": "Contact sports"
+        },
+        "concuss_doc": {
+            "title": "5. At any time after you hit your head, did you see a doctor?"
+        },
+        "q5_if_yes.concuss_er": {
+            "title": "Did you go to the emergency room?"
+        },
+        "q5_if_yes.concuss_ovrnght": {
+            "title": "Did you have to stay in the hospital overnight?"
+        },
+        "q5_if_yes.concuss_dx": {
+            "title": "Were you diagnosed by a doctor as having a concussion or brain injury at the time?"
+        },
+        "concuss_new_prob": {
+            "title": "6. At any time after you hit your head, did you (or a teacher or family member) notice any new problems?"
+        },
+        "q6_if_yes.physical.phyhead": {
+            "title": "Headache"
+        },
+        "q6_if_yes.physical.phydizzy": {
+            "title": "Dizziness"
+        },
+        "q6_if_yes.physical.phynaus": {
+            "title": "Nausea/vomiting"
+        },
+        "q6_if_yes.physical.phybal": {
+            "title": "Balance problems"
+        },
+        "q6_if_yes.physical.phyring": {
+            "title": "Ringing in the ears"
+        },
+        "q6_if_yes.physical.physleep": {
+            "title": "Difficulty sleeping"
+        },
+        "q6_if_yes.physical.phyvision": {
+            "title": "Changes with vision or eyesight"
+        },
+        "q6_if_yes.behavioral.behirrit": {
+            "title": "Irritability/loss of temper"
+        },
+        "q6_if_yes.behavioral.behdep": {
+            "title": "Feeling depressed or down"
+        },
+        "q6_if_yes.behavioral.behanx": {
+            "title": "Feeling anxious or nervous"
+        },
+        "q6_if_yes.behavioral.behselfcare": {
+            "title": "Ability to care for yourself"
+        },
+        "q6_if_yes.behavioral.behrelate": {
+            "title": "Relationships with others"
+        },
+        "q6_if_yes.cognitive.cogconcen": {
+            "title": "Difficulty concentrating"
+        },
+        "q6_if_yes.cognitive.cogmemnew": {
+            "title": "Difficulty remembering or learning new information"
+        },
+        "q6_if_yes.cognitive.cogmemold": {
+            "title": "Difficulty remembering how to do things you once could do"
+        },
+        "q6_if_yes.cognitive.cogsolve": {
+            "title": "Difficulty solving problems or making decisions"
+        },
+        "q6_if_yes.cognitive.cogtask": {
+            "title": "Difficulty in getting tasks started"
+        },
+        "q6_if_yes.cognitive.cogslow": {
+            "title": "Thinking more slowly, feeling slowed down"
+        },
+        "q6_if_yes.cognitive.cogspeech": {
+            "title": "Changes in your speech or trouble finding words"
+        },
+        "q6_if_yes.cognitive.cogfunct": {
+            "title": "Ability to function at work or school"
+        },
+        "concuss_sympt_recov": {
+            "title": "7. How long did it take for your symptoms to fully recover?"
+        },
+        "q8.dxadhd": {
+            "title": "ADHD/ADD"
+        },
+        "q8.dxldis": {
+            "title": "Learning disability"
+        },
+        "q8.dxdep": {
+            "title": "Depression"
+        },
+        "q8.dxanx": {
+            "title": "Anxiety"
+        },
+        "q8.dxbip": {
+            "title": "Bipolar disorder"
+        },
+        "q8.dxschiz": {
+            "title": "Schizophrenia"
+        },
+        "q8.dxalcoh": {
+            "title": "Alcohol or drug abuse"
+        },
+        "q8.dxsleep": {
+            "title": "Sleep disorder"
+        },
+        "q8.dxmigrain": {
+            "title": "Migraines/chronic headaches"
+        },
+        "concuss_hist_demen": {
+            "title": "9. Do you have a family history of dementia?"
+        },
+        "q9_if_yes.demmom": {
+            "title": "Mother"
+        },
+        "q9_if_yes.demdad": {
+            "title": "Father"
+        },
+        "q9_if_yes.demgmom": {
+            "title": "Grandmother"
+        },
+        "q9_if_yes.demgdad": {
+            "title": "Grandfather"
+        },
+        "q9_if_yes.demaunt": {
+            "title": "Aunt"
+        },
+        "q9_if_yes.demuncle": {
+            "title": "Uncle"
+        },
+        "q9_if_yes.dembro": {
+            "title": "Brother"
+        },
+        "q9_if_yes.demsis": {
+            "title": "Sister"
+        },
+        "concuss_clin_sig": {
+            "title": "Clinician's signature (required)"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "concuss": 1.0,
+        "q1_if_yes.concuss_number": 1.0,
+        "q1_if_yes.concuss_age1": 1.0,
+        "q1_if_yes.concuss_age2": 1.0,
+        "q1_if_yes.concuss_age3": 1.0,
+        "multiple_hits": 1.0,
+        "q2_if_yes.multiple_hits_begin": 1.0,
+        "q2_if_yes.multiple_hits_end": 1.0,
+        "q2_if_yes.multiple_hits_ctx": 1.0,
+        "loc": 1.0,
+        "q3_if_yes.num_times_loc": 1.0,
+        "q3_if_yes.loc_age": 1.0,
+        "q3_if_yes.loc_dur": 1.0,
+        "q3_if_yes.loc_age_2": 1.0,
+        "q3_if_yes.loc_dur_2": 1.0,
+        "q3_if_yes.loc_age_3": 1.0,
+        "q3_if_yes.loc_dur_3": 1.0,
+        "q3_if_no.loc_no_dk": 1.0,
+        "q3_if_no.loc_dazed": 1.0,
+        "q3_if_no.loc_dazed_durat": 1.0,
+        "q4.sitfall": 1.0,
+        "q4.sitcar": 1.0,
+        "q4.sitobj": 1.0,
+        "q4.sitplay": 1.0,
+        "q4.sitabuse": 1.0,
+        "q4.sitblast": 1.0,
+        "q4.sitsprt": 1.0,
+        "concuss_doc": 1.0,
+        "q5_if_yes.concuss_er": 1.0,
+        "q5_if_yes.concuss_ovrnght": 1.0,
+        "q5_if_yes.concuss_dx": 1.0,
+        "concuss_new_prob": 1.0,
+        "q6_if_yes.physical.phyhead": 1.0,
+        "q6_if_yes.physical.phydizzy": 1.0,
+        "q6_if_yes.physical.phynaus": 1.0,
+        "q6_if_yes.physical.phybal": 1.0,
+        "q6_if_yes.physical.phyring": 1.0,
+        "q6_if_yes.physical.physleep": 1.0,
+        "q6_if_yes.physical.phyvision": 1.0,
+        "q6_if_yes.behavioral.behirrit": 1.0,
+        "q6_if_yes.behavioral.behdep": 1.0,
+        "q6_if_yes.behavioral.behanx": 1.0,
+        "q6_if_yes.behavioral.behselfcare": 1.0,
+        "q6_if_yes.behavioral.behrelate": 1.0,
+        "q6_if_yes.cognitive.cogconcen": 1.0,
+        "q6_if_yes.cognitive.cogmemnew": 1.0,
+        "q6_if_yes.cognitive.cogmemold": 1.0,
+        "q6_if_yes.cognitive.cogsolve": 1.0,
+        "q6_if_yes.cognitive.cogtask": 1.0,
+        "q6_if_yes.cognitive.cogslow": 1.0,
+        "q6_if_yes.cognitive.cogspeech": 1.0,
+        "q6_if_yes.cognitive.cogfunct": 1.0,
+        "concuss_sympt_recov": 1.0,
+        "q8.dxadhd": 1.0,
+        "q8.dxldis": 1.0,
+        "q8.dxdep": 1.0,
+        "q8.dxanx": 1.0,
+        "q8.dxbip": 1.0,
+        "q8.dxschiz": 1.0,
+        "q8.dxalcoh": 1.0,
+        "q8.dxsleep": 1.0,
+        "q8.dxmigrain": 1.0,
+        "concuss_hist_demen": 1.0,
+        "q9_if_yes.demmom": 1.0,
+        "q9_if_yes.demdad": 1.0,
+        "q9_if_yes.demgmom": 1.0,
+        "q9_if_yes.demgdad": 1.0,
+        "q9_if_yes.demaunt": 1.0,
+        "q9_if_yes.demuncle": 1.0,
+        "q9_if_yes.dembro": 1.0,
+        "q9_if_yes.demsis": 1.0,
+        "concuss_clin_sig": 1.0
+    },
+    "changelog": "/profiles/changelogs/concussion_history.md"
+}
