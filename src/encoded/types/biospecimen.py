@@ -28,6 +28,7 @@ class Biospecimen(Item):
     }
     embedded = [
         'biofile',
+        'biofile.award',
         'surgery',
         'surgery.pathology_report',
         'surgery.surgery_procedure',
