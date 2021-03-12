@@ -104,30 +104,35 @@
         }
     },
     "facets": {
+        "lab.title": {
+            "title": "Lab"
+        },
+        "files.award.project": {
+            "title": "Project"
+        },
+        "files.library_type": {
+            "title": "Library Type"
+        },
         "assay_term_name": {
             "title": "Assay name"
         },
         "files.file_format": {
             "title": "Available file types"
         },
-        "files.platform.term_name": {
-            "title": "Platform"
-        },
         "files.run_type": {
             "title": "Run type"
         },
-        "files.read_length": {
-            "title": "Read length (nt)"
+        "files.biospecimen.tissue_type": {
+            "title": "Biospecimen Tissue Type"
         },
-
+        "files.biospecimen.anatomic_site": {
+            "title": "Biospecimen Anatomic Site"
+        },
         "date_released": {
             "title": "Date released"
         },
         "date_submitted": {
             "title": "Date submitted"
-        },
-        "replication_type": {
-            "title": "Replication type"
         },
         "status": {
             "title": "Status"
@@ -137,34 +142,46 @@
         "accession": {
             "title": "Accession"
         },
+        "lab.title": {
+            "title": "Lab"
+        },
+        "files.award.project": {
+            "title": "Project"
+        },
         "assay_term_name": {
             "title": "Assay name"
         },
-        "biospecimen_summary": {
-            "title": "Biospecimen summary"
-        },
-
-        "description": {
-            "title": "Description"
-        },
-        "status": {
-            "title": "Status"
+        "files.library_type": {
+            "title": "Library Type"
         },
         "files.@id": {
             "title": "Files"
+        },
+        "files.file_format": {
+            "title": "Available file types"
+        },
+        "files.run_type": {
+            "title": "Run type"
+        },
+        "files.biospecimen.tissue_type": {
+            "title": "Biospecimen Tissue Type"
+        },
+        "files.biospecimen.anatomic_site": {
+            "title": "Biospecimen Anatomic Site"
+        },
+        "status": {
+            "title": "Status"
         }
+    
     },
     "boost_values": {
         "accession": 1.0,
         "assay_term_name": 1.0,
-        "aliases": 1.0,
         "files.accession": 1.0,
         "files.file_format": 1.0,
-        "files.output_type": 1.0,
-        "files.md5sum": 1.0,
-        "possible_controls.accession": 1.0,
-        "references.title": 1.0
+        "files.md5sum": 1.0
     },
     "changelog": "/profiles/changelogs/bioexperiment.md"
 }
+
 
