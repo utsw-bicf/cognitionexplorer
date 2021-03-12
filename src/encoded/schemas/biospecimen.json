@@ -481,6 +481,9 @@
         "surgery.pathology_report.ajcc_tnm_stage": {
             "title": "TNM Stage (at presentation)"
         },
+        "biofile.award.project": {
+            "title": "Genomics Project"
+        },
         "biofile.assay_term_name": {
             "title": "Genomics Assay"
         },
@@ -531,6 +534,9 @@
         "surgery.pathology_report.histology": {
             "title": "Histologic Subtype"
         },
+        "biofile.award.project": {
+            "title": "Genomics Project"
+        },
         "biofile.assay_term_name": {
             "title": "Genomics Assay"
         },
@@ -538,7 +544,7 @@
             "title": "Genomics Library Type"
         },
         "biofile.@id": {
-            "title": "Files"
+            "title": "Genomics Files"
         },
         "biofile.file_format": {
             "title": "Genomics File Format"
@@ -557,4 +563,5 @@
     },
     "changelog": "/profiles/changelogs/biospecimen.md"
 }
+
 
