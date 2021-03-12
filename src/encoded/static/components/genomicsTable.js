@@ -13,7 +13,7 @@ class GenomicsTable extends React.Component {
         let files = [];
         for (let i = 0; i < data.length; i++) {     
             files[i] = {
-                award: data[i].award,
+                award: data[i].award.project,
                 biodataset: data[i].biodataset,
                 assay_term_name: data[i].assay_term_name,
                 library_type: data[i].library_type,
@@ -82,4 +82,5 @@ class GenomicsTable extends React.Component {
 }
 
 export default GenomicsTable;
+
 
