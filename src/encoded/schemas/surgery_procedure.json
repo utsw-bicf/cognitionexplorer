@@ -30,7 +30,6 @@
             "enum": [
                     "Ablation",
                     "Nephrectomy",
-                    "Metastectomy",
                     "Biopsy",
                     "Excision",
                     "Fine needle aspiration",
