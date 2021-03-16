@@ -63,6 +63,7 @@ ORDER = [
     'tvp_a4',
     'tvp_a3',
     'concussion_history',
+    'concussion_history_follow_up',
     'cart'
 ]
 

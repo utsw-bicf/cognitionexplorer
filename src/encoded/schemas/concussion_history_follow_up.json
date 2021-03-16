@@ -1,0 +1,1291 @@
+{
+    "title": "Concussion History Follow-up",
+    "description": "Local forms concussion history follow up form",
+    "id": "/profiles/concussion_history_follow_up.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "concuss_v2"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "concuss_v2": {
+            "title": "1. Have you experienced a concussion or hit your head since your last research study visit?",
+            "description": "(Please see previous concussion form for reference)If No, end form here.",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "concuss_v3": {
+            "title": "2. Did this cause any of the following: Being knocked out or unconscious; headache; feeling lightheaded/dizzy; feeling sick/throwing up; feeling unsteady/off balance; changes with vision/eyesight; ringing in the ears; change in mood; difficulty paying attention, remembering, thinking clearly, or speaking clearly? ",
+            "description": "If No, end form here.",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "fu_q2_if_yes": {
+            "title": "If Yes,",
+            "type": "object",
+            "properties": {
+                "concuss_v2_date": {
+                    "title": "2a.  when did this happen?",
+                    "description": "Date of Concussion",
+                    "comment": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                }
+            }
+        },
+        "loc_v2": {
+            "title": "3. Loss of Consciousness (LOC) When you hit your head, did you lose consciousness or were you knocked out?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "fu_q3_if_yes": {
+            "title": "If Yes",
+            "type": "object",
+            "properties": {
+                "num_times_loc_v2": {
+                    "title": "3a. How many times did you lose consciousness? \nEnter #",
+                    "description": "Number 1-6",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 6
+                },
+                "loc_date_v2": {
+                    "title": "3b. Enter the date of LOC",
+                    "description": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "loc_dur_v2": {
+                    "title": "3b. LOC duration",
+                    "description": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "enum": [
+                        "1 < 5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                },
+                "loc_date_2_v2": {
+                    "title": "3b. Enter the date of LOC",
+                    "description": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "loc_dur_2_v2": {
+                    "title": "3b. LOC duration",
+                    "type": "string",
+                    "enum": [
+                        "1 < 5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                },
+                "loc_date_3_v2": {
+                    "title": "3b. Enter the date of LOC",
+                    "description": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "loc_dur_3_v2": {
+                    "title": "3b. LOC duration",
+                    "type": "string",
+                    "enum": [
+                        "1 < 5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                },
+                "loc_date_4_v2": {
+                    "title": "3b. Enter the date of LOC",
+                    "description": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "loc_dur_4_v2": {
+                    "title": "3b. LOC duration",
+                    "type": "string",
+                    "enum": [
+                        "1 < 5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                },
+                "loc_date_5_v2": {
+                    "title": "3b. Enter the date of LOC",
+                    "description": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "loc_dur_5_v2": {
+                    "title": "3b. LOC duration",
+                    "type": "string",
+                    "enum": [
+                        "1 < 5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                },
+                "loc_date_6_v2": {
+                    "title": "3b. Enter the date of LOC",
+                    "description": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "loc_dur_6_v2": {
+                    "title": "3b. LOC duration",
+                    "type": "string",
+                    "enum": [
+                        "1 < 5 min",
+                        "2 5-10 min",
+                        "3 11-30 min",
+                        "4 31-60 min",
+                        "5 1-24 hrs",
+                        "6 >24 hrs",
+                        "9 Don't know"
+                    ]
+                }
+            }
+        },
+        "fu_q3_if_no": {
+            "title": "If No or Don't Know about LOC",
+            "type": "object",
+            "properties": {
+                "loc_no_dk_v2": {
+                    "title": "3c. When you hit your head did you feel dazed or confused?",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Don't know"
+                    ]
+                },
+                "fu_q3c_if_yes": {
+                    "title": "If Yes",
+                    "type": "object",
+                    "properties": {
+                        "loc_dazed_v2": {
+                            "title": "3ci. How many times have you hit your head and felt dazed and confused? \nEnter #",
+                            "description": "Number 0-10",
+                            "type": "integer",
+                            "minimum": 0,
+                            "maximum": 10
+                        },
+                        "loc_dazed_date_v2": {
+                            "title": "Enter the date you felt dazed and confused",
+                            "description": "Date can be submitted as YYYY-MM-DD.",
+                            "type": "string",
+                            "anyOf": [
+                                {
+                                    "format": "date"
+                                }
+                            ]
+                        },
+                        "loc_dazed_dur_v2": {
+                            "title": "Duration you felt dazed and confused",
+                            "description": "If the answer to Question 2 is Don't know, end form here.",
+                            "type": "string",
+                            "enum": [
+                                "1 < 5 min",
+                                "2 5-10 min",
+                                "3 11-30 min",
+                                "4 31-60 min",
+                                "5 1-24 hrs",
+                                "6 >24 hrs",
+                                "9 Don't know"
+                            ]
+                        },
+                        "loc_dazed_date_2_v2": {
+                            "title": "Enter the date you felt dazed and confused",
+                            "description": "Date can be submitted as YYYY-MM-DD.",
+                            "type": "string",
+                            "anyOf": [
+                                {
+                                    "format": "date"
+                                }
+                            ]
+                        },
+                        "loc_dazed_dur_2_v2": {
+                            "title": "Duration you felt dazed and confused",
+                            "description": "If the answer to Question 2 is Don't know, end form here.",
+                            "type": "string",
+                            "enum": [
+                                "1 < 5 min",
+                                "2 5-10 min",
+                                "3 11-30 min",
+                                "4 31-60 min",
+                                "5 1-24 hrs",
+                                "6 >24 hrs",
+                                "9 Don't know"
+                            ]
+                        },
+                        "loc_dazed_date_3_v2": {
+                            "title": "Enter the date you felt dazed and confused",
+                            "description": "Date can be submitted as YYYY-MM-DD.",
+                            "type": "string",
+                            "anyOf": [
+                                {
+                                    "format": "date"
+                                }
+                            ]
+                        },
+                        "loc_dazed_dur_3_v2": {
+                            "title": "Duration you felt dazed and confused",
+                            "description": "If the answer to Question 2 is Don't know, end form here.",
+                            "type": "string",
+                            "enum": [
+                                "1 < 5 min",
+                                "2 5-10 min",
+                                "3 11-30 min",
+                                "4 31-60 min",
+                                "5 1-24 hrs",
+                                "6 >24 hrs",
+                                "9 Don't know"
+                            ]
+                        },
+                        "loc_dazed_date_4_v2": {
+                            "title": "Enter the date you felt dazed and confused",
+                            "description": "Date can be submitted as YYYY-MM-DD.",
+                            "type": "string",
+                            "anyOf": [
+                                {
+                                    "format": "date"
+                                }
+                            ]
+                        },
+                        "loc_dazed_dur_4_v2": {
+                            "title": "Duration you felt dazed and confused",
+                            "description": "If the answer to Question 2 is Don't know, end form here.",
+                            "type": "string",
+                            "enum": [
+                                "1 < 5 min",
+                                "2 5-10 min",
+                                "3 11-30 min",
+                                "4 31-60 min",
+                                "5 1-24 hrs",
+                                "6 >24 hrs",
+                                "9 Don't know"
+                            ]
+                        },
+                        "loc_dazed_date_5_v2": {
+                            "title": "Enter the date you felt dazed and confused",
+                            "description": "Date can be submitted as YYYY-MM-DD.",
+                            "type": "string",
+                            "anyOf": [
+                                {
+                                    "format": "date"
+                                }
+                            ]
+                        },
+                        "loc_dazed_dur_5_v2": {
+                            "title": "Duration you felt dazed and confused",
+                            "description": "If the answer to Question 2 is Don't know, end form here.",
+                            "type": "string",
+                            "enum": [
+                                "1 < 5 min",
+                                "2 5-10 min",
+                                "3 11-30 min",
+                                "4 31-60 min",
+                                "5 1-24 hrs",
+                                "6 >24 hrs",
+                                "9 Don't know"
+                            ]
+                        },
+                        "loc_dazed_date_6_v2": {
+                            "title": "Enter the date you felt dazed and confused",
+                            "description": "Date can be submitted as YYYY-MM-DD.",
+                            "type": "string",
+                            "anyOf": [
+                                {
+                                    "format": "date"
+                                }
+                            ]
+                        },
+                        "loc_dazed_dur_6_v2": {
+                            "title": "Duration you felt dazed and confused",
+                            "description": "If the answer to Question 2 is Don't know, end form here.",
+                            "type": "string",
+                            "enum": [
+                                "1 < 5 min",
+                                "2 5-10 min",
+                                "3 11-30 min",
+                                "4 31-60 min",
+                                "5 1-24 hrs",
+                                "6 >24 hrs",
+                                "9 Don't know"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "fu_q4": {
+            "title": "4. In which of the following situations have you ever injured your head and had a concussion? ",
+            "description": "Check all that apply.",
+            "type": "object",
+            "properties": {
+                "sitfall_v2": {
+                    "title": "A fall (e.g. from a bike or a horse)",
+                    "type": "boolean"
+                },
+                "sitcar_v2": {
+                    "title": "A car accident (or motorcycle or ATV)",
+                    "type": "boolean"
+                },
+                "sitobj_v2": {
+                    "title": "Being struck by an object (e.g. hit by a rock)",
+                    "type": "boolean"
+                },
+                "sitabuse_v2": {
+                    "title": "Physical assault/abuse",
+                    "type": "boolean"
+                },
+                "sitblast_v2": {
+                    "title": "Being near an explosion or blast",
+                    "type": "boolean"
+                },
+                "sitsprt_v2": {
+                    "title": "Contact sports",
+                    "type": "boolean"
+                },
+                "sitother_v2": {
+                    "title": "Other",
+                    "type": "boolean"
+                }
+            }
+        },
+        "concuss_new_prob_v2": {
+            "title": "5. After you hit your head, did you or a family member notice any new problems?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "fu_q5_if_yes": {
+            "title": "If Yes,",
+            "type": "object",
+            "properties": {
+                "phyprob_v2": {
+                    "title": "5a. Physical problems.",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Don't know"
+                    ]
+                },
+                "fu_physical": {
+                    "title": "Check all that apply.",
+                    "type": "object",
+                    "properties": {
+                        "phyhead_v2": {
+                            "title": "Headache",
+                            "type": "boolean"
+                        },
+                        "phydizzy_v2": {
+                            "title": "Dizziness",
+                            "type": "boolean"
+                        },
+                        "phynaus_v2": {
+                            "title": "Nausea/vomiting",
+                            "type": "boolean"
+                        },
+                        "phybal_v2": {
+                            "title": "Balance problems",
+                            "type": "boolean"
+                        },
+                        "phyring_v2": {
+                            "title": "Ringing in the ears",
+                            "type": "boolean"
+                        },
+                        "physleep_v2": {
+                            "title": "Difficulty sleeping",
+                            "type": "boolean"
+                        },
+                        "phyvision_v2": {
+                            "title": "Changes with vision or eyesight",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "behprob_v2": {
+                    "title": "5b. Behavioral problems.",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Don't know"
+                    ]
+                },
+                "fu_behavioral": {
+                    "title": "Check all that apply.",
+                    "type": "object",
+                    "properties": {
+                        "behirrit_v2": {
+                            "title": "Irritability/loss of temper",
+                            "type": "boolean"
+                        },
+                        "behdep_v2": {
+                            "title": "Feeling depressed or down",
+                            "type": "boolean"
+                        },
+                        "behanx_v2": {
+                            "title": "Feeling anxious or nervous",
+                            "type": "boolean"
+                        },
+                        "behselfcare_v2": {
+                            "title": "Ability to care for yourself",
+                            "type": "boolean"
+                        },
+                        "behrelate_v2": {
+                            "title": "Relationships with others",
+                            "type": "boolean"
+                        }
+                    }
+                },
+                "cogprob_v2": {
+                    "title": "5c. Cognitive problems.",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Don't know"
+                    ]
+                },
+                "fu_cognitive": {
+                    "title": "Check all that apply.",
+                    "type": "object",
+                    "properties": {
+                        "cogconcen_v2": {
+                            "title": " Difficulty concentrating",
+                            "type": "boolean"
+                        },
+                        "cogmemnew_v2": {
+                            "title": "Difficulty remembering or learning new information",
+                            "type": "boolean"
+                        },
+                        "cogmemold_v2": {
+                            "title": "Difficulty remembering how to do things you once could do",
+                            "type": "boolean"
+                        },
+                        "cogsolve_v2": {
+                            "title": "Difficulty solving problems or making decisions",
+                            "type": "boolean"
+                        },
+                        "cogtask_v2": {
+                            "title": "Difficulty in getting tasks started",
+                            "type": "boolean"
+                        },
+                        "cogslow_v2": {
+                            "title": "Thinking more slowly, feeling slowed down",
+                            "type": "boolean"
+                        },
+                        "cogspeech_v2": {
+                            "title": "Changes in your speech or trouble finding words",
+                            "type": "boolean"
+                        },
+                        "cogfunct_v2": {
+                            "title": "Ability to function at work or school",
+                            "type": "boolean"
+                        }
+                    }
+                }
+            }
+        },
+        "concuss_sympt_recov_v2": {
+            "title": "6. Are you fully recovered (from worst injury, if more than one)?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "concuss_sympt_recov_dur_v2": {
+            "title": "If yes, how long did it take for your symptoms to fully recover?",
+            "description": "Choose one.",
+            "comment": "",
+            "type": "string",
+            "enum": [
+                "1 < 24 hrs",
+                "2 1-6 days",
+                "3 7-14 days",
+                "4 3-4 weeks",
+                "5 1-6 months",
+                "6 7-12 months",
+                "7 >1 year or never fully recovered",
+                "9 Don't know"
+            ]
+        },
+        "fu_q7": {
+            "title": "7. Before your head injury or concussion, were you ever diagnosed with any of the following or suspected of having any of the following? ",
+            "description": "Check all that apply.",
+            "type": "object",
+            "properties": {
+                "dxadhd_v2": {
+                    "title": "ADHD/ADD",
+                    "type": "boolean"
+                },
+                "dxldis_v2": {
+                    "title": "Learning disability",
+                    "type": "boolean"
+                },
+                "dxdep_v2": {
+                    "title": "Depression",
+                    "type": "boolean"
+                },
+                "dxanx_v2": {
+                    "title": "Anxiety",
+                    "type": "boolean"
+                },
+                "dxbip_v2": {
+                    "title": "Bipolar disorder",
+                    "type": "boolean"
+                },
+                "dxschiz_v2": {
+                    "title": "Schizophrenia",
+                    "type": "boolean"
+                },
+                "dxalcoh_v2": {
+                    "title": "Alcohol or drug abuse",
+                    "type": "boolean"
+                },
+                "dxsleep_v2": {
+                    "title": "Sleep disorder",
+                    "type": "boolean"
+                },
+                "dxmigrain_v2": {
+                    "title": "Migraines/chronic headaches",
+                    "type": "boolean"
+                }
+            }
+        },
+        "concuss_hist_demen_v2": {
+            "title": "8. Do you have a family history of dementia?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Don't know"
+            ]
+        },
+        "fu_q8_if_yes": {
+            "title": "If Yes, ",
+            "description": "Check all that apply.",
+            "type": "object",
+            "properties": {
+                "demmom_v2": {
+                    "title": "Mother",
+                    "type": "boolean"
+                },
+                "demdad_v2": {
+                    "title": "Father",
+                    "type": "boolean"
+                },
+                "demgmom_v2": {
+                    "title": "Grandmother",
+                    "type": "boolean"
+                },
+                "demgdad_v2": {
+                    "title": "Grandfather",
+                    "type": "boolean"
+                },
+                "demaunt_v2": {
+                    "title": "Aunt",
+                    "type": "boolean"
+                },
+                "demuncle_v2": {
+                    "title": "Uncle",
+                    "type": "boolean"
+                },
+                "dembro_v2": {
+                    "title": "Brother",
+                    "type": "boolean"
+                },
+                "demsis_v2": {
+                    "title": "Sister",
+                    "type": "boolean"
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "concuss_v2": {
+            "title": "1. Have you experienced a concussion or hit your head since your last research study visit?"
+        },
+        "concuss_v3": {
+            "title": "2. Did this cause any of the following: Being knocked out or unconscious; headache; feeling lightheaded/dizzy; feeling sick/throwing up; feeling unsteady/off balance; changes with vision/eyesight; ringing in the ears; change in mood; difficulty paying attention, remembering, thinking clearly, or speaking clearly? "
+        },
+        "fu_q2_if_yes.concuss_v2_date": {
+            "title": "2a.  when did this happen?"
+        },
+        "loc_v2": {
+            "title": "3. Loss of Consciousness (LOC) When you hit your head, did you lose consciousness or were you knocked out?"
+        },
+        "fu_q3_if_yes.num_times_loc_v2": {
+            "title": "3a. How many times did you lose consciousness? \nEnter #"
+        },
+        "fu_q3_if_yes.loc_date_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_2_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_2_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_3_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_3_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_4_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_4_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_5_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_5_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_6_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_6_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_no.loc_no_dk_v2": {
+            "title": "3c. When you hit your head did you feel dazed or confused?"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_v2": {
+            "title": "3ci. How many times have you hit your head and felt dazed and confused? \nEnter #"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_2_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_2_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_3_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_3_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_4_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_4_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_5_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_5_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_6_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_6_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q4.sitfall_v2": {
+            "title": "A fall (e.g. from a bike or a horse)"
+        },
+        "fu_q4.sitcar_v2": {
+            "title": "A car accident (or motorcycle or ATV)"
+        },
+        "fu_q4.sitobj_v2": {
+            "title": "Being struck by an object (e.g. hit by a rock)"
+        },
+        "fu_q4.sitabuse_v2": {
+            "title": "Physical assault/abuse"
+        },
+        "fu_q4.sitblast_v2": {
+            "title": "Being near an explosion or blast"
+        },
+        "fu_q4.sitsprt_v2": {
+            "title": "Contact sports"
+        },
+        "fu_q4.sitother_v2": {
+            "title": "Other"
+        },
+        "concuss_new_prob_v2": {
+            "title": "5. After you hit your head, did you or a family member notice any new problems?"
+        },
+        "fu_q5_if_yes.phyprob_v2": {
+            "title": "5a. Physical problems."
+        },
+        "fu_q5_if_yes.fu_physical.phyhead_v2": {
+            "title": "Headache"
+        },
+        "fu_q5_if_yes.fu_physical.phydizzy_v2": {
+            "title": "Dizziness"
+        },
+        "fu_q5_if_yes.fu_physical.phynaus_v2": {
+            "title": "Nausea/vomiting"
+        },
+        "fu_q5_if_yes.fu_physical.phybal_v2": {
+            "title": "Balance problems"
+        },
+        "fu_q5_if_yes.fu_physical.phyring_v2": {
+            "title": "Ringing in the ears"
+        },
+        "fu_q5_if_yes.fu_physical.physleep_v2": {
+            "title": "Difficulty sleeping"
+        },
+        "fu_q5_if_yes.fu_physical.phyvision_v2": {
+            "title": "Changes with vision or eyesight"
+        },
+        "fu_q5_if_yes.behprob_v2": {
+            "title": "5b. Behavioral problems."
+        },
+        "fu_q5_if_yes.fu_behavioral.behirrit_v2": {
+            "title": "Irritability/loss of temper"
+        },
+        "fu_q5_if_yes.fu_behavioral.behdep_v2": {
+            "title": "Feeling depressed or down"
+        },
+        "fu_q5_if_yes.fu_behavioral.behanx_v2": {
+            "title": "Feeling anxious or nervous"
+        },
+        "fu_q5_if_yes.fu_behavioral.behselfcare_v2": {
+            "title": "Ability to care for yourself"
+        },
+        "fu_q5_if_yes.fu_behavioral.behrelate_v2": {
+            "title": "Relationships with others"
+        },
+        "fu_q5_if_yes.cogprob_v2": {
+            "title": "5c. Cognitive problems."
+        },
+        "fu_q5_if_yes.fu_cognitive.cogconcen_v2": {
+            "title": " Difficulty concentrating"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogmemnew_v2": {
+            "title": "Difficulty remembering or learning new information"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogmemold_v2": {
+            "title": "Difficulty remembering how to do things you once could do"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogsolve_v2": {
+            "title": "Difficulty solving problems or making decisions"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogtask_v2": {
+            "title": "Difficulty in getting tasks started"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogslow_v2": {
+            "title": "Thinking more slowly, feeling slowed down"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogspeech_v2": {
+            "title": "Changes in your speech or trouble finding words"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogfunct_v2": {
+            "title": "Ability to function at work or school"
+        },
+        "concuss_sympt_recov_v2": {
+            "title": "6. Are you fully recovered (from worst injury, if more than one)?"
+        },
+        "concuss_sympt_recov_dur_v2": {
+            "title": "If yes, how long did it take for your symptoms to fully recover?"
+        },
+        "fu_q7.dxadhd_v2": {
+            "title": "ADHD/ADD"
+        },
+        "fu_q7.dxldis_v2": {
+            "title": "Learning disability"
+        },
+        "fu_q7.dxdep_v2": {
+            "title": "Depression"
+        },
+        "fu_q7.dxanx_v2": {
+            "title": "Anxiety"
+        },
+        "fu_q7.dxbip_v2": {
+            "title": "Bipolar disorder"
+        },
+        "fu_q7.dxschiz_v2": {
+            "title": "Schizophrenia"
+        },
+        "fu_q7.dxalcoh_v2": {
+            "title": "Alcohol or drug abuse"
+        },
+        "fu_q7.dxsleep_v2": {
+            "title": "Sleep disorder"
+        },
+        "fu_q7.dxmigrain_v2": {
+            "title": "Migraines/chronic headaches"
+        },
+        "concuss_hist_demen_v2": {
+            "title": "8. Do you have a family history of dementia?"
+        },
+        "fu_q8_if_yes.demmom_v2": {
+            "title": "Mother"
+        },
+        "fu_q8_if_yes.demdad_v2": {
+            "title": "Father"
+        },
+        "fu_q8_if_yes.demgmom_v2": {
+            "title": "Grandmother"
+        },
+        "fu_q8_if_yes.demgdad_v2": {
+            "title": "Grandfather"
+        },
+        "fu_q8_if_yes.demaunt_v2": {
+            "title": "Aunt"
+        },
+        "fu_q8_if_yes.demuncle_v2": {
+            "title": "Uncle"
+        },
+        "fu_q8_if_yes.dembro_v2": {
+            "title": "Brother"
+        },
+        "fu_q8_if_yes.demsis_v2": {
+            "title": "Sister"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "concuss_v2": {
+            "title": "1. Have you experienced a concussion or hit your head since your last research study visit?"
+        },
+        "concuss_v3": {
+            "title": "2. Did this cause any of the following: Being knocked out or unconscious; headache; feeling lightheaded/dizzy; feeling sick/throwing up; feeling unsteady/off balance; changes with vision/eyesight; ringing in the ears; change in mood; difficulty paying attention, remembering, thinking clearly, or speaking clearly? "
+        },
+        "fu_q2_if_yes.concuss_v2_date": {
+            "title": "2a.  when did this happen?"
+        },
+        "loc_v2": {
+            "title": "3. Loss of Consciousness (LOC) When you hit your head, did you lose consciousness or were you knocked out?"
+        },
+        "fu_q3_if_yes.num_times_loc_v2": {
+            "title": "3a. How many times did you lose consciousness? \nEnter #"
+        },
+        "fu_q3_if_yes.loc_date_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_2_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_2_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_3_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_3_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_4_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_4_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_5_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_5_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_yes.loc_date_6_v2": {
+            "title": "3b. Enter the date of LOC"
+        },
+        "fu_q3_if_yes.loc_dur_6_v2": {
+            "title": "3b. LOC duration"
+        },
+        "fu_q3_if_no.loc_no_dk_v2": {
+            "title": "3c. When you hit your head did you feel dazed or confused?"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_v2": {
+            "title": "3ci. How many times have you hit your head and felt dazed and confused? \nEnter #"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_2_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_2_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_3_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_3_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_4_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_4_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_5_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_5_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_6_v2": {
+            "title": "Enter the date you felt dazed and confused"
+        },
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_6_v2": {
+            "title": "Duration you felt dazed and confused"
+        },
+        "fu_q4.sitfall_v2": {
+            "title": "A fall (e.g. from a bike or a horse)"
+        },
+        "fu_q4.sitcar_v2": {
+            "title": "A car accident (or motorcycle or ATV)"
+        },
+        "fu_q4.sitobj_v2": {
+            "title": "Being struck by an object (e.g. hit by a rock)"
+        },
+        "fu_q4.sitabuse_v2": {
+            "title": "Physical assault/abuse"
+        },
+        "fu_q4.sitblast_v2": {
+            "title": "Being near an explosion or blast"
+        },
+        "fu_q4.sitsprt_v2": {
+            "title": "Contact sports"
+        },
+        "fu_q4.sitother_v2": {
+            "title": "Other"
+        },
+        "concuss_new_prob_v2": {
+            "title": "5. After you hit your head, did you or a family member notice any new problems?"
+        },
+        "fu_q5_if_yes.phyprob_v2": {
+            "title": "5a. Physical problems."
+        },
+        "fu_q5_if_yes.fu_physical.phyhead_v2": {
+            "title": "Headache"
+        },
+        "fu_q5_if_yes.fu_physical.phydizzy_v2": {
+            "title": "Dizziness"
+        },
+        "fu_q5_if_yes.fu_physical.phynaus_v2": {
+            "title": "Nausea/vomiting"
+        },
+        "fu_q5_if_yes.fu_physical.phybal_v2": {
+            "title": "Balance problems"
+        },
+        "fu_q5_if_yes.fu_physical.phyring_v2": {
+            "title": "Ringing in the ears"
+        },
+        "fu_q5_if_yes.fu_physical.physleep_v2": {
+            "title": "Difficulty sleeping"
+        },
+        "fu_q5_if_yes.fu_physical.phyvision_v2": {
+            "title": "Changes with vision or eyesight"
+        },
+        "fu_q5_if_yes.behprob_v2": {
+            "title": "5b. Behavioral problems."
+        },
+        "fu_q5_if_yes.fu_behavioral.behirrit_v2": {
+            "title": "Irritability/loss of temper"
+        },
+        "fu_q5_if_yes.fu_behavioral.behdep_v2": {
+            "title": "Feeling depressed or down"
+        },
+        "fu_q5_if_yes.fu_behavioral.behanx_v2": {
+            "title": "Feeling anxious or nervous"
+        },
+        "fu_q5_if_yes.fu_behavioral.behselfcare_v2": {
+            "title": "Ability to care for yourself"
+        },
+        "fu_q5_if_yes.fu_behavioral.behrelate_v2": {
+            "title": "Relationships with others"
+        },
+        "fu_q5_if_yes.cogprob_v2": {
+            "title": "5c. Cognitive problems."
+        },
+        "fu_q5_if_yes.fu_cognitive.cogconcen_v2": {
+            "title": " Difficulty concentrating"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogmemnew_v2": {
+            "title": "Difficulty remembering or learning new information"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogmemold_v2": {
+            "title": "Difficulty remembering how to do things you once could do"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogsolve_v2": {
+            "title": "Difficulty solving problems or making decisions"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogtask_v2": {
+            "title": "Difficulty in getting tasks started"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogslow_v2": {
+            "title": "Thinking more slowly, feeling slowed down"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogspeech_v2": {
+            "title": "Changes in your speech or trouble finding words"
+        },
+        "fu_q5_if_yes.fu_cognitive.cogfunct_v2": {
+            "title": "Ability to function at work or school"
+        },
+        "concuss_sympt_recov_v2": {
+            "title": "6. Are you fully recovered (from worst injury, if more than one)?"
+        },
+        "concuss_sympt_recov_dur_v2": {
+            "title": "If yes, how long did it take for your symptoms to fully recover?"
+        },
+        "fu_q7.dxadhd_v2": {
+            "title": "ADHD/ADD"
+        },
+        "fu_q7.dxldis_v2": {
+            "title": "Learning disability"
+        },
+        "fu_q7.dxdep_v2": {
+            "title": "Depression"
+        },
+        "fu_q7.dxanx_v2": {
+            "title": "Anxiety"
+        },
+        "fu_q7.dxbip_v2": {
+            "title": "Bipolar disorder"
+        },
+        "fu_q7.dxschiz_v2": {
+            "title": "Schizophrenia"
+        },
+        "fu_q7.dxalcoh_v2": {
+            "title": "Alcohol or drug abuse"
+        },
+        "fu_q7.dxsleep_v2": {
+            "title": "Sleep disorder"
+        },
+        "fu_q7.dxmigrain_v2": {
+            "title": "Migraines/chronic headaches"
+        },
+        "concuss_hist_demen_v2": {
+            "title": "8. Do you have a family history of dementia?"
+        },
+        "fu_q8_if_yes.demmom_v2": {
+            "title": "Mother"
+        },
+        "fu_q8_if_yes.demdad_v2": {
+            "title": "Father"
+        },
+        "fu_q8_if_yes.demgmom_v2": {
+            "title": "Grandmother"
+        },
+        "fu_q8_if_yes.demgdad_v2": {
+            "title": "Grandfather"
+        },
+        "fu_q8_if_yes.demaunt_v2": {
+            "title": "Aunt"
+        },
+        "fu_q8_if_yes.demuncle_v2": {
+            "title": "Uncle"
+        },
+        "fu_q8_if_yes.dembro_v2": {
+            "title": "Brother"
+        },
+        "fu_q8_if_yes.demsis_v2": {
+            "title": "Sister"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "concuss_v2": 1.0,
+        "concuss_v3": 1.0,
+        "fu_q2_if_yes.concuss_v2_date": 1.0,
+        "loc_v2": 1.0,
+        "fu_q3_if_yes.num_times_loc_v2": 1.0,
+        "fu_q3_if_yes.loc_date_v2": 1.0,
+        "fu_q3_if_yes.loc_dur_v2": 1.0,
+        "fu_q3_if_yes.loc_date_2_v2": 1.0,
+        "fu_q3_if_yes.loc_dur_2_v2": 1.0,
+        "fu_q3_if_yes.loc_date_3_v2": 1.0,
+        "fu_q3_if_yes.loc_dur_3_v2": 1.0,
+        "fu_q3_if_yes.loc_date_4_v2": 1.0,
+        "fu_q3_if_yes.loc_dur_4_v2": 1.0,
+        "fu_q3_if_yes.loc_date_5_v2": 1.0,
+        "fu_q3_if_yes.loc_dur_5_v2": 1.0,
+        "fu_q3_if_yes.loc_date_6_v2": 1.0,
+        "fu_q3_if_yes.loc_dur_6_v2": 1.0,
+        "fu_q3_if_no.loc_no_dk_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_2_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_2_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_3_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_3_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_4_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_4_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_5_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_5_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_date_6_v2": 1.0,
+        "fu_q3_if_no.fu_q3c_if_yes.loc_dazed_dur_6_v2": 1.0,
+        "fu_q4.sitfall_v2": 1.0,
+        "fu_q4.sitcar_v2": 1.0,
+        "fu_q4.sitobj_v2": 1.0,
+        "fu_q4.sitabuse_v2": 1.0,
+        "fu_q4.sitblast_v2": 1.0,
+        "fu_q4.sitsprt_v2": 1.0,
+        "fu_q4.sitother_v2": 1.0,
+        "concuss_new_prob_v2": 1.0,
+        "fu_q5_if_yes.phyprob_v2": 1.0,
+        "fu_q5_if_yes.fu_physical.phyhead_v2": 1.0,
+        "fu_q5_if_yes.fu_physical.phydizzy_v2": 1.0,
+        "fu_q5_if_yes.fu_physical.phynaus_v2": 1.0,
+        "fu_q5_if_yes.fu_physical.phybal_v2": 1.0,
+        "fu_q5_if_yes.fu_physical.phyring_v2": 1.0,
+        "fu_q5_if_yes.fu_physical.physleep_v2": 1.0,
+        "fu_q5_if_yes.fu_physical.phyvision_v2": 1.0,
+        "fu_q5_if_yes.behprob_v2": 1.0,
+        "fu_q5_if_yes.fu_behavioral.behirrit_v2": 1.0,
+        "fu_q5_if_yes.fu_behavioral.behdep_v2": 1.0,
+        "fu_q5_if_yes.fu_behavioral.behanx_v2": 1.0,
+        "fu_q5_if_yes.fu_behavioral.behselfcare_v2": 1.0,
+        "fu_q5_if_yes.fu_behavioral.behrelate_v2": 1.0,
+        "fu_q5_if_yes.cogprob_v2": 1.0,
+        "fu_q5_if_yes.fu_cognitive.cogconcen_v2": 1.0,
+        "fu_q5_if_yes.fu_cognitive.cogmemnew_v2": 1.0,
+        "fu_q5_if_yes.fu_cognitive.cogmemold_v2": 1.0,
+        "fu_q5_if_yes.fu_cognitive.cogsolve_v2": 1.0,
+        "fu_q5_if_yes.fu_cognitive.cogtask_v2": 1.0,
+        "fu_q5_if_yes.fu_cognitive.cogslow_v2": 1.0,
+        "fu_q5_if_yes.fu_cognitive.cogspeech_v2": 1.0,
+        "fu_q5_if_yes.fu_cognitive.cogfunct_v2": 1.0,
+        "concuss_sympt_recov_v2": 1.0,
+        "concuss_sympt_recov_dur_v2": 1.0,
+        "fu_q7.dxadhd_v2": 1.0,
+        "fu_q7.dxldis_v2": 1.0,
+        "fu_q7.dxdep_v2": 1.0,
+        "fu_q7.dxanx_v2": 1.0,
+        "fu_q7.dxbip_v2": 1.0,
+        "fu_q7.dxschiz_v2": 1.0,
+        "fu_q7.dxalcoh_v2": 1.0,
+        "fu_q7.dxsleep_v2": 1.0,
+        "fu_q7.dxmigrain_v2": 1.0,
+        "concuss_hist_demen_v2": 1.0,
+        "fu_q8_if_yes.demmom_v2": 1.0,
+        "fu_q8_if_yes.demdad_v2": 1.0,
+        "fu_q8_if_yes.demgmom_v2": 1.0,
+        "fu_q8_if_yes.demgdad_v2": 1.0,
+        "fu_q8_if_yes.demaunt_v2": 1.0,
+        "fu_q8_if_yes.demuncle_v2": 1.0,
+        "fu_q8_if_yes.dembro_v2": 1.0,
+        "fu_q8_if_yes.demsis_v2": 1.0
+    },
+    "changelog": "/profiles/changelogs/concussion_history_follow_up.md"
+}
