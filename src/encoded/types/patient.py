@@ -176,6 +176,7 @@ class Patient(Item):
         'tvp_z1x',
         'm1',
         'concussion_history',
+        'concussion_history_follow_up',
     ]
     rev = {
         'ivp_a1v3': ('Ivp_a1v3', 'patient'),
@@ -298,6 +299,7 @@ class Patient(Item):
         'tvp_z1x': ('Tvp_z1x', 'patient'),
         'm1': ('M1', 'patient'),
         'concussion_history': ('Concussion_history', 'patient'),
+        'concussion_history_follow_up': ('Concussion_history_follow_up', 'patient'),
     }
 
     audit_inherit = [
@@ -1491,6 +1493,18 @@ class Patient(Item):
         },
     })
     def concussion_history(self, request, concussion_history):
-                return paths_filtered_by_status(request, concussion_history) 
+        return paths_filtered_by_status(request, concussion_history) 
 
   
+       
+
+    @calculated_property(schema={
+        "title": "Concussion_history_follow_up",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Concussion_history_follow_up"
+        },
+    })
+    def concussion_history_follow_up(self, request, concussion_history_follow_up):
+        return paths_filtered_by_status(request, concussion_history_follow_up)
