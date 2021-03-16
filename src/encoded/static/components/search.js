@@ -1093,6 +1093,8 @@ export class ResultTable extends React.Component {
         const total = context.total;
         const columns = context.columns;
         const filters = context.filters;
+        const clear_filters = context.clear_filters;
+        const isPatient = clear_filters.toLowerCase().includes('type=Patient'.toLowerCase());
         const label = 'results';
         const visualizeDisabledTitle = context.total > VISUALIZE_LIMIT ? `Filter to ${VISUALIZE_LIMIT} to visualize` : '';
 
@@ -1107,12 +1109,18 @@ export class ResultTable extends React.Component {
                 />
                 {context.notification === 'Success' ?
                     <div className="search-results__result-list">
-                        <h4>Showing {results.length} of {total} {label}</h4>
-                        <SearchControls context={context} visualizeDisabledTitle={visualizeDisabledTitle} onFilter={this.onFilter} showResultsToggle />
-                        {!(actions && actions.length > 0) ?
-                            <CartSearchControls searchResults={context} />
-                        : null}
-                        <ResultTableList results={results} columns={columns} cartControls />
+                        {isPatient && total < 10 ?
+                            <h4>Patient list is restricted for specified query. Please expand your query</h4>
+                        :
+                        <div>
+                            <h4>Showing {results.length} of {total} {label}</h4>
+                            <SearchControls context={context} visualizeDisabledTitle={visualizeDisabledTitle} onFilter={this.onFilter} showResultsToggle />
+                            {!(actions && actions.length > 0) ?
+                                <CartSearchControls searchResults={context} />
+                            : null}
+                            <ResultTableList results={results} columns={columns} cartControls />
+                        </div>
+                        }
                     </div>
                 :
                     <h4>{context.notification}</h4>
@@ -1225,3 +1233,4 @@ Search.lastRegion = {
 };
 
 globals.contentViews.register(Search, 'Search');
+
