@@ -33,23 +33,23 @@ class Biospecimen extends React.Component {
       createPathTable(){
         const context = this.props.context;
         let list = []
-        if (context.surgery && context.surgery.pathology_report) {
+        if (context.surgery && context.surgery.surgery_procedure.pathology_report) {
 
-            for(let i = 0; i < context.surgery.pathology_report.length; i++){
+            for(let i = 0; i < context.surgery.surgery_procedure.pathology_report.length; i++){
                 list.push(<div className="row" style={{ borderTop: "1px solid #151313" }}></div>)
-                list.push(<div data-test="surgery.pathology_report"><dt>Pathology Report</dt><dd><a href={context.surgery.pathology_report[i]['@id']}>{context.surgery.pathology_report[i].accession}</a></dd> </div>)
-                list.push(<div data-test="surgery.pathology_report"><dt>Histologic Subtype</dt><dd>{context.surgery.pathology_report[i].histology}</dd> </div>)
+                list.push(<div data-test="surgery.pathology_report"><dt>Pathology Report</dt><dd><a href={context.surgery.surgery_procedure.pathology_report[i]['@id']}>{context.surgery.pathology_report[i].accession}</a></dd> </div>)
+                list.push(<div data-test="surgery.pathology_report"><dt>Histologic Subtype</dt><dd>{context.surgery.surgery_procedure.pathology_report[i].histology}</dd> </div>)
                 if (context.surgery.pathology_report[i].t_stage) {
-                    list.push(<div data-test="surgery.pathology_report"><dt>pT Stage</dt><dd>{context.surgery.pathology_report[i].t_stage}</dd> </div>)
+                    list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pT Stage</dt><dd>{context.surgery.surgery_procedure.pathology_report[i].t_stage}</dd> </div>)
                 }
                 if (context.surgery.pathology_report[i].n_stage) {
-                    list.push(<div data-test="surgery.pathology_report"><dt>pN Stage</dt><dd>{context.surgery.pathology_report[i].n_stage}</dd> </div>)
+                    list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pN Stage</dt><dd>{context.surgery.surgery_procedure.pathology_report[i].n_stage}</dd> </div>)
                 }
                 if (context.surgery.pathology_report[i].m_stage) {
-                    list.push(<div data-test="surgery.pathology_report"><dt>pM Stage</dt><dd>{context.surgery.pathology_report[i].m_stage}</dd> </div>)
+                    list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pM Stage</dt><dd>{context.surgery.surgery_procedure.pathology_report[i].m_stage}</dd> </div>)
                 }
                 if (context.surgery.pathology_report[i].ajcc_version){
-                    list.push(<div data-test="surgery.pathology_report"><dt>AJCC Version</dt><dd>{context.surgery.pathology_report[i].ajcc_version}</dd> </div>)
+                    list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>AJCC Version</dt><dd>{context.surgery.surgery_procedure.pathology_report[i].ajcc_version}</dd> </div>)
                 }
 
 
