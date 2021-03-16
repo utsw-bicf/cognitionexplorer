@@ -1110,7 +1110,7 @@ export class ResultTable extends React.Component {
                 {context.notification === 'Success' ?
                     <div className="search-results__result-list">
                         {isPatient && total < 10 ?
-                            <h4>Patient list is restricted for specified query. Please expand your query</h4>
+                            <h4>Patient list is restricted for specified query. Please expand your query.</h4>
                         :
                         <div>
                             <h4>Showing {results.length} of {total} {label}</h4>
