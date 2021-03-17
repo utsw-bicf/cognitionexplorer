@@ -50,7 +50,9 @@ class FormsTable extends React.Component {
             z1x_name: "",
             z1x_id: "",
             m1_name: "",
-            m1_id: ""
+            m1_id: "",
+            local_form_name: "",
+            local_form_id: "",
 
         }
         if (data.ivp_a2.length > 0) {
@@ -114,6 +116,10 @@ class FormsTable extends React.Component {
             visitObj.z1x_id = data.ivp_z1x[0]['@id']
             visitObj.z1x_name = "ivp_z1x"
         }
+        if (data.updrs.length > 0) {
+            visitObj.local_form_id = data.updrs[0]['@id']
+            visitObj.local_form_name = "UPDRS"
+        }
         forms[0] = visitObj
         let followUpVisitTimes = this.getFollowUpVisitTimes(data)
 
@@ -160,7 +166,9 @@ class FormsTable extends React.Component {
                 z1x_name: "",
                 z1x_id: "",
                 m1_name: "",
-                m1_id: ""
+                m1_id: "",
+                local_form_name: "",
+                local_form_id: ""
             }
             forms.push(visitObj)
         }
@@ -426,6 +434,10 @@ class FormsTable extends React.Component {
             t1_id: {
                 title: 'Form T1',
                 display: form => <a href={form.t1_id}>{form.t1_name}</a>,
+            },
+            local_form_id: {
+                title: 'Local Forms',
+                display: form => <a href={form.local_form_id}>{form.local_form_name}</a>,
             },
 
 
