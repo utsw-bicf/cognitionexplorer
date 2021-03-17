@@ -177,6 +177,7 @@ class Patient(Item):
         'm1',
         'concussion_history',
         'concussion_history_follow_up',
+        'updrs', 
     ]
     rev = {
         'ivp_a1v3': ('Ivp_a1v3', 'patient'),
@@ -300,6 +301,8 @@ class Patient(Item):
         'm1': ('M1', 'patient'),
         'concussion_history': ('Concussion_history', 'patient'),
         'concussion_history_follow_up': ('Concussion_history_follow_up', 'patient'),
+        'updrs': ('Updrs', 'patient'),
+
     }
 
     audit_inherit = [
@@ -1508,3 +1511,16 @@ class Patient(Item):
     })
     def concussion_history_follow_up(self, request, concussion_history_follow_up):
         return paths_filtered_by_status(request, concussion_history_follow_up)
+   
+
+
+    @calculated_property(schema={
+        "title": "Updrs",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Updrs"
+        },
+    })
+    def updrs(self, request, updrs):
+        return paths_filtered_by_status(request, updrs)

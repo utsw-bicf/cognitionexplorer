@@ -356,6 +356,10 @@ class FormsTable extends React.Component {
             visitObj.local_form_id = data.concussion_history[0]['@id']
             visitObj.local_form_name = "concussion_history"
         }
+        if (data.updrs.length > 0) {
+            visitObj.local_form_id = data.updrs[0]['@id']
+            visitObj.local_form_name = "UPDRS"
+        }
         forms[0] = visitObj
         let followUpVisitTimes = this.getFollowUpVisitTimes(data)
 
@@ -1110,11 +1114,11 @@ class FormsTable extends React.Component {
                 title: 'Form M1',
                 display: form => <a href={form.m1_id}>{form.m1_name}</a>,
             },
-
-            // local_form_id: {
-            //     title: 'Local Forms',
-            //     display: form => <a href={form.local_form_id}>{form.local_form_name}</a>,
-            // },
+          
+            local_form_id: {
+                title: 'Local Forms',
+                display: form => <a href={form.local_form_id}>{form.local_form_name}</a>,
+            },
 
 
 

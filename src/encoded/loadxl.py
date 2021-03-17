@@ -156,8 +156,8 @@ ORDER = [
     'm1',
     'concussion_history',
     'concussion_history_follow_up',
-    'cart',
-   
+    'updrs',
+    'cart'
 ]
 
 IS_ATTACHMENT = [
