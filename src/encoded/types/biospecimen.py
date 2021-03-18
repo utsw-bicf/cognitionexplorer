@@ -32,6 +32,7 @@ class Biospecimen(Item):
         'biolibrary.bioreplicate',
         'surgery',
         'surgery.surgery_procedure.pathology_report',
+        'surgery.surgery_procedure',
         'ihc',
         'award',
         'documents'

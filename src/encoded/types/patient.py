@@ -179,7 +179,7 @@ class Patient(Item):
         'supportive_medications',
         'surgery',
         'surgery.surgery_procedure',
-        'surgery.pathology_report',
+        'surgery.surgery_procedure.pathology_report',
         'biospecimen']
     rev = {
         'labs': ('LabResult', 'patient'),
@@ -1456,11 +1456,11 @@ class Patient(Item):
                 'medications.name',
                 'surgery.surgery_procedure.surgery_type',
                 'surgery.hospital_location',
-                'surgery.pathology_report.tumor_size_range',
-                'surgery.pathology_report.ajcc_p_stage',
-                'surgery.pathology_report.n_stage',
-                'surgery.pathology_report.m_stage',
-                'surgery.pathology_report.ajcc_tnm_stage',
+                'surgery.surgery_procedure.pathology_report.tumor_size_range',
+                'surgery.surgery_procedure.pathology_report.ajcc_p_stage',
+                'surgery.surgery_procedure.pathology_report.n_stage',
+                'surgery.surgery_procedure.pathology_report.m_stage',
+                'surgery.surgery_procedure.pathology_report.ajcc_tnm_stage',
                 'germline_summary',
                 'ihc.antibody',
                 'ihc.result',
@@ -1470,16 +1470,16 @@ class Patient(Item):
         },
         'x': {
             'facets': [
-                'surgery.pathology_report.histology_filter',
+                'surgery.surgery_procedure.pathology_report.histology_filter',
             ],
-            'group_by': 'surgery.pathology_report.histology_filter',
+            'group_by': 'surgery.surgery_procedure.pathology_report.histology_filter',
             'label': 'histology',
         },
     }
 
     summary_matrix = {
         'x': {
-            'group_by': 'surgery.pathology_report.histology_filter'
+            'group_by': 'surgery.surgery_procedure.pathology_report.histology_filter'
         },
         'y': {
             'group_by': ['race', 'sex']

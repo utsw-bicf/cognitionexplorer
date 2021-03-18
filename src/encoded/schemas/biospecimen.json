@@ -463,22 +463,22 @@
         "activity_status": {
             "title": "Specimen Activity Status"
         },
-        "surgery.pathology_report.histology_filter": {
+        "surgery.surgery_procedure.pathology_report.histology_filter": {
             "title": "Histologic Subtype"
         },
-        "surgery.pathology_report.t_stage": {
+        "surgery.surgery_procedure.pathology_report.t_stage": {
             "title": "pT Stage (at presentation)"
         },
-        "surgery.pathology_report.n_stage": {
+        "surgery.surgery_procedure.pathology_report.n_stage": {
             "title": "pN Stage (at presentation)"
         },
-        "surgery.pathology_report.m_stage": {
+        "surgery.surgery_procedure.pathology_report.m_stage": {
             "title": "pM Stage (at presentation)"
         },
-        "surgery.pathology_report.ajcc_version": {
+        "surgery.surgery_procedure.pathology_report.ajcc_version": {
             "title": "AJCC Version (at presentation)"
         },
-        "surgery.pathology_report.ajcc_tnm_stage": {
+        "surgery.surgery_procedure.pathology_report.ajcc_tnm_stage": {
             "title": "TNM Stage (at presentation)"
         },
         "biolibrary.nucleic_acid_term_name": {
