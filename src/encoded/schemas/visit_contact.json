@@ -1,0 +1,2373 @@
+{
+    "title": "Visit/Contact",
+    "description": "ADC Form A0.2",
+    "id": "/profiles/visit_contact.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "isadcvis"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "isadcvis": {
+            "title": "1. ADC Cohort Visit?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "adcvistype": {
+            "title": "If yes, which type of visit?",
+            "type": "string",
+            "enum": [
+                "1 Initial",
+                "2 Follow-up",
+                "3 Exit"
+            ]
+        },
+        "isrchvis": {
+            "title": "2. Research study visit",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "rchvistype": {
+            "title": "Research study visit type",
+            "type": "string",
+            "enum": [
+                "1 Initial",
+                "2 Follow-up",
+                "3 Exit"
+            ]
+        },
+        "study1": {
+            "title": "Study (1)",
+            "type": "string",
+            "enum": [
+                "A Skin Biopsy",
+                "AA Aricept",
+                "AB Caregiver Enrichment Program",
+                "AC Milameline 979-15",
+                "AD Exelon ENAB-356",
+                "AE Galantamine (GAL-10-18)",
+                "AF MCI",
+                "AG MINT",
+                "AH Melatonin",
+                "AI APO-E",
+                "AJ Hyperlipidemia",
+                "AK Normal Control Instrument",
+                "AL NSAID",
+                "AM Exelon-TFLS",
+                "AN Pfizer  CP-457920",
+                "AO GAL-INT-11",
+                "AP Memantine 01-03",
+                "AQ Memantine 12",
+                "AR Exelon - CENA-713B US01",
+                "AS CATIE",
+                "AT Primary Prevention Instrument",
+                "AU Fujisawa FK-960-0005",
+                "AV Homocysteine - Diaz-Arristia",
+                "AW TAP/DAP",
+                "AX Levetiracetam",
+                "AY Statin-Hypolipedemia",
+                "AZ Xaliproden/EFC2946",
+                "B Hydergine",
+                "BA FTD-Memantine",
+                "BB TAP-DAP",
+                "BC Memantine-23",
+                "BD Ono 2506 PO",
+                "BE simvastatin Double Blind",
+                "BF Homocysteine-ADCS",
+                "BG Huperzine Double Blind",
+                "BH Pilot-Pet",
+                "BI Elan AAB-001-201",
+                "BJ LOAD Genetics",
+                "BK MPC 7869-Flurizan",
+                "BL Control Autopsy Cohort",
+                "BM ADNI",
+                "BN Vega-Weiner-DEXA",
+                "BO Lu-Allen",
+                "BP Texas AD Research Consortium",
+                "BQ DHA-Omega III",
+                "BR Huperzine Open Label",
+                "BS Valproate Double Blind",
+                "BT Flurizan Open Label",
+                "BU Allen/ Rypma",
+                "BV Lu-CO2",
+                "BW Womack K23",
+                "BX MRI Studies (Hao)",
+                "BY E2020-G000-326",
+                "BZ CVR",
+                "C Cortisol Secretion/AD Progress",
+                "CA NTB-Elan",
+                "CB High-Low (Tent Study)",
+                "CC Elan-301/302",
+                "CD Rage",
+                "CE Elan 251",
+                "CF Novartis CAD 106",
+                "CG Hart-FMRI/FEEG",
+                "CH BMS-CN156-013/ CN156-018",
+                "CI Janssen 351",
+                "CJ Baxter-IGIV",
+                "CK Rong Zhang -Exercise-",
+                "CL ADNI-GO",
+                "CM Free space",
+                "CN ADNI-2",
+                "CO Dallas Heart Study",
+                "CP LBD Module",
+                "CQ FTLD-module",
+                "D IV Physostigmine w/ Spect",
+                "E Longitudinal Neuropsych",
+                "F Physostigmine Dbl Blind Dose",
+                "G Dup 996-014/016",
+                "H SQ 29,852 Open Label",
+                "I Oxiracetam 800Mg D/B Placebo",
+                "J Acetyl-L-Carnitine 1gm D/B Pla",
+                "K DuP 996-019/025",
+                "L Heptylphysostigmine Phase II",
+                "M Eli Lilly LY246708",
+                "N Hoffman LaRoche RO-19-1327",
+                "O Eisai - E2020 301/303",
+                "P SmithKline 202026 005/007",
+                "Q Agitation Protocol",
+                "R Estrogen Protocol",
+                "S Prednisone Protocol",
+                "T Spanish Instrument Protocol",
+                "U Sigma Tau  ST-94-101",
+                "V Instrument Protocol",
+                "W SmithKline 202026 045",
+                "X Physician IND-acetyl-l-carniti",
+                "Y Idebenone",
+                "Z Postmortem Brain Donation"
+            ]
+        },
+        "phase1": {
+            "title": "Phase (Study 1)",
+            "type": "string",
+            "enum": [
+                "0  0",
+                "1  1",
+                "2  2",
+                "3  3",
+                "4  4"
+            ]
+        },
+        "study2": {
+            "title": "Study (2)",
+            "type": "string",
+            "enum": [
+                "A Skin Biopsy",
+                "AA Aricept",
+                "AB Caregiver Enrichment Program",
+                "AC Milameline 979-15",
+                "AD Exelon ENAB-356",
+                "AE Galantamine (GAL-10-18)",
+                "AF MCI",
+                "AG MINT",
+                "AH Melatonin",
+                "AI APO-E",
+                "AJ Hyperlipidemia",
+                "AK Normal Control Instrument",
+                "AL NSAID",
+                "AM Exelon-TFLS",
+                "AN Pfizer  CP-457920",
+                "AO GAL-INT-11",
+                "AP Memantine 01-03",
+                "AQ Memantine 12",
+                "AR Exelon - CENA-713B US01",
+                "AS CATIE",
+                "AT Primary Prevention Instrument",
+                "AU Fujisawa FK-960-0005",
+                "AV Homocysteine - Diaz-Arristia",
+                "AW TAP/DAP",
+                "AX Levetiracetam",
+                "AY Statin-Hypolipedemia",
+                "AZ Xaliproden/EFC2946",
+                "B Hydergine",
+                "BA FTD-Memantine",
+                "BB TAP-DAP",
+                "BC Memantine-23",
+                "BD Ono 2506 PO",
+                "BE simvastatin Double Blind",
+                "BF Homocysteine-ADCS",
+                "BG Huperzine Double Blind",
+                "BH Pilot-Pet",
+                "BI Elan AAB-001-201",
+                "BJ LOAD Genetics",
+                "BK MPC 7869-Flurizan",
+                "BL Control Autopsy Cohort",
+                "BM ADNI",
+                "BN Vega-Weiner-DEXA",
+                "BO Lu-Allen",
+                "BP Texas AD Research Consortium",
+                "BQ DHA-Omega III",
+                "BR Huperzine Open Label",
+                "BS Valproate Double Blind",
+                "BT Flurizan Open Label",
+                "BU Allen/ Rypma",
+                "BV Lu-CO2",
+                "BW Womack K23",
+                "BX MRI Studies (Hao)",
+                "BY E2020-G000-326",
+                "BZ CVR",
+                "C Cortisol Secretion/AD Progress",
+                "CA NTB-Elan",
+                "CB High-Low (Tent Study)",
+                "CC Elan-301/302",
+                "CD Rage",
+                "CE Elan 251",
+                "CF Novartis CAD 106",
+                "CG Hart-FMRI/FEEG",
+                "CH BMS-CN156-013/ CN156-018",
+                "CI Janssen 351",
+                "CJ Baxter-IGIV",
+                "CK Rong Zhang -Exercise-",
+                "CL ADNI-GO",
+                "CM Free space",
+                "CN ADNI-2",
+                "CO Dallas Heart Study",
+                "CP LBD Module",
+                "CQ FTLD-module",
+                "D IV Physostigmine w/ Spect",
+                "E Longitudinal Neuropsych",
+                "F Physostigmine Dbl Blind Dose",
+                "G Dup 996-014/016",
+                "H SQ 29,852 Open Label",
+                "I Oxiracetam 800Mg D/B Placebo",
+                "J Acetyl-L-Carnitine 1gm D/B Pla",
+                "K DuP 996-019/025",
+                "L Heptylphysostigmine Phase II",
+                "M Eli Lilly LY246708",
+                "N Hoffman LaRoche RO-19-1327",
+                "O Eisai - E2020 301/303",
+                "P SmithKline 202026 005/007",
+                "Q Agitation Protocol",
+                "R Estrogen Protocol",
+                "S Prednisone Protocol",
+                "T Spanish Instrument Protocol",
+                "U Sigma Tau  ST-94-101",
+                "V Instrument Protocol",
+                "W SmithKline 202026 045",
+                "X Physician IND-acetyl-l-carniti",
+                "Y Idebenone",
+                "Z Postmortem Brain Donation"
+            ]
+        },
+        "phase2": {
+            "title": "Phase (Study 2)",
+            "type": "string",
+            "enum": [
+                "0  0",
+                "1  1",
+                "2  2",
+                "3  3",
+                "4  4"
+            ]
+        },
+        "vishow": {
+            "title": "3. Visit made",
+            "type": "string",
+            "enum": [
+                "1 In person",
+                "2 By phone",
+                "3 Tele-medicine",
+                "9 Unknown"
+            ]
+        },
+        "medck": {
+            "title": "Med check",
+            "description": "(Field discontinued 9-1-2005)",
+            "type": "string",
+            "enum": [
+                "1  Yes",
+                "0  No",
+                "9  Unknown"
+            ]
+        },
+        "vissite": {
+            "title": "4. Site of visit",
+            "type": "string",
+            "enum": [
+                "1 UTSW",
+                "2 Native American Satellite",
+                "3 Other"
+            ]
+        },
+        "vissite_natam": {
+            "title": "Native American Satellite",
+            "type": "string"
+        },
+        "vissite_oth": {
+            "title": "Specify other site",
+            "type": "string"
+        },
+        "time_phone": {
+            "title": "Approximate time (hours/week) caregiver spends with patient by PHONE",
+            "type": "string"
+        },
+        "time_inperson": {
+            "title": "Approximate time (hours/week) caregiver spends with patient IN PERSON",
+            "type": "string"
+        },
+        "marstat": {
+            "title": "Marital status.",
+            "type": "string"
+        },
+        "residence": {
+            "title": "Type of Residence.",
+            "type": "string"
+        },
+        "residencedt": {
+            "title": "If not private residence, date entered.",
+            "type": "string"
+        },
+        "consent": {
+            "title": "Consent",
+            "type": "object",
+            "properties": {
+                "cinfo": {
+                    "title": "1. May the investigators use the information from your evaluations and treatment, without identifying you, to learn about brain disease?",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Not answered (missing)"
+                    ]
+                },
+                "csampblood": {
+                    "title": "2. May the investigators obtain a blood sample?",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Not answered (missing)"
+                    ]
+                },
+                "csampswab": {
+                    "title": "If you are not willing to let the investigators obtain a blood sample, may they obtain cells by a cheek swab?",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 N0",
+                        "9 Not answered"
+                    ]
+                },
+                "csamppunct": {
+                    "title": "3. May the investigators perform a lumbar puncture to obtain a CSF sample?",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Not answered (missing)"
+                    ]
+                },
+                "cdonatebr": {
+                    "title": "4. Are you willing to donate your brain at the time of death for research? ",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "0 0 No",
+                        "1 Yes",
+                        "2 Refused",
+                        "3 Decision deferred",
+                        "9 Unknown, not answered"
+                    ]
+                },
+                "cdonatebrdt": {
+                    "title": "If yes, date of assent",
+                    "description": "Date can be submitted as YYYY-MM-DD.(Added to Visit/Contact 1-18-2012)",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "csampbrain": {
+                    "title": "5. May the investigators keep your samples for future research to learn about brain diseases?",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Not answered (missing)"
+                    ]
+                },
+                "csampbrainshare": {
+                    "title": "May the investigators share your samples/clinical info with other researchers to learn about brain diseases?",
+                    "description": "(Added to Visit/Contact 10-9-2018)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Not answered"
+                    ]
+                },
+                "cirb": {
+                    "title": "6. May a representative of the Institutional Review Board speak with you about your experience with this research?",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Not answered (missing)"
+                    ]
+                },
+                "cfaminvite": {
+                    "title": "7. May researchers invite other members of your family to participate in this research?",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Not answered (missing)"
+                    ]
+                },
+                "cfcellline": {
+                    "title": "7b. Do you agree for part of your blood/tissue sample to be used to grow a long-term cell line?",
+                    "description": "(Added to Visit/Contact 2-25-2008)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Not answered (missing)"
+                    ]
+                },
+                "autcons": {
+                    "title": "Autopsy consent on file?",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "2 Refused",
+                        "3 Decision deferred",
+                        "9 Unknown"
+                    ]
+                },
+                "autconsdt": {
+                    "title": "Autopsy consent date",
+                    "description": "(Added to Visit/Contact 9-1-2005)",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                }
+            }
+        },
+        "nacc_diag": {
+            "title": "NACC Diagnosis",
+            "type": "object",
+            "properties": {
+                "clindem": {
+                    "title": "1. Did the subject meet clinical criteria for dementia (e.g., DSM IV or other) at the most recent evaluation for dementia?",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Unknown"
+                    ]
+                },
+                "notdem": {
+                    "title": "Not demented\nIf subject did not meet criteria for dementia, what was the diagnosis?",
+                    "type": "string",
+                    "enum": [
+                        "1, 1 Not demented control subject, no neurological disorder",
+                        "2 Not demented, but has other neurological disorder (Parkinson's, MS, etc.)",
+                        "3 Questionable dementia (e.g., CDR 0.5) or cognitive impairment (MCI, AAMI)",
+                        "4 Down Syndrome but not demented",
+                        "5 Other",
+                        "6 No diagnosis made"
+                    ]
+                },
+                "notdem_oth": {
+                    "title": "Specify other diagnosis",
+                    "type": "string"
+                },
+                "alzdem": {
+                    "title": "Demented \nIf subject met criteria for dementia, what was the primary diagnosis?",
+                    "description": "Alzheimer's Dementia types:\nPR - Probable Alzheimer's disease (e.g. NINCDS 'probable Alzheimer's disease' or DSM IV 'dementia of the Alzheimer's type')\nPO - Alzheimer's disease with other conditions or variations in course (e.g. NINCDS 'possible Alzheimer's disease', DSM IV multiple etiologies where Alzheimer's is the predominate cause)",
+                    "type": "string",
+                    "enum": [
+                        "1, 1 PR",
+                        "2 PO"
+                    ]
+                },
+                "mixed": {
+                    "title": "Mixed AD/LDB",
+                    "description": "If PR or PO checked for Alzheimer's Dementias, does subject also meet clinicalcriteria for dementia with Lewy bodies, Lewy body variant Alzheimer's disease, or diffuse Lewy body disease? (AL)",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Unknown"
+                    ]
+                },
+                "nonaddem": {
+                    "title": "Non-Alzheimer's Dementia types  Primary cause of dementia is not Alzheimer's ",
+                    "type": "string",
+                    "enum": [
+                        "1 Frontal lobe dementias (e.g. Pick's, FTD)",
+                        "2 Parkinson's disease dementia",
+                        "3 Huntington's disease (HD)",
+                        "4 Progressive supranuclear palsy (PSP)",
+                        "5 Alcohol related dementias",
+                        "6 Corticobasal degeneration",
+                        "7 Communicating, obstructive, or normal pressure hydrocephalus",
+                        "8 Vascular dementia (e.g. dementia due to stroke)",
+                        "9 Dementia with Lewy Bodies (not Parkinson's dementia) (DL)",
+                        "10 Prion-associated dementia (e.g. Creutzfeldt-Jakob)",
+                        "11 Human immunodeficiency virus (HIV) encephalopathy",
+                        "12 Primary progressive aphasia",
+                        "13 Posterior cortical dysfunction",
+                        "14 Down syndrome",
+                        "16 Dementia due to multiple non-Alzheimer's etiologies",
+                        "17 Dementia due to other general medical conditions",
+                        "18 Other non-Alzheimer's dementia"
+                    ]
+                },
+                "nonaddem_other": {
+                    "title": "Please specify Other non-Alzheimer's dementia",
+                    "type": "string"
+                },
+                "psychos": {
+                    "title": "Subject has signs and symptoms of psychosis",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Unknown"
+                    ]
+                },
+                "dep_a0_2": {
+                    "title": "Subject had depression at the most recent evaluation",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Unknown"
+                    ]
+                },
+                "del_a0_2": {
+                    "title": "Subject had delirium at the most recent evaluation",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Unknown"
+                    ]
+                },
+                "utswclinicdx": {
+                    "title": "2a. UTSW ADC  Clinician  Diagnosis Codes(Make sure to code presence of depression, delirium, or Parkinsonism)",
+                    "type": "string",
+                    "enum": [
+                        "1 Primary",
+                        "2 Secondary"
+                    ]
+                },
+                "clin_dx1": {
+                    "title": "Primary Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1D First Degree Relative",
+                        "A1 Alzheimer's Frontal (Secondary Dx)",
+                        "A2 Alzheimer's Left (Secondary Dx)",
+                        "A3 Alzheimer's Right (Secondary Dx)",
+                        "AA Amyloid Angiopathy",
+                        "AD Alzheimer's Disease - Definite",
+                        "AF AD pathology, insufficient for AD diagnosis",
+                        "AG Argyrophilic Grain Disease",
+                        "AI AIDS Related Dementia",
+                        "AL Alz Lewy Body Variant",
+                        "AM MCI - Amnestic MCI",
+                        "AN Age-related Neurofibrillary  Degeneration",
+                        "AO Angiopathy, Other (includes CADASIL, Vasculitis)",
+                        "AP Alzheimer's + Parkinson's",
+                        "AR Age-related Memory Impairment",
+                        "AS Progressive Motor Speech Apraxia",
+                        "AY Amyotrophic lateral sclerosis (ALS)",
+                        "BD B12 Deficiency",
+                        "BI Binswanger's Disease",
+                        "BP Bipolar Disorder",
+                        "C1 MCI - Mild Cognitive Impairment 1",
+                        "C2 MCI - Mild Cognitive Impairment 2",
+                        "CB Corticobasal Ganglionic Degeneration",
+                        "CD Cognitive Disorder",
+                        "CH Chorea",
+                        "CJ Creutzfeldt-Jakob Disease",
+                        "CN Alpha-synuclein (SNCA) mutation",
+                        "CO MCI - Mild Cognitive Impairment - Other",
+                        "CS Corticobasal Ganglionic Syndrome",
+                        "CT Chronic traumatic encephalopath",
+                        "DC Demented Control",
+                        "DD Dysthmia Disorder",
+                        "DE Deferred",
+                        "DG Degenerative Disease,NOS",
+                        "DL Diffuse Lewy Body Disease",
+                        "DM Delirium",
+                        "DN TAR-DNA binding protein (TARDP) mutation",
+                        "DO Depression Other",
+                        "DP Alcohol Dependence",
+                        "DR Prodromal",
+                        "DS Down Syndrome",
+                        "DT Drug Toxicity",
+                        "DY Primary Progressive Aphasia",
+                        "EN Encephalitis",
+                        "EP Extrapyramidal Symptoms",
+                        "ET Alcoholic Dementia",
+                        "FB Frontotemporal Dementia - Behavioral variant",
+                        "FD Frontotemporal Lobar Degeneration, NLS",
+                        "FL Frontal Lobe Dementia",
+                        "FM MCI - Frontal (Secondary Dx)",
+                        "FP FTDP - 17 Tauopathy",
+                        "FR Frontotemporal lobar degeneration/TDP-43 (FTLD-TDP)",
+                        "FS Frontotemporal lobar degeneration/FUS (FTLD-FUS)",
+                        "FT Frontotemporal Dementia",
+                        "FU Frontotemporal lobar degeneration/UPS (FTLD-UPS)",
+                        "FV Frontotemporal Dementia - Right Temporal Variant",
+                        "FX Frontotemporal Lobar Degeneration, NOS",
+                        "GG Globular glial tauopathy",
+                        "GR Progranulin (GRN) mutation",
+                        "HD Huntington's Disease",
+                        "HE Hypoxic Encephalopathy",
+                        "HN Hypertension",
+                        "HP Hippocampal Sclerosis",
+                        "HS Hallervorden-Spatz Syndrome",
+                        "HT Head Trauma (TBI)",
+                        "HY Hypothyroidism",
+                        "IA Infarct, large cerebral artery",
+                        "IC Impulse Control Disorder",
+                        "IF Infarcts, not definite MI",
+                        "IL Infarct, lacunar",
+                        "IM Infarct, microscopic",
+                        "IN Incomplete Clinical Evaluation",
+                        "LA Lobar Atrophy, w/o Pick bodies",
+                        "LB Dementia with Lewy Bodies",
+                        "LD Leukodystrophy",
+                        "LG Lewy body pathology, amygdala &/or olfactory bulb only",
+                        "LL Lewy body pathology, limbic (transitional)",
+                        "LM Leukoaraiosis/microvascular white matter disease",
+                        "LO Lewy body pathology, NOS [not otherwise specified]",
+                        "LP Logopenic Progressive Aphasia",
+                        "LS Primary Lateral Sclerosis",
+                        "LT Lewy body pathology, brainstem predominant",
+                        "MA Multiple System Atrophy",
+                        "MC Memory Complaint, not Demented",
+                        "MD Major Depression",
+                        "ME Metabolic Encephalopathy",
+                        "MI Multi-infarct Dementia",
+                        "ML Mitochondrial Encephalopathy with Lactic Acidosis",
+                        "MM MCI - Mixed (Secondary Dx)",
+                        "MN Frontotemporal Lobar Degeneration-Ub Inclusion (FTD/Ub)",
+                        "MO Motor Neuron Disease",
+                        "MP CHMP2B mutation",
+                        "MR Mental Retardation",
+                        "MS Multiple Sclerosis",
+                        "MT Tau (MAPT) mutation",
+                        "MU MCI - Multiple domains",
+                        "MX Alzheimer's + Vascular",
+                        "MY Myelin loss, non-arteriosclerotic",
+                        "NA MCI - Nonamnestic MCI",
+                        "NC Normal Clinical Control",
+                        "ND No Dementia",
+                        "NI Neuronal intermediate filament inclusion disease (NIFID)",
+                        "NL Normal (no path abnormalities)",
+                        "NM MCI - Non-Verbal (Secondary Dx)",
+                        "NP Normal Pressure Hydrocephalus",
+                        "NQ Normal with question",
+                        "NS Non-Specific Neuropathologic Abnormality",
+                        "OB Organic Brain Syndrome, NOS",
+                        "OC Other CNS Disorder(s)",
+                        "OD Other Dementia",
+                        "OL Possible Dementia with Lewy Bodies",
+                        "OM MCI - Possible",
+                        "OP Olivopontocerebellar Atrophy",
+                        "OV Possible Vascular Dementia",
+                        "P1 Presenilin 1 (PSEN1) mutation",
+                        "P2 Presenilin 1 (PSEN2) mutation",
+                        "PA Parkinson's Disease",
+                        "PC Posterior Cortical Atrophy",
+                        "PD Parkinson's with Dementia",
+                        "PE Secondary Personality Syndrome",
+                        "PG Polyglandular Autoimmune Failure",
+                        "PH Parenchymal Hemorrhage",
+                        "PI Pick's Disease",
+                        "PO Possible Alzheimer's Disease",
+                        "PP Amyloid precursor protein (APP) mutation",
+                        "PR Probable Alzheimer's Disease",
+                        "PS Progressive Supranuclear Palsy",
+                        "PX Prion Disease, non-CJD",
+                        "PY Psychiatric Disorder Other",
+                        "RB REM Behavior Disorder",
+                        "RF C9ORF72 mutation",
+                        "RM MCI - Probable",
+                        "RV Probable Vascular Dementia",
+                        "SA Spinocerebellar Degeneration",
+                        "SD Subdural Hematoma",
+                        "SE Seizure Disorder",
+                        "SH Schizophrenia",
+                        "SL Systemic Lupus",
+                        "SM Semantic Dementia",
+                        "SN Striatonigral Degeneration",
+                        "SP Neurosyphilis",
+                        "SU Subcortical Disease",
+                        "TA Tangle-Predominant Senile Dementia",
+                        "TB Traumatic brain injury",
+                        "TD Tardive Dyskinesia",
+                        "TF Familial Multiple System Tauopathy with Dementia",
+                        "TM Tumor (neoplasm)--metastatic",
+                        "TP Tumor (neoplasm)--primary",
+                        "TR TREM2 mutation",
+                        "TS Sporadic Multiple System Tauopathy with Dementia",
+                        "TU Tumor",
+                        "UT Tauopathy, Unclassified",
+                        "VC Valosin-containing protein (VCP) mutation",
+                        "VD Vascular Dementia",
+                        "VM MCI - Verbal (Secondary Dx)",
+                        "WC Without Complaint",
+                        "WK Wernicke-Korsakoff Syndrome"
+                    ]
+                },
+                "clin_dx2": {
+                    "title": "Secondary Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1D First Degree Relative",
+                        "A1 Alzheimer's Frontal (Secondary Dx)",
+                        "A2 Alzheimer's Left (Secondary Dx)",
+                        "A3 Alzheimer's Right (Secondary Dx)",
+                        "AA Amyloid Angiopathy",
+                        "AD Alzheimer's Disease - Definite",
+                        "AF AD pathology, insufficient for AD diagnosis",
+                        "AG Argyrophilic Grain Disease",
+                        "AI AIDS Related Dementia",
+                        "AL Alz Lewy Body Variant",
+                        "AM MCI - Amnestic MCI",
+                        "AN Age-related Neurofibrillary  Degeneration",
+                        "AO Angiopathy, Other (includes CADASIL, Vasculitis)",
+                        "AP Alzheimer's + Parkinson's",
+                        "AR Age-related Memory Impairment",
+                        "AS Progressive Motor Speech Apraxia",
+                        "AY Amyotrophic lateral sclerosis (ALS)",
+                        "BD B12 Deficiency",
+                        "BI Binswanger's Disease",
+                        "BP Bipolar Disorder",
+                        "C1 MCI - Mild Cognitive Impairment 1",
+                        "C2 MCI - Mild Cognitive Impairment 2",
+                        "CB Corticobasal Ganglionic Degeneration",
+                        "CD Cognitive Disorder",
+                        "CH Chorea",
+                        "CJ Creutzfeldt-Jakob Disease",
+                        "CN Alpha-synuclein (SNCA) mutation",
+                        "CO MCI - Mild Cognitive Impairment - Other",
+                        "CS Corticobasal Ganglionic Syndrome",
+                        "CT Chronic traumatic encephalopath",
+                        "DC Demented Control",
+                        "DD Dysthmia Disorder",
+                        "DE Deferred",
+                        "DG Degenerative Disease,NOS",
+                        "DL Diffuse Lewy Body Disease",
+                        "DM Delirium",
+                        "DN TAR-DNA binding protein (TARDP) mutation",
+                        "DO Depression Other",
+                        "DP Alcohol Dependence",
+                        "DR Prodromal",
+                        "DS Down Syndrome",
+                        "DT Drug Toxicity",
+                        "DY Primary Progressive Aphasia",
+                        "EN Encephalitis",
+                        "EP Extrapyramidal Symptoms",
+                        "ET Alcoholic Dementia",
+                        "FB Frontotemporal Dementia - Behavioral variant",
+                        "FD Frontotemporal Lobar Degeneration, NLS",
+                        "FL Frontal Lobe Dementia",
+                        "FM MCI - Frontal (Secondary Dx)",
+                        "FP FTDP - 17 Tauopathy",
+                        "FR Frontotemporal lobar degeneration/TDP-43 (FTLD-TDP)",
+                        "FS Frontotemporal lobar degeneration/FUS (FTLD-FUS)",
+                        "FT Frontotemporal Dementia",
+                        "FU Frontotemporal lobar degeneration/UPS (FTLD-UPS)",
+                        "FV Frontotemporal Dementia - Right Temporal Variant",
+                        "FX Frontotemporal Lobar Degeneration, NOS",
+                        "GG Globular glial tauopathy",
+                        "GR Progranulin (GRN) mutation",
+                        "HD Huntington's Disease",
+                        "HE Hypoxic Encephalopathy",
+                        "HN Hypertension",
+                        "HP Hippocampal Sclerosis",
+                        "HS Hallervorden-Spatz Syndrome",
+                        "HT Head Trauma (TBI)",
+                        "HY Hypothyroidism",
+                        "IA Infarct, large cerebral artery",
+                        "IC Impulse Control Disorder",
+                        "IF Infarcts, not definite MI",
+                        "IL Infarct, lacunar",
+                        "IM Infarct, microscopic",
+                        "IN Incomplete Clinical Evaluation",
+                        "LA Lobar Atrophy, w/o Pick bodies",
+                        "LB Dementia with Lewy Bodies",
+                        "LD Leukodystrophy",
+                        "LG Lewy body pathology, amygdala &/or olfactory bulb only",
+                        "LL Lewy body pathology, limbic (transitional)",
+                        "LM Leukoaraiosis/microvascular white matter disease",
+                        "LO Lewy body pathology, NOS [not otherwise specified]",
+                        "LP Logopenic Progressive Aphasia",
+                        "LS Primary Lateral Sclerosis",
+                        "LT Lewy body pathology, brainstem predominant",
+                        "MA Multiple System Atrophy",
+                        "MC Memory Complaint, not Demented",
+                        "MD Major Depression",
+                        "ME Metabolic Encephalopathy",
+                        "MI Multi-infarct Dementia",
+                        "ML Mitochondrial Encephalopathy with Lactic Acidosis",
+                        "MM MCI - Mixed (Secondary Dx)",
+                        "MN Frontotemporal Lobar Degeneration-Ub Inclusion (FTD/Ub)",
+                        "MO Motor Neuron Disease",
+                        "MP CHMP2B mutation",
+                        "MR Mental Retardation",
+                        "MS Multiple Sclerosis",
+                        "MT Tau (MAPT) mutation",
+                        "MU MCI - Multiple domains",
+                        "MX Alzheimer's + Vascular",
+                        "MY Myelin loss, non-arteriosclerotic",
+                        "NA MCI - Nonamnestic MCI",
+                        "NC Normal Clinical Control",
+                        "ND No Dementia",
+                        "NI Neuronal intermediate filament inclusion disease (NIFID)",
+                        "NL Normal (no path abnormalities)",
+                        "NM MCI - Non-Verbal (Secondary Dx)",
+                        "NP Normal Pressure Hydrocephalus",
+                        "NQ Normal with question",
+                        "NS Non-Specific Neuropathologic Abnormality",
+                        "OB Organic Brain Syndrome, NOS",
+                        "OC Other CNS Disorder(s)",
+                        "OD Other Dementia",
+                        "OL Possible Dementia with Lewy Bodies",
+                        "OM MCI - Possible",
+                        "OP Olivopontocerebellar Atrophy",
+                        "OV Possible Vascular Dementia",
+                        "P1 Presenilin 1 (PSEN1) mutation",
+                        "P2 Presenilin 1 (PSEN2) mutation",
+                        "PA Parkinson's Disease",
+                        "PC Posterior Cortical Atrophy",
+                        "PD Parkinson's with Dementia",
+                        "PE Secondary Personality Syndrome",
+                        "PG Polyglandular Autoimmune Failure",
+                        "PH Parenchymal Hemorrhage",
+                        "PI Pick's Disease",
+                        "PO Possible Alzheimer's Disease",
+                        "PP Amyloid precursor protein (APP) mutation",
+                        "PR Probable Alzheimer's Disease",
+                        "PS Progressive Supranuclear Palsy",
+                        "PX Prion Disease, non-CJD",
+                        "PY Psychiatric Disorder Other",
+                        "RB REM Behavior Disorder",
+                        "RF C9ORF72 mutation",
+                        "RM MCI - Probable",
+                        "RV Probable Vascular Dementia",
+                        "SA Spinocerebellar Degeneration",
+                        "SD Subdural Hematoma",
+                        "SE Seizure Disorder",
+                        "SH Schizophrenia",
+                        "SL Systemic Lupus",
+                        "SM Semantic Dementia",
+                        "SN Striatonigral Degeneration",
+                        "SP Neurosyphilis",
+                        "SU Subcortical Disease",
+                        "TA Tangle-Predominant Senile Dementia",
+                        "TB Traumatic brain injury",
+                        "TD Tardive Dyskinesia",
+                        "TF Familial Multiple System Tauopathy with Dementia",
+                        "TM Tumor (neoplasm)--metastatic",
+                        "TP Tumor (neoplasm)--primary",
+                        "TR TREM2 mutation",
+                        "TS Sporadic Multiple System Tauopathy with Dementia",
+                        "TU Tumor",
+                        "UT Tauopathy, Unclassified",
+                        "VC Valosin-containing protein (VCP) mutation",
+                        "VD Vascular Dementia",
+                        "VM MCI - Verbal (Secondary Dx)",
+                        "WC Without Complaint",
+                        "WK Wernicke-Korsakoff Syndrome"
+                    ]
+                },
+                "utswnpsydx": {
+                    "title": "2b. UTSW ADC  Neuropsychological  Diagnosis Codes   (Code presence of depression, delirium, or Parkinsonism)",
+                    "type": "string",
+                    "enum": [
+                        "1 Primary",
+                        "2 Secondary"
+                    ]
+                },
+                "neuro_dx1": {
+                    "title": "Primary Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1D First Degree Relative",
+                        "A1 Alzheimer's Frontal (Secondary Dx)",
+                        "A2 Alzheimer's Left (Secondary Dx)",
+                        "A3 Alzheimer's Right (Secondary Dx)",
+                        "AA Amyloid Angiopathy",
+                        "AD Alzheimer's Disease - Definite",
+                        "AF AD pathology, insufficient for AD diagnosis",
+                        "AG Argyrophilic Grain Disease",
+                        "AI AIDS Related Dementia",
+                        "AL Alz Lewy Body Variant",
+                        "AM MCI - Amnestic MCI",
+                        "AN Age-related Neurofibrillary  Degeneration",
+                        "AO Angiopathy, Other (includes CADASIL, Vasculitis)",
+                        "AP Alzheimer's + Parkinson's",
+                        "AR Age-related Memory Impairment",
+                        "AS Progressive Motor Speech Apraxia",
+                        "AY Amyotrophic lateral sclerosis (ALS)",
+                        "BD B12 Deficiency",
+                        "BI Binswanger's Disease",
+                        "BP Bipolar Disorder",
+                        "C1 MCI - Mild Cognitive Impairment 1",
+                        "C2 MCI - Mild Cognitive Impairment 2",
+                        "CB Corticobasal Ganglionic Degeneration",
+                        "CD Cognitive Disorder",
+                        "CH Chorea",
+                        "CJ Creutzfeldt-Jakob Disease",
+                        "CN Alpha-synuclein (SNCA) mutation",
+                        "CO MCI - Mild Cognitive Impairment - Other",
+                        "CS Corticobasal Ganglionic Syndrome",
+                        "CT Chronic traumatic encephalopath",
+                        "DC Demented Control",
+                        "DD Dysthmia Disorder",
+                        "DE Deferred",
+                        "DG Degenerative Disease,NOS",
+                        "DL Diffuse Lewy Body Disease",
+                        "DM Delirium",
+                        "DN TAR-DNA binding protein (TARDP) mutation",
+                        "DO Depression Other",
+                        "DP Alcohol Dependence",
+                        "DR Prodromal",
+                        "DS Down Syndrome",
+                        "DT Drug Toxicity",
+                        "DY Primary Progressive Aphasia",
+                        "EN Encephalitis",
+                        "EP Extrapyramidal Symptoms",
+                        "ET Alcoholic Dementia",
+                        "FB Frontotemporal Dementia - Behavioral variant",
+                        "FD Frontotemporal Lobar Degeneration, NLS",
+                        "FL Frontal Lobe Dementia",
+                        "FM MCI - Frontal (Secondary Dx)",
+                        "FP FTDP - 17 Tauopathy",
+                        "FR Frontotemporal lobar degeneration/TDP-43 (FTLD-TDP)",
+                        "FS Frontotemporal lobar degeneration/FUS (FTLD-FUS)",
+                        "FT Frontotemporal Dementia",
+                        "FU Frontotemporal lobar degeneration/UPS (FTLD-UPS)",
+                        "FV Frontotemporal Dementia - Right Temporal Variant",
+                        "FX Frontotemporal Lobar Degeneration, NOS",
+                        "GG Globular glial tauopathy",
+                        "GR Progranulin (GRN) mutation",
+                        "HD Huntington's Disease",
+                        "HE Hypoxic Encephalopathy",
+                        "HN Hypertension",
+                        "HP Hippocampal Sclerosis",
+                        "HS Hallervorden-Spatz Syndrome",
+                        "HT Head Trauma (TBI)",
+                        "HY Hypothyroidism",
+                        "IA Infarct, large cerebral artery",
+                        "IC Impulse Control Disorder",
+                        "IF Infarcts, not definite MI",
+                        "IL Infarct, lacunar",
+                        "IM Infarct, microscopic",
+                        "IN Incomplete Clinical Evaluation",
+                        "LA Lobar Atrophy, w/o Pick bodies",
+                        "LB Dementia with Lewy Bodies",
+                        "LD Leukodystrophy",
+                        "LG Lewy body pathology, amygdala &/or olfactory bulb only",
+                        "LL Lewy body pathology, limbic (transitional)",
+                        "LM Leukoaraiosis/microvascular white matter disease",
+                        "LO Lewy body pathology, NOS [not otherwise specified]",
+                        "LP Logopenic Progressive Aphasia",
+                        "LS Primary Lateral Sclerosis",
+                        "LT Lewy body pathology, brainstem predominant",
+                        "MA Multiple System Atrophy",
+                        "MC Memory Complaint, not Demented",
+                        "MD Major Depression",
+                        "ME Metabolic Encephalopathy",
+                        "MI Multi-infarct Dementia",
+                        "ML Mitochondrial Encephalopathy with Lactic Acidosis",
+                        "MM MCI - Mixed (Secondary Dx)",
+                        "MN Frontotemporal Lobar Degeneration-Ub Inclusion (FTD/Ub)",
+                        "MO Motor Neuron Disease",
+                        "MP CHMP2B mutation",
+                        "MR Mental Retardation",
+                        "MS Multiple Sclerosis",
+                        "MT Tau (MAPT) mutation",
+                        "MU MCI - Multiple domains",
+                        "MX Alzheimer's + Vascular",
+                        "MY Myelin loss, non-arteriosclerotic",
+                        "NA MCI - Nonamnestic MCI",
+                        "NC Normal Clinical Control",
+                        "ND No Dementia",
+                        "NI Neuronal intermediate filament inclusion disease (NIFID)",
+                        "NL Normal (no path abnormalities)",
+                        "NM MCI - Non-Verbal (Secondary Dx)",
+                        "NP Normal Pressure Hydrocephalus",
+                        "NQ Normal with question",
+                        "NS Non-Specific Neuropathologic Abnormality",
+                        "OB Organic Brain Syndrome, NOS",
+                        "OC Other CNS Disorder(s)",
+                        "OD Other Dementia",
+                        "OL Possible Dementia with Lewy Bodies",
+                        "OM MCI - Possible",
+                        "OP Olivopontocerebellar Atrophy",
+                        "OV Possible Vascular Dementia",
+                        "P1 Presenilin 1 (PSEN1) mutation",
+                        "P2 Presenilin 1 (PSEN2) mutation",
+                        "PA Parkinson's Disease",
+                        "PC Posterior Cortical Atrophy",
+                        "PD Parkinson's with Dementia",
+                        "PE Secondary Personality Syndrome",
+                        "PG Polyglandular Autoimmune Failure",
+                        "PH Parenchymal Hemorrhage",
+                        "PI Pick's Disease",
+                        "PO Possible Alzheimer's Disease",
+                        "PP Amyloid precursor protein (APP) mutation",
+                        "PR Probable Alzheimer's Disease",
+                        "PS Progressive Supranuclear Palsy",
+                        "PX Prion Disease, non-CJD",
+                        "PY Psychiatric Disorder Other",
+                        "RB REM Behavior Disorder",
+                        "RF C9ORF72 mutation",
+                        "RM MCI - Probable",
+                        "RV Probable Vascular Dementia",
+                        "SA Spinocerebellar Degeneration",
+                        "SD Subdural Hematoma",
+                        "SE Seizure Disorder",
+                        "SH Schizophrenia",
+                        "SL Systemic Lupus",
+                        "SM Semantic Dementia",
+                        "SN Striatonigral Degeneration",
+                        "SP Neurosyphilis",
+                        "SU Subcortical Disease",
+                        "TA Tangle-Predominant Senile Dementia",
+                        "TB Traumatic brain injury",
+                        "TD Tardive Dyskinesia",
+                        "TF Familial Multiple System Tauopathy with Dementia",
+                        "TM Tumor (neoplasm)--metastatic",
+                        "TP Tumor (neoplasm)--primary",
+                        "TR TREM2 mutation",
+                        "TS Sporadic Multiple System Tauopathy with Dementia",
+                        "TU Tumor",
+                        "UT Tauopathy, Unclassified",
+                        "VC Valosin-containing protein (VCP) mutation",
+                        "VD Vascular Dementia",
+                        "VM MCI - Verbal (Secondary Dx)",
+                        "WC Without Complaint",
+                        "WK Wernicke-Korsakoff Syndrome"
+                    ]
+                },
+                "neuro_dx2": {
+                    "title": "Secondary Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1D First Degree Relative",
+                        "A1 Alzheimer's Frontal (Secondary Dx)",
+                        "A2 Alzheimer's Left (Secondary Dx)",
+                        "A3 Alzheimer's Right (Secondary Dx)",
+                        "AA Amyloid Angiopathy",
+                        "AD Alzheimer's Disease - Definite",
+                        "AF AD pathology, insufficient for AD diagnosis",
+                        "AG Argyrophilic Grain Disease",
+                        "AI AIDS Related Dementia",
+                        "AL Alz Lewy Body Variant",
+                        "AM MCI - Amnestic MCI",
+                        "AN Age-related Neurofibrillary  Degeneration",
+                        "AO Angiopathy, Other (includes CADASIL, Vasculitis)",
+                        "AP Alzheimer's + Parkinson's",
+                        "AR Age-related Memory Impairment",
+                        "AS Progressive Motor Speech Apraxia",
+                        "AY Amyotrophic lateral sclerosis (ALS)",
+                        "BD B12 Deficiency",
+                        "BI Binswanger's Disease",
+                        "BP Bipolar Disorder",
+                        "C1 MCI - Mild Cognitive Impairment 1",
+                        "C2 MCI - Mild Cognitive Impairment 2",
+                        "CB Corticobasal Ganglionic Degeneration",
+                        "CD Cognitive Disorder",
+                        "CH Chorea",
+                        "CJ Creutzfeldt-Jakob Disease",
+                        "CN Alpha-synuclein (SNCA) mutation",
+                        "CO MCI - Mild Cognitive Impairment - Other",
+                        "CS Corticobasal Ganglionic Syndrome",
+                        "CT Chronic traumatic encephalopath",
+                        "DC Demented Control",
+                        "DD Dysthmia Disorder",
+                        "DE Deferred",
+                        "DG Degenerative Disease,NOS",
+                        "DL Diffuse Lewy Body Disease",
+                        "DM Delirium",
+                        "DN TAR-DNA binding protein (TARDP) mutation",
+                        "DO Depression Other",
+                        "DP Alcohol Dependence",
+                        "DR Prodromal",
+                        "DS Down Syndrome",
+                        "DT Drug Toxicity",
+                        "DY Primary Progressive Aphasia",
+                        "EN Encephalitis",
+                        "EP Extrapyramidal Symptoms",
+                        "ET Alcoholic Dementia",
+                        "FB Frontotemporal Dementia - Behavioral variant",
+                        "FD Frontotemporal Lobar Degeneration, NLS",
+                        "FL Frontal Lobe Dementia",
+                        "FM MCI - Frontal (Secondary Dx)",
+                        "FP FTDP - 17 Tauopathy",
+                        "FR Frontotemporal lobar degeneration/TDP-43 (FTLD-TDP)",
+                        "FS Frontotemporal lobar degeneration/FUS (FTLD-FUS)",
+                        "FT Frontotemporal Dementia",
+                        "FU Frontotemporal lobar degeneration/UPS (FTLD-UPS)",
+                        "FV Frontotemporal Dementia - Right Temporal Variant",
+                        "FX Frontotemporal Lobar Degeneration, NOS",
+                        "GG Globular glial tauopathy",
+                        "GR Progranulin (GRN) mutation",
+                        "HD Huntington's Disease",
+                        "HE Hypoxic Encephalopathy",
+                        "HN Hypertension",
+                        "HP Hippocampal Sclerosis",
+                        "HS Hallervorden-Spatz Syndrome",
+                        "HT Head Trauma (TBI)",
+                        "HY Hypothyroidism",
+                        "IA Infarct, large cerebral artery",
+                        "IC Impulse Control Disorder",
+                        "IF Infarcts, not definite MI",
+                        "IL Infarct, lacunar",
+                        "IM Infarct, microscopic",
+                        "IN Incomplete Clinical Evaluation",
+                        "LA Lobar Atrophy, w/o Pick bodies",
+                        "LB Dementia with Lewy Bodies",
+                        "LD Leukodystrophy",
+                        "LG Lewy body pathology, amygdala &/or olfactory bulb only",
+                        "LL Lewy body pathology, limbic (transitional)",
+                        "LM Leukoaraiosis/microvascular white matter disease",
+                        "LO Lewy body pathology, NOS [not otherwise specified]",
+                        "LP Logopenic Progressive Aphasia",
+                        "LS Primary Lateral Sclerosis",
+                        "LT Lewy body pathology, brainstem predominant",
+                        "MA Multiple System Atrophy",
+                        "MC Memory Complaint, not Demented",
+                        "MD Major Depression",
+                        "ME Metabolic Encephalopathy",
+                        "MI Multi-infarct Dementia",
+                        "ML Mitochondrial Encephalopathy with Lactic Acidosis",
+                        "MM MCI - Mixed (Secondary Dx)",
+                        "MN Frontotemporal Lobar Degeneration-Ub Inclusion (FTD/Ub)",
+                        "MO Motor Neuron Disease",
+                        "MP CHMP2B mutation",
+                        "MR Mental Retardation",
+                        "MS Multiple Sclerosis",
+                        "MT Tau (MAPT) mutation",
+                        "MU MCI - Multiple domains",
+                        "MX Alzheimer's + Vascular",
+                        "MY Myelin loss, non-arteriosclerotic",
+                        "NA MCI - Nonamnestic MCI",
+                        "NC Normal Clinical Control",
+                        "ND No Dementia",
+                        "NI Neuronal intermediate filament inclusion disease (NIFID)",
+                        "NL Normal (no path abnormalities)",
+                        "NM MCI - Non-Verbal (Secondary Dx)",
+                        "NP Normal Pressure Hydrocephalus",
+                        "NQ Normal with question",
+                        "NS Non-Specific Neuropathologic Abnormality",
+                        "OB Organic Brain Syndrome, NOS",
+                        "OC Other CNS Disorder(s)",
+                        "OD Other Dementia",
+                        "OL Possible Dementia with Lewy Bodies",
+                        "OM MCI - Possible",
+                        "OP Olivopontocerebellar Atrophy",
+                        "OV Possible Vascular Dementia",
+                        "P1 Presenilin 1 (PSEN1) mutation",
+                        "P2 Presenilin 1 (PSEN2) mutation",
+                        "PA Parkinson's Disease",
+                        "PC Posterior Cortical Atrophy",
+                        "PD Parkinson's with Dementia",
+                        "PE Secondary Personality Syndrome",
+                        "PG Polyglandular Autoimmune Failure",
+                        "PH Parenchymal Hemorrhage",
+                        "PI Pick's Disease",
+                        "PO Possible Alzheimer's Disease",
+                        "PP Amyloid precursor protein (APP) mutation",
+                        "PR Probable Alzheimer's Disease",
+                        "PS Progressive Supranuclear Palsy",
+                        "PX Prion Disease, non-CJD",
+                        "PY Psychiatric Disorder Other",
+                        "RB REM Behavior Disorder",
+                        "RF C9ORF72 mutation",
+                        "RM MCI - Probable",
+                        "RV Probable Vascular Dementia",
+                        "SA Spinocerebellar Degeneration",
+                        "SD Subdural Hematoma",
+                        "SE Seizure Disorder",
+                        "SH Schizophrenia",
+                        "SL Systemic Lupus",
+                        "SM Semantic Dementia",
+                        "SN Striatonigral Degeneration",
+                        "SP Neurosyphilis",
+                        "SU Subcortical Disease",
+                        "TA Tangle-Predominant Senile Dementia",
+                        "TB Traumatic brain injury",
+                        "TD Tardive Dyskinesia",
+                        "TF Familial Multiple System Tauopathy with Dementia",
+                        "TM Tumor (neoplasm)--metastatic",
+                        "TP Tumor (neoplasm)--primary",
+                        "TR TREM2 mutation",
+                        "TS Sporadic Multiple System Tauopathy with Dementia",
+                        "TU Tumor",
+                        "UT Tauopathy, Unclassified",
+                        "VC Valosin-containing protein (VCP) mutation",
+                        "VD Vascular Dementia",
+                        "VM MCI - Verbal (Secondary Dx)",
+                        "WC Without Complaint",
+                        "WK Wernicke-Korsakoff Syndrome"
+                    ]
+                },
+                "utswconsensusdx": {
+                    "title": "2c. UTSW ADC  Consensus  Diagnosis Codes   (Make sure to code presence of depression, delirium, or Parkinsonism)",
+                    "type": "string",
+                    "enum": [
+                        "1  Primary",
+                        "2  Secondary",
+                        "3  Secondary",
+                        "4  Secondary"
+                    ]
+                },
+                "prim_consen_dx": {
+                    "title": "Primary Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1D First Degree Relative",
+                        "A1 Alzheimer's Frontal (Secondary Dx)",
+                        "A2 Alzheimer's Left (Secondary Dx)",
+                        "A3 Alzheimer's Right (Secondary Dx)",
+                        "AA Amyloid Angiopathy",
+                        "AD Alzheimer's Disease - Definite",
+                        "AF AD pathology, insufficient for AD diagnosis",
+                        "AG Argyrophilic Grain Disease",
+                        "AI AIDS Related Dementia",
+                        "AL Alz Lewy Body Variant",
+                        "AM MCI - Amnestic MCI",
+                        "AN Age-related Neurofibrillary  Degeneration",
+                        "AO Angiopathy, Other (includes CADASIL, Vasculitis)",
+                        "AP Alzheimer's + Parkinson's",
+                        "AR Age-related Memory Impairment",
+                        "AS Progressive Motor Speech Apraxia",
+                        "AY Amyotrophic lateral sclerosis (ALS)",
+                        "BD B12 Deficiency",
+                        "BI Binswanger's Disease",
+                        "BP Bipolar Disorder",
+                        "C1 MCI - Mild Cognitive Impairment 1",
+                        "C2 MCI - Mild Cognitive Impairment 2",
+                        "CB Corticobasal Ganglionic Degeneration",
+                        "CD Cognitive Disorder",
+                        "CH Chorea",
+                        "CJ Creutzfeldt-Jakob Disease",
+                        "CN Alpha-synuclein (SNCA) mutation",
+                        "CO MCI - Mild Cognitive Impairment - Other",
+                        "CS Corticobasal Ganglionic Syndrome",
+                        "CT Chronic traumatic encephalopath",
+                        "DC Demented Control",
+                        "DD Dysthmia Disorder",
+                        "DE Deferred",
+                        "DG Degenerative Disease,NOS",
+                        "DL Diffuse Lewy Body Disease",
+                        "DM Delirium",
+                        "DN TAR-DNA binding protein (TARDP) mutation",
+                        "DO Depression Other",
+                        "DP Alcohol Dependence",
+                        "DR Prodromal",
+                        "DS Down Syndrome",
+                        "DT Drug Toxicity",
+                        "DY Primary Progressive Aphasia",
+                        "EN Encephalitis",
+                        "EP Extrapyramidal Symptoms",
+                        "ET Alcoholic Dementia",
+                        "FB Frontotemporal Dementia - Behavioral variant",
+                        "FD Frontotemporal Lobar Degeneration, NLS",
+                        "FL Frontal Lobe Dementia",
+                        "FM MCI - Frontal (Secondary Dx)",
+                        "FP FTDP - 17 Tauopathy",
+                        "FR Frontotemporal lobar degeneration/TDP-43 (FTLD-TDP)",
+                        "FS Frontotemporal lobar degeneration/FUS (FTLD-FUS)",
+                        "FT Frontotemporal Dementia",
+                        "FU Frontotemporal lobar degeneration/UPS (FTLD-UPS)",
+                        "FV Frontotemporal Dementia - Right Temporal Variant",
+                        "FX Frontotemporal Lobar Degeneration, NOS",
+                        "GG Globular glial tauopathy",
+                        "GR Progranulin (GRN) mutation",
+                        "HD Huntington's Disease",
+                        "HE Hypoxic Encephalopathy",
+                        "HN Hypertension",
+                        "HP Hippocampal Sclerosis",
+                        "HS Hallervorden-Spatz Syndrome",
+                        "HT Head Trauma (TBI)",
+                        "HY Hypothyroidism",
+                        "IA Infarct, large cerebral artery",
+                        "IC Impulse Control Disorder",
+                        "IF Infarcts, not definite MI",
+                        "IL Infarct, lacunar",
+                        "IM Infarct, microscopic",
+                        "IN Incomplete Clinical Evaluation",
+                        "LA Lobar Atrophy, w/o Pick bodies",
+                        "LB Dementia with Lewy Bodies",
+                        "LD Leukodystrophy",
+                        "LG Lewy body pathology, amygdala &/or olfactory bulb only",
+                        "LL Lewy body pathology, limbic (transitional)",
+                        "LM Leukoaraiosis/microvascular white matter disease",
+                        "LO Lewy body pathology, NOS [not otherwise specified]",
+                        "LP Logopenic Progressive Aphasia",
+                        "LS Primary Lateral Sclerosis",
+                        "LT Lewy body pathology, brainstem predominant",
+                        "MA Multiple System Atrophy",
+                        "MC Memory Complaint, not Demented",
+                        "MD Major Depression",
+                        "ME Metabolic Encephalopathy",
+                        "MI Multi-infarct Dementia",
+                        "ML Mitochondrial Encephalopathy with Lactic Acidosis",
+                        "MM MCI - Mixed (Secondary Dx)",
+                        "MN Frontotemporal Lobar Degeneration-Ub Inclusion (FTD/Ub)",
+                        "MO Motor Neuron Disease",
+                        "MP CHMP2B mutation",
+                        "MR Mental Retardation",
+                        "MS Multiple Sclerosis",
+                        "MT Tau (MAPT) mutation",
+                        "MU MCI - Multiple domains",
+                        "MX Alzheimer's + Vascular",
+                        "MY Myelin loss, non-arteriosclerotic",
+                        "NA MCI - Nonamnestic MCI",
+                        "NC Normal Clinical Control",
+                        "ND No Dementia",
+                        "NI Neuronal intermediate filament inclusion disease (NIFID)",
+                        "NL Normal (no path abnormalities)",
+                        "NM MCI - Non-Verbal (Secondary Dx)",
+                        "NP Normal Pressure Hydrocephalus",
+                        "NQ Normal with question",
+                        "NS Non-Specific Neuropathologic Abnormality",
+                        "OB Organic Brain Syndrome, NOS",
+                        "OC Other CNS Disorder(s)",
+                        "OD Other Dementia",
+                        "OL Possible Dementia with Lewy Bodies",
+                        "OM MCI - Possible",
+                        "OP Olivopontocerebellar Atrophy",
+                        "OV Possible Vascular Dementia",
+                        "P1 Presenilin 1 (PSEN1) mutation",
+                        "P2 Presenilin 1 (PSEN2) mutation",
+                        "PA Parkinson's Disease",
+                        "PC Posterior Cortical Atrophy",
+                        "PD Parkinson's with Dementia",
+                        "PE Secondary Personality Syndrome",
+                        "PG Polyglandular Autoimmune Failure",
+                        "PH Parenchymal Hemorrhage",
+                        "PI Pick's Disease",
+                        "PO Possible Alzheimer's Disease",
+                        "PP Amyloid precursor protein (APP) mutation",
+                        "PR Probable Alzheimer's Disease",
+                        "PS Progressive Supranuclear Palsy",
+                        "PX Prion Disease, non-CJD",
+                        "PY Psychiatric Disorder Other",
+                        "RB REM Behavior Disorder",
+                        "RF C9ORF72 mutation",
+                        "RM MCI - Probable",
+                        "RV Probable Vascular Dementia",
+                        "SA Spinocerebellar Degeneration",
+                        "SD Subdural Hematoma",
+                        "SE Seizure Disorder",
+                        "SH Schizophrenia",
+                        "SL Systemic Lupus",
+                        "SM Semantic Dementia",
+                        "SN Striatonigral Degeneration",
+                        "SP Neurosyphilis",
+                        "SU Subcortical Disease",
+                        "TA Tangle-Predominant Senile Dementia",
+                        "TB Traumatic brain injury",
+                        "TD Tardive Dyskinesia",
+                        "TF Familial Multiple System Tauopathy with Dementia",
+                        "TM Tumor (neoplasm)--metastatic",
+                        "TP Tumor (neoplasm)--primary",
+                        "TR TREM2 mutation",
+                        "TS Sporadic Multiple System Tauopathy with Dementia",
+                        "TU Tumor",
+                        "UT Tauopathy, Unclassified",
+                        "VC Valosin-containing protein (VCP) mutation",
+                        "VD Vascular Dementia",
+                        "VM MCI - Verbal (Secondary Dx)",
+                        "WC Without Complaint",
+                        "WK Wernicke-Korsakoff Syndrome"
+                    ]
+                },
+                "sec_consen_dx": {
+                    "title": "Secondary Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1D First Degree Relative",
+                        "A1 Alzheimer's Frontal (Secondary Dx)",
+                        "A2 Alzheimer's Left (Secondary Dx)",
+                        "A3 Alzheimer's Right (Secondary Dx)",
+                        "AA Amyloid Angiopathy",
+                        "AD Alzheimer's Disease - Definite",
+                        "AF AD pathology, insufficient for AD diagnosis",
+                        "AG Argyrophilic Grain Disease",
+                        "AI AIDS Related Dementia",
+                        "AL Alz Lewy Body Variant",
+                        "AM MCI - Amnestic MCI",
+                        "AN Age-related Neurofibrillary  Degeneration",
+                        "AO Angiopathy, Other (includes CADASIL, Vasculitis)",
+                        "AP Alzheimer's + Parkinson's",
+                        "AR Age-related Memory Impairment",
+                        "AS Progressive Motor Speech Apraxia",
+                        "AY Amyotrophic lateral sclerosis (ALS)",
+                        "BD B12 Deficiency",
+                        "BI Binswanger's Disease",
+                        "BP Bipolar Disorder",
+                        "C1 MCI - Mild Cognitive Impairment 1",
+                        "C2 MCI - Mild Cognitive Impairment 2",
+                        "CB Corticobasal Ganglionic Degeneration",
+                        "CD Cognitive Disorder",
+                        "CH Chorea",
+                        "CJ Creutzfeldt-Jakob Disease",
+                        "CN Alpha-synuclein (SNCA) mutation",
+                        "CO MCI - Mild Cognitive Impairment - Other",
+                        "CS Corticobasal Ganglionic Syndrome",
+                        "CT Chronic traumatic encephalopath",
+                        "DC Demented Control",
+                        "DD Dysthmia Disorder",
+                        "DE Deferred",
+                        "DG Degenerative Disease,NOS",
+                        "DL Diffuse Lewy Body Disease",
+                        "DM Delirium",
+                        "DN TAR-DNA binding protein (TARDP) mutation",
+                        "DO Depression Other",
+                        "DP Alcohol Dependence",
+                        "DR Prodromal",
+                        "DS Down Syndrome",
+                        "DT Drug Toxicity",
+                        "DY Primary Progressive Aphasia",
+                        "EN Encephalitis",
+                        "EP Extrapyramidal Symptoms",
+                        "ET Alcoholic Dementia",
+                        "FB Frontotemporal Dementia - Behavioral variant",
+                        "FD Frontotemporal Lobar Degeneration, NLS",
+                        "FL Frontal Lobe Dementia",
+                        "FM MCI - Frontal (Secondary Dx)",
+                        "FP FTDP - 17 Tauopathy",
+                        "FR Frontotemporal lobar degeneration/TDP-43 (FTLD-TDP)",
+                        "FS Frontotemporal lobar degeneration/FUS (FTLD-FUS)",
+                        "FT Frontotemporal Dementia",
+                        "FU Frontotemporal lobar degeneration/UPS (FTLD-UPS)",
+                        "FV Frontotemporal Dementia - Right Temporal Variant",
+                        "FX Frontotemporal Lobar Degeneration, NOS",
+                        "GG Globular glial tauopathy",
+                        "GR Progranulin (GRN) mutation",
+                        "HD Huntington's Disease",
+                        "HE Hypoxic Encephalopathy",
+                        "HN Hypertension",
+                        "HP Hippocampal Sclerosis",
+                        "HS Hallervorden-Spatz Syndrome",
+                        "HT Head Trauma (TBI)",
+                        "HY Hypothyroidism",
+                        "IA Infarct, large cerebral artery",
+                        "IC Impulse Control Disorder",
+                        "IF Infarcts, not definite MI",
+                        "IL Infarct, lacunar",
+                        "IM Infarct, microscopic",
+                        "IN Incomplete Clinical Evaluation",
+                        "LA Lobar Atrophy, w/o Pick bodies",
+                        "LB Dementia with Lewy Bodies",
+                        "LD Leukodystrophy",
+                        "LG Lewy body pathology, amygdala &/or olfactory bulb only",
+                        "LL Lewy body pathology, limbic (transitional)",
+                        "LM Leukoaraiosis/microvascular white matter disease",
+                        "LO Lewy body pathology, NOS [not otherwise specified]",
+                        "LP Logopenic Progressive Aphasia",
+                        "LS Primary Lateral Sclerosis",
+                        "LT Lewy body pathology, brainstem predominant",
+                        "MA Multiple System Atrophy",
+                        "MC Memory Complaint, not Demented",
+                        "MD Major Depression",
+                        "ME Metabolic Encephalopathy",
+                        "MI Multi-infarct Dementia",
+                        "ML Mitochondrial Encephalopathy with Lactic Acidosis",
+                        "MM MCI - Mixed (Secondary Dx)",
+                        "MN Frontotemporal Lobar Degeneration-Ub Inclusion (FTD/Ub)",
+                        "MO Motor Neuron Disease",
+                        "MP CHMP2B mutation",
+                        "MR Mental Retardation",
+                        "MS Multiple Sclerosis",
+                        "MT Tau (MAPT) mutation",
+                        "MU MCI - Multiple domains",
+                        "MX Alzheimer's + Vascular",
+                        "MY Myelin loss, non-arteriosclerotic",
+                        "NA MCI - Nonamnestic MCI",
+                        "NC Normal Clinical Control",
+                        "ND No Dementia",
+                        "NI Neuronal intermediate filament inclusion disease (NIFID)",
+                        "NL Normal (no path abnormalities)",
+                        "NM MCI - Non-Verbal (Secondary Dx)",
+                        "NP Normal Pressure Hydrocephalus",
+                        "NQ Normal with question",
+                        "NS Non-Specific Neuropathologic Abnormality",
+                        "OB Organic Brain Syndrome, NOS",
+                        "OC Other CNS Disorder(s)",
+                        "OD Other Dementia",
+                        "OL Possible Dementia with Lewy Bodies",
+                        "OM MCI - Possible",
+                        "OP Olivopontocerebellar Atrophy",
+                        "OV Possible Vascular Dementia",
+                        "P1 Presenilin 1 (PSEN1) mutation",
+                        "P2 Presenilin 1 (PSEN2) mutation",
+                        "PA Parkinson's Disease",
+                        "PC Posterior Cortical Atrophy",
+                        "PD Parkinson's with Dementia",
+                        "PE Secondary Personality Syndrome",
+                        "PG Polyglandular Autoimmune Failure",
+                        "PH Parenchymal Hemorrhage",
+                        "PI Pick's Disease",
+                        "PO Possible Alzheimer's Disease",
+                        "PP Amyloid precursor protein (APP) mutation",
+                        "PR Probable Alzheimer's Disease",
+                        "PS Progressive Supranuclear Palsy",
+                        "PX Prion Disease, non-CJD",
+                        "PY Psychiatric Disorder Other",
+                        "RB REM Behavior Disorder",
+                        "RF C9ORF72 mutation",
+                        "RM MCI - Probable",
+                        "RV Probable Vascular Dementia",
+                        "SA Spinocerebellar Degeneration",
+                        "SD Subdural Hematoma",
+                        "SE Seizure Disorder",
+                        "SH Schizophrenia",
+                        "SL Systemic Lupus",
+                        "SM Semantic Dementia",
+                        "SN Striatonigral Degeneration",
+                        "SP Neurosyphilis",
+                        "SU Subcortical Disease",
+                        "TA Tangle-Predominant Senile Dementia",
+                        "TB Traumatic brain injury",
+                        "TD Tardive Dyskinesia",
+                        "TF Familial Multiple System Tauopathy with Dementia",
+                        "TM Tumor (neoplasm)--metastatic",
+                        "TP Tumor (neoplasm)--primary",
+                        "TR TREM2 mutation",
+                        "TS Sporadic Multiple System Tauopathy with Dementia",
+                        "TU Tumor",
+                        "UT Tauopathy, Unclassified",
+                        "VC Valosin-containing protein (VCP) mutation",
+                        "VD Vascular Dementia",
+                        "VM MCI - Verbal (Secondary Dx)",
+                        "WC Without Complaint",
+                        "WK Wernicke-Korsakoff Syndrome"
+                    ]
+                },
+                "sec_consen_dx_2": {
+                    "title": "Secondary Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1D First Degree Relative",
+                        "A1 Alzheimer's Frontal (Secondary Dx)",
+                        "A2 Alzheimer's Left (Secondary Dx)",
+                        "A3 Alzheimer's Right (Secondary Dx)",
+                        "AA Amyloid Angiopathy",
+                        "AD Alzheimer's Disease - Definite",
+                        "AF AD pathology, insufficient for AD diagnosis",
+                        "AG Argyrophilic Grain Disease",
+                        "AI AIDS Related Dementia",
+                        "AL Alz Lewy Body Variant",
+                        "AM MCI - Amnestic MCI",
+                        "AN Age-related Neurofibrillary  Degeneration",
+                        "AO Angiopathy, Other (includes CADASIL, Vasculitis)",
+                        "AP Alzheimer's + Parkinson's",
+                        "AR Age-related Memory Impairment",
+                        "AS Progressive Motor Speech Apraxia",
+                        "AY Amyotrophic lateral sclerosis (ALS)",
+                        "BD B12 Deficiency",
+                        "BI Binswanger's Disease",
+                        "BP Bipolar Disorder",
+                        "C1 MCI - Mild Cognitive Impairment 1",
+                        "C2 MCI - Mild Cognitive Impairment 2",
+                        "CB Corticobasal Ganglionic Degeneration",
+                        "CD Cognitive Disorder",
+                        "CH Chorea",
+                        "CJ Creutzfeldt-Jakob Disease",
+                        "CN Alpha-synuclein (SNCA) mutation",
+                        "CO MCI - Mild Cognitive Impairment - Other",
+                        "CS Corticobasal Ganglionic Syndrome",
+                        "CT Chronic traumatic encephalopath",
+                        "DC Demented Control",
+                        "DD Dysthmia Disorder",
+                        "DE Deferred",
+                        "DG Degenerative Disease,NOS",
+                        "DL Diffuse Lewy Body Disease",
+                        "DM Delirium",
+                        "DN TAR-DNA binding protein (TARDP) mutation",
+                        "DO Depression Other",
+                        "DP Alcohol Dependence",
+                        "DR Prodromal",
+                        "DS Down Syndrome",
+                        "DT Drug Toxicity",
+                        "DY Primary Progressive Aphasia",
+                        "EN Encephalitis",
+                        "EP Extrapyramidal Symptoms",
+                        "ET Alcoholic Dementia",
+                        "FB Frontotemporal Dementia - Behavioral variant",
+                        "FD Frontotemporal Lobar Degeneration, NLS",
+                        "FL Frontal Lobe Dementia",
+                        "FM MCI - Frontal (Secondary Dx)",
+                        "FP FTDP - 17 Tauopathy",
+                        "FR Frontotemporal lobar degeneration/TDP-43 (FTLD-TDP)",
+                        "FS Frontotemporal lobar degeneration/FUS (FTLD-FUS)",
+                        "FT Frontotemporal Dementia",
+                        "FU Frontotemporal lobar degeneration/UPS (FTLD-UPS)",
+                        "FV Frontotemporal Dementia - Right Temporal Variant",
+                        "FX Frontotemporal Lobar Degeneration, NOS",
+                        "GG Globular glial tauopathy",
+                        "GR Progranulin (GRN) mutation",
+                        "HD Huntington's Disease",
+                        "HE Hypoxic Encephalopathy",
+                        "HN Hypertension",
+                        "HP Hippocampal Sclerosis",
+                        "HS Hallervorden-Spatz Syndrome",
+                        "HT Head Trauma (TBI)",
+                        "HY Hypothyroidism",
+                        "IA Infarct, large cerebral artery",
+                        "IC Impulse Control Disorder",
+                        "IF Infarcts, not definite MI",
+                        "IL Infarct, lacunar",
+                        "IM Infarct, microscopic",
+                        "IN Incomplete Clinical Evaluation",
+                        "LA Lobar Atrophy, w/o Pick bodies",
+                        "LB Dementia with Lewy Bodies",
+                        "LD Leukodystrophy",
+                        "LG Lewy body pathology, amygdala &/or olfactory bulb only",
+                        "LL Lewy body pathology, limbic (transitional)",
+                        "LM Leukoaraiosis/microvascular white matter disease",
+                        "LO Lewy body pathology, NOS [not otherwise specified]",
+                        "LP Logopenic Progressive Aphasia",
+                        "LS Primary Lateral Sclerosis",
+                        "LT Lewy body pathology, brainstem predominant",
+                        "MA Multiple System Atrophy",
+                        "MC Memory Complaint, not Demented",
+                        "MD Major Depression",
+                        "ME Metabolic Encephalopathy",
+                        "MI Multi-infarct Dementia",
+                        "ML Mitochondrial Encephalopathy with Lactic Acidosis",
+                        "MM MCI - Mixed (Secondary Dx)",
+                        "MN Frontotemporal Lobar Degeneration-Ub Inclusion (FTD/Ub)",
+                        "MO Motor Neuron Disease",
+                        "MP CHMP2B mutation",
+                        "MR Mental Retardation",
+                        "MS Multiple Sclerosis",
+                        "MT Tau (MAPT) mutation",
+                        "MU MCI - Multiple domains",
+                        "MX Alzheimer's + Vascular",
+                        "MY Myelin loss, non-arteriosclerotic",
+                        "NA MCI - Nonamnestic MCI",
+                        "NC Normal Clinical Control",
+                        "ND No Dementia",
+                        "NI Neuronal intermediate filament inclusion disease (NIFID)",
+                        "NL Normal (no path abnormalities)",
+                        "NM MCI - Non-Verbal (Secondary Dx)",
+                        "NP Normal Pressure Hydrocephalus",
+                        "NQ Normal with question",
+                        "NS Non-Specific Neuropathologic Abnormality",
+                        "OB Organic Brain Syndrome, NOS",
+                        "OC Other CNS Disorder(s)",
+                        "OD Other Dementia",
+                        "OL Possible Dementia with Lewy Bodies",
+                        "OM MCI - Possible",
+                        "OP Olivopontocerebellar Atrophy",
+                        "OV Possible Vascular Dementia",
+                        "P1 Presenilin 1 (PSEN1) mutation",
+                        "P2 Presenilin 1 (PSEN2) mutation",
+                        "PA Parkinson's Disease",
+                        "PC Posterior Cortical Atrophy",
+                        "PD Parkinson's with Dementia",
+                        "PE Secondary Personality Syndrome",
+                        "PG Polyglandular Autoimmune Failure",
+                        "PH Parenchymal Hemorrhage",
+                        "PI Pick's Disease",
+                        "PO Possible Alzheimer's Disease",
+                        "PP Amyloid precursor protein (APP) mutation",
+                        "PR Probable Alzheimer's Disease",
+                        "PS Progressive Supranuclear Palsy",
+                        "PX Prion Disease, non-CJD",
+                        "PY Psychiatric Disorder Other",
+                        "RB REM Behavior Disorder",
+                        "RF C9ORF72 mutation",
+                        "RM MCI - Probable",
+                        "RV Probable Vascular Dementia",
+                        "SA Spinocerebellar Degeneration",
+                        "SD Subdural Hematoma",
+                        "SE Seizure Disorder",
+                        "SH Schizophrenia",
+                        "SL Systemic Lupus",
+                        "SM Semantic Dementia",
+                        "SN Striatonigral Degeneration",
+                        "SP Neurosyphilis",
+                        "SU Subcortical Disease",
+                        "TA Tangle-Predominant Senile Dementia",
+                        "TB Traumatic brain injury",
+                        "TD Tardive Dyskinesia",
+                        "TF Familial Multiple System Tauopathy with Dementia",
+                        "TM Tumor (neoplasm)--metastatic",
+                        "TP Tumor (neoplasm)--primary",
+                        "TR TREM2 mutation",
+                        "TS Sporadic Multiple System Tauopathy with Dementia",
+                        "TU Tumor",
+                        "UT Tauopathy, Unclassified",
+                        "VC Valosin-containing protein (VCP) mutation",
+                        "VD Vascular Dementia",
+                        "VM MCI - Verbal (Secondary Dx)",
+                        "WC Without Complaint",
+                        "WK Wernicke-Korsakoff Syndrome"
+                    ]
+                },
+                "sec_consen_dx_3": {
+                    "title": "Secondary Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1D First Degree Relative",
+                        "A1 Alzheimer's Frontal (Secondary Dx)",
+                        "A2 Alzheimer's Left (Secondary Dx)",
+                        "A3 Alzheimer's Right (Secondary Dx)",
+                        "AA Amyloid Angiopathy",
+                        "AD Alzheimer's Disease - Definite",
+                        "AF AD pathology, insufficient for AD diagnosis",
+                        "AG Argyrophilic Grain Disease",
+                        "AI AIDS Related Dementia",
+                        "AL Alz Lewy Body Variant",
+                        "AM MCI - Amnestic MCI",
+                        "AN Age-related Neurofibrillary  Degeneration",
+                        "AO Angiopathy, Other (includes CADASIL, Vasculitis)",
+                        "AP Alzheimer's + Parkinson's",
+                        "AR Age-related Memory Impairment",
+                        "AS Progressive Motor Speech Apraxia",
+                        "AY Amyotrophic lateral sclerosis (ALS)",
+                        "BD B12 Deficiency",
+                        "BI Binswanger's Disease",
+                        "BP Bipolar Disorder",
+                        "C1 MCI - Mild Cognitive Impairment 1",
+                        "C2 MCI - Mild Cognitive Impairment 2",
+                        "CB Corticobasal Ganglionic Degeneration",
+                        "CD Cognitive Disorder",
+                        "CH Chorea",
+                        "CJ Creutzfeldt-Jakob Disease",
+                        "CN Alpha-synuclein (SNCA) mutation",
+                        "CO MCI - Mild Cognitive Impairment - Other",
+                        "CS Corticobasal Ganglionic Syndrome",
+                        "CT Chronic traumatic encephalopath",
+                        "DC Demented Control",
+                        "DD Dysthmia Disorder",
+                        "DE Deferred",
+                        "DG Degenerative Disease,NOS",
+                        "DL Diffuse Lewy Body Disease",
+                        "DM Delirium",
+                        "DN TAR-DNA binding protein (TARDP) mutation",
+                        "DO Depression Other",
+                        "DP Alcohol Dependence",
+                        "DR Prodromal",
+                        "DS Down Syndrome",
+                        "DT Drug Toxicity",
+                        "DY Primary Progressive Aphasia",
+                        "EN Encephalitis",
+                        "EP Extrapyramidal Symptoms",
+                        "ET Alcoholic Dementia",
+                        "FB Frontotemporal Dementia - Behavioral variant",
+                        "FD Frontotemporal Lobar Degeneration, NLS",
+                        "FL Frontal Lobe Dementia",
+                        "FM MCI - Frontal (Secondary Dx)",
+                        "FP FTDP - 17 Tauopathy",
+                        "FR Frontotemporal lobar degeneration/TDP-43 (FTLD-TDP)",
+                        "FS Frontotemporal lobar degeneration/FUS (FTLD-FUS)",
+                        "FT Frontotemporal Dementia",
+                        "FU Frontotemporal lobar degeneration/UPS (FTLD-UPS)",
+                        "FV Frontotemporal Dementia - Right Temporal Variant",
+                        "FX Frontotemporal Lobar Degeneration, NOS",
+                        "GG Globular glial tauopathy",
+                        "GR Progranulin (GRN) mutation",
+                        "HD Huntington's Disease",
+                        "HE Hypoxic Encephalopathy",
+                        "HN Hypertension",
+                        "HP Hippocampal Sclerosis",
+                        "HS Hallervorden-Spatz Syndrome",
+                        "HT Head Trauma (TBI)",
+                        "HY Hypothyroidism",
+                        "IA Infarct, large cerebral artery",
+                        "IC Impulse Control Disorder",
+                        "IF Infarcts, not definite MI",
+                        "IL Infarct, lacunar",
+                        "IM Infarct, microscopic",
+                        "IN Incomplete Clinical Evaluation",
+                        "LA Lobar Atrophy, w/o Pick bodies",
+                        "LB Dementia with Lewy Bodies",
+                        "LD Leukodystrophy",
+                        "LG Lewy body pathology, amygdala &/or olfactory bulb only",
+                        "LL Lewy body pathology, limbic (transitional)",
+                        "LM Leukoaraiosis/microvascular white matter disease",
+                        "LO Lewy body pathology, NOS [not otherwise specified]",
+                        "LP Logopenic Progressive Aphasia",
+                        "LS Primary Lateral Sclerosis",
+                        "LT Lewy body pathology, brainstem predominant",
+                        "MA Multiple System Atrophy",
+                        "MC Memory Complaint, not Demented",
+                        "MD Major Depression",
+                        "ME Metabolic Encephalopathy",
+                        "MI Multi-infarct Dementia",
+                        "ML Mitochondrial Encephalopathy with Lactic Acidosis",
+                        "MM MCI - Mixed (Secondary Dx)",
+                        "MN Frontotemporal Lobar Degeneration-Ub Inclusion (FTD/Ub)",
+                        "MO Motor Neuron Disease",
+                        "MP CHMP2B mutation",
+                        "MR Mental Retardation",
+                        "MS Multiple Sclerosis",
+                        "MT Tau (MAPT) mutation",
+                        "MU MCI - Multiple domains",
+                        "MX Alzheimer's + Vascular",
+                        "MY Myelin loss, non-arteriosclerotic",
+                        "NA MCI - Nonamnestic MCI",
+                        "NC Normal Clinical Control",
+                        "ND No Dementia",
+                        "NI Neuronal intermediate filament inclusion disease (NIFID)",
+                        "NL Normal (no path abnormalities)",
+                        "NM MCI - Non-Verbal (Secondary Dx)",
+                        "NP Normal Pressure Hydrocephalus",
+                        "NQ Normal with question",
+                        "NS Non-Specific Neuropathologic Abnormality",
+                        "OB Organic Brain Syndrome, NOS",
+                        "OC Other CNS Disorder(s)",
+                        "OD Other Dementia",
+                        "OL Possible Dementia with Lewy Bodies",
+                        "OM MCI - Possible",
+                        "OP Olivopontocerebellar Atrophy",
+                        "OV Possible Vascular Dementia",
+                        "P1 Presenilin 1 (PSEN1) mutation",
+                        "P2 Presenilin 1 (PSEN2) mutation",
+                        "PA Parkinson's Disease",
+                        "PC Posterior Cortical Atrophy",
+                        "PD Parkinson's with Dementia",
+                        "PE Secondary Personality Syndrome",
+                        "PG Polyglandular Autoimmune Failure",
+                        "PH Parenchymal Hemorrhage",
+                        "PI Pick's Disease",
+                        "PO Possible Alzheimer's Disease",
+                        "PP Amyloid precursor protein (APP) mutation",
+                        "PR Probable Alzheimer's Disease",
+                        "PS Progressive Supranuclear Palsy",
+                        "PX Prion Disease, non-CJD",
+                        "PY Psychiatric Disorder Other",
+                        "RB REM Behavior Disorder",
+                        "RF C9ORF72 mutation",
+                        "RM MCI - Probable",
+                        "RV Probable Vascular Dementia",
+                        "SA Spinocerebellar Degeneration",
+                        "SD Subdural Hematoma",
+                        "SE Seizure Disorder",
+                        "SH Schizophrenia",
+                        "SL Systemic Lupus",
+                        "SM Semantic Dementia",
+                        "SN Striatonigral Degeneration",
+                        "SP Neurosyphilis",
+                        "SU Subcortical Disease",
+                        "TA Tangle-Predominant Senile Dementia",
+                        "TB Traumatic brain injury",
+                        "TD Tardive Dyskinesia",
+                        "TF Familial Multiple System Tauopathy with Dementia",
+                        "TM Tumor (neoplasm)--metastatic",
+                        "TP Tumor (neoplasm)--primary",
+                        "TR TREM2 mutation",
+                        "TS Sporadic Multiple System Tauopathy with Dementia",
+                        "TU Tumor",
+                        "UT Tauopathy, Unclassified",
+                        "VC Valosin-containing protein (VCP) mutation",
+                        "VD Vascular Dementia",
+                        "VM MCI - Verbal (Secondary Dx)",
+                        "WC Without Complaint",
+                        "WK Wernicke-Korsakoff Syndrome"
+                    ]
+                },
+                "eov_status": {
+                    "title": "3. Status at end of this visit",
+                    "type": "string",
+                    "enum": [
+                        "1 Active: further in-person visits expected",
+                        "2 Active: further phone (or other) visits expected",
+                        "3 Active: no further visits expected, autopsy expected or have autopsy consent",
+                        "4 Inactive: no further data expected, no autopsy expected",
+                        "5 Inactive: do not contact further"
+                    ]
+                },
+                "fupdate": {
+                    "title": "Date of next expected follow-up",
+                    "description": "Date can be submitted as YYYY-MM-DD.",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "crsrchavail": {
+                    "title": "Is subject available for research studies?",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No",
+                        "9 Unknown"
+                    ]
+                },
+                "crsrchreas": {
+                    "title": "Reason",
+                    "type": "string"
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "isadcvis": {
+            "title": "1. ADC Cohort Visit?"
+        },
+        "adcvistype": {
+            "title": "If yes, which type of visit?"
+        },
+        "isrchvis": {
+            "title": "2. Research study visit"
+        },
+        "rchvistype": {
+            "title": "Research study visit type"
+        },
+        "study1": {
+            "title": "Study (1)"
+        },
+        "phase1": {
+            "title": "Phase (Study 1)"
+        },
+        "study2": {
+            "title": "Study (2)"
+        },
+        "phase2": {
+            "title": "Phase (Study 2)"
+        },
+        "vishow": {
+            "title": "3. Visit made"
+        },
+        "medck": {
+            "title": "Med check"
+        },
+        "vissite": {
+            "title": "4. Site of visit"
+        },
+        "vissite_natam": {
+            "title": "Native American Satellite"
+        },
+        "vissite_oth": {
+            "title": "Specify other site"
+        },
+        "time_phone": {
+            "title": "Approximate time (hours/week) caregiver spends with patient by PHONE"
+        },
+        "time_inperson": {
+            "title": "Approximate time (hours/week) caregiver spends with patient IN PERSON"
+        },
+        "marstat": {
+            "title": "Marital status."
+        },
+        "residence": {
+            "title": "Type of Residence."
+        },
+        "residencedt": {
+            "title": "If not private residence, date entered."
+        },
+        "consent.cinfo": {
+            "title": "1. May the investigators use the information from your evaluations and treatment, without identifying you, to learn about brain disease?"
+        },
+        "consent.csampblood": {
+            "title": "2. May the investigators obtain a blood sample?"
+        },
+        "consent.csampswab": {
+            "title": "If you are not willing to let the investigators obtain a blood sample, may they obtain cells by a cheek swab?"
+        },
+        "consent.csamppunct": {
+            "title": "3. May the investigators perform a lumbar puncture to obtain a CSF sample?"
+        },
+        "consent.cdonatebr": {
+            "title": "4. Are you willing to donate your brain at the time of death for research? "
+        },
+        "consent.cdonatebrdt": {
+            "title": "If yes, date of assent"
+        },
+        "consent.csampbrain": {
+            "title": "5. May the investigators keep your samples for future research to learn about brain diseases?"
+        },
+        "consent.csampbrainshare": {
+            "title": "May the investigators share your samples/clinical info with other researchers to learn about brain diseases?"
+        },
+        "consent.cirb": {
+            "title": "6. May a representative of the Institutional Review Board speak with you about your experience with this research?"
+        },
+        "consent.cfaminvite": {
+            "title": "7. May researchers invite other members of your family to participate in this research?"
+        },
+        "consent.cfcellline": {
+            "title": "7b. Do you agree for part of your blood/tissue sample to be used to grow a long-term cell line?"
+        },
+        "consent.autcons": {
+            "title": "Autopsy consent on file?"
+        },
+        "consent.autconsdt": {
+            "title": "Autopsy consent date"
+        },
+        "nacc_diag.clindem": {
+            "title": "1. Did the subject meet clinical criteria for dementia (e.g., DSM IV or other) at the most recent evaluation for dementia?"
+        },
+        "nacc_diag.notdem": {
+            "title": "Not demented\nIf subject did not meet criteria for dementia, what was the diagnosis?"
+        },
+        "nacc_diag.notdem_oth": {
+            "title": "Specify other diagnosis"
+        },
+        "nacc_diag.alzdem": {
+            "title": "Demented \nIf subject met criteria for dementia, what was the primary diagnosis?"
+        },
+        "nacc_diag.mixed": {
+            "title": "Mixed AD/LDB"
+        },
+        "nacc_diag.nonaddem": {
+            "title": "Non-Alzheimer's Dementia types  Primary cause of dementia is not Alzheimer's "
+        },
+        "nacc_diag.nonaddem_other": {
+            "title": "Please specify Other non-Alzheimer's dementia"
+        },
+        "nacc_diag.psychos": {
+            "title": "Subject has signs and symptoms of psychosis"
+        },
+        "nacc_diag.dep_a0_2": {
+            "title": "Subject had depression at the most recent evaluation"
+        },
+        "nacc_diag.del_a0_2": {
+            "title": "Subject had delirium at the most recent evaluation"
+        },
+        "nacc_diag.utswclinicdx": {
+            "title": "2a. UTSW ADC  Clinician  Diagnosis Codes(Make sure to code presence of depression, delirium, or Parkinsonism)"
+        },
+        "nacc_diag.clin_dx1": {
+            "title": "Primary Diagnosis"
+        },
+        "nacc_diag.clin_dx2": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.utswnpsydx": {
+            "title": "2b. UTSW ADC  Neuropsychological  Diagnosis Codes   (Code presence of depression, delirium, or Parkinsonism)"
+        },
+        "nacc_diag.neuro_dx1": {
+            "title": "Primary Diagnosis"
+        },
+        "nacc_diag.neuro_dx2": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.utswconsensusdx": {
+            "title": "2c. UTSW ADC  Consensus  Diagnosis Codes   (Make sure to code presence of depression, delirium, or Parkinsonism)"
+        },
+        "nacc_diag.prim_consen_dx": {
+            "title": "Primary Diagnosis"
+        },
+        "nacc_diag.sec_consen_dx": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.sec_consen_dx_2": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.sec_consen_dx_3": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.eov_status": {
+            "title": "3. Status at end of this visit"
+        },
+        "nacc_diag.fupdate": {
+            "title": "Date of next expected follow-up"
+        },
+        "nacc_diag.crsrchavail": {
+            "title": "Is subject available for research studies?"
+        },
+        "nacc_diag.crsrchreas": {
+            "title": "Reason"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "isadcvis": {
+            "title": "1. ADC Cohort Visit?"
+        },
+        "adcvistype": {
+            "title": "If yes, which type of visit?"
+        },
+        "isrchvis": {
+            "title": "2. Research study visit"
+        },
+        "rchvistype": {
+            "title": "Research study visit type"
+        },
+        "study1": {
+            "title": "Study (1)"
+        },
+        "phase1": {
+            "title": "Phase (Study 1)"
+        },
+        "study2": {
+            "title": "Study (2)"
+        },
+        "phase2": {
+            "title": "Phase (Study 2)"
+        },
+        "vishow": {
+            "title": "3. Visit made"
+        },
+        "medck": {
+            "title": "Med check"
+        },
+        "vissite": {
+            "title": "4. Site of visit"
+        },
+        "vissite_natam": {
+            "title": "Native American Satellite"
+        },
+        "vissite_oth": {
+            "title": "Specify other site"
+        },
+        "time_phone": {
+            "title": "Approximate time (hours/week) caregiver spends with patient by PHONE"
+        },
+        "time_inperson": {
+            "title": "Approximate time (hours/week) caregiver spends with patient IN PERSON"
+        },
+        "marstat": {
+            "title": "Marital status."
+        },
+        "residence": {
+            "title": "Type of Residence."
+        },
+        "residencedt": {
+            "title": "If not private residence, date entered."
+        },
+        "consent.cinfo": {
+            "title": "1. May the investigators use the information from your evaluations and treatment, without identifying you, to learn about brain disease?"
+        },
+        "consent.csampblood": {
+            "title": "2. May the investigators obtain a blood sample?"
+        },
+        "consent.csampswab": {
+            "title": "If you are not willing to let the investigators obtain a blood sample, may they obtain cells by a cheek swab?"
+        },
+        "consent.csamppunct": {
+            "title": "3. May the investigators perform a lumbar puncture to obtain a CSF sample?"
+        },
+        "consent.cdonatebr": {
+            "title": "4. Are you willing to donate your brain at the time of death for research? "
+        },
+        "consent.cdonatebrdt": {
+            "title": "If yes, date of assent"
+        },
+        "consent.csampbrain": {
+            "title": "5. May the investigators keep your samples for future research to learn about brain diseases?"
+        },
+        "consent.csampbrainshare": {
+            "title": "May the investigators share your samples/clinical info with other researchers to learn about brain diseases?"
+        },
+        "consent.cirb": {
+            "title": "6. May a representative of the Institutional Review Board speak with you about your experience with this research?"
+        },
+        "consent.cfaminvite": {
+            "title": "7. May researchers invite other members of your family to participate in this research?"
+        },
+        "consent.cfcellline": {
+            "title": "7b. Do you agree for part of your blood/tissue sample to be used to grow a long-term cell line?"
+        },
+        "consent.autcons": {
+            "title": "Autopsy consent on file?"
+        },
+        "consent.autconsdt": {
+            "title": "Autopsy consent date"
+        },
+        "nacc_diag.clindem": {
+            "title": "1. Did the subject meet clinical criteria for dementia (e.g., DSM IV or other) at the most recent evaluation for dementia?"
+        },
+        "nacc_diag.notdem": {
+            "title": "Not demented\nIf subject did not meet criteria for dementia, what was the diagnosis?"
+        },
+        "nacc_diag.notdem_oth": {
+            "title": "Specify other diagnosis"
+        },
+        "nacc_diag.alzdem": {
+            "title": "Demented \nIf subject met criteria for dementia, what was the primary diagnosis?"
+        },
+        "nacc_diag.mixed": {
+            "title": "Mixed AD/LDB"
+        },
+        "nacc_diag.nonaddem": {
+            "title": "Non-Alzheimer's Dementia types  Primary cause of dementia is not Alzheimer's "
+        },
+        "nacc_diag.nonaddem_other": {
+            "title": "Please specify Other non-Alzheimer's dementia"
+        },
+        "nacc_diag.psychos": {
+            "title": "Subject has signs and symptoms of psychosis"
+        },
+        "nacc_diag.dep_a0_2": {
+            "title": "Subject had depression at the most recent evaluation"
+        },
+        "nacc_diag.del_a0_2": {
+            "title": "Subject had delirium at the most recent evaluation"
+        },
+        "nacc_diag.utswclinicdx": {
+            "title": "2a. UTSW ADC  Clinician  Diagnosis Codes(Make sure to code presence of depression, delirium, or Parkinsonism)"
+        },
+        "nacc_diag.clin_dx1": {
+            "title": "Primary Diagnosis"
+        },
+        "nacc_diag.clin_dx2": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.utswnpsydx": {
+            "title": "2b. UTSW ADC  Neuropsychological  Diagnosis Codes   (Code presence of depression, delirium, or Parkinsonism)"
+        },
+        "nacc_diag.neuro_dx1": {
+            "title": "Primary Diagnosis"
+        },
+        "nacc_diag.neuro_dx2": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.utswconsensusdx": {
+            "title": "2c. UTSW ADC  Consensus  Diagnosis Codes   (Make sure to code presence of depression, delirium, or Parkinsonism)"
+        },
+        "nacc_diag.prim_consen_dx": {
+            "title": "Primary Diagnosis"
+        },
+        "nacc_diag.sec_consen_dx": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.sec_consen_dx_2": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.sec_consen_dx_3": {
+            "title": "Secondary Diagnosis"
+        },
+        "nacc_diag.eov_status": {
+            "title": "3. Status at end of this visit"
+        },
+        "nacc_diag.fupdate": {
+            "title": "Date of next expected follow-up"
+        },
+        "nacc_diag.crsrchavail": {
+            "title": "Is subject available for research studies?"
+        },
+        "nacc_diag.crsrchreas": {
+            "title": "Reason"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "isadcvis": 1.0,
+        "adcvistype": 1.0,
+        "isrchvis": 1.0,
+        "rchvistype": 1.0,
+        "study1": 1.0,
+        "phase1": 1.0,
+        "study2": 1.0,
+        "phase2": 1.0,
+        "vishow": 1.0,
+        "medck": 1.0,
+        "vissite": 1.0,
+        "vissite_natam": 1.0,
+        "vissite_oth": 1.0,
+        "time_phone": 1.0,
+        "time_inperson": 1.0,
+        "marstat": 1.0,
+        "residence": 1.0,
+        "residencedt": 1.0,
+        "consent.cinfo": 1.0,
+        "consent.csampblood": 1.0,
+        "consent.csampswab": 1.0,
+        "consent.csamppunct": 1.0,
+        "consent.cdonatebr": 1.0,
+        "consent.cdonatebrdt": 1.0,
+        "consent.csampbrain": 1.0,
+        "consent.csampbrainshare": 1.0,
+        "consent.cirb": 1.0,
+        "consent.cfaminvite": 1.0,
+        "consent.cfcellline": 1.0,
+        "consent.autcons": 1.0,
+        "consent.autconsdt": 1.0,
+        "nacc_diag.clindem": 1.0,
+        "nacc_diag.notdem": 1.0,
+        "nacc_diag.notdem_oth": 1.0,
+        "nacc_diag.alzdem": 1.0,
+        "nacc_diag.mixed": 1.0,
+        "nacc_diag.nonaddem": 1.0,
+        "nacc_diag.nonaddem_other": 1.0,
+        "nacc_diag.psychos": 1.0,
+        "nacc_diag.dep_a0_2": 1.0,
+        "nacc_diag.del_a0_2": 1.0,
+        "nacc_diag.utswclinicdx": 1.0,
+        "nacc_diag.clin_dx1": 1.0,
+        "nacc_diag.clin_dx2": 1.0,
+        "nacc_diag.utswnpsydx": 1.0,
+        "nacc_diag.neuro_dx1": 1.0,
+        "nacc_diag.neuro_dx2": 1.0,
+        "nacc_diag.utswconsensusdx": 1.0,
+        "nacc_diag.prim_consen_dx": 1.0,
+        "nacc_diag.sec_consen_dx": 1.0,
+        "nacc_diag.sec_consen_dx_2": 1.0,
+        "nacc_diag.sec_consen_dx_3": 1.0,
+        "nacc_diag.eov_status": 1.0,
+        "nacc_diag.fupdate": 1.0,
+        "nacc_diag.crsrchavail": 1.0,
+        "nacc_diag.crsrchreas": 1.0
+    },
+    "changelog": "/profiles/changelogs/visit_contact.md"
+}

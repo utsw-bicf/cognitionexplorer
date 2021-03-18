@@ -178,6 +178,7 @@ class Patient(Item):
         'concussion_history',
         'concussion_history_follow_up',
         'updrs', 
+        'visit_contact', 
     ]
     rev = {
         'ivp_a1v3': ('Ivp_a1v3', 'patient'),
@@ -302,6 +303,7 @@ class Patient(Item):
         'concussion_history': ('Concussion_history', 'patient'),
         'concussion_history_follow_up': ('Concussion_history_follow_up', 'patient'),
         'updrs': ('Updrs', 'patient'),
+        'visit_contact': ('Visit_contact', 'patient'),
 
     }
 
@@ -1524,3 +1526,16 @@ class Patient(Item):
     })
     def updrs(self, request, updrs):
         return paths_filtered_by_status(request, updrs)
+
+
+    @calculated_property(schema={
+        "title": "Visit_contact",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Visit_contact"
+        },
+    })
+    def visit_contact(self, request, visit_contact):
+        return paths_filtered_by_status(request, visit_contact)
+
