@@ -557,52 +557,54 @@ class Patient(Item):
         if len(surgery) > 0:
             for surgery_record in surgery:
                 surgery_object = request.embed(surgery_record, '@@object')
-                surgery_path_report = surgery_object['pathology_report']
-                if len(surgery_path_report) > 0:
-                    for path_report in surgery_path_report:
-                        path_report_obj = request.embed(path_report, '@@object')
-                        t_stage = path_report_obj.get('t_stage')
-                        n_stage = path_report_obj.get('n_stage')
-                        m_stage = path_report_obj.get('m_stage')
-                        histology = path_report_obj.get('histology')
-                        date = surgery_object.get('date')
-                        # handle missing data. if stage info is missing, rank it the -1(lowest)
-                        # Also we assume non-RCC is already exluded from path report data
-                        if t_stage:
-                            t_stage_rank =  tRanking[t_stage]
-                        else:
-                            t_stage_rank = -1
-                        if n_stage:
-                            n_stage_rank =  nRanking[n_stage]
-                        else:
-                            n_stage_rank = -1
-                        if histology:
-                            histology_rank =  histologyRanking[histology]
-                        else:
-                            histology_rank = -1
-                        histology = path_report_obj.get('histology')
-                        histology_filter = histology_filters.get(histology)
-                        tumor = {
-                            't_stage': t_stage,
-                            't_stage_rank': t_stage_rank,
-                            'n_stage': n_stage,
-                            'n_stage_rank': n_stage_rank,
-                            'm_stage': m_stage,
-                            'histology': histology,
-                            'histology_filter': histology_filter,
-                            'histology_rank': histology_rank,
-                            'tumor_size': path_report_obj.get('tumor_size'),
-                            'tumor_size_units': path_report_obj.get('tumor_size_units'),
-                            'path_report': path_report_obj.get('accession'),
-                            'path_report_id': path_report_obj.get('@id'),
-                            'surgery': surgery_object.get('accession'),
-                            'surgery_id': surgery_object.get('@id'),
-                            'stage': path_report_obj.get('ajcc_tnm_stage'),
-                            'ajcc_version': path_report_obj.get('ajcc_version'),
-                            'date': date
-                        }
+                for surgery_procedure in surgery_object['surgery_procedure']:
+                    procedure_object = request.embed(surgery_procedure, '@@object')
+                    surgery_path_report = procedure_object['pathology_report']
+                    if len(surgery_path_report) > 0:
+                        for path_report in surgery_path_report:
+                            path_report_obj = request.embed(path_report, '@@object')
+                            t_stage = path_report_obj.get('t_stage')
+                            n_stage = path_report_obj.get('n_stage')
+                            m_stage = path_report_obj.get('m_stage')
+                            histology = path_report_obj.get('histology')
+                            date = surgery_object.get('date')
+                            # handle missing data. if stage info is missing, rank it the -1(lowest)
+                            # Also we assume non-RCC is already exluded from path report data
+                            if t_stage:
+                                t_stage_rank =  tRanking[t_stage]
+                            else:
+                                t_stage_rank = -1
+                            if n_stage:
+                                n_stage_rank =  nRanking[n_stage]
+                            else:
+                                n_stage_rank = -1
+                            if histology:
+                                histology_rank =  histologyRanking[histology]
+                            else:
+                                histology_rank = -1
+                            histology = path_report_obj.get('histology')
+                            histology_filter = histology_filters.get(histology)
+                            tumor = {
+                                't_stage': t_stage,
+                                't_stage_rank': t_stage_rank,
+                                'n_stage': n_stage,
+                                'n_stage_rank': n_stage_rank,
+                                'm_stage': m_stage,
+                                'histology': histology,
+                                'histology_filter': histology_filter,
+                                'histology_rank': histology_rank,
+                                'tumor_size': path_report_obj.get('tumor_size'),
+                                'tumor_size_units': path_report_obj.get('tumor_size_units'),
+                                'path_report': path_report_obj.get('accession'),
+                                'path_report_id': path_report_obj.get('@id'),
+                                'surgery': surgery_object.get('accession'),
+                                'surgery_id': surgery_object.get('@id'),
+                                'stage': path_report_obj.get('ajcc_tnm_stage'),
+                                'ajcc_version': path_report_obj.get('ajcc_version'),
+                                'date': date
+                            }
 
-                        tumors.append(tumor)
+                            tumors.append(tumor)
 
             if len(tumors) == 1:
                 dominant_tumor = tumors[0]
