@@ -70,6 +70,7 @@ class Patient(Item):
         'tvp_t1',
         'tvp_b4', 
         'updrs', 
+        'visit_contact', 
     ]
     rev = {
         'ivp_a1': ('Ivp_a1', 'patient'),
@@ -116,6 +117,7 @@ class Patient(Item):
         'tvp_t1': ('Tvp_t1', 'patient'),
         'tvp_b4': ('Tvp_b4', 'patient'),
         'updrs': ('Updrs', 'patient'),
+        'visit_contact': ('Visit_contact', 'patient'),
 
     }
 
@@ -611,3 +613,16 @@ class Patient(Item):
     })
     def updrs(self, request, updrs):
         return paths_filtered_by_status(request, updrs)
+
+
+    @calculated_property(schema={
+        "title": "Visit_contact",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Visit_contact"
+        },
+    })
+    def visit_contact(self, request, visit_contact):
+        return paths_filtered_by_status(request, visit_contact)
+
