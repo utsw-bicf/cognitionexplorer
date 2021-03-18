@@ -45,7 +45,7 @@
             "title": "Surgery",
             "description": "The procedure the pathology originated from.",
             "type": "string",
-            "linkTo": "surgery_procedure"
+            "linkTo": "SurgeryProcedure"
         },
         "path_id": {
             "title": "Path ID",
