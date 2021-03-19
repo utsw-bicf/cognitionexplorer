@@ -158,6 +158,7 @@ ORDER = [
     'concussion_history_follow_up',
     'updrs',
     'visit_contact',
+    'physical_exam',
     'cart'
 ]
 

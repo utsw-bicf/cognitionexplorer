@@ -1,0 +1,1971 @@
+{
+    "title": "Physical Examination",
+    "id": "/profiles/physical_exam.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+      "uuid"
+    ],
+    "required": [
+      "adc_form_b",
+      "ii_gene_phys_exam",
+      "iii_cran_nerv",
+      "iv_refl",
+      "v_motor_stre",
+      "vi_motor_tone",
+      "vii_sens_feet",
+      "viii_cere_exam",
+      "ix_gait"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+      {
+        "$ref": "mixins.json#/schema_version"
+      },
+      {
+        "$ref": "mixins.json#/submitted"
+      },
+      {
+        "$ref": "mixins.json#/standard_status"
+      },
+      {
+        "$ref": "mixins.json#/header"
+      },
+      {
+        "$ref": "mixins.json#/examinier_initials"
+      },
+      {
+        "$ref": "mixins.json#/form_status"
+      },
+      {
+        "$ref": "mixins.json#/uuid"
+      }
+    ],
+    "type": "object",
+    "properties": {
+      "schema_version": {
+        "default": "1"
+      },
+      "adc_form_b": {
+        "title": "ADC Form B1.1",
+        "type": "object",
+        "properties": {
+          "appear": {
+            "title": "I. General Appearance",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_appear": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          }
+        }
+      },
+      "ii_gene_phys_exam": {
+        "title": "II. General Physical Exam",
+        "type": "object",
+        "properties": {
+          "headneck": {
+            "title": "Head and Neck",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_headneck": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "chest": {
+            "title": "Chest",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_3": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "heart": {
+            "title": "Heart",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_heart": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abdom": {
+            "title": "Abdomen",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_abdom": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "extrem": {
+            "title": "Extremities",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_extrem": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "edema": {
+            "title": "Edema",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_edema": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          }
+        }
+      },
+      "iii_cran_nerv": {
+        "title": "III. Cranial Nerves",
+        "type": "object",
+        "properties": {
+          "ii_eye": {
+            "title": "II (eyesight)",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_ii_eye": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "iii_iv_vi": {
+            "title": "III, IV, VI",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_iii_iv_vi": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "v": {
+            "title": "V",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_v": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "vii": {
+            "title": "VII",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_vii": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "viii": {
+            "title": "VIII (hearing)",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_viii": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "ix_x": {
+            "title": "IX, X",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_ix_x": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "xi": {
+            "title": "XI",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_xi": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "xii": {
+            "title": "XII",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_xii": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          }
+        }
+      },
+      "iv_refl": {
+        "title": "IV. Reflexes (Input MRC grade.)",
+        "type": "object",
+        "properties": {
+          "bic_r": {
+            "title": "Biceps - R",
+            "type": "string",
+            "enum": [
+              "0 0",
+              "1 1",
+              "2 2",
+              "3 3",
+              "4 4"
+            ]
+          },
+          "bic_l": {
+            "title": "Biceps -L",
+            "type": "string",
+            "enum": [
+              "0 0",
+              "1 1",
+              "2 2",
+              "3 3",
+              "4 4"
+            ]
+          },
+          "abnormal_bic_r": {
+            "title": "Biceps - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_bic_l": {
+            "title": "Biceps - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "tri_r": {
+            "title": "Triceps - R",
+            "type": "string",
+            "enum": [
+              "0 0",
+              "1 1",
+              "2 2",
+              "3 3",
+              "4 4"
+            ]
+          },
+          "tri_l": {
+            "title": "Triceps - L",
+            "type": "string",
+            "enum": [
+              "0 0",
+              "1 1",
+              "2 2",
+              "3 3",
+              "4 4"
+            ]
+          },
+          "abnormal_tri_r": {
+            "title": "Triceps - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_tri_l": {
+            "title": "Triceps - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "patell_r": {
+            "title": "Patellar - R",
+            "type": "string",
+            "enum": [
+              "0 0",
+              "1 1",
+              "2 2",
+              "3 3",
+              "4 4"
+            ]
+          },
+          "patell_l": {
+            "title": "Patellar - L",
+            "type": "string",
+            "enum": [
+              "0 0",
+              "1 1",
+              "2 2",
+              "3 3",
+              "4 4"
+            ]
+          },
+          "abnormal_patell_r": {
+            "title": "Patellar - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_patell_l": {
+            "title": "Patellar - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "achill_r": {
+            "title": "Achilles - R",
+            "type": "string",
+            "enum": [
+              "0 0",
+              "1 1",
+              "2 2",
+              "3 3",
+              "4 4"
+            ]
+          },
+          "achill_l": {
+            "title": "Achilles - L",
+            "type": "string",
+            "enum": [
+              "0 0",
+              "1 1",
+              "2 2",
+              "3 3",
+              "4 4"
+            ]
+          },
+          "abnormal_achilles_r": {
+            "title": "Achilles - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_achilles_l": {
+            "title": "Achilles - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "bab_r": {
+            "title": "Babinski signs - right",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_bab_r": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "bab_l": {
+            "title": "Babinski signs - left",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_bab_l": {
+            "title": "If abnormal, please describe.",
+            "type": "string"
+          }
+        }
+      },
+      "v_motor_stre": {
+        "title": "V. Motor Strength",
+        "type": "object",
+        "properties": {
+          "arms_p_r": {
+            "title": "Arms proximal - R",
+            "type": "string",
+            "enum": [
+              "0 No strength",
+              "1 Trace movement only",
+              "2 Unable to overcome gravity",
+              "3 Unable to overcome resistance",
+              "4 Reduced strength",
+              "5 Normal",
+              "8 Non-neurological",
+              "9 N/A"
+            ]
+          },
+          "arms_p_l": {
+            "title": "Arms proximal - L",
+            "type": "string",
+            "enum": [
+              "0 No strength",
+              "1 Trace movement only",
+              "2 Unable to overcome gravity",
+              "3 Unable to overcome resistance",
+              "4 Reduced strength",
+              "5 Normal",
+              "8 Non-neurological",
+              "9 N/A"
+            ]
+          },
+          "arms_d_r": {
+            "title": "Arms distal - R",
+            "type": "string",
+            "enum": [
+              "0 No strength",
+              "1 Trace movement only",
+              "2 Unable to overcome gravity",
+              "3 Unable to overcome resistance",
+              "4 Reduced strength",
+              "5 Normal",
+              "8 Non-neurological",
+              "9 N/A"
+            ]
+          },
+          "arms_d_l": {
+            "title": "Arms distal - L",
+            "type": "string",
+            "enum": [
+              "0 No strength",
+              "1 Trace movement only",
+              "2 Unable to overcome gravity",
+              "3 Unable to overcome resistance",
+              "4 Reduced strength",
+              "5 Normal",
+              "8 Non-neurological",
+              "9 N/A"
+            ]
+          },
+          "abnormal_arms_p_r": {
+            "title": "Arms proximal - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_arms_p_l": {
+            "title": "Arms proximal - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_arms_d_r": {
+            "title": "Arms distal - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_arms_d_l": {
+            "title": "Arms distal - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "legs_p_r": {
+            "title": "Legs proximal - R",
+            "type": "string",
+            "enum": [
+              "0 No strength",
+              "1 Trace movement only",
+              "2 Unable to overcome gravity",
+              "3 Unable to overcome resistance",
+              "4 Reduced strength",
+              "5 Normal",
+              "8 Non-neurological",
+              "9 N/A"
+            ]
+          },
+          "legs_p_l": {
+            "title": "Legs proximal - L",
+            "type": "string",
+            "enum": [
+              "0 No strength",
+              "1 Trace movement only",
+              "2 Unable to overcome gravity",
+              "3 Unable to overcome resistance",
+              "4 Reduced strength",
+              "5 Normal",
+              "8 Non-neurological",
+              "9 N/A"
+            ]
+          },
+          "legs_d_r": {
+            "title": "Legs distal - R",
+            "type": "string",
+            "enum": [
+              "0 No strength",
+              "1 Trace movement only",
+              "2 Unable to overcome gravity",
+              "3 Unable to overcome resistance",
+              "4 Reduced strength",
+              "5 Normal",
+              "8 Non-neurological",
+              "9 N/A"
+            ]
+          },
+          "legs_d_l": {
+            "title": "Legs distal - L",
+            "type": "string",
+            "enum": [
+              "0 No strength",
+              "1 Trace movement only",
+              "2 Unable to overcome gravity",
+              "3 Unable to overcome resistance",
+              "4 Reduced strength",
+              "5 Normal",
+              "8 Non-neurological",
+              "9 N/A"
+            ]
+          },
+          "abnormal_legs_p_r": {
+            "title": "Legs proximal - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_legs_p_l": {
+            "title": "Legs proximal - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_legs_d_r": {
+            "title": "Legs distal - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_legs_d_l": {
+            "title": "Legs distal - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "pron_r": {
+            "title": "Pronator drift - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "pron_l": {
+            "title": "Pronator drift - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_pron_r": {
+            "title": "Pronator drift - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_pron_l": {
+            "title": "Pronator drift - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          }
+        }
+      },
+      "vi_motor_tone": {
+        "title": "For rapid alternating movements (hands and feet) and tremor, see UDPRS.\n\nVI. Motor tone (not Rigidity on UPDRS)",
+        "type": "object",
+        "properties": {
+          "ue_spast_r": {
+            "title": "Upper Extremities - Spasticity - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "ue_spast_l": {
+            "title": "Upper Extremities - Spasticity - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "ue_myocl_r": {
+            "title": "Upper Extremities - Myoclonus - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "ue_myocl_l": {
+            "title": "Upper Extremities - Myoclonus - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "ue_fascic_r": {
+            "title": "Upper Extremities - Fasciculations - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "ue_fascic_l": {
+            "title": "Upper Extremities - Fasciculations - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "ue_atroph_r": {
+            "title": "Upper Extremities - Atrophy - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "ue_atroph_l": {
+            "title": "Upper Extremities - Atrophy - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_ue_spast_r": {
+            "title": "Upper Extremities - Spasticity - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_ue_spast_l": {
+            "title": "Upper Extremities - Spasticity - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_ue_myocl_r": {
+            "title": "Upper Extremities - Myoclonus - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_ue_myocl_l": {
+            "title": "Upper Extremities - Myoclonus - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_ue_fascic_r": {
+            "title": "Upper Extremities - Fasciculations - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_ue_fascic_l": {
+            "title": "Upper Extremities - Fasciculations - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_ue_atroph_r": {
+            "title": "Upper Extremities - Atrophy - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_ue_atroph_l": {
+            "title": "Upper Extremities - Atrophy - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "le_spast_r": {
+            "title": "Lower extremities - Spasticity - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "le_spast_l": {
+            "title": "Lower extremities - Spasticity - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "le_myocl_r": {
+            "title": "Lower extremities - Myoclonus - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "le_myocl_l": {
+            "title": "Lower extremities - Myoclonus - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "le_fascic_r": {
+            "title": "Lower extremities - Fasciculations - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "le_fascic_l": {
+            "title": "Lower extremities - Fasciculations - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "le_atroph_r": {
+            "title": "Lower extremities - Atrophy - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "le_atroph_l": {
+            "title": "Lower extremities - Atrophy - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_le_spast_r": {
+            "title": "Lower extremities - Spasticity - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_le_spast_l": {
+            "title": "Lower extremities - Spasticity - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_le_myocl_r": {
+            "title": "Lower extremities - Myoclonus - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_le_myocl_l": {
+            "title": "Lower extremities - Myoclonus - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_le_fascic_r": {
+            "title": "Lower extremities - Fasciculations - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_le_fascic_l": {
+            "title": "Lower extremities - Fasciculations - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_le_atroph_r": {
+            "title": "Lower extremities - Atrophy - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_le_atroph_l": {
+            "title": "Lower extremities - Atrophy - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          }
+        }
+      },
+      "vii_sens_feet": {
+        "title": "VII. Sensory in feet",
+        "type": "object",
+        "properties": {
+          "vib_nor_r": {
+            "title": "Vibration sense - Normal (>10 sec) - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "vib_nor_l": {
+            "title": "Vibration sense - Normal (>10 sec) - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "vib_dec_r": {
+            "title": "Vibration sense - Decreased (< 10 sec) - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "vib_dec_l": {
+            "title": "Vibration sense - Decreased (< 10 sec) - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_vib_nor_r": {
+            "title": "Vibration sense - Normal (>10 sec) - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_vib_nor_l": {
+            "title": "Vibration sense - Normal (>10 sec) - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_vib_dec_r": {
+            "title": "Vibration sense - Decreased (< 10 sec) - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_vib_dec_l": {
+            "title": "Vibration sense - Decreased (< 10 sec) - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "pps_nor_r": {
+            "title": "Pin prick sensation - Normal - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "pps_nor_l": {
+            "title": "Pin prick sensation - Normal - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "pps_dec_r": {
+            "title": "Pin prick sensation - Decreased in toes - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "pps_dec_l": {
+            "title": "Pin prick sensation - Decreased in toes - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_pps_nor_r": {
+            "title": "Pin prick sensation - Normal - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_pps_nor_l": {
+            "title": "Pin prick sensation - Normal - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_pps_dec_r": {
+            "title": "Pin prick sensation - Decreased in toes - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_pps_dec_l": {
+            "title": "Pin prick sensation - Decreased in toes - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          }
+        }
+      },
+      "viii_cere_exam": {
+        "title": "VIII. Cerebellar exam",
+        "type": "object",
+        "properties": {
+          "dysmet_r": {
+            "title": "Finger-nose-finger (Dysmetria) - R",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "dysmet_l": {
+            "title": "Finger-nose-finger (Dysmetria) - L",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Abnormal",
+              "9 Unable to determine"
+            ]
+          },
+          "abnormal_dysmet_r": {
+            "title": "Finger-nose-finger (Dysmetria) - R",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          },
+          "abnormal_dysmet_l": {
+            "title": "Finger-nose-finger (Dysmetria) - L",
+            "description": "If abnormal, please describe.",
+            "type": "string"
+          }
+        }
+      },
+      "ix_gait": {
+        "title": "IX. Gait Disturbances",
+        "type": "object",
+        "properties": {
+          "severity": {
+            "title": "Severity (check one)",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Slight alteration in speed or fluidity of gait",
+              "2 Walks with difficulty but requires no assistance",
+              "3 Severe disturbance",
+              "4 Cannot walk at all",
+              "8 Untestable"
+            ]
+          },
+          "specify_untest": {
+            "title": "Specify why untestable",
+            "type": "string"
+          },
+          "type": {
+            "title": "Type (check one)",
+            "type": "string",
+            "enum": [
+              "0 Normal",
+              "1 Hemipretic (spastic)",
+              "2 Foot drop gait (lower motor neuron)",
+              "3 Ataxic gait",
+              "4 Parkinsonian gait",
+              "5 Apractic gait (magnetic gait)",
+              "6 Antalgic gait",
+              "7 Other gait disorder not listed above",
+              "8 Untestable"
+            ]
+          },
+          "specify_giatdis": {
+            "title": "Specify other gait disorder not listed ",
+            "type": "string"
+          },
+          "specify_untest_3": {
+            "title": "Specify why untestable",
+            "type": "string"
+          }
+        }
+      },
+      "other_abnorm": {
+        "title": "X. Other abnormalities",
+        "type": "string"
+      },
+      "gen_comm": {
+        "title": "X. General Comments",
+        "type": "string"
+      },
+      "clin_sig": {
+        "title": "Clinician's Signature",
+        "type": "string"
+      }
+    },
+    "facets": {
+      "status": {
+        "title": "Status"
+      },
+      "adc_form_b.appear": {
+        "title": "I. General Appearance"
+      },
+      "adc_form_b.abnormal_appear": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.headneck": {
+        "title": "Head and Neck"
+      },
+      "ii_gene_phys_exam.abnormal_headneck": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.chest": {
+        "title": "Chest"
+      },
+      "ii_gene_phys_exam.abnormal_3": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.heart": {
+        "title": "Heart"
+      },
+      "ii_gene_phys_exam.abnormal_heart": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.abdom": {
+        "title": "ii_gene_phys_exam.abdomen"
+      },
+      "ii_gene_phys_exam.abnormal_abdom": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.extrem": {
+        "title": "Extremities"
+      },
+      "ii_gene_phys_exam.abnormal_extrem": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.edema": {
+        "title": "Edema"
+      },
+      "ii_gene_phys_exam.abnormal_edema": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.ii_eye": {
+        "title": "II (eyesight)"
+      },
+      "iii_cran_nerv.abnormal_ii_eye": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.iii_iv_vi": {
+        "title": "III, IV, VI"
+      },
+      "iii_cran_nerv.abnormal_iii_iv_vi": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.v": {
+        "title": "V"
+      },
+      "iii_cran_nerv.abnormal_v": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.vii": {
+        "title": "VII"
+      },
+      "iii_cran_nerv.abnormal_vii": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.viii": {
+        "title": "VIII (hearing)"
+      },
+      "iii_cran_nerv.abnormal_viii": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.ix_x": {
+        "title": "IX, X"
+      },
+      "iii_cran_nerv.abnormal_ix_x": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.xi": {
+        "title": "XI"
+      },
+      "iii_cran_nerv.abnormal_xi": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.xii": {
+        "title": "XII"
+      },
+      "iii_cran_nerv.abnormal_xii": {
+        "title": "If abnormal, please describe."
+      },
+      "iv_refl.bic_r": {
+        "title": "Biceps - R"
+      },
+      "iv_refl.bic_l": {
+        "title": "Biceps -L"
+      },
+      "iv_refl.abnormal_bic_r": {
+        "title": "Biceps - R"
+      },
+      "iv_refl.abnormal_bic_l": {
+        "title": "Biceps - L"
+      },
+      "iv_refl.tri_r": {
+        "title": "Triceps - R"
+      },
+      "iv_refl.tri_l": {
+        "title": "Triceps - L"
+      },
+      "iv_refl.abnormal_tri_r": {
+        "title": "Triceps - R"
+      },
+      "iv_refl.abnormal_tri_l": {
+        "title": "Triceps - L"
+      },
+      "iv_refl.patell_r": {
+        "title": "Patellar - R"
+      },
+      "iv_refl.patell_l": {
+        "title": "Patellar - L"
+      },
+      "iv_refl.abnormal_patell_r": {
+        "title": "Patellar - R"
+      },
+      "iv_refl.abnormal_patell_l": {
+        "title": "Patellar - L"
+      },
+      "iv_refl.achill_r": {
+        "title": "Achilles - R"
+      },
+      "iv_refl.achill_l": {
+        "title": "Achilles - L"
+      },
+      "iv_refl.abnormal_achilles_r": {
+        "title": "Achilles - R"
+      },
+      "iv_refl.abnormal_achilles_l": {
+        "title": "Achilles - L"
+      },
+      "iv_refl.bab_r": {
+        "title": "Babinski signs - right"
+      },
+      "iv_refl.abnormal_bab_r": {
+        "title": "If abnormal, please describe."
+      },
+      "iv_refl.bab_l": {
+        "title": "Babinski signs - left"
+      },
+      "iv_refl.abnormal_bab_l": {
+        "title": "If abnormal, please describe."
+      },
+      "v_motor_stre.arms_p_r": {
+        "title": "Arms proximal - R"
+      },
+      "v_motor_stre.arms_p_l": {
+        "title": "Arms proximal - L"
+      },
+      "v_motor_stre.arms_d_r": {
+        "title": "Arms distal - R"
+      },
+      "v_motor_stre.arms_d_l": {
+        "title": "Arms distal - L"
+      },
+      "v_motor_stre.abnormal_arms_p_r": {
+        "title": "Arms proximal - R"
+      },
+      "v_motor_stre.abnormal_arms_p_l": {
+        "title": "Arms proximal - L"
+      },
+      "v_motor_stre.abnormal_arms_d_r": {
+        "title": "Arms distal - R"
+      },
+      "v_motor_stre.abnormal_arms_d_l": {
+        "title": "Arms distal - L"
+      },
+      "v_motor_stre.legs_p_r": {
+        "title": "Legs proximal - R"
+      },
+      "v_motor_stre.legs_p_l": {
+        "title": "Legs proximal - L"
+      },
+      "v_motor_stre.legs_d_r": {
+        "title": "Legs distal - R"
+      },
+      "v_motor_stre.legs_d_l": {
+        "title": "Legs distal - L"
+      },
+      "v_motor_stre.abnormal_legs_p_r": {
+        "title": "Legs proximal - R"
+      },
+      "v_motor_stre.abnormal_legs_p_l": {
+        "title": "Legs proximal - L"
+      },
+      "v_motor_stre.abnormal_legs_d_r": {
+        "title": "Legs distal - R"
+      },
+      "v_motor_stre.abnormal_legs_d_l": {
+        "title": "Legs distal - L"
+      },
+      "v_motor_stre.pron_r": {
+        "title": "Pronator drift - R"
+      },
+      "v_motor_stre.pron_l": {
+        "title": "Pronator drift - L"
+      },
+      "v_motor_stre.abnormal_pron_r": {
+        "title": "Pronator drift - R"
+      },
+      "v_motor_stre.abnormal_pron_l": {
+        "title": "Pronator drift - L"
+      },
+      "vi_motor_tone.ue_spast_r": {
+        "title": "Upper Extremities - Spasticity - R"
+      },
+      "vi_motor_tone.ue_spast_l": {
+        "title": "Upper Extremities - Spasticity - L"
+      },
+      "vi_motor_tone.ue_myocl_r": {
+        "title": "Upper Extremities - Myoclonus - R"
+      },
+      "vi_motor_tone.ue_myocl_l": {
+        "title": "Upper Extremities - Myoclonus - L"
+      },
+      "vi_motor_tone.ue_fascic_r": {
+        "title": "Upper Extremities - Fasciculations - R"
+      },
+      "vi_motor_tone.ue_fascic_l": {
+        "title": "Upper Extremities - Fasciculations - L"
+      },
+      "vi_motor_tone.ue_atroph_r": {
+        "title": "Upper Extremities - Atrophy - R"
+      },
+      "vi_motor_tone.ue_atroph_l": {
+        "title": "Upper Extremities - Atrophy - L"
+      },
+      "vi_motor_tone.abnormal_ue_spast_r": {
+        "title": "Upper Extremities - Spasticity - R"
+      },
+      "vi_motor_tone.abnormal_ue_spast_l": {
+        "title": "Upper Extremities - Spasticity - L"
+      },
+      "vi_motor_tone.abnormal_ue_myocl_r": {
+        "title": "Upper Extremities - Myoclonus - R"
+      },
+      "vi_motor_tone.abnormal_ue_myocl_l": {
+        "title": "Upper Extremities - Myoclonus - L"
+      },
+      "vi_motor_tone.abnormal_ue_fascic_r": {
+        "title": "Upper Extremities - Fasciculations - R"
+      },
+      "vi_motor_tone.abnormal_ue_fascic_l": {
+        "title": "Upper Extremities - Fasciculations - L"
+      },
+      "vi_motor_tone.abnormal_ue_atroph_r": {
+        "title": "Upper Extremities - Atrophy - R"
+      },
+      "vi_motor_tone.abnormal_ue_atroph_l": {
+        "title": "Upper Extremities - Atrophy - L"
+      },
+      "vi_motor_tone.le_spast_r": {
+        "title": "Lower extremities - Spasticity - R"
+      },
+      "vi_motor_tone.le_spast_l": {
+        "title": "Lower extremities - Spasticity - L"
+      },
+      "vi_motor_tone.le_myocl_r": {
+        "title": "Lower extremities - Myoclonus - R"
+      },
+      "vi_motor_tone.le_myocl_l": {
+        "title": "Lower extremities - Myoclonus - L"
+      },
+      "vi_motor_tone.le_fascic_r": {
+        "title": "Lower extremities - Fasciculations - R"
+      },
+      "vi_motor_tone.le_fascic_l": {
+        "title": "Lower extremities - Fasciculations - L"
+      },
+      "vi_motor_tone.le_atroph_r": {
+        "title": "Lower extremities - Atrophy - R"
+      },
+      "vi_motor_tone.le_atroph_l": {
+        "title": "Lower extremities - Atrophy - L"
+      },
+      "vi_motor_tone.abnormal_le_spast_r": {
+        "title": "Lower extremities - Spasticity - R"
+      },
+      "vi_motor_tone.abnormal_le_spast_l": {
+        "title": "Lower extremities - Spasticity - L"
+      },
+      "vi_motor_tone.abnormal_le_myocl_r": {
+        "title": "Lower extremities - Myoclonus - R"
+      },
+      "vi_motor_tone.abnormal_le_myocl_l": {
+        "title": "Lower extremities - Myoclonus - L"
+      },
+      "vi_motor_tone.abnormal_le_fascic_r": {
+        "title": "Lower extremities - Fasciculations - R"
+      },
+      "vi_motor_tone.abnormal_le_fascic_l": {
+        "title": "Lower extremities - Fasciculations - L"
+      },
+      "vi_motor_tone.abnormal_le_atroph_r": {
+        "title": "Lower extremities - Atrophy - R"
+      },
+      "vi_motor_tone.abnormal_le_atroph_l": {
+        "title": "Lower extremities - Atrophy - L"
+      },
+      "vii_sens_feet.vib_nor_r": {
+        "title": "Vibration sense - Normal (>10 sec) - R"
+      },
+      "vii_sens_feet.vib_nor_l": {
+        "title": "Vibration sense - Normal (>10 sec) - L"
+      },
+      "vii_sens_feet.vib_dec_r": {
+        "title": "Vibration sense - Decreased (< 10 sec) - R"
+      },
+      "vii_sens_feet.vib_dec_l": {
+        "title": "Vibration sense - Decreased (< 10 sec) - L"
+      },
+      "vii_sens_feet.abnormal_vib_nor_r": {
+        "title": "Vibration sense - Normal (>10 sec) - R"
+      },
+      "vii_sens_feet.abnormal_vib_nor_l": {
+        "title": "Vibration sense - Normal (>10 sec) - L"
+      },
+      "vii_sens_feet.abnormal_vib_dec_r": {
+        "title": "Vibration sense - Decreased (< 10 sec) - R"
+      },
+      "vii_sens_feet.abnormal_vib_dec_l": {
+        "title": "Vibration sense - Decreased (< 10 sec) - L"
+      },
+      "vii_sens_feet.pps_nor_r": {
+        "title": "Pin prick sensation - Normal - R"
+      },
+      "vii_sens_feet.pps_nor_l": {
+        "title": "Pin prick sensation - Normal - L"
+      },
+      "vii_sens_feet.pps_dec_r": {
+        "title": "Pin prick sensation - Decreased in toes - R"
+      },
+      "vii_sens_feet.pps_dec_l": {
+        "title": "Pin prick sensation - Decreased in toes - L"
+      },
+      "vii_sens_feet.abnormal_pps_nor_r": {
+        "title": "Pin prick sensation - Normal - R"
+      },
+      "vii_sens_feet.abnormal_pps_nor_l": {
+        "title": "Pin prick sensation - Normal - L"
+      },
+      "vii_sens_feet.abnormal_pps_dec_r": {
+        "title": "Pin prick sensation - Decreased in toes - R"
+      },
+      "vii_sens_feet.abnormal_pps_dec_l": {
+        "title": "Pin prick sensation - Decreased in toes - L"
+      },
+      "viii_cere_exam.dysmet_r": {
+        "title": "Finger-nose-finger (Dysmetria) - R"
+      },
+      "viii_cere_exam.dysmet_l": {
+        "title": "Finger-nose-finger (Dysmetria) - L"
+      },
+      "viii_cere_exam.abnormal_dysmet_r": {
+        "title": "Finger-nose-finger (Dysmetria) - R"
+      },
+      "viii_cere_exam.abnormal_dysmet_l": {
+        "title": "Finger-nose-finger (Dysmetria) - L"
+      },
+      "ix_gait.severity": {
+        "title": "Severity (check one)"
+      },
+      "ix_gait.specify_untest": {
+        "title": "Specify why untestable"
+      },
+      "ix_gait.type": {
+        "title": "Type (check one)"
+      },
+      "ix_gait.specify_giatdis": {
+        "title": "Specify other gait disorder not listed "
+      },
+      "ix_gait.specify_untest_3": {
+        "title": "Specify why untestable"
+      },
+      "other_abnorm": {
+        "title": "X. Other abnormalities"
+      },
+      "gen_comm": {
+        "title": "X. General Comments"
+      },
+      "clin_sig": {
+        "title": "Clinician's Signature"
+      }
+    },
+    "columns": {
+      "status": {
+        "title": "Status"
+      },
+      "adc_form_b.appear": {
+        "title": "I. General Appearance"
+      },
+      "adc_form_b.abnormal_appear": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.headneck": {
+        "title": "Head and Neck"
+      },
+      "ii_gene_phys_exam.abnormal_headneck": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.chest": {
+        "title": "Chest"
+      },
+      "ii_gene_phys_exam.abnormal_3": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.heart": {
+        "title": "Heart"
+      },
+      "ii_gene_phys_exam.abnormal_heart": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.abdom": {
+        "title": "ii_gene_phys_exam.abdomen"
+      },
+      "ii_gene_phys_exam.abnormal_abdom": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.extrem": {
+        "title": "Extremities"
+      },
+      "ii_gene_phys_exam.abnormal_extrem": {
+        "title": "If abnormal, please describe."
+      },
+      "ii_gene_phys_exam.edema": {
+        "title": "Edema"
+      },
+      "ii_gene_phys_exam.abnormal_edema": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.ii_eye": {
+        "title": "II (eyesight)"
+      },
+      "iii_cran_nerv.abnormal_ii_eye": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.iii_iv_vi": {
+        "title": "III, IV, VI"
+      },
+      "iii_cran_nerv.abnormal_iii_iv_vi": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.v": {
+        "title": "V"
+      },
+      "iii_cran_nerv.abnormal_v": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.vii": {
+        "title": "VII"
+      },
+      "iii_cran_nerv.abnormal_vii": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.viii": {
+        "title": "VIII (hearing)"
+      },
+      "iii_cran_nerv.abnormal_viii": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.ix_x": {
+        "title": "IX, X"
+      },
+      "iii_cran_nerv.abnormal_ix_x": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.xi": {
+        "title": "XI"
+      },
+      "iii_cran_nerv.abnormal_xi": {
+        "title": "If abnormal, please describe."
+      },
+      "iii_cran_nerv.xii": {
+        "title": "XII"
+      },
+      "iii_cran_nerv.abnormal_xii": {
+        "title": "If abnormal, please describe."
+      },
+      "iv_refl.bic_r": {
+        "title": "Biceps - R"
+      },
+      "iv_refl.bic_l": {
+        "title": "Biceps -L"
+      },
+      "iv_refl.abnormal_bic_r": {
+        "title": "Biceps - R"
+      },
+      "iv_refl.abnormal_bic_l": {
+        "title": "Biceps - L"
+      },
+      "iv_refl.tri_r": {
+        "title": "Triceps - R"
+      },
+      "iv_refl.tri_l": {
+        "title": "Triceps - L"
+      },
+      "iv_refl.abnormal_tri_r": {
+        "title": "Triceps - R"
+      },
+      "iv_refl.abnormal_tri_l": {
+        "title": "Triceps - L"
+      },
+      "iv_refl.patell_r": {
+        "title": "Patellar - R"
+      },
+      "iv_refl.patell_l": {
+        "title": "Patellar - L"
+      },
+      "iv_refl.abnormal_patell_r": {
+        "title": "Patellar - R"
+      },
+      "iv_refl.abnormal_patell_l": {
+        "title": "Patellar - L"
+      },
+      "iv_refl.achill_r": {
+        "title": "Achilles - R"
+      },
+      "iv_refl.achill_l": {
+        "title": "Achilles - L"
+      },
+      "iv_refl.abnormal_achilles_r": {
+        "title": "Achilles - R"
+      },
+      "iv_refl.abnormal_achilles_l": {
+        "title": "Achilles - L"
+      },
+      "iv_refl.bab_r": {
+        "title": "Babinski signs - right"
+      },
+      "iv_refl.abnormal_bab_r": {
+        "title": "If abnormal, please describe."
+      },
+      "iv_refl.bab_l": {
+        "title": "Babinski signs - left"
+      },
+      "iv_refl.abnormal_bab_l": {
+        "title": "If abnormal, please describe."
+      },
+      "v_motor_stre.arms_p_r": {
+        "title": "Arms proximal - R"
+      },
+      "v_motor_stre.arms_p_l": {
+        "title": "Arms proximal - L"
+      },
+      "v_motor_stre.arms_d_r": {
+        "title": "Arms distal - R"
+      },
+      "v_motor_stre.arms_d_l": {
+        "title": "Arms distal - L"
+      },
+      "v_motor_stre.abnormal_arms_p_r": {
+        "title": "Arms proximal - R"
+      },
+      "v_motor_stre.abnormal_arms_p_l": {
+        "title": "Arms proximal - L"
+      },
+      "v_motor_stre.abnormal_arms_d_r": {
+        "title": "Arms distal - R"
+      },
+      "v_motor_stre.abnormal_arms_d_l": {
+        "title": "Arms distal - L"
+      },
+      "v_motor_stre.legs_p_r": {
+        "title": "Legs proximal - R"
+      },
+      "v_motor_stre.legs_p_l": {
+        "title": "Legs proximal - L"
+      },
+      "v_motor_stre.legs_d_r": {
+        "title": "Legs distal - R"
+      },
+      "v_motor_stre.legs_d_l": {
+        "title": "Legs distal - L"
+      },
+      "v_motor_stre.abnormal_legs_p_r": {
+        "title": "Legs proximal - R"
+      },
+      "v_motor_stre.abnormal_legs_p_l": {
+        "title": "Legs proximal - L"
+      },
+      "v_motor_stre.abnormal_legs_d_r": {
+        "title": "Legs distal - R"
+      },
+      "v_motor_stre.abnormal_legs_d_l": {
+        "title": "Legs distal - L"
+      },
+      "v_motor_stre.pron_r": {
+        "title": "Pronator drift - R"
+      },
+      "v_motor_stre.pron_l": {
+        "title": "Pronator drift - L"
+      },
+      "v_motor_stre.abnormal_pron_r": {
+        "title": "Pronator drift - R"
+      },
+      "v_motor_stre.abnormal_pron_l": {
+        "title": "Pronator drift - L"
+      },
+      "vi_motor_tone.ue_spast_r": {
+        "title": "Upper Extremities - Spasticity - R"
+      },
+      "vi_motor_tone.ue_spast_l": {
+        "title": "Upper Extremities - Spasticity - L"
+      },
+      "vi_motor_tone.ue_myocl_r": {
+        "title": "Upper Extremities - Myoclonus - R"
+      },
+      "vi_motor_tone.ue_myocl_l": {
+        "title": "Upper Extremities - Myoclonus - L"
+      },
+      "vi_motor_tone.ue_fascic_r": {
+        "title": "Upper Extremities - Fasciculations - R"
+      },
+      "vi_motor_tone.ue_fascic_l": {
+        "title": "Upper Extremities - Fasciculations - L"
+      },
+      "vi_motor_tone.ue_atroph_r": {
+        "title": "Upper Extremities - Atrophy - R"
+      },
+      "vi_motor_tone.ue_atroph_l": {
+        "title": "Upper Extremities - Atrophy - L"
+      },
+      "vi_motor_tone.abnormal_ue_spast_r": {
+        "title": "Upper Extremities - Spasticity - R"
+      },
+      "vi_motor_tone.abnormal_ue_spast_l": {
+        "title": "Upper Extremities - Spasticity - L"
+      },
+      "vi_motor_tone.abnormal_ue_myocl_r": {
+        "title": "Upper Extremities - Myoclonus - R"
+      },
+      "vi_motor_tone.abnormal_ue_myocl_l": {
+        "title": "Upper Extremities - Myoclonus - L"
+      },
+      "vi_motor_tone.abnormal_ue_fascic_r": {
+        "title": "Upper Extremities - Fasciculations - R"
+      },
+      "vi_motor_tone.abnormal_ue_fascic_l": {
+        "title": "Upper Extremities - Fasciculations - L"
+      },
+      "vi_motor_tone.abnormal_ue_atroph_r": {
+        "title": "Upper Extremities - Atrophy - R"
+      },
+      "vi_motor_tone.abnormal_ue_atroph_l": {
+        "title": "Upper Extremities - Atrophy - L"
+      },
+      "vi_motor_tone.le_spast_r": {
+        "title": "Lower extremities - Spasticity - R"
+      },
+      "vi_motor_tone.le_spast_l": {
+        "title": "Lower extremities - Spasticity - L"
+      },
+      "vi_motor_tone.le_myocl_r": {
+        "title": "Lower extremities - Myoclonus - R"
+      },
+      "vi_motor_tone.le_myocl_l": {
+        "title": "Lower extremities - Myoclonus - L"
+      },
+      "vi_motor_tone.le_fascic_r": {
+        "title": "Lower extremities - Fasciculations - R"
+      },
+      "vi_motor_tone.le_fascic_l": {
+        "title": "Lower extremities - Fasciculations - L"
+      },
+      "vi_motor_tone.le_atroph_r": {
+        "title": "Lower extremities - Atrophy - R"
+      },
+      "vi_motor_tone.le_atroph_l": {
+        "title": "Lower extremities - Atrophy - L"
+      },
+      "vi_motor_tone.abnormal_le_spast_r": {
+        "title": "Lower extremities - Spasticity - R"
+      },
+      "vi_motor_tone.abnormal_le_spast_l": {
+        "title": "Lower extremities - Spasticity - L"
+      },
+      "vi_motor_tone.abnormal_le_myocl_r": {
+        "title": "Lower extremities - Myoclonus - R"
+      },
+      "vi_motor_tone.abnormal_le_myocl_l": {
+        "title": "Lower extremities - Myoclonus - L"
+      },
+      "vi_motor_tone.abnormal_le_fascic_r": {
+        "title": "Lower extremities - Fasciculations - R"
+      },
+      "vi_motor_tone.abnormal_le_fascic_l": {
+        "title": "Lower extremities - Fasciculations - L"
+      },
+      "vi_motor_tone.abnormal_le_atroph_r": {
+        "title": "Lower extremities - Atrophy - R"
+      },
+      "vi_motor_tone.abnormal_le_atroph_l": {
+        "title": "Lower extremities - Atrophy - L"
+      },
+      "vii_sens_feet.vib_nor_r": {
+        "title": "Vibration sense - Normal (>10 sec) - R"
+      },
+      "vii_sens_feet.vib_nor_l": {
+        "title": "Vibration sense - Normal (>10 sec) - L"
+      },
+      "vii_sens_feet.vib_dec_r": {
+        "title": "Vibration sense - Decreased (< 10 sec) - R"
+      },
+      "vii_sens_feet.vib_dec_l": {
+        "title": "Vibration sense - Decreased (< 10 sec) - L"
+      },
+      "vii_sens_feet.abnormal_vib_nor_r": {
+        "title": "Vibration sense - Normal (>10 sec) - R"
+      },
+      "vii_sens_feet.abnormal_vib_nor_l": {
+        "title": "Vibration sense - Normal (>10 sec) - L"
+      },
+      "vii_sens_feet.abnormal_vib_dec_r": {
+        "title": "Vibration sense - Decreased (< 10 sec) - R"
+      },
+      "vii_sens_feet.abnormal_vib_dec_l": {
+        "title": "Vibration sense - Decreased (< 10 sec) - L"
+      },
+      "vii_sens_feet.pps_nor_r": {
+        "title": "Pin prick sensation - Normal - R"
+      },
+      "vii_sens_feet.pps_nor_l": {
+        "title": "Pin prick sensation - Normal - L"
+      },
+      "vii_sens_feet.pps_dec_r": {
+        "title": "Pin prick sensation - Decreased in toes - R"
+      },
+      "vii_sens_feet.pps_dec_l": {
+        "title": "Pin prick sensation - Decreased in toes - L"
+      },
+      "vii_sens_feet.abnormal_pps_nor_r": {
+        "title": "Pin prick sensation - Normal - R"
+      },
+      "vii_sens_feet.abnormal_pps_nor_l": {
+        "title": "Pin prick sensation - Normal - L"
+      },
+      "vii_sens_feet.abnormal_pps_dec_r": {
+        "title": "Pin prick sensation - Decreased in toes - R"
+      },
+      "vii_sens_feet.abnormal_pps_dec_l": {
+        "title": "Pin prick sensation - Decreased in toes - L"
+      },
+      "viii_cere_exam.dysmet_r": {
+        "title": "Finger-nose-finger (Dysmetria) - R"
+      },
+      "viii_cere_exam.dysmet_l": {
+        "title": "Finger-nose-finger (Dysmetria) - L"
+      },
+      "viii_cere_exam.abnormal_dysmet_r": {
+        "title": "Finger-nose-finger (Dysmetria) - R"
+      },
+      "viii_cere_exam.abnormal_dysmet_l": {
+        "title": "Finger-nose-finger (Dysmetria) - L"
+      },
+      "ix_gait.severity": {
+        "title": "Severity (check one)"
+      },
+      "ix_gait.specify_untest": {
+        "title": "Specify why untestable"
+      },
+      "ix_gait.type": {
+        "title": "Type (check one)"
+      },
+      "ix_gait.specify_giatdis": {
+        "title": "Specify other gait disorder not listed "
+      },
+      "ix_gait.specify_untest_3": {
+        "title": "Specify why untestable"
+      },
+      "other_abnorm": {
+        "title": "X. Other abnormalities"
+      },
+      "gen_comm": {
+        "title": "X. General Comments"
+      },
+      "clin_sig": {
+        "title": "Clinician's Signature"
+      }
+    },
+    "boost_values": {
+      "patient": 1.0,
+      "adc_form_b.appear": 1.0,
+      "adc_form_b.abnormal_appear": 1.0,
+      "ii_gene_phys_exam.headneck": 1.0,
+      "ii_gene_phys_exam.abnormal_headneck": 1.0,
+      "ii_gene_phys_exam.chest": 1.0,
+      "ii_gene_phys_exam.abnormal_3": 1.0,
+      "ii_gene_phys_exam.heart": 1.0,
+      "ii_gene_phys_exam.abnormal_heart": 1.0,
+      "ii_gene_phys_exam.abdom": 1.0,
+      "ii_gene_phys_exam.abnormal_abdom": 1.0,
+      "ii_gene_phys_exam.extrem": 1.0,
+      "ii_gene_phys_exam.abnormal_extrem": 1.0,
+      "ii_gene_phys_exam.edema": 1.0,
+      "ii_gene_phys_exam.abnormal_edema": 1.0,
+      "iii_cran_nerv.ii_eye": 1.0,
+      "iii_cran_nerv.abnormal_ii_eye": 1.0,
+      "iii_cran_nerv.iii_iv_vi": 1.0,
+      "iii_cran_nerv.abnormal_iii_iv_vi": 1.0,
+      "iii_cran_nerv.v": 1.0,
+      "iii_cran_nerv.abnormal_v": 1.0,
+      "iii_cran_nerv.vii": 1.0,
+      "iii_cran_nerv.abnormal_vii": 1.0,
+      "iii_cran_nerv.viii": 1.0,
+      "iii_cran_nerv.abnormal_viii": 1.0,
+      "iii_cran_nerv.ix_x": 1.0,
+      "iii_cran_nerv.abnormal_ix_x": 1.0,
+      "iii_cran_nerv.xi": 1.0,
+      "iii_cran_nerv.abnormal_xi": 1.0,
+      "iii_cran_nerv.xii": 1.0,
+      "iii_cran_nerv.abnormal_xii": 1.0,
+      "iv_refl.bic_r": 1.0,
+      "iv_refl.bic_l": 1.0,
+      "iv_refl.abnormal_bic_r": 1.0,
+      "iv_refl.abnormal_bic_l": 1.0,
+      "iv_refl.tri_r": 1.0,
+      "iv_refl.tri_l": 1.0,
+      "iv_refl.abnormal_tri_r": 1.0,
+      "iv_refl.abnormal_tri_l": 1.0,
+      "iv_refl.patell_r": 1.0,
+      "iv_refl.patell_l": 1.0,
+      "iv_refl.abnormal_patell_r": 1.0,
+      "iv_refl.abnormal_patell_l": 1.0,
+      "iv_refl.achill_r": 1.0,
+      "iv_refl.achill_l": 1.0,
+      "iv_refl.abnormal_achilles_r": 1.0,
+      "iv_refl.abnormal_achilles_l": 1.0,
+      "iv_refl.bab_r": 1.0,
+      "iv_refl.abnormal_bab_r": 1.0,
+      "iv_refl.bab_l": 1.0,
+      "iv_refl.abnormal_bab_l": 1.0,
+      "v_motor_stre.arms_p_r": 1.0,
+      "v_motor_stre.arms_p_l": 1.0,
+      "v_motor_stre.arms_d_r": 1.0,
+      "v_motor_stre.arms_d_l": 1.0,
+      "v_motor_stre.abnormal_arms_p_r": 1.0,
+      "v_motor_stre.abnormal_arms_p_l": 1.0,
+      "v_motor_stre.abnormal_arms_d_r": 1.0,
+      "v_motor_stre.abnormal_arms_d_l": 1.0,
+      "v_motor_stre.legs_p_r": 1.0,
+      "v_motor_stre.legs_p_l": 1.0,
+      "v_motor_stre.legs_d_r": 1.0,
+      "v_motor_stre.legs_d_l": 1.0,
+      "v_motor_stre.abnormal_legs_p_r": 1.0,
+      "v_motor_stre.abnormal_legs_p_l": 1.0,
+      "v_motor_stre.abnormal_legs_d_r": 1.0,
+      "v_motor_stre.abnormal_legs_d_l": 1.0,
+      "v_motor_stre.pron_r": 1.0,
+      "v_motor_stre.pron_l": 1.0,
+      "v_motor_stre.abnormal_pron_r": 1.0,
+      "v_motor_stre.abnormal_pron_l": 1.0,
+      "vi_motor_tone.ue_spast_r": 1.0,
+      "vi_motor_tone.ue_spast_l": 1.0,
+      "vi_motor_tone.ue_myocl_r": 1.0,
+      "vi_motor_tone.ue_myocl_l": 1.0,
+      "vi_motor_tone.ue_fascic_r": 1.0,
+      "vi_motor_tone.ue_fascic_l": 1.0,
+      "vi_motor_tone.ue_atroph_r": 1.0,
+      "vi_motor_tone.ue_atroph_l": 1.0,
+      "vi_motor_tone.abnormal_ue_spast_r": 1.0,
+      "vi_motor_tone.abnormal_ue_spast_l": 1.0,
+      "vi_motor_tone.abnormal_ue_myocl_r": 1.0,
+      "vi_motor_tone.abnormal_ue_myocl_l": 1.0,
+      "vi_motor_tone.abnormal_ue_fascic_r": 1.0,
+      "vi_motor_tone.abnormal_ue_fascic_l": 1.0,
+      "vi_motor_tone.abnormal_ue_atroph_r": 1.0,
+      "vi_motor_tone.abnormal_ue_atroph_l": 1.0,
+      "vi_motor_tone.le_spast_r": 1.0,
+      "vi_motor_tone.le_spast_l": 1.0,
+      "vi_motor_tone.le_myocl_r": 1.0,
+      "vi_motor_tone.le_myocl_l": 1.0,
+      "vi_motor_tone.le_fascic_r": 1.0,
+      "vi_motor_tone.le_fascic_l": 1.0,
+      "vi_motor_tone.le_atroph_r": 1.0,
+      "vi_motor_tone.le_atroph_l": 1.0,
+      "vi_motor_tone.abnormal_le_spast_r": 1.0,
+      "vi_motor_tone.abnormal_le_spast_l": 1.0,
+      "vi_motor_tone.abnormal_le_myocl_r": 1.0,
+      "vi_motor_tone.abnormal_le_myocl_l": 1.0,
+      "vi_motor_tone.abnormal_le_fascic_r": 1.0,
+      "vi_motor_tone.abnormal_le_fascic_l": 1.0,
+      "vi_motor_tone.abnormal_le_atroph_r": 1.0,
+      "vi_motor_tone.abnormal_le_atroph_l": 1.0,
+      "vii_sens_feet.vib_nor_r": 1.0,
+      "vii_sens_feet.vib_nor_l": 1.0,
+      "vii_sens_feet.vib_dec_r": 1.0,
+      "vii_sens_feet.vib_dec_l": 1.0,
+      "vii_sens_feet.abnormal_vib_nor_r": 1.0,
+      "vii_sens_feet.abnormal_vib_nor_l": 1.0,
+      "vii_sens_feet.abnormal_vib_dec_r": 1.0,
+      "vii_sens_feet.abnormal_vib_dec_l": 1.0,
+      "vii_sens_feet.pps_nor_r": 1.0,
+      "vii_sens_feet.pps_nor_l": 1.0,
+      "vii_sens_feet.pps_dec_r": 1.0,
+      "vii_sens_feet.pps_dec_l": 1.0,
+      "vii_sens_feet.abnormal_pps_nor_r": 1.0,
+      "vii_sens_feet.abnormal_pps_nor_l": 1.0,
+      "vii_sens_feet.abnormal_pps_dec_r": 1.0,
+      "vii_sens_feet.abnormal_pps_dec_l": 1.0,
+      "viii_cere_exam.dysmet_r": 1.0,
+      "viii_cere_exam.dysmet_l": 1.0,
+      "viii_cere_exam.abnormal_dysmet_r": 1.0,
+      "viii_cere_exam.abnormal_dysmet_l": 1.0,
+      "ix_gait.severity": 1.0,
+      "ix_gait.specify_untest": 1.0,
+      "ix_gait.type": 1.0,
+      "ix_gait.specify_giatdis": 1.0,
+      "ix_gait.specify_untest_3": 1.0,
+      "other_abnorm": 1.0,
+      "gen_comm": 1.0,
+      "clin_sig": 1.0
+    },
+    "changelog": "/profiles/changelogs/physical_exam.md"
+  }
