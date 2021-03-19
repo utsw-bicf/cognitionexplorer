@@ -156,6 +156,7 @@ ORDER = [
     'm1',
     'concussion_history',
     'concussion_history_follow_up',
+    'moca',
     'updrs',
     'visit_contact',
     'physical_exam',
