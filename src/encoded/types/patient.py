@@ -71,6 +71,7 @@ class Patient(Item):
         'tvp_b4', 
         'updrs', 
         'visit_contact', 
+        'physical_exam', 
     ]
     rev = {
         'ivp_a1': ('Ivp_a1', 'patient'),
@@ -118,6 +119,7 @@ class Patient(Item):
         'tvp_b4': ('Tvp_b4', 'patient'),
         'updrs': ('Updrs', 'patient'),
         'visit_contact': ('Visit_contact', 'patient'),
+         'physical_exam': ('Physical_exam', 'patient'),
 
     }
 
@@ -625,4 +627,15 @@ class Patient(Item):
     })
     def visit_contact(self, request, visit_contact):
         return paths_filtered_by_status(request, visit_contact)
+
+    @calculated_property(schema={
+        "title": "Physical_exam",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Physical_exam"
+        },
+    })
+    def physical_exam(self, request, physical_exam):
+        return paths_filtered_by_status(request, physical_exam)
 

@@ -64,6 +64,7 @@ ORDER = [
     'tvp_a3',
     'updrs',
     'visit_contact',
+    'physical_exam',
     'cart'
 ]
 

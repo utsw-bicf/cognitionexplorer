@@ -1,0 +1,112 @@
+[
+    {
+      "patient": "000001",
+      "formver": "3",
+      "adcid": "25 University of Texas Southwestern",
+      "visdate": "2001-02-01",
+      "visitnum": "1",
+      "header_complete": "Complete",
+      "initials": "OK",
+      "adc_form_b": {
+        "appear": "0 Normal"
+      },
+      "ii_gene_phys_exam": {
+        "headneck": "1 Abnormal",
+        "abnormal_headneck": "test",
+        "chest": "0 Normal",
+        "heart": "9 Unable to determine",
+        "abdom": "0 Normal",
+        "extrem": "1 Abnormal",
+        "abnormal_extrem": "test",
+        "edema": "9 Unable to determine"
+      },
+      "iii_cran_nerv": {
+        "ii_eye": "0 Normal",
+        "iii_iv_vi": "1 Abnormal",
+        "abnormal_iii_iv_vi": "test",
+        "v": "9 Unable to determine",
+        "vii": "0 Normal",
+        "viii": "1 Abnormal",
+        "abnormal_viii": "test",
+        "ix_x": "9 Unable to determine",
+        "xi": "0 Normal",
+        "xii": "1 Abnormal"
+      },
+      "iv_refl": {
+        "bic_r": "0 0",
+        "bic_l": "1 1",
+        "tri_r": "2 2",
+        "tri_l": "3 3",
+        "patell_r": "4 4",
+        "patell_l": "0 0",
+        "achill_r": "1 1",
+        "achill_l": "2 2",
+        "bab_r": "0 Normal",
+        "bab_l": "1 Abnormal",
+        "abnormal_bab_l": "test"
+      },
+      "v_motor_stre": {
+        "arms_p_r": "0 No strength",
+        "arms_p_l": "1 Trace movement only",
+        "arms_d_r": "2 Unable to overcome gravity",
+        "arms_d_l": "3 Unable to overcome resistance",
+        "legs_p_r": "4 Reduced strength",
+        "legs_p_l": "5 Normal",
+        "legs_d_r": "8 Non-neurological",
+        "legs_d_l": "9 N/A",
+        "abnormal_legs_d_l": "test",
+        "pron_r": "0 Normal",
+        "pron_l": "1 Abnormal"
+      },
+      "vi_motor_tone": {
+        "ue_spast_r": "0 Normal",
+        "ue_spast_l": "1 Abnormal",
+        "ue_myocl_r": "9 Unable to determine",
+        "ue_myocl_l": "0 Normal",
+        "ue_fascic_r": "1 Abnormal",
+        "ue_fascic_l": "9 Unable to determine",
+        "ue_atroph_r": "0 Normal",
+        "ue_atroph_l": "1 Abnormal",
+        "abnormal_ue_spast_l": "test",
+        "abnormal_ue_myocl_l": "test",
+        "abnormal_ue_fascic_r": "test",
+        "abnormal_ue_atroph_l": "test",
+        "le_spast_r": "0 Normal",
+        "le_spast_l": "1 Abnormal",
+        "le_myocl_r": "9 Unable to determine",
+        "le_myocl_l": "0 Normal",
+        "le_fascic_r": "1 Abnormal",
+        "le_fascic_l": "9 Unable to determine",
+        "le_atroph_r": "0 Normal",
+        "le_atroph_l": "1 Abnormal",
+        "abnormal_le_spast_l": "test",
+        "abnormal_le_fascic_r": "test",
+        "abnormal_le_atroph_l": "test"
+      },
+      "vii_sens_feet": {
+        "vib_nor_r": "0 Normal",
+        "vib_nor_l": "1 Abnormal",
+        "vib_dec_r": "9 Unable to determine",
+        "vib_dec_l": "0 Normal",
+        "abnormal_vib_nor_l": "test",
+        "pps_nor_r": "0 Normal",
+        "pps_nor_l": "0 Normal",
+        "pps_dec_r": "1 Abnormal",
+        "pps_dec_l": "0 Normal",
+        "abnormal_pps_dec_r": "test"
+      },
+      "viii_cere_exam": {
+        "dysmet_r": "0 Normal",
+        "dysmet_l": "9 Unable to determine"
+      },
+      "ix_gait": {
+        "severity": "0 Normal",
+        "type": "0 Normal"
+      },
+      "gen_comm": "This is only a comment for test.",
+      "clin_sig": "DT",
+      "form_status": "Complete",
+      "status": "released",
+      "uuid": "10fa5263-aab8-421d-9a2d-6014ce247ba8"
+    }
+  ]
