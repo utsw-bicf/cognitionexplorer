@@ -1,0 +1,218 @@
+{
+    "title": "MONTREAL COGNITIVE ASSESSMENT (MoCA)",
+    "description": "ADC Form S-C1.3\nNormal ≥ 26 / 30",
+    "id": "/profiles/moca.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "memory"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        },
+        {
+            "$ref": "mixins.json#/documents"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "visuo_exec": {
+            "title": "Visuospatial/Executive",
+            "type": "number",
+            "minimum": 0,
+            "maximum": 5
+        },
+        "memory": {
+            "title": "Memory (see attached PDF)",
+            "type": "object",
+            "properties": {
+                "naming": {
+                    "title": "Naming",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 3
+                },
+                "att_dig": {
+                    "title": "Attention - digits",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 2
+                },
+                "att_letters": {
+                    "title": "Attention - letter list",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "att_subtr": {
+                    "title": "Attention - subtraction",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 3
+                },
+                "lang_rep": {
+                    "title": "Language - repeat",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 2
+                },
+                "lang_fluen": {
+                    "title": "Language - fluency",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "abstraction": {
+                    "title": "Abstraction",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 2
+                },
+                "del_recall": {
+                    "title": "Delayed Recall",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 5
+                },
+                "orientation": {
+                    "title": "Orientation",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 6
+                },
+                "yr_edu": {
+                    "title": "Add 1 point if ≤ 12 yr edu",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 1
+                },
+                "total": {
+                    "title": "Total Score",
+                    "type": "number",
+                    "minimum": 0,
+                    "maximum": 30
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "visuo_exec": {
+            "title": "Visuospatial/Executive"
+        },
+        "memory.naming": {
+            "title": "Naming"
+        },
+        "memory.att_dig": {
+            "title": "Attention - digits"
+        },
+        "memory.att_letters": {
+            "title": "Attention - letter list"
+        },
+        "memory.att_subtr": {
+            "title": "Attention - subtraction"
+        },
+        "memory.lang_rep": {
+            "title": "Language - repeat"
+        },
+        "memory.lang_fluen": {
+            "title": "Language - fluency"
+        },
+        "memory.abstraction": {
+            "title": "Abstraction"
+        },
+        "memory.del_recall": {
+            "title": "Delayed Recall"
+        },
+        "memory.orientation": {
+            "title": "Orientation"
+        },
+        "memory.yr_edu": {
+            "title": "Add 1 point if ≤ 12 yr edu"
+        },
+        "memory.total": {
+            "title": "Total Score"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "visuo_exec": {
+            "title": "Visuospatial/Executive"
+        },
+        "memory.naming": {
+            "title": "Naming"
+        },
+        "memory.att_dig": {
+            "title": "Attention - digits"
+        },
+        "memory.att_letters": {
+            "title": "Attention - letter list"
+        },
+        "memory.att_subtr": {
+            "title": "Attention - subtraction"
+        },
+        "memory.lang_rep": {
+            "title": "Language - repeat"
+        },
+        "memory.lang_fluen": {
+            "title": "Language - fluency"
+        },
+        "memory.abstraction": {
+            "title": "Abstraction"
+        },
+        "memory.del_recall": {
+            "title": "Delayed Recall"
+        },
+        "memory.orientation": {
+            "title": "Orientation"
+        },
+        "memory.yr_edu": {
+            "title": "Add 1 point if ≤ 12 yr edu"
+        },
+        "memory.total": {
+            "title": "Total Score"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "visuo_exec": 1.0,
+        "memory.naming": 1.0,
+        "memory.att_dig": 1.0,
+        "memory.att_letters": 1.0,
+        "memory.att_subtr": 1.0,
+        "memory.lang_rep": 1.0,
+        "memory.lang_fluen": 1.0,
+        "memory.abstraction": 1.0,
+        "memory.del_recall": 1.0,
+        "memory.orientation": 1.0,
+        "memory.yr_edu": 1.0,
+        "memory.total": 1.0
+    },
+    "changelog": "/profiles/changelogs/moca.md"
+}

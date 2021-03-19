@@ -51,8 +51,14 @@ class FormsTable extends React.Component {
             z1x_id: "",
             m1_name: "",
             m1_id: "",
-            local_form_name: "",
-            local_form_id: "",
+            moca_name: "",
+            moca_id: "",
+            updrs_name: "",
+            updrs_id: "",
+            visit_contact_name: "",
+            visit_contact_id: "",
+            physical_exam_name: "",
+            physical_exam_id: "",
 
         }
         if (data.ivp_a2.length > 0) {
@@ -117,16 +123,20 @@ class FormsTable extends React.Component {
             visitObj.z1x_name = "ivp_z1x"
         }
         if (data.updrs.length > 0) {
-            visitObj.local_form_id = data.updrs[0]['@id']
-            visitObj.local_form_name = "UPDRS"
+            visitObj.updrs_id = data.updrs[0]['@id']
+            visitObj.updrs_name = "UPDRS"
         }
         if (data.visit_contact.length > 0) {
-            visitObj.local_form_id = data.visit_contact[0]['@id']
-            visitObj.local_form_name = "visit/contact"
+            visitObj.visit_contact_id = data.visit_contact[0]['@id']
+            visitObj.visit_contact_name = "visit/contact"
         }
         if (data.physical_exam.length > 0) {
-            visitObj.local_form_id = data.physical_exam[0]['@id']
-            visitObj.local_form_name = "physical_exam"
+            visitObj.physical_exam_id = data.physical_exam[0]['@id']
+            visitObj.physical_exam_name = "physical_exam"
+        }
+        if (data.moca.length > 0) {
+            visitObj.moca_id = data.moca[0]['@id']
+            visitObj.moca_name = "MOCA"
         }
         forms[0] = visitObj
         let followUpVisitTimes = this.getFollowUpVisitTimes(data)
@@ -175,8 +185,14 @@ class FormsTable extends React.Component {
                 z1x_id: "",
                 m1_name: "",
                 m1_id: "",
-                local_form_name: "",
-                local_form_id: ""
+                moca_name: "",
+                moca_id: "",
+                updrs_name: "",
+                updrs_id: "",
+                visit_contact_name: "",
+                visit_contact_id: "",
+                physical_exam_name: "",
+                physical_exam_id: "",
             }
             forms.push(visitObj)
         }
@@ -443,10 +459,17 @@ class FormsTable extends React.Component {
                 title: 'Form T1',
                 display: form => <a href={form.t1_id}>{form.t1_name}</a>,
             },
-            local_form_id: {
+            moca_id: {
+
                 title: 'Local Forms',
-                display: form => <a href={form.local_form_id}>{form.local_form_name}</a>,
+                display: form => <div>{form.moca_id && <span><a href={form.moca_id}>{form.moca_name}</a> </span>}
+                    {form.updrs_id && <span><a href={form.updrs_id}>{form.updrs_name}</a> </span>}
+                    {form.visit_contact_id && <span><a href={form.visit_contact_id}>{form.visit_contact_name}</a> </span>}
+                    {form.physical_exam_id && <span><a href={form.physical_exam_id}>{form.physical_exam_name}</a> </span>}
+                </div>,
+
             },
+
 
 
 

@@ -62,6 +62,7 @@ ORDER = [
     'fvp_a4',
     'tvp_a4',
     'tvp_a3',
+    'moca',
     'updrs',
     'visit_contact',
     'physical_exam',

@@ -69,6 +69,7 @@ class Patient(Item):
         'tvp_d2',
         'tvp_t1',
         'tvp_b4', 
+        'moca', 
         'updrs', 
         'visit_contact', 
         'physical_exam', 
@@ -120,6 +121,7 @@ class Patient(Item):
         'updrs': ('Updrs', 'patient'),
         'visit_contact': ('Visit_contact', 'patient'),
          'physical_exam': ('Physical_exam', 'patient'),
+         'moca': ('Moca', 'patient'),
 
     }
 
@@ -604,6 +606,16 @@ class Patient(Item):
     def tvp_a4(self, request, tvp_a4):
         return paths_filtered_by_status(request, tvp_a4)
 
+    @calculated_property(schema={
+        "title": "Moca",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Moca"
+        },
+    })
+    def moca(self, request, moca):
+        return paths_filtered_by_status(request, moca)
 
     @calculated_property(schema={
         "title": "Updrs",
