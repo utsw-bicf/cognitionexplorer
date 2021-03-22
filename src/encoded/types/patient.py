@@ -752,13 +752,16 @@ class Patient(Item):
         if len(surgery) > 0:
             for surgery_record in surgery:
                 surgery_object = request.embed(surgery_record, '@@object')
-                surgery_path_report = surgery_object['pathology_report']
-                for path_report in surgery_path_report:
-                    path_report_obj = request.embed(path_report, '@@object')
-                    if path_report_obj['path_source_procedure'] == "path_nephrectomy" or path_report_obj['path_source_procedure'] == "path_biopsy":
-                        non_mets_dates.append(surgery_object['date'])
-                    elif  path_report_obj['path_source_procedure'] == "path_metastasis":
-                        mets_dates.append(surgery_object['date'])
+                surgery_procedures = surgery_object['surgery_procedure']
+                for surgery_procedure in surgery_procedures:
+                    surgery_procedure_obj = request.embed(surgery_procedure, '@@object')
+                    surgery_path_report = surgery_procedure_obj['pathology_report']
+                    for path_report in surgery_path_report:
+                        path_report_obj = request.embed(path_report, '@@object')
+                        if path_report_obj['path_source_procedure'] == "path_nephrectomy" or path_report_obj['path_source_procedure'] == "path_biopsy":
+                            non_mets_dates.append(surgery_object['date'])
+                        elif  path_report_obj['path_source_procedure'] == "path_metastasis":
+                            mets_dates.append(surgery_object['date'])
 
         if len(non_mets_dates) > 0 :
             non_mets_dates.sort(key = lambda date: datetime.strptime(date, '%Y-%m-%d'))
@@ -1321,22 +1324,25 @@ class Patient(Item):
         if len(surgery) > 0:
             for surgery_record in surgery:
                 surgery_object = request.embed(surgery_record, '@@object')
-                path_reports = surgery_object['pathology_report']
-                if len(path_reports) > 0:
-                    for path_report in path_reports:
-                        path_report_obj = request.embed(path_report, '@@object')
-                        if path_report_obj['path_source_procedure'] == 'path_metastasis':
-                            site = path_report_obj['metasis_details']['site']
-                            if site == "Lung":
-                                site = "Lung and pleura"
-                            record = {
-                                'date': path_report_obj['date'],
-                                'source': 'Pathology report',
-                                'site': site,
-                                'histology_proven': 'Yes'
-                            }
-                            if record not in records:
-                                records.append(record)
+                surgery_procedures = surgery_object['surgery_procedure']
+                for surgery_procedure in surgery_procedures:
+                    surgery_procedure_obj = request.embed(surgery_procedure, '@@object')
+                    path_reports = surgery_procedure_obj['pathology_report']
+                    if len(path_reports) > 0:
+                        for path_report in path_reports:
+                            path_report_obj = request.embed(path_report, '@@object')
+                            if path_report_obj['path_source_procedure'] == 'path_metastasis':
+                                site = path_report_obj['metasis_details']['site']
+                                if site == "Lung":
+                                    site = "Lung and pleura"
+                                record = {
+                                    'date': path_report_obj['date'],
+                                    'source': 'Pathology report',
+                                    'site': site,
+                                    'histology_proven': 'Yes'
+                                }
+                                if record not in records:
+                                    records.append(record)
         if len(radiation) > 0 :
             for radiation_record in radiation:
                 radiation_object = request.embed(radiation_record, '@@object')

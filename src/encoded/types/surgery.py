@@ -26,8 +26,8 @@ class Surgery(Item):
     name_key = "accession"
 
     embedded = [
-        "surgery_procedure.pathology_report",
         "surgery_procedure",
+        "surgery_procedure.pathology_report",
         "surgery_procedure.pathology_report.ihc"
     ]
     rev = {
@@ -94,7 +94,7 @@ class SurgeryProcedure(Item):
         "pathology_report.ihc"
     ]
     rev = {
-        "pathology_report": ("PathologyReport", "pathology_report"),
+        "pathology_report": ("PathologyReport", "surgery_procedure"),
     }
 
     @calculated_property(
