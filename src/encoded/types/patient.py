@@ -309,12 +309,15 @@ class Patient(Item):
             if len(surgery) > 0:
                 for surgery_record in surgery:
                     surgery_object = request.embed(surgery_record, '@@object')
-                    path_reports = surgery_object['pathology_report']
-                    if len(path_reports) > 0:
-                        for path_report in path_reports:
-                            path_report_obj = request.embed(path_report, '@@object')
-                            if path_report_obj['path_source_procedure'] == 'path_metastasis':
-                                status = "Yes"
+                    for surgery_procedure in surgery_object['surgery_procedure']:
+                        procedure_object = request.embed(surgery_procedure, '@@object')
+                        path_reports = procedure_object['pathology_report']
+
+                        if len(path_reports) > 0:
+                            for path_report in path_reports:
+                                path_report_obj = request.embed(path_report, '@@object')
+                                if path_report_obj['path_source_procedure'] == 'path_metastasis':
+                                    status = "Yes"
         return status
 
     @calculated_property(define=True, schema={
@@ -1324,10 +1327,17 @@ class Patient(Item):
         if len(surgery) > 0:
             for surgery_record in surgery:
                 surgery_object = request.embed(surgery_record, '@@object')
+<<<<<<< HEAD
                 surgery_procedures = surgery_object['surgery_procedure']
                 for surgery_procedure in surgery_procedures:
                     surgery_procedure_obj = request.embed(surgery_procedure, '@@object')
                     path_reports = surgery_procedure_obj['pathology_report']
+=======
+                for surgery_procedure in surgery_object['surgery_procedure']:
+                    procedure_object = request.embed(surgery_procedure, '@@object')
+                    path_reports = procedure_object['pathology_report']
+
+>>>>>>> 3037fe7e5f211d1f00f7169b2c8a71ad5659f88b
                     if len(path_reports) > 0:
                         for path_report in path_reports:
                             path_report_obj = request.embed(path_report, '@@object')
@@ -1802,3 +1812,4 @@ def patient_basic_view(context, request):
         except KeyError:
             pass
     return filtered
+
