@@ -137,6 +137,12 @@
         "accession": {
             "title": "Accession"
         },
+        "date": {
+            "title": "Surgery Date"
+        },
+        "hospital_location": {
+            "title": "Hospital Location"
+        },
         "surgery_procedure.procedure_type": {
             "title": "Surgery Procedure"
         },
@@ -204,3 +210,4 @@
     },
     "changelog": "/profiles/changelogs/surgery.md"
 }
+
