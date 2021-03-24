@@ -217,7 +217,7 @@ BiospecimenTable.columns = {
     },
     anatomic_site: {
         title: 'Anatomic site',
-        getValue: biospecimen => biospecimen.anatomic_site,
+        getValue: biospecimen => biospecimen.anatomic_site_display,
     }
 };
 

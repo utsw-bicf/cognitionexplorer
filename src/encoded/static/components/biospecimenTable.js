@@ -31,7 +31,7 @@ class BiospecimenTable extends React.Component {
                 tissue_type: {
                     title: 'Specimen pathological type',
                 },
-                anatomic_site: {
+                anatomic_site_display: {
                     title: 'Anatomic site',
                 },
                 species: {

@@ -49,17 +49,17 @@ class SummaryBody extends React.Component {
 
         let facets = context.facets;
         let filters = context.filters;
-        let isKidneySampleIncluded = this.getIsIncluded(filters, "biospecimen.anatomic_site", "Kidney, NOS");
+        let isKidneySampleIncluded = this.getIsIncluded(filters, "biospecimen.anatomic_site_display", "Kidney, NOS");
 
         let isMouseSampleIncluded = this.getIsIncluded(filters, "biospecimen.species", "Mouse");
 
         let anatomic_site = facets.filter(obj => {
-            return obj.field === "biospecimen.anatomic_site"
+            return obj.field === "biospecimen.anatomic_site_display"
           })
         if (anatomic_site && anatomic_site.length > 0){
             let terms = anatomic_site[0].terms;
             let result = terms.filter(obj => {
-                return obj.key === "Kidney, NOS"
+                return obj.key === "Kidney"
             })
             if (result && result.length > 0) {
                 if (isKidneySampleIncluded) {
@@ -67,7 +67,7 @@ class SummaryBody extends React.Component {
                 } else {
                     numOfKidneySamples = 0;
                 }
-                
+
             }
         }
         let species = facets.filter(obj => {
@@ -84,10 +84,10 @@ class SummaryBody extends React.Component {
                 } else {
                     numOfTumorgraftSample = 0;
                 }
-                
+
             }
         }
-        
+
         let totalContainerStyle = {
             display: "flex",
             justifyContent: "space-between"
@@ -123,7 +123,7 @@ class SummaryBody extends React.Component {
                 </div>
                 <div className="summary-controls">
                     <div style={totalContainerStyle}>
-                        
+
                         <label style={totalLabelStyle}>
                             <ul style={{ listStyleType: "none" }}>
                             <li><span style={numberStyle}>{context.total}</span><span>&nbsp;</span><span>&nbsp;</span><FontAwesomeIcon icon={faHospitalUser} size="4x" /></li>
@@ -150,7 +150,7 @@ class SummaryBody extends React.Component {
                             <li><span style={numberStyle}>0</span><span>&nbsp;</span><span>&nbsp;</span><FontAwesomeIcon icon={faDna} size="4x" /></li>
                             <li><span style={noteStyle}>Patients with Genomics Data</span></li>
                             </ul>
-                        </label>                        
+                        </label>
                     </div>
                     <hr/>
                     <Panel>
@@ -161,7 +161,7 @@ class SummaryBody extends React.Component {
                             <div className="panel__split-element">
                                 <SummaryChart  title="Dominant Tumor Stage" chartId="summaryChart2" data={stageData} ></SummaryChart>
                             </div>
-                        
+
                         </PanelBody>
                         <hr/>
                         <PanelBody addClasses="panel__split">
@@ -173,7 +173,7 @@ class SummaryBody extends React.Component {
                             </div>
 
                         </PanelBody>
-                    </Panel>                  
+                    </Panel>
                     <hr/>
                 </div>
             </div>
@@ -197,7 +197,7 @@ class SummaryBody extends React.Component {
                     values.push(result.doc_count);
                     labels.push(result.key);
                 }
-                
+
 
 
             }
@@ -262,7 +262,7 @@ class SummaryBody extends React.Component {
         results = filters.filter(obj => {
                     return obj.field === field;
                 })
-                
+
         if (results && results.length > 0){
             let hasTerm = false;
             for (let i = 0; i < results.length; i++) {
@@ -274,7 +274,7 @@ class SummaryBody extends React.Component {
             if (!hasTerm){
                 return false
             }
-            
+
         }
 
         return isIncluded;
@@ -284,13 +284,13 @@ class SummaryBody extends React.Component {
         let allterms = [];
         let selectedTerms = [];
         let excludeField = field + "!";
-        
+
         let results = filters.filter(obj => {
             return obj.field === field;
         })
         if (results && results.length > 0){
-            for (let i = 0; i < results.length; i++) {    
-                selectedTerms.push(results[i].term);    
+            for (let i = 0; i < results.length; i++) {
+                selectedTerms.push(results[i].term);
             }
 
         }
@@ -304,7 +304,7 @@ class SummaryBody extends React.Component {
             let i;
             for (i = 0; i < terms.length; i++) {
                 let result = terms[i];
-               
+
                 allterms.push(result.key);
             }
 
@@ -314,17 +314,17 @@ class SummaryBody extends React.Component {
             return obj.field === excludeField;
         })
         if (results && results.length > 0){
-            for (let i = 0; i < results.length; i++) {  
-                allterms = allterms.filter(x=>x!=results[i].term); 
-                   
+            for (let i = 0; i < results.length; i++) {
+                allterms = allterms.filter(x=>x!=results[i].term);
+
             }
 
         }
 
         if (selectedTerms.length > 0) {
-            
+
             return selectedTerms;
- 
+
         } else {
             return allterms;
         }
@@ -336,8 +336,8 @@ class SummaryBody extends React.Component {
         });
         const parsedUrl = url.parse(this.props.context['@id']);
         const query = new QueryString(parsedUrl.query);
-        
-  
+
+
         query.replaceKeyValue(organismField, e.currentTarget.id, '');
         const href = `?${query.format()}`;
         this.context.navigate(href);
@@ -366,7 +366,7 @@ class SummaryBody extends React.Component {
                                 className={`organism-button ${term.replace(' ', '-')} ${this.state.selectedOrganism === term ? 'active' : ''}`}
                                 key={term}
                             >
-                                
+
                                 <span>{term}</span>
                             </button>
                         )}
@@ -380,7 +380,7 @@ class SummaryBody extends React.Component {
                     {(this.state.selectedOrganism === 'Homo sapiens') ?
                         <React.Fragment>
                             <div className="flex-container">
-                               
+
                                 <SummaryData context={this.props.context} displayCharts={'donuts'} />
                             </div>
                             <div className="summary-content">
@@ -433,7 +433,7 @@ const Summary = (props) => {
                             <div className="results-table-control">
                                 <div className="results-table-control__main">
                                     <ViewControls results={context} />
-                                </div>  
+                                </div>
                             </div>
                             <SummaryBody context={context} />
 
@@ -452,8 +452,3 @@ Summary.propTypes = {
 };
 
 globals.contentViews.register(Summary, 'Summary');
-
-
-
-
-

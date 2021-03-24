@@ -136,9 +136,9 @@ class Biospecimen extends React.Component {
                                     <dt>Specimen Pathological Type</dt>
                                     <dd>{context.tissue_type}</dd>
                                 </div>}
-                                {context.anatomic_site && <div data-test="anatomic_site">
+                                {context.anatomic_site_display && <div data-test="anatomic_site_display">
                                     <dt>Anatomic Site</dt>
-                                    <dd>{context.anatomic_site}</dd>
+                                    <dd>{context.anatomic_site_display}</dd>
                                 </div>}
                                 {context.primary_site && <div data-test="primary_site">
                                     <dt>Primary Site</dt>

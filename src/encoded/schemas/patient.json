@@ -262,7 +262,7 @@
         "biospecimen.tissue_type": {
             "title": "Specimen Pathological Type"
         },
-        "biospecimen.anatomic_site": {
+        "biospecimen.anatomic_site_display": {
             "title": "Specimen Anatomic Site"
         },
         "biospecimen.species": {
