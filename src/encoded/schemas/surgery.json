@@ -127,9 +127,6 @@
         },
         "surgery_procedure.pathology_report.ihc.result": {
             "title": "IHC/FISH results"
-        },
-        "status": {
-            "title": "Status"
         }
 
     },
@@ -178,9 +175,6 @@
         },
         "surgery_procedure.pathology_report.focality": {
             "title": "Tumor Focality"
-        },
-        "status": {
-            "title": "Status"
         }
     },
     "boost_values": {
@@ -210,4 +204,3 @@
     },
     "changelog": "/profiles/changelogs/surgery.md"
 }
-
