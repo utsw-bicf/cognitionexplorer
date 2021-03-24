@@ -1446,7 +1446,6 @@ class Patient(Item):
     matrix = {
         'y': {
             'facets': [
-                'status',
                 'sex',
                 'race',
                 'ethnicity',

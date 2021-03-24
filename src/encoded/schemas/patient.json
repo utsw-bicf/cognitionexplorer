@@ -111,20 +111,11 @@
         "race": {
             "title": "Race"
         },
-        "vital_status": {
-            "title": "Vital Status"
-        },
-        "diagnosis.follow_up_duration_range": {
-            "title": "Follow Up Duration"
-        },
         "surgery_summary": {
             "title": "Surgery Treatment Status"
         },
         "surgery.surgery_procedure.procedure_type": {
             "title": "Surgery Procedure"
-        },
-        "surgery.hospital_location": {
-            "title": "Surgery Hospital Location"
         },
         "surgery.surgery_procedure.nephrectomy_details.type": {
             "title": "Nephrectomy Type"
@@ -134,6 +125,42 @@
         },
         "surgery.nephr_robotic_assist":{
             "title": "Nephrectomy Robotic Assist"
+        },
+        "labs_and_vitals.BMI": {
+            "title": "BMI"
+        },
+        "labs_and_vitals.BP_Systolic": {
+            "title": "BP_Systolic (mmHg)"
+        },
+        "labs_and_vitals.BP_Diastolic": {
+            "title": "BP_Diastolic (mmHg)"
+        },
+        "labs_and_vitals.Hemoglobin": {
+            "title": "Hemoglobin (g/dL)"
+        },
+        "labs_and_vitals.Platelets": {
+            "title": "Platelets (10^3/ul)"
+        },
+        "labs_and_vitals.WBC": {
+            "title": "WBC (10^3/ul)"
+        },
+        "labs_and_vitals.Neutrophils": {
+            "title": "Neutrophils (10^3/ul)"
+        },
+        "labs_and_vitals.Creatinine": {
+            "title": "Creatinine (mg/dL)"
+        },
+        "labs_and_vitals.Calcium": {
+            "title": "Calcium (mg/dL)"
+        },
+        "labs_and_vitals.Albumin": {
+            "title": "Albumin (g/dL)"
+        },
+        "labs_and_vitals.Sodium": {
+            "title": "Sodium (mmol/L)"
+        },
+        "labs_and_vitals.LDH": {
+            "title": "LDH (U/L)"
         },
         "medical_imaging_before_nephrectomy.type" : {
           "title": "Medical Imaging"
@@ -180,6 +207,12 @@
         "surgery.pathology_report.metasis_details.site": {
             "title": "Metastatic Site (Pathology)"
         },
+        "vital_status": {
+            "title": "Vital Status"
+        },
+        "diagnosis.follow_up_duration_range": {
+            "title": "Follow Up Duration"
+        },
         "medications.name":{
             "title":"Medication"
         },
@@ -201,42 +234,6 @@
         "radiation.fractions_range": {
             "title": "Radiation Fractions"
         },
-        "labs_and_vitals.BMI": {
-            "title": "BMI"
-        },
-        "labs_and_vitals.BP_Systolic": {
-            "title": "BP_Systolic (mmHg)"
-        },
-        "labs_and_vitals.BP_Diastolic": {
-            "title": "BP_Diastolic (mmHg)"
-        },
-        "labs_and_vitals.Hemoglobin": {
-            "title": "Hemoglobin (g/dL)"
-        },
-        "labs_and_vitals.Platelets": {
-            "title": "Platelets (10^3/ul)"
-        },
-        "labs_and_vitals.WBC": {
-            "title": "WBC (10^3/ul)"
-        },
-        "labs_and_vitals.Neutrophils": {
-            "title": "Neutrophils (10^3/ul)"
-        },
-        "labs_and_vitals.Creatinine": {
-            "title": "Creatinine (mg/dL)"
-        },
-        "labs_and_vitals.Calcium": {
-            "title": "Calcium (mg/dL)"
-        },
-        "labs_and_vitals.Albumin": {
-            "title": "Albumin (g/dL)"
-        },
-        "labs_and_vitals.Sodium": {
-            "title": "Sodium (mmol/L)"
-        },
-        "labs_and_vitals.LDH": {
-            "title": "LDH (U/L)"
-        },
         "biospecimen.sample_type": {
               "title": "Specimen Class"
         },
@@ -245,9 +242,7 @@
         },
         "biospecimen.species": {
             "title": "Specimen Species"
-        },
-
-
+        }
     },
     "columns": {
         "accession": {
