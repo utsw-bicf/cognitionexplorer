@@ -4,33 +4,12 @@ import { Panel, PanelBody } from '../libs/ui/panel';
 import * as globals from './globals';
 import { FacetList } from './search';
 import { ViewControls } from './view_controls';
-
-
-/**
- * Generate an array of data from one facet bucket for displaying in a chart, with one array entry
- * per experiment status. The order of the entries in the resulting array correspond to the order
- * of the statuses in `labels`.
- *
- * @param {array} buckets - Buckets for one facet returned in summary search results.
- * @param {array} labels - Experiment status labels.
- * @return {array} - Data extracted from buckets with an order of values corresponding to `labels`.
- */
-function generateStatusData(buckets, labels) {
-    // Fill the array to the proper length with zeroes to start with. Actual non-zero data will
-    // overwrite the appropriate entries.
-    const statusData = Array.from({ length: labels.length }, (() => 0));
-
-    // Convert statusData to a form createBarChart understands.
-    if (buckets && buckets.length > 0) {
-        buckets.forEach((bucketItem) => {
-            const statusIndex = labels.indexOf(bucketItem.key);
-            if (statusIndex !== -1) {
-                statusData[statusIndex] = bucketItem.doc_count;
-            }
-        });
-    }
-    return statusData;
-}
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faHospitalUser } from "@fortawesome/free-solid-svg-icons";
+import { faVial } from "@fortawesome/free-solid-svg-icons";
+import { faDna } from "@fortawesome/free-solid-svg-icons";
+import { faDisease } from "@fortawesome/free-solid-svg-icons";
+import SummaryChart from './summaryChart';
 
 
 
@@ -67,7 +46,7 @@ class SummaryBody extends React.Component {
                 } else {
                     numOfKidneySamples = 0;
                 }
-                
+
             }
         }
         let species = facets.filter(obj => {
@@ -84,10 +63,10 @@ class SummaryBody extends React.Component {
                 } else {
                     numOfTumorgraftSample = 0;
                 }
-                
+
             }
         }
-        
+
         let totalContainerStyle = {
             display: "flex",
             justifyContent: "space-between"
@@ -123,7 +102,7 @@ class SummaryBody extends React.Component {
                 </div>
                 <div className="summary-controls">
                     <div style={totalContainerStyle}>
-                        
+
                         <label style={totalLabelStyle}>
                             <ul style={{ listStyleType: "none" }}>
                             <li><span style={numberStyle}>{context.total}</span><span>&nbsp;</span><span>&nbsp;</span><FontAwesomeIcon icon={faHospitalUser} size="4x" /></li>
@@ -150,7 +129,7 @@ class SummaryBody extends React.Component {
                             <li><span style={numberStyle}>0</span><span>&nbsp;</span><span>&nbsp;</span><FontAwesomeIcon icon={faDna} size="4x" /></li>
                             <li><span style={noteStyle}>Patients with Genomics Data</span></li>
                             </ul>
-                        </label>                        
+                        </label>
                     </div>
                     <hr/>
                     <Panel>
@@ -161,7 +140,7 @@ class SummaryBody extends React.Component {
                             <div className="panel__split-element">
                                 <SummaryChart  title="Dominant Tumor Stage" chartId="summaryChart2" data={stageData} ></SummaryChart>
                             </div>
-                        
+
                         </PanelBody>
                         <hr/>
                         <PanelBody addClasses="panel__split">
@@ -173,7 +152,7 @@ class SummaryBody extends React.Component {
                             </div>
 
                         </PanelBody>
-                    </Panel>                  
+                    </Panel>
                     <hr/>
                 </div>
             </div>
@@ -197,7 +176,7 @@ class SummaryBody extends React.Component {
                     values.push(result.doc_count);
                     labels.push(result.key);
                 }
-                
+
 
 
             }
@@ -262,7 +241,7 @@ class SummaryBody extends React.Component {
         results = filters.filter(obj => {
                     return obj.field === field;
                 })
-                
+
         if (results && results.length > 0){
             let hasTerm = false;
             for (let i = 0; i < results.length; i++) {
@@ -274,7 +253,7 @@ class SummaryBody extends React.Component {
             if (!hasTerm){
                 return false
             }
-            
+
         }
 
         return isIncluded;
@@ -284,13 +263,13 @@ class SummaryBody extends React.Component {
         let allterms = [];
         let selectedTerms = [];
         let excludeField = field + "!";
-        
+
         let results = filters.filter(obj => {
             return obj.field === field;
         })
         if (results && results.length > 0){
-            for (let i = 0; i < results.length; i++) {    
-                selectedTerms.push(results[i].term);    
+            for (let i = 0; i < results.length; i++) {
+                selectedTerms.push(results[i].term);
             }
 
         }
@@ -304,7 +283,7 @@ class SummaryBody extends React.Component {
             let i;
             for (i = 0; i < terms.length; i++) {
                 let result = terms[i];
-               
+
                 allterms.push(result.key);
             }
 
@@ -314,91 +293,22 @@ class SummaryBody extends React.Component {
             return obj.field === excludeField;
         })
         if (results && results.length > 0){
-            for (let i = 0; i < results.length; i++) {  
-                allterms = allterms.filter(x=>x!=results[i].term); 
-                   
+            for (let i = 0; i < results.length; i++) {
+                allterms = allterms.filter(x=>x!=results[i].term);
+
             }
 
         }
 
         if (selectedTerms.length > 0) {
-            
+
             return selectedTerms;
- 
+
         } else {
             return allterms;
         }
     }
 
-    chooseOrganism(e) {
-        this.setState({
-            selectedOrganism: e.currentTarget.id,
-        });
-        const parsedUrl = url.parse(this.props.context['@id']);
-        const query = new QueryString(parsedUrl.query);
-        
-  
-        query.replaceKeyValue(organismField, e.currentTarget.id, '');
-        const href = `?${query.format()}`;
-        this.context.navigate(href);
-    }
-    render() {
-        const searchQuery = url.parse(this.props.context['@id']).search;
-        const query = new QueryString(searchQuery);
-        const nonPersistentQuery = query.clone();
-        nonPersistentQuery.deleteKeyValue('?type');
-        const clearButton = nonPersistentQuery.queryCount() > 0 && query.queryCount('?type') > 0;
-        return (
-            <div className="summary-header">
-                <div className="summary-header__title_control">
-                    <div className="summary-header__title">
-                        <h1>{this.props.context.title}</h1>
-                    </div>
-                    <ClearFilters searchUri={this.props.context.clear_filters} enableDisplay={!!clearButton} />
-                </div>
-                <div className="summary-controls">
-                    <div className="organism-button-instructions">Choose an organism:</div>
-                    <div className="organism-button-container">
-                        {organismTerms.map(term =>
-                            <button
-                                id={term}
-                                onClick={e => this.chooseOrganism(e)}
-                                className={`organism-button ${term.replace(' ', '-')} ${this.state.selectedOrganism === term ? 'active' : ''}`}
-                                key={term}
-                            >
-                                
-                                <span>{term}</span>
-                            </button>
-                        )}
-                    </div>
-                    <div className={`results-controls ${this.state.selectedOrganism.length > 0 ? `${this.state.selectedOrganism.replace(' ', '-')}` : ''}`}>
-                        <div className="results-count">There {this.props.context.total > 1 ? 'are' : 'is'} <b className="bold-total">{this.props.context.total}</b> result{this.props.context.total > 1 ? 's' : ''}.</div>
-                        <div className="view-controls-container">
-                            <ViewControls results={this.props.context} alternativeNames={['Search list', 'Tabular report', 'Summary matrix']} />
-                        </div>
-                    </div>
-                    {(this.state.selectedOrganism === 'Homo sapiens') ?
-                        <React.Fragment>
-                            <div className="flex-container">
-                               
-                                <SummaryData context={this.props.context} displayCharts={'donuts'} />
-                            </div>
-                            <div className="summary-content">
-                                <SummaryData context={this.props.context} displayCharts={'area'} />
-                            </div>
-                        </React.Fragment>
-                    :
-                        <React.Fragment>
-                            <SummaryHorizontalFacets context={this.props.context} facetList={'all'} />
-                            <div className="summary-content">
-                                <SummaryData context={this.props.context} displayCharts={'all'} />
-                            </div>
-                        </React.Fragment>
-                    }
-                </div>
-            </div>
-        );
-    }
 }
 
 SummaryBody.propTypes = {
@@ -433,7 +343,7 @@ const Summary = (props) => {
                             <div className="results-table-control">
                                 <div className="results-table-control__main">
                                     <ViewControls results={context} />
-                                </div>  
+                                </div>
                             </div>
                             <SummaryBody context={context} />
 
@@ -452,8 +362,3 @@ Summary.propTypes = {
 };
 
 globals.contentViews.register(Summary, 'Summary');
-
-
-
-
-
