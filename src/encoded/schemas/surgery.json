@@ -175,6 +175,9 @@
         },
         "surgery_procedure.pathology_report.focality": {
             "title": "Tumor Focality"
+        },
+        "status": {
+            "title": "Status"
         }
     },
     "boost_values": {
@@ -204,3 +207,4 @@
     },
     "changelog": "/profiles/changelogs/surgery.md"
 }
+
