@@ -147,34 +147,34 @@
         "dominant_tumor.stage": {
             "title": "Dominant Tumor TNM Stage (at presentation)"
         },
-        "surgery.pathology_report.pathology_report_tumor_range":{
+        "surgery.surgery_procedure.pathology_report.pathology_report_tumor_range":{
             "title": "Tumor Size Range"
         },
-        "surgery.pathology_report.histology_filter": {
+        "surgery.surgery_procedure.pathology_report.histology_filter": {
             "title": "Histologic Subtype"
         },
-        "surgery.pathology_report.t_stage": {
+        "surgery.surgery_procedure.pathology_report.t_stage": {
             "title": "pT Stage (at presentation)"
         },
-        "surgery.pathology_report.n_stage": {
+        "surgery.surgery_procedure.pathology_report.n_stage": {
             "title": "pN Stage (at presentation)"
         },
-        "surgery.pathology_report.m_stage": {
+        "surgery.surgery_procedure.pathology_report.m_stage": {
             "title": "pM Stage (at presentation)"
         },
-        "surgery.pathology_report.metasis_details.site": {
+        "surgery.surgery_procedure.pathology_report.metasis_details.site": {
             "title": "Metastatic Site (Pathology)"
         },
-        "surgery.pathology_report.metasis_details.type": {
+        "surgery.surgery_procedure.pathology_report.metasis_details.type": {
             "title": "Metastasis Type (Pathology)"
         },
-        "surgery.pathology_report.ajcc_version": {
+        "surgery.surgery_procedure.pathology_report.ajcc_version": {
             "title": "AJCC Version (at presentation)"
         },
-        "surgery.pathology_report.ajcc_tnm_stage": {
+        "surgery.surgery_procedure.pathology_report.ajcc_tnm_stage": {
             "title": "TNM Stage (at presentation)"
         },
-        "surgery.pathology_report.laterality": {
+        "surgery.surgery_procedure.pathology_report.laterality": {
             "title": "Tumor Laterality"
         },
         "ihc.antibody": {
@@ -329,12 +329,12 @@
         "medications.name":1.0,
         "ihc.antibody":1.0,
         "ihc.result":1.0,
-        "surgery.pathology_report.t_stage": 1.0,
-        "surgery.pathology_report.n_stage": 1.0,
-        "surgery.pathology_report.m_stage": 1.0,
-        "surgery.pathology_report.metasis_details.site": 1.0,
-        "surgery.pathology_report.metasis_details.type": 1.0,
-        "surgery.pathology_report.ajcc_tnm_stage": 1.0
+        "surgery.surgery_procedure.pathology_report.t_stage": 1.0,
+        "surgery.surgery_procedure.pathology_report.n_stage": 1.0,
+        "surgery.surgery_procedure.pathology_report.m_stage": 1.0,
+        "surgery.surgery_procedure.pathology_report.metasis_details.site": 1.0,
+        "surgery.surgery_procedure.pathology_report.metasis_details.type": 1.0,
+        "surgery.surgery_procedure.pathology_report.ajcc_tnm_stage": 1.0
         },
     "changelog": "/profiles/changelogs/patient.md"
 }

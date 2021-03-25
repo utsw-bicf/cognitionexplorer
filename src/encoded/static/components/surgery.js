@@ -28,12 +28,25 @@ class Surgery extends React.Component {
 
         let hasPathology=false;
         let hasProcedure = false;
+        let pathData = []
 
-        if (Object.keys(this.props.context.pathology_report).length > 0) {
-          hasPathology = true;
-        }
-        if (Object.keys(this.props.context.surgery_procedure).length > 0) {
+        
+        if (context.surgery_procedure.length > 0) {
             hasProcedure = true;
+            for(let i = 0; i < context.surgery_procedure.length; i++) {
+                if (context.surgery_procedure[i].pathology_report.length > 0) {
+                    hasPathology = true;
+                    break;
+                }
+            }
+        }
+        if (hasPathology) {
+            for(let i = 0; i < context.surgery_procedure.length; i++){
+                if (context.surgery_procedure[i].pathology_report.length > 0) {
+                    Array.prototype.push.apply(pathData,context.surgery_procedure[i].pathology_report)
+
+                }
+            }
         }
          return (
             <div className={itemClass}>
@@ -72,7 +85,7 @@ class Surgery extends React.Component {
                     </PanelBody>
                 </Panel>
                 {hasProcedure && <SurgeryProcedureTable data={context.surgery_procedure} tableTitle="Surgery Procedure"></SurgeryProcedureTable>}
-                {hasPathology && <PathologyReportTable data={context.pathology_report} tableTitle="Pathology Report " ></PathologyReportTable>}
+                {hasPathology && <PathologyReportTable data={pathData} tableTitle="Pathology Report " ></PathologyReportTable>}
 
             </div>
 
@@ -92,3 +105,4 @@ Surgery.defaultProps = {
 };
 
 globals.contentViews.register(Surgery, 'Surgery');
+
