@@ -125,7 +125,7 @@
         "biospecimen.sample_type": {
             "title": "Sample Type"
         },
-        "biospecimen.anatomic_site": {
+        "biospecimen.anatomic_site_display": {
             "title": "Anatomic Site"
         },
         "biospecimen.tissue_type": {

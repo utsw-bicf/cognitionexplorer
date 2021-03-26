@@ -8,6 +8,7 @@ Changes
  3. Add stage info for dominant tumor (#378)
  4. Add patient minimum filter (#392)
  5. Reformat surgery and pathology linkage to make it eaiser for query (#333)
+ 6. Update the display to remove NOS for site. (#399)
 
 
 1.0 (unreleased)

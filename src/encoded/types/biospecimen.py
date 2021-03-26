@@ -66,6 +66,17 @@ class Biospecimen(Item):
     def ihc(self, request, ihc):
         return paths_filtered_by_status(request, ihc)
 
+
+    @calculated_property( schema={
+        "title": "Anatomic Site",
+        "type": "string",
+    })
+    def anatomic_site_display(self, request, anatomic_site=None):
+        if anatomic_site is not None:
+            anatomic_site = anatomic_site.replace(", NOS", "")
+        return anatomic_site
+
+
     matrix = {
         'y': {
             'facets': [
@@ -73,7 +84,7 @@ class Biospecimen(Item):
                 'sample_type',
                 'tissue_derivatives',
                 'tissue_type',
-                'anatomic_site',
+                'anatomic_site_display',
                 'species',
                 'specimen_lineage',
                 'activity_status',

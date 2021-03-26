@@ -418,7 +418,7 @@ class BiospecimenComponent extends React.Component {
        const { cartControls } = this.props;
         const result = this.props.context;
         const tissueType = (result.tissue_type && result.sample_type == 'Tissue') ? ` ${result.tissue_type}` : '';
-        const anatomicSite = (result.anatomic_site && result.sample_type == 'Tissue') ? ` ${result.anatomic_site}` : '';
+        const anatomicSite = (result.anatomic_site_display && result.sample_type == 'Tissue') ? ` ${result.anatomic_site_display}` : '';
 
         return (
             <li className={resultItemClass(result)}>
@@ -431,7 +431,7 @@ class BiospecimenComponent extends React.Component {
                             <div><strong>Sample type: </strong>{result.sample_type}</div>
                             <div><strong>Tissue derivatives: </strong>{result.tissue_derivatives}</div>
                             <div><strong>Tissue type: </strong>{result.tissue_type}</div>
-                            <div><strong>Anatomic site: </strong>{result.anatomic_site}</div>
+                            <div><strong>Anatomic site: </strong>{result.anatomic_site_display}</div>
                         </div>
                     </div>
                     <div className="result-item__meta">
@@ -1233,4 +1233,3 @@ Search.lastRegion = {
 };
 
 globals.contentViews.register(Search, 'Search');
-

@@ -28,17 +28,17 @@ class SummaryBody extends React.Component {
 
         let facets = context.facets;
         let filters = context.filters;
-        let isKidneySampleIncluded = this.getIsIncluded(filters, "biospecimen.anatomic_site", "Kidney, NOS");
+        let isKidneySampleIncluded = this.getIsIncluded(filters, "biospecimen.anatomic_site_display", "Kidney");
 
         let isMouseSampleIncluded = this.getIsIncluded(filters, "biospecimen.species", "Mouse");
 
         let anatomic_site = facets.filter(obj => {
-            return obj.field === "biospecimen.anatomic_site"
+            return obj.field === "biospecimen.anatomic_site_display"
           })
         if (anatomic_site && anatomic_site.length > 0){
             let terms = anatomic_site[0].terms;
             let result = terms.filter(obj => {
-                return obj.key === "Kidney, NOS"
+                return obj.key === "Kidney"
             })
             if (result && result.length > 0) {
                 if (isKidneySampleIncluded) {
