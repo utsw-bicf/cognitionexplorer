@@ -4,29 +4,44 @@
     "id": "/profiles/consent.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "identifyingProperties": ["uuid"],
+    "identifyingProperties": [
+        "uuid"
+    ],
     "additionalProperties": true,
     "mixinProperties": [
-        { "$ref": "mixins.json#/schema_version" },
-        { "$ref": "mixins.json#/uuid" },
-        { "$ref": "mixins.json#/shared_status" },
-        { "$ref": "mixins.json#/notes" },
-        { "$ref": "mixins.json#/submitter_comment" }
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        },
+        {
+            "$ref": "mixins.json#/accessioned_status"
+        },
+        {
+            "$ref": "mixins.json#/notes"
+        },
+        {
+            "$ref": "mixins.json#/submitter_comment"
+        }
     ],
-    "required":["consent_type","patient","final_cons_sign","date_signed","scanned_consent"],
+    "required": [
+        "consent_type",
+        "patient",
+        "final_cons_sign",
+        "date_signed",
+        "scanned_consent"
+    ],
     "properties": {
         "schema_version": {
             "default": "1"
         },
-       
-
         "patient": {
             "title": "Patient",
             "description": "The patient the consent was for.",
             "type": "string",
             "linkTo": "Patient"
         },
-       
         "date_signed": {
             "title": "Date Signed",
             "description": "Date of consent.",
@@ -39,7 +54,7 @@
         },
         "consent_type": {
             "title": "Consent Type",
-            "description": "ver1 Doesn't include signature for release of genetic information (Version 1: 2007 - January 2011);ver2 Does include signature for release of genetic information (Version 2: February 2011 - February 2017);ver3 UTSTR Consent that has 2 signatures: (1) Full participation or Limited participation (limited is no future contact) and (2) Overall consent signature. This consent doesn't explicitly cover release of genetic information into a public repository. (we only have 1 of these in the database);ver4 UTSTR Consent that has 2 signatures: (1) Full participation or Limited participation (limited is no future contact) and (2) Overall consent signature. This consent explicitly covers release of genetic information into a public repository. (we only have 1 of these in the database);ver5 UTSTR consent that has 2 signatures; (1) optional biopsy signature and (2) overall consent signature (covers release of genetic information) (Version 5: February 2017 - early 2018);ver6 UTSTR consent that has only 1 signature for entire consent. This consent explicitly covers release of genetic information into a public repository (Version 6: early 2018 to present);Unknown;",
+            "description": "type 1: Doesn't include signature for release of genetic information (Consent type 1: 2007 - January 2011);\ntype 2 Does include signature for release of genetic information (Consent type 2: February 2011 - February 2017); \ntype 3 UTSTR Consent that has 2 signatures: (1) Full participation or Limited participation (limited is no future contact) and (2) Overall consent signature. This consent doesn't explicitly cotype release of genetic information into a public repository; \ntype 4 UTSTR Consent that has 2 signatures: (1) Full participation or Limited participation (limited is no future contact) and (2) Overall consent signature. This consent explicitly cotypes release of genetic information into a public repository; \ntype 5 UTSTR consent that has 2 signatures; \n (1) optional biopsy signature and (2) overall consent signature (cotypes release of genetic information)(Consent type 6: early 2018 to present) ; \ntype 6 UTSTR consent that has only 1 signature for entire consent. This consent explicitly cotypes release of genetic information into a public repository(Consent type 5: February 2017 - early 2018) ; \nUnknown;",
             "type": "string",
             "enum": [
                 "1",
@@ -53,7 +68,7 @@
         },
         "future_contact": {
             "title": "(1) Future Contact",
-            "description": "",
+            "description": "For consent type 1 and type 2 only",
             "type": "string",
             "enum": [
                 "Y",
@@ -62,7 +77,7 @@
         },
         "future_research": {
             "title": "(2) Future Research",
-            "description": "",
+            "description": "For consent type 1 and type 2 only",
             "type": "string",
             "enum": [
                 "Y",
@@ -71,7 +86,7 @@
         },
         "info_release": {
             "title": "(3) Info Release",
-            "description": "",
+            "description": "For consent type 1 and type 2 only",
             "type": "string",
             "enum": [
                 "Y",
@@ -80,7 +95,7 @@
         },
         "genetic_release": {
             "title": "(4) Genetic Release",
-            "description": "",
+            "description": "Not in consent type 2 only",
             "type": "string",
             "enum": [
                 "Y",
@@ -89,7 +104,7 @@
         },
         "final_cons_sign": {
             "title": "(5) Final Consent Signature",
-            "description": "",
+            "description": "For consent type 1-6",
             "type": "string",
             "enum": [
                 "Y",
@@ -98,7 +113,7 @@
         },
         "full_limited_part": {
             "title": "(6) Full or Limited Participation",
-            "description": "Existed in version3 and version 4",
+            "description": "For consent type 3 and type 4 only",
             "type": "string",
             "enum": [
                 "Full",
@@ -107,7 +122,7 @@
         },
         "opti_biopsy_sign": {
             "title": "(7) Optional Biopsy Signature",
-            "description": "Existed in version5",
+            "description": "For consent type 5 only",
             "type": "string",
             "enum": [
                 "Y",
@@ -116,14 +131,13 @@
         },
         "scanned_consent": {
             "title": "Scanned Copy of Consent",
-            "description": "",
             "type": "string",
             "enum": [
                 "Y",
                 "N"
             ]
         }
-       },
+    },
     "oneOf": [
         {
             "properties": {
@@ -158,7 +172,8 @@
                             "opti_biopsy_sign"
                         ]
                     }
-                }]
+                }
+            ]
         },
         {
             "properties": {
@@ -171,12 +186,14 @@
                 "future_research",
                 "info_release",
                 "genetic_release",
-                "final_cons_sign"],
+                "final_cons_sign"
+            ],
             "allOf": [
                 {
                     "not": {
                         "required": [
-                            "full_limited_part"]
+                            "full_limited_part"
+                        ]
                     }
                 },
                 {
@@ -199,7 +216,8 @@
             },
             "required": [
                 "final_cons_sign",
-                "full_limited_part"],
+                "full_limited_part"
+            ],
             "allOf": [
                 {
                     "not": {
@@ -235,7 +253,8 @@
                             "opti_biopsy_sign"
                         ]
                     }
-                }]
+                }
+            ]
         },
         {
             "properties": {
@@ -245,7 +264,8 @@
             },
             "required": [
                 "final_cons_sign",
-                "opti_biopsy_sign"],
+                "opti_biopsy_sign"
+            ],
             "allOf": [
                 {
                     "not": {
@@ -281,7 +301,8 @@
                             "full_limited_part"
                         ]
                     }
-                }]
+                }
+            ]
         },
         {
             "properties": {
@@ -334,7 +355,8 @@
                             "opti_biopsy_sign"
                         ]
                     }
-                }]
+                }
+            ]
         },
         {
             "properties": {
@@ -342,7 +364,6 @@
                     "const": "Unknown"
                 }
             },
-            
             "allOf": [
                 {
                     "not": {
@@ -392,12 +413,98 @@
                             "opti_biopsy_sign"
                         ]
                     }
-                }]
-        }],
+                }
+            ]
+        }
+    ],
     "facets": {
         "status": {
             "title": "Status"
+        },
+        "patient": {
+            "title": "Patient"
+        },
+        "date_signed": {
+            "title": "Date Signed"
+        },
+        "consent_type": {
+            "title": "Consent Type"
+        },
+        "future_contact": {
+            "title": "(1) Future Contact"
+        },
+        "future_research": {
+            "title": "(2) Future Research"
+        },
+        "info_release": {
+            "title": "(3) Info Release"
+        },
+        "genetic_release": {
+            "title": "(4) Genetic Release"
+        },
+        "final_cons_sign": {
+            "title": "(5) Final Consent Signature"
+        },
+        "full_limited_part": {
+            "title": "(6) Full or Limited Participation"
+        },
+        "opti_biopsy_sign": {
+            "title": "(7) Optional Biopsy Signature"
+        },
+        "scanned_consent": {
+            "title": "Scanned Copy of Consent"
         }
     },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "patient": {
+            "title": "Patient"
+        },
+        "date_signed": {
+            "title": "Date Signed"
+        },
+        "consent_type": {
+            "title": "Consent Type"
+        },
+        "future_contact": {
+            "title": "(1) Future Contact"
+        },
+        "future_research": {
+            "title": "(2) Future Research"
+        },
+        "info_release": {
+            "title": "(3) Info Release"
+        },
+        "genetic_release": {
+            "title": "(4) Genetic Release"
+        },
+        "final_cons_sign": {
+            "title": "(5) Final Consent Signature"
+        },
+        "full_limited_part": {
+            "title": "(6) Full or Limited Participation"
+        },
+        "opti_biopsy_sign": {
+            "title": "(7) Optional Biopsy Signature"
+        },
+        "scanned_consent": {
+            "title": "Scanned Copy of Consent"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "date_signed": 1.0,
+        "consent_type": 1.0,
+        "future_contact": 1.0,
+        "future_research": 1.0,
+        "info_release": 1.0,
+        "genetic_release": 1.0,
+        "final_cons_sign": 1.0,
+        "full_limited_part": 1.0,
+        "opti_biopsy_sign": 1.0,
+        "scanned_consent": 1.0
+    },
     "changelog": "/profiles/changelogs/consent.md"
- }
+}

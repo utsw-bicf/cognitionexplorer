@@ -8,7 +8,7 @@
         "info_release": "Y",
         "final_cons_sign": "Y",
         "scanned_consent": "Y",
-        "status": "current",
+        "status": "released",
         "uuid": "6b99d6bf-18a1-42b6-b066-fbc04bc2478b"
     },
     {
@@ -21,7 +21,7 @@
         "genetic_release": "Y",
         "final_cons_sign": "Y",
         "scanned_consent": "Y",
-        "status": "current",
+        "status": "released",
         "uuid": "cf3bf135-bd8c-4d42-b22d-42aacae4f7b8"
     },
     {
@@ -31,7 +31,7 @@
         "final_cons_sign": "Y",
         "full_limited_part": "Full",
         "scanned_consent": "Y",
-        "status": "current",
+        "status": "released",
         "uuid": "b4b48461-e4cd-40ac-9df1-9a506ac57f3c"
     },
     {
@@ -40,7 +40,7 @@
         "consent_type": "4",
         "final_cons_sign": "Y",
         "full_limited_part": "Full",
-        "status": "current",
+        "status": "released",
         "scanned_consent": "Y",
         "uuid": "4f49c8dc-4594-4a6e-bdd0-027c9cdcab8d"
     },
@@ -50,7 +50,7 @@
         "consent_type": "5",
         "final_cons_sign": "Y",
         "opti_biopsy_sign": "Y",
-        "status": "current",
+        "status": "revoked",
         "scanned_consent": "Y",
         "uuid": "4073f46b-cd84-4281-abbc-ae33e4f1dfae"
     },
@@ -59,7 +59,7 @@
         "date_signed": "2017-10-10",
         "consent_type": "6",
         "final_cons_sign": "Y",
-        "status": "current",
+        "status": "released",
         "scanned_consent": "Y",
         "uuid": "156c8a40-9d3a-4cbe-a761-f1a2a0db31ec"
     }
