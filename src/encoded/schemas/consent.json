@@ -13,7 +13,7 @@
         { "$ref": "mixins.json#/notes" },
         { "$ref": "mixins.json#/submitter_comment" }
     ],
-    "required":["consent_type","patient","final_cons_sign","date_signed"],
+    "required":["consent_type","patient","final_cons_sign","date_signed","scanned_consent"],
     "properties": {
         "schema_version": {
             "default": "1"
