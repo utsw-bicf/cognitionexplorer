@@ -89,13 +89,13 @@
                             "title": "1d. Average number of packs smoked per day:",
                             "type": "string",
                             "enum": [
-                                "(1) 1 cigarette to less then 1/2 pack",
-                                "(2) 1/2 pack to less than 1 pack",
-                                "(3) 1 pack to less than 1 1/2 packs",
-                                "(4) 1 1/2 packs to less than 2 packs",
-                                "(5) 2 packs or more",
-                                "(8) N/A",
-                                "(9) Unknown"
+                                "1 1 cigarette to less then 1/2 pack",
+                                "2 1/2 pack to less than 1 pack",
+                                "3 1 pack to less than 1 1/2 packs",
+                                "4 1 1/2 packs to less than 2 packs",
+                                "5 2 packs or more",
+                                "8 N/A",
+                                "9 Unknown"
                             ]
                         },
                         "quitsmok": {
