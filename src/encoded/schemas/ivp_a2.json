@@ -13,7 +13,6 @@
         "visdate",
         "visitnum",
         "initials",
-        "header_complete",
         "inbirmo",
         "inbiryr",
         "insex",
@@ -25,8 +24,7 @@
         "inrelto",
         "inknown",
         "inlivwth",
-        "inrely",
-        "form_status"
+        "inrely"
     ],
     "additionalProperties": false,
     "mixinProperties": [
@@ -67,7 +65,7 @@
             "title": "1a. Co-participant's month of birth:",
             "description": "Date can be submitted as MM.((MM) 1-12, 99 = Unknown)",
             "type": "string",
-            "pattern": "^[0][1-9]|[1][0-2]|[99]$"
+            "pattern": "^[0]?[1-9]|[1][0-2]|[99]$"
         },
         "inbiryr": {
             "title": "1b. Co-participant's year of birth:",

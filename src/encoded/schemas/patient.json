@@ -9,9 +9,7 @@
         "accession"
     ],
     "required": [
-        "accession",
-        "pic",
-        "form_status"
+        "accession"
     ],
     "additionalProperties": false,
     "mixinProperties": [

@@ -200,13 +200,8 @@
                                 "1 Unknown"
                             ]
                         }
-                    },
-                    "required": [
-                        "artupex",
-                        "artloex",
-                        "artspin",
-                        "artunkn"
-                    ]
+                    }
+                   
                 },
                 "urineinc": {
                     "title": "12. Incontinence - urinary",
@@ -327,33 +322,8 @@
                     "title": "23a. If other medical conditions SPECIFY:",
                     "type": "string"
                 }
-            },
-            "required": [
-                "diabet",
-                "myoinf",
-                "conghrt",
-                "afibrill",
-                "hypert",
-                "angina",
-                "hypchol",
-                "vb12def",
-                "thydis",
-                "arth",
-                "artype",
-                "note_d2_3",
-                "urineinc",
-                "bowlinc",
-                "sleepap",
-                "remdis",
-                "hyposom",
-                "sleepoth",
-                "angiocp",
-                "angiopci",
-                "pacemake",
-                "hvalve",
-                "antienc",
-                "othcond"
-            ]
+            }
+           
         }
     },
     "facets": {

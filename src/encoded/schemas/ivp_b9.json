@@ -6,18 +6,7 @@
     "identifyingProperties": [
         "uuid"
     ],
-    "required": [
-        "decl_in_memo",
-        "cogn_symp",
-        "meaningful_impair",
-        "beha_symp",
-        "chge_in_behv",
-        "psych",
-        "moto_symp",
-        "motor_func",
-        "overall",
-        "candidate"
-    ],
+   
     "additionalProperties": false,
     "mixinProperties": [
         {

@@ -7,34 +7,7 @@
   "identifyingProperties": [
     "uuid"
   ],
-  "required": [
-    "patient",
-    "adcid",
-    "visdate",
-    "visitnum",
-    "initials",
-    "header_complete",
-    "reason",
-    "refersc",
-    "prestat",
-    "prespart",
-    "source",
-    "birthmo",
-    "birthyr",
-    "sex",
-    "hispanic",
-    "race",
-    "racesec",
-    "raceter",
-    "primlang",
-    "educ",
-    "maristat",
-    "independ",
-    "residenc",
-    "zip",
-    "handed",
-    "form_status"
-  ],
+ 
   "additionalProperties": false,
   "mixinProperties": [
     {

@@ -49,7 +49,7 @@
                     "title": "1. Subject height (inches)",
                     "description": "((36.0-87.9; 88.8 = Not Assessed; 99.9 = Unknown))",
                     "type": "string",
-                    "pattern": "^[3][6-9].[0-9]|[4-7][0-9].[0-9]|[8][0-7].[0-9]|88.8|99.9$"
+                    "pattern": "^[3][6-9].?[0-9]?|[4-7][0-9].?[0-9]?|[8][0-7].?[0-9]?|88.8|99.9$"
                 },
                 "weight": {
                     "title": "2. Subject weight (lbs.)",
