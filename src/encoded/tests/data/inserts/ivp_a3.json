@@ -26,7 +26,7 @@
                 "momyob": "1900",
                 "momdage": "80",
                 "momneur": "1 Cognitive impairment/behavior change",
-                "momprdx": "041 MCI - amnestic, single domain",
+                "momprdx": "41 MCI - amnestic, single domain",
                 "mommoe": "1 Autopsy",
                 "momageo": "50"
             },
@@ -35,7 +35,7 @@
                 "dadyob": "1901",
                 "daddage": "76",
                 "dadneur": "2 Parkinsonism",
-                "dadprdx": "042 MCI - multiple domain with amnesia",
+                "dadprdx": "42 MCI - multiple domain with amnesia",
                 "dadmoe": "2 Examination",
                 "dadageo": "60"
             }
