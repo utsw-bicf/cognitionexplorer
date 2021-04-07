@@ -20,34 +20,40 @@ class patientPathTable extends React.Component {
                 surgery_date: data[i].date,
             }
             if (data[i].surgery_procedure.length > 0){
-                let procedure_type = data[i].surgery_procedure[0].procedure_type;
-                for (let j = 1; j < data[i].surgery_procedure.length; j++) {
-                    procedure_type += ", " + data[i].surgery_procedure[j].procedure_type;
-                }
-                obj1.procedure_type = procedure_type
-            }
-            if (data[i].pathology_report.length > 0) {
-                for (let j = 0; j < data[i].pathology_report.length; j++) {
+                
+                for (let j = 0; j < data[i].surgery_procedure.length; j++) {
+
                     let obj2 = {
                         surgery_accession: obj1.surgery_accession,
                         surgery_id: obj1.surgery_id,
                         surgery_date: obj1.surgery_date,
-                        procedure_type: obj1.procedure_type,
-                        path_accession: data[i].pathology_report[j].accession,
-                        path_id: data[i].pathology_report[j]['@id'],
-                        path_histology: data[i].pathology_report[j].histology,
-                        t_stage: data[i].pathology_report[j].t_stage,
-                        n_stage: data[i].pathology_report[j].n_stage,
-                        m_stage: data[i].pathology_report[j].m_stage,
+                        procedure_type: data[i].surgery_procedure[j].procedure_type,
+
                     }
-                    
-
-                
-                
-                     surgeryData[index] = obj2;
-                     index++;
-
+                    if (data[i].surgery_procedure[j].pathology_report.length > 0) {
+                        for (let k = 0; k < data[i].surgery_procedure[j].pathology_report.length; k++) {
+                            let obj3 = {
+                                surgery_accession: obj1.surgery_accession,
+                                surgery_id: obj1.surgery_id,
+                                surgery_date: obj1.surgery_date,
+                                procedure_type: data[i].surgery_procedure[j].procedure_type,
+                                path_accession: data[i].surgery_procedure[j].pathology_report[k].accession,
+                                path_id: data[i].surgery_procedure[j].pathology_report[k]['@id'],
+                                path_histology: data[i].surgery_procedure[j].pathology_report[k].histology,
+                                t_stage: data[i].surgery_procedure[j].pathology_report[k].t_stage,
+                                n_stage: data[i].surgery_procedure[j].pathology_report[k].n_stage,
+                                m_stage: data[i].surgery_procedure[j].pathology_report[k].m_stage,
+                            }
+                             surgeryData[index] = obj3;
+                             index++;
+                        }
+        
+                    }else {
+                        surgeryData[index] = obj2;
+                        index++;
+                    }
                 }
+                
                 
             } else {
                 surgeryData[index] = obj1;
@@ -114,6 +120,7 @@ class patientPathTable extends React.Component {
 }
 
 export default patientPathTable;
+
 
 
 

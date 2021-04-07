@@ -72,7 +72,7 @@ const displayedFacetFields = [
     { field: 'sample_type', title: 'Sample Type'},
     { field: 'tissue_derivatives', title: 'Tissue Derivatives'},
     { field: 'tissue_type', title: 'Tissue Type'},
-    { field: 'anatomic_site', title: 'Anatomic Site'},
+    { field: 'anatomic_site_display', title: 'Anatomic Site'},
     { field: 'status', title: 'Status' },
 ];
 

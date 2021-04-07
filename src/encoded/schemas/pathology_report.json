@@ -6,32 +6,22 @@
     "type": "object",
     "identifyingProperties": [
         "uuid",
-        "surgery",
+        "surgery_procedure",
         "accession"
     ],
     "required": [
-        "surgery",
+        "surgery_procedure",
         "date",
         "report_source",
         "path_source_procedure"
     ],
     "additionalProperties": false,
     "mixinProperties": [
-        {
-            "$ref": "mixins.json#/schema_version"
-        },
-        {
-            "$ref": "mixins.json#/submitted"
-        },
-        {
-            "$ref": "mixins.json#/uuid"
-        },
-        {
-            "$ref": "mixins.json#/accession"
-        },
-        {
-            "$ref": "mixins.json#/accessioned_status"
-        }
+        { "$ref": "mixins.json#/schema_version" },
+        { "$ref": "mixins.json#/submitted" },
+        { "$ref": "mixins.json#/uuid" },
+        { "$ref": "mixins.json#/accession" },
+        { "$ref": "mixins.json#/accessioned_status" }
     ],
     "dependencies": {
         "tumor_size": [
@@ -51,17 +41,17 @@
         "accession": {
             "accessionType": "PR"
         },
-        "surgery": {
+        "surgery_procedure": {
             "title": "Surgery",
-            "description": "The surgery the pathology originated from.",
+            "description": "The procedure the pathology originated from.",
             "type": "string",
-            "linkTo": "Surgery"
+            "linkTo": "SurgeryProcedure"
         },
-        "patient": {
-            "title": "Patient",
-            "description": "The patient the lab was conducted for.",
+        "path_id": {
+            "title": "Path ID",
+            "comment": "KCE personnel are allowed to set this value.",
             "type": "string",
-            "linkTo": "Patient"
+            "permission": "import_items"
         },
         "date": {
             "title": "Pathology date",
@@ -591,8 +581,6 @@
         }
     },
     "boost_values": {
-        "surgery": 1.0,
-        "patient": 1.0,
         "accession": 1.0,
         "t_stage": 1.0,
         "n_stage": 1.0,

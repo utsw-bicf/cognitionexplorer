@@ -26,11 +26,11 @@ class Surgery(Item):
     name_key = "accession"
 
     embedded = [
-        "pathology_report",
         "surgery_procedure",
+        "surgery_procedure.pathology_report",
+        "surgery_procedure.pathology_report.ihc"
     ]
     rev = {
-        "pathology_report": ("PathologyReport", "surgery"),
         "surgery_procedure": ("SurgeryProcedure", "surgery"),
     }
     audit_inherit = []
@@ -77,6 +77,26 @@ class Surgery(Item):
 
         return robotic_assist_type
 
+
+
+@collection(
+    name="surgery-procedures",
+    properties={
+        "title": "Surgery procedures",
+        "description": "Surgery procedures results pages",
+    },
+)
+class SurgeryProcedure(Item):
+    item_type = "surgery_procedure"
+    schema = load_schema("encoded:schemas/surgery_procedure.json")
+    embedded = [
+        "pathology_report",
+        "pathology_report.ihc"
+    ]
+    rev = {
+        "pathology_report": ("PathologyReport", "surgery_procedure"),
+    }
+
     @calculated_property(
         schema={
             "title": "Pathology Report",
@@ -90,18 +110,6 @@ class Surgery(Item):
     def pathology_report(self, request, pathology_report):
         return paths_filtered_by_status(request, pathology_report)
 
-
-@collection(
-    name="surgery-procedures",
-    properties={
-        "title": "Surgery procedures",
-        "description": "Surgery procedures results pages",
-    },
-)
-class SurgeryProcedure(Item):
-    item_type = "surgery_procedure"
-    schema = load_schema("encoded:schemas/surgery_procedure.json")
-    embeded = []
 
 
     def name(self):
