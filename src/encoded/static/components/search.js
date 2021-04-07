@@ -784,9 +784,6 @@ export class ResultTable extends React.Component {
                 />
                 {context.notification === 'Success' ?
                     <div className="search-results__result-list">
-                        {isPatient && total <= 10 ?
-                            <h4>Patient list is restricted for specified query. Please expand your query.</h4>
-                        :
                         <div>
                             <h4>Showing {results.length} of {total} {label}</h4>
                             <SearchControls context={context} visualizeDisabledTitle={visualizeDisabledTitle} onFilter={this.onFilter} showResultsToggle />
@@ -795,7 +792,6 @@ export class ResultTable extends React.Component {
                             : null}
                             <ResultTableList results={results} columns={columns} cartControls />
                         </div>
-                        }
                     </div>
                 :
                     <h4>{context.notification}</h4>

@@ -28,7 +28,6 @@ class Surgery(Item):
     embedded = [
         "surgery_procedure",
         "surgery_procedure.pathology_report",
-        "surgery_procedure.pathology_report.ihc"
     ]
     rev = {
         "surgery_procedure": ("SurgeryProcedure", "surgery"),
@@ -91,7 +90,6 @@ class SurgeryProcedure(Item):
     schema = load_schema("encoded:schemas/surgery_procedure.json")
     embedded = [
         "pathology_report",
-        "pathology_report.ihc"
     ]
     rev = {
         "pathology_report": ("PathologyReport", "surgery_procedure"),
