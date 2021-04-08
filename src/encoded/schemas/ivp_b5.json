@@ -51,11 +51,7 @@
         "schema_version": {
             "default": "1"
         },
-        "instructions_b5": {
-            "title": "INSTRUCTIONS:",
-            "description": "This form is to be completed by the clinician or other trained health professional based on co-participant interview, as described by the training video. (This is not to be completed by the subject as a paper-and-pencil self-report.) For information on NPI-Q Interviewer Certification, see UDS Coding Guidebook for Initial Visit Packet, Form B5. Link to NACC Coding Guidebook \n Check only one box for each category of response.\nCORRECTED INSTRUCTIONS: Please answer the following questions based on changes that have occurred since the patient first began to experience memory (i.e. cognitive) problems. Select 1=Yes only if the symptom(s) has been present in the last month. Otherwise, select 0=No.\nFor each item marked 1=Yes, rate the SEVERITY of the symptom (how it affects the patient): \n1 = Mild (noticeable, but not a significant change) \n2 = Moderate (significant, but not a dramatic change)\n 3 = Severe (very marked or prominent, a dramatic change)",
-            "type": "string"
-        },
+        
         "npiqinf": {
             "title": "1. NPI CO-PARTICIPANT:",
             "description": "",
