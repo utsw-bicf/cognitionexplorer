@@ -137,6 +137,14 @@
             "title": "A4 Subject Medications",
             "type": "object",
             "properties": {
+                "langa4": {
+                    "title": "4a. Language used for A4 Subject Medications",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "a4sub": {
                     "title": "4b. Submitted A4 Subject Medications",
                     "type": "string",
@@ -155,15 +163,8 @@
                         "98 - Verbal refusal",
                         "99 - Unknown or inadequate information"
                     ]
-                },
-                "langa4": {
-                    "title": "4a. Language used for A4 Subject Medications",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
-                    ]
                 }
+                
             }
         },
         "note_z1x_5": {
