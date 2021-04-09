@@ -7,16 +7,7 @@
     "identifyingProperties": [
         "uuid"
     ],
-    "required": [
-        "normexam",
-        "parksign",
-        "cvdsigns",
-        "postcort",
-        "pspcbs",
-        "alsfind",
-        "gaitnph",
-        "othneur"
-    ],
+   
     "additionalProperties": false,
     "mixinProperties": [
         {
