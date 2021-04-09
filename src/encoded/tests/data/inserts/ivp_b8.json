@@ -6,7 +6,8 @@
     "initials": "JAR",
     "header_complete": "Complete",
     "normexam": "1 Yes - abnormal findings were consistent with syndromes listed in Questions 2-8",
-    "parksign": "1 Yes",
+    "note_b8":{
+        "parksign": "1 Yes",
     "parksign_left": {
         "slowingl": "1 Yes",
         "rigidl": "1 Yes"
@@ -43,8 +44,8 @@
     
     "alsfind": "1 Yes",
     "gaitnph": "0 No",
-    "othneur": "0 No",
-    "othneurx": "",
+    "othneur": "0 No"
+    },
     "form_status": "Complete",
     "status": "released",
     "uuid": "71c0bc16-7d2c-4035-9348-dad821e540e8"
