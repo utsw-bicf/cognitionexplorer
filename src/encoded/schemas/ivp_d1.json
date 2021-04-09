@@ -41,14 +41,6 @@
         "schema_version": {
             "default": "1"
         },
-        "whodiddx": {
-            "title": "Responses are based on: ",
-            "type": "string",
-            "enum": [
-                "1 Diagnosis from single clinician",
-                "2 Consensus diagnosis"
-            ]
-        },
         "dxmethod": {
             "title": "1. Diagnosis method - responses in this form are based on diagnosis by:",
             "type": "string",
@@ -1212,9 +1204,6 @@
         "status": {
             "title": "Status"
         },
-        "whodiddx": {
-            "title": "Responses are based on: "
-        },
         "dxmethod": {
             "title": "1. Diagnosis method - responses in this form are based on diagnosis by:"
         },
@@ -1296,7 +1285,6 @@
         "sec1.note_d1_6.impnomci": {
             "title": "5e. Cognitively impaired, not MCI"
         },
-        
         "sec2.biomarker_find.amylpet": {
             "title": "6a. Abnormally elevated amyloid on PET"
         },
@@ -1610,9 +1598,6 @@
     "columns": {
         "status": {
             "title": "Status"
-        },
-        "whodiddx": {
-            "title": "Responses are based on: "
         },
         "dxmethod": {
             "title": "1. Diagnosis method - responses in this form are based on diagnosis by:"
