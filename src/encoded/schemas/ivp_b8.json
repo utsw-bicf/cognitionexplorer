@@ -50,36 +50,36 @@
             "title": "Are all findings unremarkable (normal or normal for age)?",
             "type": "string",
             "enum": [
-                "Yes",
-                "No",
-                "Unknown"
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
             ]
         },
         "focldef": {
             "title": "Are focal deficits present indicative of central nervous system disorder?",
             "type": "string",
             "enum": [
-                "Yes",
-                "No",
-                "Unknown"
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
             ]
         },
         "gaitdis": {
             "title": "Is gait disorder present indicative of central nervous system disorder?",
             "type": "string",
             "enum": [
-                "Yes",
-                "No",
-                "Unknown"
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
             ]
         },
         "eyemove": {
             "title": "Are there eye movement abnormalities present indicative of central nervous system disorder?",
             "type": "string",
             "enum": [
-                "Yes",
-                "No",
-                "Unknown"
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
             ]
         },
         "normexam": {
