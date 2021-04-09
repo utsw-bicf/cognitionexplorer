@@ -1,23 +1,23 @@
 {
-    "patient": "000001",
+    "patient": "000000",
     "adcid": "25 University of Texas Southwestern",
     "visdate": "2019-12-02",
     "visitnum": "1",
     "header_complete": "Complete",
     "initials": "HY",
     "sec1": {
-        "memory": "Questionable - 0.5 Consistent slight forgetfulness; partial recollection of events; 'benign' forgetfulness.",
-        "orient": "Questionable - 0.5 Fully oriented except for slight difficulty with time relationships.",
-        "judgment": "Questionable - 0.5 Slight impairment in solving problems, similarities, and differences.",
-        "commun": "Mild - 1 Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
-        "homehobb": "Questionable - 0.5 Life at home, hobbies, and intellectual interests slightly impaired.",
-        "perscare": "None / Questionable - 0Fully capable of self-care (=0).",
+        "memory":"0.5 - Questionable  Consistent slight forgetfulness; partial recollection of events; 'benign' forgetfulness.",
+        "orient":"0.5 - Questionable  Fully oriented except for slight difficulty with time relationships.",
+        "judgment":"0.5 - Questionable  Slight impairment in solving problems, similarities, and differences.",
+        "commun":"1 - Mild Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
+        "homehobb":"0.5 - Questionable  Life at home, hobbies, and intellectual interests slightly impaired.",
+        "perscare":"0 - None / Questionable Fully capable of self-care (=0).",
         "cdrsum": "3.5",
         "cdrglob": "0.5 = Questionable impariment"
     },
     "sec2": {
-        "comport": "None - 0Socially appropriate behavior.",
-        "cdrlang": "None - 0 No language difficulty or occasional mild tip-of-the-tongue."
+        "comport":"0 - None Socially appropriate behavior.",
+        "cdrlang":"0 - None No language difficulty or occasional mild tip-of-the-tongue."
     },
     "form_status": "Complete",
     "status": "released",
