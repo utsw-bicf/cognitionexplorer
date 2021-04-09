@@ -57,15 +57,8 @@
                         "1 Yes",
                         "8 There is no co-participant"
                     ]
-                },
-                "decclin": {
-                    "title": "Does the clinician believe there has been a current meaningful decline in the subject's memory , non-memory cognitive abilities, behavior, or ability to manage his/her affairs, or have there been motor/movement changes?",
-                    "type": "string",
-                    "enum": [
-                        "1 yes",
-                        "0 no"
-                    ]
                 }
+                
             },
             "required": [
                 "decsub",
@@ -614,9 +607,7 @@
         "decl_in_memo.decin": {
             "title": "2. Does the co-participant report a decline in the subject's memory (relative to previously attained abilities)?"
         },
-        "decl_in_memo.decclin": {
-            "title": "Does the clinician believe there has been a current meaningful decline in the subject's memory , non-memory cognitive abilities, behavior, or ability to manage his/her affairs, or have there been motor/movement changes?"
-        },
+       
         "cogn_symp.decclcog": {
             "title": "3. Based on the clinician's judgment, is the subject currently experiencing meaningful impairment in cognition?"
         },
@@ -793,9 +784,7 @@
         "decl_in_memo.decin": {
             "title": "2. Does the co-participant report a decline in the subject's memory (relative to previously attained abilities)?"
         },
-        "decl_in_memo.decclin": {
-            "title": "Does the clinician believe there has been a current meaningful decline in the subject's memory , non-memory cognitive abilities, behavior, or ability to manage his/her affairs, or have there been motor/movement changes?"
-        },
+       
         "cogn_symp.decclcog": {
             "title": "3. Based on the clinician's judgment, is the subject currently experiencing meaningful impairment in cognition?"
         },
@@ -966,7 +955,6 @@
         "patient": 1.0,
         "decl_in_memo.decsub": 1.0,
         "decl_in_memo.decin": 1.0,
-        "decl_in_memo.decclin": 1.0,
         "cogn_symp.decclcog": 1.0,
         "meaningful_impair.cogmem": 1.0,
         "meaningful_impair.cogori": 1.0,
