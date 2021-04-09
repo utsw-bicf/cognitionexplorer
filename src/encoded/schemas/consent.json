@@ -4,146 +4,507 @@
     "id": "/profiles/consent.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "type": "object",
-    "identifyingProperties": ["uuid"],
+    "identifyingProperties": [
+        "uuid"
+    ],
     "additionalProperties": true,
     "mixinProperties": [
-        { "$ref": "mixins.json#/schema_version" },
-        { "$ref": "mixins.json#/uuid" },
-        { "$ref": "mixins.json#/shared_status" },
-        { "$ref": "mixins.json#/notes" }
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        },
+        {
+            "$ref": "mixins.json#/accessioned_status"
+        },
+        {
+            "$ref": "mixins.json#/notes"
+        },
+        {
+            "$ref": "mixins.json#/submitter_comment"
+        }
     ],
-    "required":["consent_version","patient","overall","date"],
+    "required": [
+        "consent_type",
+        "patient",
+        "final_cons_sign",
+        "date_signed",
+        "scanned_consent"
+    ],
     "properties": {
         "schema_version": {
             "default": "1"
         },
-        "consent_version": {
-            "default": "version3",
-            "title": "Consent Version",
-            "type": "string",
-            "enum": [
-                "version1",
-                "version2",
-                "version3"
-            ]
-        },
-
         "patient": {
             "title": "Patient",
             "description": "The patient the consent was for.",
             "type": "string",
             "linkTo": "Patient"
         },
-        "overall": {
-            "title": "Overall Consent",
-            "type": "string",
-            "enum": [
-                "Refuse",
-                "Agree"
-            ]
-        },
-        "date": {
-            "title": "Consent Date",
+        "date_signed": {
+            "title": "Date Signed",
             "description": "Date of consent.",
-            "comment": "Date can be submitted as YYYY-MM-DD.",
             "type": "string",
             "anyOf": [
-                {"format": "date"}
+                {
+                    "format": "date"
+                }
+            ]
+        },
+        "consent_type": {
+            "title": "Consent Type",
+            "description": "type 1: Doesn't include signature for release of genetic information (Consent type 1: 2007 - January 2011);\ntype 2 Does include signature for release of genetic information (Consent type 2: February 2011 - February 2017); \ntype 3 UTSTR Consent that has 2 signatures: (1) Full participation or Limited participation (limited is no future contact) and (2) Overall consent signature. This consent doesn't explicitly cotype release of genetic information into a public repository; \ntype 4 UTSTR Consent that has 2 signatures: (1) Full participation or Limited participation (limited is no future contact) and (2) Overall consent signature. This consent explicitly cotypes release of genetic information into a public repository; \ntype 5 UTSTR consent that has 2 signatures; \n (1) optional biopsy signature and (2) overall consent signature (cotypes release of genetic information)(Consent type 6: early 2018 to present) ; \ntype 6 UTSTR consent that has only 1 signature for entire consent. This consent explicitly cotypes release of genetic information into a public repository(Consent type 5: February 2017 - early 2018) ; \nUnknown;",
+            "type": "string",
+            "enum": [
+                "1",
+                "2",
+                "3",
+                "4",
+                "5",
+                "6",
+                "Unknown"
             ]
         },
         "future_contact": {
-            "title": "Future Contact",
-            "description": "Required for version 1 and version 2, not in version 3",
+            "title": "(1) Future Contact",
+            "description": "For consent type 1 and type 2 only",
             "type": "string",
             "enum": [
-                "Refuse",
-                "Agree"
+                "Y",
+                "N"
             ]
         },
         "future_research": {
-            "title": "Future Research",
-            "description": "Required for version 1 and version 2, not in version 3",
+            "title": "(2) Future Research",
+            "description": "For consent type 1 and type 2 only",
             "type": "string",
             "enum": [
-                "Refuse",
-                "Agree"
+                "Y",
+                "N"
             ]
         },
-        "information_release": {
-            "title": "Information Release",
-            "description": "Required for version 1 and version 2, not in version 3",
+        "info_release": {
+            "title": "(3) Info Release",
+            "description": "For consent type 1 and type 2 only",
             "type": "string",
             "enum": [
-                "Refuse",
-                "Agree"
+                "Y",
+                "N"
             ]
         },
-        "genetic_information_release": {
-            "title": "Genetic Information Release",
-            "description": "Required for version 1 and version 2, not in version 3",
+        "genetic_release": {
+            "title": "(4) Genetic Release",
+            "description": "Not in consent type 2 only",
             "type": "string",
             "enum": [
-                "Refuse",
-                "Agree"
+                "Y",
+                "N"
             ]
         },
-        "hippa": {
-            "title": "HIPPA",
-            "description": "Required for version 1, not in version 2 and version 3",
+        "final_cons_sign": {
+            "title": "(5) Final Consent Signature",
+            "description": "For consent type 1-6",
             "type": "string",
             "enum": [
-                "Refuse",
-                "Agree"
+                "Y",
+                "N"
             ]
         },
-        "biopsyForResearch": {
-            "title": "Biopsy For Research",
-            "description": "Required for version 3, not in version 1 and version 2",
+        "full_limited_part": {
+            "title": "(6) Full or Limited Participation",
+            "description": "For consent type 3 and type 4 only",
             "type": "string",
             "enum": [
-                "Refuse",
-                "Agree"
+                "Full",
+                "Limited"
             ]
-        }  
-      
+        },
+        "opti_biopsy_sign": {
+            "title": "(7) Optional Biopsy Signature",
+            "description": "For consent type 5 only",
+            "type": "string",
+            "enum": [
+                "Y",
+                "N"
+            ]
+        },
+        "scanned_consent": {
+            "title": "Scanned Copy of Consent",
+            "type": "string",
+            "enum": [
+                "Y",
+                "N"
+            ]
+        }
     },
     "oneOf": [
         {
-          "properties": {
-            "consent_version": { "enum": ["version1"] }
-          },
-          "required": ["consent_version", "patient", "overall", "date", "future_contact", "future_research", "information_release", "genetic_information_release", "hippa"],
-        "allOf":[{"not":{"required":["biopsyForResearch" ]}}
-        ]
-    },
-        {
-          "properties": {
-            "consent_version": { "const": "version2" }
-          },
-          "required": ["consent_version", "patient", "overall", "date", "future_contact", "future_research", "information_release", "genetic_information_release"],
-          "allOf":[
-              {"not":{"required":["hippa" ]}},
-              {"not":{"required":["biopsyForResearch" ]}}
-        ]
+            "properties": {
+                "consent_version": {
+                    "const": "1"
+                }
+            },
+            "required": [
+                "future_contact",
+                "future_research",
+                "info_release",
+                "final_cons_sign"
+            ],
+            "allOf": [
+                {
+                    "not": {
+                        "required": [
+                            "genetic_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "full_limited_part"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "opti_biopsy_sign"
+                        ]
+                    }
+                }
+            ]
         },
         {
-          "properties": {
-            "consent_version": { "const": "version3" }
-          },
-          "required": ["consent_version", "patient", "overall", "date","biopsyForResearch"],
-          "allOf":[
-              {"not":{"required":["future_contact" ]}},
-              {"not":{"required":["future_research" ]}},
-              {"not":{"required":["information_release" ]}},
-              {"not":{"required":["genetic_information_release" ]}},
-              {"not":{"required":["hippa"]}}
-            ]  
+            "properties": {
+                "consent_version": {
+                    "const": "2"
+                }
+            },
+            "required": [
+                "future_contact",
+                "future_research",
+                "info_release",
+                "genetic_release",
+                "final_cons_sign"
+            ],
+            "allOf": [
+                {
+                    "not": {
+                        "required": [
+                            "full_limited_part"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "opti_biopsy_sign"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "properties": {
+                "consent_version": {
+                    "enum": [
+                        "3",
+                        "4"
+                    ]
+                }
+            },
+            "required": [
+                "final_cons_sign",
+                "full_limited_part"
+            ],
+            "allOf": [
+                {
+                    "not": {
+                        "required": [
+                            "future_contact"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "future_research"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "info_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "genetic_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "opti_biopsy_sign"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "properties": {
+                "consent_version": {
+                    "const": "5"
+                }
+            },
+            "required": [
+                "final_cons_sign",
+                "opti_biopsy_sign"
+            ],
+            "allOf": [
+                {
+                    "not": {
+                        "required": [
+                            "future_contact"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "future_research"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "info_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "genetic_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "full_limited_part"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "properties": {
+                "consent_version": {
+                    "const": "6"
+                }
+            },
+            "required": [
+                "final_cons_sign"
+            ],
+            "allOf": [
+                {
+                    "not": {
+                        "required": [
+                            "future_contact"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "future_research"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "info_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "genetic_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "full_limited_part"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "opti_biopsy_sign"
+                        ]
+                    }
+                }
+            ]
+        },
+        {
+            "properties": {
+                "consent_version": {
+                    "const": "Unknown"
+                }
+            },
+            "allOf": [
+                {
+                    "not": {
+                        "required": [
+                            "future_contact"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "future_research"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "info_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "genetic_release"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "final_cons_sign"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "full_limited_part"
+                        ]
+                    }
+                },
+                {
+                    "not": {
+                        "required": [
+                            "opti_biopsy_sign"
+                        ]
+                    }
+                }
+            ]
         }
-      ],
+    ],
     "facets": {
         "status": {
             "title": "Status"
+        },
+        "patient": {
+            "title": "Patient"
+        },
+        "date_signed": {
+            "title": "Date Signed"
+        },
+        "consent_type": {
+            "title": "Consent Type"
+        },
+        "future_contact": {
+            "title": "(1) Future Contact"
+        },
+        "future_research": {
+            "title": "(2) Future Research"
+        },
+        "info_release": {
+            "title": "(3) Info Release"
+        },
+        "genetic_release": {
+            "title": "(4) Genetic Release"
+        },
+        "final_cons_sign": {
+            "title": "(5) Final Consent Signature"
+        },
+        "full_limited_part": {
+            "title": "(6) Full or Limited Participation"
+        },
+        "opti_biopsy_sign": {
+            "title": "(7) Optional Biopsy Signature"
+        },
+        "scanned_consent": {
+            "title": "Scanned Copy of Consent"
         }
     },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "patient": {
+            "title": "Patient"
+        },
+        "date_signed": {
+            "title": "Date Signed"
+        },
+        "consent_type": {
+            "title": "Consent Type"
+        },
+        "future_contact": {
+            "title": "(1) Future Contact"
+        },
+        "future_research": {
+            "title": "(2) Future Research"
+        },
+        "info_release": {
+            "title": "(3) Info Release"
+        },
+        "genetic_release": {
+            "title": "(4) Genetic Release"
+        },
+        "final_cons_sign": {
+            "title": "(5) Final Consent Signature"
+        },
+        "full_limited_part": {
+            "title": "(6) Full or Limited Participation"
+        },
+        "opti_biopsy_sign": {
+            "title": "(7) Optional Biopsy Signature"
+        },
+        "scanned_consent": {
+            "title": "Scanned Copy of Consent"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "date_signed": 1.0,
+        "consent_type": 1.0,
+        "future_contact": 1.0,
+        "future_research": 1.0,
+        "info_release": 1.0,
+        "genetic_release": 1.0,
+        "final_cons_sign": 1.0,
+        "full_limited_part": 1.0,
+        "opti_biopsy_sign": 1.0,
+        "scanned_consent": 1.0
+    },
     "changelog": "/profiles/changelogs/consent.md"
- }
+}
