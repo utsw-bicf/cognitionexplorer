@@ -94,416 +94,410 @@
         "note_b8": {
             "title": "INSTRUCTIONS FOR QUESTIONS 2-8",
             "description": "Please complete the appropriate sections below, using your best clinical judgment in selecting findings that indicate the likely syndrome(s) that is/are present.\nCHECK ALL OF THE GROUPS OF FINDINGS/SYNDROMES THAT WERE PRESENT:",
-            "type": "string"
-        },
-        "parksign": {
-            "title": "2. Parkinsonian signs",
-            "description": "Findings not marked Yes or Not assessed will default to No in the NACC database.",
-            "type": "string",
-            "enum": [
-                "0 No (SKIP TO QUESTION 3)",
-                "1 Yes"
-            ]
-        },
-        "parksign_left": {
-            "title": "Parkinsonian signs - LEFT. Findings not marked Yes or Not assessed will defalut to No in the NACC database.",
             "type": "object",
             "properties": {
-                "resttrl": {
-                    "title": "2a1. Resting tremor - arm",
+                "parksign": {
+                    "title": "2. Parkinsonian signs",
+                    "description": "Findings not marked Yes or Not assessed will default to No in the NACC database.",
                     "type": "string",
                     "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
+                        "0 No (SKIP TO QUESTION 3)",
+                        "1 Yes"
                     ]
                 },
-                "slowingl": {
-                    "title": "2b1. Slowing of fine motor movements",
+                "parksign_left": {
+                    "title": "Parkinsonian signs - LEFT. Findings not marked Yes or Not assessed will defalut to No in the NACC database.",
+                    "type": "object",
+                    "properties": {
+                        "resttrl": {
+                            "title": "2a1. Resting tremor - arm",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "slowingl": {
+                            "title": "2b1. Slowing of fine motor movements",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "rigidl": {
+                            "title": "2c1. Rigidity - arm",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
+                },
+                "parksign-right": {
+                    "title": "Parkinsonian signs - RIGHT",
+                    "type": "object",
+                    "properties": {
+                        "resttrr": {
+                            "title": "2a2. Resting tremor - arm",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "slowingr": {
+                            "title": "2b2. Slowing of fine motor movements",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "rigidr": {
+                            "title": "2c2. Rigidity - arm",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
+                },
+                "parksign_cont": {
+                    "title": "Parkinsonian signs - continued",
+                    "type": "object",
+                    "properties": {
+                        "brady": {
+                            "title": "2d. Bradykinesia",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "parkgait": {
+                            "title": "2e. Parkinsonian gait disorder",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "postinst": {
+                            "title": "2f. Postural instability",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
+                },
+                "cvdsigns": {
+                    "title": "3. Neurological signs considered by examiner to be most likely consistent with cerebrovascular disease.",
                     "type": "string",
                     "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
+                        "0 No (SKIP TO QUESTION 4)",
+                        "1 Yes"
                     ]
                 },
-                "rigidl": {
-                    "title": "2c1. Rigidity - arm",
+                "neurosign_present": {
+                    "title": "Findings consistent with stroke/cerebrovascular diseas",
+                    "description": "Findings not marked Yes or Not assessed will default to No in the NACC database.",
+                    "type": "object",
+                    "properties": {
+                        "cortdef": {
+                            "title": "3a. Cortical cognitive deficit (e.g., aphasia, apraxia, neglect)",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "sivdfind": {
+                            "title": "3b. Focal or other neurological findings consistent with SIVD(subcortical ischemic vascular dementia)",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
+                },
+                "neurosign_left": {
+                    "title": "Neuroplogical signs - LEFT",
+                    "description": "Findings not marked Yes or Not assessed will default to No in the NACC database.",
+                    "type": "object",
+                    "properties": {
+                        "cvdmotl": {
+                            "title": "3c1. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "cortvisl": {
+                            "title": "3d1. Cortical visual field loss",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "somatl": {
+                            "title": "3e1. Somatosensory loss",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
+                },
+                "neurosign_right": {
+                    "title": "Neurological signs - RIGHT",
+                    "description": "Findings not marked Yes or Not assessed will default to No in the NACC database.",
+                    "type": "object",
+                    "properties": {
+                        "cvdmotr": {
+                            "title": "3c2. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "cortvisr": {
+                            "title": "3d2. Cortical visual field loss",
+                            "description": "",
+                            "comment": "",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "somatr": {
+                            "title": "3e2. Somatosensory loss",
+                            "description": "",
+                            "comment": "",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
+                },
+                "postcort": {
+                    "title": "4. Higher cortical visual problem suggesting posterior cortical atrophy (e.g., prosopagnosia, simultagnosia, Balint's syndrome) or apraxia of gaze",
+                    "description": "Posterior cortical atrophy or apraxia of gaze",
                     "type": "string",
                     "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                }
-            }
-        },
-        "parksign-right": {
-            "title": "Parkinsonian signs - RIGHT",
-            "type": "object",
-            "properties": {
-                "resttrr": {
-                    "title": "2a2. Resting tremor - arm",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
+                        "0 No",
+                        "1 Yes"
                     ]
                 },
-                "slowingr": {
-                    "title": "2b2. Slowing of fine motor movements",
+                "pspcbs": {
+                    "title": "5. Findings suggestive of progressive supranuclear palsy (PSP), corticobasal syndrome, or other related disorders",
+                    "description": "PSP, corticobasal syndrome or other;",
                     "type": "string",
                     "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
+                        "0 No (SKIP TO QUESTION 6)",
+                        "1 Yes"
                     ]
                 },
-                "rigidr": {
-                    "title": "2c2. Rigidity - arm",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                }
-            }
-            
-        },
-        "parksign_cont": {
-            "title": "Parkinsonian signs - continued",
-            "type": "object",
-            "properties": {
-                "brady": {
-                    "title": "2d. Bradykinesia",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "parkgait": {
-                    "title": "2e. Parkinsonian gait disorder",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "postinst": {
-                    "title": "2f. Postural instability",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                }
-            }
-           
-        },
-        "cvdsigns": {
-            "title": "3. Neurological signs considered by examiner to be most likely consistent with cerebrovascular disease.",
-            "type": "string",
-            "enum": [
-                "0 No (SKIP TO QUESTION 4)",
-                "1 Yes"
-            ]
-        },
-        "neurosign_present": {
-            "title": "Findings consistent with stroke/cerebrovascular diseas",
-            "description": "Findings not marked Yes or Not assessed will default to No in the NACC database.",
-            "type": "object",
-            "properties": {
-                "cortdef": {
-                    "title": "3a. Cortical cognitive deficit (e.g., aphasia, apraxia, neglect)",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "sivdfind": {
-                    "title": "3b. Focal or other neurological findings consistent with SIVD(subcortical ischemic vascular dementia)",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                }
-            }
-           
-        },
-        "neurosign_left": {
-            "title": "Neuroplogical signs - LEFT",
-            "description": "Findings not marked Yes or Not assessed will default to No in the NACC database.",
-            "type": "object",
-            "properties": {
-                "cvdmotl": {
-                    "title": "3c1. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "cortvisl": {
-                    "title": "3d1. Cortical visual field loss",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "somatl": {
-                    "title": "3e1. Somatosensory loss",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                }
-            }
-            
-        },
-        "neurosign_right": {
-            "title": "Neurological signs - RIGHT",
-            "description": "Findings not marked Yes or Not assessed will default to No in the NACC database.",
-            "type": "object",
-            "properties": {
-                "cvdmotr": {
-                    "title": "3c2. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "cortvisr": {
-                    "title": "3d2. Cortical visual field loss",
+                "find_present": {
+                    "title": "Findings - Findings not marked Yes or Not assessed will default to No in the NACC database.",
                     "description": "",
-                    "comment": "",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
+                    "type": "object",
+                    "properties": {
+                        "eyepsp": {
+                            "title": "5a. Eye movement changes consistent with PSP",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "dyspsp": {
+                            "title": "5b. Dysarthria consistent with PSP",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "axialpsp": {
+                            "title": "5c. Axial rigidity consistent with PSP",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "gaitpsp": {
+                            "title": "5d. Gait disorder consistent with PSP",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "apraxsp": {
+                            "title": "5e. Apraxia of speech",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
                 },
-                "somatr": {
-                    "title": "3e2. Somatosensory loss",
+                "find_left": {
+                    "title": "Findings - LEFT Findings not marked Yes or Not assessed will default to No in the NACC database.",
+                    "type": "object",
+                    "properties": {
+                        "apraxl": {
+                            "title": "5f1. Apraxia consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "cortsenl": {
+                            "title": "5g1. Cortical sensory deficits consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "ataxl": {
+                            "title": "5h1. Ataxia consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "alienlml": {
+                            "title": "5i1. Alien limb consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "dystonl": {
+                            "title": "5j1. Dystonia consistent with CBS, PSP, or related disorder",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "myocllt": {
+                            "title": "5k1. Myoclonus consistent with CBS",
+                            "description": "",
+                            "comment": "",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
+                },
+                "find_right": {
+                    "title": "Findings - RIGHT Findings not marked Yes or Not assessed will default to No in the NACC database.",
                     "description": "",
-                    "comment": "",
+                    "type": "object",
+                    "properties": {
+                        "apraxr": {
+                            "title": "5f2. Apraxia consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "cortsenr": {
+                            "title": "5g2. Cortical sensory deficits consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "ataxr": {
+                            "title": "5h2. Ataxia consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "alienlmr": {
+                            "title": "5i2. Alien limb consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "dystonr": {
+                            "title": "5j2. Dystonia consistent with CBS, PSP, or related disorder",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "myoclrt": {
+                            "title": "5k2. Myoclonus consistent with CBS",
+                            "type": "string",
+                            "enum": [
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        }
+                    }
+                },
+                "alsfind": {
+                    "title": "6. Findings suggesting ALS (e.g., muscle wasting, fasciculations, upper motor neuron and/or lower motor neuron signs)",
                     "type": "string",
                     "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
+                        "0 No",
+                        "1 Yes"
                     ]
+                },
+                "gaitnph": {
+                    "title": "7. Normal-pressure hydrocephalus: gait apraxia",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "othneur": {
+                    "title": "8. Other findings (e.g., cerebellar ataxia, chorea, myoclonus)",
+                    "description": "(NOTE: For this question, do not specify symptoms that have already been checked above)",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes (SPECIFY):"
+                    ]
+                },
+                "othneurx": {
+                    "title": "8a. Other findings from neurological exam, please specify:",
+                    "type": "string"
                 }
             }
-           
-        },
-        "postcort": {
-            "title": "4. Higher cortical visual problem suggesting posterior cortical atrophy (e.g., prosopagnosia, simultagnosia, Balint's syndrome) or apraxia of gaze",
-            "description": "Posterior cortical atrophy or apraxia of gaze",
-            "type": "string",
-            "enum": [
-                "0 No",
-                "1 Yes"
-            ]
-        },
-        "pspcbs": {
-            "title": "5. Findings suggestive of progressive supranuclear palsy (PSP), corticobasal syndrome, or other related disorders",
-            "description": "PSP, corticobasal syndrome or other;",
-            "type": "string",
-            "enum": [
-                "0 No (SKIP TO QUESTION 6)",
-                "1 Yes"
-            ]
-        },
-        "find_present": {
-            "title": "Findings - Findings not marked Yes or Not assessed will default to No in the NACC database.",
-            "description": "",
-            "type": "object",
-            "properties": {
-                "eyepsp": {
-                    "title": "5a. Eye movement changes consistent with PSP",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "dyspsp": {
-                    "title": "5b. Dysarthria consistent with PSP",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "axialpsp": {
-                    "title": "5c. Axial rigidity consistent with PSP",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "gaitpsp": {
-                    "title": "5d. Gait disorder consistent with PSP",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "apraxsp": {
-                    "title": "5e. Apraxia of speech",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                }
-            }
-            
-        },
-        "find_left": {
-            "title": "Findings - LEFT Findings not marked Yes or Not assessed will default to No in the NACC database.",
-            "type": "object",
-            "properties": {
-                "apraxl": {
-                    "title": "5f1. Apraxia consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "cortsenl": {
-                    "title": "5g1. Cortical sensory deficits consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "ataxl": {
-                    "title": "5h1. Ataxia consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "alienlml": {
-                    "title": "5i1. Alien limb consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "dystonl": {
-                    "title": "5j1. Dystonia consistent with CBS, PSP, or related disorder",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "myocllt": {
-                    "title": "5k1. Myoclonus consistent with CBS",
-                    "description": "",
-                    "comment": "",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                }
-            }
-            
-        },
-        "find_right": {
-            "title": "Findings - RIGHT Findings not marked Yes or Not assessed will default to No in the NACC database.",
-            "description": "",
-            "type": "object",
-            "properties": {
-                "apraxr": {
-                    "title": "5f2. Apraxia consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "cortsenr": {
-                    "title": "5g2. Cortical sensory deficits consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "ataxr": {
-                    "title": "5h2. Ataxia consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "alienlmr": {
-                    "title": "5i2. Alien limb consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "dystonr": {
-                    "title": "5j2. Dystonia consistent with CBS, PSP, or related disorder",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                },
-                "myoclrt": {
-                    "title": "5k2. Myoclonus consistent with CBS",
-                    "type": "string",
-                    "enum": [
-                        "1 Yes",
-                        "8 Not assessed"
-                    ]
-                }
-            }
-            
-        },
-        "alsfind": {
-            "title": "6. Findings suggesting ALS (e.g., muscle wasting, fasciculations, upper motor neuron and/or lower motor neuron signs)",
-            "type": "string",
-            "enum": [
-                "0 No",
-                "1 Yes"
-            ]
-        },
-        "gaitnph": {
-            "title": "7. Normal-pressure hydrocephalus: gait apraxia",
-            "type": "string",
-            "enum": [
-                "0 No",
-                "1 Yes"
-            ]
-        },
-        "othneur": {
-            "title": "8. Other findings (e.g., cerebellar ataxia, chorea, myoclonus)",
-            "description": "(NOTE: For this question, do not specify symptoms that have already been checked above)",
-            "type": "string",
-            "enum": [
-                "0 No",
-                "1 Yes (SPECIFY):"
-            ]
-        },
-        "othneurx": {
-            "title": "8a. Other findings from neurological exam, please specify:",
-            "type": "string"
         }
     },
     "facets": {
@@ -525,133 +519,130 @@
         "normexam": {
             "title": "1. Were there abnormal neurological exam findings?"
         },
-        "note_b8": {
-            "title": "INSTRUCTIONS FOR QUESTIONS 2-8"
-        },
-        "parksign": {
+        "note_b8.parksign": {
             "title": "2. Parkinsonian signs"
         },
-        "parksign_left.resttrl": {
+        "note_b8.parksign_left.resttrl": {
             "title": "2a1. Resting tremor - arm"
         },
-        "parksign_left.slowingl": {
+        "note_b8.parksign_left.slowingl": {
             "title": "2b1. Slowing of fine motor movements"
         },
-        "parksign_left.rigidl": {
+        "note_b8.parksign_left.rigidl": {
             "title": "2c1. Rigidity - arm"
         },
-        "parksign-right.resttrr": {
+        "note_b8.parksign-right.resttrr": {
             "title": "2a2. Resting tremor - arm"
         },
-        "parksign-right.slowingr": {
+        "note_b8.parksign-right.slowingr": {
             "title": "2b2. Slowing of fine motor movements"
         },
-        "parksign-right.rigidr": {
+        "note_b8.parksign-right.rigidr": {
             "title": "2c2. Rigidity - arm"
         },
-        "parksign_cont.brady": {
+        "note_b8.parksign_cont.brady": {
             "title": "2d. Bradykinesia"
         },
-        "parksign_cont.parkgait": {
+        "note_b8.parksign_cont.parkgait": {
             "title": "2e. Parkinsonian gait disorder"
         },
-        "parksign_cont.postinst": {
+        "note_b8.parksign_cont.postinst": {
             "title": "2f. Postural instability"
         },
-        "cvdsigns": {
+        "note_b8.cvdsigns": {
             "title": "3. Neurological signs considered by examiner to be most likely consistent with cerebrovascular disease."
         },
-        "neurosign_present.cortdef": {
+        "note_b8.neurosign_present.cortdef": {
             "title": "3a. Cortical cognitive deficit (e.g., aphasia, apraxia, neglect)"
         },
-        "neurosign_present.sivdfind": {
+        "note_b8.neurosign_present.sivdfind": {
             "title": "3b. Focal or other neurological findings consistent with SIVD(subcortical ischemic vascular dementia)"
         },
-        "neurosign_left.cvdmotl": {
+        "note_b8.neurosign_left.cvdmotl": {
             "title": "3c1. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)"
         },
-        "neurosign_left.cortvisl": {
+        "note_b8.neurosign_left.cortvisl": {
             "title": "3d1. Cortical visual field loss"
         },
-        "neurosign_left.somatl": {
+        "note_b8.neurosign_left.somatl": {
             "title": "3e1. Somatosensory loss"
         },
-        "neurosign_right.cvdmotr": {
+        "note_b8.neurosign_right.cvdmotr": {
             "title": "3c2. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)"
         },
-        "neurosign_right.cortvisr": {
+        "note_b8.neurosign_right.cortvisr": {
             "title": "3d2. Cortical visual field loss"
         },
-        "neurosign_right.somatr": {
+        "note_b8.neurosign_right.somatr": {
             "title": "3e2. Somatosensory loss"
         },
-        "postcort": {
+        "note_b8.postcort": {
             "title": "4. Higher cortical visual problem suggesting posterior cortical atrophy (e.g., prosopagnosia, simultagnosia, Balint's syndrome) or apraxia of gaze"
         },
-        "pspcbs": {
+        "note_b8.pspcbs": {
             "title": "5. Findings suggestive of progressive supranuclear palsy (PSP), corticobasal syndrome, or other related disorders"
         },
-        "find_present.eyepsp": {
+        "note_b8.find_present.eyepsp": {
             "title": "5a. Eye movement changes consistent with PSP"
         },
-        "find_present.dyspsp": {
+        "note_b8.find_present.dyspsp": {
             "title": "5b. Dysarthria consistent with PSP"
         },
-        "find_present.axialpsp": {
+        "note_b8.find_present.axialpsp": {
             "title": "5c. Axial rigidity consistent with PSP"
         },
-        "find_present.gaitpsp": {
+        "note_b8.find_present.gaitpsp": {
             "title": "5d. Gait disorder consistent with PSP"
         },
-        "find_present.apraxsp": {
+        "note_b8.find_present.apraxsp": {
             "title": "5e. Apraxia of speech"
         },
-        "find_left.apraxl": {
+        "note_b8.find_left.apraxl": {
             "title": "5f1. Apraxia consistent with CBS"
         },
-        "find_left.cortsenl": {
+        "note_b8.find_left.cortsenl": {
             "title": "5g1. Cortical sensory deficits consistent with CBS"
         },
-        "find_left.ataxl": {
+        "note_b8.find_left.ataxl": {
             "title": "5h1. Ataxia consistent with CBS"
         },
-        "find_left.alienlml": {
+        "note_b8.find_left.alienlml": {
             "title": "5i1. Alien limb consistent with CBS"
         },
-        "find_left.dystonl": {
+        "note_b8.find_left.dystonl": {
             "title": "5j1. Dystonia consistent with CBS, PSP, or related disorder"
         },
-        "find_left.myocllt": {
+        "note_b8.find_left.myocllt": {
             "title": "5k1. Myoclonus consistent with CBS"
         },
-        "find_right.apraxr": {
+        "note_b8.find_right.apraxr": {
             "title": "5f2. Apraxia consistent with CBS"
         },
-        "find_right.cortsenr": {
+        "note_b8.find_right.cortsenr": {
             "title": "5g2. Cortical sensory deficits consistent with CBS"
         },
-        "find_right.ataxr": {
+        "note_b8.find_right.ataxr": {
             "title": "5h2. Ataxia consistent with CBS"
         },
-        "find_right.alienlmr": {
+        "note_b8.find_right.alienlmr": {
             "title": "5i2. Alien limb consistent with CBS"
         },
-        "find_right.dystonr": {
+        "note_b8.find_right.dystonr": {
             "title": "5j2. Dystonia consistent with CBS, PSP, or related disorder"
         },
-        "find_right.myoclrt": {
+        "note_b8.find_right.myoclrt": {
             "title": "5k2. Myoclonus consistent with CBS"
         },
-        "alsfind": {
+        "note_b8.alsfind": {
             "title": "6. Findings suggesting ALS (e.g., muscle wasting, fasciculations, upper motor neuron and/or lower motor neuron signs)"
         },
-        "gaitnph": {
+        "note_b8.gaitnph": {
             "title": "7. Normal-pressure hydrocephalus: gait apraxia"
         },
-        "othneur": {
+        "note_b8.othneur": {
             "title": "8. Other findings (e.g., cerebellar ataxia, chorea, myoclonus)"
         },
-        "othneurx": {
+        "note_b8.othneurx": {
             "title": "8a. Other findings from neurological exam, please specify:"
         }
     },
@@ -674,133 +665,130 @@
         "normexam": {
             "title": "1. Were there abnormal neurological exam findings?"
         },
-        "note_b8": {
-            "title": "INSTRUCTIONS FOR QUESTIONS 2-8"
-        },
-        "parksign": {
+        "note_b8.parksign": {
             "title": "2. Parkinsonian signs"
         },
-        "parksign_left.resttrl": {
+        "note_b8.parksign_left.resttrl": {
             "title": "2a1. Resting tremor - arm"
         },
-        "parksign_left.slowingl": {
+        "note_b8.parksign_left.slowingl": {
             "title": "2b1. Slowing of fine motor movements"
         },
-        "parksign_left.rigidl": {
+        "note_b8.parksign_left.rigidl": {
             "title": "2c1. Rigidity - arm"
         },
-        "parksign-right.resttrr": {
+        "note_b8.parksign-right.resttrr": {
             "title": "2a2. Resting tremor - arm"
         },
-        "parksign-right.slowingr": {
+        "note_b8.parksign-right.slowingr": {
             "title": "2b2. Slowing of fine motor movements"
         },
-        "parksign-right.rigidr": {
+        "note_b8.parksign-right.rigidr": {
             "title": "2c2. Rigidity - arm"
         },
-        "parksign_cont.brady": {
+        "note_b8.parksign_cont.brady": {
             "title": "2d. Bradykinesia"
         },
-        "parksign_cont.parkgait": {
+        "note_b8.parksign_cont.parkgait": {
             "title": "2e. Parkinsonian gait disorder"
         },
-        "parksign_cont.postinst": {
+        "note_b8.parksign_cont.postinst": {
             "title": "2f. Postural instability"
         },
-        "cvdsigns": {
+        "note_b8.cvdsigns": {
             "title": "3. Neurological signs considered by examiner to be most likely consistent with cerebrovascular disease."
         },
-        "neurosign_present.cortdef": {
+        "note_b8.neurosign_present.cortdef": {
             "title": "3a. Cortical cognitive deficit (e.g., aphasia, apraxia, neglect)"
         },
-        "neurosign_present.sivdfind": {
+        "note_b8.neurosign_present.sivdfind": {
             "title": "3b. Focal or other neurological findings consistent with SIVD(subcortical ischemic vascular dementia)"
         },
-        "neurosign_left.cvdmotl": {
+        "note_b8.neurosign_left.cvdmotl": {
             "title": "3c1. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)"
         },
-        "neurosign_left.cortvisl": {
+        "note_b8.neurosign_left.cortvisl": {
             "title": "3d1. Cortical visual field loss"
         },
-        "neurosign_left.somatl": {
+        "note_b8.neurosign_left.somatl": {
             "title": "3e1. Somatosensory loss"
         },
-        "neurosign_right.cvdmotr": {
+        "note_b8.neurosign_right.cvdmotr": {
             "title": "3c2. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)"
         },
-        "neurosign_right.cortvisr": {
+        "note_b8.neurosign_right.cortvisr": {
             "title": "3d2. Cortical visual field loss"
         },
-        "neurosign_right.somatr": {
+        "note_b8.neurosign_right.somatr": {
             "title": "3e2. Somatosensory loss"
         },
-        "postcort": {
+        "note_b8.postcort": {
             "title": "4. Higher cortical visual problem suggesting posterior cortical atrophy (e.g., prosopagnosia, simultagnosia, Balint's syndrome) or apraxia of gaze"
         },
-        "pspcbs": {
+        "note_b8.pspcbs": {
             "title": "5. Findings suggestive of progressive supranuclear palsy (PSP), corticobasal syndrome, or other related disorders"
         },
-        "find_present.eyepsp": {
+        "note_b8.find_present.eyepsp": {
             "title": "5a. Eye movement changes consistent with PSP"
         },
-        "find_present.dyspsp": {
+        "note_b8.find_present.dyspsp": {
             "title": "5b. Dysarthria consistent with PSP"
         },
-        "find_present.axialpsp": {
+        "note_b8.find_present.axialpsp": {
             "title": "5c. Axial rigidity consistent with PSP"
         },
-        "find_present.gaitpsp": {
+        "note_b8.find_present.gaitpsp": {
             "title": "5d. Gait disorder consistent with PSP"
         },
-        "find_present.apraxsp": {
+        "note_b8.find_present.apraxsp": {
             "title": "5e. Apraxia of speech"
         },
-        "find_left.apraxl": {
+        "note_b8.find_left.apraxl": {
             "title": "5f1. Apraxia consistent with CBS"
         },
-        "find_left.cortsenl": {
+        "note_b8.find_left.cortsenl": {
             "title": "5g1. Cortical sensory deficits consistent with CBS"
         },
-        "find_left.ataxl": {
+        "note_b8.find_left.ataxl": {
             "title": "5h1. Ataxia consistent with CBS"
         },
-        "find_left.alienlml": {
+        "note_b8.find_left.alienlml": {
             "title": "5i1. Alien limb consistent with CBS"
         },
-        "find_left.dystonl": {
+        "note_b8.find_left.dystonl": {
             "title": "5j1. Dystonia consistent with CBS, PSP, or related disorder"
         },
-        "find_left.myocllt": {
+        "note_b8.find_left.myocllt": {
             "title": "5k1. Myoclonus consistent with CBS"
         },
-        "find_right.apraxr": {
+        "note_b8.find_right.apraxr": {
             "title": "5f2. Apraxia consistent with CBS"
         },
-        "find_right.cortsenr": {
+        "note_b8.find_right.cortsenr": {
             "title": "5g2. Cortical sensory deficits consistent with CBS"
         },
-        "find_right.ataxr": {
+        "note_b8.find_right.ataxr": {
             "title": "5h2. Ataxia consistent with CBS"
         },
-        "find_right.alienlmr": {
+        "note_b8.find_right.alienlmr": {
             "title": "5i2. Alien limb consistent with CBS"
         },
-        "find_right.dystonr": {
+        "note_b8.find_right.dystonr": {
             "title": "5j2. Dystonia consistent with CBS, PSP, or related disorder"
         },
-        "find_right.myoclrt": {
+        "note_b8.find_right.myoclrt": {
             "title": "5k2. Myoclonus consistent with CBS"
         },
-        "alsfind": {
+        "note_b8.alsfind": {
             "title": "6. Findings suggesting ALS (e.g., muscle wasting, fasciculations, upper motor neuron and/or lower motor neuron signs)"
         },
-        "gaitnph": {
+        "note_b8.gaitnph": {
             "title": "7. Normal-pressure hydrocephalus: gait apraxia"
         },
-        "othneur": {
+        "note_b8.othneur": {
             "title": "8. Other findings (e.g., cerebellar ataxia, chorea, myoclonus)"
         },
-        "othneurx": {
+        "note_b8.othneurx": {
             "title": "8a. Other findings from neurological exam, please specify:"
         }
     },
@@ -811,49 +799,48 @@
         "gaitdis": 1.0,
         "eyemove": 1.0,
         "normexam": 1.0,
-        "note_b8": 1.0,
-        "parksign": 1.0,
-        "parksign_left.resttrl": 1.0,
-        "parksign_left.slowingl": 1.0,
-        "parksign_left.rigidl": 1.0,
-        "parksign-right.resttrr": 1.0,
-        "parksign-right.slowingr": 1.0,
-        "parksign-right.rigidr": 1.0,
-        "parksign_cont.brady": 1.0,
-        "parksign_cont.parkgait": 1.0,
-        "parksign_cont.postinst": 1.0,
-        "cvdsigns": 1.0,
-        "neurosign_present.cortdef": 1.0,
-        "neurosign_present.sivdfind": 1.0,
-        "neurosign_left.cvdmotl": 1.0,
-        "neurosign_left.cortvisl": 1.0,
-        "neurosign_left.somatl": 1.0,
-        "neurosign_right.cvdmotr": 1.0,
-        "neurosign_right.cortvisr": 1.0,
-        "neurosign_right.somatr": 1.0,
-        "postcort": 1.0,
-        "pspcbs": 1.0,
-        "find_present.eyepsp": 1.0,
-        "find_present.dyspsp": 1.0,
-        "find_present.axialpsp": 1.0,
-        "find_present.gaitpsp": 1.0,
-        "find_present.apraxsp": 1.0,
-        "find_left.apraxl": 1.0,
-        "find_left.cortsenl": 1.0,
-        "find_left.ataxl": 1.0,
-        "find_left.alienlml": 1.0,
-        "find_left.dystonl": 1.0,
-        "find_left.myocllt": 1.0,
-        "find_right.apraxr": 1.0,
-        "find_right.cortsenr": 1.0,
-        "find_right.ataxr": 1.0,
-        "find_right.alienlmr": 1.0,
-        "find_right.dystonr": 1.0,
-        "find_right.myoclrt": 1.0,
-        "alsfind": 1.0,
-        "gaitnph": 1.0,
-        "othneur": 1.0,
-        "othneurx": 1.0
+        "note_b8.parksign": 1.0,
+        "note_b8.parksign_left.resttrl": 1.0,
+        "note_b8.parksign_left.slowingl": 1.0,
+        "note_b8.parksign_left.rigidl": 1.0,
+        "note_b8.parksign-right.resttrr": 1.0,
+        "note_b8.parksign-right.slowingr": 1.0,
+        "note_b8.parksign-right.rigidr": 1.0,
+        "note_b8.parksign_cont.brady": 1.0,
+        "note_b8.parksign_cont.parkgait": 1.0,
+        "note_b8.parksign_cont.postinst": 1.0,
+        "note_b8.cvdsigns": 1.0,
+        "note_b8.neurosign_present.cortdef": 1.0,
+        "note_b8.neurosign_present.sivdfind": 1.0,
+        "note_b8.neurosign_left.cvdmotl": 1.0,
+        "note_b8.neurosign_left.cortvisl": 1.0,
+        "note_b8.neurosign_left.somatl": 1.0,
+        "note_b8.neurosign_right.cvdmotr": 1.0,
+        "note_b8.neurosign_right.cortvisr": 1.0,
+        "note_b8.neurosign_right.somatr": 1.0,
+        "note_b8.postcort": 1.0,
+        "note_b8.pspcbs": 1.0,
+        "note_b8.find_present.eyepsp": 1.0,
+        "note_b8.find_present.dyspsp": 1.0,
+        "note_b8.find_present.axialpsp": 1.0,
+        "note_b8.find_present.gaitpsp": 1.0,
+        "note_b8.find_present.apraxsp": 1.0,
+        "note_b8.find_left.apraxl": 1.0,
+        "note_b8.find_left.cortsenl": 1.0,
+        "note_b8.find_left.ataxl": 1.0,
+        "note_b8.find_left.alienlml": 1.0,
+        "note_b8.find_left.dystonl": 1.0,
+        "note_b8.find_left.myocllt": 1.0,
+        "note_b8.find_right.apraxr": 1.0,
+        "note_b8.find_right.cortsenr": 1.0,
+        "note_b8.find_right.ataxr": 1.0,
+        "note_b8.find_right.alienlmr": 1.0,
+        "note_b8.find_right.dystonr": 1.0,
+        "note_b8.find_right.myoclrt": 1.0,
+        "note_b8.alsfind": 1.0,
+        "note_b8.gaitnph": 1.0,
+        "note_b8.othneur": 1.0,
+        "note_b8.othneurx": 1.0
     },
     "changelog": "/profiles/changelogs/ivp_b8.md"
 }
