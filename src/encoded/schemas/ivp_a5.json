@@ -150,7 +150,6 @@
                 "alc_use"
             ]
         },
-       
         "cardi_dise": {
             "title": "FOR SECTIONS 2-7, BELOW, record the presence or absence of a history of these conditions at this visit, as determined by the clinician's best judgment following the medical history interview with the subject and co-participant A CONDITION SHOULD BE CONSIDERED ...Absent IF... it is not indicated by information obtained from the subject and copartipant interview.Recent. Active IF... it happened within the last year or still requires active management and is consistent with information obtained from the subject and co-partipant interview.Remote/ Inactive IF ... it existed or occurred in the past (more than one year ago) but was resolved or there is no treatment currently under way.Unknown IF ... there is insufficient information available from the subject and co-partipant interview.\n2. Cardiovascular disease",
             "type": "object",
@@ -309,7 +308,6 @@
                     "description": "(1900 - current year, 9999 = Unknown)",
                     "type": "string",
                     "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-
                 },
                 "cbtia": {
                     "title": "3b. Transient ischemic attack (TIA)",
@@ -336,7 +334,6 @@
                     "description": "(1900 - current year, 9999 = Unknown)",
                     "type": "string",
                     "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-
                 }
             },
             "required": [
@@ -367,7 +364,6 @@
                     "description": "(1900 - current year, 9999 = Unknown)",
                     "type": "string",
                     "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-
                 },
                 "pdothr": {
                     "title": "4b. Other parkinsonism disorder (e.g., PSP, CBD)",
@@ -384,8 +380,6 @@
                     "description": "(1900 - current year, 9999 = Unknown)",
                     "type": "string",
                     "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-
-                    
                 },
                 "seizures": {
                     "title": "4c. Seizures",
@@ -443,7 +437,6 @@
                     "description": "(1900 - current year, 9999 = Unknown)",
                     "type": "string",
                     "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-
                 }
             },
             "required": [
@@ -553,38 +546,40 @@
                 },
                 "note_a5": {
                     "title": "5f2. Region(s) affected (check all that apply):",
-                    "type": "string"
-                },
-                "arthupex": {
-                    "title": "5f2a. Region affected: upper extremity",
-                    "type": "string",
-                    "enum": [
-                        "1 Upper Extremity"
-                    ]
-                },
-                "arthloex": {
-                    "title": "5f2b. Region affected: lower extremity",
-                    "type": "string",
-                    "enum": [
-                        "0 absent",
-                        "1 Lower Extremity"
-                    ]
-                },
-                "arthspin": {
-                    "title": "5f2c. Region affected: spine",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Spine"
-                    ]
-                },
-                "arthunk": {
-                    "title": "5f2d. Region affected: Unknown",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Unknown"
-                    ]
+                    "type": "object",
+                    "properties": {
+                        "arthupex": {
+                            "title": "5f2a. Region affected: upper extremity",
+                            "type": "string",
+                            "enum": [
+                                "1 Upper Extremity"
+                            ]
+                        },
+                        "arthloex": {
+                            "title": "5f2b. Region affected: lower extremity",
+                            "type": "string",
+                            "enum": [
+                                "0 absent",
+                                "1 Lower Extremity"
+                            ]
+                        },
+                        "arthspin": {
+                            "title": "5f2c. Region affected: spine",
+                            "type": "string",
+                            "enum": [
+                                "0 Absent",
+                                "1 Spine"
+                            ]
+                        },
+                        "arthunk": {
+                            "title": "5f2d. Region affected: Unknown",
+                            "type": "string",
+                            "enum": [
+                                "0 Absent",
+                                "1 Unknown"
+                            ]
+                        }
+                    }
                 },
                 "incontu": {
                     "title": "5g. Incontinence -- Urinary",
@@ -952,16 +947,16 @@
         "medi_cond.note_a5": {
             "title": "5f2. Region(s) affected (check all that apply):"
         },
-        "medi_cond.arthupex": {
+        "medi_cond.note_a5.arthupex": {
             "title": "5f2a. Region affected: upper extremity"
         },
-        "medi_cond.arthloex": {
+        "medi_cond.note_a5.arthloex": {
             "title": "5f2b. Region affected: lower extremity"
         },
-        "medi_cond.arthspin": {
+        "medi_cond.note_a5.arthspin": {
             "title": "5f2c. Region affected: spine"
         },
-        "medi_cond.arthunk": {
+        "medi_cond.note_a5.arthunk": {
             "title": "5f2d. Region affected: Unknown"
         },
         "medi_cond.incontu": {
@@ -1164,16 +1159,16 @@
         "medi_cond.note_a5": {
             "title": "5f2. Region(s) affected (check all that apply):"
         },
-        "medi_cond.arthupex": {
+        "medi_cond.note_a5.arthupex": {
             "title": "5f2a. Region affected: upper extremity"
         },
-        "medi_cond.arthloex": {
+        "medi_cond.note_a5.arthloex": {
             "title": "5f2b. Region affected: lower extremity"
         },
-        "medi_cond.arthspin": {
+        "medi_cond.note_a5.arthspin": {
             "title": "5f2c. Region affected: spine"
         },
-        "medi_cond.arthunk": {
+        "medi_cond.note_a5.arthunk": {
             "title": "5f2d. Region affected: Unknown"
         },
         "medi_cond.incontu": {
@@ -1238,7 +1233,7 @@
         }
     },
     "boost_values": {
-        "patient":1.0,
+        "patient": 1.0,
         "His_of_cig_alc.cig_smok.tobac30": 1.0,
         "His_of_cig_alc.cig_smok.tobac100": 1.0,
         "His_of_cig_alc.cig_smok.smokyrs": 1.0,
@@ -1284,10 +1279,10 @@
         "medi_cond.arthtype": 1.0,
         "medi_cond.arthtypx": 1.0,
         "medi_cond.note_a5": 1.0,
-        "medi_cond.arthupex": 1.0,
-        "medi_cond.arthloex": 1.0,
-        "medi_cond.arthspin": 1.0,
-        "medi_cond.arthunk": 1.0,
+        "medi_cond.note_a5.arthupex": 1.0,
+        "medi_cond.note_a5.arthloex": 1.0,
+        "medi_cond.note_a5.arthspin": 1.0,
+        "medi_cond.note_a5.arthunk": 1.0,
         "medi_cond.incontu": 1.0,
         "medi_cond.incontf": 1.0,
         "medi_cond.apnea": 1.0,
