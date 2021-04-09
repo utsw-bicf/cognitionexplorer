@@ -322,11 +322,6 @@
                     "title": "6. Indicate neurodegenerative biomarker status, using local standards for positivity.\nBiomarker Findings",
                     "type": "object",
                     "properties": {
-                        "note_d1_11": {
-                            "title": "Section 2 must be completed for all subjects.",
-                            "type": "string"
-                            
-                        },
                         "amylpet": {
                             "title": "6a. Abnormally elevated amyloid on PET",
                             "type": "string",
@@ -1301,9 +1296,7 @@
         "sec1.note_d1_6.impnomci": {
             "title": "5e. Cognitively impaired, not MCI"
         },
-        "sec2.biomarker_find.note_d1_11": {
-            "title": "Section 2 must be completed for all subjects."
-        },
+        
         "sec2.biomarker_find.amylpet": {
             "title": "6a. Abnormally elevated amyloid on PET"
         },
