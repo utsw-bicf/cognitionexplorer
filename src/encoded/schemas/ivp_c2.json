@@ -391,7 +391,7 @@
                     "title": "8b. PART B: Total number of seconds to complete ",
                     "description": "(if not finished by 300 seconds, enter 300) (If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 9a.) (0-300, 995-998)",
                     "type": "string",
-                    "pattern": "^[0-9]?[0-9]$|^[1-2][0-9][0-9]$|^300$|^95$|^96$|^97$|^98$"
+                    "pattern": "^[0-9]?[0-9]$|^[1-2][0-9][0-9]$|^300$|^995$|^996$|^997$|^998$"
                 },
                 "trailbrr_c2": {
                     "title": "8b1. Number of commission errors",
