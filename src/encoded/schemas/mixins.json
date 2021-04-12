@@ -150,7 +150,7 @@
             "permission": "import_items"
         }
     },
-    "examinier_initials": {
+    "examiner_initials": {
         "initials": {
             "title": "Examiner's initials (xxx)",
             "description": "Examiner's initials,format XXX.",
