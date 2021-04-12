@@ -26,7 +26,7 @@ const accessionedStatuses = {
     ],
 };
 
-const datasetStatuses = {
+const biodatasetStatuses = {
     external: [
         'released',
         'archived',
@@ -99,12 +99,16 @@ const defaultObjectStatuses = {
     Award: sharedStatuses,
     BiosampleCharacterization: standardStatuses,
     Biosample: accessionedStatuses,
+    Biospecimen: accessionedStatuses,
+    Consent: accessionedStatuses,
+    
+
     Cart: sharedStatuses,
     Characterization: standardStatuses,
-    Dataset: datasetStatuses,
+    Biodataset: biodatasetStatuses,
     Document: standardStatuses,
     Donor: accessionedStatuses,
-    File: {
+    Biofile: {
         external: [
             'released',
             'archived',
@@ -123,10 +127,10 @@ const defaultObjectStatuses = {
             'replaced',
         ],
     },
-    FileSet: accessionedStatuses,
+    BiofileSet: accessionedStatuses,
     Image: standardStatuses,
     Lab: sharedStatuses,
-    Library: accessionedStatuses,
+    Biolibrary: accessionedStatuses,
     Organism: standardStatuses,
     Page: standardStatuses,
     Patient: accessionedStatuses,
@@ -147,7 +151,7 @@ const defaultObjectStatuses = {
     Platform: standardStatuses,
     Publication: standardStatuses,
     QualityMetric: standardStatuses,
-    Replicate: {
+    Bioreplicate: {
         external: [
             'released',
             'archived',
