@@ -20,10 +20,10 @@
         "fu_arth": "0 No",
         "fu_artype": "1 Rheumatoid",
         "fu_note_d2_3": {
-            "fu_artupex": "1 Upper extremity",
-            "fu_artloex": "1 Lower extremity",
-            "fu_artspin": "1 Spine",
-            "fu_artunkn": "1 Unknown"
+            "fu_artupex": true,
+            "fu_artloex": true,
+            "fu_artspin": false,
+            "fu_artunkn": false
         },
         "fu_urineinc": "0 No",
         "fu_bowlinc": "0 No",
@@ -62,10 +62,10 @@
         "fu_arth": "0 No",
         "fu_artype": "1 Rheumatoid",
         "fu_note_d2_3": {
-            "fu_artupex": "1 Upper extremity",
-            "fu_artloex": "1 Lower extremity",
-            "fu_artspin": "1 Spine",
-            "fu_artunkn": "1 Unknown"
+            "fu_artupex": false,
+            "fu_artloex": false,
+            "fu_artspin": true,
+            "fu_artunkn": true
         },
         "fu_urineinc": "0 No",
         "fu_bowlinc": "0 No",

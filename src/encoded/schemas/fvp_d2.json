@@ -185,32 +185,24 @@
             "type": "object",
             "properties": {
                 "fu_artupex": {
-                    "title": "11b1.  Arthritis region affected",
-                    "type": "string",
-                    "enum": [
-                        "1 Upper extremity"
-                    ]
+                    "title": "11b1. 1 Upper extremity",
+                    "type": "boolean"
+                    
                 },
                 "fu_artloex": {
-                    "title": "11b2.  Arthritis region affected",
-                    "type": "string",
-                    "enum": [
-                        "1 Lower extremity"
-                    ]
+                    "title": "11b2. 1 Lower extremity",
+                    "type": "boolean"
+                    
                 },
                 "fu_artspin": {
-                    "title": "11b3.  Arthritis region affected",
-                    "type": "string",
-                    "enum": [
-                        "1 Spine"
-                    ]
+                    "title": "11b3. 1 Spine",
+                    "type": "boolean"
+                   
                 },
                 "fu_artunkn": {
-                    "title": "11b4.  Arthritis region affected",
-                    "type": "string",
-                    "enum": [
-                        "1 Unknown"
-                    ]
+                    "title": "11b4.  1 Unknown",
+                    "type": "boolean"
+                    
                 }
             }
         },
@@ -381,16 +373,16 @@
             "title": "11a1.  If other type of arthritis SPECIFY:"
         },
         "fu_note_d2_3.fu_artupex": {
-            "title": "11b1.  Arthritis region affected"
+            "title": "11b1. 1 Upper extremity"
         },
         "fu_note_d2_3.fu_artloex": {
-            "title": "11b2.  Arthritis region affected"
+            "title": "11b2. 1 Lower extremity"
         },
         "fu_note_d2_3.fu_artspin": {
-            "title": "11b3.  Arthritis region affected"
+            "title": "11b3. 1 Spine"
         },
         "fu_note_d2_3.fu_artunkn": {
-            "title": "11b4.  Arthritis region affected"
+            "title": "11b4.  1 Unknown"
         },
         "fu_urineinc": {
             "title": "12. Incontinence - urinary"
@@ -485,16 +477,16 @@
             "title": "11a1.  If other type of arthritis SPECIFY:"
         },
         "fu_note_d2_3.fu_artupex": {
-            "title": "11b1.  Arthritis region affected"
+            "title": "11b1. 1 Upper extremity"
         },
         "fu_note_d2_3.fu_artloex": {
-            "title": "11b2.  Arthritis region affected"
+            "title": "11b2. 1 Lower extremity"
         },
         "fu_note_d2_3.fu_artspin": {
-            "title": "11b3.  Arthritis region affected"
+            "title": "11b3. 1 Spine"
         },
         "fu_note_d2_3.fu_artunkn": {
-            "title": "11b4.  Arthritis region affected"
+            "title": "11b4.  1 Unknown"
         },
         "fu_urineinc": {
             "title": "12. Incontinence - urinary"
