@@ -6,33 +6,7 @@
     "identifyingProperties": [
         "uuid"
     ],
-    "required": [
-        "fu_npiqinf",
-        "fu_del",
-        "fu_delsev",
-        "fu_hall",
-        "fu_hallsev",
-        "fu_agit",
-        "fu_agitsev",
-        "fu_depd",
-        "fu_depdsev",
-        "fu_anx",
-        "fu_anxsev",
-        "fu_elat",
-        "fu_elatsev",
-        "fu_apa",
-        "fu_apasev",
-        "fu_disn",
-        "fu_disnsev",
-        "fu_irr",
-        "fu_irrsev",
-        "fu_mot",
-        "fu_motsev",
-        "fu_nite",
-        "fu_nitesev",
-        "fu_app",
-        "fu_appsev"
-    ],
+    
     "additionalProperties": false,
     "mixinProperties": [
         {

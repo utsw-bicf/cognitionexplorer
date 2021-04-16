@@ -203,24 +203,8 @@
                     "type": "string",
                     "pattern": "^[0-9]$|^1[0-5]$|^88$"
                 }
-            },
-            "required": [
-                "fu_satis",
-                "fu_dropact",
-                "fu_empty",
-                "fu_bored",
-                "fu_spirits",
-                "fu_afraid",
-                "fu_happy",
-                "fu_helpless",
-                "fu_stayhome",
-                "fu_memprob",
-                "fu_wondrful",
-                "fu_wrthless",
-                "fu_energy",
-                "fu_hopeless",
-                "fu_better"
-            ]
+            }
+            
         }
     },
     "facets": {
