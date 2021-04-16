@@ -71,6 +71,14 @@
             "title": "A2 Co-participant Demographics",
             "type": "object",
             "properties": {
+                "fu_langa2": {
+                    "title": "2a. Language used for A2 Co-participant Demographics",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "fu_a2sub": {
                     "title": "2b. Submitted A2 Co-participant Demographics",
                     "type": "string",
@@ -88,14 +96,6 @@
                         "97 - Other problem",
                         "98 - Verbal refusal"
                     ]
-                },
-                "fu_langa2": {
-                    "title": "2a. Language used for A2 Co-participant Demographics",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
-                    ]
                 }
             }
         },
@@ -103,6 +103,14 @@
             "title": "A3 Subject Family History",
             "type": "object",
             "properties": {
+                "fu_langa3": {
+                    "title": "3a. Language used for A3 Subject Family History",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "fu_a3sub": {
                     "title": "3b. Submitted A3 Subject Family History",
                     "type": "string",
@@ -120,14 +128,6 @@
                         "97 - Other problem",
                         "98 - Verbal refusal"
                     ]
-                },
-                "fu_langa3": {
-                    "title": "3a. Language used for A3 Subject Family History",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
-                    ]
                 }
             }
         },
@@ -136,6 +136,14 @@
             "type": "object",
             "properties": {
                 "fu_a4sub": {
+                    "fu_langa4": {
+                        "title": "4a. Language used for A4 Subject Medications",
+                        "type": "string",
+                        "enum": [
+                            "1 English",
+                            "2 Spanish"
+                        ]
+                    },
                     "title": "4b. Submitted A4 Subject Medications",
                     "type": "string",
                     "enum": [
@@ -152,14 +160,6 @@
                         "97 - Other problem",
                         "98 - Verbal refusal"
                     ]
-                },
-                "fu_langa4": {
-                    "title": "4a. Language used for A4 Subject Medications",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
-                    ]
                 }
             }
         },
@@ -168,6 +168,14 @@
             "type": "object",
             "properties": {
                 "fu_b1sub": {
+                    "fu_langb1": {
+                        "title": "5a. Language used for B1 Evaluation Form - Physical",
+                        "type": "string",
+                        "enum": [
+                            "1 English",
+                            "2 Spanish"
+                        ]
+                    },
                     "title": "5b. Submitted B1 EVALUATION FORM - Physical",
                     "type": "string",
                     "enum": [
@@ -183,14 +191,6 @@
                         "96 - Cognitive/behavior problem",
                         "97 - Other problem",
                         "98 - Verbal refusal"
-                    ]
-                },
-                "fu_langb1": {
-                    "title": "5a. Language used for B1 Evaluation Form - Physical",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
                     ]
                 }
             }
@@ -214,6 +214,14 @@
             "type": "object",
             "properties": {
                 "fu_b5sub": {
+                    "fu_langb5": {
+                        "title": "7a. Language used for B5 Behavioral Assessment NPI-Q",
+                        "type": "string",
+                        "enum": [
+                            "1 English",
+                            "2 Spanish"
+                        ]
+                    },
                     "title": "7b.B5 BEHAVIORAL ASSESSMENT NPI-Q",
                     "type": "string",
                     "enum": [
@@ -230,14 +238,6 @@
                         "97 - Other problem",
                         "98 - Verbal refusal"
                     ]
-                },
-                "fu_langb5": {
-                    "title": "7a. Language used for B5 Behavioral Assessment NPI-Q",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
-                    ]
                 }
             }
         },
@@ -245,6 +245,14 @@
             "title": "B6 BEHAVIORAL ASSESSMENT - GDS",
             "type": "object",
             "properties": {
+                "fu_langb6": {
+                    "title": "8a. Language used for B6 Behavioral Assessment: GDS",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "fu_b6sub": {
                     "title": "8b. B6 BEHAVIORAL ASSESSMENT - GDS",
                     "type": "string",
@@ -262,14 +270,6 @@
                         "97 - Other problem",
                         "98 - Verbal refusal"
                     ]
-                },
-                "fu_langb6": {
-                    "title": "8a. Language used for B6 Behavioral Assessment: GDS",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
-                    ]
                 }
             }
         },
@@ -277,6 +277,14 @@
             "title": "B7 FUNCTIONAL ASSESSMENT - FAS",
             "type": "object",
             "properties": {
+                "fu_langb7": {
+                    "title": "9a. Language used for B7 Functional Assessment: FAS",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "fu_b7sub": {
                     "title": "9b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS",
                     "type": "string",
@@ -293,14 +301,6 @@
                         "96 - Cognitive/behavior problem",
                         "97 - Other problem",
                         "98 - Verbal refusal"
-                    ]
-                },
-                "fu_langb7": {
-                    "title": "9a. Language used for B7 Functional Assessment: FAS",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
                     ]
                 }
             }
@@ -393,6 +393,14 @@
             "title": "CLS Form",
             "type": "object",
             "properties": {
+                "fu_langcls": {
+                    "title": "27a. Language used for CLS Subject's Language History",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "fu_clssub": {
                     "title": "27b. Submitted CLS Subject's Language History",
                     "description": "(Submit only once)",
@@ -400,14 +408,6 @@
                     "enum": [
                         "1 Yes",
                         "0 No"
-                    ]
-                },
-                "fu_langcls": {
-                    "title": "27a. Language used for CLS Subject's Language History",
-                    "type": "string",
-                    "enum": [
-                        "1 English",
-                        "2 Spanish"
                     ]
                 }
             }
@@ -420,14 +420,17 @@
         "fu_note_z1x_1.fu_langa1": {
             "title": "1a. Language used for A1 Subject Demographics"
         },
+        "fu_note_z1x_2.fu_langa2": {
+            "title": "2a. Language used for A2 Co-participant Demographics"
+        },
         "fu_note_z1x_2.fu_a2sub": {
             "title": "2b. Submitted A2 Co-participant Demographics"
         },
         "fu_note_z1x_2.fu_a2not": {
             "title": "2c. If A2 not submitted, specify reason"
         },
-        "fu_note_z1x_2.fu_langa2": {
-            "title": "2a. Language used for A2 Co-participant Demographics"
+        "fu_note_z1x_3.fu_langa3": {
+            "title": "3a. Language used for A3 Subject Family History"
         },
         "fu_note_z1x_3.fu_a3sub": {
             "title": "3b. Submitted A3 Subject Family History"
@@ -435,8 +438,8 @@
         "fu_note_z1x_3.fu_a3not": {
             "title": "3c. If A3 not submitted, specify reason. (see KEY*)"
         },
-        "fu_note_z1x_3.fu_langa3": {
-            "title": "3a. Language used for A3 Subject Family History"
+        "fu_note_z1x_4.fu_langa4": {
+            "title": "4a. Language used for A4 Subject Medications"
         },
         "fu_note_z1x_4.fu_a4sub": {
             "title": "4b. Submitted A4 Subject Medications"
@@ -444,8 +447,8 @@
         "fu_note_z1x_4.fu_a4not": {
             "title": "4c. If A4 not submitted, specify reason. (see KEY*)"
         },
-        "fu_note_z1x_4.fu_langa4": {
-            "title": "4a. Language used for A4 Subject Medications"
+        "fu_note_z1x_5.fu_langb1": {
+            "title": "5a. Language used for B1 Evaluation Form - Physical"
         },
         "fu_note_z1x_5.fu_b1sub": {
             "title": "5b. Submitted B1 EVALUATION FORM - Physical"
@@ -453,32 +456,29 @@
         "fu_note_z1x_5.fu_b1not": {
             "title": "5c. If B1 not submitted, specify reason. (see KEY*)"
         },
-        "fu_note_z1x_5.fu_langb1": {
-            "title": "5a. Language used for B1 Evaluation Form - Physical"
-        },
         "fu_note_z1x_6.fu_langb4": {
             "title": "6a. Language used for  B4 CDR® Plus NACC FTLD"
-        },
-        "fu_note_z1x_7.fu_b5sub": {
-            "title": "7b.B5 BEHAVIORAL ASSESSMENT NPI-Q"
         },
         "fu_note_z1x_7.fu_langb5": {
             "title": "7a. Language used for B5 Behavioral Assessment NPI-Q"
         },
-        "fu_note_z1x_8.fu_b6sub": {
-            "title": "8b. B6 BEHAVIORAL ASSESSMENT - GDS"
+        "fu_note_z1x_7.fu_b5sub": {
+            "title": "7b.B5 BEHAVIORAL ASSESSMENT NPI-Q"
         },
         "fu_note_z1x_8.fu_langb6": {
             "title": "8a. Language used for B6 Behavioral Assessment: GDS"
+        },
+        "fu_note_z1x_8.fu_b6sub": {
+            "title": "8b. B6 BEHAVIORAL ASSESSMENT - GDS"
+        },
+        "fu_note_z1x_9.fu_langb7": {
+            "title": "9a. Language used for B7 Functional Assessment: FAS"
         },
         "fu_note_z1x_9.fu_b7sub": {
             "title": "9b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS"
         },
         "fu_note_z1x_9.fu_b7not": {
             "title": "9c. If B7 not submitted, specify reason. (see KEY*)"
-        },
-        "fu_note_z1x_9.fu_langb7": {
-            "title": "9a. Language used for B7 Functional Assessment: FAS"
         },
         "fu_note_z1x_10.fu_langb8": {
             "title": "10a. Language used for B8 Neurological Examination Findings"
@@ -498,11 +498,11 @@
         "fu_note_z1x_15.fu_langd2": {
             "title": "15a. Language used for D2 Clinician-assessed Medical Conditions"
         },
-        "fu_cls_form.fu_clssub": {
-            "title": "27b. Submitted CLS Subject's Language History"
-        },
         "fu_cls_form.fu_langcls": {
             "title": "27a. Language used for CLS Subject's Language History"
+        },
+        "fu_cls_form.fu_clssub": {
+            "title": "27b. Submitted CLS Subject's Language History"
         }
     },
     "columns": {
@@ -512,14 +512,17 @@
         "fu_note_z1x_1.fu_langa1": {
             "title": "1a. Language used for A1 Subject Demographics"
         },
+        "fu_note_z1x_2.fu_langa2": {
+            "title": "2a. Language used for A2 Co-participant Demographics"
+        },
         "fu_note_z1x_2.fu_a2sub": {
             "title": "2b. Submitted A2 Co-participant Demographics"
         },
         "fu_note_z1x_2.fu_a2not": {
             "title": "2c. If A2 not submitted, specify reason"
         },
-        "fu_note_z1x_2.fu_langa2": {
-            "title": "2a. Language used for A2 Co-participant Demographics"
+        "fu_note_z1x_3.fu_langa3": {
+            "title": "3a. Language used for A3 Subject Family History"
         },
         "fu_note_z1x_3.fu_a3sub": {
             "title": "3b. Submitted A3 Subject Family History"
@@ -527,8 +530,8 @@
         "fu_note_z1x_3.fu_a3not": {
             "title": "3c. If A3 not submitted, specify reason. (see KEY*)"
         },
-        "fu_note_z1x_3.fu_langa3": {
-            "title": "3a. Language used for A3 Subject Family History"
+        "fu_note_z1x_4.fu_langa4": {
+            "title": "4a. Language used for A4 Subject Medications"
         },
         "fu_note_z1x_4.fu_a4sub": {
             "title": "4b. Submitted A4 Subject Medications"
@@ -536,8 +539,8 @@
         "fu_note_z1x_4.fu_a4not": {
             "title": "4c. If A4 not submitted, specify reason. (see KEY*)"
         },
-        "fu_note_z1x_4.fu_langa4": {
-            "title": "4a. Language used for A4 Subject Medications"
+        "fu_note_z1x_5.fu_langb1": {
+            "title": "5a. Language used for B1 Evaluation Form - Physical"
         },
         "fu_note_z1x_5.fu_b1sub": {
             "title": "5b. Submitted B1 EVALUATION FORM - Physical"
@@ -545,32 +548,29 @@
         "fu_note_z1x_5.fu_b1not": {
             "title": "5c. If B1 not submitted, specify reason. (see KEY*)"
         },
-        "fu_note_z1x_5.fu_langb1": {
-            "title": "5a. Language used for B1 Evaluation Form - Physical"
-        },
         "fu_note_z1x_6.fu_langb4": {
             "title": "6a. Language used for  B4 CDR® Plus NACC FTLD"
-        },
-        "fu_note_z1x_7.fu_b5sub": {
-            "title": "7b.B5 BEHAVIORAL ASSESSMENT NPI-Q"
         },
         "fu_note_z1x_7.fu_langb5": {
             "title": "7a. Language used for B5 Behavioral Assessment NPI-Q"
         },
-        "fu_note_z1x_8.fu_b6sub": {
-            "title": "8b. B6 BEHAVIORAL ASSESSMENT - GDS"
+        "fu_note_z1x_7.fu_b5sub": {
+            "title": "7b.B5 BEHAVIORAL ASSESSMENT NPI-Q"
         },
         "fu_note_z1x_8.fu_langb6": {
             "title": "8a. Language used for B6 Behavioral Assessment: GDS"
+        },
+        "fu_note_z1x_8.fu_b6sub": {
+            "title": "8b. B6 BEHAVIORAL ASSESSMENT - GDS"
+        },
+        "fu_note_z1x_9.fu_langb7": {
+            "title": "9a. Language used for B7 Functional Assessment: FAS"
         },
         "fu_note_z1x_9.fu_b7sub": {
             "title": "9b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS"
         },
         "fu_note_z1x_9.fu_b7not": {
             "title": "9c. If B7 not submitted, specify reason. (see KEY*)"
-        },
-        "fu_note_z1x_9.fu_langb7": {
-            "title": "9a. Language used for B7 Functional Assessment: FAS"
         },
         "fu_note_z1x_10.fu_langb8": {
             "title": "10a. Language used for B8 Neurological Examination Findings"
@@ -590,11 +590,11 @@
         "fu_note_z1x_15.fu_langd2": {
             "title": "15a. Language used for D2 Clinician-assessed Medical Conditions"
         },
-        "fu_cls_form.fu_clssub": {
-            "title": "27b. Submitted CLS Subject's Language History"
-        },
         "fu_cls_form.fu_langcls": {
             "title": "27a. Language used for CLS Subject's Language History"
+        },
+        "fu_cls_form.fu_clssub": {
+            "title": "27b. Submitted CLS Subject's Language History"
         }
     },
     "boost_values": {
