@@ -13,7 +13,6 @@
     "visdate",
     "visitnum",
     "initials",
-    "header_complete",
     "fu_birthmo",
     "fu_birthyr",
     "fu_maristat",
@@ -21,8 +20,7 @@
     "fu_livsitua",
     "fu_independ",
     "fu_residenc",
-    "fu_zip",
-    "form_status"
+    "fu_zip"
   ],
   "additionalProperties": false,
   "mixinProperties": [

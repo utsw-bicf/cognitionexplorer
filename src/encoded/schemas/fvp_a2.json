@@ -12,7 +12,6 @@
         "visdate",
         "visitnum",
         "initials",
-        "header_complete",
         "fu_inbirmo",
         "fu_inbiryr",
         "fu_insex",
@@ -61,7 +60,7 @@
             "title": "1a. Co-participant's month of birth",
             "description": "(MM) 1 - 12, 99 = Unknown",
             "type": "string",
-            "pattern": "^[0][1-9]|[1][0-2]|[99]$"
+            "pattern": "^[0]?[1-9]|[1][0-2]|[99]$"
         },
         "fu_inbiryr": {
             "title": "1b. Co-participant's year of birth",
