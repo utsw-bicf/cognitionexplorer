@@ -48,65 +48,65 @@
                     "title": "1. MEMORY",
                     "type": "string",
                     "enum": [
-                        "0 - None No memory loss, or slight inconsistent forgetfulness.",
-                        "0.5 - Questionable Consistent slight forgetfulness; partial recollection of events; \"benign\" forgetfulness.",
-                        "1 - Mild Moderate memory loss, more marked for recent events; defect interferes with everyday activities.",
-                        "2 - Moderate Severe memory loss; only highly learned material retained; new material rapidly lost.",
-                        "3 - Severe Severe memory loss; only fragments remain."
+                        "0 None - 0 No memory loss, or slight inconsistent forgetfulness.",
+                        "0.5 Questionable - 0.5 <br>Consistent slight forgetfulness; partial recollection of events; \"benign\" forgetfulness.",
+                        "1 Mild - 1 Moderate memory loss, more marked for recent events; defect interferes with everyday activities.",
+                        "2 Moderate - 2 Severe memory loss; only highly learned material retained; new material rapidly lost.",
+                        "3 Severe - 3 Severe memory loss; only fragments remain."
                     ]
                 },
                 "fu_orient": {
                     "title": "2. ORIENTATION",
                     "type": "string",
                     "enum": [
-                        "0 - None Fully oriented",
-                        "0.5 - Questionable Fully oriented except for slight difficulty with time relationships.",
-                        "1 - Mild Moderate difficulty with time relationships; oriented for place at examination; may have geographic disorientation elsewhere.",
-                        "2 - Moderate Severe difficulty with time relationships; usually disoriented to time, often to place.",
-                        "3 - Severe Oriented to person only."
+                        "0 None - 0 Fully oriented",
+                        "0.5 Questionable - 0.5 <br>Fully oriented except for slight difficulty with time relationships.",
+                        "1 Mild - 1 Moderate difficulty with time relationships; oriented for place at examination; may have geographic disorientation elsewhere.",
+                        "2 Moderate - 2 Severe difficulty with time relationships; usually disoriented to time, often to place.",
+                        "3 Severe - 3 Oriented to person only."
                     ]
                 },
                 "fu_judgment": {
                     "title": "3. JUDGMENT & PROBLEM SOLVING",
                     "type": "string",
                     "enum": [
-                        "0 - None Solves everyday problems, handles business & financial affairs well; judgment good in relation to past performance.",
-                        "0.5 - Questionable Slight impairment in solving problems, similarities, and differences.",
-                        "1 - Mild Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained.",
-                        "2 - Moderate Severely impaired in handling problems, similarities, and differences; social judgment usually impaired.",
-                        "3 - Severe Unable to make judgments or solve problems."
+                        "0 None - 0 Solves everyday problems, handles business & financial affairs well; judgment good in relation to past performance.",
+                        "0.5 Questionable - 0.5 <br>Slight impairment in solving problems, similarities, and differences.",
+                        "1 Mild - 1 Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained.",
+                        "2 Moderate - 2 Severely impaired in handling problems, similarities, and differences; social judgment usually impaired.",
+                        "3 Severe - 3 Unable to make judgments or solve problems."
                     ]
                 },
                 "fu_commun": {
                     "title": "4. COMMUNITY AFFAIRS",
                     "type": "string",
                     "enum": [
-                        "0 - None Independent function at usual level in job, shopping, volunteer and social groups.",
-                        "0.5 - Questionable Slight impairment in these activities.",
-                        "1 - Mild Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
-                        "2 - Moderate No pretense of independent function outside the home; appears well enough to be taken to functions outside the family home.",
-                        "3 - Severe No pretense of independent function outside the home; appears too ill to be taken to functions outside the family home."
+                        "0 None - 0 Independent function at usual level in job, shopping, volunteer and social groups.",
+                        "0.5 Questionable - 0.5 <br>Slight impairment in these activities.",
+                        "1 Mild - 1 Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
+                        "2 Moderate - 2 No pretense of independent function outside the home; appears well enough to be taken to functions outside the family home.",
+                        "3 Severe - 3 No pretense of independent function outside the home; appears too ill to be taken to functions outside the family home."
                     ]
                 },
                 "fu_homehobb": {
                     "title": "5. HOME & HOBBIES",
                     "type": "string",
                     "enum": [
-                        "0 - None Life at home, hobbies, and intellectual interests well maintained.",
-                        "0.5 - Questionable Life at home, hobbies, and intellectual interests slightly impaired.",
-                        "1 - Mild Mild but definite impairment of function at home; more difficult chores abandoned; more complicated hobbies and interests abandoned.",
-                        "2 - Moderate Only simple chores preserved; very restricted interests, poorly maintained.",
-                        "3 - Severe No significant function in the home."
+                        "0 None - 0 Life at home, hobbies, and intellectual interests well maintained.",
+                        "0.5 Questionable - 0.5 <br>Life at home, hobbies, and intellectual interests slightly impaired.",
+                        "1 Mild - 1 Mild but definite impairment of function at home; more difficult chores abandoned; more complicated hobbies and interests abandoned.",
+                        "2 Moderate - 2 Only simple chores preserved; very restricted interests, poorly maintained.",
+                        "3 Severe - 3 No significant function in the home."
                     ]
                 },
                 "fu_perscare": {
                     "title": "6. PERSONAL CARE",
                     "type": "string",
                     "enum": [
-                        "0 - None / Questionable - 0Fully capable of self-care (=0).",
-                        "1 - Mild Needs prompting.",
-                        "2 - Moderate Requires assistance in dressing, hygiene, keeping of personal effects.",
-                        "3 - Severe Requires much help with personal care; frequent incontinence."
+                        "0 None / Questionable - 0Fully capable of self-care (=0).",
+                        "1 Mild - 1 Needs prompting.",
+                        "2 Moderate - 2 Requires assistance in dressing, hygiene, keeping of personal effects.",
+                        "3 Severe - 3 Requires much help with personal care; frequent incontinence."
                     ]
                 },
                 "fu_cdrsum": {
@@ -118,11 +118,11 @@
                     "title": "8. GLOBAL CDR",
                     "type": "string",
                     "enum": [
-                        "0.0 = No Impairment",
-                        "0.5 = Questionable impariment",
-                        "1.0 = Mild impairment",
-                        "2.0 = Moderate impairment",
-                        "3.0 = Severe impairment"
+                        "0 0.0 = No Impairment",
+                        "0.5 0.5 = Questionable impariment",
+                        "1 1.0 = Mild impairment",
+                        "2 2.0 = Moderate impairment",
+                        "3 3.0 = Severe impairment"
                     ]
                 }
             }
@@ -135,22 +135,22 @@
                     "title": "9. BEHAVIOR, COMPORTMENT AND PERSONALITY 2",
                     "type": "string",
                     "enum": [
-                        "0 - None Socially appropriate behavior.",
-                        "0.5 - Questionable Questionable changes in comportment, empathy, appropriateness of actions.",
-                        "1 - Mild Mild but definite changes in behavior.",
-                        "2 - Moderate Moderate behavioral changes, affecting interpersonal relationships and interactions in a significant manner.",
-                        "3 - Severe Severe behavioral changes, making interpersonal interactions all unidirectional."
+                        "0 None - 0 Socially appropriate behavior.",
+                        "0.5 Questionable - 0.5 <br>Questionable changes in comportment, empathy, appropriateness of actions.",
+                        "1 Mild - 1 Mild but definite changes in behavior.",
+                        "2 Moderate - 2 Moderate behavioral changes, affecting interpersonal relationships and interactions in a significant manner.",
+                        "3 Severe - 3 Severe behavioral changes, making interpersonal interactions all unidirectional."
                     ]
                 },
                 "fu_cdrlang": {
                     "title": "10. LANGUAG 3",
                     "type": "string",
                     "enum": [
-                        "0 - None No language difficulty or occasional mild tip-of-the-tongue.",
-                        "0.5 - Questionable Consistent mild word finding difficulties; simplification of word choice; circumlocution; decreased phrase length; and/or mild comprehension difficulties.",
-                        "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading.",
-                        "2 - Moderate Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective.",
-                        "3 - Severe Severe comprehension deficits; no intelligible speech."
+                        "0 None - 0 No language difficulty or occasional mild tip-of-the-tongue.",
+                        "0.5  Questionable - 0.5 <br>Consistent mild word finding difficulties; simplification of word choice; circumlocution; decreased phrase length; and/or mild comprehension difficulties.",
+                        "1 Mild - 1 Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading.",
+                        "2 Moderate - 2 Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective.",
+                        "3 Severe - 3 Severe comprehension deficits; no intelligible speech."
                     ]
                 }
             }

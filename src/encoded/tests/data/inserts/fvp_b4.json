@@ -7,18 +7,18 @@
         "initials": "JAR",
         "header_complete": "Complete",
         "sec1": {
-            "fu_memory": "0 - None No memory loss, or slight inconsistent forgetfulness.",
-            "fu_orient": "0.5 - Questionable Fully oriented except for slight difficulty with time relationships.",
-            "fu_judgment": "1 - Mild Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained.",
-            "fu_commun": "0 - None Independent function at usual level in job, shopping, volunteer and social groups.",
-            "fu_homehobb": "0 - None Life at home, hobbies, and intellectual interests well maintained.",
-            "fu_perscare": "0 - None / Questionable - 0Fully capable of self-care (=0).",
-            "fu_cdrsum": 456,
-            "fu_cdrglob": "0.5 = Questionable impariment"
+            "fu_memory": "0 None - 0 No memory loss, or slight inconsistent forgetfulness.",
+            "fu_orient": "0 None - 0 Fully oriented",
+            "fu_judgment": "0.5 Questionable - 0.5 <br>Slight impairment in solving problems, similarities, and differences.",
+            "fu_commun": "1 Mild - 1 Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
+            "fu_homehobb": "3 Severe - 3 No significant function in the home.",
+            "fu_perscare": "2 Moderate - 2 Requires assistance in dressing, hygiene, keeping of personal effects.",
+            "fu_cdrsum": 679,
+            "fu_cdrglob": "1 1.0 = Mild impairment"
         },
         "sec2": {
-            "fu_comport": "0.5 - Questionable Questionable changes in comportment, empathy, appropriateness of actions.",
-            "fu_cdrlang": "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading."
+            "fu_comport": "0 None - 0 Socially appropriate behavior.",
+            "fu_cdrlang": "2 Moderate - 2 Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective."
         },
         "form_status": "Complete",
         "status": "released",
@@ -32,18 +32,18 @@
         "initials": "JAR",
         "header_complete": "Complete",
         "sec1": {
-            "fu_memory": "0 - None No memory loss, or slight inconsistent forgetfulness.",
-            "fu_orient": "0.5 - Questionable Fully oriented except for slight difficulty with time relationships.",
-            "fu_judgment": "1 - Mild Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained.",
-            "fu_commun": "0 - None Independent function at usual level in job, shopping, volunteer and social groups.",
-            "fu_homehobb": "0 - None Life at home, hobbies, and intellectual interests well maintained.",
-            "fu_perscare": "0 - None / Questionable - 0Fully capable of self-care (=0).",
+            "fu_memory": "0 None - 0 No memory loss, or slight inconsistent forgetfulness.",
+            "fu_orient": "0 None - 0 Fully oriented",
+            "fu_judgment": "0.5 Questionable - 0.5 <br>Slight impairment in solving problems, similarities, and differences.",
+            "fu_commun": "1 Mild - 1 Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
+            "fu_homehobb": "3 Severe - 3 No significant function in the home.",
+            "fu_perscare": "2 Moderate - 2 Requires assistance in dressing, hygiene, keeping of personal effects.",
             "fu_cdrsum": 789,
-            "fu_cdrglob": "0.5 = Questionable impariment"
+            "fu_cdrglob": "1 1.0 = Mild impairment"
         },
         "sec2": {
-            "fu_comport": "0.5 - Questionable Questionable changes in comportment, empathy, appropriateness of actions.",
-            "fu_cdrlang": "1 - Mild Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading."
+            "fu_comport": "0 None - 0 Socially appropriate behavior.",
+            "fu_cdrlang": "2 Moderate - 2 Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective."
         },
         "form_status": "Complete",
         "status": "released",
