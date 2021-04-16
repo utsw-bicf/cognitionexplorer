@@ -162,19 +162,8 @@
                         "9 Unknown"
                     ]
                 }
-            },
-            "required": [
-                "fu_bills",
-                "fu_taxes",
-                "fu_shopping",
-                "fu_games",
-                "fu_stove",
-                "fu_mealprep",
-                "fu_events",
-                "fu_payattn",
-                "fu_remdates",
-                "fu_travel"
-            ]
+            }
+            
         }
     },
     "facets": {
