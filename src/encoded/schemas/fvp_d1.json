@@ -481,7 +481,7 @@
                     "enum": [
                         "0 No",
                         "1 Yes",
-                        "8 Unknown/not assessed"
+                        "9 Unknown/not assessed"
                     ]
                 },
                 "fu_ftldmut": {
@@ -490,7 +490,7 @@
                     "enum": [
                         "0 No",
                         "1 Yes",
-                        "8 Unknown/not assessed"
+                        "9 Unknown/not assessed"
                     ]
                 },
                 "fu_othmut": {
@@ -499,7 +499,7 @@
                     "enum": [
                         "0 No",
                         "1 Yes",
-                        "8 Unknown/not assessed"
+                        "9 Unknown/not assessed"
                     ]
                 },
                 "fu_othmutx": {
