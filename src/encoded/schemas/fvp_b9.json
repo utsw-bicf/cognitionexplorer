@@ -6,15 +6,7 @@
     "identifyingProperties": [
         "uuid"
     ],
-    "required": [
-        "fu_decl_memo",
-        "fu_cogn_symp",
-        "fu_meaning_impair",
-        "fu_bhvr_symp",
-        "fu_motor_symp",
-        "fu_overall_course",
-        "fu_candidate"
-    ],
+   
     "additionalProperties": false,
     "mixinProperties": [
         {
