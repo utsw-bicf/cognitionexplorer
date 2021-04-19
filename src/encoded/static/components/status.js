@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { object } from 'prop-types';
 import * as globals from './globals';
 
 
@@ -101,8 +101,6 @@ const defaultObjectStatuses = {
     Biosample: accessionedStatuses,
     Biospecimen: accessionedStatuses,
     Consent: accessionedStatuses,
-    
-
     Cart: sharedStatuses,
     Characterization: standardStatuses,
     Biodataset: biodatasetStatuses,
@@ -180,7 +178,6 @@ const defaultObjectStatuses = {
     User: sharedStatuses,
 };
 
-
 // SVG components for each status icon. These can be imported into something like Ink or Adobe
 // Illustrator for modification, and saved with minificiation. You can remove some elements from
 // the resulting SVG (e.g. <title>, <def>), and viewBox and transform might need adjustment.
@@ -256,6 +253,8 @@ const statusIcons = {
 const objectStatusLevels = ['external', 'unprivileged', 'consortium', 'administrator'];
 
 
+
+
 /**
  * Maps the current session information from the <App> React context to an access level from the
  * objectStatusLevels array.
@@ -267,6 +266,8 @@ const objectStatusLevels = ['external', 'unprivileged', 'consortium', 'administr
 export const sessionToAccessLevel = (session, sessionProperties) => {
     const loggedIn = !!(session && session['auth.userid']);
     const administrativeUser = loggedIn && !!(sessionProperties && sessionProperties.admin);
+
+  
     let accessLevel = '';
     if (!loggedIn) {
         accessLevel = 'external';
@@ -294,6 +295,13 @@ export const sessionToAccessLevel = (session, sessionProperties) => {
 export const getObjectStatuses = (item, accessLevel = 'external', objectStatuses = defaultObjectStatuses) => {
     // Go down the @type list for the object until a matching block is found in `objectStatuses`.
     const objectType = typeof item === 'string' ? item : item['@type'].find(type => objectStatuses[type]);
+    const context2 = this.props.context;
+    // const object=this.props.object;
+    // const item=this.props.item;
+    console.log('object', object);
+    console.log('context2', context2);
+    console.log('item', item);
+    console.log('accessLevel', accessLevel);
 
     if (objectType && objectStatuses[objectType]) {
         // To collect all possible statuses for the given `accessLevel` and item @type, concatenate

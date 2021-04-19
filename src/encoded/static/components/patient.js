@@ -93,7 +93,7 @@ class Patient extends React.Component {
     ];
     const crumbsReleased = (context.status === 'released');
     const ageUnit = (context.diagnosis.age_unit && context.diagnosis.age != "90 or above" && context.diagnosis.age != "Unknown") ? ` ${context.diagnosis.age_unit}` : '';
-
+    console.log("Hello world!");
     let hasLabs = false;
     let hasVitals = false;
     let hasPath = false;
@@ -171,7 +171,6 @@ class Patient extends React.Component {
             <ItemAccessories item={context}/>
           </div>
         </header>
-
         <Panel>
           <PanelBody addClasses="panel__split">
             <div className="panel__split-element">

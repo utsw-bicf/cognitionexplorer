@@ -196,7 +196,16 @@ class Patient(Item):
         'surgery': ('Surgery', 'patient'),
         'biospecimen': ('Biospecimen', 'patient')
     }
-    set_status_up = []
+    set_status_up = [
+        'labs',
+        'surgery',
+        'consent',
+        'biospecimen',
+        'ihc',
+        'germline'
+        
+        
+    ]
     set_status_down = []
 
     @calculated_property(schema={
@@ -438,6 +447,7 @@ class Patient(Item):
             "linkTo": "Surgery",
         },
     })
+
 
     def surgery(self, request, surgery):
         return paths_filtered_by_status(request, surgery)
@@ -1729,6 +1739,7 @@ class Radiation(Item):
         else:
             return "Kidney"
 
+    
 
 
 @collection(

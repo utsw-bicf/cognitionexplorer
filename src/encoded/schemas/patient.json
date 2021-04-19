@@ -316,6 +316,7 @@
         "status": {
             "title": "Status"
         }
+        
     },
     "boost_values": {
         "accession": 1.0,
