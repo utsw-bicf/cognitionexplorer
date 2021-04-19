@@ -702,6 +702,27 @@ class Patient(Item):
                 surgery_summary = "No"
             return surgery_summary
 
+    @calculated_property(define=True, schema={
+            "title": "Genomic release",
+            "type": "string",
+        })
+    def genomic_release(self, request, consent):
+        consent_type_list=[]
+        if len(consent) > 0:
+            for consent_record in consent:
+                consent_object = request.embed(consent_record, '@@object')
+                consent_type= consent_object['consent_type']
+                consent_type_list.append(consent_type)
+            consent_type_list.sort()
+            print("consent_type",consent_type_list)
+
+            consent_version=consent_type_list[-1]
+            print ("consent_version",consent_version)
+            if consent_version=='4' or consent_version=='5' or consent_version=='6':
+                genomic_release='Yes'
+            else:
+                genomic_release = "No"
+            return genomic_release
 
 
     @calculated_property(schema={
