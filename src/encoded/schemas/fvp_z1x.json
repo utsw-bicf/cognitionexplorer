@@ -135,15 +135,15 @@
             "title": "A4 Subject Medications",
             "type": "object",
             "properties": {
+                "fu_langa4": {
+                    "title": "4a. Language used for A4 Subject Medications",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "fu_a4sub": {
-                    "fu_langa4": {
-                        "title": "4a. Language used for A4 Subject Medications",
-                        "type": "string",
-                        "enum": [
-                            "1 English",
-                            "2 Spanish"
-                        ]
-                    },
                     "title": "4b. Submitted A4 Subject Medications",
                     "type": "string",
                     "enum": [
@@ -167,15 +167,15 @@
             "title": "B1 EVALUATION FORM - Physical",
             "type": "object",
             "properties": {
+                "fu_langb1": {
+                    "title": "5a. Language used for B1 Evaluation Form - Physical",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "fu_b1sub": {
-                    "fu_langb1": {
-                        "title": "5a. Language used for B1 Evaluation Form - Physical",
-                        "type": "string",
-                        "enum": [
-                            "1 English",
-                            "2 Spanish"
-                        ]
-                    },
                     "title": "5b. Submitted B1 EVALUATION FORM - Physical",
                     "type": "string",
                     "enum": [
@@ -213,15 +213,15 @@
             "title": "B5 BEHAVIORAL ASSESSMENT NPI-Q",
             "type": "object",
             "properties": {
+                "fu_langb5": {
+                    "title": "7a. Language used for B5 Behavioral Assessment NPI-Q",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
                 "fu_b5sub": {
-                    "fu_langb5": {
-                        "title": "7a. Language used for B5 Behavioral Assessment NPI-Q",
-                        "type": "string",
-                        "enum": [
-                            "1 English",
-                            "2 Spanish"
-                        ]
-                    },
                     "title": "7b.B5 BEHAVIORAL ASSESSMENT NPI-Q",
                     "type": "string",
                     "enum": [
