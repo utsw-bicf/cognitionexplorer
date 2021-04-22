@@ -6,9 +6,7 @@
     "identifyingProperties": [
       "uuid"
     ],
-    "required": [
-      "note_mlstn_type"
-    ],
+   
     "additionalProperties": false,
     "mixinProperties": [
       {
