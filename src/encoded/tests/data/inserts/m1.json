@@ -7,27 +7,26 @@
         "visitnum": "1",
         "header_complete": "Complete",
         "initials": "OK",
-        "note_mlstn_type": "1 Continued Contact,  Box A only",
         "box_a": {
             "changemo": "11",
             "changedy": "12",
-            "changeyr": "1988"
-        },
-        "uds_ftld_sect": {
-            "uds_status": {
-                "protocol": "1 Annual UDS follow-up by telephone (CONTINUE TO QUESTION 2a1)",
-                "aconsent": "1 Yes (CONTINUE TO QUESTION 2b)"
-            },
-            "change_reason": {
-                "recogim": "1 Yes",
-                "rephyill": "0 No",
-                "rerefuse": "1 Yes",
-                "renavail": "0 No",
-                "renurse": "1 Yes",
-                "nursemo": "9",
-                "nursedy": "12",
-                "nurseyr": "1879",
-                "rejoin": "1 Yes"
+            "changeyr": "1988",
+            "uds_ftld_sect": {
+                "uds_status": {
+                    "protocol": "1 Annual UDS follow-up by telephone (CONTINUE TO QUESTION 2a1)",
+                    "aconsent": "1 Yes (CONTINUE TO QUESTION 2b)"
+                },
+                "change_reason": {
+                    "recogim": "1 Yes",
+                    "rephyill": "0 No",
+                    "rerefuse": "1 Yes",
+                    "renavail": "0 No",
+                    "renurse": "1 Yes",
+                    "nursemo": "9",
+                    "nursedy": "12",
+                    "nurseyr": "1879",
+                    "rejoin": "1 Yes"
+                }
             },
             "ftld_module": {
                 "ftlddisc": "1 Yes",
@@ -35,24 +34,38 @@
                 "ftldreax": "test"
             }
         },
-        "box_b": {
-            "deceased": "1 Yes",
-            "discont": "0 No"
-        },
-        "death": {
-            "deathmo": "9",
-            "deathdy": "31",
-            "deathyr": "1985",
-            "autopsy": "0 No ADC autopsy expected"
-        },
-        "dropped": {
-            "discmo": "11",
-            "discday": "23",
-            "discyr": "1982",
-            "dropreas": "1 ADC decision or protocol"
-        },
+        
         "form_status": "Complete",
         "status": "released",
         "uuid": "f92415d6-a677-43d3-b16a-ce7464e533a7"
+    },
+    {
+        "patient": "000010",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2002-02-01",
+        "visitnum": "1",
+        "header_complete": "Complete",
+        "initials": "OK",
+       
+        "box_b": {
+            "deceased": "1 Yes",
+            "discont": "0 No",
+            "death": {
+                "deathmo": "9",
+                "deathdy": "31",
+                "deathyr": "1985",
+                "autopsy": "0 No ADC autopsy expected"
+            },
+            "dropped": {
+                "discmo": "11",
+                "discday": "23",
+                "discyr": "1982",
+                "dropreas": "1 ADC decision or protocol"
+            }
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "0f0a0cc0-f66d-4667-bee4-5060e0dbecda"
     }
 ]

@@ -1,501 +1,503 @@
 {
-    "title": "NACC Uniform Data Set (UDS) Form M1: Milestones\n Please submit a new Milestones Form as soon as possible after each milestone event has occurred.",
-    "description": "INSTRUCTIONS: Review the types of milestone below and complete the appropriate box below.   Use only one box (A or B) per form submitted.   For more information, see flow chart.",
-    "id": "/profiles/uds_m1.json",
-    "$schema": "http://json-schema.org/draft-04/schema#",
-    "identifyingProperties": [
-      "uuid"
-    ],
-   
-    "additionalProperties": false,
-    "mixinProperties": [
-      {
-        "$ref": "mixins.json#/schema_version"
-      },
-      {
-        "$ref": "mixins.json#/submitted"
-      },
-      {
-        "$ref": "mixins.json#/standard_status"
-      },
-      {
-        "$ref": "mixins.json#/header"
-      },
-      {
-        "$ref": "mixins.json#/examinier_initials"
-      },
-      {
-        "$ref": "mixins.json#/form_status"
-      },
-      {
-        "$ref": "mixins.json#/uuid"
-      }
-    ],
-    "type": "object",
-    "properties": {
-      "schema_version": {
-        "default": "1"
-      },
-      "note_mlstn_type": {
-        "title": "What milestone are you reporting?",
-        "description": "1.  Data-collection status CHANGE followed by CONTINUED CONTACT with subject.  The subject's status in the UDS or FTLD Module has changed, such that s/he will continue to be followed (at least minimally) by ADC.\n 2.  Change followed by NO FURTHER CONTACT with subject.  Subject has DIED or been DROPPED FROM ADC with no further telephone contact and no minimal contact (such as to obtain autopsy).",
-        "type": "string",
-        "enum": [
-          "1 Continued Contact,  Box A only",
-          "0 No further Contact,  Box B only"
-        ]
-      },
-      "box_a": {
-        "title": "BOX A - CHANGE WITH CONTINUED CONTACT",
-        "type": "object",
-        "properties": {
-          "changemo": {
-            "title": "1a. Date of status change, month",
-            "description": "1-12, 99 = Unknown",
-            "type": "string",
-            "pattern": "^[1-9]$|^1[0-2]$|^[99]$"
-          },
-          "changedy": {
-            "title": "1b. Date of status change, day",
-            "description": "1-31,99 = Unknown",
-            "type": "string",
-            "pattern": "^[1-9]$|^[1-2][0-9]$|^3[0-1]$|^99$"
-          },
-          "changeyr": {
-            "title": "1c. Date of status change, year",
-            "description": "Date can be submitted as YYYY(1875 to 2099)",
-            "type": "string",
-            "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]$"
-          }
-        }
-      },
-      "uds_ftld_sect": {
-        "title": "Complete the UDS and FTLD sections below, as appropriate",
-        "description": "",
-        "type": "object",
-        "properties": {
-          "uds_status": {
-            "title": "UDS STATUS",
-            "type": "object",
-            "properties": {
-              "protocol": {
-                "title": "2a. UDS data collection status changed; subject's new status is (CHECK ONE):",
-                "type": "string",
-                "enum": [
-                  "1 Annual UDS follow-up by telephone (CONTINUE TO QUESTION 2a1)",
-                  "2 Minimal contact (CONTINUE TO QUESTION 2a1) NOTE: Minimal contact status is reserved for subjects who can no longer participate for one of the reasons llisted in Question 2b, below.",
-                  "3 Annual in-person UDS follow-up  (CONTINUE TO QUESTION 2b6)"
-                ]
-              },
-              "aconsent": {
-                "title": "2a1. Autopsy consent on file?",
-                "type": "string",
-                "enum": [
-                  "0 No (CONTINUE TO QUESTION 2b)",
-                  "1 Yes (CONTINUE TO QUESTION 2b)"
-                ]
+  "title": "NACC Uniform Data Set (UDS) Form M1: Milestones\n Please submit a new Milestones Form as soon as possible after each milestone event has occurred.",
+  "description": "INSTRUCTIONS: Review the types of milestone below and complete the appropriate box below.   Use only one box (A or B) per form submitted.   For more information, see flow chart on reverse.\n1.  Data-collection status CHANGE followed by CONTINUED CONTACT with subject.  The subject's status in the UDS or FTLD Module has changed, such that s/he will continue to be followed (at least minimally) by ADC.(Continued Contact, Box A only)\n 2.  Change followed by NO FURTHER CONTACT with subject.  Subject has DIED or been DROPPED FROM ADC with no further telephone contact and no minimal contact (such as to obtain autopsy).(No further Contact, Box B only)",
+  "id": "/profiles/uds_m1.json",
+  "$schema": "http://json-schema.org/draft-04/schema#",
+  "identifyingProperties": [
+    "uuid"
+  ],
+  "additionalProperties": false,
+  "mixinProperties": [
+    {
+      "$ref": "mixins.json#/schema_version"
+    },
+    {
+      "$ref": "mixins.json#/submitted"
+    },
+    {
+      "$ref": "mixins.json#/standard_status"
+    },
+    {
+      "$ref": "mixins.json#/header"
+    },
+    {
+      "$ref": "mixins.json#/examinier_initials"
+    },
+    {
+      "$ref": "mixins.json#/form_status"
+    },
+    {
+      "$ref": "mixins.json#/uuid"
+    }
+  ],
+  "type": "object",
+  "anyOf": [
+    {
+      "required": [
+        "box_a"
+      ]
+    },
+    {
+      "required": [
+        "box_b"
+      ]
+    }
+  ],
+  "properties": {
+    "schema_version": {
+      "default": "1"
+    },
+    "box_a": {
+      "title": "BOX A - CHANGE WITH CONTINUED CONTACT",
+      "type": "object",
+      "properties": {
+        "changemo": {
+          "title": "1a. Date of status change, month",
+          "description": "1-12, 99 = Unknown",
+          "type": "string",
+          "pattern": "^[1-9]$|^1[0-2]$|^[99]$"
+        },
+        "changedy": {
+          "title": "1b. Date of status change, day",
+          "description": "1-31,99 = Unknown",
+          "type": "string",
+          "pattern": "^[1-9]$|^[1-2][0-9]$|^3[0-1]$|^99$"
+        },
+        "changeyr": {
+          "title": "1c. Date of status change, year",
+          "description": "Date can be submitted as YYYY(1875 to 2099)",
+          "type": "string",
+          "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]$"
+        },
+        "uds_ftld_sect": {
+          "title": "Complete the UDS and FTLD sections below, as appropriate",
+          "description": "",
+          "type": "object",
+          "properties": {
+            "uds_status": {
+              "title": "UDS STATUS",
+              "type": "object",
+              "properties": {
+                "protocol": {
+                  "title": "2a. UDS data collection status changed; subject's new status is (CHECK ONE):",
+                  "type": "string",
+                  "enum": [
+                    "1 Annual UDS follow-up by telephone (CONTINUE TO QUESTION 2a1)",
+                    "2 Minimal contact (CONTINUE TO QUESTION 2a1) NOTE: Minimal contact status is reserved for subjects who can no longer participate for one of the reasons llisted in Question 2b, below.",
+                    "3 Annual in-person UDS follow-up  (CONTINUE TO QUESTION 2b6)"
+                  ]
+                },
+                "aconsent": {
+                  "title": "2a1. Autopsy consent on file?",
+                  "type": "string",
+                  "enum": [
+                    "0 No (CONTINUE TO QUESTION 2b)",
+                    "1 Yes (CONTINUE TO QUESTION 2b)"
+                  ]
+                }
               }
-            }
-          },
-          "change_reason": {
-            "title": "2b. Reason(s) for change indicated in Question 2a (CHECK AT LEAST ONE):",
-            "type": "object",
-            "properties": {
-              "recogim": {
-                "title": "2b1 Subject is too cognitively impaired",
-                "type": "string",
-                "enum": [
-                  "1 Yes",
-                  "0 No"
-                ]
-              },
-              "rephyill": {
-                "title": "2b2 Subject is too ill or physically impaired",
-                "type": "string",
-                "enum": [
-                  "1 Yes",
-                  "0 No"
-                ]
-              },
-              "rerefuse": {
-                "title": "2b3 Subject refuses neuropsychological testing or clinical exam",
-                "type": "string",
-                "enum": [
-                  "1 Yes",
-                  "0 No"
-                ]
-              },
-              "renavail": {
-                "title": "2b4 Subject or co-participant unreachable, not available, or moved away",
-                "type": "string",
-                "enum": [
-                  "1 Yes",
-                  "0 No"
-                ]
-              },
-              "renurse": {
-                "title": "2b5 Subject has permanently entered nursing home",
-                "type": "string",
-                "enum": [
-                  "1 Yes",
-                  "0 No"
-                ]
-              },
-              "nursemo": {
-                "title": "2b5a. Month permanently moved to nursing home.",
-                "description": "Date permanently moved to nursing home, 1-12,99 = Unknown",
-                "type": "string",
-                "pattern": "^[1-9]$|^1[0-2]$|^[99]$"
-              },
-              "nursedy": {
-                "title": "2b5b. Day permanently moved to nursing home.",
-                "description": "Date permanently moved to nursing home,1-31,99 = Unknown",
-                "type": "string",
-                "pattern": "^[1-9]$|^[1-2][0-9]$|^3[0-1]$|^99$"
-              },
-              "nurseyr": {
-                "title": "2b5c. Year permanently moved to nursing home.",
-                "description": "Date permanently moved to nursing home,YYYY(1875 to 2099), year required",
-                "type": "string",
-                "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]$"
-              },
-              "rejoin": {
-                "title": "2b6 Subject is REJOINING ADC",
-                "type": "string",
-                "enum": [
-                  "1 Yes",
-                  "0 No"
-                ]
-              }
-            }
-          },
-          "ftld_module": {
-            "title": "FTLD MODULE STATUS",
-            "type": "object",
-            "properties": {
-              "ftlddisc": {
-                "title": "3. Subject will no longer receive FTLD Module follow-up, but annual in-person UDS visits will continue",
-                "type": "string",
-                "enum": [
-                  "1 Yes",
-                  "0 No"
-                ]
-              },
-              "ftldreas": {
-                "title": "3a. Reason (CHECK ONE):",
-                "type": "string",
-                "enum": [
-                  "1 ADC decision",
-                  "2 Subject / informant refused",
-                  "3 Informant not available",
-                  "4 Other, specify below:"
-                ]
-              },
-              "ftldreax": {
-                "title": "3a1. Other reason no FTLD Module follow up",
-                "description": "Any text or numbers with the exception of single quotes ('), double quotes (), ampersands (&), and percentage signs (%).",
-                "type": "string"
+            },
+            "change_reason": {
+              "title": "2b. Reason(s) for change indicated in Question 2a (CHECK AT LEAST ONE):",
+              "type": "object",
+              "properties": {
+                "recogim": {
+                  "title": "2b1 Subject is too cognitively impaired",
+                  "type": "string",
+                  "enum": [
+                    "1 Yes",
+                    "0 No"
+                  ]
+                },
+                "rephyill": {
+                  "title": "2b2 Subject is too ill or physically impaired",
+                  "type": "string",
+                  "enum": [
+                    "1 Yes",
+                    "0 No"
+                  ]
+                },
+                "rerefuse": {
+                  "title": "2b3 Subject refuses neuropsychological testing or clinical exam",
+                  "type": "string",
+                  "enum": [
+                    "1 Yes",
+                    "0 No"
+                  ]
+                },
+                "renavail": {
+                  "title": "2b4 Subject or co-participant unreachable, not available, or moved away",
+                  "type": "string",
+                  "enum": [
+                    "1 Yes",
+                    "0 No"
+                  ]
+                },
+                "renurse": {
+                  "title": "2b5 Subject has permanently entered nursing home",
+                  "type": "string",
+                  "enum": [
+                    "1 Yes",
+                    "0 No"
+                  ]
+                },
+                "nursemo": {
+                  "title": "2b5a. Month permanently moved to nursing home.",
+                  "description": "Date permanently moved to nursing home, 1-12,99 = Unknown",
+                  "type": "string",
+                  "pattern": "^[1-9]$|^1[0-2]$|^[99]$"
+                },
+                "nursedy": {
+                  "title": "2b5b. Day permanently moved to nursing home.",
+                  "description": "Date permanently moved to nursing home,1-31,99 = Unknown",
+                  "type": "string",
+                  "pattern": "^[1-9]$|^[1-2][0-9]$|^3[0-1]$|^99$"
+                },
+                "nurseyr": {
+                  "title": "2b5c. Year permanently moved to nursing home.",
+                  "description": "Date permanently moved to nursing home,YYYY(1875 to 2099), year required",
+                  "type": "string",
+                  "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]$"
+                },
+                "rejoin": {
+                  "title": "2b6 Subject is REJOINING ADC",
+                  "type": "string",
+                  "enum": [
+                    "1 Yes",
+                    "0 No"
+                  ]
+                }
               }
             }
           }
-        }
-      },
-      "box_b": {
-        "title": "BOX B - NO FURTHER CONTACT",
-        "type": "object",
-        "properties": {
-          "deceased": {
-            "title": "4a. Subject has DIED (COMPLETE DEATH SECTION, BELOW)",
-            "type": "string",
-            "enum": [
-              "1 Yes",
-              "0 No"
-            ]
-          },
-          "discont": {
-            "title": "4b. Subject has been DROPPED from ADC (COMPLETE DROPPED SECTION, BELOW)",
-            "type": "string",
-            "enum": [
-              "1 Yes",
-              "0 No"
-            ]
-          }
-        }
-      },
-      "death": {
-        "title": "DEATH",
-        "type": "object",
-        "properties": {
-          "deathmo": {
-            "title": "5a1. Date of death, month",
-            "description": "1-12,99 = Unknown",
-            "type": "string",
-            "pattern": "^[1-9]$|^1[0-2]$|^[99]$"
-          },
-          "deathdy": {
-            "title": "5a2. Date of death, day",
-            "description": "1-31,99 = Unknown",
-            "type": "string",
-            "pattern": "^[1-9]$|^[1-2][0-9]$|^3[0-1]$|^99$"
-          },
-          "deathyr": {
-            "title": "5a3. Date of death, year",
-            "description": "YYYY(1875 to 2099), year required",
-            "type": "string",
-            "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]$"
-          },
-          "autopsy": {
-            "title": "5b. ADC autopsy:",
-            "type": "string",
-            "enum": [
-              "0 No ADC autopsy expected",
-              "1 An ADC autopsy has been done; data submitted or pending"
-            ]
-          }
-        }
-      },
-      "dropped": {
-        "title": "DROPPED",
-        "description": "DO NOT fill out this section if the subject has consented to autopsy or if you will maintain minimal contact. Instead, fill out Box A, UDS STATUS section.",
-        "type": "object",
-        "properties": {
-          "discmo": {
-            "title": "6a1. Date dropped from ADC, month",
-            "description": "1-12,99 = Unknown",
-            "type": "string",
-            "pattern": "^[1-9]$|^1[0-2]$|^[99]$"
-          },
-          "discday": {
-            "title": "6a2. Date dropped from ADC, day",
-            "description": "1-31,99 = Unknown",
-            "type": "string",
-            "pattern": "^[1-9]$|^[1-2][0-9]$|^3[0-1]$|^99$"
-          },
-          "discyr": {
-            "title": "6a3. Date dropped from ADC, year",
-            "description": "YYYY(1875 to 2099), year required",
-            "type": "string",
-            "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]$"
-          },
-          "dropreas": {
-            "title": "6b. Main reason for being dropped from ADC (CHECK ONE):",
-            "type": "string",
-            "enum": [
-              "1 ADC decision or protocol",
-              "2 Subject or co-participant asked to be dropped"
-            ]
+        },
+        "ftld_module": {
+          "title": "FTLD MODULE STATUS",
+          "type": "object",
+          "properties": {
+            "ftlddisc": {
+              "title": "3. Subject will no longer receive FTLD Module follow-up, but annual in-person UDS visits will continue",
+              "type": "string",
+              "enum": [
+                "1 Yes",
+                "0 No"
+              ]
+            },
+            "ftldreas": {
+              "title": "3a. Reason (CHECK ONE):",
+              "type": "string",
+              "enum": [
+                "1 ADC decision",
+                "2 Subject / informant refused",
+                "3 Informant not available",
+                "4 Other, specify below:"
+              ]
+            },
+            "ftldreax": {
+              "title": "3a1. Other reason no FTLD Module follow up",
+              "description": "Any text or numbers with the exception of single quotes ('), double quotes (), ampersands (&), and percentage signs (%).",
+              "type": "string"
+            }
           }
         }
       }
     },
-    "facets": {
-      "status": {
-        "title": "Status"
-      },
-      "note_mlstn_type": {
-        "title": "What milestone are you reporting?"
-      },
-      "box_a.changemo": {
-        "title": "1a. Date of status change, month"
-      },
-      "box_a.changedy": {
-        "title": "1b. Date of status change, day"
-      },
-      "box_a.changeyr": {
-        "title": "1c. Date of status change, year"
-      },
-      "uds_ftld_sect.uds_status.protocol": {
-        "title": "2a. UDS data collection status changed; subject's new status is (CHECK ONE):"
-      },
-      "uds_ftld_sect.uds_status.aconsent": {
-        "title": "2a1. Autopsy consent on file?"
-      },
-      "uds_ftld_sect.change_reason.recogim": {
-        "title": "2b1 Subject is too cognitively impaired"
-      },
-      "uds_ftld_sect.change_reason.rephyill": {
-        "title": "2b2 Subject is too ill or physically impaired"
-      },
-      "uds_ftld_sect.change_reason.rerefuse": {
-        "title": "2b3 Subject refuses neuropsychological testing or clinical exam"
-      },
-      "uds_ftld_sect.change_reason.renavail": {
-        "title": "2b4 Subject or co-participant unreachable, not available, or moved away"
-      },
-      "uds_ftld_sect.change_reason.renurse": {
-        "title": "2b5 Subject has permanently entered nursing home"
-      },
-      "uds_ftld_sect.change_reason.nursemo": {
-        "title": "2b5a. Month permanently moved to nursing home."
-      },
-      "uds_ftld_sect.change_reason.nursedy": {
-        "title": "2b5b. Day permanently moved to nursing home."
-      },
-      "uds_ftld_sect.change_reason.nurseyr": {
-        "title": "2b5c. Year permanently moved to nursing home."
-      },
-      "uds_ftld_sect.change_reason.rejoin": {
-        "title": "2b6 Subject is REJOINING ADC"
-      },
-      "uds_ftld_sect.ftld_module.ftlddisc": {
-        "title": "3. Subject will no longer receive FTLD Module follow-up, but annual in-person UDS visits will continue"
-      },
-      "uds_ftld_sect.ftld_module.ftldreas": {
-        "title": "3a. Reason (CHECK ONE):"
-      },
-      "uds_ftld_sect.ftld_module.ftldreax": {
-        "title": "3a1. Other reason no FTLD Module follow up"
-      },
-      "box_b.deceased": {
-        "title": "4a. Subject has DIED (COMPLETE DEATH SECTION, BELOW)"
-      },
-      "box_b.discont": {
-        "title": "4b. Subject has been DROPPED from ADC (COMPLETE DROPPED SECTION, BELOW)"
-      },
-      "death.deathmo": {
-        "title": "5a1. Date of death, month"
-      },
-      "death.deathdy": {
-        "title": "5a2. Date of death, day"
-      },
-      "death.deathyr": {
-        "title": "5a3. Date of death, year"
-      },
-      "death.autopsy": {
-        "title": "5b. ADC autopsy:"
-      },
-      "dropped.discmo": {
-        "title": "6a1. Date dropped from ADC, month"
-      },
-      "dropped.discday": {
-        "title": "6a2. Date dropped from ADC, day"
-      },
-      "dropped.discyr": {
-        "title": "6a3. Date dropped from ADC, year"
-      },
-      "dropped.dropreas": {
-        "title": "6b. Main reason for being dropped from ADC (CHECK ONE):"
+    "box_b": {
+      "title": "BOX B - NO FURTHER CONTACT",
+      "type": "object",
+      "properties": {
+        "deceased": {
+          "title": "4a. Subject has DIED (COMPLETE DEATH SECTION, BELOW)",
+          "type": "string",
+          "enum": [
+            "1 Yes",
+            "0 No"
+          ]
+        },
+        "discont": {
+          "title": "4b. Subject has been DROPPED from ADC (COMPLETE DROPPED SECTION, BELOW)",
+          "type": "string",
+          "enum": [
+            "1 Yes",
+            "0 No"
+          ]
+        },
+        "death": {
+          "title": "DEATH",
+          "type": "object",
+          "properties": {
+            "deathmo": {
+              "title": "5a1. Date of death, month",
+              "description": "1-12,99 = Unknown",
+              "type": "string",
+              "pattern": "^[1-9]$|^1[0-2]$|^[99]$"
+            },
+            "deathdy": {
+              "title": "5a2. Date of death, day",
+              "description": "1-31,99 = Unknown",
+              "type": "string",
+              "pattern": "^[1-9]$|^[1-2][0-9]$|^3[0-1]$|^99$"
+            },
+            "deathyr": {
+              "title": "5a3. Date of death, year",
+              "description": "YYYY(1875 to 2099), year required",
+              "type": "string",
+              "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]$"
+            },
+            "autopsy": {
+              "title": "5b. ADC autopsy:",
+              "type": "string",
+              "enum": [
+                "0 No ADC autopsy expected",
+                "1 An ADC autopsy has been done; data submitted or pending"
+              ]
+            }
+          }
+        },
+        "dropped": {
+          "title": "DROPPED",
+          "description": "DO NOT fill out this section if the subject has consented to autopsy or if you will maintain minimal contact. Instead, fill out Box A, UDS STATUS section.",
+          "type": "object",
+          "properties": {
+            "discmo": {
+              "title": "6a1. Date dropped from ADC, month",
+              "description": "1-12,99 = Unknown",
+              "type": "string",
+              "pattern": "^[1-9]$|^1[0-2]$|^[99]$"
+            },
+            "discday": {
+              "title": "6a2. Date dropped from ADC, day",
+              "description": "1-31,99 = Unknown",
+              "type": "string",
+              "pattern": "^[1-9]$|^[1-2][0-9]$|^3[0-1]$|^99$"
+            },
+            "discyr": {
+              "title": "6a3. Date dropped from ADC, year",
+              "description": "YYYY(1875 to 2099), year required",
+              "type": "string",
+              "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]$"
+            },
+            "dropreas": {
+              "title": "6b. Main reason for being dropped from ADC (CHECK ONE):",
+              "type": "string",
+              "enum": [
+                "1 ADC decision or protocol",
+                "2 Subject or co-participant asked to be dropped"
+              ]
+            }
+          }
+        }
       }
+    }
+  },
+  "facets": {
+    "status": {
+      "title": "Status"
     },
-    "columns": {
-      "status": {
-        "title": "Status"
-      },
-      "note_mlstn_type": {
-        "title": "What milestone are you reporting?"
-      },
-      "box_a.changemo": {
-        "title": "1a. Date of status change, month"
-      },
-      "box_a.changedy": {
-        "title": "1b. Date of status change, day"
-      },
-      "box_a.changeyr": {
-        "title": "1c. Date of status change, year"
-      },
-      "uds_ftld_sect.uds_status.protocol": {
-        "title": "2a. UDS data collection status changed; subject's new status is (CHECK ONE):"
-      },
-      "uds_ftld_sect.uds_status.aconsent": {
-        "title": "2a1. Autopsy consent on file?"
-      },
-      "uds_ftld_sect.change_reason.recogim": {
-        "title": "2b1 Subject is too cognitively impaired"
-      },
-      "uds_ftld_sect.change_reason.rephyill": {
-        "title": "2b2 Subject is too ill or physically impaired"
-      },
-      "uds_ftld_sect.change_reason.rerefuse": {
-        "title": "2b3 Subject refuses neuropsychological testing or clinical exam"
-      },
-      "uds_ftld_sect.change_reason.renavail": {
-        "title": "2b4 Subject or co-participant unreachable, not available, or moved away"
-      },
-      "uds_ftld_sect.change_reason.renurse": {
-        "title": "2b5 Subject has permanently entered nursing home"
-      },
-      "uds_ftld_sect.change_reason.nursemo": {
-        "title": "2b5a. Month permanently moved to nursing home."
-      },
-      "uds_ftld_sect.change_reason.nursedy": {
-        "title": "2b5b. Day permanently moved to nursing home."
-      },
-      "uds_ftld_sect.change_reason.nurseyr": {
-        "title": "2b5c. Year permanently moved to nursing home."
-      },
-      "uds_ftld_sect.change_reason.rejoin": {
-        "title": "2b6 Subject is REJOINING ADC"
-      },
-      "uds_ftld_sect.ftld_module.ftlddisc": {
-        "title": "3. Subject will no longer receive FTLD Module follow-up, but annual in-person UDS visits will continue"
-      },
-      "uds_ftld_sect.ftld_module.ftldreas": {
-        "title": "3a. Reason (CHECK ONE):"
-      },
-      "uds_ftld_sect.ftld_module.ftldreax": {
-        "title": "3a1. Other reason no FTLD Module follow up"
-      },
-      "box_b.deceased": {
-        "title": "4a. Subject has DIED (COMPLETE DEATH SECTION, BELOW)"
-      },
-      "box_b.discont": {
-        "title": "4b. Subject has been DROPPED from ADC (COMPLETE DROPPED SECTION, BELOW)"
-      },
-      "death.deathmo": {
-        "title": "5a1. Date of death, month"
-      },
-      "death.deathdy": {
-        "title": "5a2. Date of death, day"
-      },
-      "death.deathyr": {
-        "title": "5a3. Date of death, year"
-      },
-      "death.autopsy": {
-        "title": "5b. ADC autopsy:"
-      },
-      "dropped.discmo": {
-        "title": "6a1. Date dropped from ADC, month"
-      },
-      "dropped.discday": {
-        "title": "6a2. Date dropped from ADC, day"
-      },
-      "dropped.discyr": {
-        "title": "6a3. Date dropped from ADC, year"
-      },
-      "dropped.dropreas": {
-        "title": "6b. Main reason for being dropped from ADC (CHECK ONE):"
-      }
+    "box_a.changemo": {
+      "title": "1a. Date of status change, month"
     },
-    "boost_values": {
-      "patient": 1.0,
-      "note_mlstn_type": 1.0,
-      "box_a.changemo": 1.0,
-      "box_a.changedy": 1.0,
-      "box_a.changeyr": 1.0,
-      "uds_ftld_sect.uds_status.protocol": 1.0,
-      "uds_ftld_sect.uds_status.aconsent": 1.0,
-      "uds_ftld_sect.change_reason.recogim": 1.0,
-      "uds_ftld_sect.change_reason.rephyill": 1.0,
-      "uds_ftld_sect.change_reason.rerefuse": 1.0,
-      "uds_ftld_sect.change_reason.renavail": 1.0,
-      "uds_ftld_sect.change_reason.renurse": 1.0,
-      "uds_ftld_sect.change_reason.nursemo": 1.0,
-      "uds_ftld_sect.change_reason.nursedy": 1.0,
-      "uds_ftld_sect.change_reason.nurseyr": 1.0,
-      "uds_ftld_sect.change_reason.rejoin": 1.0,
-      "uds_ftld_sect.ftld_module.ftlddisc": 1.0,
-      "uds_ftld_sect.ftld_module.ftldreas": 1.0,
-      "uds_ftld_sect.ftld_module.ftldreax": 1.0,
-      "box_b.deceased": 1.0,
-      "box_b.discont": 1.0,
-      "death.deathmo": 1.0,
-      "death.deathdy": 1.0,
-      "death.deathyr": 1.0,
-      "death.autopsy": 1.0,
-      "dropped.discmo": 1.0,
-      "dropped.discday": 1.0,
-      "dropped.discyr": 1.0,
-      "dropped.dropreas": 1.0
+    "box_a.changedy": {
+      "title": "1b. Date of status change, day"
     },
-    "changelog": "/profiles/changelogs/m1.md"
-  }
+    "box_a.changeyr": {
+      "title": "1c. Date of status change, year"
+    },
+    "box_a.uds_ftld_sect": {
+      "title": "Complete the UDS and FTLD sections below, as appropriate"
+    },
+    "box_a.uds_ftld_sect.uds_status.protocol": {
+      "title": "2a. UDS data collection status changed; subject's new status is (CHECK ONE):"
+    },
+    "box_a.uds_ftld_sect.uds_status.aconsent": {
+      "title": "2a1. Autopsy consent on file?"
+    },
+    "box_a.uds_ftld_sect.change_reason.recogim": {
+      "title": "2b1 Subject is too cognitively impaired"
+    },
+    "box_a.uds_ftld_sect.change_reason.rephyill": {
+      "title": "2b2 Subject is too ill or physically impaired"
+    },
+    "box_a.uds_ftld_sect.change_reason.rerefuse": {
+      "title": "2b3 Subject refuses neuropsychological testing or clinical exam"
+    },
+    "box_a.uds_ftld_sect.change_reason.renavail": {
+      "title": "2b4 Subject or co-participant unreachable, not available, or moved away"
+    },
+    "box_a.uds_ftld_sect.change_reason.renurse": {
+      "title": "2b5 Subject has permanently entered nursing home"
+    },
+    "box_a.uds_ftld_sect.change_reason.nursemo": {
+      "title": "2b5a. Month permanently moved to nursing home."
+    },
+    "box_a.uds_ftld_sect.change_reason.nursedy": {
+      "title": "2b5b. Day permanently moved to nursing home."
+    },
+    "box_a.uds_ftld_sect.change_reason.nurseyr": {
+      "title": "2b5c. Year permanently moved to nursing home."
+    },
+    "box_a.uds_ftld_sect.change_reason.rejoin": {
+      "title": "2b6 Subject is REJOINING ADC"
+    },
+    "box_a.ftld_module.ftlddisc": {
+      "title": "3. Subject will no longer receive FTLD Module follow-up, but annual in-person UDS visits will continue"
+    },
+    "box_a.ftld_module.ftldreas": {
+      "title": "3a. Reason (CHECK ONE):"
+    },
+    "box_a.ftld_module.ftldreax": {
+      "title": "3a1. Other reason no FTLD Module follow up"
+    },
+    "box_b.deceased": {
+      "title": "4a. Subject has DIED (COMPLETE DEATH SECTION, BELOW)"
+    },
+    "box_b.discont": {
+      "title": "4b. Subject has been DROPPED from ADC (COMPLETE DROPPED SECTION, BELOW)"
+    },
+    "box_b.death.deathmo": {
+      "title": "5a1. Date of death, month"
+    },
+    "box_b.death.deathdy": {
+      "title": "5a2. Date of death, day"
+    },
+    "box_b.death.deathyr": {
+      "title": "5a3. Date of death, year"
+    },
+    "box_b.death.autopsy": {
+      "title": "5b. ADC autopsy:"
+    },
+    "box_b.dropped.discmo": {
+      "title": "6a1. Date dropped from ADC, month"
+    },
+    "box_b.dropped.discday": {
+      "title": "6a2. Date dropped from ADC, day"
+    },
+    "box_b.dropped.discyr": {
+      "title": "6a3. Date dropped from ADC, year"
+    },
+    "box_b.dropped.dropreas": {
+      "title": "6b. Main reason for being dropped from ADC (CHECK ONE):"
+    }
+  },
+  "columns": {
+    "status": {
+      "title": "Status"
+    },
+    "box_a.changemo": {
+      "title": "1a. Date of status change, month"
+    },
+    "box_a.changedy": {
+      "title": "1b. Date of status change, day"
+    },
+    "box_a.changeyr": {
+      "title": "1c. Date of status change, year"
+    },
+    "box_a.uds_ftld_sect": {
+      "title": "Complete the UDS and FTLD sections below, as appropriate"
+    },
+    "box_a.uds_ftld_sect.uds_status.protocol": {
+      "title": "2a. UDS data collection status changed; subject's new status is (CHECK ONE):"
+    },
+    "box_a.uds_ftld_sect.uds_status.aconsent": {
+      "title": "2a1. Autopsy consent on file?"
+    },
+    "box_a.uds_ftld_sect.change_reason.recogim": {
+      "title": "2b1 Subject is too cognitively impaired"
+    },
+    "box_a.uds_ftld_sect.change_reason.rephyill": {
+      "title": "2b2 Subject is too ill or physically impaired"
+    },
+    "box_a.uds_ftld_sect.change_reason.rerefuse": {
+      "title": "2b3 Subject refuses neuropsychological testing or clinical exam"
+    },
+    "box_a.uds_ftld_sect.change_reason.renavail": {
+      "title": "2b4 Subject or co-participant unreachable, not available, or moved away"
+    },
+    "box_a.uds_ftld_sect.change_reason.renurse": {
+      "title": "2b5 Subject has permanently entered nursing home"
+    },
+    "box_a.uds_ftld_sect.change_reason.nursemo": {
+      "title": "2b5a. Month permanently moved to nursing home."
+    },
+    "box_a.uds_ftld_sect.change_reason.nursedy": {
+      "title": "2b5b. Day permanently moved to nursing home."
+    },
+    "box_a.uds_ftld_sect.change_reason.nurseyr": {
+      "title": "2b5c. Year permanently moved to nursing home."
+    },
+    "box_a.uds_ftld_sect.change_reason.rejoin": {
+      "title": "2b6 Subject is REJOINING ADC"
+    },
+    "box_a.ftld_module.ftlddisc": {
+      "title": "3. Subject will no longer receive FTLD Module follow-up, but annual in-person UDS visits will continue"
+    },
+    "box_a.ftld_module.ftldreas": {
+      "title": "3a. Reason (CHECK ONE):"
+    },
+    "box_a.ftld_module.ftldreax": {
+      "title": "3a1. Other reason no FTLD Module follow up"
+    },
+    "box_b.deceased": {
+      "title": "4a. Subject has DIED (COMPLETE DEATH SECTION, BELOW)"
+    },
+    "box_b.discont": {
+      "title": "4b. Subject has been DROPPED from ADC (COMPLETE DROPPED SECTION, BELOW)"
+    },
+    "box_b.death.deathmo": {
+      "title": "5a1. Date of death, month"
+    },
+    "box_b.death.deathdy": {
+      "title": "5a2. Date of death, day"
+    },
+    "box_b.death.deathyr": {
+      "title": "5a3. Date of death, year"
+    },
+    "box_b.death.autopsy": {
+      "title": "5b. ADC autopsy:"
+    },
+    "box_b.dropped.discmo": {
+      "title": "6a1. Date dropped from ADC, month"
+    },
+    "box_b.dropped.discday": {
+      "title": "6a2. Date dropped from ADC, day"
+    },
+    "box_b.dropped.discyr": {
+      "title": "6a3. Date dropped from ADC, year"
+    },
+    "box_b.dropped.dropreas": {
+      "title": "6b. Main reason for being dropped from ADC (CHECK ONE):"
+    }
+  },
+  "boost_values": {
+    "patient": 1.0,
+    "box_a.changemo": 1.0,
+    "box_a.changedy": 1.0,
+    "box_a.changeyr": 1.0,
+    "box_a.uds_ftld_sect": 1.0,
+    "box_a.uds_ftld_sect.uds_status.protocol": 1.0,
+    "box_a.uds_ftld_sect.uds_status.aconsent": 1.0,
+    "box_a.uds_ftld_sect.change_reason.recogim": 1.0,
+    "box_a.uds_ftld_sect.change_reason.rephyill": 1.0,
+    "box_a.uds_ftld_sect.change_reason.rerefuse": 1.0,
+    "box_a.uds_ftld_sect.change_reason.renavail": 1.0,
+    "box_a.uds_ftld_sect.change_reason.renurse": 1.0,
+    "box_a.uds_ftld_sect.change_reason.nursemo": 1.0,
+    "box_a.uds_ftld_sect.change_reason.nursedy": 1.0,
+    "box_a.uds_ftld_sect.change_reason.nurseyr": 1.0,
+    "box_a.uds_ftld_sect.change_reason.rejoin": 1.0,
+    "box_a.ftld_module.ftlddisc": 1.0,
+    "box_a.ftld_module.ftldreas": 1.0,
+    "box_a.ftld_module.ftldreax": 1.0,
+    "box_b.deceased": 1.0,
+    "box_b.discont": 1.0,
+    "box_b.death.deathmo": 1.0,
+    "box_b.death.deathdy": 1.0,
+    "box_b.death.deathyr": 1.0,
+    "box_b.death.autopsy": 1.0,
+    "box_b.dropped.discmo": 1.0,
+    "box_b.dropped.discday": 1.0,
+    "box_b.dropped.discyr": 1.0,
+    "box_b.dropped.dropreas": 1.0
+  },
+  "changelog": "/profiles/changelogs/m1.md"
+}
