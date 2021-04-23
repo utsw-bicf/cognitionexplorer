@@ -1,0 +1,241 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM A1V2: SUBJECT DEMOGRAPHICS ",
+    "description": "INSTRUCTIONS: This form is to be completed by intake interviewer based on ADC scheduling records,subject interview\r, medical records, and proxy co-participant report (as needed),For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet.Form A1. Check only one box per question.",
+    "comment": "Schema for submitting UDS_ivp_A1V2 form information.",
+    "id": "/profiles/ivp_a1v2.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "ivp_a1.json#/properties"
+        },
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "reason": {
+            "title": "1. Primary reason for coming to ADC:",
+            "type": "string",
+            "enum": [
+                "1 To participate in a research study",
+                "2 To have a clinical evaluation",
+                "3 Other",
+                "4 Both (to participate in a research study and to have a clinical evaluation)",
+                "9 Unknown"
+            ]
+        },
+        "refersc": {
+            "title": "2a. Principal referral source:",
+            "description": "(if answer is 1 or 2, CONTINUE TO QUESTION 2B; otherwise, SKIP TO QUESTION 3.)",
+            "type": "string",
+            "enum": [
+                "1 Self-referral",
+                "2 Non-professional contact (spouse/partner, relative, friend, coworker, etc.)",
+                "3 ADC participant referral",
+                "4 ADC clinician, staff, or investigator referral",
+                "5 Nurse, doctor, or other health care provider",
+                "6 Other research study clinician/staff/investigator (non-ADC; e.g., ADNI, Women's Health Initiative)",
+                "7 Non-ADC media appeal (e.g., Alzheimer's Association)",
+                "8 Other",
+                "9 Unknown"
+            ]
+        },
+        "maristat": {
+            "title": "14. Subject's current marital status:",
+            "type": "string",
+            "enum": [
+                "1 Married",
+                "2 Widowed",
+                "3 Divorced",
+                "4 Separated",
+                "5 Never married (or marriage was annulled)",
+                "6 Living as married/domestic partner",
+                "8 Other",
+                "9 Unknown"
+            ]
+        },
+        "residenc": {
+            "title": "17. What is the subject's primary type of residence?",
+            "type": "string",
+            "enum": [
+                "1 Single - or multi-family private residence (apartment, condo, house)",
+                "2 Retirement community or independent group living",
+                "3 Assisted living, adult family home, or boarding home",
+                "4 Skilled nursing facility, nursing home, hospital, or hospice",
+                "5 Other",
+                "9 Unknown"
+            ]
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "reason": {
+            "title": "1. Primary reason for coming to ADC:"
+        },
+        "refersc": {
+            "title": "2a. Principal referral source:"
+        },
+        "prestat": {
+            "title": "3. Presumed disease status at enrollment:"
+        },
+        "prespart": {
+            "title": "4. Presumed participation:"
+        },
+        "source": {
+            "title": "5. ADC enrollment type:"
+        },
+        "birthmo": {
+            "title": "6a. Subject's month of birth(MM)"
+        },
+        "birthyr": {
+            "title": "6b. Subject's year of birth(YYYY)"
+        },
+        "sex": {
+            "title": "7. Subject's sex:"
+        },
+        "hispanic": {
+            "title": "8. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "race": {
+            "title": "9. What does subject report as his or her race?"
+        },
+        "racesec": {
+            "title": "10. What additional race does subject report?"
+        },
+        "raceter": {
+            "title": "11. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?"
+        },
+        "primlang": {
+            "title": "12. Subject's primary language:"
+        },
+        "educ": {
+            "title": "13. Subject's years of education."
+        },
+        "maristat": {
+            "title": "14. Subject's <u> current </u> marital status:"
+        },
+        "independ": {
+            "title": "16. What is the subject's level of independence?"
+        },
+        "residenc": {
+            "title": "17. What is the subject's primary type of residence?"
+        },
+        "zip": {
+            "title": "18. ZIP Code (first three digits) of subject's primary residence:"
+        },
+        "handed": {
+            "title": "19. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "reason": {
+            "title": "1. Primary reason for coming to ADC:"
+        },
+        "refersc": {
+            "title": "2a. Principal referral source:"
+        },
+        "prestat": {
+            "title": "3. Presumed disease status at enrollment:"
+        },
+        "prespart": {
+            "title": "4. Presumed participation:"
+        },
+        "source": {
+            "title": "5. ADC enrollment type:"
+        },
+        "birthmo": {
+            "title": "6a. Subject's month of birth(MM)"
+        },
+        "birthyr": {
+            "title": "6b. Subject's year of birth(YYYY)"
+        },
+        "sex": {
+            "title": "7. Subject's sex:"
+        },
+        "hispanic": {
+            "title": "8. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "race": {
+            "title": "9. What does subject report as his or her race?"
+        },
+        "racesec": {
+            "title": "10. What additional race does subject report?"
+        },
+        "raceter": {
+            "title": "11. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?"
+        },
+        "primlang": {
+            "title": "12. Subject's primary language:"
+        },
+        "educ": {
+            "title": "13. Subject's years of education."
+        },
+        "maristat": {
+            "title": "14. Subject's <u> current </u> marital status:"
+        },
+        "independ": {
+            "title": "16. What is the subject's level of independence?"
+        },
+        "residenc": {
+            "title": "17. What is the subject's primary type of residence?"
+        },
+        "zip": {
+            "title": "18. ZIP Code (first three digits) of subject's primary residence:"
+        },
+        "handed": {
+            "title": "19. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "reason": 1.0,
+        "refersc": 1.0,
+        "prestat": 1.0,
+        "prespart": 1.0,
+        "source": 1.0,
+        "birthmo": 1.0,
+        "birthyr": 1.0,
+        "sex": 1.0,
+        "hispanic": 1.0,
+        "race": 1.0,
+        "racesec": 1.0,
+        "raceter": 1.0,
+        "primlang": 1.0,
+        "maristat": 1.0,
+        "independ": 1.0,
+        "residenc": 1.0,
+        "handed": 1.0
+    },
+    "changelog": "/profiles/changelogs/ivp_a1v2.md"
+}

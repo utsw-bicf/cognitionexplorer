@@ -1,0 +1,160 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM A1V3: SUBJECT DEMOGRAPHICS ",
+    "description": "INSTRUCTIONS: This form is to be completed by intake interviewer based on ADC scheduling records,subject interview\r, medical records, and proxy co-participant report (as needed),For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet.Form A1. Check only one box per question.",
+    "comment": "Schema for submitting UDS_ivp_A1V3 form information.",
+    "id": "/profiles/ivp_a1v3.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "ivp_a1.json#/properties"
+        },
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "prestat": {
+            "title": "3. Presumed disease status at enrollment:"
+        },
+        "prespart": {
+            "title": "4. Presumed participation:"
+        },
+        "source": {
+            "title": "5. ADC enrollment type:"
+        },
+        "birthmo": {
+            "title": "6a. Subject's month of birth(MM)"
+        },
+        "birthyr": {
+            "title": "6b. Subject's year of birth(YYYY)"
+        },
+        "sex": {
+            "title": "7. Subject's sex:"
+        },
+        "hispanic": {
+            "title": "8. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "race": {
+            "title": "9. What does subject report as his or her race?"
+        },
+        "racesec": {
+            "title": "10. What additional race does subject report?"
+        },
+        "raceter": {
+            "title": "11. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?"
+        },
+        "primlang": {
+            "title": "12. Subject's primary language:"
+        },
+        "educ": {
+            "title": "13. Subject's years of education."
+        },
+        "independ": {
+            "title": "16. What is the subject's level of independence?"
+        },
+        "zip": {
+            "title": "18. ZIP Code (first three digits) of subject's primary residence:"
+        },
+        "handed": {
+            "title": "19. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "prestat": {
+            "title": "3. Presumed disease status at enrollment:"
+        },
+        "prespart": {
+            "title": "4. Presumed participation:"
+        },
+        "source": {
+            "title": "5. ADC enrollment type:"
+        },
+        "birthmo": {
+            "title": "6a. Subject's month of birth(MM)"
+        },
+        "birthyr": {
+            "title": "6b. Subject's year of birth(YYYY)"
+        },
+        "sex": {
+            "title": "7. Subject's sex:"
+        },
+        "hispanic": {
+            "title": "8. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "race": {
+            "title": "9. What does subject report as his or her race?"
+        },
+        "racesec": {
+            "title": "10. What additional race does subject report?"
+        },
+        "raceter": {
+            "title": "11. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?"
+        },
+        "primlang": {
+            "title": "12. Subject's primary language:"
+        },
+        "educ": {
+            "title": "13. Subject's years of education."
+        },
+        "independ": {
+            "title": "16. What is the subject's level of independence?"
+        },
+        "zip": {
+            "title": "18. ZIP Code (first three digits) of subject's primary residence:"
+        },
+        "handed": {
+            "title": "19. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "prestat": 1.0,
+        "prespart": 1.0,
+        "source": 1.0,
+        "birthmo": 1.0,
+        "birthyr": 1.0,
+        "sex": 1.0,
+        "hispanic": 1.0,
+        "race": 1.0,
+        "racesec": 1.0,
+        "raceter": 1.0,
+        "primlang": 1.0,
+        "independ": 1.0,
+        "handed": 1.0
+    },
+    "changelog": "/profiles/changelogs/ivp_a1v3.md"
+}
