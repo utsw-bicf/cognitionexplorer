@@ -61,7 +61,8 @@ ORDER = [
     'fvp_b8',
     'tvp_a1',
     'tvp_z1x',
-    'ivp_z1x',
+    'ivp_z1xv2',
+    'ivp_z1xv3',
     'fvp_z1x',
     'tvp_d2',
     'tvp_t1',
@@ -386,7 +387,8 @@ def pipeline_logger(item_type, phase):
                     skipped += 1
                 elif _errors:
                     errors += 1
-                    logger.error('%s row %d: Error PROCESSING: %s\n%r\n' % (item_type, row_number, _errors, trim(row)))
+                    logger.error('%s row %d: Error PROCESSING: %s\n%r\n' %
+                                 (item_type, row_number, _errors, trim(row)))
                 yield row
                 continue
 
@@ -409,7 +411,8 @@ def pipeline_logger(item_type, phase):
 
             if res.status_int // 100 == 4:
                 errors += 1
-                logger.error('%s row %d: %s (%s)\n%r\n' % (item_type, row_number, res.status, url, trim(row['_value'])))
+                logger.error('%s row %d: %s (%s)\n%r\n' %
+                             (item_type, row_number, res.status, url, trim(row['_value'])))
 
             yield row
 
@@ -737,4 +740,3 @@ def load_test_data(app):
     inserts = resource_filename('encoded', 'tests/data/inserts/')
     docsdir = [resource_filename('encoded', 'tests/data/documents/')]
     load_all(testapp, inserts, docsdir)
-
