@@ -2,7 +2,7 @@
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM D2: Clinician-assessed Medical Conditions",
     "description": "INSTRUCTIONS: This form is to be completed by a physician, physician's assistant, nurse practitioner, or other qualified practitioner. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form D2. Link to NACC Coding Guidebook .\nMedical conditions and procedures \nThe following questions should be answered based on review of all available information, including new diagnoses made during the current visit, previous medical records, procedures, laboratory tests, and the clinical exam.",
     "comment": " ",
-    "id": "/profiles/uds_ivp_d2.json",
+    "id": "/profiles/uds_ivp_d2v3.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -11,7 +11,11 @@
         "cancer",
         "sele_note"
     ],
+    "additionalProperties": false,
     "mixinProperties": [
+        {
+            "$ref": "ivp_d2.json#/properties"
+        },
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -325,7 +329,220 @@
            
         }
     },
- 
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "schema_version": {
+            "default": "1"
+        },
+        "cancer": {
+            "title": "1. Cancer (excluding non-melanoma skin cancer), primary or metastatic"
+        },
+        "cancsite": {
+            "title": "1a. If yes, specify primary site:"
+        },
+        "sele_note.diabet": {
+            "title": "2. Diabetes"
+        },
+        "sele_note.myoinf": {
+            "title": "3. Myocardial infarct"
+        },
+        "sele_note.conghrt": {
+            "title": "4. Congestive heart failure"
+        },
+        "sele_note.afibrill": {
+            "title": "5. Atrial fibrillation"
+        },
+        "sele_note.hypert": {
+            "title": "6. Hypertension"
+        },
+        "sele_note.angina": {
+            "title": "7. Angina"
+        },
+        "sele_note.hypchol": {
+            "title": "8. Hypercholesterolemia"
+        },
+        "sele_note.vb12def": {
+            "title": "9. B12 deficiency"
+        },
+        "sele_note.thydis": {
+            "title": "10. Thyroid disease"
+        },
+        "sele_note.arth": {
+            "title": "11. Arthritis If No or Not assessed, SKIP TO QUESTION 12"
+        },
+        "sele_note.artype": {
+            "title": "11a. If yes, what type?"
+        },
+        "sele_note.artypex": {
+            "title": "11a1.  If other type of arthritis SPECIFY:"
+        },
+        "sele_note.note_d2_3.artupex": {
+            "title": "11b1.  Arthritis region affected"
+        },
+        "sele_note.note_d2_3.artloex": {
+            "title": "11b2.  Arthritis region affected"
+        },
+        "sele_note.note_d2_3.artspin": {
+            "title": "11b3.  Arthritis region affected"
+        },
+        "sele_note.note_d2_3.artunkn": {
+            "title": "11b4.  Arthritis region affected"
+        },
+        "sele_note.urineinc": {
+            "title": "12. Incontinence - urinary"
+        },
+        "sele_note.bowlinc": {
+            "title": "13. Incontinence - bowel"
+        },
+        "sele_note.sleepap": {
+            "title": "14. Sleep apnea"
+        },
+        "sele_note.remdis": {
+            "title": "15. REM sleep behavior disorder (RBD)"
+        },
+        "sele_note.hyposom": {
+            "title": "16. Hyposomnia/insomnia"
+        },
+        "sele_note.sleepoth": {
+            "title": "17. Other sleep disorder (SPECIFY BELOW):"
+        },
+        "sele_note.sleepotx": {
+            "title": "17a. Specify other sleep disorder:"
+        },
+        "sele_note.angiocp": {
+            "title": "18. Carotid procedure: angioplasty, endarterectomy, or stent"
+        },
+        "sele_note.angiopci": {
+            "title": "19. Percutaneous coronary intervention: angioplasty and/or stent"
+        },
+        "sele_note.pacemake": {
+            "title": "20. Procedure: pacemaker and/or defibrillator"
+        },
+        "sele_note.hvalve": {
+            "title": "21. Procedure: heart valve replacement or repair"
+        },
+        "sele_note.antienc": {
+            "title": "22. Antibody-mediated encephalopathy"
+        },
+        "sele_note.antiencx": {
+            "title": "22a.  Antibody-mediated encephalopathy, SPECIFY:"
+        },
+        "sele_note.othcond": {
+            "title": "23. Other medical conditions or procedures not listed above (IF YES, SPECIFY BELOW):"
+        },
+        "sele_note.othcondx": {
+            "title": "23a. If other medical conditions SPECIFY:"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "schema_version": {
+            "default": "1"
+        },
+        "cancer": {
+            "title": "1. Cancer (excluding non-melanoma skin cancer), primary or metastatic"
+        },
+        "cancsite": {
+            "title": "1a. If yes, specify primary site:"
+        },
+        "sele_note.diabet": {
+            "title": "2. Diabetes"
+        },
+        "sele_note.myoinf": {
+            "title": "3. Myocardial infarct"
+        },
+        "sele_note.conghrt": {
+            "title": "4. Congestive heart failure"
+        },
+        "sele_note.afibrill": {
+            "title": "5. Atrial fibrillation"
+        },
+        "sele_note.hypert": {
+            "title": "6. Hypertension"
+        },
+        "sele_note.angina": {
+            "title": "7. Angina"
+        },
+        "sele_note.hypchol": {
+            "title": "8. Hypercholesterolemia"
+        },
+        "sele_note.vb12def": {
+            "title": "9. B12 deficiency"
+        },
+        "sele_note.thydis": {
+            "title": "10. Thyroid disease"
+        },
+        "sele_note.arth": {
+            "title": "11. Arthritis If No or Not assessed, SKIP TO QUESTION 12"
+        },
+        "sele_note.artype": {
+            "title": "11a. If yes, what type?"
+        },
+        "sele_note.artypex": {
+            "title": "11a1.  If other type of arthritis SPECIFY:"
+        },
+        "sele_note.note_d2_3.artupex": {
+            "title": "11b1.  Arthritis region affected"
+        },
+        "sele_note.note_d2_3.artloex": {
+            "title": "11b2.  Arthritis region affected"
+        },
+        "sele_note.note_d2_3.artspin": {
+            "title": "11b3.  Arthritis region affected"
+        },
+        "sele_note.note_d2_3.artunkn": {
+            "title": "11b4.  Arthritis region affected"
+        },
+        "sele_note.urineinc": {
+            "title": "12. Incontinence - urinary"
+        },
+        "sele_note.bowlinc": {
+            "title": "13. Incontinence - bowel"
+        },
+        "sele_note.sleepap": {
+            "title": "14. Sleep apnea"
+        },
+        "sele_note.remdis": {
+            "title": "15. REM sleep behavior disorder (RBD)"
+        },
+        "sele_note.hyposom": {
+            "title": "16. Hyposomnia/insomnia"
+        },
+        "sele_note.sleepoth": {
+            "title": "17. Other sleep disorder (SPECIFY BELOW):"
+        },
+        "sele_note.sleepotx": {
+            "title": "17a. Specify other sleep disorder:"
+        },
+        "sele_note.angiocp": {
+            "title": "18. Carotid procedure: angioplasty, endarterectomy, or stent"
+        },
+        "sele_note.angiopci": {
+            "title": "19. Percutaneous coronary intervention: angioplasty and/or stent"
+        },
+        "sele_note.pacemake": {
+            "title": "20. Procedure: pacemaker and/or defibrillator"
+        },
+        "sele_note.hvalve": {
+            "title": "21. Procedure: heart valve replacement or repair"
+        },
+        "sele_note.antienc": {
+            "title": "22. Antibody-mediated encephalopathy"
+        },
+        "sele_note.antiencx": {
+            "title": "22a.  Antibody-mediated encephalopathy, SPECIFY:"
+        },
+        "sele_note.othcond": {
+            "title": "23. Other medical conditions or procedures not listed above (IF YES, SPECIFY BELOW):"
+        },
+        "sele_note.othcondx": {
+            "title": "23a. If other medical conditions SPECIFY:"
+        }
+    },
     "boost_values": {
         "patient": 1.0,
         "schema_version": 1.0,
@@ -363,5 +580,5 @@
         "sele_note.othcond": 1.0,
         "sele_note.othcondx": 1.0
     },
-    "changelog": "/profiles/changelogs/ivp_d2.md"
+    "changelog": "/profiles/changelogs/ivp_d2v3.md"
 }
