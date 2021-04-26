@@ -2,7 +2,7 @@
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
     "description": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
     "comment": " ",
-    "id": "/profiles/uds_ivp_b7.json",
+    "id": "/profiles/uds_ivp_b7v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -10,7 +10,11 @@
     "required": [
         "form_description"
     ],
+    "additionalProperties": false,
     "mixinProperties": [
+        {
+            "$ref": "ivp_b7.json#/properties"
+        },
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -177,7 +181,76 @@
             ]
         }
     },
-
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "form_description.bills": {
+            "title": "1. Writing checks, paying bills, or balancing a checkbook"
+        },
+        "form_description.taxes": {
+            "title": "2. Assembling tax records, business affairs, or other papers"
+        },
+        "form_description.shopping": {
+            "title": "3. Shopping alone for clothes, household necessities, or groceries"
+        },
+        "form_description.games": {
+            "title": "4. Playing a game of skill such as bridge or chess, working on a hobby"
+        },
+        "form_description.stove": {
+            "title": "5. Heating water, making a cup of coffee, turning off the stove"
+        },
+        "form_description.mealprep": {
+            "title": "6. Preparing a balanced meal"
+        },
+        "form_description.events": {
+            "title": "7. Keeping track of current events"
+        },
+        "form_description.payattn": {
+            "title": "8. Paying attention to and understanding a TV program, book, or magazine"
+        },
+        "form_description.remdates": {
+            "title": "9. Remembering appointments, family occasions, holidays, medications"
+        },
+        "form_description.travel": {
+            "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "form_description.bills": {
+            "title": "1. Writing checks, paying bills, or balancing a checkbook"
+        },
+        "form_description.taxes": {
+            "title": "2. Assembling tax records, business affairs, or other papers"
+        },
+        "form_description.shopping": {
+            "title": "3. Shopping alone for clothes, household necessities, or groceries"
+        },
+        "form_description.games": {
+            "title": "4. Playing a game of skill such as bridge or chess, working on a hobby"
+        },
+        "form_description.stove": {
+            "title": "5. Heating water, making a cup of coffee, turning off the stove"
+        },
+        "form_description.mealprep": {
+            "title": "6. Preparing a balanced meal"
+        },
+        "form_description.events": {
+            "title": "7. Keeping track of current events"
+        },
+        "form_description.payattn": {
+            "title": "8. Paying attention to and understanding a TV program, book, or magazine"
+        },
+        "form_description.remdates": {
+            "title": "9. Remembering appointments, family occasions, holidays, medications"
+        },
+        "form_description.travel": {
+            "title": "10. Traveling out of the neighborhood, driving, or arranging to take public transportation"
+        }
+    },
     "boost_values": {
         "patient": 1.0,
         "form_description.bills": 1.0,
@@ -191,5 +264,5 @@
         "form_description.remdates": 1.0,
         "form_description.travel": 1.0
     },
-    "changelog": "/profiles/changelogs/ivp_b7.md"
+    "changelog": "/profiles/changelogs/ivp_b7v2.md"
 }
