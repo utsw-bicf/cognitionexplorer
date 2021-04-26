@@ -1,7 +1,7 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM A4: SUBJECT MEDICATIONS",
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM A4V2: SUBJECT MEDICATIONS",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician or ADC staff. The purpose of the form is to record all prescription medications taken by the subject within the two weeks before the current visit. For prescription medications not listed here, please follow the instructions at the end of this form. OTC (non-prescription) medications need not be reported; however, a short list of medications that could be either prescription or OTC follows the prescription list. This list includes commonly reported medications that may be purchased over the counter (but that may also be prescription).",
-    "id": "/profiles/uds_ivp_a4.json",
+    "id": "/profiles/uds_ivp_a4v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
       "uuid"
@@ -9,7 +9,11 @@
     "required": [
       "anymeds"
     ],
+    "additionalProperties": false,
     "mixinProperties": [
+        {
+            "$ref": "ivp_a4.json#/properties"
+        },
       {
         "$ref": "mixins.json#/schema_version"
       },
@@ -9464,7 +9468,142 @@
         }
       }
     },
-   
+    "facets": {
+      "status": {
+        "title": "Status"
+      },
+      "anymeds": {
+        "title": "Is the subject currently taking any medications?"
+      },
+      "drugid_1": {
+        "title": "Select a medication"
+      },
+      "drugid_2": {
+        "title": "Select a 2nd medication"
+      },
+      "drugid_3": {
+        "title": "Select a 3rd medication"
+      },
+      "drugid_4": {
+        "title": "Select a 4th medication"
+      },
+      "drugid_5": {
+        "title": "Select a 5th medication"
+      },
+      "drugid_6": {
+        "title": "Select a 6th medication"
+      },
+      "drugid_7": {
+        "title": "Select a 7th medication"
+      },
+      "drugid_8": {
+        "title": "Select a 8th medication"
+      },
+      "drugid_9": {
+        "title": "Select a 9th medication"
+      },
+      "drugid_10": {
+        "title": "Select a 10th medication"
+      },
+      "not_listed_drugs.drugid_31": {
+        "title": "Type a drug ID as given in the look up table."
+      },
+      "not_listed_drugs.drug_name_31": {
+        "title": "Type the name of the drug -"
+      },
+      "not_listed_drugs.drugid_32": {
+        "title": "Type a 2nd drug ID"
+      },
+      "not_listed_drugs.drug_name_32": {
+        "title": "Type the name of the drug -"
+      },
+      "not_listed_drugs.drugid_33": {
+        "title": "Type a 3rd drug ID"
+      },
+      "not_listed_drugs.drug_name_33": {
+        "title": "Type the name of the drug -"
+      },
+      "not_listed_drugs.drugid_34": {
+        "title": "Type a 4th drug ID"
+      },
+      "not_listed_drugs.drug_name_34": {
+        "title": "Type the name of the drug -"
+      },
+      "not_listed_drugs.drugid_35": {
+        "title": "Type a 5th drug ID"
+      },
+      "not_listed_drugs.drug_name_35": {
+        "title": "Type the name of the drug -"
+      }
+    },
+    "columns": {
+      "status": {
+        "title": "Status"
+      },
+      "anymeds": {
+        "title": "Is the subject currently taking any medications?"
+      },
+      "drugid_1": {
+        "title": "Select a medication"
+      },
+      "drugid_2": {
+        "title": "Select a 2nd medication"
+      },
+      "drugid_3": {
+        "title": "Select a 3rd medication"
+      },
+      "drugid_4": {
+        "title": "Select a 4th medication"
+      },
+      "drugid_5": {
+        "title": "Select a 5th medication"
+      },
+      "drugid_6": {
+        "title": "Select a 6th medication"
+      },
+      "drugid_7": {
+        "title": "Select a 7th medication"
+      },
+      "drugid_8": {
+        "title": "Select a 8th medication"
+      },
+      "drugid_9": {
+        "title": "Select a 9th medication"
+      },
+      "drugid_10": {
+        "title": "Select a 10th medication"
+      },
+      "not_listed_drugs.drugid_31": {
+        "title": "Type a drug ID as given in the look up table."
+      },
+      "not_listed_drugs.drug_name_31": {
+        "title": "Type the name of the drug -"
+      },
+      "not_listed_drugs.drugid_32": {
+        "title": "Type a 2nd drug ID"
+      },
+      "not_listed_drugs.drug_name_32": {
+        "title": "Type the name of the drug -"
+      },
+      "not_listed_drugs.drugid_33": {
+        "title": "Type a 3rd drug ID"
+      },
+      "not_listed_drugs.drug_name_33": {
+        "title": "Type the name of the drug -"
+      },
+      "not_listed_drugs.drugid_34": {
+        "title": "Type a 4th drug ID"
+      },
+      "not_listed_drugs.drug_name_34": {
+        "title": "Type the name of the drug -"
+      },
+      "not_listed_drugs.drugid_35": {
+        "title": "Type a 5th drug ID"
+      },
+      "not_listed_drugs.drug_name_35": {
+        "title": "Type the name of the drug -"
+      }
+    },
     "boost_values": {
       "patient": 1.0,
       "anymeds": 1.0,
@@ -9489,5 +9628,5 @@
       "not_listed_drugs.drugid_35": 1.0,
       "not_listed_drugs.drug_name_35": 1.0
     },
-    "changelog": "/profiles/changelogs/ivp_a4.md"
+    "changelog": "/profiles/changelogs/ivp_a4v2.md"
   }
