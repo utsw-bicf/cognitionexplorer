@@ -1,7 +1,6 @@
 {
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B5: BEHAVIORAL ASSESSMENT Neuropsychiatric Inventory Questionnaire (NPI-Q[1])",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional based on co-participant interview, as described by the training video. (This is not to be completed by the subject as a paper-and-pencil self-report.) For information on NPI-Q Interviewer Certification, see UDS Coding Guidebook for Initial Visit Packet, Form B5. Link to NACC Coding Guidebook",
-    "comment": " ",
     "id": "/profiles/uds_ivp_b5v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [

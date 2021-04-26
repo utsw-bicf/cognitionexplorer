@@ -1,14 +1,17 @@
 {
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B6: BEHAVIORAL ASSESSMENT - GERIATRIC DEPRESSION SCALE (GDS[1])",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional, based on subject response. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form B6. Link to NACC Coding Guidebook. \nCheck only one answer per question.",
-    "id": "/profiles/uds_ivp_b6.json",
-    
+    "id": "/profiles/uds_ivp_b6v3.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
     ],
-  
+    
+    "additionalProperties": false,
     "mixinProperties": [
+        {
+            "$ref": "ivp_b6.json#/properties"
+        },
         {
             "$ref": "mixins.json#/schema_version"
           },
@@ -185,7 +188,113 @@
             "pattern": "^([0-9]|[1][0-5]|88)$"
         }
     },
-
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "satis": {
+            "title": "1. Are you basically satisfied with your life?"
+        },
+        "dropact": {
+            "title": "2. Have you dropped many of your activities and interests?"
+        },
+        "empty": {
+            "title": "3. Do you feel that your life is empty?"
+        },
+        "bored": {
+            "title": "4. Do you often get bored?"
+        },
+        "spirits": {
+            "title": "5. Are you in good spirits most of the time?"
+        },
+        "afraid": {
+            "title": "6. Are you afraid that something bad is going to happen to you?"
+        },
+        "happy": {
+            "title": "7. Do you feel happy most of the time?"
+        },
+        "helpless": {
+            "title": "8. Do you often feel helpless?"
+        },
+        "stayhome": {
+            "title": "9. Do you prefer to stay at home, rather than going out and doing new things?"
+        },
+        "memprob": {
+            "title": "10. Do you feel you have more problems with memory than most?"
+        },
+        "wondrful": {
+            "title": "11. Do you think it is wonderful to be alive now?"
+        },
+        "wrthless": {
+            "title": "12. Do you feel pretty worthless the way you are now?"
+        },
+        "energy": {
+            "title": "13. Do you feel full of energy?"
+        },
+        "hopeless": {
+            "title": "14. Do you feel that your situation is hopeless"
+        },
+        "better": {
+            "title": "15. Do you think that most people are better off than you are?"
+        },
+        "gds": {
+            "title": "16. Sum all checked answers for a Total GDS Score"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "satis": {
+            "title": "1. Are you basically satisfied with your life?"
+        },
+        "dropact": {
+            "title": "2. Have you dropped many of your activities and interests?"
+        },
+        "empty": {
+            "title": "3. Do you feel that your life is empty?"
+        },
+        "bored": {
+            "title": "4. Do you often get bored?"
+        },
+        "spirits": {
+            "title": "5. Are you in good spirits most of the time?"
+        },
+        "afraid": {
+            "title": "6. Are you afraid that something bad is going to happen to you?"
+        },
+        "happy": {
+            "title": "7. Do you feel happy most of the time?"
+        },
+        "helpless": {
+            "title": "8. Do you often feel helpless?"
+        },
+        "stayhome": {
+            "title": "9. Do you prefer to stay at home, rather than going out and doing new things?"
+        },
+        "memprob": {
+            "title": "10. Do you feel you have more problems with memory than most?"
+        },
+        "wondrful": {
+            "title": "11. Do you think it is wonderful to be alive now?"
+        },
+        "wrthless": {
+            "title": "12. Do you feel pretty worthless the way you are now?"
+        },
+        "energy": {
+            "title": "13. Do you feel full of energy?"
+        },
+        "hopeless": {
+            "title": "14. Do you feel that your situation is hopeless"
+        },
+        "better": {
+            "title": "15. Do you think that most people are better off than you are?"
+        },
+        "gds": {
+            "title": "16. Sum all checked answers for a Total GDS Score"
+        }
+        
+    },
     "boost_values": {
         "patient": 1.0,
         "satis": 1.0,
@@ -205,5 +314,5 @@
         "better": 1.0,
         "gds": 1.0
     },
-    "changelog": "/profiles/changelogs/ivp_b6.md"
+    "changelog": "/profiles/changelogs/ivp_b6v3.md"
 }
