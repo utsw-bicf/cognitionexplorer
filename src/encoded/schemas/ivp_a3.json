@@ -17,7 +17,6 @@
         "note_a3_1",
         "note_a3_2"
     ],
-    "additionalProperties": false,
     "mixinProperties": [
         {
             "$ref": "mixins.json#/schema_version"
@@ -4375,94 +4374,7 @@
             }
         }
     },
-    "facets": {
-        "status": {
-            "title": "Status"
-        },
-        "afffamm": {
-            "title": "1. Are there affected first-degree relatives (biological parents, full siblings, or biological children)?"
-        },
-        "fadmut": {
-            "title": "2a. In this family, is there evidence for an AD mutation? If Yes, select predominant mutation."
-        },
-        "fadmutx": {
-            "title": "2a1. Other (specify predominant AD mutation in this family):"
-        },
-        "fadmuso": {
-            "title": "2b. Source of evidence for AD mutation (check one):"
-        },
-        "fadmusox": {
-            "title": "2b1. Other (specify the other source of evidence -AD mutation in this family)"
-        },
-        "fftdmut": {
-            "title": "3a. In this family, is there evidence for an FTLD mutation? If Yes, select predominant mutation."
-        },
-        "fftdmutx": {
-            "title": "3a1. Other (specify the predominant FTLD mutation in this family)"
-        },
-        "fftdmuso": {
-            "title": "3b. Source of evidence for FTLD mutation (check one):"
-        },
-        "fftdmusx": {
-            "title": "3b1.  Other (Specify the other source of evidence -FTLD mutation in this family)"
-        },
-        "fothmut": {
-            "title": "4a. In this family, is there evidence for a mutation other than an AD or FTLD mutation?  (If No or Unknown, SKIP TO QUESTION 5a)"
-        },
-        "fothmutx": {
-            "title": "4a1. Other (specify the other mutation in this family)"
-        },
-        "fothmuso": {
-            "title": "4b. Source of evidence for other mutation (check one):"
-        },
-        "fothmusx": {
-            "title": "4b1.  Other (Specify the other source of evidence -  other mutation in this family)"
-        }
-    },
-    "columns": {
-        "status": {
-            "title": "Status"
-        },
-        "afffamm": {
-            "title": "1. Are there affected first-degree relatives (biological parents, full siblings, or biological children)?"
-        },
-        "fadmut": {
-            "title": "2a. In this family, is there evidence for an AD mutation? If Yes, select predominant mutation."
-        },
-        "fadmutx": {
-            "title": "2a1. Other (specify predominant AD mutation in this family):"
-        },
-        "fadmuso": {
-            "title": "2b. Source of evidence for AD mutation (check one):"
-        },
-        "fadmusox": {
-            "title": "2b1. Other (specify the other source of evidence -AD mutation in this family)"
-        },
-        "fftdmut": {
-            "title": "3a. In this family, is there evidence for an FTLD mutation? If Yes, select predominant mutation."
-        },
-        "fftdmutx": {
-            "title": "3a1. Other (specify the predominant FTLD mutation in this family)"
-        },
-        "fftdmuso": {
-            "title": "3b. Source of evidence for FTLD mutation (check one):"
-        },
-        "fftdmusx": {
-            "title": "3b1.  Other (Specify the other source of evidence -FTLD mutation in this family)"
-        },
-        "fothmut": {
-            "title": "4a. In this family, is there evidence for a mutation other than an AD or FTLD mutation?  (If No or Unknown, SKIP TO QUESTION 5a)"
-        },
-        "fothmutx": {
-            "title": "4a1. Other (specify the other mutation in this family)"
-        },
-        "fothmuso": {
-            "title": "4b. Source of evidence for other mutation (check one):"
-        },
-        "fothmusx": {
-            "title": "4b1.  Other (Specify the other source of evidence -  other mutation in this family)"
-        }
-    },
+   
     "boost_values": {
         "patient": 1.0,
         "afffamm": 1.0,
