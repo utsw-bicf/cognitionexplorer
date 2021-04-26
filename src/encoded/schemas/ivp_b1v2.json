@@ -1,7 +1,7 @@
 {
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B1: EVALUATION FORM - PHYSICAL",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form B1. Check only one box per question.\nLink to NACC Coding Guidebook",
-    "id": "/profiles/uds_ivp_b1.json",
+    "id": "/profiles/uds_ivp_b1v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -11,6 +11,9 @@
         "addi_phys_obse"
     ],
     "mixinProperties": [
+        {
+            "$ref": "ivp_b1.json#/properties"
+        },
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -156,7 +159,82 @@
             ]
         }
     },
- 
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "subj_phys_meas.height": {
+            "title": "1. Subject height (inches)"
+        },
+        "subj_phys_meas.weight": {
+            "title": "2. Subject weight (lbs.)"
+        },
+        "subj_phys_meas.bpsys": {
+            "title": "3a. Subject blood pressure at initial reading(sitting), systolic"
+        },
+        "subj_phys_meas.bpdias": {
+            "title": "3b. Subject blood pressure at initial reading(sitting), diastolic"
+        },
+        "subj_phys_meas.hrate": {
+            "title": "4. Subject resting heart rate (pulse)"
+        },
+        "addi_phys_obse.vision": {
+            "title": "5. Without corrective lenses, is the subject's vision functionally normal?"
+        },
+        "addi_phys_obse.viscorr": {
+            "title": "6. Does the subject usually wear corrective lenses? "
+        },
+        "addi_phys_obse.viswcorr": {
+            "title": "6a. If yes, is the subject's vision functionally normal with corrective lenses?"
+        },
+        "addi_phys_obse.hearing": {
+            "title": "7. Without a hearing aid(s), is the subject's hearing functionally normal?"
+        },
+        "addi_phys_obse.hearaid": {
+            "title": "8. Does the subject usually wear a hearing aid(s)?"
+        },
+        "addi_phys_obse.hearwaid": {
+            "title": "8a. If yes, is the subject's hearing functionally normal with a hearing aid(s)?"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "subj_phys_meas.height": {
+            "title": "1. Subject height (inches)"
+        },
+        "subj_phys_meas.weight": {
+            "title": "2. Subject weight (lbs.)"
+        },
+        "subj_phys_meas.bpsys": {
+            "title": "3a. Subject blood pressure at initial reading(sitting), systolic"
+        },
+        "subj_phys_meas.bpdias": {
+            "title": "3b. Subject blood pressure at initial reading(sitting), diastolic"
+        },
+        "subj_phys_meas.hrate": {
+            "title": "4. Subject resting heart rate (pulse)"
+        },
+        "addi_phys_obse.vision": {
+            "title": "5. Without corrective lenses, is the subject's vision functionally normal?"
+        },
+        "addi_phys_obse.viscorr": {
+            "title": "6. Does the subject usually wear corrective lenses?"
+        },
+        "addi_phys_obse.viswcorr": {
+            "title": "6a. If yes, is the subject's vision functionally normal with corrective lenses?"
+        },
+        "addi_phys_obse.hearing": {
+            "title": "7. Without a hearing aid(s), is the subject's hearing functionally normal?"
+        },
+        "addi_phys_obse.hearaid": {
+            "title": "8. Does the subject usually wear a hearing aid(s)?"
+        },
+        "addi_phys_obse.hearwaid": {
+            "title": "8a. If yes, is the subject's hearing functionally normal with a hearing aid(s)?"
+        }
+    },
     "boost_values": {
         "patient": 1.0,
         "subj_phys_meas.height": 1.0,
@@ -171,5 +249,5 @@
         "addi_phys_obse.hearaid": 1.0,
         "addi_phys_obse.hearwaid": 1.0
     },
-    "changelog": "/profiles/changelogs/ivp_b1.md"
+    "changelog": "/profiles/changelogs/ivp_b1v2.md"
 }

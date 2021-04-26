@@ -1,4 +1,4 @@
-## Changelog for patient.json
+## Changelog for ivp_b1.json
 
 
 ### Schema version 1
