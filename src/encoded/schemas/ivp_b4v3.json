@@ -2,7 +2,7 @@
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B4®: Dementia Staging Instrument plus NACC FTLD Behario & Language Domains (CDR® Plus NACC FTLD)",
     "description": "INSTRUCTIONS: For information on the required online CDR training, see UDS Coding Guidebook for Initial Visit Packet, Form B4. This form is to be completed by the clinician or other trained health professional, based on co-participant report and behavioral and neurological exam of the subject. In the extremely rare instances when no co-participant is available, the clinician or other trained health professional must complete this form using all other available information and his/her best clinical judgement. Score only as decline from previous level due to cognitive loss, not impairment due to other factors, such as physical disability. For further information, see UDS Coding Guidebook for Initial Visit Packet, Form B4.Link to NACC Coding Guidebook",
     "comment": "Schema for submitting UDS ivp_A1 form information. ",
-    "id": "/profiles/uds_ivp_b4.json",
+    "id": "/profiles/uds_ivp_b2v3.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -11,7 +11,11 @@
         "sec1",
         "sec2"
     ],
+    "additionalProperties": false,
     "mixinProperties": [
+        {
+            "$ref": "ivp_b4.json#/properties"
+        },
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -171,7 +175,76 @@
             ]
         }
     },
-
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "sec1.memory": {
+            "title": "1. MEMORY"
+        },
+        "sec1.orient": {
+            "title": "2. ORIENTATION"
+        },
+        "sec1.judgment": {
+            "title": "3. JUDGMENT & PROBLEM SOLVING"
+        },
+        "sec1.commun": {
+            "title": "4. COMMUNITY AFFAIRS"
+        },
+        "sec1.homehobb": {
+            "title": "5. HOME & HOBBIES"
+        },
+        "sec1.perscare": {
+            "title": "6. PERSONAL CARE"
+        },
+        "sec1.cdrsum": {
+            "title": "7. CDR SUM OF BOXES"
+        },
+        "sec1.cdrglob": {
+            "title": "8. GLOBAL CDR"
+        },
+        "sec2.comport": {
+            "title": "9. BEHAVIOR, COMPORTMENT AND PERSONALITY 2"
+        },
+        "sec2.cdrlang": {
+            "title": "10. LANGUAGE 3"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "sec1.memory": {
+            "title": "1. MEMORY"
+        },
+        "sec1.orient": {
+            "title": "2. ORIENTATION"
+        },
+        "sec1.judgment": {
+            "title": "3. JUDGMENT & PROBLEM SOLVING"
+        },
+        "sec1.commun": {
+            "title": "4. COMMUNITY AFFAIRS"
+        },
+        "sec1.homehobb": {
+            "title": "5. HOME & HOBBIES"
+        },
+        "sec1.perscare": {
+            "title": "6. PERSONAL CARE"
+        },
+        "sec1.cdrsum": {
+            "title": "7. CDR SUM OF BOXES"
+        },
+        "sec1.cdrglob": {
+            "title": "8. GLOBAL CDR"
+        },
+        "sec2.comport": {
+            "title": "9. BEHAVIOR, COMPORTMENT AND PERSONALITY 2"
+        },
+        "sec2.cdrlang": {
+            "title": "10. LANGUAGE 3"
+        }
+    },
     "boost_values": {
         "patient": 1.0,
         "sec1.memory": 1.0,
@@ -185,5 +258,5 @@
         "sec2.comport": 1.0,
         "sec2.cdrlang": 1.0
     },
-    "changelog": "/profiles/changelogs/ivp_b4.md"
+    "changelog": "/profiles/changelogs/ivp_b2v3.md"
 }
