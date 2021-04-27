@@ -49,7 +49,8 @@ ORDER = [
 
     'ivp_b9v3',
     'ivp_b9v2',
-    'ivp_c2',
+    'ivp_c2v3',
+    'ivp_c2v2',
     'ivp_d1',
     'ivp_d2v3',
     'ivp_d2v2',

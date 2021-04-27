@@ -1,7 +1,7 @@
 {
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm C2: Neuropsychological BatterScores",
     "description": "INSTRUCTIONS: This form is to be completed by ADC or clinic staff. For test administration and scoring, see \nInstructions for Neuropsychological Battery Form C2. Link to C2 Instructions . Any new subjects who enroll in \nthe UDS after the implementation of UDS3 must be assessed with the new neuropsychological test battery (Form \nC2).\nKEY: If the subject cannot complete any of the following exams, please give the reason by entering one of the \nfollowing codes:\n95/995=Physical problem\n96/996=Cognitive/behavior problem\n97/997=Other problem\n98/998=Verbal refusal",
-    "id": "/profiles/uds_ivp_c2.json",
+    "id": "/profiles/uds_ivp_c2v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -20,7 +20,11 @@
         "mint",
         "verb_fluency_phone_test"
     ],
+    "additionalProperties": false,
     "mixinProperties": [
+        {
+            "$ref": "ivp_c2.json#/properties"
+        },
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -579,78 +583,510 @@
             }
         }
     },
-    "boost_values": {
-        "status": 1.0,
-        "moca.mocacomp": 1.0,
-        "moca.mocareas": 1.0,
-        "moca.mocaloc": 1.0,
-        "moca.mocalan": 1.0,
-        "moca.mocalanx": 1.0,
-        "moca.mocavis": 1.0,
-        "moca.mocahear": 1.0,
-        "moca.mocatots": 1.0,
-        "moca.alert_mocatots.mocatrai": 1.0,
-        "moca.alert_mocatots.mocacube": 1.0,
-        "moca.alert_mocatots.mocacloc": 1.0,
-        "moca.alert_mocatots.mocaclon": 1.0,
-        "moca.alert_mocatots.mocacloh": 1.0,
-        "moca.alert_mocatots.mocanami": 1.0,
-        "moca.alert_mocatots.mocaregi": 1.0,
-        "moca.alert_mocatots.mocadigi": 1.0,
-        "moca.alert_mocatots.mocalett": 1.0,
-        "moca.alert_mocatots.mocaser7": 1.0,
-        "moca.alert_mocatots.mocarepe": 1.0,
-        "moca.alert_mocatots.mocaflue": 1.0,
-        "moca.alert_mocatots.mocaabst": 1.0,
-        "moca.alert_mocatots.mocarecn": 1.0,
-        "moca.alert_mocatots.mocarecc": 1.0,
-        "moca.alert_mocatots.mocarecr": 1.0,
-        "moca.alert_mocatots.mocaordt": 1.0,
-        "moca.alert_mocatots.mocaormo": 1.0,
-        "moca.alert_mocatots.mocaoryr": 1.0,
-        "moca.alert_mocatots.mocaordy": 1.0,
-        "moca.alert_mocatots.mocaorpl": 1.0,
-        "moca.alert_mocatots.mocaorct": 1.0,
-        "admin_rema_btry.npsycloc_c2": 1.0,
-        "admin_rema_btry.npsylan_c2": 1.0,
-        "admin_rema_btry.npsylanx_c2": 1.0,
-        "crft_stry_recl.craftvrs": 1.0,
-        "crft_stry_recl.crafturs": 1.0,
-        "bens_cplx_figr.udsbentc": 1.0,
-        "numb_span_test_fwd.digforct": 1.0,
-        "numb_span_test_fwd.digforsl": 1.0,
-        "numb_span_test_bkwd.digbacct": 1.0,
-        "numb_span_test_bkwd.digbacls": 1.0,
-        "category_fluency.animals_c2": 1.0,
-        "category_fluency.veg_c2": 1.0,
-        "trail_make_test.traila_c2": 1.0,
-        "trail_make_test.trailarr_c2": 1.0,
-        "trail_make_test.trailali_c2": 1.0,
-        "trail_make_test.trailb_c2": 1.0,
-        "trail_make_test.trailbrr_c2": 1.0,
-        "trail_make_test.trailbli_c2": 1.0,
-        "crft_stry_recl_dely.craftdvr": 1.0,
-        "crft_stry_recl_dely.craftdre": 1.0,
-        "crft_stry_recl_dely.craftdti": 1.0,
-        "crft_stry_recl_dely.craftcue": 1.0,
-        "bens_cplx_figr_recl.udsbentd": 1.0,
-        "bens_cplx_figr_recl.udsbenrs": 1.0,
-        "mint.minttots": 1.0,
-        "mint.minttotw": 1.0,
-        "mint.mintscng": 1.0,
-        "mint.mintscnc": 1.0,
-        "mint.mintpcng": 1.0,
-        "mint.mintpcnc": 1.0,
-        "verb_fluency_phone_test.udsverfc": 1.0,
-        "verb_fluency_phone_test.udsverfn": 1.0,
-        "verb_fluency_phone_test.udsvernf": 1.0,
-        "verb_fluency_phone_test.udsverlc": 1.0,
-        "verb_fluency_phone_test.udsverlr": 1.0,
-        "verb_fluency_phone_test.udsverln": 1.0,
-        "verb_fluency_phone_test.udsvertn": 1.0,
-        "verb_fluency_phone_test.udsverte": 1.0,
-        "verb_fluency_phone_test.udsverti": 1.0,
-        "overall_aprsl.cogstat_c2": 1.0
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "moca.mocacomp": {
+            "title": "1a. Was any part of the MoCA administered? "
+        },
+        "moca.mocareas": {
+            "title": "1a1. Was any part of MoCA administered?  If no, enter reason code, 95-98) "
+        },
+        "moca.mocaloc": {
+            "title": "1b. MoCA was administered: "
+        },
+        "moca.mocalan": {
+            "title": "1c. Language of MoCA administration: "
+        },
+        "moca.mocalanx": {
+            "title": "1c1. Specify language of MoCA administration "
+        },
+        "moca.mocavis": {
+            "title": "1d. Subject was unable to complete one or more sections due to visual impairment:  "
+        },
+        "moca.mocahear": {
+            "title": "1e. Subject was unable to complete one or more sections due to hearing impairment:  "
+        },
+        "moca.mocatots": {
+            "title": "1f. TOTAL RAW SCORE - UNCORRECTED (Not corrected for education or visual/hearing impairment)&nbsp  "
+        },
+        "moca.alert_mocatots.mocatrai": {
+            "title": "1g. Visuospatial/executive -- Trails "
+        },
+        "moca.alert_mocatots.mocacube": {
+            "title": "1h. Visuospatial/executive -- Cube "
+        },
+        "moca.alert_mocatots.mocacloc": {
+            "title": "1i. Visuospatial/executive -- Clock contour "
+        },
+        "moca.alert_mocatots.mocaclon": {
+            "title": "1j.  Visuospatial/executive -- Clock numbers "
+        },
+        "moca.alert_mocatots.mocacloh": {
+            "title": "1k. Visuospatial/executive -- Clock hands "
+        },
+        "moca.alert_mocatots.mocanami": {
+            "title": "1l.  Language -- Naming "
+        },
+        "moca.alert_mocatots.mocaregi": {
+            "title": "1m. Memory -- Registration (two trials) "
+        },
+        "moca.alert_mocatots.mocadigi": {
+            "title": "1n. Attention -- Digits "
+        },
+        "moca.alert_mocatots.mocalett": {
+            "title": "1o. Attention -- Letter A "
+        },
+        "moca.alert_mocatots.mocaser7": {
+            "title": "1p. Attention -- Serial 7s "
+        },
+        "moca.alert_mocatots.mocarepe": {
+            "title": "1q. Language -- Repetition "
+        },
+        "moca.alert_mocatots.mocaflue": {
+            "title": "1r. Language -- Fluency "
+        },
+        "moca.alert_mocatots.mocaabst": {
+            "title": "1s. Abstraction "
+        },
+        "moca.alert_mocatots.mocarecn": {
+            "title": "1t. Delayed recall -- No cue "
+        },
+        "moca.alert_mocatots.mocarecc": {
+            "title": "1u. Delayed recall -- Category cue "
+        },
+        "moca.alert_mocatots.mocarecr": {
+            "title": "1v. Delayed recall -- Recognition "
+        },
+        "moca.alert_mocatots.mocaordt": {
+            "title": "1w. Orientation -- Date "
+        },
+        "moca.alert_mocatots.mocaormo": {
+            "title": "1x. Orientation -- Month "
+        },
+        "moca.alert_mocatots.mocaoryr": {
+            "title": "1y. Orientation -- Year "
+        },
+        "moca.alert_mocatots.mocaordy": {
+            "title": "1z. Orientation -- Day "
+        },
+        "moca.alert_mocatots.mocaorpl": {
+            "title": "1aa. Orientation -- Place "
+        },
+        "moca.alert_mocatots.mocaorct": {
+            "title": "1bb. Orientation -- City "
+        },
+        "admin_rema_btry.npsycloc_c2": {
+            "title": "2a. The tests following the MoCA were administered: "
+        },
+        "admin_rema_btry.npsylan_c2": {
+            "title": "2b. Test following MoCA:  Language of test administration. "
+        },
+        "admin_rema_btry.npsylanx_c2": {
+            "title": "2b1. Other language of tests following the MoCA: "
+        },
+        "crft_stry_recl.craftvrs": {
+            "title": "3a. Total story units recalled, verbatim scoring "
+        },
+        "crft_stry_recl.crafturs": {
+            "title": "3b. Total story units recalled, paraphrase scoring (0-25) "
+        },
+        "bens_cplx_figr.udsbentc": {
+            "title": "4a. Total score for copy of Benson figure "
+        },
+        "numb_span_test_fwd.digforct": {
+            "title": "5a. Number of correct trials "
+        },
+        "numb_span_test_fwd.digforsl": {
+            "title": "5b. Longest span forward "
+        },
+        "numb_span_test_bkwd.digbacct": {
+            "title": "6a. Number of correct trials "
+        },
+        "numb_span_test_bkwd.digbacls": {
+            "title": "6b. Longest span backward "
+        },
+        "category_fluency.animals_c2": {
+            "title": "7a.  Animals: Total number of animals named in 60 second "
+        },
+        "category_fluency.veg_c2": {
+            "title": "7b.  Vegetables: Total number of vegetables named in 60 second "
+        },
+        "trail_make_test.traila_c2": {
+            "title": "8a. PART A: Total number of seconds to complete  "
+        },
+        "trail_make_test.trailarr_c2": {
+            "title": "8a1. Number of commission errors "
+        },
+        "trail_make_test.trailali_c2": {
+            "title": "8a2. Number of correct lines "
+        },
+        "trail_make_test.trailb_c2": {
+            "title": "8b. PART B: Total number of seconds to complete  "
+        },
+        "trail_make_test.trailbrr_c2": {
+            "title": "8b1. Number of commission errors "
+        },
+        "trail_make_test.trailbli_c2": {
+            "title": "8b2. Number of correct lines "
+        },
+        "crft_stry_recl_dely.craftdvr": {
+            "title": "9a. Total story units recalled, verbatim scoring "
+        },
+        "crft_stry_recl_dely.craftdre": {
+            "title": "9b. Total story units recalled, paraphrase scoring (0-25) "
+        },
+        "crft_stry_recl_dely.craftdti": {
+            "title": "9c. Delay time (minutes)  (99=Unknown)"
+        },
+        "crft_stry_recl_dely.craftcue": {
+            "title": "9d. Cue (\"boy\") needed "
+        },
+        "bens_cplx_figr_recl.udsbentd": {
+            "title": "10a. Total score for drawing of Benson figure following 10- to 15-minute delay"
+        },
+        "bens_cplx_figr_recl.udsbenrs": {
+            "title": "10b. Recognized original stimulus from among four options?"
+        },
+        "mint.minttots": {
+            "title": "11a. Total score "
+        },
+        "mint.minttotw": {
+            "title": "11b. Total correct without semantic cue"
+        },
+        "mint.mintscng": {
+            "title": "11c. Semantic cues: Number given"
+        },
+        "mint.mintscnc": {
+            "title": "11d. Semantic cues: Number correct with cue  (88=not applicable)"
+        },
+        "mint.mintpcng": {
+            "title": "11e. Phonemic cues: Number given"
+        },
+        "mint.mintpcnc": {
+            "title": "11f. Phonemic cues: Number correct with cue  (88=not applicable)"
+        },
+        "verb_fluency_phone_test.udsverfc": {
+            "title": "12a. Number of correct F-words generated in 1 minute"
+        },
+        "verb_fluency_phone_test.udsverfn": {
+            "title": "12b. Number of  F-words  repeated in 1 minute"
+        },
+        "verb_fluency_phone_test.udsvernf": {
+            "title": "12c. Number of  F-words  and rule violation errors in 1 minute "
+        },
+        "verb_fluency_phone_test.udsverlc": {
+            "title": "12d. Number of correct L-words generated in 1 minute"
+        },
+        "verb_fluency_phone_test.udsverlr": {
+            "title": "12e. Number of  L-words  repeated in 1 minute "
+        },
+        "verb_fluency_phone_test.udsverln": {
+            "title": "12f. Number of  non-L-words  and rule violation errors in 1 minute"
+        },
+        "verb_fluency_phone_test.udsvertn": {
+            "title": "12g. TOTAL number of correct  F-words and L-words"
+        },
+        "verb_fluency_phone_test.udsverte": {
+            "title": "12h. TOTAL number of  F-words and L-words  repetition errors"
+        },
+        "verb_fluency_phone_test.udsverti": {
+            "title": "12i. TOTAL number of  non-F/L words  and rule violation errors"
+        },
+        "overall_aprsl.cogstat_c2": {
+            "title": "13a. Per the clinician (e.g., neuropsychologist, behavioral neurologist, or other suitably qualified clinician), based on the UDS Neuropsychological examination, the subject's cognitive status is deemed: "
+        }
     },
-    "changelog": "/profiles/changelogs/ivp_c2.md"
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "moca.mocacomp": {
+            "title": "1a. Was any part of the MoCA administered? "
+        },
+        "moca.mocareas": {
+            "title": "1a1. Was any part of MoCA administered?  If no, enter reason code, 95-98) "
+        },
+        "moca.mocaloc": {
+            "title": "1b. MoCA was administered: "
+        },
+        "moca.mocalan": {
+            "title": "1c. Language of MoCA administration: "
+        },
+        "moca.mocalanx": {
+            "title": "1c1. Specify language of MoCA administration "
+        },
+        "moca.mocavis": {
+            "title": "1d. Subject was unable to complete one or more sections due to visual impairment:  "
+        },
+        "moca.mocahear": {
+            "title": "1e. Subject was unable to complete one or more sections due to hearing impairment:  "
+        },
+        "moca.mocatots": {
+            "title": "1f. TOTAL RAW SCORE - UNCORRECTED (Not corrected for education or visual/hearing impairment)&nbsp  "
+        },
+        "moca.alert_mocatots.mocatrai": {
+            "title": "1g. Visuospatial/executive -- Trails "
+        },
+        "moca.alert_mocatots.mocacube": {
+            "title": "1h. Visuospatial/executive -- Cube "
+        },
+        "moca.alert_mocatots.mocacloc": {
+            "title": "1i. Visuospatial/executive -- Clock contour "
+        },
+        "moca.alert_mocatots.mocaclon": {
+            "title": "1j.  Visuospatial/executive -- Clock numbers "
+        },
+        "moca.alert_mocatots.mocacloh": {
+            "title": "1k. Visuospatial/executive -- Clock hands "
+        },
+        "moca.alert_mocatots.mocanami": {
+            "title": "1l.  Language -- Naming "
+        },
+        "moca.alert_mocatots.mocaregi": {
+            "title": "1m. Memory -- Registration (two trials) "
+        },
+        "moca.alert_mocatots.mocadigi": {
+            "title": "1n. Attention -- Digits "
+        },
+        "moca.alert_mocatots.mocalett": {
+            "title": "1o. Attention -- Letter A "
+        },
+        "moca.alert_mocatots.mocaser7": {
+            "title": "1p. Attention -- Serial 7s "
+        },
+        "moca.alert_mocatots.mocarepe": {
+            "title": "1q. Language -- Repetition "
+        },
+        "moca.alert_mocatots.mocaflue": {
+            "title": "1r. Language -- Fluency "
+        },
+        "moca.alert_mocatots.mocaabst": {
+            "title": "1s. Abstraction "
+        },
+        "moca.alert_mocatots.mocarecn": {
+            "title": "1t. Delayed recall -- No cue "
+        },
+        "moca.alert_mocatots.mocarecc": {
+            "title": "1u. Delayed recall -- Category cue "
+        },
+        "moca.alert_mocatots.mocarecr": {
+            "title": "1v. Delayed recall -- Recognition "
+        },
+        "moca.alert_mocatots.mocaordt": {
+            "title": "1w. Orientation -- Date "
+        },
+        "moca.alert_mocatots.mocaormo": {
+            "title": "1x. Orientation -- Month "
+        },
+        "moca.alert_mocatots.mocaoryr": {
+            "title": "1y. Orientation -- Year "
+        },
+        "moca.alert_mocatots.mocaordy": {
+            "title": "1z. Orientation -- Day "
+        },
+        "moca.alert_mocatots.mocaorpl": {
+            "title": "1aa. Orientation -- Place "
+        },
+        "moca.alert_mocatots.mocaorct": {
+            "title": "1bb. Orientation -- City "
+        },
+        "admin_rema_btry.npsycloc_c2": {
+            "title": "2a. The tests following the MoCA were administered: "
+        },
+        "admin_rema_btry.npsylan_c2": {
+            "title": "2b. Test following MoCA:  Language of test administration. "
+        },
+        "admin_rema_btry.npsylanx_c2": {
+            "title": "2b1. Other language of tests following the MoCA: "
+        },
+        "crft_stry_recl.craftvrs": {
+            "title": "3a. Total story units recalled, verbatim scoring "
+        },
+        "crft_stry_recl.crafturs": {
+            "title": "3b. Total story units recalled, paraphrase scoring (0-25) "
+        },
+        "bens_cplx_figr.udsbentc": {
+            "title": "4a. Total score for copy of Benson figure "
+        },
+        "numb_span_test_fwd.digforct": {
+            "title": "5a. Number of correct trials "
+        },
+        "numb_span_test_fwd.digforsl": {
+            "title": "5b. Longest span forward "
+        },
+        "numb_span_test_bkwd.digbacct": {
+            "title": "6a. Number of correct trials "
+        },
+        "numb_span_test_bkwd.digbacls": {
+            "title": "6b. Longest span backward "
+        },
+        "category_fluency.animals_c2": {
+            "title": "7a.  Animals: Total number of animals named in 60 second "
+        },
+        "category_fluency.veg_c2": {
+            "title": "7b.  Vegetables: Total number of vegetables named in 60 second "
+        },
+        "trail_make_test.traila_c2": {
+            "title": "8a. PART A: Total number of seconds to complete  "
+        },
+        "trail_make_test.trailarr_c2": {
+            "title": "8a1. Number of commission errors "
+        },
+        "trail_make_test.trailali_c2": {
+            "title": "8a2. Number of correct lines "
+        },
+        "trail_make_test.trailb_c2": {
+            "title": "8b. PART B: Total number of seconds to complete  "
+        },
+        "trail_make_test.trailbrr_c2": {
+            "title": "8b1. Number of commission errors "
+        },
+        "trail_make_test.trailbli_c2": {
+            "title": "8b2. Number of correct lines "
+        },
+        "crft_stry_recl_dely.craftdvr": {
+            "title": "9a. Total story units recalled, verbatim scoring "
+        },
+        "crft_stry_recl_dely.craftdre": {
+            "title": "9b. Total story units recalled, paraphrase scoring (0-25) "
+        },
+        "crft_stry_recl_dely.craftdti": {
+            "title": "9c. Delay time (minutes)  (99=Unknown)"
+        },
+        "crft_stry_recl_dely.craftcue": {
+            "title": "9d. Cue (\"boy\") needed "
+        },
+        "bens_cplx_figr_recl.udsbentd": {
+            "title": "10a. Total score for drawing of Benson figure following 10- to 15-minute delay"
+        },
+        "bens_cplx_figr_recl.udsbenrs": {
+            "title": "10b. Recognized original stimulus from among four options?"
+        },
+        "mint.minttots": {
+            "title": "11a. Total score "
+        },
+        "mint.minttotw": {
+            "title": "11b. Total correct without semantic cue"
+        },
+        "mint.mintscng": {
+            "title": "11c. Semantic cues: Number given"
+        },
+        "mint.mintscnc": {
+            "title": "11d. Semantic cues: Number correct with cue  (88=not applicable)"
+        },
+        "mint.mintpcng": {
+            "title": "11e. Phonemic cues: Number given"
+        },
+        "mint.mintpcnc": {
+            "title": "11f. Phonemic cues: Number correct with cue  (88=not applicable)"
+        },
+        "verb_fluency_phone_test.udsverfc": {
+            "title": "12a. Number of correct F-words generated in 1 minute"
+        },
+        "verb_fluency_phone_test.udsverfn": {
+            "title": "12b. Number of  F-words  repeated in 1 minute"
+        },
+        "verb_fluency_phone_test.udsvernf": {
+            "title": "12c. Number of  F-words  and rule violation errors in 1 minute "
+        },
+        "verb_fluency_phone_test.udsverlc": {
+            "title": "12d. Number of correct L-words generated in 1 minute"
+        },
+        "verb_fluency_phone_test.udsverlr": {
+            "title": "12e. Number of  L-words  repeated in 1 minute "
+        },
+        "verb_fluency_phone_test.udsverln": {
+            "title": "12f. Number of  non-L-words  and rule violation errors in 1 minute"
+        },
+        "verb_fluency_phone_test.udsvertn": {
+            "title": "12g. TOTAL number of correct  F-words and L-words"
+        },
+        "verb_fluency_phone_test.udsverte": {
+            "title": "12h. TOTAL number of  F-words and L-words  repetition errors"
+        },
+        "verb_fluency_phone_test.udsverti": {
+            "title": "12i. TOTAL number of  non-F/L words  and rule violation errors"
+        },
+        "overall_aprsl.cogstat_c2": {
+            "title": "13a. Per the clinician (e.g., neuropsychologist, behavioral neurologist, or other suitably qualified clinician), based on the UDS Neuropsychological examination, the subject's cognitive status is deemed: "
+        }
+    },
+    "boost_values": {
+       
+    "status": 1.0,
+    "moca.mocacomp": 1.0,
+    "moca.mocareas": 1.0,
+    "moca.mocaloc": 1.0,
+    "moca.mocalan": 1.0,
+    "moca.mocalanx": 1.0,
+    "moca.mocavis": 1.0,
+    "moca.mocahear": 1.0,
+    "moca.mocatots": 1.0,
+    "moca.alert_mocatots.mocatrai": 1.0,
+    "moca.alert_mocatots.mocacube": 1.0,
+    "moca.alert_mocatots.mocacloc": 1.0,
+    "moca.alert_mocatots.mocaclon": 1.0,
+    "moca.alert_mocatots.mocacloh": 1.0,
+    "moca.alert_mocatots.mocanami": 1.0,
+    "moca.alert_mocatots.mocaregi": 1.0,
+    "moca.alert_mocatots.mocadigi": 1.0,
+    "moca.alert_mocatots.mocalett": 1.0,
+    "moca.alert_mocatots.mocaser7": 1.0,
+    "moca.alert_mocatots.mocarepe": 1.0,
+    "moca.alert_mocatots.mocaflue": 1.0,
+    "moca.alert_mocatots.mocaabst": 1.0,
+    "moca.alert_mocatots.mocarecn": 1.0,
+    "moca.alert_mocatots.mocarecc": 1.0,
+    "moca.alert_mocatots.mocarecr": 1.0,
+    "moca.alert_mocatots.mocaordt": 1.0,
+    "moca.alert_mocatots.mocaormo": 1.0,
+    "moca.alert_mocatots.mocaoryr": 1.0,
+    "moca.alert_mocatots.mocaordy": 1.0,
+    "moca.alert_mocatots.mocaorpl": 1.0,
+    "moca.alert_mocatots.mocaorct": 1.0,
+    "admin_rema_btry.npsycloc_c2": 1.0,
+    "admin_rema_btry.npsylan_c2": 1.0,
+    "admin_rema_btry.npsylanx_c2": 1.0,
+    "crft_stry_recl.craftvrs": 1.0,
+    "crft_stry_recl.crafturs": 1.0,
+    "bens_cplx_figr.udsbentc": 1.0,
+    "numb_span_test_fwd.digforct": 1.0,
+    "numb_span_test_fwd.digforsl": 1.0,
+    "numb_span_test_bkwd.digbacct": 1.0,
+    "numb_span_test_bkwd.digbacls": 1.0,
+    "category_fluency.animals_c2": 1.0,
+    "category_fluency.veg_c2": 1.0,
+    "trail_make_test.traila_c2": 1.0,
+    "trail_make_test.trailarr_c2": 1.0,
+    "trail_make_test.trailali_c2": 1.0,
+    "trail_make_test.trailb_c2": 1.0,
+    "trail_make_test.trailbrr_c2": 1.0,
+    "trail_make_test.trailbli_c2": 1.0,
+    "crft_stry_recl_dely.craftdvr": 1.0,
+    "crft_stry_recl_dely.craftdre": 1.0,
+    "crft_stry_recl_dely.craftdti": 1.0,
+    "crft_stry_recl_dely.craftcue": 1.0,
+    "bens_cplx_figr_recl.udsbentd": 1.0,
+    "bens_cplx_figr_recl.udsbenrs": 1.0,
+    "mint.minttots": 1.0,
+    "mint.minttotw": 1.0,
+    "mint.mintscng": 1.0,
+    "mint.mintscnc": 1.0,
+    "mint.mintpcng": 1.0,
+    "mint.mintpcnc": 1.0,
+    "verb_fluency_phone_test.udsverfc": 1.0,
+    "verb_fluency_phone_test.udsverfn": 1.0,
+    "verb_fluency_phone_test.udsvernf": 1.0,
+    "verb_fluency_phone_test.udsverlc": 1.0,
+    "verb_fluency_phone_test.udsverlr": 1.0,
+    "verb_fluency_phone_test.udsverln": 1.0,
+    "verb_fluency_phone_test.udsvertn": 1.0,
+    "verb_fluency_phone_test.udsverte": 1.0,
+    "verb_fluency_phone_test.udsverti": 1.0,
+    "overall_aprsl.cogstat_c2": 1.0
+
+    },
+    "changelog": "/profiles/changelogs/ivp_c2v2.md"
 }
