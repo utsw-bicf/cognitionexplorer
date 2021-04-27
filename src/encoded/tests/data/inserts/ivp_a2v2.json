@@ -1,0 +1,26 @@
+[
+    {
+      "inbirmo": "6",
+      "inbiryr": "1961",
+      "insex": "2 Female",
+      "inhisp": "0 No (If No, SKIP TO QUESTION 4)",
+      "inrace": "1 White",
+      "inrasec": "88 None Reported",
+      "inrater": "88 None Reported",
+      "ineduc":  "21 >20",
+      "ineduc_more_than_20":"2 22",
+      "ineduc_type":"MBA",
+      "inrelto": "2 Child (by blood or through marriage or adoption)",
+      "inknown": "54",
+      "inlivwth": "1 Yes (If Yes, SKIP TO QUESTION 10)",
+      "inrely": "0 No",
+      "formver": "3",
+      "adcid": "25 University of Texas Southwestern",
+      "visdate": "2015-01-01",
+      "visitnum": "1",
+      "status": "released",
+      "uuid": "0e0382aa-5600-4696-ae32-523da2bb29da",
+      "patient": "000000",
+      "initials": "DT"
+    }
+  ]
