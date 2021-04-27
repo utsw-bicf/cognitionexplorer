@@ -1,0 +1,105 @@
+[{
+    "patient": "000000",
+    "adcid": "25 University of Texas Southwestern",
+    "visdate": "1979-05-20",
+    "visitnum": "1",
+    "initials": "JAR",
+    "header_complete": "Complete",
+    "whodiddx": "1 Diagnosis from single clinician",
+    "dxmethod": "2 A formal consensus panel",
+    "sec1": {
+        "normcog": "0 No (CONTINUE TO QUESTION 3)",
+        "demented": "1 Yes (CONTINUE TO QUESTION 4)",
+        "note_d1_3": {
+            "demen_synd": {
+                "amndem": "1 Present",
+                "pca": "0 Absent",
+                "ppasyn": "0 Absent",
+                "ftdsyn": "0 Absent",
+                "lbdsyn": "0 Absent",
+                "namndem": "0 Absent"
+            }
+        },
+        "note_d1_6": {
+            "mciamem": "0 Absent",
+            "mciaplus": "0 Absent",
+          
+            "mcinon1": "0 Absent",
+          
+            "mcinon2": "0 Absent",
+           
+            "impnomci": "0 Absent"
+        }
+    },
+    "sec2": {
+        "biomarker_find": {
+            "amylpet": "0 No",
+            "amylcsf": "0 No",
+            "fdgad": "0 No",
+            "hippatr": "0 No",
+            "taupetad": "0 No",
+            "csftau": "0 No",
+            "fdgftld": "0 No",
+            "tpetftld": "0 No",
+            "mrftld": "0 No",
+            "datscan": "0 No",
+            "othbiom": "0 No"
+        },
+        "image_find": {
+            "imaglinf": "0 No",
+            "imaglac": "0 No",
+            "imagmach": "0 No",
+            "imagmich": "0 No",
+            "imagmwmh": "0 No",
+            "imagewmh": "0 No"
+        },
+        "admut": "9 Unknown/not assessed",
+        "ftldmut": "9 Unknown/not assessed",
+        "othmut": "9 Unknown/not assessed"
+    },
+    "sec3": {
+        "etio_diag": {
+            "alzdis": "1 Present",
+            "alzdisif": "1 Primary",
+            "lbdis": "0 Absent",
+            "msa": "0 Absent",
+            "note_d1_13": {
+                "psp": "0 Absent",
+                "cort": "0 Absent",
+                "ftldmo": "0 Absent",
+                "ftldnos": "0 Absent"
+            },
+            "cvd": "0 Absent",
+            "esstrem": "0 Absent",
+            "downs": "0 Absent",
+            "hunt": "0 Absent",
+            "prion": "0 Absent",
+            "brninj": "0 Absent",
+            "hyceph": "0 Absent",
+            "epilep": "0 Absent",
+            "neop": "0 Absent",
+            "hiv": "0 Absent",
+            "othcog": "0 Absent"
+        },
+        "condition": {
+            "dep": "0 Absent",
+            "bipoldx": "0 Absent",
+            "schizop": "0 Absent",
+            "anxiet": "0 Absent",
+            "delir": "0 Absent",
+            "ptsddx": "0 Absent",
+            "othpsy": "0 Absent",
+            "alcdem": "0 Absent",
+            "impsub": "0 Absent",
+            "dysill": "0 Absent",
+            "meds": "0 Absent",
+            "cogoth": "0 Absent",
+            "cogoth2": "0 Absent",
+            "cogoth3": "0 Absent"
+        }
+    },
+    "form_status": "Complete",
+    "status": "released",
+    "uuid": "80d1e061-1aa2-431d-82a1-3dac70d7ce45"
+}
+]
