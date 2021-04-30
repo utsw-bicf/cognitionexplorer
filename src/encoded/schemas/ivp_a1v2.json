@@ -39,8 +39,17 @@
         "schema_version": {
             "default": "1"
         },
+        "inmds": {
+            "title": "1. Subject enrolled in NACC MDS:",
+            "description": "Only in version 2",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No"
+            ]
+        },
         "reason": {
-            "title": "1. Primary reason for coming to ADC:",
+            "title": "2. Primary reason for coming to ADC:",
             "type": "string",
             "enum": [
                 "1 To participate in a research study",
@@ -50,8 +59,13 @@
                 "9 Unknown"
             ]
         },
-        "refersc": {
-            "title": "2a. Principal referral source:",
+        "reasonx": {
+            "title": "2a. Other primary reason for coming to ADC – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "refer": {
+            "title": "3. Principal referral source:",
             "description": "(if answer is 1 or 2, CONTINUE TO QUESTION 2B; otherwise, SKIP TO QUESTION 3.)",
             "type": "string",
             "enum": [
@@ -66,17 +80,197 @@
                 "9 Unknown"
             ]
         },
-        "maristat": {
-            "title": "14. Subject's current marital status:",
+        "referx": {
+            "title": "3a. Principal referral source, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "prestat": {
+            "title": "4. Presumed disease status at enrollment:",
             "type": "string",
             "enum": [
-                "1 Married",
-                "2 Widowed",
-                "3 Divorced",
-                "4 Separated",
-                "5 Never married (or marriage was annulled)",
-                "6 Living as married/domestic partner",
-                "8 Other",
+                "1 Case, patient, or proband",
+                "2 Control or normal",
+                "3 No presumed disease status"
+            ]
+        },
+        "prespart": {
+            "title": "5. Presumed participation:",
+            "type": "string",
+            "enum": [
+                "1 Initial evaluation only",
+                "2 Longitudinal follow-up planned"
+            ]
+        },
+        "source": {
+            "title": "6. ADC enrollment type:",
+            "type": "string",
+            "enum": [
+                "1 Primarily ADC-funded (Clinical Core, Satellite Core, or other ADC Core or project)",
+                "2 Subject is supported primarily by a non-ADC study (e.g., RO1, including non-ADC grants supporting the FTLD Module participation)"
+            ]
+        },
+        "birthmo": {
+            "title": "7a. Subject's month of birth(MM)",
+            "description": "Date can be submitted as MM.",
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 12
+        },
+        "birthyr": {
+            "title": "7b. Subject's year of birth(YYYY)",
+            "description": "Date can be submitted as YYYY.",
+            "type": "integer",
+            "minimum": 1900,
+            "maximum": 2100
+        },
+        "sex": {
+            "title": "8. Subject's sex:",
+            "type": "string",
+            "enum": [
+                "1 Male",
+                "2 Female"
+            ]
+        },
+        "hispanic": {
+            "title": "9. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?",
+            "type": "string",
+            "enum": [
+                "0 No (If No, SKIP TO QUESTION 9)",
+                "1 Yes",
+                "9 Unknown (If Unknown, SKIP TO QUESTION 9)"
+            ]
+        },
+        "hispor": {
+            "title": "9a. If yes, what are the subject's reported origins?",
+            "description": "If Other(SPECIFY),CONTINUE TO 8a1",
+            "type": "string",
+            "enum": [
+                "1 Mexican, Chicano, or Mexican-American",
+                "2 Puerto Rican",
+                "3 Cuban",
+                "4 Dominican",
+                "5 Central American",
+                "6 South American",
+                "50 Other, (specify)",
+                "99 Unknown"
+            ]
+        },
+        "hisporx": {
+            "title": "9a1. Other (specify subjects reported origins):",
+            "description": "(Any text or numbers with the exception of single quotes ('), double quotes (\"), ampersands (&), and percentage signs (%).)",
+            "type": "string"
+        },
+        "race": {
+            "title": "10. What does subject report as his or her race?",
+            "description": "If Other(SPECIFY),CONTINUE TO 9a",
+            "type": "string",
+            "enum": [
+                "1 White",
+                "2 Black or African American",
+                "3 American Indian or Alaska Native",
+                "4 Native Hawaiian or other Pacific Islander",
+                "5 Asian",
+                "50 Other (specify)",
+                "99 Unknown"
+            ]
+        },
+        "racex": {
+            "title": "10a. Other (specify subjects race):",
+            "description": "(Any text or numbers with the exception of single quotes ('), double quotes (\"), ampersands (&), and percentage signs (%).)",
+            "type": "string"
+        },
+        "racesec": {
+            "title": "11. What additional race does subject report?",
+            "description": "If '50 Other (specify)', CONTINUE TO 10a",
+            "type": "string",
+            "enum": [
+                "1 White",
+                "2 Black or African American",
+                "3 American Indian or Alaska Native",
+                "4 Native Hawaiian or other Pacific Islander",
+                "5 Asian",
+                "50 Other (specify)",
+                "88 None Reported",
+                "99 Unknown"
+            ]
+        },
+        "racesecx": {
+            "title": "11a. Other (specify subject's additional race):",
+            "description": "(Any text or numbers with the exception of single quotes ('), double quotes (\"), ampersands (&), and percentage signs (%).)",
+            "type": "string"
+        },
+        "raceter": {
+            "title": "12. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?",
+            "description": "If '50 Other (specify)',CONTINUE TO 11a",
+            "type": "string",
+            "enum": [
+                "1 White",
+                "2 Black or African American",
+                "3 American Indian or Alaska Native",
+                "4 Native Hawaiian or other Pacific Islander",
+                "5 Asian",
+                "50 Other (specify)",
+                "88 None Reported",
+                "99 Unknown"
+            ]
+        },
+        "raceterx": {
+            "title": "12a. Other (specify subject's additonal race beyond questions 9 and 10):",
+            "description": "(Any text or numbers with the exception of single quotes ('), double quotes (\"), ampersands (&), and percentage signs (%).)",
+            "type": "string"
+        },
+        "primlang": {
+            "title": "13. Subject's primary language:",
+            "description": "If Other(SPECIFY),CONTINUE TO 12a",
+            "type": "string",
+            "enum": [
+                "1 English",
+                "2 Spanish",
+                "3 Mandarin",
+                "4 Cantonese",
+                "5 Russian",
+                "6 Japanese",
+                "8 Other primary language (specify)",
+                "9 Unknown"
+            ]
+        },
+        "primlanx": {
+            "title": "13a. Other (specify subject's primary language):",
+            "description": "(Any text or numbers with the exception of single quotes ('), double quotes (\"), ampersands (&), and percentage signs (%).)",
+            "type": "string"
+        },
+        "educ": {
+            "title": "14. Subject's years of education-(Use the codes here to report the level achieved; if an attempted level is not completed, enter the number of years completed.)",
+            "description": "12 = High school or GED,16 = Bachelor's degree,18 = Master's degree,20 = Doctorate,99 = Unknown",
+            "type": "string",
+            "pattern": "^[0-2]?[0-9]$|^3[0-6]$|99"
+        },
+        "livsit": {
+            "title": "15. What is the subject's living situation?",
+            "type": "string",
+            "enum": [
+                "1 Lives alone",
+                "2 Lives with spouse or partner",
+                "3 Lives with relative or friend",
+                "4 Lives with group",
+                "5 Other",
+                "9 Unknown"
+            ]
+        },
+        "livsitx": {
+            "title": "15a. Living situation, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "independ": {
+            "title": "16. What is the subject's level of independence?",
+            "type": "string",
+            "enum": [
+                "1 Able to live independently",
+                "2 Requires some assistance with complex activities",
+                "3 Requires some assistance with basic activities",
+                "4 Completely dependent",
                 "9 Unknown"
             ]
         },
@@ -91,56 +285,126 @@
                 "5 Other",
                 "9 Unknown"
             ]
+        },
+        "residenx": {
+            "title": "17a. Type of residence, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "zip": {
+            "title": "18. ZIP Code (first three digits) of subject's primary residence:",
+            "description": "(ZIP Code can be blank if unknown, in the range 006-999)",
+            "type": "string",
+            "pattern": "^[0][0][6-9]|[0][1-9][0-9]|[1-9][0-9][0-9]$"
+        },
+        "maristat": {
+            "title": "19. Subject's current marital status:",
+            "type": "string",
+            "enum": [
+                "1 Married",
+                "2 Widowed",
+                "3 Divorced",
+                "4 Separated",
+                "5 Never married (or marriage was annulled)",
+                "6 Living as married/domestic partner",
+                "8 Other",
+                "9 Unknown"
+            ]
+        },
+        "maristax": {
+            "title": "19a. Marital status, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "handed": {
+            "title": "20. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?",
+            "type": "string",
+            "enum": [
+                "1 Left-handed",
+                "2 Right-handed",
+                "3 Ambidextrous",
+                "9 Unknown"
+            ]
         }
     },
     "facets": {
         "status": {
             "title": "Status"
         },
-        "reason": {
-            "title": "1. Primary reason for coming to ADC:"
+        "inmds": {
+            "title": "1. Subject enrolled in NACC MDS:"
         },
-        "refersc": {
-            "title": "2a. Principal referral source:"
+        "reason": {
+            "title": "2. Primary reason for coming to ADC:"
+        },
+        "reasonx": {
+            "title": "2a. Other primary reason for coming to ADC – specify"
+        },
+        "refer": {
+            "title": "3. Principal referral source:"
+        },
+        "referx": {
+            "title": "3a. Principal referral source, other – specify"
         },
         "prestat": {
-            "title": "3. Presumed disease status at enrollment:"
+            "title": "4. Presumed disease status at enrollment:"
         },
         "prespart": {
-            "title": "4. Presumed participation:"
+            "title": "5. Presumed participation:"
         },
         "source": {
-            "title": "5. ADC enrollment type:"
+            "title": "6. ADC enrollment type:"
         },
         "birthmo": {
-            "title": "6a. Subject's month of birth(MM)"
+            "title": "7a. Subject's month of birth(MM)"
         },
         "birthyr": {
-            "title": "6b. Subject's year of birth(YYYY)"
+            "title": "7b. Subject's year of birth(YYYY)"
         },
         "sex": {
-            "title": "7. Subject's sex:"
+            "title": "8. Subject's sex:"
         },
         "hispanic": {
-            "title": "8. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+            "title": "9. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "hispor": {
+            "title": "9a. If yes, what are the subject's reported origins?"
+        },
+        "hisporx": {
+            "title": "9a1. Other (specify subjects reported origins):"
         },
         "race": {
-            "title": "9. What does subject report as his or her race?"
+            "title": "10. What does subject report as his or her race?"
+        },
+        "racex": {
+            "title": "10a. Other (specify subjects race):"
         },
         "racesec": {
-            "title": "10. What additional race does subject report?"
+            "title": "11. What additional race does subject report?"
+        },
+        "racesecx": {
+            "title": "11a. Other (specify subject's additional race):"
         },
         "raceter": {
-            "title": "11. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?"
+            "title": "12. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?"
+        },
+        "raceterx": {
+            "title": "12a. Other (specify subject's additonal race beyond questions 9 and 10):"
         },
         "primlang": {
-            "title": "12. Subject's primary language:"
+            "title": "13. Subject's primary language:"
+        },
+        "primlanx": {
+            "title": "13a. Other (specify subject's primary language):"
         },
         "educ": {
-            "title": "13. Subject's years of education."
+            "title": "14. Subject's years of education-(Use the codes here to report the level achieved; if an attempted level is not completed, enter the number of years completed.)"
         },
-        "maristat": {
-            "title": "14. Subject's <u> current </u> marital status:"
+        "livsit": {
+            "title": "15. What is the subject's living situation?"
+        },
+        "livsitx": {
+            "title": "15a. Living situation, other – specify"
         },
         "independ": {
             "title": "16. What is the subject's level of independence?"
@@ -148,61 +412,100 @@
         "residenc": {
             "title": "17. What is the subject's primary type of residence?"
         },
+        "residenx": {
+            "title": "17a. Type of residence, other – specify"
+        },
         "zip": {
             "title": "18. ZIP Code (first three digits) of subject's primary residence:"
         },
+        "maristat": {
+            "title": "19. Subject's current marital status:"
+        },
+        "maristax": {
+            "title": "19a. Marital status, other – specify"
+        },
         "handed": {
-            "title": "19. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?"
+            "title": "20. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?"
         }
     },
     "columns": {
         "status": {
             "title": "Status"
         },
-        "reason": {
-            "title": "1. Primary reason for coming to ADC:"
+        "inmds": {
+            "title": "1. Subject enrolled in NACC MDS:"
         },
-        "refersc": {
-            "title": "2a. Principal referral source:"
+        "reason": {
+            "title": "2. Primary reason for coming to ADC:"
+        },
+        "reasonx": {
+            "title": "2a. Other primary reason for coming to ADC – specify"
+        },
+        "refer": {
+            "title": "3. Principal referral source:"
+        },
+        "referx": {
+            "title": "3a. Principal referral source, other – specify"
         },
         "prestat": {
-            "title": "3. Presumed disease status at enrollment:"
+            "title": "4. Presumed disease status at enrollment:"
         },
         "prespart": {
-            "title": "4. Presumed participation:"
+            "title": "5. Presumed participation:"
         },
         "source": {
-            "title": "5. ADC enrollment type:"
+            "title": "6. ADC enrollment type:"
         },
         "birthmo": {
-            "title": "6a. Subject's month of birth(MM)"
+            "title": "7a. Subject's month of birth(MM)"
         },
         "birthyr": {
-            "title": "6b. Subject's year of birth(YYYY)"
+            "title": "7b. Subject's year of birth(YYYY)"
         },
         "sex": {
-            "title": "7. Subject's sex:"
+            "title": "8. Subject's sex:"
         },
         "hispanic": {
-            "title": "8. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+            "title": "9. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "hispor": {
+            "title": "9a. If yes, what are the subject's reported origins?"
+        },
+        "hisporx": {
+            "title": "9a1. Other (specify subjects reported origins):"
         },
         "race": {
-            "title": "9. What does subject report as his or her race?"
+            "title": "10. What does subject report as his or her race?"
+        },
+        "racex": {
+            "title": "10a. Other (specify subjects race):"
         },
         "racesec": {
-            "title": "10. What additional race does subject report?"
+            "title": "11. What additional race does subject report?"
+        },
+        "racesecx": {
+            "title": "11a. Other (specify subject's additional race):"
         },
         "raceter": {
-            "title": "11. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?"
+            "title": "12. What additional race, beyond what was indicated above in questions 9 and 10, does subject report?"
+        },
+        "raceterx": {
+            "title": "12a. Other (specify subject's additonal race beyond questions 9 and 10):"
         },
         "primlang": {
-            "title": "12. Subject's primary language:"
+            "title": "13. Subject's primary language:"
+        },
+        "primlanx": {
+            "title": "13a. Other (specify subject's primary language):"
         },
         "educ": {
-            "title": "13. Subject's years of education."
+            "title": "14. Subject's years of education-(Use the codes here to report the level achieved; if an attempted level is not completed, enter the number of years completed.)"
         },
-        "maristat": {
-            "title": "14. Subject's <u> current </u> marital status:"
+        "livsit": {
+            "title": "15. What is the subject's living situation?"
+        },
+        "livsitx": {
+            "title": "15a. Living situation, other – specify"
         },
         "independ": {
             "title": "16. What is the subject's level of independence?"
@@ -210,17 +513,29 @@
         "residenc": {
             "title": "17. What is the subject's primary type of residence?"
         },
+        "residenx": {
+            "title": "17a. Type of residence, other – specify"
+        },
         "zip": {
             "title": "18. ZIP Code (first three digits) of subject's primary residence:"
         },
+        "maristat": {
+            "title": "19. Subject's current marital status:"
+        },
+        "maristax": {
+            "title": "19a. Marital status, other – specify"
+        },
         "handed": {
-            "title": "19. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?"
+            "title": "20. Is the subject left- or right- handed (for example, which hand would s/he normally use to write or throw a ball)?"
         }
     },
     "boost_values": {
         "patient": 1.0,
+        "inmds": 1.0,
         "reason": 1.0,
-        "refersc": 1.0,
+        "reasonx": 1.0,
+        "refer": 1.0,
+        "referx": 1.0,
         "prestat": 1.0,
         "prespart": 1.0,
         "source": 1.0,
@@ -228,13 +543,25 @@
         "birthyr": 1.0,
         "sex": 1.0,
         "hispanic": 1.0,
+        "hispor": 1.0,
+        "hisporx": 1.0,
         "race": 1.0,
+        "racex": 1.0,
         "racesec": 1.0,
+        "racesecx": 1.0,
         "raceter": 1.0,
+        "raceterx": 1.0,
         "primlang": 1.0,
-        "maristat": 1.0,
+        "primlanx": 1.0,
+        "educ": 1.0,
+        "livsit": 1.0,
+        "livsitx": 1.0,
         "independ": 1.0,
         "residenc": 1.0,
+        "residenx": 1.0,
+        "zip": 1.0,
+        "maristat": 1.0,
+        "maristax": 1.0,
         "handed": 1.0
     },
     "changelog": "/profiles/changelogs/ivp_a1v2.md"
