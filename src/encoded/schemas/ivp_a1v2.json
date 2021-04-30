@@ -52,10 +52,9 @@
             "title": "2. Primary reason for coming to ADC:",
             "type": "string",
             "enum": [
-                "1 To participate in a research study",
-                "2 To have a clinical evaluation",
+                "1 Participate in research study",
+                "2 Clinical evaluation",
                 "3 Other",
-                "4 Both (to participate in a research study and to have a clinical evaluation)",
                 "9 Unknown"
             ]
         },
@@ -69,13 +68,13 @@
             "description": "(if answer is 1 or 2, CONTINUE TO QUESTION 2B; otherwise, SKIP TO QUESTION 3.)",
             "type": "string",
             "enum": [
-                "1 Self-referral",
-                "2 Non-professional contact (spouse/partner, relative, friend, coworker, etc.)",
-                "3 ADC participant referral",
-                "4 ADC clinician, staff, or investigator referral",
-                "5 Nurse, doctor, or other health care provider",
-                "6 Other research study clinician/staff/investigator (non-ADC; e.g., ADNI, Women's Health Initiative)",
-                "7 Non-ADC media appeal (e.g., Alzheimer's Association)",
+                "1 Self/relative/friend",
+                "2 Clinician",
+                "3 ADC solicitation",
+                "4 Non-ADC study",
+                "5 Clinic sample",
+                "6 Population sample",
+                "7 Non-ADC media appeal (e.g. Alzheimer’s Association)",
                 "8 Other",
                 "9 Unknown"
             ]
@@ -89,8 +88,8 @@
             "title": "4. Presumed disease status at enrollment:",
             "type": "string",
             "enum": [
-                "1 Case, patient, or proband",
-                "2 Control or normal",
+                "1 Case/patient/proband",
+                "2 Control/normal",
                 "3 No presumed disease status"
             ]
         },
@@ -106,8 +105,10 @@
             "title": "6. ADC enrollment type:",
             "type": "string",
             "enum": [
-                "1 Primarily ADC-funded (Clinical Core, Satellite Core, or other ADC Core or project)",
-                "2 Subject is supported primarily by a non-ADC study (e.g., RO1, including non-ADC grants supporting the FTLD Module participation)"
+                "1 Clinical Core",
+                "2 Satellite Core",
+                "3 Other ADC Core/project",
+                "4 Center-affiliated/non-ADC"
             ]
         },
         "birthmo": {
@@ -136,9 +137,9 @@
             "title": "9. Does the subject report being of Hispanic/Latino ethnicity (i.e. having origins from a mainly Spanish-speaking Latin American country), regardless of race?",
             "type": "string",
             "enum": [
-                "0 No (If No, SKIP TO QUESTION 9)",
+                "0 No (If No, SKIP TO QUESTION 10, RACE)",
                 "1 Yes",
-                "9 Unknown (If Unknown, SKIP TO QUESTION 9)"
+                "9 Unknown (If Unknown, SKIP TO QUESTION 10, RACE)"
             ]
         },
         "hispor": {
@@ -278,10 +279,10 @@
             "title": "17. What is the subject's primary type of residence?",
             "type": "string",
             "enum": [
-                "1 Single - or multi-family private residence (apartment, condo, house)",
-                "2 Retirement community or independent group living",
-                "3 Assisted living, adult family home, or boarding home",
-                "4 Skilled nursing facility, nursing home, hospital, or hospice",
+                "1 Single family residence",
+                "2 Retirement community",
+                "3 Assisted living/boarding home/adult family home",
+                "4 Skilled nursing facility/nursing home",
                 "5 Other",
                 "9 Unknown"
             ]
