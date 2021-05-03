@@ -706,24 +706,83 @@ class Patient(Item):
             "title": "Genomic release",
             "type": "string",
         })
-    def genomic_release(self, request, consent):
+    # def genomic_release(self, request, consent):
+    #     consent_type_list=[]
+    #     if len(consent) > 0:
+    #         for consent_record in consent:
+    #             consent_object = request.embed(consent_record, '@@object')
+    #             consent_type= consent_object['consent_type']
+    #             consent_type_list.append(consent_type)
+    #         consent_type_list.sort()
+    #         print("consent_type",consent_type_list)
+
+    #         consent_version=consent_type_list[-1]
+    #         print ("consent_version",consent_version)
+    #         if consent_version=='4' or consent_version=='5' or consent_version=='6':
+    #             genomic_release='Yes'
+    #         else:
+    #             genomic_release = "No"
+    #         return genomic_release
+
+    def genomic_release(self, request, consent, biospecimen):
         consent_type_list=[]
+        genomic_release='N'
+        biospecimen_status=''
+        if len(biospecimen) > 0:
+            for b_obj in biospecimen:
+                biospecimen_object = request.embed(b_obj, '@@object')
+                biospecimen_status=biospecimen_object.get('status')
+                print(biospecimen_status)
         if len(consent) > 0:
             for consent_record in consent:
                 consent_object = request.embed(consent_record, '@@object')
-                consent_type= consent_object['consent_type']
-                consent_type_list.append(consent_type)
-            consent_type_list.sort()
-            print("consent_type",consent_type_list)
+                version= consent_object['consent_type']
+                date=consent_object['date_signed']
+                genetic=consent_object.get('genetic_release')
+                consent_filter={}
+                consent_filter={'date':date,'version':version,'genetic':genetic}
+                # print('consent filter',consent_filter)
+                consent_type_list.append(consent_filter)
+                
+            consent_type_list.sort(key= lambda consent_filter:consent_filter['version'])
+            # print("consent_type_list",consent_type_list)
 
-            consent_version=consent_type_list[-1]
-            print ("consent_version",consent_version)
-            if consent_version=='4' or consent_version=='5' or consent_version=='6':
-                genomic_release='Yes'
-            else:
-                genomic_release = "No"
-            return genomic_release
+            consent_lastest=consent_type_list[-1]
+            consent_version=consent_type_list[-1]['version']
 
+            # print ("consent_version",consent_version)
+            if consent_version=='1' :
+                genomic_release='N'
+                biospecimen_status='revoked'
+
+             
+            elif consent_version=='2':
+                if consent_lastest.get('genetic') is not None:
+                    genomic_release = consent_lastest.get('genetic')
+                if genomic_release == 'Y':
+                    biospecimen_status='revoked'
+                    print('consent 2', genomic_release, biospecimen_status)
+
+                else:
+                    biospecimen_status='released'
+                    print('consent 2-N', genomic_release, biospecimen_status)
+            elif consent_version=='3':
+                genomic_release='N'
+                biospecimen_status='revoked'
+
+               
+            elif consent_version=='4':
+                genomic_release='Y'
+                biospecimen_status='released'
+            elif consent_version=='5' or consent_version=='6':
+                genomic_release='Y'
+                biospecimen_status='released'
+            else: 
+                genomic_release='N'
+                biospecimen_status='revoked'
+
+    
+        return genomic_release, biospecimen_status
 
     @calculated_property(schema={
         "title": "Diagnosis",
