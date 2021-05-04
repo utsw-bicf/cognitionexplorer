@@ -65,7 +65,7 @@ class Biospecimen(Item):
         'biofile',
         'biofile.award',
         'patient',
-        'patient.consent',
+        # 'patient.consent',
         'surgery',
         'surgery.pathology_report',
         'surgery.surgery_procedure',
