@@ -75,6 +75,7 @@ def supportive_med_frequency(request, supportive_medication):
 
 
 def last_follow_up_date_fun(request, labs, vitals, germline,ihc, consent,radiation,medical_imaging,medication,supportive_medication,surgery, death_date):
+    last_follow_up_date="Not available"
     if death_date is not None:
         last_follow_up_date = death_date
     else:
@@ -131,8 +132,8 @@ def last_follow_up_date_fun(request, labs, vitals, germline,ihc, consent,radiati
         if len(all_traced_dates) > 0:
             all_traced_dates.sort(key = lambda date: datetime.strptime(date, "%Y-%m-%d"))
             last_follow_up_date = all_traced_dates[-1]
-        else:
-            last_follow_up_date = "Not available"
+        # else:
+        #     last_follow_up_date = "Not available"
 
     return last_follow_up_date
 
@@ -706,6 +707,8 @@ class Patient(Item):
             "title": "Genomic release",
             "type": "string",
         })
+    
+    #test genomic_release field work or not: 
     # def genomic_release(self, request, consent):
     #     consent_type_list=[]
     #     if len(consent) > 0:
@@ -723,7 +726,8 @@ class Patient(Item):
     #         else:
     #             genomic_release = "No"
     #         return genomic_release
-
+    
+    # Add biospecimen_status and test, won't change biospecimen status...
     def genomic_release(self, request, consent, biospecimen):
         consent_type_list=[]
         genomic_release='N'
