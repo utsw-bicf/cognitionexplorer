@@ -70,7 +70,8 @@ class Biospecimen extends React.Component {
         ];
         const crumbsReleased = (context.status === 'released');
         let hasGenomics =false;
-        if (Object.keys(this.props.context.biofile).length > 0) {
+        if ( context.genomic_release.biospecimen_status==='released'&&Object.keys(this.props.context.biofile).length > 0 ) {
+        // if ( Object.keys(this.props.context.biofile).length > 0 ) {
             hasGenomics = true;
         }
         let hasIHC=false;

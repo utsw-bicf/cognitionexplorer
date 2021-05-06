@@ -323,8 +323,25 @@ export const getObjectStatuses = (item, accessLevel = 'external', objectStatuses
 
 // Display an object status or a status from a string. The "released" icon gets displayed if the
 // given status isn't defined.
+// if (item.genomic_release){
+//     status= item.genomic_release.biospecimen_status
+// }
+// else{
+//     status=item.status
+// }
 const Status = ({ item, badgeSize, title, css, noLabel, noIcon, inline }) => {
-    const status = typeof item === 'string' ? item : item.status;
+  
+    // const status =  item.genomic_release? item.genomic_release.biospecimen_status : item.status;
+    // console.log(item.genomic_release.biospecimen_status);
+    // console.log(item.status);
+    let status='';
+    if (item.genomic_release){
+            status= item.genomic_release.biospecimen_status
+        }
+        else{
+            status=item.status
+        }
+    status = typeof item === 'string' ? item : status;
     const classElement = globals.statusToClassElement(status);
 
     return (

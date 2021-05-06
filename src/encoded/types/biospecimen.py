@@ -10,41 +10,7 @@ from .base import (
 )
 import re
 
-# test changes in biospecimen page to see if patient can be embeded through '@@object?skip_calculated=true'
-def genomic_release(request, patient):
-        # values_by_key = defaultdict(list)
-        # consent=[]
-        # consent_type_list=[]
-        for path in patient:
-            properties = request.embed(path, '@@object?skip_calculated=true')
-            sex=properties.get('sex')
-            # values_by_key[properties.get('patient')].append(properties)
-            # consent = properties.get('consent')
-            # return dict(values_by_key)
-            return sex
-        # 
-        
-        # if len(consent) > 0:
-        #     for path in consent:
-        #         properties = request.embed(path, '@@object?skip_calculated=true')
-        #         consent_type = properties.get('concent_type')
 
-
-            # for consent_record in consent:
-            #     consent_object = request.embed(consent_record, '@@object')
-            #     properties = request.embed(path, '@@object?skip_calculated=true')
-            #     consent_type= consent_object['consent_type']
-            #     consent_type_list.append(consent_type)
-            # consent_type_list.sort()
-            # print("consent_type",consent_type_list)
-
-            # consent_version=consent_type_list[-1]
-            # print ("consent_version",consent_version)
-            # if consent_version=='4' or consent_version=='5' or consent_version=='6':
-            #     genomic_release='Yes'
-            # else:
-            #     genomic_release = "No"
-            # return genomic_release
 
 @collection(
     name='biospecimens',
@@ -64,8 +30,6 @@ class Biospecimen(Item):
     embedded = [
         'biofile',
         'biofile.award',
-        'patient',
-        # 'patient.consent',
         'surgery',
         'surgery.pathology_report',
         'surgery.surgery_procedure',
@@ -102,19 +66,72 @@ class Biospecimen(Item):
     def ihc(self, request, ihc):
         return paths_filtered_by_status(request, ihc)
 
-    @calculated_property(define=True, schema={
+    @calculated_property(condition='patient', schema={
             "title": "Genomic release",
-            # "type": "array",
-            "type": "string",
-        #     "items": {
-        #     "type": "string",
-        #     "linkTo": "Patient",
-        # },
+            "type": "object",
+            "additionalProperties": False,
+            "properties":{
+                "genomic_release": {
+                    "title": "Genomic Release",
+                    "type": "string",
+                },
+                "biospecimen_status": {
+                    "title": "Biospecimen Status",
+                    "type": "string",
+                }
+            }
         })
     def genomic_release(self, request, patient):
-        
-        return genomic_release(request,patient)
-    
+        consent_list = request.embed(patient, '@@object?skip_calculated=true').get('consent')
+        consent_type_list=[]
+        genomic_release='N'
+        biospecimen_status='revoked'
+        if consent_list:
+            for consent in consent_list:
+                properties = request.embed(consent, '@@object?skip_calculated=true')
+                consent_object = request.embed(properties, '@@object')
+                version= consent_object['consent_type']
+                date=consent_object['date_signed']
+                genetic=consent_object['genetic_release']
+                consent_filter={}
+                consent_filter={'date':date,'version':version,'genetic':genetic}
+                # print('consent filter',consent_filter)
+                consent_type_list.append(consent_filter)
+            consent_type_list.sort(key= lambda consent_filter:consent_filter['version'])
+
+            consent_lastest=consent_type_list[-1]
+            consent_version=consent_lastest['version']
+            if consent_version=='1' :
+                genomic_release='N'
+                biospecimen_status='revoked'
+            elif consent_version=='2':
+                if consent_lastest.get('genetic') is not None:
+                    genomic_release = consent_lastest.get('genetic')
+                if genomic_release == 'Y':
+                    biospecimen_status='revoked'
+                    print('consent 2', genomic_release, biospecimen_status)
+                else:
+                    biospecimen_status='released'
+                    print('consent 2-N', genomic_release, biospecimen_status)
+            elif consent_version=='3':
+                genomic_release='N'
+                biospecimen_status='revoked'
+            elif consent_version=='4':
+                genomic_release='Y'
+                biospecimen_status='released'
+            elif consent_version=='5' or consent_version=='6':
+                genomic_release='Y'
+                biospecimen_status='released'
+            else:
+                genomic_release='N'
+                biospecimen_status='revoked'
+
+        genomic_consent = dict()
+        genomic_consent['genomic_release'] = genomic_release
+        genomic_consent['biospecimen_status'] = biospecimen_status
+        return genomic_consent
+
+
 
     matrix = {
         'y': {
@@ -145,5 +162,3 @@ class Biospecimen(Item):
             'label': 'histology',
         },
     }
-
-
