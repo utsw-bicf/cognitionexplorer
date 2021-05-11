@@ -494,12 +494,10 @@
         "surgery.pathology_report.ajcc_tnm_stage": {
             "title": "TNM Stage (at presentation)"
         },
-        "genomic_release.genomic_release": {
+        "genomic_release": {
             "title": "Genomic Release"
         },
-        "genomic_release.biospecimen_status": {
-            "title": "Biospecimen Status"
-        },
+        
         "biofile.award.project": {
             "title": "Genomics Project"
         },

@@ -105,8 +105,8 @@
         "diagnosis.follow_up_duration_range": {
             "title": "Follow Up Duration"
         },
-        "genomic_release":{
-            "title":"Genomic Release"
+        "genomic_release": {
+            "title": "Genomic Release"
         },
         "sex": {
             "title": "Sex"

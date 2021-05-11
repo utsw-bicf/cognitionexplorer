@@ -336,7 +336,7 @@ const Status = ({ item, badgeSize, title, css, noLabel, noIcon, inline }) => {
     // console.log(item.status);
     let status='';
     if (item.genomic_release){
-            status= item.genomic_release.biospecimen_status
+            status= item.genomic_release.item_status
         }
         else{
             status=item.status
