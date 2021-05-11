@@ -30,6 +30,8 @@ class Biospecimen(Item):
     embedded = [
         'biofile',
         'biofile.award',
+        # 'patient',
+        # 'patient.consent',
         'surgery',
         'surgery.pathology_report',
         'surgery.surgery_procedure',
@@ -82,7 +84,9 @@ class Biospecimen(Item):
             }
         })
     def genomic_release(self, request, patient):
+
         consent_list = request.embed(patient, '@@object?skip_calculated=true').get('consent')
+        print('consent_list', consent_list)
         consent_type_list=[]
         genomic_release='N'
         item_status='revoked'
@@ -95,9 +99,9 @@ class Biospecimen(Item):
                 genetic=consent_object['genetic_release']
                 consent_filter={}
                 consent_filter={'date':date,'version':version,'genetic':genetic}
-                print('consent filter',consent_filter)
+                # print('consent filter',consent_filter)
                 consent_type_list.append(consent_filter)
-                print('consent filter',consent_filter)
+                # print('consent filter',consent_filter)
                 
                 
 
