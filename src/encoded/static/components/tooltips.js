@@ -36,11 +36,11 @@ export let tooltips = {
     "6th edition": "TNM Stage composite stage based on 6th edition rules.",
     "7th edition": "TNM Stage composite stage based on 7th edition rules.",
     "8th edition": "TNM Stage composite stage based on 7th edition rules.",
-    "pT Stage": "T stands for tumor, it refers to the size of the primary tumor and if it has invaded surrounding tissue.",
-    "pN Stage": "N stands for lymph nodes, it is used to identify how far the cancer has spread to lymph nodes.",
-    "pM Stage": "M stands for metastasis, it indicates whether the cancer has metastasized, or spread into other organs or more distant lymph nodes.",
+    "pT Stage(at presentation)": "T stands for tumor, it refers to the size of the primary tumor and if it has invaded surrounding tissue.",
+    "pN Stage(at presentation)": "N stands for lymph nodes, it is used to identify how far the cancer has spread to lymph nodes.",
+    "pM Stage(at presentation)": "M stands for metastasis, it indicates whether the cancer has metastasized, or spread into other organs or more distant lymph nodes.",
 
-    "pTx": "The primary tumor cannot be evaluated.",
+    "pTX": "The primary tumor cannot be evaluated.",
 
     "pT0": "No evidence of a primary tumor.",
 
@@ -67,7 +67,7 @@ export let tooltips = {
     "pT4": "The tumor has spread to areas beyond Gerota's fascia and extends into the adrenal gland on the same side of the body as the tumor.",
 
 
-    "pNx": "The regional lymph nodes cannot be evaluated.",
+    "pNX": "The regional lymph nodes cannot be evaluated.",
 
     "pN0": "The cancer has not spread to the regional lymph nodes.",
 
