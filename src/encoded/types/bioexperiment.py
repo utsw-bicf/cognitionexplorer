@@ -179,6 +179,48 @@ class Bioexperiment(Biodataset,
                         biospecimen_summary_list.append(biospecimen_summary_dict)
 
         return biospecimen_summary_list
+        
+    @calculated_property(schema={
+            "title": "Genomic release",
+            "type": "object",
+            "additionalProperties": False,
+            "properties":{
+                "genomic_release": {
+                    "title": "Genomic Release",
+                    "type": "string",
+                },
+                "item_status": {
+                    "title": "Item Status",
+                    "type": "string",
+                }
+            }
+        })
+    def genomic_release(self, request, bioreplicate=None):
+
+        genomic_release='N'
+        item_status='revoked'
+        if bioreplicate is not None:
+            for biorep in bioreplicate:
+                bioreplicateObject = request.embed(biorep, '@@object')
+                if bioreplicateObject['status'] == 'deleted':
+                    continue
+                if 'biolibrary' in bioreplicateObject:
+                    biolibraryObject = request.embed(bioreplicateObject['biolibrary'], '@@object')
+                    if biolibraryObject['status'] == 'deleted':
+                        continue
+                    if 'biospecimen' in biolibraryObject:
+                        biospecimenObject = request.embed(biolibraryObject['biospecimen'], '@@object')
+                        if biospecimenObject['status'] == 'deleted':
+                            continue
+                        if 'genomic_release' in biospecimenObject:
+                            
+                            genomic_release = biospecimenObject.get('genomic_release').get('genomic_release')
+                            item_status=biospecimenObject.get('genomic_release').get('item_status')
+                        
+        genomic_consent = dict()
+        genomic_consent['genomic_release'] = genomic_release
+        genomic_consent['item_status'] = item_status
+        return genomic_consent
 
     @calculated_property(schema={
         "title": "Replication type",
