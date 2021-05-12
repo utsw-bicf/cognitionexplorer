@@ -22,6 +22,15 @@ class BiospecimenTable extends React.Component {
                 specimen_label: {
                     title: "Specimen label"
                 },
+                surgery: {
+                    title: "Surgery",
+                    display: biospecimen => {
+                        if (typeof biospecimen['surgery'] != 'undefined') {
+                            return  <a href={biospecimen['surgery']}>{biospecimen['surgery'].split('/')[2]}</a>
+                        }
+                    
+                    },
+                },
                 sample_type: {
                     title: 'Specimen type',
                 },
@@ -67,3 +76,4 @@ class BiospecimenTable extends React.Component {
 }
 
 export default BiospecimenTable;
+
