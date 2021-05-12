@@ -37,16 +37,16 @@ class Bioexperiment(Biodataset,
     embedded = Biodataset.embedded + [
         "submitted_by",
         'documents',
-        #'bioreplicate',
-        #'bioreplicate.biolibrary',
-        #'bioreplicate.biolibrary.documents',
-        #'bioreplicate.biolibrary.biospecimen',
-        #'bioreplicate.biolibrary.biospecimen.part_of',
-        #'bioreplicate.biolibrary.biospecimen.part_of',
+        'bioreplicate',
+        'bioreplicate.biolibrary',
+        'bioreplicate.biolibrary.documents',
+        'bioreplicate.biolibrary.biospecimen',
+        'bioreplicate.biolibrary.biospecimen.part_of',
+        'bioreplicate.biolibrary.biospecimen.part_of',
         'possible_controls',
-        #'bioreplicate.biolibrary.biospecimen.documents',
+        'bioreplicate.biolibrary.biospecimen.documents',
         "references",
-        #"files.platform",
+        # "files.platform",
         'related_series',
 
 
@@ -54,7 +54,7 @@ class Bioexperiment(Biodataset,
     rev = Biodataset.rev.copy()
     rev.update({
         'related_series': ('Bioseries', 'related_datasets'),
-        #'bioreplicate': ('Bioreplicate', 'bioexperiment'),
+        'bioreplicate': ('Bioreplicate', 'bioexperiment'),
         'superseded_by': ('Bioexperiment', 'supersedes')
 
     })
@@ -62,10 +62,10 @@ class Bioexperiment(Biodataset,
 
     audit_inherit = [
         'original_files',
-        #'original_files.bioreplicate',
-        #'original_files.platform',
+        'original_files.bioreplicate',
+        'original_files.platform',
         'revoked_files',
-        #'revoked_files.bioreplicate',
+        'revoked_files.bioreplicate',
         'submitted_by',
         'lab',
         'award',
@@ -74,12 +74,12 @@ class Bioexperiment(Biodataset,
     ]
     set_status_up = [
         'original_files',
-        #'bioreplicate',
+        'bioreplicate',
         'documents',
     ]
     set_status_down = [
         'original_files',
-        #'bioreplicate',
+        'bioreplicate',
     ]
 
     @calculated_property(schema={
@@ -107,7 +107,7 @@ class Bioexperiment(Biodataset,
         return paths_filtered_by_status(request, related_series)
 
 
-"""
+
     @calculated_property(
         schema={
             "title": "Bioreplicate",
@@ -237,6 +237,6 @@ class Bioexperiment(Biodataset,
 
 
         return 'anisogenic'
-"""
+
 
 
