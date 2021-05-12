@@ -36,7 +36,47 @@ export let tooltips = {
     "6th edition": "TNM Stage composite stage based on 6th edition rules.",
     "7th edition": "TNM Stage composite stage based on 7th edition rules.",
     "8th edition": "TNM Stage composite stage based on 7th edition rules.",
+    "pT Stage": "T stands for tumor, it refers to the size of the primary tumor and if it has invaded surrounding tissue.",
+    "pN Stage": "N stands for lymph nodes, it is used to identify how far the cancer has spread to lymph nodes.",
+    "pM Stage": "M stands for metastasis, it indicates whether the cancer has metastasized, or spread into other organs or more distant lymph nodes.",
 
+    "pTx": "The primary tumor cannot be evaluated.",
+
+    "pT0": "No evidence of a primary tumor.",
+
+    "pT1": "The tumor is found only in the kidney and is 7 cm or smaller at its largest area. There has been much discussion among doctors about whether this classification should only include a tumor that is 5 cm or smaller.",
+
+    "pT1a": "The tumor is found only in the kidney and is 4 cm or smaller at its largest area.",
+
+    "pT1b": "The tumor is found only in the kidney and is between 4 cm and 7 cm at its largest area.",
+
+    "pT2": "The tumor is found only in the kidney and is larger than 7 cm at its largest area.",
+
+    "pT2a": "The tumor is only in the kidney and is more than 7 cm but not more than 10 cm at its largest area.",
+
+    "pT2b": "The tumor is only in the kidney and is more than 10 cm at its largest area.",
+
+    "pT3": "The tumor has grown into major veins within the kidney or perinephric tissue, which is the connective, fatty tissue around the kidneys. However, it has not grown into the adrenal gland on the same side of the body as the tumor. The adrenal glands are located on top of each kidney and produce hormones and adrenaline to help control heart rate, blood pressure, and other bodily functions. In addition, the tumor has not spread beyond Gerota's fascia, an envelope of tissue that surrounds the kidney.",
+
+    "pT3a": "The tumor has spread to the large vein leading out of the kidney, called the renal vein, or the branches of the renal vein; the fat surrounding and/or inside the kidney; or the pelvis and calyces of the kidney, which collect urine before sending it to the bladder. The tumor has not grown beyond Gerota's fascia.",
+
+    "pT3b": "The tumor has grown into the large vein that drains into the heart, called the inferior vena cava, below the diaphragm. The diaphragm is the muscle under the lungs that helps breathing.",
+
+    "pT3c": "The tumor has spread to the vena cava above the diaphragm and into the right atrium of the heart or to the walls of the vena cava.",
+
+    "pT4": "The tumor has spread to areas beyond Gerota's fascia and extends into the adrenal gland on the same side of the body as the tumor.",
+
+
+    "pNx": "The regional lymph nodes cannot be evaluated.",
+
+    "pN0": "The cancer has not spread to the regional lymph nodes.",
+
+    "pN1": "The cancer has spread to regional lymph nodes.",
+
+
+    "pM0": "The disease has not metastasized.",
+
+    "pM1": "The cancer has spread to other parts of the body beyond the kidney area.",
     //patient page facets
     "Metastatic Site": "This is recorded either from pathology report using natural language search or from clinical and radiotherapy notes. These may not be all inclusive.",
     "Metastasis Histology Proven": "Record of metastatic RCC in pathology reports and nephrectomy specimens are considered histologically proven.",
@@ -57,6 +97,7 @@ export let tooltips = {
     "Surgery Treatment Summary": "The surgery treatment status. For patients that did not undergo surgery, their status is recorded as “No” (management at UTSW for active surveillance or metastasis without surgical treatment).",
     "Procedure": "The surgical procedure conducted as recorded in the EMR.",
     "Nephrectomy Details": "The Nephrectomy type, and the method (Nephrectomy approach and nephrectomy robotic assist) of nephrectomy for patients that underwent surgery.",
+
 
     // Pathology Report
     "Laterality": "Laterality of the tumor is recorded when available in the pathology report.",
