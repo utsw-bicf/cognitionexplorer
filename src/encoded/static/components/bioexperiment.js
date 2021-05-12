@@ -28,7 +28,7 @@ class Bioexperiment extends React.Component {
     render() {
 
         const context = this.props.context;
-  
+
         const loggedIn = !!(this.context.session && this.context.session['auth.userid']);
         const adminUser = !!(this.context.session_properties && this.context.session_properties.admin);
 
@@ -61,11 +61,11 @@ class Bioexperiment extends React.Component {
             projectSet.add(project)
         }
         let uniqueBiospecimen_summary = Array.from(new Set(biospecimen_summary.map(a => a.accession)))
-        .map(accession => {
-        return biospecimen_summary.find(a => a.accession === accession)
-        });
+            .map(accession => {
+                return biospecimen_summary.find(a => a.accession === accession)
+            });
         biospecimen_summary = uniqueBiospecimen_summary;
-        
+
 
         let show_specimen_summary = (<div>
             <dt>biospecimen_summary</dt>
@@ -79,16 +79,20 @@ class Bioexperiment extends React.Component {
             <dd><strong>Anatomic Site: </strong>{biospecimen_summary[0].anatomic_site}</dd>
         </div>);
 
-
+        let hasGenomics = false;
+        if (context.genomic_release.item_status === 'released' && Object.keys(this.props.context.biofile).length > 0) {
+            // if ( Object.keys(this.props.context.biofile).length > 0 ) {
+            hasGenomics = true;
+        }
         return (
             <div className={globals.itemClass(context, 'view-item')}>
                 <header className="row">
-                  <div className="col-sm-12">
-                    <Breadcrumbs root="/search/?type=Bioexperiment" crumbs={crumbs} crumbsReleased={crumbsReleased} />
-                    <h2>Experiment summary for {context.accession}</h2>
-                    <ReplacementAccessions context={context} />
-                    <ItemAccessories item={context}/>
-                  </div>
+                    <div className="col-sm-12">
+                        <Breadcrumbs root="/search/?type=Bioexperiment" crumbs={crumbs} crumbsReleased={crumbsReleased} />
+                        <h2>Experiment summary for {context.accession}</h2>
+                        <ReplacementAccessions context={context} />
+                        <ItemAccessories item={context} />
+                    </div>
                 </header>
                 <Panel >
                     <PanelBody addClasses="panel__split">
@@ -119,7 +123,7 @@ class Bioexperiment extends React.Component {
                         <div className="panel__split-element">
                             <div className="panel__split-heading panel__split-heading--experiment">
                                 <h4>Attribution</h4>
-                               
+
                             </div>
                             <dl className="key-value">
                                 <div data-test="lab">
@@ -127,7 +131,7 @@ class Bioexperiment extends React.Component {
                                     <dd>{context.lab.title}</dd>
                                 </div>
 
-                               
+
 
                                 <div data-test="project">
                                     <dt>Project</dt>
@@ -135,7 +139,7 @@ class Bioexperiment extends React.Component {
                                 </div>
 
 
-                            
+
                             </dl>
                         </div>
 
@@ -144,7 +148,7 @@ class Bioexperiment extends React.Component {
                 {/* <BioreplicateTable data={context.bioreplicate} tableTitle="Bioreplicates summary"></BioreplicateTable> */}
                 {/* Display the file widget with the facet, graph, and tables */}
                 {/* <FileGallery1 context={context} encodevers={encodevers} anisogenic={anisogenic} /> */}
-                <FileGallery1 context={context} />
+                {hasGenomics && <FileGallery1 context={context} />}
 
 
 
