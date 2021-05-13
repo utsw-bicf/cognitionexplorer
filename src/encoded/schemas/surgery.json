@@ -75,13 +75,13 @@
             "title": "Tumor Grade"
         },
         "surgery_procedure.pathology_report.t_stage": {
-            "title": "pT Stage"
+            "title": "pT Stage (at presentation)"
         },
         "surgery_procedure.pathology_report.n_stage": {
-            "title": "pN Stage"
+            "title": "pN Stage (at presentation)"
         },
         "surgery_procedure.pathology_report.m_stage": {
-            "title": "pM Stage"
+            "title": "pM Stage (at presentation)"
         },
         "surgery_procedure.pathology_report.metasis_details.site": {
             "title": "Metastatic Site (Pathology)"
@@ -207,4 +207,3 @@
     },
     "changelog": "/profiles/changelogs/surgery.md"
 }
-
