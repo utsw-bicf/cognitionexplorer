@@ -42,7 +42,6 @@ export let tooltips = {
 
     "pTX": "The primary tumor cannot be evaluated.",
 
-    "pT0": "No evidence of a primary tumor.",
 
     "pT1": "The tumor is found only in the kidney and is 7 cm or smaller at its largest area. There has been much discussion among doctors about whether this classification should only include a tumor that is 5 cm or smaller.",
 
@@ -75,7 +74,6 @@ export let tooltips = {
     "pN2": "The cancer has spread to more than one lymph nodes.",
 
 
-    "pM0": "The disease has not metastasized.",
 
     "pM1": "The cancer has spread to other parts of the body beyond the kidney area.",
     //patient page facets
