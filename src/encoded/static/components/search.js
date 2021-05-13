@@ -418,7 +418,7 @@ class BiospecimenComponent extends React.Component {
        const { cartControls } = this.props;
         const result = this.props.context;
         const tissueType = (result.tissue_type && result.sample_type == 'Tissue') ? ` ${result.tissue_type}` : '';
-        const anatomicSite = (result.anatomic_site && result.sample_type == 'Tissue') ? ` ${result.anatomic_site}` : '';
+        const anatomicSite = (result.anatomic_site_display && result.sample_type == 'Tissue') ? ` ${result.anatomic_site_display}` : '';
 
         return (
             <li className={resultItemClass(result)}>
@@ -431,7 +431,7 @@ class BiospecimenComponent extends React.Component {
                             <div><strong>Sample type: </strong>{result.sample_type}</div>
                             <div><strong>Tissue derivatives: </strong>{result.tissue_derivatives}</div>
                             <div><strong>Tissue type: </strong>{result.tissue_type}</div>
-                            <div><strong>Anatomic site: </strong>{result.anatomic_site}</div>
+                            <div><strong>Anatomic site: </strong>{result.anatomic_site_display}</div>
                         </div>
                     </div>
                     <div className="result-item__meta">
@@ -1093,6 +1093,8 @@ export class ResultTable extends React.Component {
         const total = context.total;
         const columns = context.columns;
         const filters = context.filters;
+        const clear_filters = context.clear_filters;
+        const isPatient = clear_filters.toLowerCase().includes('type=Patient'.toLowerCase());
         const label = 'results';
         const visualizeDisabledTitle = context.total > VISUALIZE_LIMIT ? `Filter to ${VISUALIZE_LIMIT} to visualize` : '';
 
@@ -1107,12 +1109,18 @@ export class ResultTable extends React.Component {
                 />
                 {context.notification === 'Success' ?
                     <div className="search-results__result-list">
-                        <h4>Showing {results.length} of {total} {label}</h4>
-                        <SearchControls context={context} visualizeDisabledTitle={visualizeDisabledTitle} onFilter={this.onFilter} showResultsToggle />
-                        {!(actions && actions.length > 0) ?
-                            <CartSearchControls searchResults={context} />
-                        : null}
-                        <ResultTableList results={results} columns={columns} cartControls />
+                        {isPatient && total <= 10 ?
+                            <h4>Patient list is restricted for specified query. Please expand your query.</h4>
+                        :
+                        <div>
+                            <h4>Showing {results.length} of {total} {label}</h4>
+                            <SearchControls context={context} visualizeDisabledTitle={visualizeDisabledTitle} onFilter={this.onFilter} showResultsToggle />
+                            {!(actions && actions.length > 0) ?
+                                <CartSearchControls searchResults={context} />
+                            : null}
+                            <ResultTableList results={results} columns={columns} cartControls />
+                        </div>
+                        }
                     </div>
                 :
                     <h4>{context.notification}</h4>

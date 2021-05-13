@@ -165,8 +165,8 @@ class Bioexperiment(Biodataset,
                             biospecimen_summary_dict['openspecimen_id'] = biospecimenObject['openspecimen_id']
                         if 'sample_type' in biospecimenObject:
                             biospecimen_summary_dict['sample_type'] = biospecimenObject['sample_type']
-                        if "anatomic_site" in biospecimenObject:
-                            biospecimen_summary_dict['anatomic_site'] = biospecimenObject['anatomic_site']
+                        if "anatomic_site_display" in biospecimenObject:
+                            biospecimen_summary_dict['anatomic_site_display'] = biospecimenObject['anatomic_site_display']
                         if 'tissue_derivatives' in biospecimenObject:
                             biospecimen_summary_dict['tissue_derivatives'] = biospecimenObject["tissue_derivatives"]
                         if 'tissue_type' in biospecimenObject:

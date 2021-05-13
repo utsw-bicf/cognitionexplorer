@@ -22,8 +22,8 @@ ORDER = [
     'document',
     'patient',
     'surgery',
-    'pathology_report',
     'surgery_procedure',
+    'pathology_report',
     'biospecimen',
     'bioreference',
     'bioexperiment',
@@ -582,5 +582,3 @@ def load_test_data(app):
     inserts = resource_filename('encoded', 'tests/data/inserts/')
     docsdir = [resource_filename('encoded', 'tests/data/documents/')]
     load_all(testapp, inserts, docsdir)
-
-

@@ -33,7 +33,7 @@ class Biospecimen(Item):
         # 'patient',
         # 'patient.consent',
         'surgery',
-        'surgery.pathology_report',
+        'surgery.surgery_procedure.pathology_report',
         'surgery.surgery_procedure',
         'ihc',
         'award',
@@ -102,10 +102,10 @@ class Biospecimen(Item):
                 # print('consent filter',consent_filter)
                 consent_type_list.append(consent_filter)
                 # print('consent filter',consent_filter)
-                
-                
 
-                
+
+
+
             consent_type_list.sort(key= lambda consent_filter:consent_filter['version'])
 
             consent_lastest=consent_type_list[-1]
@@ -142,7 +142,14 @@ class Biospecimen(Item):
         genomic_consent['item_status'] = item_status
         return genomic_consent
 
-
+    @calculated_property( schema={
+        "title": "Anatomic Site",
+        "type": "string",
+    })
+    def anatomic_site_display(self, request, anatomic_site=None):
+        if anatomic_site is not None:
+            anatomic_site = anatomic_site.replace(", NOS", "")
+        return anatomic_site
 
     matrix = {
         'y': {
@@ -151,25 +158,25 @@ class Biospecimen(Item):
                 'sample_type',
                 'tissue_derivatives',
                 'tissue_type',
-                'anatomic_site',
+                'anatomic_site_display',
                 'species',
                 'specimen_lineage',
                 'activity_status',
                 'sur_path_tumor_size',
                 'surgery.surgery_procedure.procedure_type',
-                'surgery.pathology_report.t_stage',
-                'surgery.pathology_report.n_stage',
-                'surgery.pathology_report.m_stage',
-                'surgery.pathology_report.ajcc_tnm_stage',
+                'surgery.surgery_procedure.pathology_report.t_stage',
+                'surgery.surgery_procedure.pathology_report.n_stage',
+                'surgery.surgery_procedure.pathology_report.m_stage',
+                'surgery.surgery_procedure.pathology_report.ajcc_tnm_stage',
             ],
             'group_by': ['tissue_type', 'tissue_derivatives'],
             'label': 'collection',
         },
         'x': {
             'facets': [
-                'surgery.pathology_report.histology_filter',
+                'surgery.surgery_procedure.pathology_report.histology_filter',
             ],
-            'group_by': 'surgery.pathology_report.histology_filter',
+            'group_by': 'surgery.surgery_procedure.pathology_report.histology_filter',
             'label': 'histology',
         },
     }

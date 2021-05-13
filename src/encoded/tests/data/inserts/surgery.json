@@ -1,6 +1,5 @@
 [
   {
-    "path_id":"PR359MHZ",
     "patient": "KCEPT359MHZ",
     "date": "1855-05-03",
     "hospital_location": "UTSW",
@@ -9,7 +8,6 @@
     "uuid": "5f29b472-cdb1-478e-ae1a-a133e11cc24b"
   },
   {
-    "path_id":"PR708FIJ",
     "patient": "KCEPT708IJT",
     "date": "1855-01-03",
     "hospital_location": "UTSW",
@@ -18,7 +16,6 @@
     "uuid": "1bebec41-446b-457d-b707-7cc9d1a34560"
   },
   {
-    "path_id":"PR708IJT",
     "patient": "KCEPT708IJT",
     "date": "1853-04-03",
     "hospital_location": "Parkland",
@@ -27,7 +24,6 @@
     "uuid": "97b0b585-a84b-4844-a429-b55ffd255e2b"
   },
   {
-    "path_id":"PR480NBU",
     "patient": "KCEPT480NBU",
     "date": "1836-05-08",
     "hospital_location": "Parkland",
@@ -36,7 +32,6 @@
     "uuid": "55f7efa7-8ca1-4a10-a07c-05ab39a128bd"
   },
   {
-    "path_id":"PR802XRB",
     "patient": "KCEPT802XRB",
     "date": "1862-02-03",
     "hospital_location": "UTSW",
@@ -45,7 +40,6 @@
     "uuid": "ea1ef19e-ac9c-47a3-81db-8a622a534937"
   },
   {
-    "path_id":"PR186NZW",
     "patient": "KCEPT186NZW",
     "date": "1827-08-03",
     "hospital_location": "UTSW",
@@ -54,7 +48,6 @@
     "uuid": "d192c2c2-b68a-4177-9703-6573b36215ec"
   },
   {
-    "path_id":"PR139SOR",
     "patient": "KCEPT139SOR",
     "date": "1877-12-16",
     "hospital_location": "UTSW",
@@ -63,7 +56,6 @@
     "uuid": "af523fef-db5f-4e66-8c76-88b78db38475"
   },
   {
-    "path_id":"PR021XWS",
     "patient": "KCEPT021XWS",
     "date": "1822-05-24",
     "hospital_location": "Outside",
@@ -72,7 +64,6 @@
     "uuid": "19896169-c9ed-41ba-ac9b-5e910da87784"
   },
   {
-    "path_id":"PR692UHR",
     "patient": "KCEPT692UHR",
     "date": "1838-05-11",
     "hospital_location": "UTSW",
@@ -81,7 +72,6 @@
     "uuid": "f72ebc3f-90db-48b6-aa85-e2ac5f18af78"
   },
   {
-    "path_id":"PR294KIZ",
     "patient": "KCEPT294KIZ",
     "date": "1901-08-14",
     "hospital_location": "UTSW",
@@ -90,7 +80,6 @@
     "uuid": "9873da0d-9af3-4309-a5a9-0107951dbab9"
   },
   {
-    "path_id":"PR398JLK",
     "patient": "KCEPT398JLK",
     "date": "1847-04-20",
     "hospital_location": "UTSW",
@@ -99,7 +88,6 @@
     "uuid": "485c1724-2080-439a-ac50-d073aa0749c7"
   },
   {
-    "path_id":"PR756AEN",
     "patient": "KCEPT756AEN",
     "date": "1853-10-31",
     "hospital_location": "UTSW",
@@ -108,7 +96,6 @@
     "uuid": "8428f265-80b3-4ed9-9128-826da1e2847c"
   },
   {
-    "path_id":"PR396JUN",
     "patient": "KCEPT396JUN",
     "date": "1870-04-11",
     "hospital_location": "UTSW",
@@ -117,7 +104,6 @@
     "uuid": "eec0bbf7-37c3-4438-adb2-7003712cb5ea"
   },
   {
-    "path_id":"PR318AXY",
     "patient": "KCEPT318AXY",
     "date": "1859-05-01",
     "hospital_location": "UTSW",
@@ -126,5 +112,3 @@
     "uuid": "a3a0bc7e-63e0-49ad-953c-a7947dac7d62"
   }
 ]
-
-

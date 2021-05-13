@@ -6,32 +6,22 @@
     "type": "object",
     "identifyingProperties": [
         "uuid",
-        "surgery",
+        "surgery_procedure",
         "accession"
     ],
     "required": [
-        "surgery",
+        "surgery_procedure",
         "date",
         "report_source",
         "path_source_procedure"
     ],
     "additionalProperties": false,
     "mixinProperties": [
-        {
-            "$ref": "mixins.json#/schema_version"
-        },
-        {
-            "$ref": "mixins.json#/submitted"
-        },
-        {
-            "$ref": "mixins.json#/uuid"
-        },
-        {
-            "$ref": "mixins.json#/accession"
-        },
-        {
-            "$ref": "mixins.json#/accessioned_status"
-        }
+        { "$ref": "mixins.json#/schema_version" },
+        { "$ref": "mixins.json#/submitted" },
+        { "$ref": "mixins.json#/uuid" },
+        { "$ref": "mixins.json#/accession" },
+        { "$ref": "mixins.json#/accessioned_status" }
     ],
     "dependencies": {
         "tumor_size": [
@@ -51,17 +41,17 @@
         "accession": {
             "accessionType": "PR"
         },
-        "surgery": {
+        "surgery_procedure": {
             "title": "Surgery",
-            "description": "The surgery the pathology originated from.",
+            "description": "The procedure the pathology originated from.",
             "type": "string",
-            "linkTo": "Surgery"
+            "linkTo": "SurgeryProcedure"
         },
-        "patient": {
-            "title": "Patient",
-            "description": "The patient the lab was conducted for.",
+        "path_id": {
+            "title": "Path ID",
+            "comment": "KCE personnel are allowed to set this value.",
             "type": "string",
-            "linkTo": "Patient"
+            "permission": "import_items"
         },
         "date": {
             "title": "Pathology date",
@@ -123,12 +113,12 @@
             "type": "string",
             "enum": [
                 "Acquired cystic disease-associated renal cell carcinoma",
-                "Angiomyolipoma", 
+                "Angiomyolipoma",
                 "Chromophobe renal cell carcinoma",
-                "Chromophobe renal cell carcinoma, hybrid type", 
-                "Chromophobe renal cell carcinoma, classic",   
-                "Chromophobe renal cell carcinoma, eosinophilic", 
-                "Clear cell papillary renal cell carcinoma", 
+                "Chromophobe renal cell carcinoma, hybrid type",
+                "Chromophobe renal cell carcinoma, classic",
+                "Chromophobe renal cell carcinoma, eosinophilic",
+                "Clear cell papillary renal cell carcinoma",
                 "Clear cell renal cell carcinoma",
                 "Collecting duct carcinoma",
                 "Cystic nephroma",
@@ -136,14 +126,14 @@
                 "Metanephric adenoma",
                 "MiT family translocation renal cell carcinoma",
                 "Mucinous tubular and spindle cell carcinoma",
-                "Multilocular cystic renal neoplasm of low malignant potential", 
+                "Multilocular cystic renal neoplasm of low malignant potential",
                 "Oncocytic renal neoplasm, not further classified",
                 "Oncocytic renal neoplasm, favor RO",
                 "Oncocytic renal neoplasm, favor ChRCC",
                 "Oncocytoma",
                 "Poorly differentiated malignancy",
                 "Sarcomatoid, NOS",
-                "Papillary renal cell carcinoma", 
+                "Papillary renal cell carcinoma",
                 "Papillary renal cell carcinoma, type 1",
                 "Papillary renal cell carcinoma, type 2",
                 "Renal cell carcinoma, not further classified",
@@ -604,8 +594,6 @@
         }
     },
     "boost_values": {
-        "surgery": 1.0,
-        "patient": 1.0,
         "accession": 1.0,
         "t_stage": 1.0,
         "n_stage": 1.0,
@@ -630,7 +618,3 @@
     },
     "changelog": "/profiles/changelogs/pathology_report.md"
 }
-
-
-
-

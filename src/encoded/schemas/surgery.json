@@ -47,16 +47,9 @@
                 "Outside",
                 "Not available"
             ]
-        },
-        "path_id": {
-            "title": "Path ID",
-            "comment": "KCE personnel are allowed to set this value.",
-            "type": "string",
-            "permission": "import_items"
         }
     },
     "facets": {
-
         "surgery_procedure.procedure_type": {
             "title": "Surgery Procedure"
         },
@@ -72,71 +65,68 @@
         "nephr_robotic_assist":{
             "title": "Nephrectomy Robotic Assist"
         },
-        "pathology_report.pathology_report_tumor_range": {
+        "surgery_procedure.pathology_report.pathology_report_tumor_range": {
             "title": "Tumor Size Range"
         },
-        "pathology_report.histology_filter": {
+        "surgery_procedure.pathology_report.histology_filter": {
             "title": "Histologic Subtype"
         },
-        "pathology_report.grade": {
+        "surgery_procedure.pathology_report.grade": {
             "title": "Tumor Grade"
         },
-        "pathology_report.t_stage": {
-            "title": "pT Stage"
+        "surgery_procedure.pathology_report.t_stage": {
+            "title": "pT Stage (at presentation)"
         },
-        "pathology_report.n_stage": {
-            "title": "pN Stage"
+        "surgery_procedure.pathology_report.n_stage": {
+            "title": "pN Stage (at presentation)"
         },
-        "pathology_report.m_stage": {
-            "title": "pM Stage"
+        "surgery_procedure.pathology_report.m_stage": {
+            "title": "pM Stage (at presentation)"
         },
-        "pathology_report.metasis_details.site": {
+        "surgery_procedure.pathology_report.metasis_details.site": {
             "title": "Metastatic Site (Pathology)"
         },
-        "pathology_report.metasis_details.type": {
+        "surgery_procedure.pathology_report.metasis_details.type": {
             "title": "Metastasis Type (Pathology)"
         },
-        "pathology_report.ajcc_version": {
+        "surgery_procedure.pathology_report.ajcc_version": {
             "title": "AJCC Version"
         },
-        "pathology_report.ajcc_tnm_stage": {
+        "surgery_procedure.pathology_report.ajcc_tnm_stage": {
             "title": "TNM Stage"
         },
-        "pathology_report.laterality": {
+        "surgery_procedure.pathology_report.laterality": {
             "title": "Tumor Laterality"
         },
-        "pathology_report.focality": {
+        "surgery_procedure.pathology_report.focality": {
             "title": "Tumor Focality"
         },
-        "pathology_report.sarcomatoid": {
+        "surgery_procedure.pathology_report.sarcomatoid": {
             "title": "Sarcomatoid Change"
         },
-        "pathology_report.necrosis": {
+        "surgery_procedure.pathology_report.necrosis": {
             "title": "Tumor Necrosis"
         },
-        "pathology_report.margins": {
+        "surgery_procedure.pathology_report.margins": {
             "title": "Margin Status"
         },
-         "pathology_report.lvi": {
+         "surgery_procedure.pathology_report.lvi": {
             "title": "Lymphvascular invasion(LVI)"
         },
-        "pathology_report.micro_perinephric": {
+        "surgery_procedure.pathology_report.micro_perinephric": {
             "title": "Perinephric Infiltration"
         },
-        "pathology_report.micro_vein": {
+        "surgery_procedure.pathology_report.micro_vein": {
             "title": "Renal Vein Involvement"
         },
-        "pathology_report.micro_adrenal": {
+        "surgery_procedure.pathology_report.micro_adrenal": {
             "title": "Ipsilateral Adrenal Gland Involvement"
         },
-        "pathology_report.ihc.antibody": {
+        "surgery_procedure.pathology_report.ihc.antibody": {
             "title": "IHC/FISH (Clinical lab)"
         },
-        "pathology_report.ihc.result": {
+        "surgery_procedure.pathology_report.ihc.result": {
             "title": "IHC/FISH results"
-        },
-        "status": {
-            "title": "Status"
         }
 
     },
@@ -144,40 +134,46 @@
         "accession": {
             "title": "Accession"
         },
+        "date": {
+            "title": "Surgery Date"
+        },
+        "hospital_location": {
+            "title": "Hospital Location"
+        },
         "surgery_procedure.procedure_type": {
             "title": "Surgery Procedure"
         },
         "surgery_procedure.nephrectomy_details.type": {
             "title": "Nephrectomy Type"
         },
-        "pathology_report.pathology_report_tumor_range": {
+        "surgery_procedure.pathology_report.pathology_report_tumor_range": {
             "title": "Tumor Size Range"
         },
-        "pathology_report.histology": {
+        "surgery_procedure.pathology_report.histology": {
             "title": "Histologic Subtype"
         },
-        "pathology_report.grade": {
+        "surgery_procedure.pathology_report.grade": {
             "title": "Tumor Grade"
         },
-        "pathology_report.t_stage": {
+        "surgery_procedure.pathology_report.t_stage": {
             "title": "pT Stage (at presentation)"
         },
-        "pathology_report.n_stage": {
+        "surgery_procedure.pathology_report.n_stage": {
             "title": "pN Stage (at presentation)"
         },
-        "pathology_report.m_stage": {
+        "surgery_procedure.pathology_report.m_stage": {
             "title": "pM Stage (at presentation)"
         },
-        "pathology_report.ajcc_version": {
+        "surgery_procedure.pathology_report.ajcc_version": {
             "title": "AJCC Version"
         },
-        "pathology_report.ajcc_tnm_stage": {
+        "surgery_procedure.pathology_report.ajcc_tnm_stage": {
             "title": "TNM Stage (at presentation)"
         },
-        "pathology_report.laterality": {
+        "surgery_procedure.pathology_report.laterality": {
             "title": "Tumor Laterality"
         },
-        "pathology_report.focality": {
+        "surgery_procedure.pathology_report.focality": {
             "title": "Tumor Focality"
         },
         "status": {
@@ -188,26 +184,26 @@
         "accession": 1.0,
         "patient": 1.0,
         "surgery_procedure.procedure_type": 1.0,
-        "pathology_report.t_stage": 1.0,
-        "pathology_report.n_stage": 1.0,
-        "pathology_report.m_stage": 1.0,
-        "pathology_report.metasis_details.site": 1.0,
-        "pathology_report.metasis_details.type": 1.0,
-        "pathology_report.ajcc_tnm_stage": 1.0,
-        "pathology_report.ajcc_version": 1.0,
-        "pathology_report.laterality":1.0,
-        "pathology_report.histology": 1.0,
-        "pathology_report.focality": 1.0,
-        "pathology_report.grade": 1.0,
-        "pathology_report.sarcomatoid":1.0,
-        "pathology_report.necrosis": 1.0,
-        "pathology_report.margins": 1.0,
-        "pathology_report.lvi": 1.0,
-        "pathology_report.micro_perinephric":1.0,
-        "pathology_report.micro_vein": 1.0,
-        "pathology_report.micro_adrenal": 1.0,
-        "pathology_report.ihc.antibody": 1.0,
-        "pathology_report.ihc.result": 1.0
+        "surgery_procedure.pathology_report.t_stage": 1.0,
+        "surgery_procedure.pathology_report.n_stage": 1.0,
+        "surgery_procedure.pathology_report.m_stage": 1.0,
+        "surgery_procedure.pathology_report.metasis_details.site": 1.0,
+        "surgery_procedure.pathology_report.metasis_details.type": 1.0,
+        "surgery_procedure.pathology_report.ajcc_tnm_stage": 1.0,
+        "surgery_procedure.pathology_report.ajcc_version": 1.0,
+        "surgery_procedure.pathology_report.laterality":1.0,
+        "surgery_procedure.pathology_report.histology": 1.0,
+        "surgery_procedure.pathology_report.focality": 1.0,
+        "surgery_procedure.pathology_report.grade": 1.0,
+        "surgery_procedure.pathology_report.sarcomatoid":1.0,
+        "surgery_procedure.pathology_report.necrosis": 1.0,
+        "surgery_procedure.pathology_report.margins": 1.0,
+        "surgery_procedure.pathology_report.lvi": 1.0,
+        "surgery_procedure.pathology_report.micro_perinephric":1.0,
+        "surgery_procedure.pathology_report.micro_vein": 1.0,
+        "surgery_procedure.pathology_report.micro_adrenal": 1.0,
+        "surgery_procedure.pathology_report.ihc.antibody": 1.0,
+        "surgery_procedure.pathology_report.ihc.result": 1.0
     },
     "changelog": "/profiles/changelogs/surgery.md"
 }
