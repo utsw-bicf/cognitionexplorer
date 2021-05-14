@@ -494,13 +494,13 @@
         "surgery.surgery_procedure.pathology_report.ajcc_tnm_stage": {
             "title": "TNM Stage (at presentation)"
         },
-        "genomic_release.genomic_release": {
+        "genomic_consent.genomic_release": {
             "title": "Genomic Release"
         },
-        "genomic_release.item_status": {
-            "title": "Genomic Release"
+        "genomic_consent.item_status": {
+            "title": "Biospecimen Release"
         },
-        
+
         "biofile.award.project": {
             "title": "Genomics Project"
         },
@@ -554,7 +554,7 @@
         "surgery.surgery_procedure.pathology_report.histology": {
             "title": "Histologic Subtype"
         },
-        
+
         "biofile.award.project": {
             "title": "Genomics Project"
         },

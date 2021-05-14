@@ -84,63 +84,47 @@ class Biospecimen(Item):
             }
         })
     def genomic_release(self, request, patient):
+        consent_list = request.embed(patient, '@@object?skip_calculated=false').get('consent')
 
-        consent_list = request.embed(patient, '@@object?skip_calculated=true').get('consent')
-        print('consent_list', consent_list)
         consent_type_list=[]
-        genomic_release='N'
-        item_status='revoked'
-        if consent_list:
+
+        if len(consent_list) > 0 :
             for consent in consent_list:
-                properties = request.embed(consent, '@@object?skip_calculated=true')
-                consent_object = request.embed(properties, '@@object')
-                version= consent_object['consent_type']
-                date=consent_object['date_signed']
-                genetic=consent_object['genetic_release']
+                consent_object = request.embed(consent, '@@object?skip_calculated=true')
+                version = consent_object['consent_type']
+                date = consent_object['date_signed']
+                if version == '1':
+                    genetic = 'N'
+                elif version == '3':
+                    genetic = 'N'
+                elif version == '4' or version == '5' or version == '6':
+                    genetic = 'Y'
+                else:
+                    genetic = consent_object['genetic_release']
+
                 consent_filter={}
                 consent_filter={'date':date,'version':version,'genetic':genetic}
-                # print('consent filter',consent_filter)
                 consent_type_list.append(consent_filter)
-                # print('consent filter',consent_filter)
-
-
-
 
             consent_type_list.sort(key= lambda consent_filter:consent_filter['version'])
 
             consent_lastest=consent_type_list[-1]
-            consent_version=consent_lastest['version']
-            print ("consent_version",consent_version)
+            genomic_release = consent_lastest['genetic']
+            if genomic_release=='N' :
+                item_status='revoked'
+            elif genomic_release=='Y':
+                item_status='released'
 
-            if consent_version=='1' :
-                genomic_release='N'
-                item_status='revoked'
-            elif consent_version=='2':
-                if consent_lastest.get('genetic') is not None:
-                    genomic_release = consent_lastest.get('genetic')
-                if genomic_release == 'Y':
-                    item_status='released'
-                    # print('consent 2', genomic_release, item_status)
-                else:
-                    item_status='revoked'
-                    # print('consent 2-N', genomic_release, item_status)
-            elif consent_version=='3':
-                genomic_release='N'
-                item_status='revoked'
-            elif consent_version=='4':
-                genomic_release='Y'
-                item_status='released'
-            elif consent_version=='5' or consent_version=='6':
-                genomic_release='Y'
-                item_status='released'
-            else:
-                genomic_release='N'
-                item_status='revoked'
+
+        else:
+            genomic_release='N'
+            item_status='revoked'
 
         genomic_consent = dict()
         genomic_consent['genomic_release'] = genomic_release
         genomic_consent['item_status'] = item_status
         return genomic_consent
+
 
     @calculated_property( schema={
         "title": "Anatomic Site",
