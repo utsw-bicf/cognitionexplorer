@@ -48,6 +48,11 @@ const sharedStatuses = {
     external: [
         'current',
     ],
+    consortium: [
+        'in progress',
+        "restricted",
+        'submitted',
+    ],
     administrator: [
         'deleted',
         'disabled',
@@ -77,6 +82,7 @@ const defaultObjectStatuses = {
         ],
         administrator: [
             'deleted',
+
         ],
     },
     AnalysisStepRun: standardStatuses,
@@ -274,7 +280,7 @@ export const sessionToAccessLevel = (session, sessionProperties) => {
     const loggedIn = !!(session && session['auth.userid']);
     const administrativeUser = loggedIn && !!(sessionProperties && sessionProperties.admin);
 
-  
+
     let accessLevel = '';
     if (!loggedIn) {
         accessLevel = 'external';
@@ -302,13 +308,13 @@ export const sessionToAccessLevel = (session, sessionProperties) => {
 export const getObjectStatuses = (item, accessLevel = 'external', objectStatuses = defaultObjectStatuses) => {
     // Go down the @type list for the object until a matching block is found in `objectStatuses`.
     const objectType = typeof item === 'string' ? item : item['@type'].find(type => objectStatuses[type]);
-    const context2 = this.props.context;
+    // const context2 = this.props.context;
     // const object=this.props.object;
     // const item=this.props.item;
-    console.log('object', object);
-    console.log('context2', context2);
-    console.log('item', item);
-    console.log('accessLevel', accessLevel);
+    // console.log('object', object);
+    // console.log('context2', context2);
+    // console.log('item', item);
+    // console.log('accessLevel', accessLevel);
 
     if (objectType && objectStatuses[objectType]) {
         // To collect all possible statuses for the given `accessLevel` and item @type, concatenate
@@ -337,17 +343,15 @@ export const getObjectStatuses = (item, accessLevel = 'external', objectStatuses
 //     status=item.status
 // }
 const Status = ({ item, badgeSize, title, css, noLabel, noIcon, inline }) => {
-  
-    // const status =  item.genomic_release? item.genomic_release.biospecimen_status : item.status;
-    // console.log(item.genomic_release.biospecimen_status);
-    // console.log(item.status);
-    let status='';
-    if (item.genomic_release){
-            status= item.genomic_release.item_status
-        }
-        else{
-            status=item.status
-        }
+
+    
+    let status = '';
+    if (item.genomic_release) {
+        status = item.genomic_release.item_status
+    }
+    else {
+        status = item.status
+    }
     status = typeof item === 'string' ? item : status;
     const classElement = globals.statusToClassElement(status);
 

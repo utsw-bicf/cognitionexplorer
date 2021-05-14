@@ -111,14 +111,14 @@ class Biospecimen(Item):
             consent_lastest=consent_type_list[-1]
             genomic_release = consent_lastest['genetic']
             if genomic_release=='N' :
-                item_status='revoked'
+                item_status='restricted'
             elif genomic_release=='Y':
                 item_status='released'
 
 
         else:
             genomic_release='N'
-            item_status='revoked'
+            item_status='restricted'
 
         genomic_consent = dict()
         genomic_consent['genomic_release'] = genomic_release
