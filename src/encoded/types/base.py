@@ -83,7 +83,8 @@ ALLOW_SUBMITTER_ADD = [
 # Transitioning to the same status (released -> released) allows for the child objects to be crawled
 # without actually making a patch if the new and current statuses are the same.
 STATUS_TRANSITION_TABLE = {
-    'released': ['released', 'in progress', 'submitted'],
+    'released': ['released', 'restricted','in progress', 'submitted'],
+    'restricted':['restricted'],
     'in progress': ['in progress'],
     'deleted': ['deleted', 'in progress', 'current', 'submitted'],
     'revoked': ['revoked', 'released', 'archived'],
@@ -101,6 +102,7 @@ STATUS_TRANSITION_TABLE = {
 STATUS_HIERARCHY = {
     'released': 100,
     'current': 100,
+    'restricted':90,
     'in progress': 90,
     'submitted': 80,
     'uploading': 80,

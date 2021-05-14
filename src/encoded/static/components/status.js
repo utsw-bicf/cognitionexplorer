@@ -19,6 +19,7 @@ const accessionedStatuses = {
     ],
     consortium: [
         'in progress',
+        "restricted",
     ],
     administrator: [
         'deleted',
@@ -34,6 +35,7 @@ const biodatasetStatuses = {
     ],
     consortium: [
         'in progress',
+        "restricted",
         'submitted',
     ],
     administrator: [
@@ -58,6 +60,7 @@ const standardStatuses = {
     ],
     consortium: [
         'in progress',
+        "restricted",
     ],
     administrator: [
         'deleted',
@@ -89,6 +92,7 @@ const defaultObjectStatuses = {
         ],
         consortium: [
             'in progress',
+            "restricted",
             'pending dcc review',
         ],
         administrator: [
@@ -116,6 +120,7 @@ const defaultObjectStatuses = {
         ],
         consortium: [
             'in progress',
+            "restricted",
             'uploading',
             'upload failed',
             'content error',
@@ -140,6 +145,7 @@ const defaultObjectStatuses = {
         ],
         consortium: [
             'in progress',
+            "restricted",
         ],
         administrator: [
             'deleted',
@@ -157,6 +163,7 @@ const defaultObjectStatuses = {
         ],
         consortium: [
             'in progress',
+            "restricted",
         ],
         administrator: [
             'deleted',

@@ -225,6 +225,7 @@
             "enum" : [
                 "uploading",
                 "upload failed",
+                "restricted",
                 "in progress",
                 "released",
                 "archived",

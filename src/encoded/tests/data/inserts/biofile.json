@@ -77,7 +77,7 @@
         "paired_end": "1",
         "submitted_file_name": "SAM24297118_1_R1.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/rna/RAW/SAM24297118_1_R1.fastq.gz",
-        "status": "released",
+        "status": "in progress",
         "uuid": "a3d68954-c8f7-4dd7-89d2-e1050065a252"
     },
 
@@ -94,7 +94,7 @@
         "paired_with": "KCEFF432HYT",
         "submitted_file_name": "SAM24297118_1_R2.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/rna/RAW/SAM24297118_1_R2.fastq.gz",
-        "status": "released",
+        "status": "restricted",
         "uuid": "98fd89bf-1968-4ff4-a986-72533b02b524"
     }
 ]

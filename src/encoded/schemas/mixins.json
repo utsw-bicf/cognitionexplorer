@@ -78,6 +78,7 @@
             "comment": "Do not submit.  This is set by admins along the process of metadata submission.",
             "enum": [
                 "in progress",
+                "restricted",
                 "released",
                 "deleted",
                 "replaced",
@@ -94,6 +95,7 @@
             "enum": [
                 "deleted",
                 "in progress",
+                "restricted",
                 "released"
             ]
         }
@@ -105,6 +107,7 @@
             "default": "current",
             "enum": [
                 "current",
+                "restricted",
                 "deleted",
                 "disabled"
             ]
