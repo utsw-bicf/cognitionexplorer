@@ -62,6 +62,7 @@ class Biospecimen extends React.Component {
 
 
     render() {
+        
         const context = this.props.context;
         const itemClass = globals.itemClass(context, 'view-item');
         // Set up breadcrumbs

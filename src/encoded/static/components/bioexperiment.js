@@ -53,19 +53,19 @@ class Bioexperiment extends React.Component {
         let biospecimen_summary = [];
         let projectSet = new Set();
         let files = context.files;
-
-        for (let i = 0; i < files.length; i++) {
-            let biospecimen = files[i].biospecimen;
-            let project = files[i].award.project;
-            biospecimen_summary.push(biospecimen);
-            projectSet.add(project)
+        if (Object.keys(this.props.context.files).length > 0) {
+            for (let i = 0; i < files.length; i++) {
+                let biospecimen = files[i].biospecimen;
+                let project = files[i].award.project;
+                biospecimen_summary.push(biospecimen);
+                projectSet.add(project)
+            }
+            let uniqueBiospecimen_summary = Array.from(new Set(biospecimen_summary.map(a => a.accession)))
+                .map(accession => {
+                    return biospecimen_summary.find(a => a.accession === accession)
+                });
+            biospecimen_summary = uniqueBiospecimen_summary;
         }
-        let uniqueBiospecimen_summary = Array.from(new Set(biospecimen_summary.map(a => a.accession)))
-            .map(accession => {
-                return biospecimen_summary.find(a => a.accession === accession)
-            });
-        biospecimen_summary = uniqueBiospecimen_summary;
-
 
         let show_specimen_summary = (<div>
             <dt>biospecimen_summary</dt>
@@ -81,7 +81,7 @@ class Bioexperiment extends React.Component {
 
         let hasGenomics = false;
         // if (context.genomic_release.item_status === 'released' && Object.keys(this.props.context.biofile).length > 0) {
-            if ( Object.keys(this.props.context.biofile).length > 0 ) {
+        if (Object.keys(this.props.context.files).length > 0) {
             hasGenomics = true;
         }
         return (
@@ -148,7 +148,7 @@ class Bioexperiment extends React.Component {
                 {/* <BioreplicateTable data={context.bioreplicate} tableTitle="Bioreplicates summary"></BioreplicateTable> */}
                 {/* Display the file widget with the facet, graph, and tables */}
                 {/* <FileGallery1 context={context} encodevers={encodevers} anisogenic={anisogenic} /> */}
-                {hasGenomics && <FileGallery1 context={context} />}
+                { hasGenomics && <FileGallery1 context={context} />}
 
 
 

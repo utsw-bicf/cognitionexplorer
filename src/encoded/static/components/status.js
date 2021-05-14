@@ -308,13 +308,7 @@ export const sessionToAccessLevel = (session, sessionProperties) => {
 export const getObjectStatuses = (item, accessLevel = 'external', objectStatuses = defaultObjectStatuses) => {
     // Go down the @type list for the object until a matching block is found in `objectStatuses`.
     const objectType = typeof item === 'string' ? item : item['@type'].find(type => objectStatuses[type]);
-    // const context2 = this.props.context;
-    // const object=this.props.object;
-    // const item=this.props.item;
-    // console.log('object', object);
-    // console.log('context2', context2);
-    // console.log('item', item);
-    // console.log('accessLevel', accessLevel);
+
 
     if (objectType && objectStatuses[objectType]) {
         // To collect all possible statuses for the given `accessLevel` and item @type, concatenate
