@@ -53,7 +53,7 @@
         "accession": "KCEFF307UYT",
         "award": "T-Th",
         "biodataset": "KCEBE000UIY", 
-        "biospecimen": "KCEBS708IJT",
+        "biospecimen": "KCEBS044ANI",
         "library_type": "DNA",   
         "file_format": "fastq",
         "md5sum": "befc88129d683f7ab55a0c0a5c20f5ca",
@@ -97,6 +97,8 @@
         "status": "restricted",
         "uuid": "98fd89bf-1968-4ff4-a986-72533b02b524"
     }
+
+    
 ]
 
 
