@@ -137,41 +137,7 @@ class Biofile(Item):
             )
         )
 
-    @calculated_property(condition='biospecimen', schema={
-            "title": "Genomic release",
-            "type": "object",
-            "additionalProperties": False,
-            "properties":{
-                "genomic_release": {
-                    "title": "Genomic Release",
-                    "type": "string",
-                },
-                "item_status": {
-                    "title": "Item Status",
-                    "type": "string",
-                }
-            }
-        })
-    def genomic_release(self, request, biospecimen):
-        for path in biospecimen:
-            properties = request.embed(biospecimen, '@@object?skip_calculated=false')
-            bs_genomic_release= properties.get('genomic_release')
-
     
-        # print('bs_genomic_release', bs_genomic_release)
-
-        if bs_genomic_release is not None:
-            genomic_release=bs_genomic_release.get('genomic_release')
-            item_status=bs_genomic_release.get('item_status')
-        else:
-            genomic_release='N'
-            item_status='restricted'
-        
-        genomic_consent = dict()
-        genomic_consent['genomic_release'] = genomic_release
-        genomic_consent['item_status'] = item_status
-        # print('genomic_consent', genomic_consent)
-        return genomic_consent
 
             
 
