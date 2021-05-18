@@ -45,7 +45,7 @@
         "paired_end": "1",
         "submitted_file_name": "SAM24296975_1_1.gne.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/exome/RAW/SAM24296975_1_1.gne.fastq.gz",
-        "status": "restricted",
+        "status": "released",
         "uuid": "d42d45b3-89b6-406b-bc1c-05f36e6b880e"
     },
 
@@ -62,7 +62,7 @@
         "paired_with": "KCEFF586YYT",
         "submitted_file_name": "SAM24296975_1_2.gne.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/exome/RAW/SAM24296975_1_2.gne.fastq.gz",
-        "status": "restricted",
+        "status": "released",
         "uuid": "c93f4225-b65e-44c5-85a8-45132430be06"
     },
     {
