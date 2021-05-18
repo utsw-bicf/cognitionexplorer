@@ -13,7 +13,7 @@
         "paired_end": "1",
         "submitted_file_name": "1620XD-14-15V1_S0_L001_R1_001.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/Projects/DoubleMutant/Exome/1620XD-14-15V1_S0_L001_R1_001.fastq.gz",
-        "status": "released",
+        "status": "restricted",
         "uuid": "3ac55830-bf9e-435d-9952-434a3a76396a"
     },
 
@@ -30,7 +30,7 @@
         "paired_with": "KCEFF365GYT",
         "submitted_file_name": "1620XD-14-15V1_S0_L001_R2_001.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/Projects/DoubleMutant/Exome/1620XD-14-15V1_S0_L001_R2_001.fastq.gz",
-        "status": "released",
+        "status": "restricted",
         "uuid": "47bf6887-91c4-4d8e-a758-7e36b78f734f"
     },
     {

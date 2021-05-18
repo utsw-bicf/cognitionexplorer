@@ -162,6 +162,7 @@ class Item(snovault.Item):
         'released': ALLOW_CURRENT,
         'deleted': DELETED,
         'replaced': DELETED,
+        'restricted':ALLOW_VIEWING_GROUP_VIEW,
 
         # shared_status
         'current': ALLOW_CURRENT,
