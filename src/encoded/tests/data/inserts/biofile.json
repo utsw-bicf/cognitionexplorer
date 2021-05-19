@@ -30,7 +30,7 @@
         "paired_with": "KCEFF365GYT",
         "submitted_file_name": "1620XD-14-15V1_S0_L001_R2_001.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/Projects/DoubleMutant/Exome/1620XD-14-15V1_S0_L001_R2_001.fastq.gz",
-        "status": "restricted",
+        "status": "in progress",
         "uuid": "47bf6887-91c4-4d8e-a758-7e36b78f734f"
     },
     {
@@ -77,7 +77,7 @@
         "paired_end": "1",
         "submitted_file_name": "SAM24297118_1_R1.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/rna/RAW/SAM24297118_1_R1.fastq.gz",
-        "status": "in progress",
+        "status": "released",
         "uuid": "a3d68954-c8f7-4dd7-89d2-e1050065a252"
     },
 
