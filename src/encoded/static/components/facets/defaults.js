@@ -874,7 +874,7 @@ const FacetTerms = React.memo(({ facet, results, mode, relevantFilters, pathname
     if (facet.field.includes("histology_filter")){
         filteredTerms = sortTermsAlphabetical(filteredTerms);
     }
-    if (facet.field.includes("pathology_report.t_stage") || facet.field.includes("surgery.pathology_report.n_stage") || facet.field.includes("surgery.pathology_report.m_stage") || facet.field.includes("surgery.pathology_report.ajcc_tnm_stage")){
+    if (facet.field.includes("pathology_report.t_stage") || facet.field.includes("surgery.surgery_procedure.pathology_report.n_stage") || facet.field.includes("surgery.surgery_procedure.pathology_report.m_stage") || facet.field.includes("surgery.surgery_procedure.pathology_report.ajcc_tnm_stage")){
         filteredTerms = sortStageTerms(filteredTerms);
     }
     if (facet.field === "diagnosis.age_range" || facet.field === "diagnosis.follow_up_duration_range" || facet.field.includes("pathology_report.pathology_report_tumor_range")

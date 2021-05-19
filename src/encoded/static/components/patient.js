@@ -66,11 +66,11 @@ class Patient extends React.Component {
       list.push(<div data-test="surgery"><dt>Surgery Date</dt><dd>{surgeryData[i].date}</dd> </div>)
       if (surgeryData[i].pathology_report && surgeryData[i].pathology_report.length > 0) {
         for (let j = 0; j < surgeryData[i].pathology_report.length; j++) {
-          list.push(<div data-test="surgery.pathology_report"><dt>pathology_report</dt><dd><a href={surgeryData[i].pathology_report[j]['@id']}>{surgeryData[i].pathology_report[j].accession}</a></dd> </div>)
-          list.push(<div data-test="surgery.pathology_report"><dt>Histologic Subtype</dt><dd>{surgeryData[i].pathology_report[j].histology}</dd> </div>)
-          list.push(<div data-test="surgery.pathology_report"><dt>pT stage</dt><dd>{surgeryData[i].pathology_report[j].t_stage}</dd> </div>)
-          list.push(<div data-test="surgery.pathology_report"><dt>pN stage</dt><dd>{surgeryData[i].pathology_report[j].n_stage}</dd> </div>)
-          list.push(<div data-test="surgery.pathology_report"><dt>pM stage</dt><dd>{surgeryData[i].pathology_report[j].m_stage}</dd> </div>)
+          list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pathology_report</dt><dd><a href={surgeryData[i].pathology_report[j]['@id']}>{surgeryData[i].pathology_report[j].accession}</a></dd> </div>)
+          list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>Histologic Subtype</dt><dd>{surgeryData[i].pathology_report[j].histology}</dd> </div>)
+          list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pT stage</dt><dd>{surgeryData[i].pathology_report[j].t_stage}</dd> </div>)
+          list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pN stage</dt><dd>{surgeryData[i].pathology_report[j].n_stage}</dd> </div>)
+          list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pM stage</dt><dd>{surgeryData[i].pathology_report[j].m_stage}</dd> </div>)
         }
       }
       if (i != surgeryData.length - 1) {
@@ -93,7 +93,7 @@ class Patient extends React.Component {
     ];
     const crumbsReleased = (context.status === 'released');
     const ageUnit = (context.diagnosis.age_unit && context.diagnosis.age != "90 or above" && context.diagnosis.age != "Unknown") ? ` ${context.diagnosis.age_unit}` : '';
-
+    console.log("Hello world!");
     let hasLabs = false;
     let hasVitals = false;
     let hasPath = false;
@@ -171,7 +171,6 @@ class Patient extends React.Component {
             <ItemAccessories item={context}/>
           </div>
         </header>
-
         <Panel>
           <PanelBody addClasses="panel__split">
             <div className="panel__split-element">

@@ -171,22 +171,22 @@
         "surgery.pathology_report.laterality": {
             "title": "Tumor Laterality"
         },
-        "surgery.pathology_report.pathology_report_tumor_range":{
+        "surgery.surgery_procedure.pathology_report.pathology_report_tumor_range":{
             "title": "Tumor Size Range"
         },
-        "surgery.pathology_report.histology_filter": {
+        "surgery.surgery_procedure.pathology_report.histology_filter": {
             "title": "Histologic Subtype"
         },
-        "surgery.pathology_report.grade": {
+        "surgery.surgery_procedure.pathology_report.grade": {
             "title": "Tumor Grade"
         },
-        "surgery.pathology_report.t_stage": {
+        "surgery.surgery_procedure.pathology_report.t_stage": {
             "title": "pT Stage (at presentation)"
         },
-        "surgery.pathology_report.n_stage": {
+        "surgery.surgery_procedure.pathology_report.n_stage": {
             "title": "pN Stage (at presentation)"
         },
-        "surgery.pathology_report.ajcc_tnm_stage": {
+        "surgery.surgery_procedure.pathology_report.ajcc_tnm_stage": {
             "title": "TNM Stage (at presentation)"
         },
         "ihc.antibody": {
@@ -284,6 +284,7 @@
         "status": {
             "title": "Status"
         }
+
     },
     "boost_values": {
         "accession": 1.0,
@@ -295,12 +296,12 @@
         "medications.name":1.0,
         "ihc.antibody":1.0,
         "ihc.result":1.0,
-        "surgery.pathology_report.t_stage": 1.0,
-        "surgery.pathology_report.n_stage": 1.0,
-        "surgery.pathology_report.m_stage": 1.0,
-        "surgery.pathology_report.metasis_details.site": 1.0,
-        "surgery.pathology_report.metasis_details.type": 1.0,
-        "surgery.pathology_report.ajcc_tnm_stage": 1.0
+        "surgery.surgery_procedure.pathology_report.t_stage": 1.0,
+        "surgery.surgery_procedure.pathology_report.n_stage": 1.0,
+        "surgery.surgery_procedure.pathology_report.m_stage": 1.0,
+        "surgery.surgery_procedure.pathology_report.metasis_details.site": 1.0,
+        "surgery.surgery_procedure.pathology_report.metasis_details.type": 1.0,
+        "surgery.surgery_procedure.pathology_report.ajcc_tnm_stage": 1.0
         },
     "changelog": "/profiles/changelogs/patient.md"
 }

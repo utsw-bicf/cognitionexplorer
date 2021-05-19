@@ -75,6 +75,7 @@ def supportive_med_frequency(request, supportive_medication):
 
 
 def last_follow_up_date_fun(request, labs, vitals, germline,ihc, consent,radiation,medical_imaging,medication,supportive_medication,surgery, death_date):
+    last_follow_up_date="Not available"
     if death_date is not None:
         last_follow_up_date = death_date
     else:
@@ -131,8 +132,8 @@ def last_follow_up_date_fun(request, labs, vitals, germline,ihc, consent,radiati
         if len(all_traced_dates) > 0:
             all_traced_dates.sort(key = lambda date: datetime.strptime(date, "%Y-%m-%d"))
             last_follow_up_date = all_traced_dates[-1]
-        else:
-            last_follow_up_date = "Not available"
+        # else:
+        #     last_follow_up_date = "Not available"
 
     return last_follow_up_date
 
@@ -179,8 +180,10 @@ class Patient(Item):
         'supportive_medications',
         'surgery',
         'surgery.surgery_procedure',
-        'surgery.pathology_report',
-        'biospecimen']
+        'surgery.surgery_procedure.pathology_report',
+        'biospecimen',
+        'biospecimen.biofile',
+        ]
     rev = {
         'labs': ('LabResult', 'patient'),
         'vitals': ('VitalResult', 'patient'),
@@ -194,7 +197,16 @@ class Patient(Item):
         'surgery': ('Surgery', 'patient'),
         'biospecimen': ('Biospecimen', 'patient')
     }
-    set_status_up = []
+    set_status_up = [
+        'labs',
+        'surgery',
+        'consent',
+        'biospecimen',
+        'ihc',
+        'germline'
+
+
+    ]
     set_status_down = []
 
     @calculated_property(schema={
@@ -309,12 +321,15 @@ class Patient(Item):
             if len(surgery) > 0:
                 for surgery_record in surgery:
                     surgery_object = request.embed(surgery_record, '@@object')
-                    path_reports = surgery_object['pathology_report']
-                    if len(path_reports) > 0:
-                        for path_report in path_reports:
-                            path_report_obj = request.embed(path_report, '@@object')
-                            if path_report_obj['path_source_procedure'] == 'path_metastasis':
-                                status = "Yes"
+                    for surgery_procedure in surgery_object['surgery_procedure']:
+                        procedure_object = request.embed(surgery_procedure, '@@object')
+                        path_reports = procedure_object['pathology_report']
+
+                        if len(path_reports) > 0:
+                            for path_report in path_reports:
+                                path_report_obj = request.embed(path_report, '@@object')
+                                if path_report_obj['path_source_procedure'] == 'path_metastasis':
+                                    status = "Yes"
         return status
 
     @calculated_property(define=True, schema={
@@ -437,6 +452,7 @@ class Patient(Item):
         },
     })
 
+
     def surgery(self, request, surgery):
         return paths_filtered_by_status(request, surgery)
 
@@ -557,52 +573,54 @@ class Patient(Item):
         if len(surgery) > 0:
             for surgery_record in surgery:
                 surgery_object = request.embed(surgery_record, '@@object')
-                surgery_path_report = surgery_object['pathology_report']
-                if len(surgery_path_report) > 0:
-                    for path_report in surgery_path_report:
-                        path_report_obj = request.embed(path_report, '@@object')
-                        t_stage = path_report_obj.get('t_stage')
-                        n_stage = path_report_obj.get('n_stage')
-                        m_stage = path_report_obj.get('m_stage')
-                        histology = path_report_obj.get('histology')
-                        date = surgery_object.get('date')
-                        # handle missing data. if stage info is missing, rank it the -1(lowest)
-                        # Also we assume non-RCC is already exluded from path report data
-                        if t_stage:
-                            t_stage_rank =  tRanking[t_stage]
-                        else:
-                            t_stage_rank = -1
-                        if n_stage:
-                            n_stage_rank =  nRanking[n_stage]
-                        else:
-                            n_stage_rank = -1
-                        if histology:
-                            histology_rank =  histologyRanking[histology]
-                        else:
-                            histology_rank = -1
-                        histology = path_report_obj.get('histology')
-                        histology_filter = histology_filters.get(histology)
-                        tumor = {
-                            't_stage': t_stage,
-                            't_stage_rank': t_stage_rank,
-                            'n_stage': n_stage,
-                            'n_stage_rank': n_stage_rank,
-                            'm_stage': m_stage,
-                            'histology': histology,
-                            'histology_filter': histology_filter,
-                            'histology_rank': histology_rank,
-                            'tumor_size': path_report_obj.get('tumor_size'),
-                            'tumor_size_units': path_report_obj.get('tumor_size_units'),
-                            'path_report': path_report_obj.get('accession'),
-                            'path_report_id': path_report_obj.get('@id'),
-                            'surgery': surgery_object.get('accession'),
-                            'surgery_id': surgery_object.get('@id'),
-                            'stage': path_report_obj.get('ajcc_tnm_stage'),
-                            'ajcc_version': path_report_obj.get('ajcc_version'),
-                            'date': date
-                        }
+                for surgery_procedure in surgery_object['surgery_procedure']:
+                    procedure_object = request.embed(surgery_procedure, '@@object')
+                    surgery_path_report = procedure_object['pathology_report']
+                    if len(surgery_path_report) > 0:
+                        for path_report in surgery_path_report:
+                            path_report_obj = request.embed(path_report, '@@object')
+                            t_stage = path_report_obj.get('t_stage')
+                            n_stage = path_report_obj.get('n_stage')
+                            m_stage = path_report_obj.get('m_stage')
+                            histology = path_report_obj.get('histology')
+                            date = surgery_object.get('date')
+                            # handle missing data. if stage info is missing, rank it the -1(lowest)
+                            # Also we assume non-RCC is already exluded from path report data
+                            if t_stage:
+                                t_stage_rank =  tRanking[t_stage]
+                            else:
+                                t_stage_rank = -1
+                            if n_stage:
+                                n_stage_rank =  nRanking[n_stage]
+                            else:
+                                n_stage_rank = -1
+                            if histology:
+                                histology_rank =  histologyRanking[histology]
+                            else:
+                                histology_rank = -1
+                            histology = path_report_obj.get('histology')
+                            histology_filter = histology_filters.get(histology)
+                            tumor = {
+                                't_stage': t_stage,
+                                't_stage_rank': t_stage_rank,
+                                'n_stage': n_stage,
+                                'n_stage_rank': n_stage_rank,
+                                'm_stage': m_stage,
+                                'histology': histology,
+                                'histology_filter': histology_filter,
+                                'histology_rank': histology_rank,
+                                'tumor_size': path_report_obj.get('tumor_size'),
+                                'tumor_size_units': path_report_obj.get('tumor_size_units'),
+                                'path_report': path_report_obj.get('accession'),
+                                'path_report_id': path_report_obj.get('@id'),
+                                'surgery': surgery_object.get('accession'),
+                                'surgery_id': surgery_object.get('@id'),
+                                'stage': path_report_obj.get('ajcc_tnm_stage'),
+                                'ajcc_version': path_report_obj.get('ajcc_version'),
+                                'date': date
+                            }
 
-                        tumors.append(tumor)
+                            tumors.append(tumor)
 
             if len(tumors) == 1:
                 dominant_tumor = tumors[0]
@@ -690,7 +708,84 @@ class Patient(Item):
                 surgery_summary = "No"
             return surgery_summary
 
+    # @calculated_property(define=True, schema={
+    #         "title": "Genomic release",
+    #         "type": "object",
+    #         "additionalProperties": False,
+    #         "properties":{
+    #             "genomic_release": {
+    #                 "title": "Genomic Release",
+    #                 "type": "string",
+    #             },
+    #             "item_status": {
+    #                 "title": "Item Status",
+    #                 "type": "string",
+    #             }
+    #         }
+    #     })
 
+
+    # def genomic_release(self, request, consent, biospecimen):
+    #     consent_type_list=[]
+    #     genomic_release='Y'
+    #     item_status='released'
+    #     if len(biospecimen) > 0:
+    #         for b_obj in biospecimen:
+    #             biospecimen_object = request.embed(b_obj, '@@object')
+    #             item_status=biospecimen_object.get('status')
+    #             # print(item_status)
+    #     if len(consent) > 0:
+    #         for consent_record in consent:
+    #             consent_object = request.embed(consent_record, '@@object')
+    #             version= consent_object['consent_type']
+    #             date=consent_object['date_signed']
+    #             genetic=consent_object.get('genetic_release')
+    #             consent_filter={}
+    #             consent_filter={'date':date,'version':version,'genetic':genetic}
+    #             print('consent filter',consent_filter)
+    #             consent_type_list.append(consent_filter)
+
+    #         consent_type_list.sort(key= lambda consent_filter:consent_filter['version'])
+    #         print("consent_type_list",consent_type_list)
+
+    #         consent_lastest=consent_type_list[-1]
+    #         consent_version=consent_type_list[-1]['version']
+
+    #         print ("consent_version",consent_version)
+    #         if consent_version=='1' :
+    #             genomic_release='N'
+    #             item_status='revoked'
+
+
+    #         elif consent_version=='2':
+    #             if consent_lastest.get('genetic') is not None:
+    #                 genomic_release = consent_lastest.get('genetic')
+    #             if genomic_release == 'Y':
+    #                 item_status='released'
+    #                 print('consent 2', genomic_release, item_status)
+
+    #             else:
+    #                 item_status='revoked'
+    #                 print('consent 2-N', genomic_release, item_status)
+    #         elif consent_version=='3':
+    #             genomic_release='N'
+    #             item_status='revoked'
+
+
+    #         elif consent_version=='4':
+    #             genomic_release='Y'
+    #             item_status='released'
+    #         elif consent_version=='5' or consent_version=='6':
+    #             genomic_release='Y'
+    #             item_status='released'
+    #         else:
+    #             genomic_release='N'
+    #             item_status='revoked'
+
+    #     genomic_consent = dict()
+    #     genomic_consent['genomic_release'] = genomic_release
+    #     genomic_consent['item_status'] = item_status
+    #     return genomic_consent
 
     @calculated_property(schema={
         "title": "Diagnosis",
@@ -750,13 +845,16 @@ class Patient(Item):
         if len(surgery) > 0:
             for surgery_record in surgery:
                 surgery_object = request.embed(surgery_record, '@@object')
-                surgery_path_report = surgery_object['pathology_report']
-                for path_report in surgery_path_report:
-                    path_report_obj = request.embed(path_report, '@@object')
-                    if path_report_obj['path_source_procedure'] == "path_nephrectomy" or path_report_obj['path_source_procedure'] == "path_biopsy":
-                        non_mets_dates.append(surgery_object['date'])
-                    elif  path_report_obj['path_source_procedure'] == "path_metastasis":
-                        mets_dates.append(surgery_object['date'])
+                surgery_procedures = surgery_object['surgery_procedure']
+                for surgery_procedure in surgery_procedures:
+                    surgery_procedure_obj = request.embed(surgery_procedure, '@@object')
+                    surgery_path_report = surgery_procedure_obj['pathology_report']
+                    for path_report in surgery_path_report:
+                        path_report_obj = request.embed(path_report, '@@object')
+                        if path_report_obj['path_source_procedure'] == "path_nephrectomy" or path_report_obj['path_source_procedure'] == "path_biopsy":
+                            non_mets_dates.append(surgery_object['date'])
+                        elif  path_report_obj['path_source_procedure'] == "path_metastasis":
+                            mets_dates.append(surgery_object['date'])
 
         if len(non_mets_dates) > 0 :
             non_mets_dates.sort(key = lambda date: datetime.strptime(date, '%Y-%m-%d'))
@@ -784,7 +882,7 @@ class Patient(Item):
         ageString = "Unknown"
         follow_up_duration_range = "Not available"
 
-        if diagnosis_date is not "Not available":
+        if diagnosis_date != "Not available":
             birth_date = datetime.strptime("1800-01-01", "%Y-%m-%d")
             end_date = datetime.strptime(diagnosis_date, "%Y-%m-%d")
             age = end_date.year - birth_date.year -  ((end_date.month, end_date.day) < (birth_date.month, birth_date.day))
@@ -1319,22 +1417,25 @@ class Patient(Item):
         if len(surgery) > 0:
             for surgery_record in surgery:
                 surgery_object = request.embed(surgery_record, '@@object')
-                path_reports = surgery_object['pathology_report']
-                if len(path_reports) > 0:
-                    for path_report in path_reports:
-                        path_report_obj = request.embed(path_report, '@@object')
-                        if path_report_obj['path_source_procedure'] == 'path_metastasis':
-                            site = path_report_obj['metasis_details']['site']
-                            if site == "Lung":
-                                site = "Lung and pleura"
-                            record = {
-                                'date': path_report_obj['date'],
-                                'source': 'Pathology report',
-                                'site': site,
-                                'histology_proven': 'Yes'
-                            }
-                            if record not in records:
-                                records.append(record)
+                surgery_procedures = surgery_object['surgery_procedure']
+                for surgery_procedure in surgery_procedures:
+                    surgery_procedure_obj = request.embed(surgery_procedure, '@@object')
+                    path_reports = surgery_procedure_obj['pathology_report']
+                    if len(path_reports) > 0:
+                        for path_report in path_reports:
+                            path_report_obj = request.embed(path_report, '@@object')
+                            if path_report_obj['path_source_procedure'] == 'path_metastasis':
+                                site = path_report_obj['metasis_details']['site']
+                                if site == "Lung":
+                                    site = "Lung and pleura"
+                                record = {
+                                    'date': path_report_obj['date'],
+                                    'source': 'Pathology report',
+                                    'site': site,
+                                    'histology_proven': 'Yes'
+                                }
+                                if record not in records:
+                                    records.append(record)
         if len(radiation) > 0 :
             for radiation_record in radiation:
                 radiation_object = request.embed(radiation_record, '@@object')
@@ -1455,11 +1556,11 @@ class Patient(Item):
                 'medications.name',
                 'surgery.surgery_procedure.surgery_type',
                 'surgery.hospital_location',
-                'surgery.pathology_report.tumor_size_range',
-                'surgery.pathology_report.ajcc_p_stage',
-                'surgery.pathology_report.n_stage',
-                'surgery.pathology_report.m_stage',
-                'surgery.pathology_report.ajcc_tnm_stage',
+                'surgery.surgery_procedure.pathology_report.tumor_size_range',
+                'surgery.surgery_procedure.pathology_report.ajcc_p_stage',
+                'surgery.surgery_procedure.pathology_report.n_stage',
+                'surgery.surgery_procedure.pathology_report.m_stage',
+                'surgery.surgery_procedure.pathology_report.ajcc_tnm_stage',
                 'germline_summary',
                 'ihc.antibody',
                 'ihc.result',
@@ -1469,16 +1570,16 @@ class Patient(Item):
         },
         'x': {
             'facets': [
-                'surgery.pathology_report.histology_filter',
+                'surgery.surgery_procedure.pathology_report.histology_filter',
             ],
-            'group_by': 'surgery.pathology_report.histology_filter',
+            'group_by': 'surgery.surgery_procedure.pathology_report.histology_filter',
             'label': 'histology',
         },
     }
 
     summary_matrix = {
         'x': {
-            'group_by': 'surgery.pathology_report.histology_filter'
+            'group_by': 'surgery.surgery_procedure.pathology_report.histology_filter'
         },
         'y': {
             'group_by': ['race', 'sex']
@@ -1725,6 +1826,7 @@ class Radiation(Item):
             return "Lymph node"
         else:
             return "Kidney"
+
 
 
 

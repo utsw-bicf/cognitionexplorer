@@ -78,6 +78,7 @@
             "comment": "Do not submit.  This is set by admins along the process of metadata submission.",
             "enum": [
                 "in progress",
+                "restricted",
                 "released",
                 "deleted",
                 "replaced",
@@ -94,6 +95,7 @@
             "enum": [
                 "deleted",
                 "in progress",
+                "restricted",
                 "released"
             ]
         }
@@ -105,6 +107,7 @@
             "default": "current",
             "enum": [
                 "current",
+                "restricted",
                 "deleted",
                 "disabled"
             ]
@@ -415,10 +418,11 @@
             "description": "OBI (Ontology for Biomedical Investigations) ontology term for the assay.",
             "type": "string",
             "enum": [
-                "DNA methylation profiling by array assay",
+                "Methylation Array",
                 "RNA-seq",
-                "whole genome sequencing assay",
-                "whole-genome shotgun bisulfite sequencing"
+                "whole genome sequencing",
+                "Targeted",
+                "whole exome sequencing"
             ]
         }
     },

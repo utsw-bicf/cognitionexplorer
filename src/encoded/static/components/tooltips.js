@@ -33,9 +33,50 @@ export let tooltips = {
     "Tumor Grade": " Highest Fuhrman or ISUP grade seen in tumor, 1-4. Benign tumors and ChRCC are recorded as not applicable. Tumors for which grade was not reported in pathology are considered not available. Some of the cases have been reviewed centrally, and the centrally reviewed grade has been depicted in KCE for these cases.",
     "Margin Status": "Tumor transected at the surgical margins are considered positive/involved.",
     "Lymphvascular invasion(LVI)": "Lymphovascular invasion in non-muscle containing vessels.",
+
+    // AJCC Version
     "6th edition": "TNM Stage composite stage based on 6th edition rules.",
     "7th edition": "TNM Stage composite stage based on 7th edition rules.",
-    "8th edition": "TNM Stage composite stage based on 7th edition rules.",
+    "8th edition": "TNM Stage composite stage based on 8th edition rules.",
+
+
+    "pT Stage (at presentation)": "T stands for tumor, it refers to the size of the primary tumor and if it has invaded surrounding tissue.",
+    "pN Stage (at presentation)": "N stands for lymph nodes, it is used to identify how far the cancer has spread to lymph nodes.",
+    "pM Stage (at presentation)": "M stands for metastasis, it indicates whether the cancer has metastasized, or spread into other organs or more distant lymph nodes.",
+
+    "pTX": "The primary tumor cannot be evaluated.",
+
+    "pT1": "The tumor is found only in the kidney and is 7 cm or smaller at its largest area. There has been much discussion among doctors about whether this classification should only include a tumor that is 5 cm or smaller.",
+
+    "pT1a": "The tumor is found only in the kidney and is 4 cm or smaller at its largest area.",
+
+    "pT1b": "The tumor is found only in the kidney and is between 4 cm and 7 cm at its largest area.",
+
+    "pT2": "The tumor is found only in the kidney and is larger than 7 cm at its largest area.",
+
+    "pT2a": "The tumor is only in the kidney and is more than 7 cm but not more than 10 cm at its largest area.",
+
+    "pT2b": "The tumor is only in the kidney and is more than 10 cm at its largest area.",
+
+    "pT3": "The tumor has grown into major veins within the kidney or perinephric tissue, which is the connective, fatty tissue around the kidneys. However, it has not grown into the adrenal gland on the same side of the body as the tumor. The adrenal glands are located on top of each kidney and produce hormones and adrenaline to help control heart rate, blood pressure, and other bodily functions. In addition, the tumor has not spread beyond Gerota's fascia, an envelope of tissue that surrounds the kidney.",
+
+    "pT3a": "The tumor has spread to the large vein leading out of the kidney, called the renal vein, or the branches of the renal vein; the fat surrounding and/or inside the kidney; or the pelvis and calyces of the kidney, which collect urine before sending it to the bladder. The tumor has not grown beyond Gerota's fascia.",
+
+    "pT3b": "The tumor has grown into the large vein that drains into the heart, called the inferior vena cava, below the diaphragm. The diaphragm is the muscle under the lungs that helps breathing.",
+
+    "pT3c": "The tumor has spread to the vena cava above the diaphragm and into the right atrium of the heart or to the walls of the vena cava.",
+
+    "pT4": "The tumor has spread to areas beyond Gerota's fascia and extends into the adrenal gland on the same side of the body as the tumor.",
+
+
+    "pNX": "The regional lymph nodes cannot be evaluated.",
+
+    "pN0": "The cancer has not spread to the regional lymph nodes.",
+
+    "pN1": "The cancer has spread to single regional lymph node.",
+    "pN2": "The cancer has spread to more than one lymph nodes.",
+
+    "pM1": "The cancer has spread to other parts of the body beyond the kidney area.",
 
     //patient page facets
     "Metastatic Site": "This is recorded either from pathology report using natural language search or from clinical and radiotherapy notes. These may not be all inclusive.",
@@ -53,10 +94,11 @@ export let tooltips = {
     "Dominant Tumor": "The patient's dominant tumor based on current data availability ( stage, histology and size)",
 
     // Surgery
-    "Hospital Location": "The location procedure was conducted For patients with surgery at an outside institution, the surgery hospital location is recorded as “Outside”.",
+    "Surgery Hospital Location": "The location procedure was conducted For patients with surgery at an outside institution, the surgery hospital location is recorded as “Outside”.",
     "Surgery Treatment Summary": "The surgery treatment status. For patients that did not undergo surgery, their status is recorded as “No” (management at UTSW for active surveillance or metastasis without surgical treatment).",
-    "Procedure": "The surgical procedure conducted as recorded in the EMR.",
+    "Surgery Procedure": "The surgical procedure conducted as recorded in the EMR.",
     "Nephrectomy Details": "The Nephrectomy type, and the method (Nephrectomy approach and nephrectomy robotic assist) of nephrectomy for patients that underwent surgery.",
+
 
     // Pathology Report
     "Laterality": "Laterality of the tumor is recorded when available in the pathology report.",
@@ -64,7 +106,7 @@ export let tooltips = {
     "Focality": "Single or multiple foci of tumors in that specimen is recorded when available.",
     "Sarcomatoid": "The presence of sarcomatoid dedifferentiation when reported. The percentage is reported if available.",
     "Necrosis": "The presence of tumor necrosis (this is available only after 2012).",
-    "Grade": "highest Fuhrman or ISUP grade seen in tumor, 1-4. ChRCC are recorded as “Not applicable”. Tumors for which grade was not reported in pathology are considered “Not available”.",
+    "Grade": "Highest Fuhrman or ISUP grade seen in tumor, 1-4. ChRCC are recorded as “Not applicable”. Tumors for which grade was not reported in pathology are considered “Not available”.",
     "Margins": "Tumor transected at the surgical margins are considered positive.",
     "LVI": "Lymphovascular invasion in non-muscle containing vessels.",
     "Perinephric Infiltration": "Tumor extension into perinephric tissues, identified microscopically.",
@@ -84,12 +126,12 @@ export let tooltips = {
 
     // Summary definitions :
     "Metastasis Status": "Patients that had histologic proven metastasis either at the time of nephrectomy or subsequently (FNA, core biopsy or metastasectomy), or patients started on systemic cancer drug, or received radiotherapy in non-renal site (including thrombus) or stated to have metastasis in the clinical notes are categorized as “Yes”.",
-
     "Metastasis Site": "This is recorded either from pathology report using natural language search or from clinical and radiotherapy notes. These may not be all-inclusive.",
     "Histology Proven": "Record of metastatic RCC in pathology reports and nephrectomy specimens are considered histologically proven.",
     "Biometric Parameters and Basic Blood Workup ": "Biometric parameters (Blood Pressure (BP_Systolic and BP_Diastolic) and Body Mass Index (BMI)) and laboratory values (serum albumin, creatinine, corrected calcium, hemoglobin, lactate dehydrogenase (LDH), neutrophils, platelets, sodium and WBC count) recorded in the patient's EMR within 30 days prior to first nephrectomy. If there are multiple entries of the same parameter within 30 days, the closest to surgery are displayed.",
     "Medical Imaging": "Types of medical imaging (CT abdomen and pelvis (with or without contrast), MRI abdomen (with or without contrast), and PET done within 90 days prior to Nephrectomy. If there are multiple entries of the same imaging modality within 90 days, only the closest to Nephrectomy is displayed.",
     "Germline Mutation": "Mutation of clinical significance or a variant of uncertain clinical significance in any of the genes from 76 cancer genes tested at the UTSW Genetics lab for these patients when available.",
+
     // bioexperiment, biodataset, bioreference, bioproject :
     "Biological replicate": "Replication on two distinct biosamples on which the same experimental protocol was performed. For example, on different growths, two different knockdowns, etc.",
     "Technical replicate": "Two replicates from the same biosample, treated identically for each replicate (e.g. same growth, same knockdown).",

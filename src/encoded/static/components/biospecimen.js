@@ -30,30 +30,31 @@ class Biospecimen extends React.Component {
         return list
       }
 
-      createPathTable(){
+    createPathTable(){
         const context = this.props.context;
         let list = []
-        if (context.surgery && context.surgery.pathology_report) {
-
-            for(let i = 0; i < context.surgery.pathology_report.length; i++){
-                list.push(<div className="row" style={{ borderTop: "1px solid #151313" }}></div>)
-                list.push(<div data-test="surgery.pathology_report"><dt>Pathology Report</dt><dd><a href={context.surgery.pathology_report[i]['@id']}>{context.surgery.pathology_report[i].accession}</a></dd> </div>)
-                list.push(<div data-test="surgery.pathology_report"><dt>Histologic Subtype</dt><dd>{context.surgery.pathology_report[i].histology}</dd> </div>)
-                if (context.surgery.pathology_report[i].t_stage) {
-                    list.push(<div data-test="surgery.pathology_report"><dt>pT Stage</dt><dd>{context.surgery.pathology_report[i].t_stage}</dd> </div>)
+        if (context.surgery && context.surgery.surgery_procedure) {
+            for (let i = 0; i < context.surgery.surgery_procedure.length; i++){
+                for (let j = 0; j < context.surgery.surgery_procedure[i].pathology_report.length; j++){
+                    list.push(<div className="row" style={{ borderTop: "1px solid #151313" }}></div>)
+                    list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>Pathology Report</dt><dd><a href={context.surgery.surgery_procedure[i].pathology_report[j]['@id']}>{context.surgery.surgery_procedure[i].pathology_report[j].accession}</a></dd> </div>)
+                    list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>Histologic Subtype</dt><dd>{context.surgery.surgery_procedure[i].pathology_report[j].histology}</dd> </div>)
+                    if (context.surgery.surgery_procedure[i].pathology_report[j].t_stage) {
+                        list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pT Stage</dt><dd>{context.surgery.surgery_procedure[i].pathology_report[j].t_stage}</dd> </div>)
+                    }
+                    if (context.surgery.surgery_procedure[i].pathology_report[j].n_stage) {
+                        list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pN Stage</dt><dd>{context.surgery.surgery_procedure[i].pathology_report[j].n_stage}</dd> </div>)
+                    }
+                    if (context.surgery.surgery_procedure[i].pathology_report[j].m_stage) {
+                        list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>pM Stage</dt><dd>{context.surgery.surgery_procedure[i].pathology_report[j].m_stage}</dd> </div>)
+                    }
+                    if (context.surgery.surgery_procedure[i].pathology_report[j].ajcc_version){
+                        list.push(<div data-test="surgery.surgery_procedure.pathology_report"><dt>AJCC Version</dt><dd>{context.surgery.surgery_procedure[i].pathology_report[j].ajcc_version}</dd> </div>)
+                    } 
                 }
-                if (context.surgery.pathology_report[i].n_stage) {
-                    list.push(<div data-test="surgery.pathology_report"><dt>pN Stage</dt><dd>{context.surgery.pathology_report[i].n_stage}</dd> </div>)
-                }
-                if (context.surgery.pathology_report[i].m_stage) {
-                    list.push(<div data-test="surgery.pathology_report"><dt>pM Stage</dt><dd>{context.surgery.pathology_report[i].m_stage}</dd> </div>)
-                }
-                if (context.surgery.pathology_report[i].ajcc_version){
-                    list.push(<div data-test="surgery.pathology_report"><dt>AJCC Version</dt><dd>{context.surgery.pathology_report[i].ajcc_version}</dd> </div>)
-                }
-
-
             }
+
+
         }
 
         return list
@@ -61,6 +62,7 @@ class Biospecimen extends React.Component {
 
 
     render() {
+        
         const context = this.props.context;
         const itemClass = globals.itemClass(context, 'view-item');
         // Set up breadcrumbs
@@ -70,7 +72,8 @@ class Biospecimen extends React.Component {
         ];
         const crumbsReleased = (context.status === 'released');
         let hasGenomics =false;
-        if (Object.keys(this.props.context.biolibrary).length > 0) {
+        // if ( context.genomic_release.item_status==='released'&&Object.keys(this.props.context.biofile).length > 0 ) {
+        if ( Object.keys(this.props.context.biofile).length > 0 ) {
             hasGenomics = true;
         }
         let hasIHC=false;
@@ -136,9 +139,9 @@ class Biospecimen extends React.Component {
                                     <dt>Specimen Pathological Type</dt>
                                     <dd>{context.tissue_type}</dd>
                                 </div>}
-                                {context.anatomic_site && <div data-test="anatomic_site">
+                                {context.anatomic_site_display && <div data-test="anatomic_site_display">
                                     <dt>Anatomic Site</dt>
-                                    <dd>{context.anatomic_site}</dd>
+                                    <dd>{context.anatomic_site_display}</dd>
                                 </div>}
                                 {context.primary_site && <div data-test="primary_site">
                                     <dt>Primary Site</dt>
@@ -169,7 +172,7 @@ class Biospecimen extends React.Component {
                         </div>
                     </PanelBody>
                 </Panel>
-                {/* { hasGenomics && <GenomicsTable data={context.biolibrary} tableTitle="Genomics for this specimen"></GenomicsTable>} */}
+                { hasGenomics && <GenomicsTable data={context.biofile} tableTitle="Genomics for this specimen"></GenomicsTable>} 
                 {hasIHC&&<IHCTable data={context.ihc} tableTitle="IHC Assay Staining Results"></IHCTable>}
 
                 {false &&
@@ -184,3 +187,4 @@ class Biospecimen extends React.Component {
 }
 
 globals.contentViews.register(Biospecimen, 'Biospecimen');
+
