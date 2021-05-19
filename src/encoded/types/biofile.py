@@ -55,35 +55,17 @@ class Biofile(Item):
     name_key = 'accession'
     rev = {
         'paired_with': ('Biofile', 'paired_with'),
-        # 'bioquality_metrics': ('BioqualityMetric', 'bioquality_metric_of'),
         'superseded_by': ('Biofile', 'supersedes'),
     }
     embedded = [
-        'platform',
         'award',
-        'bioreplicate',
-        'bioreplicate.bioexperiment',
-        'bioreplicate.biolibrary',
+        'biospecimen',
         'submitted_by',
-        'biolibrary',
-        # 'bioquality_metrics',
-        # 'analysis_step_version.analysis_step',
-        # 'analysis_step_version.analysis_step.pipelines',
-        # 'analysis_step_version.software_versions',
-        # 'analysis_step_version.software_versions.software',
-
+        'biodataset',
     ]
     audit_inherit = [
-        # 'analysis_step_version.analysis_step',
-        # 'analysis_step_version.analysis_step.pipelines',
-        # 'analysis_step_version.analysis_step.versions',
-        # 'analysis_step_version.software_versions',
-        # 'analysis_step_version.software_versions.software'
     ]
     set_status_up = [
-        # 'bioquality_metrics',
-        'platform',
-
 
 
     ]
@@ -124,46 +106,6 @@ class Biofile(Item):
         return request.resource_path(item)
 
     @calculated_property(schema={
-        "title": "Output category",
-        "description": "The overall catagory of the file content.",
-        "comment": "Do not submit.  This field is calculated from output_type_output_category.",
-        "type": "string",
-        "enum": [
-            "raw data",
-            "alignment",
-            "signal",
-            "annotation",
-            "quantification",
-            "reference"
-        ]
-    })
-    def output_category(self, output_type):
-        return self.schema['output_type_output_category'].get(output_type)
-
-    @calculated_property(schema={
-        "title": "Read length units",
-        "description": "The units for read length.",
-        "comment": "Do not submit. This is a fixed value.",
-        "type": "string",
-        "enum": [
-            "nt"
-        ]
-    })
-    def read_length_units(self, read_length=None, mapped_read_length=None):
-        if read_length is not None or mapped_read_length is not None:
-            return "nt"
-    @calculated_property(schema={
-        "title": "Download URL",
-        "description": "The download path for S3 to obtain the actual file.",
-        "comment": "Do not submit. This is issued by the server.",
-        "type": "string",
-    })
-    def href(self, request, file_format, accession=None, external_accession=None):
-        accession = accession or external_accession
-        file_extension = self.schema['file_format_file_extension'][file_format]
-        filename = '{}{}'.format(accession, file_extension)
-        return request.resource_path(self, '@@download', filename)
-    @calculated_property(schema={
         "title": "File type",
         "description": "The concatenation of file_format and file_format_type",
         "comment": "Do not submit. This field is calculated from file_format and file_format_type.",
@@ -174,21 +116,7 @@ class Biofile(Item):
             return file_format
         else:
             return file_format + ' ' + file_format_type
-
-    @calculated_property(
-         condition='bioreplicate',
-         define=True,
-         schema={
-            "title": "Biolibrary",
-            "description": "The nucleic acid library sequenced to produce this file.",
-            "comment": "See biolibrary.json for available identifiers.",
-            "type": "string",
-            "linkTo": "Biolibrary"
-         }
-     )
-    def biolibrary(self, request, bioreplicate):
-        return request.embed(bioreplicate, '@@object?skip_calculated=true').get('biolibrary')
-
+    
     @calculated_property(
         condition='biodataset',
         define=True,
@@ -208,6 +136,65 @@ class Biofile(Item):
                 )
             )
         )
+
+    
+"""
+    @calculated_property(schema={
+        "title": "Output category",
+        "description": "The overall catagory of the file content.",
+        "comment": "Do not submit.  This field is calculated from output_type_output_category.",
+        "type": "string",
+        "enum": [
+            "raw data",
+            "alignment",
+            "signal",
+            "annotation",
+            "quantification",
+            "reference"
+        ]
+    })
+    def output_category(self, output_type=None):
+        return self.schema['output_type_output_category'].get(output_type)
+
+    @calculated_property(schema={
+        "title": "Read length units",
+        "description": "The units for read length.",
+        "comment": "Do not submit. This is a fixed value.",
+        "type": "string",
+        "enum": [
+            "nt"
+        ]
+    })
+    def read_length_units(self, read_length=None, mapped_read_length=None):
+        if read_length is not None or mapped_read_length is not None:
+            return "nt"
+
+    @calculated_property(schema={
+        "title": "Download URL",
+        "description": "The download path for S3 to obtain the actual file.",
+        "comment": "Do not submit. This is issued by the server.",
+        "type": "string",
+    })
+    def href(self, request, file_format, accession=None, external_accession=None):
+        accession = accession or external_accession
+        file_extension = self.schema['file_format_file_extension'][file_format]
+        filename = '{}{}'.format(accession, file_extension)
+        return request.resource_path(self, '@@download', filename)
+
+    @calculated_property(
+         condition='bioreplicate',
+         define=True,
+         schema={
+            "title": "Biolibrary",
+            "description": "The nucleic acid library sequenced to produce this file.",
+            "comment": "See biolibrary.json for available identifiers.",
+            "type": "string",
+            "linkTo": "Biolibrary"
+         }
+     )
+    def biolibrary(self, request, bioreplicate):
+        return request.embed(bioreplicate, '@@object?skip_calculated=true').get('biolibrary')
+"""
     # @calculated_property(
     #     condition='biodataset',
     #     define=True,
@@ -256,7 +243,7 @@ class Biofile(Item):
     #     step_version_uuid = step_run_obj.__json__(request).get('analysis_step_version')
     #     if step_version_uuid is not None:
     #         return request.resource_path(root[step_version_uuid])
-
+"""
     @calculated_property(schema={
         "title": "Biological replicates",
         "description": "The biological replicate numbers associated with this file.",
@@ -323,7 +310,7 @@ class Biofile(Item):
             for uuid in replicates
         }
         return sorted(techreps)
-
+"""
     # @calculated_property(
     #     condition=show_cloud_metadata,
     #     schema={
@@ -356,3 +343,6 @@ class Biofile(Item):
     #         'file_size': file_size
     #     }
         
+
+
+

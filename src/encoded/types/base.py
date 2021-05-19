@@ -83,12 +83,13 @@ ALLOW_SUBMITTER_ADD = [
 # Transitioning to the same status (released -> released) allows for the child objects to be crawled
 # without actually making a patch if the new and current statuses are the same.
 STATUS_TRANSITION_TABLE = {
-    'released': ['released', 'in progress', 'submitted'],
-    'in progress': ['in progress'],
-    'deleted': ['deleted', 'in progress', 'current', 'submitted'],
+    'released': ['released', 'restricted','in progress', 'submitted'],
+    'restricted':['restricted'],
+    'in progress': ['in progress','restricted',],
+    'deleted': ['deleted', 'in progress', 'restricted','current', 'submitted'],
     'revoked': ['revoked', 'released', 'archived'],
     'archived': ['archived', 'released'],
-    'submitted': ['submitted', 'in progress'],
+    'submitted': ['submitted', 'restricted','in progress'],
     'replaced': [],
     'disabled': ['disabled', 'current'],
     'current': ['current'],
@@ -101,6 +102,7 @@ STATUS_TRANSITION_TABLE = {
 STATUS_HIERARCHY = {
     'released': 100,
     'current': 100,
+    'restricted':90,
     'in progress': 90,
     'submitted': 80,
     'uploading': 80,
@@ -160,6 +162,7 @@ class Item(snovault.Item):
         'released': ALLOW_CURRENT,
         'deleted': DELETED,
         'replaced': DELETED,
+        'restricted':ALLOW_VIEWING_GROUP_VIEW,
 
         # shared_status
         'current': ALLOW_CURRENT,

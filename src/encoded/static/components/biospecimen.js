@@ -62,6 +62,7 @@ class Biospecimen extends React.Component {
 
 
     render() {
+        
         const context = this.props.context;
         const itemClass = globals.itemClass(context, 'view-item');
         // Set up breadcrumbs
@@ -71,7 +72,8 @@ class Biospecimen extends React.Component {
         ];
         const crumbsReleased = (context.status === 'released');
         let hasGenomics =false;
-        if (Object.keys(this.props.context.biolibrary).length > 0) {
+        // if ( context.genomic_release.item_status==='released'&&Object.keys(this.props.context.biofile).length > 0 ) {
+        if ( Object.keys(this.props.context.biofile).length > 0 ) {
             hasGenomics = true;
         }
         let hasIHC=false;
@@ -170,7 +172,7 @@ class Biospecimen extends React.Component {
                         </div>
                     </PanelBody>
                 </Panel>
-                {/* { hasGenomics && <GenomicsTable data={context.biolibrary} tableTitle="Genomics for this specimen"></GenomicsTable>} */}
+                { hasGenomics && <GenomicsTable data={context.biofile} tableTitle="Genomics for this specimen"></GenomicsTable>} 
                 {hasIHC&&<IHCTable data={context.ihc} tableTitle="IHC Assay Staining Results"></IHCTable>}
 
                 {false &&

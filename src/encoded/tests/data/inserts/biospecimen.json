@@ -31,13 +31,10 @@
         "tissue_type":"Non-Malignant",
         "anatomic_site":"Kidney, NOS",
         "uuid": "170be0f2-6b5c-4b93-ba65-bedadbfe917f",
-        "status": "released",
+        "status": "deleted",
         "specimen_lineage": "New",
         "activity_status": "Active",
         "species": "Human",
-        "documents": [
-            "kce:K562_BAC_transfection_White_protocol"
-        ],
         "surgery": "KCESX708FIJ"
     },
     {
@@ -53,9 +50,6 @@
         "tissue_type":"Malignant",
         "anatomic_site":"Liver",
         "uuid": "c58dd4d7-418a-4482-84c8-4d5ee6f29ea5",
-        "documents": [
-            "kce:EPC_Stam_protocol"
-        ],
         "status": "released",
         "species": "Human",
         "specimen_lineage": "New",
@@ -93,7 +87,7 @@
         "tissue_type":"Malignant",
         "anatomic_site":"Kidney, NOS",
         "uuid": "b1cf3723-2791-4ac7-bb02-e5d49f66819c",
-        "status": "released",
+        "status": "revoked",
         "species": "Human",
         "specimen_lineage": "New",
         "activity_status": "Active"

@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import PropTypes, { object } from 'prop-types';
 import * as globals from './globals';
 
 
@@ -19,6 +19,7 @@ const accessionedStatuses = {
     ],
     consortium: [
         'in progress',
+        "restricted",
     ],
     administrator: [
         'deleted',
@@ -26,7 +27,7 @@ const accessionedStatuses = {
     ],
 };
 
-const datasetStatuses = {
+const biodatasetStatuses = {
     external: [
         'released',
         'archived',
@@ -34,6 +35,7 @@ const datasetStatuses = {
     ],
     consortium: [
         'in progress',
+        "restricted",
         'submitted',
     ],
     administrator: [
@@ -45,6 +47,11 @@ const datasetStatuses = {
 const sharedStatuses = {
     external: [
         'current',
+    ],
+    consortium: [
+        'in progress',
+        "restricted",
+        'submitted',
     ],
     administrator: [
         'deleted',
@@ -58,6 +65,7 @@ const standardStatuses = {
     ],
     consortium: [
         'in progress',
+        "restricted",
     ],
     administrator: [
         'deleted',
@@ -74,6 +82,7 @@ const defaultObjectStatuses = {
         ],
         administrator: [
             'deleted',
+
         ],
     },
     AnalysisStepRun: standardStatuses,
@@ -89,6 +98,7 @@ const defaultObjectStatuses = {
         ],
         consortium: [
             'in progress',
+            "restricted",
             'pending dcc review',
         ],
         administrator: [
@@ -99,12 +109,14 @@ const defaultObjectStatuses = {
     Award: sharedStatuses,
     BiosampleCharacterization: standardStatuses,
     Biosample: accessionedStatuses,
+    Biospecimen: accessionedStatuses,
+    Consent: accessionedStatuses,
     Cart: sharedStatuses,
     Characterization: standardStatuses,
-    Dataset: datasetStatuses,
+    Biodataset: biodatasetStatuses,
     Document: standardStatuses,
     Donor: accessionedStatuses,
-    File: {
+    Biofile: {
         external: [
             'released',
             'archived',
@@ -114,6 +126,7 @@ const defaultObjectStatuses = {
         ],
         consortium: [
             'in progress',
+            "restricted",
             'uploading',
             'upload failed',
             'content error',
@@ -123,10 +136,10 @@ const defaultObjectStatuses = {
             'replaced',
         ],
     },
-    FileSet: accessionedStatuses,
+    BiofileSet: accessionedStatuses,
     Image: standardStatuses,
     Lab: sharedStatuses,
-    Library: accessionedStatuses,
+    Biolibrary: accessionedStatuses,
     Organism: standardStatuses,
     Page: standardStatuses,
     Patient: accessionedStatuses,
@@ -138,6 +151,7 @@ const defaultObjectStatuses = {
         ],
         consortium: [
             'in progress',
+            "restricted",
         ],
         administrator: [
             'deleted',
@@ -147,7 +161,7 @@ const defaultObjectStatuses = {
     Platform: standardStatuses,
     Publication: standardStatuses,
     QualityMetric: standardStatuses,
-    Replicate: {
+    Bioreplicate: {
         external: [
             'released',
             'archived',
@@ -155,6 +169,7 @@ const defaultObjectStatuses = {
         ],
         consortium: [
             'in progress',
+            "restricted",
         ],
         administrator: [
             'deleted',
@@ -175,7 +190,6 @@ const defaultObjectStatuses = {
     Treatment: standardStatuses,
     User: sharedStatuses,
 };
-
 
 // SVG components for each status icon. These can be imported into something like Ink or Adobe
 // Illustrator for modification, and saved with minificiation. You can remove some elements from
@@ -252,6 +266,8 @@ const statusIcons = {
 const objectStatusLevels = ['external', 'unprivileged', 'consortium', 'administrator'];
 
 
+
+
 /**
  * Maps the current session information from the <App> React context to an access level from the
  * objectStatusLevels array.
@@ -263,6 +279,8 @@ const objectStatusLevels = ['external', 'unprivileged', 'consortium', 'administr
 export const sessionToAccessLevel = (session, sessionProperties) => {
     const loggedIn = !!(session && session['auth.userid']);
     const administrativeUser = loggedIn && !!(sessionProperties && sessionProperties.admin);
+
+
     let accessLevel = '';
     if (!loggedIn) {
         accessLevel = 'external';
@@ -291,6 +309,7 @@ export const getObjectStatuses = (item, accessLevel = 'external', objectStatuses
     // Go down the @type list for the object until a matching block is found in `objectStatuses`.
     const objectType = typeof item === 'string' ? item : item['@type'].find(type => objectStatuses[type]);
 
+
     if (objectType && objectStatuses[objectType]) {
         // To collect all possible statuses for the given `accessLevel` and item @type, concatenate
         // all `objectStatusGroups` arrays that are at the `accessLevel` and below.
@@ -311,8 +330,23 @@ export const getObjectStatuses = (item, accessLevel = 'external', objectStatuses
 
 // Display an object status or a status from a string. The "released" icon gets displayed if the
 // given status isn't defined.
+// if (item.genomic_release){
+//     status= item.genomic_release.biospecimen_status
+// }
+// else{
+//     status=item.status
+// }
 const Status = ({ item, badgeSize, title, css, noLabel, noIcon, inline }) => {
-    const status = typeof item === 'string' ? item : item.status;
+
+    
+    let status = '';
+    if (item.genomic_release) {
+        status = item.genomic_release.item_status
+    }
+    else {
+        status = item.status
+    }
+    status = typeof item === 'string' ? item : status;
     const classElement = globals.statusToClassElement(status);
 
     return (

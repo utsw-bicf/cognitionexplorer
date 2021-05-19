@@ -35,8 +35,6 @@ class Bioexperiment(Biodataset,
     item_type = 'bioexperiment'
     schema = load_schema('encoded:schemas/bioexperiment.json')
     embedded = Biodataset.embedded + [
-        'award',
-        'lab',
         "submitted_by",
         'documents',
         'bioreplicate',
@@ -48,8 +46,7 @@ class Bioexperiment(Biodataset,
         'possible_controls',
         'bioreplicate.biolibrary.biospecimen.documents',
         "references",
-        "files",
-        "files.platform",
+        # "files.platform",
         'related_series',
 
 
@@ -84,6 +81,31 @@ class Bioexperiment(Biodataset,
         'original_files',
         'bioreplicate',
     ]
+
+    @calculated_property(schema={
+        "title": "Superseded by",
+        "type": "array",
+        "items": {
+            "type": ['string', 'object'],
+            "linkFrom": "Bioexperiment.supersedes",
+        },
+        "notSubmittable": True,
+    })
+    def superseded_by(self, request, superseded_by):
+        return paths_filtered_by_status(request, superseded_by)
+
+    @calculated_property(schema={
+        "title": "Biorelated series",
+        "type": "array",
+        "items": {
+            "type": ['string', 'object'],
+            "linkFrom": "Bioseries.related_datasets",
+        },
+        "notSubmittable": True,
+    })
+    def related_series(self, request, related_series):
+        return paths_filtered_by_status(request, related_series)
+
 
 
     @calculated_property(
@@ -157,6 +179,8 @@ class Bioexperiment(Biodataset,
                         biospecimen_summary_list.append(biospecimen_summary_dict)
 
         return biospecimen_summary_list
+        
+    
 
     @calculated_property(schema={
         "title": "Replication type",
@@ -216,26 +240,5 @@ class Bioexperiment(Biodataset,
 
         return 'anisogenic'
 
-    @calculated_property(schema={
-        "title": "Superseded by",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "Bioexperiment.supersedes",
-        },
-        "notSubmittable": True,
-    })
-    def superseded_by(self, request, superseded_by):
-        return paths_filtered_by_status(request, superseded_by)
 
-    @calculated_property(schema={
-        "title": "Biorelated series",
-        "type": "array",
-        "items": {
-            "type": ['string', 'object'],
-            "linkFrom": "Bioseries.related_datasets",
-        },
-        "notSubmittable": True,
-    })
-    def related_series(self, request, related_series):
-        return paths_filtered_by_status(request, related_series)
+

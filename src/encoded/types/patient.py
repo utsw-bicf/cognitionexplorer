@@ -75,6 +75,7 @@ def supportive_med_frequency(request, supportive_medication):
 
 
 def last_follow_up_date_fun(request, labs, vitals, germline,ihc, consent,radiation,medical_imaging,medication,supportive_medication,surgery, death_date):
+    last_follow_up_date="Not available"
     if death_date is not None:
         last_follow_up_date = death_date
     else:
@@ -131,8 +132,8 @@ def last_follow_up_date_fun(request, labs, vitals, germline,ihc, consent,radiati
         if len(all_traced_dates) > 0:
             all_traced_dates.sort(key = lambda date: datetime.strptime(date, "%Y-%m-%d"))
             last_follow_up_date = all_traced_dates[-1]
-        else:
-            last_follow_up_date = "Not available"
+        # else:
+        #     last_follow_up_date = "Not available"
 
     return last_follow_up_date
 
@@ -180,7 +181,9 @@ class Patient(Item):
         'surgery',
         'surgery.surgery_procedure',
         'surgery.surgery_procedure.pathology_report',
-        'biospecimen']
+        'biospecimen',
+        'biospecimen.biofile',
+        ]
     rev = {
         'labs': ('LabResult', 'patient'),
         'vitals': ('VitalResult', 'patient'),
@@ -194,7 +197,16 @@ class Patient(Item):
         'surgery': ('Surgery', 'patient'),
         'biospecimen': ('Biospecimen', 'patient')
     }
-    set_status_up = []
+    set_status_up = [
+        'labs',
+        'surgery',
+        'consent',
+        'biospecimen',
+        'ihc',
+        'germline'
+
+
+    ]
     set_status_down = []
 
     @calculated_property(schema={
@@ -439,6 +451,7 @@ class Patient(Item):
             "linkTo": "Surgery",
         },
     })
+
 
     def surgery(self, request, surgery):
         return paths_filtered_by_status(request, surgery)
@@ -695,7 +708,84 @@ class Patient(Item):
                 surgery_summary = "No"
             return surgery_summary
 
+    # @calculated_property(define=True, schema={
+    #         "title": "Genomic release",
+    #         "type": "object",
+    #         "additionalProperties": False,
+    #         "properties":{
+    #             "genomic_release": {
+    #                 "title": "Genomic Release",
+    #                 "type": "string",
+    #             },
+    #             "item_status": {
+    #                 "title": "Item Status",
+    #                 "type": "string",
+    #             }
+    #         }
+    #     })
 
+
+    # def genomic_release(self, request, consent, biospecimen):
+    #     consent_type_list=[]
+    #     genomic_release='Y'
+    #     item_status='released'
+    #     if len(biospecimen) > 0:
+    #         for b_obj in biospecimen:
+    #             biospecimen_object = request.embed(b_obj, '@@object')
+    #             item_status=biospecimen_object.get('status')
+    #             # print(item_status)
+    #     if len(consent) > 0:
+    #         for consent_record in consent:
+    #             consent_object = request.embed(consent_record, '@@object')
+    #             version= consent_object['consent_type']
+    #             date=consent_object['date_signed']
+    #             genetic=consent_object.get('genetic_release')
+    #             consent_filter={}
+    #             consent_filter={'date':date,'version':version,'genetic':genetic}
+    #             print('consent filter',consent_filter)
+    #             consent_type_list.append(consent_filter)
+
+    #         consent_type_list.sort(key= lambda consent_filter:consent_filter['version'])
+    #         print("consent_type_list",consent_type_list)
+
+    #         consent_lastest=consent_type_list[-1]
+    #         consent_version=consent_type_list[-1]['version']
+
+    #         print ("consent_version",consent_version)
+    #         if consent_version=='1' :
+    #             genomic_release='N'
+    #             item_status='revoked'
+
+
+    #         elif consent_version=='2':
+    #             if consent_lastest.get('genetic') is not None:
+    #                 genomic_release = consent_lastest.get('genetic')
+    #             if genomic_release == 'Y':
+    #                 item_status='released'
+    #                 print('consent 2', genomic_release, item_status)
+
+    #             else:
+    #                 item_status='revoked'
+    #                 print('consent 2-N', genomic_release, item_status)
+    #         elif consent_version=='3':
+    #             genomic_release='N'
+    #             item_status='revoked'
+
+
+    #         elif consent_version=='4':
+    #             genomic_release='Y'
+    #             item_status='released'
+    #         elif consent_version=='5' or consent_version=='6':
+    #             genomic_release='Y'
+    #             item_status='released'
+    #         else:
+    #             genomic_release='N'
+    #             item_status='revoked'
+
+    #     genomic_consent = dict()
+    #     genomic_consent['genomic_release'] = genomic_release
+    #     genomic_consent['item_status'] = item_status
+    #     return genomic_consent
 
     @calculated_property(schema={
         "title": "Diagnosis",
@@ -1737,6 +1827,7 @@ class Radiation(Item):
             return "Lymph node"
         else:
             return "Kidney"
+
 
 
 
