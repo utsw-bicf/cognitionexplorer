@@ -112,7 +112,7 @@
             "title": "Race"
         },
         "surgery_summary": {
-            "title": "Surgery Treatment Status"
+            "title": "Surgical Managment"
         },
         "surgery.surgery_procedure.procedure_type": {
             "title": "Surgery Procedure"
@@ -242,6 +242,15 @@
         },
         "biospecimen.species": {
             "title": "Specimen Species"
+        },
+        "biospecimen.biofile.assay_term_name": {
+            "title": "Genomics Assay"
+        },
+        "consent_status": {
+            "title": "Consent Status"
+        },
+        "status": {
+            "title": "Status"
         }
     },
     "columns": {
