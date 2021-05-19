@@ -7,11 +7,9 @@
     "identifyingProperties": [
         "uuid"
     ],
-    "additionalProperties": false,
+    "additionalProperties": true,
     "mixinProperties": [
-        {
-            "$ref": "ivp_a1.json#/properties"
-        },
+       
         {
             "$ref": "mixins.json#/schema_version"
         },

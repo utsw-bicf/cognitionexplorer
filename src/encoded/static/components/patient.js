@@ -60,7 +60,7 @@ class Patient extends React.Component {
     ];
     const crumbsReleased = (context.status === 'released');
     let hasForms =false;
-    if (this.props.context.ivp_a1.length > 0) {
+    if (this.props.context.ivp_a1v3.length > 0) {
         hasForms = true;
     }
     const NACCFormsPanelBody = (

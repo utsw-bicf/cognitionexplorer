@@ -25,7 +25,8 @@ class Patient(Item):
     schema = load_schema("encoded:schemas/patient.json")
     name_key ="accession"
     embedded = [
-        'ivp_a1',
+        'ivp_a1v3',
+        'ivp_a1v2',
         'fvp_a1',
         'tvp_a1',
         'ivp_a2',
@@ -72,7 +73,8 @@ class Patient(Item):
         'concussion_history',
     ]
     rev = {
-        'ivp_a1': ('Ivp_a1', 'patient'),
+        'ivp_a1v3': ('Ivp_a1v3', 'patient'),
+        'ivp_a1v2': ('Ivp_a1v2', 'patient'),
         'fvp_a1': ('Fvp_a1', 'patient'),
         'ivp_a2': ('Ivp_a2', 'patient'),
         'ivp_a3': ('Ivp_a3', 'patient'),
@@ -125,15 +127,26 @@ class Patient(Item):
     set_status_down = []
 
     @calculated_property(schema={
-        "title": "Ivp_a1",
+        "title": "Ivp_a1v3",
         "type": "array",
         "items": {
             "type": 'string',
-            "linkTo": "Ivp_a1"
+            "linkTo": "Ivp_a1v3"
         },
     })
-    def ivp_a1(self, request, ivp_a1):
-        return paths_filtered_by_status(request, ivp_a1)
+    def ivp_a1v3(self, request, ivp_a1v3):
+        return paths_filtered_by_status(request, ivp_a1v3)
+        
+    @calculated_property(schema={
+        "title": "Ivp_a1v2",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Ivp_a1v2"
+        },
+    })
+    def ivp_a1v2(self, request, ivp_a1v2):
+        return paths_filtered_by_status(request, ivp_a1v2)
     
     
     @calculated_property(schema={
