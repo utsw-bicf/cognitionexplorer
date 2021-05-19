@@ -168,7 +168,7 @@
         "dominant_tumor.histology_filter": {
             "title": "Dominant Tumor"
         },
-        "surgery.pathology_report.laterality": {
+        "surgery.surgery_procedure.pathology_report.laterality": {
             "title": "Tumor Laterality"
         },
         "surgery.surgery_procedure.pathology_report.pathology_report_tumor_range":{
@@ -204,7 +204,7 @@
         "metastasis.histology_proven": {
             "title": "Metastasis Histology Proven"
         },
-        "surgery.pathology_report.metasis_details.site": {
+        "surgery.surgery_procedure.pathology_report.metasis_details.site": {
             "title": "Metastatic Site (Pathology)"
         },
         "vital_status": {
@@ -219,7 +219,7 @@
         "medication_range":{
             "title":"Medication Duration"
         },
-        "supportive_medication.name":{
+        "supportive_meds.name":{
             "title":"Supportive Medication"
         },
         "radiation_summary": {
@@ -227,9 +227,6 @@
         },
         "radiation.site_consolidated" : {
           "title": "Radiation Site"
-        },
-        "radiation.dose_range": {
-            "title": "Radiation Dose per Fraction"
         },
         "radiation.fractions_range": {
             "title": "Radiation Fractions"
