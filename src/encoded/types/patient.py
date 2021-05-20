@@ -514,7 +514,7 @@ class Patient(Item):
                 "tumor_size": {
                     "title": "Tumor Size",
                     "description": "Greatest dimension of tumor was recorded in cm. ",
-                    "type": "number"
+                    "type": "string"
                 },
                 "tumor_size_units": {
                     "title": "Tumor Size units",
@@ -604,15 +604,15 @@ class Patient(Item):
                     if len(surgery_path_report) > 0:
                         for path_report in surgery_path_report:
                             path_report_obj = request.embed(path_report, '@@object')
-                            if path_report_obj.has_key('t_stage'):
+                            if 't_stage' in path_report_obj:
                                 t_stage = path_report_obj.get('t_stage')
                             else:
                                 t_stage = "Not available"
-                            if path_report_obj.has_key('n_stage'):
+                            if 'n_stage' in path_report_obj:
                                 n_stage = path_report_obj.get('n_stage')
                             else:
                                 n_stage = "Not available"
-                            if path_report_obj.has_key('m_stage'):
+                            if 'm_stage' in path_report_obj:
                                 m_stage = path_report_obj.get('m_stage')
                             else:
                                 m_stage = "Not available"
@@ -633,19 +633,19 @@ class Patient(Item):
                             else:
                                 histology_rank = -1
                             histology_filter = histology_filters.get(histology)
-                            if path_report_obj.has_key('ajcc_version'):
+                            if 'ajcc_version' in path_report_obj:
                                 ajcc_version = path_report_obj.get('ajcc_version')
                             else:
                                 ajcc_version = "Not available"
-                            if path_report_obj.has_key('ajcc_tnm_stage'):
+                            if 'ajcc_tnm_stage' in path_report_obj:
                                 stage = path_report_obj.get('ajcc_tnm_stage')
                             else:
                                 stage = "Not available"
-                            if path_report_obj.has_key('tumor_size'):
-                                tumor_size = path_report_obj.get('tumor_size')
+                            if 'tumor_size' in path_report_obj:
+                                tumor_size = str(path_report_obj.get('tumor_size'))
                             else:
                                 tumor_size = "Not available"
-                            if path_report_obj.has_key('tumor_size_units'):
+                            if 'tumor_size_units' in path_report_obj:
                                 tumor_size_units = path_report_obj.get('tumor_size_units')
                             else:
                                 tumor_size_units = "Not available"
@@ -1871,3 +1871,4 @@ def patient_basic_view(context, request):
         except KeyError:
             pass
     return filtered
+
