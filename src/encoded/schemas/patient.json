@@ -219,7 +219,7 @@
         "medication_range":{
             "title":"Medication Duration"
         },
-        "supportive_meds.name":{
+        "supportive_medications.name":{
             "title":"Supportive Medication"
         },
         "radiation_summary": {
