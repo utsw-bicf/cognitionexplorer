@@ -275,6 +275,27 @@
         "dominant_tumor.histology": {
             "title": "Dominant Tumor Histology"
         },
+        "dominant_tumor.t_stage": {
+            "title": "Dominant Tumor pT Stage"
+        },
+        "dominant_tumor.n_stage": {
+            "title": "Dominant Tumor pN Stage"
+        },
+        "dominant_tumor.m_stage": {
+            "title": "Dominant Tumor pM Stage"
+        },
+        "dominant_tumor.stage": {
+            "title": "Dominant Tumor AJCC TNM Stage"
+        },
+        "dominant_tumor.ajcc_version": {
+            "title": "Dominant Tumor AJCC Version"
+        },
+        "dominant_tumor.tumor_size": {
+            "title": "Dominant Tumor Tumor Size"
+        },
+        "dominant_tumor.tumor_size_units": {
+            "title": "Dominant Tumor Tumor Size units"
+        },
         "surgery_summary": {
             "title": "Surgery Treatment Status"
         },
