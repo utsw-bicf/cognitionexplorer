@@ -95,7 +95,7 @@ export let tooltips = {
 
     // Surgery
     "Surgery Hospital Location": "The location procedure was conducted For patients with surgery at an outside institution, the surgery hospital location is recorded as “Outside”.",
-    "Surgery Treatment Summary": "The surgery treatment status. For patients that did not undergo surgery, their status is recorded as “No” (management at UTSW for active surveillance or metastasis without surgical treatment).",
+    "Surgical Managment": "The surgery management status. For patients that did not undergo surgery, their status is recorded as “No” (management at UTSW for active surveillance or metastasis without surgical treatment).",
     "Surgery Procedure": "The surgical procedure conducted as recorded in the EMR.",
     "Nephrectomy Details": "The Nephrectomy type, and the method (Nephrectomy approach and nephrectomy robotic assist) of nephrectomy for patients that underwent surgery.",
 

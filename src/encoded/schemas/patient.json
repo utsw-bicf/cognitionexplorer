@@ -102,10 +102,6 @@
         "diagnosis.age_range": {
             "title": "Age at Diagnosis"
         },
-        "diagnosis.follow_up_duration_range": {
-            "title": "Follow Up Duration"
-        },
-      
         "sex": {
             "title": "Sex"
         },
@@ -115,22 +111,11 @@
         "race": {
             "title": "Race"
         },
-        "vital_status": {
-            "title": "Vital Status"
-        },
-
-        "medical_imaging_before_nephrectomy.type" : {
-          "title": "Medical Imaging"
-        },
-
         "surgery_summary": {
-            "title": "Surgery Treatment Status"
+            "title": "Surgical Managment"
         },
-        "surgery.surgery_procedure.surgery_type": {
+        "surgery.surgery_procedure.procedure_type": {
             "title": "Surgery Procedure"
-        },
-        "surgery.hospital_location": {
-            "title": "Surgery Hospital Location"
         },
         "surgery.surgery_procedure.nephrectomy_details.type": {
             "title": "Nephrectomy Type"
@@ -140,81 +125,6 @@
         },
         "surgery.nephr_robotic_assist":{
             "title": "Nephrectomy Robotic Assist"
-        },
-        "dominant_tumor.histology_filter": {
-            "title": "Dominant Tumor"
-        },
-        "dominant_tumor.stage": {
-            "title": "Dominant Tumor TNM Stage (at presentation)"
-        },
-        "surgery.surgery_procedure.pathology_report.pathology_report_tumor_range":{
-            "title": "Tumor Size Range"
-        },
-        "surgery.surgery_procedure.pathology_report.histology_filter": {
-            "title": "Histologic Subtype"
-        },
-        "surgery.surgery_procedure.pathology_report.t_stage": {
-            "title": "pT Stage (at presentation)"
-        },
-        "surgery.surgery_procedure.pathology_report.n_stage": {
-            "title": "pN Stage (at presentation)"
-        },
-        "surgery.surgery_procedure.pathology_report.m_stage": {
-            "title": "pM Stage (at presentation)"
-        },
-        "surgery.surgery_procedure.pathology_report.metasis_details.site": {
-            "title": "Metastatic Site (Pathology)"
-        },
-        "surgery.surgery_procedure.pathology_report.metasis_details.type": {
-            "title": "Metastasis Type (Pathology)"
-        },
-        "surgery.surgery_procedure.pathology_report.ajcc_version": {
-            "title": "AJCC Version (at presentation)"
-        },
-        "surgery.surgery_procedure.pathology_report.ajcc_tnm_stage": {
-            "title": "TNM Stage (at presentation)"
-        },
-        "surgery.surgery_procedure.pathology_report.laterality": {
-            "title": "Tumor Laterality"
-        },
-        "ihc.antibody": {
-            "title": "IHC/FISH (Clinical lab)"
-        },
-        "ihc.result": {
-            "title": "IHC/FISH results"
-        },
-        "medications.name":{
-            "title":"Medication Name"
-        },
-        "medication_range":{
-            "title":"Medication Duration"
-        },
-        "radiation_summary": {
-            "title": "Radiation Treatment Status"
-        },
-        "radiation.dose_range": {
-            "title": "Radiation Dose per Fraction"
-        },
-        "radiation.fractions_range": {
-            "title": "Radiation Fractions"
-        },
-        "radiation.site_consolidated" : {
-          "title": "Radiation Site"
-        },
-        "radiation.treatment_intention" : {
-          "title": "Radiation Treatment Intention"
-        },
-        "metastasis_status": {
-            "title": "Metastasis Status"
-        },
-        "metastasis.histology_proven": {
-            "title": "Metastasis Histology Proven"
-        },
-        "metastasis.site": {
-            "title": "Metastatic Site"
-        },
-        "metastasis.source": {
-            "title": "Metastasis Source"
         },
         "labs_and_vitals.BMI": {
             "title": "BMI"
@@ -252,26 +162,90 @@
         "labs_and_vitals.LDH": {
             "title": "LDH (U/L)"
         },
-
+        "medical_imaging_before_nephrectomy.type" : {
+          "title": "Medical Imaging"
+        },
+        "dominant_tumor.histology_filter": {
+            "title": "Dominant Tumor"
+        },
+        "surgery.surgery_procedure.pathology_report.laterality": {
+            "title": "Tumor Laterality"
+        },
+        "surgery.surgery_procedure.pathology_report.pathology_report_tumor_range":{
+            "title": "Tumor Size Range"
+        },
+        "surgery.surgery_procedure.pathology_report.histology_filter": {
+            "title": "Histologic Subtype"
+        },
+        "surgery.surgery_procedure.pathology_report.grade": {
+            "title": "Tumor Grade"
+        },
+        "surgery.surgery_procedure.pathology_report.t_stage": {
+            "title": "pT Stage (at presentation)"
+        },
+        "surgery.surgery_procedure.pathology_report.n_stage": {
+            "title": "pN Stage (at presentation)"
+        },
+        "surgery.surgery_procedure.pathology_report.ajcc_tnm_stage": {
+            "title": "TNM Stage (at presentation)"
+        },
+        "ihc.antibody": {
+            "title": "IHC/FISH (Clinical lab)"
+        },
+        "ihc.result": {
+            "title": "IHC/FISH results"
+        },
+        "metastasis_status": {
+            "title": "Metastasis Status"
+        },
+        "metastasis.site": {
+            "title": "Metastatic Site"
+        },
+        "metastasis.histology_proven": {
+            "title": "Metastasis Histology Proven"
+        },
+        "surgery.surgery_procedure.pathology_report.metasis_details.site": {
+            "title": "Metastatic Site (Pathology)"
+        },
+        "vital_status": {
+            "title": "Vital Status"
+        },
+        "diagnosis.follow_up_duration_range": {
+            "title": "Follow Up Duration"
+        },
+        "medications.name":{
+            "title":"Medication"
+        },
+        "medication_range":{
+            "title":"Medication Duration"
+        },
+        "supportive_medications.name":{
+            "title":"Supportive Medication"
+        },
+        "radiation_summary": {
+            "title": "Radiation Treatment Status"
+        },
+        "radiation.site_consolidated" : {
+          "title": "Radiation Site"
+        },
+        "radiation.fractions_range": {
+            "title": "Radiation Fractions"
+        },
         "biospecimen.sample_type": {
               "title": "Specimen Class"
         },
         "biospecimen.tissue_derivatives": {
             "title": "Specimen Type"
         },
-        "biospecimen.tissue_type": {
-            "title": "Specimen Pathological Type"
-        },
-        "biospecimen.anatomic_site_display": {
-            "title": "Specimen Anatomic Site"
-        },
         "biospecimen.species": {
             "title": "Specimen Species"
         },
-        "biospecimen.activity_status": {
-            "title": "Specimen Activity Status"
+        "biospecimen.biofile.assay_term_name": {
+            "title": "Genomics Assay"
         },
-
+        "consent_status": {
+            "title": "Consent Status"
+        },
         "status": {
             "title": "Status"
         }
@@ -316,15 +290,13 @@
         "status": {
             "title": "Status"
         }
-        
+
     },
     "boost_values": {
         "accession": 1.0,
         "sex": 1.0,
         "ethnicity": 1.0,
         "race": 1.0,
-        "germline.target": 1.0,
-        "germline.significance": 1.0,
         "radiation.site_general": 1.0,
         "radiation.treatment_intention": 1.0,
         "medications.name":1.0,
