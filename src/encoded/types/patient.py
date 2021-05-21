@@ -1391,6 +1391,7 @@ class Patient(Item):
             for radiation_record in radiation:
                 radiation_object = request.embed(radiation_record, '@@object')
                 #site mapping
+                radiation_site = ""
                 if radiation_object['site_general'] == "Adrenal gland, left" or radiation_object['site_general'] == "Adrenal gland, right":
                     radiation_site = "Adrenal"
                 elif radiation_object['site_general'] == "Spine" or radiation_object['site_general'] == "Bone":
