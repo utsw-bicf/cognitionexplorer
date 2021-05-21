@@ -28,6 +28,7 @@ ORDER = [
     'bioreference',
     
     'bioexperiment',
+    'platform',
     'biolibrary',
     'bioreplicate',
     'biofile',

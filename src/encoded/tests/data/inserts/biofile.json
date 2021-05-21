@@ -7,6 +7,7 @@
         "biodataset": "KCEBE000UIY", 
         "bioreplicate":"454c26c2-4252-49d7-a904-4ae479eb6743",
         "biospecimen": "KCEBS087RNA",
+        "platform": "171f8a03-650b-4f7f-9c2f-0970348ee95f",
         "library_type": "DNA",   
         "file_format": "fastq",
         "md5sum": "35042bf1404f32dcb5879015cd57fbe2",
@@ -14,7 +15,10 @@
         "paired_end": "1",
         "submitted_file_name": "1620XD-14-15V1_S0_L001_R1_001.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/Projects/DoubleMutant/Exome/1620XD-14-15V1_S0_L001_R1_001.fastq.gz",
-        "status": "restricted",
+        "status": "released",
+        "output_type": "reads",
+        "file_size": 20,
+        "read_length": 50,
         "uuid": "3ac55830-bf9e-435d-9952-434a3a76396a"
     },
 
@@ -23,7 +27,7 @@
         "award": "Double-Mutants",
         "biodataset": "KCEBE000UIY", 
         "bioreplicate":"1d8d4a65-1db6-4400-ba95-6db3d98fb55f",
-
+        "platform": "171f8a03-650b-4f7f-9c2f-0970348ee95f",
         "biospecimen": "KCEBS087RNA",
         "library_type": "DNA",   
         "file_format": "fastq",
@@ -33,7 +37,10 @@
         "paired_with": "KCEFF365GYT",
         "submitted_file_name": "1620XD-14-15V1_S0_L001_R2_001.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/Projects/DoubleMutant/Exome/1620XD-14-15V1_S0_L001_R2_001.fastq.gz",
-        "status": "in progress",
+        "status": "released",
+        "output_type": "reads",
+        "file_size": 20,
+        "read_length": 50,
         "uuid": "47bf6887-91c4-4d8e-a758-7e36b78f734f"
     },
     {
@@ -41,7 +48,7 @@
         "award": "T-Th",
         "biodataset": "KCEBE765UIY", 
         "bioreplicate":"ceb403d7-a51b-45eb-a220-643b2d12ecbf",
-
+        "platform": "171f8a03-650b-4f7f-9c2f-0970348ee95f",
         "biospecimen": "KCEBS087RNA",
         "library_type": "DNA",   
         "file_format": "fastq",
@@ -51,6 +58,9 @@
         "submitted_file_name": "SAM24296975_1_1.gne.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/exome/RAW/SAM24296975_1_1.gne.fastq.gz",
         "status": "released",
+        "output_type": "reads",
+        "file_size": 20,
+        "read_length": 50,
         "uuid": "d42d45b3-89b6-406b-bc1c-05f36e6b880e"
     },
 
@@ -59,7 +69,7 @@
         "award": "T-Th",
         "biodataset": "KCEBE765UIY", 
         "bioreplicate":"2fd08d63-cb83-421a-8454-a9505da559c4",
-
+        "platform": "171f8a03-650b-4f7f-9c2f-0970348ee95f",
         "biospecimen": "KCEBS044ANI",
         "library_type": "DNA",   
         "file_format": "fastq",
@@ -70,6 +80,9 @@
         "submitted_file_name": "SAM24296975_1_2.gne.fastq.gz",
         "file_path":"/project/BICF/shared/Kidney/exome/RAW/SAM24296975_1_2.gne.fastq.gz",
         "status": "released",
+        "output_type": "reads",
+        "file_size": 20,
+        "read_length": 50,
         "uuid": "c93f4225-b65e-44c5-85a8-45132430be06"
     }
 
