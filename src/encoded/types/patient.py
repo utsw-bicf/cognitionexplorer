@@ -733,7 +733,7 @@ class Patient(Item):
                 surgery_procedures = surgery_object['surgery_procedure']
                 for surgery_procedure in surgery_procedures:
                     surgery_procedure_obj = request.embed(surgery_procedure, '@@object')
-                    if surgery_procedure_obj['procedure_type'] == "Nephrectomy":
+                    if surgery_procedure_obj['procedure_type'] in ["Nephrectomy", 'Ablation', 'Metastectomy', 'Excision', 'Reamings']:
                         surgery_summary = "Yes"
             return surgery_summary
 
