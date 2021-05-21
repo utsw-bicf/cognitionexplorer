@@ -26,7 +26,10 @@ ORDER = [
     'pathology_report',
     'biospecimen',
     'bioreference',
+    
     'bioexperiment',
+    'biolibrary',
+    'bioreplicate',
     'biofile',
     'ihc',
     'medication',

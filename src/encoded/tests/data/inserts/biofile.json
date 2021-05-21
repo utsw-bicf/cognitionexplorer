@@ -5,7 +5,8 @@
         "accession": "KCEFF365GYT",
         "award": "Double-Mutants",
         "biodataset": "KCEBE000UIY", 
-        "biospecimen": "KCEBS708IJT",
+        "bioreplicate":"454c26c2-4252-49d7-a904-4ae479eb6743",
+        "biospecimen": "KCEBS087RNA",
         "library_type": "DNA",   
         "file_format": "fastq",
         "md5sum": "35042bf1404f32dcb5879015cd57fbe2",
@@ -21,7 +22,9 @@
         "accession": "KCEFF745GYT",
         "award": "Double-Mutants",
         "biodataset": "KCEBE000UIY", 
-        "biospecimen": "KCEBS708IJT",
+        "bioreplicate":"1d8d4a65-1db6-4400-ba95-6db3d98fb55f",
+
+        "biospecimen": "KCEBS087RNA",
         "library_type": "DNA",   
         "file_format": "fastq",
         "md5sum": "9c8a24ee73e74c5c18e17f83b50a0eaf",
@@ -36,8 +39,10 @@
     {
         "accession": "KCEFF586YYT",
         "award": "T-Th",
-        "biodataset": "KCEBE000UIY", 
-        "biospecimen": "KCEBS708IJT",
+        "biodataset": "KCEBE765UIY", 
+        "bioreplicate":"ceb403d7-a51b-45eb-a220-643b2d12ecbf",
+
+        "biospecimen": "KCEBS087RNA",
         "library_type": "DNA",   
         "file_format": "fastq",
         "md5sum": "5f1c697e9842f8170f7fdb50ef2c8dd8",
@@ -52,7 +57,9 @@
     {
         "accession": "KCEFF307UYT",
         "award": "T-Th",
-        "biodataset": "KCEBE000UIY", 
+        "biodataset": "KCEBE765UIY", 
+        "bioreplicate":"2fd08d63-cb83-421a-8454-a9505da559c4",
+
         "biospecimen": "KCEBS044ANI",
         "library_type": "DNA",   
         "file_format": "fastq",
@@ -64,38 +71,6 @@
         "file_path":"/project/BICF/shared/Kidney/exome/RAW/SAM24296975_1_2.gne.fastq.gz",
         "status": "released",
         "uuid": "c93f4225-b65e-44c5-85a8-45132430be06"
-    },
-    {
-        "accession": "KCEFF432HYT",
-        "award": "T-Th",
-        "biodataset": "KCEBE765UIY", 
-        "biospecimen": "KCEBS708IJT",
-        "library_type": "RNA",   
-        "file_format": "fastq",
-        "md5sum": "5f1c697e9842f8170f7fdb53ef2c8dd8",
-        "run_type": "paired-ended",
-        "paired_end": "1",
-        "submitted_file_name": "SAM24297118_1_R1.fastq.gz",
-        "file_path":"/project/BICF/shared/Kidney/rna/RAW/SAM24297118_1_R1.fastq.gz",
-        "status": "released",
-        "uuid": "a3d68954-c8f7-4dd7-89d2-e1050065a252"
-    },
-
-    {
-        "accession": "KCEFF904UYT",
-        "award": "T-Th",
-        "biodataset": "KCEBE765UIY", 
-        "biospecimen": "KCEBS708IJT",
-        "library_type": "RNA",   
-        "file_format": "fastq",
-        "md5sum": "68b048daf86213e312b3f6ab75edb8fa",
-        "run_type": "paired-ended",
-        "paired_end": "2",
-        "paired_with": "KCEFF432HYT",
-        "submitted_file_name": "SAM24297118_1_R2.fastq.gz",
-        "file_path":"/project/BICF/shared/Kidney/rna/RAW/SAM24297118_1_R2.fastq.gz",
-        "status": "restricted",
-        "uuid": "98fd89bf-1968-4ff4-a986-72533b02b524"
     }
 
     

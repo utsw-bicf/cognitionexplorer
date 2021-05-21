@@ -52,6 +52,13 @@
             "type": "string",
             "linkTo": "Biodataset"
         },
+        "bioreplicate": {
+            "title": "Bioreplicate",
+            "description": "The experimental replicate designation for the file.",
+            "comment": "See bioreplicate.json for available identifiers.",
+            "type": "string",
+            "linkTo": "Bioreplicate"
+        },
         "file_format": {
             "title": "File format",
             "type": "string",
