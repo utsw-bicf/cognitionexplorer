@@ -722,7 +722,7 @@ class Patient(Item):
         return dominant_tumor
 
     @calculated_property(define=True, schema={
-            "title": "Surgery Treatment Summary",
+            "title": "Surgery Management",
             "type": "string",
         })
     def surgery_summary(self, request, surgery):
