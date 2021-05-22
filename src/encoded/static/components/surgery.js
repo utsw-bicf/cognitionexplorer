@@ -30,7 +30,7 @@ class Surgery extends React.Component {
         let hasProcedure = false;
         let pathData = []
 
-        
+
         if (context.surgery_procedure.length > 0) {
             hasProcedure = true;
             for(let i = 0; i < context.surgery_procedure.length; i++) {
@@ -105,4 +105,3 @@ Surgery.defaultProps = {
 };
 
 globals.contentViews.register(Surgery, 'Surgery');
-

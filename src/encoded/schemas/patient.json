@@ -112,9 +112,9 @@
             "title": "Race"
         },
         "surgery_summary": {
-            "title": "Surgical Managment"
+            "title": "Surgical Management"
         },
-        "surgery.surgery_procedure.procedure_type": {
+        "surgery.surgery_procedure.surgery_treatment": {
             "title": "Surgery Procedure"
         },
         "surgery.surgery_procedure.nephrectomy_details.type": {
@@ -276,7 +276,7 @@
             "title": "Dominant Tumor Histology"
         },
         "surgery_summary": {
-            "title": "Surgery Treatment Status"
+            "title": "Surgery Management"
         },
         "medical_imaging_before_nephrectomy.type": {
             "title": "Medical Imaging Before Nephrectomy"

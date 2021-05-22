@@ -20,14 +20,14 @@ class patientPathTable extends React.Component {
                 surgery_date: data[i].date,
             }
             if (data[i].surgery_procedure.length > 0){
-                
+
                 for (let j = 0; j < data[i].surgery_procedure.length; j++) {
 
                     let obj2 = {
                         surgery_accession: obj1.surgery_accession,
                         surgery_id: obj1.surgery_id,
                         surgery_date: obj1.surgery_date,
-                        procedure_type: data[i].surgery_procedure[j].procedure_type,
+                        procedure_type: data[i].surgery_procedure[j].surgery_treatment,
 
                     }
                     if (data[i].surgery_procedure[j].pathology_report.length > 0) {
@@ -36,7 +36,7 @@ class patientPathTable extends React.Component {
                                 surgery_accession: obj1.surgery_accession,
                                 surgery_id: obj1.surgery_id,
                                 surgery_date: obj1.surgery_date,
-                                procedure_type: data[i].surgery_procedure[j].procedure_type,
+                                procedure_type: data[i].surgery_procedure[j].surgery_treatment,
                                 path_accession: data[i].surgery_procedure[j].pathology_report[k].accession,
                                 path_id: data[i].surgery_procedure[j].pathology_report[k]['@id'],
                                 path_histology: data[i].surgery_procedure[j].pathology_report[k].histology,
@@ -47,14 +47,14 @@ class patientPathTable extends React.Component {
                              surgeryData[index] = obj3;
                              index++;
                         }
-        
+
                     }else {
                         surgeryData[index] = obj2;
                         index++;
                     }
                 }
-                
-                
+
+
             } else {
                 surgeryData[index] = obj1;
                 index++;
@@ -65,7 +65,7 @@ class patientPathTable extends React.Component {
     }
 
     renderData() {
-       
+
             const tableColumns = {
                 surgery_date: {
                     title: 'Surgery Date',
@@ -75,7 +75,7 @@ class patientPathTable extends React.Component {
                     display: surgeryData => <a href={surgeryData.surgery_id}>{surgeryData.surgery_accession}</a>,
                 },
                 procedure_type: {
-                    title: 'Procedure Type',
+                    title: 'Surgery Procedure',
                 },
 
                 path_accession: {
@@ -95,15 +95,15 @@ class patientPathTable extends React.Component {
                     title: 'pM Stage',
                 },
 
-          
+
             };
             return (
                 <SortTablePanel title={this.props.tableTitle}>
                     <SortTable list={this.surgery} columns={tableColumns} />
                 </SortTablePanel>
             );
-        
-        
+
+
     }
 
     render() {
@@ -113,14 +113,10 @@ class patientPathTable extends React.Component {
     }
 
     componentDidMount() {
-        
+
         this.renderData();
     }
 
 }
 
 export default patientPathTable;
-
-
-
-

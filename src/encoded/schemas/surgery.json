@@ -50,26 +50,17 @@
         }
     },
     "facets": {
-        "surgery_procedure.procedure_type": {
+        "surgery_procedure.surgery_treatment": {
             "title": "Surgery Procedure"
-        },
-        "hospital_location": {
-            "title": "Surgery Hospital Location"
-        },
-        "surgery_procedure.nephrectomy_details.type": {
-            "title": "Nephrectomy Type"
-        },
-        "surgery_procedure.nephrectomy_details.approach": {
-            "title": "Nephrectomy Approach"
-        },
-        "nephr_robotic_assist":{
-            "title": "Nephrectomy Robotic Assist"
-        },
-        "surgery_procedure.pathology_report.pathology_report_tumor_range": {
-            "title": "Tumor Size Range"
         },
         "surgery_procedure.pathology_report.histology_filter": {
             "title": "Histologic Subtype"
+        },
+        "surgery_procedure.pathology_report.laterality": {
+            "title": "Tumor Laterality"
+        },
+        "surgery_procedure.pathology_report.pathology_report_tumor_range": {
+            "title": "Tumor Size Range"
         },
         "surgery_procedure.pathology_report.grade": {
             "title": "Tumor Grade"
@@ -80,8 +71,8 @@
         "surgery_procedure.pathology_report.n_stage": {
             "title": "pN Stage (at presentation)"
         },
-        "surgery_procedure.pathology_report.m_stage": {
-            "title": "pM Stage (at presentation)"
+        "surgery_procedure.pathology_report.ajcc_tnm_stage": {
+            "title": "TNM Stage (at presentation)"
         },
         "surgery_procedure.pathology_report.metasis_details.site": {
             "title": "Metastatic Site (Pathology)"
@@ -89,14 +80,14 @@
         "surgery_procedure.pathology_report.metasis_details.type": {
             "title": "Metastasis Type (Pathology)"
         },
-        "surgery_procedure.pathology_report.ajcc_version": {
-            "title": "AJCC Version"
+        "surgery_procedure.nephrectomy_details.type": {
+            "title": "Nephrectomy Type"
         },
-        "surgery_procedure.pathology_report.ajcc_tnm_stage": {
-            "title": "TNM Stage"
+        "surgery_procedure.nephrectomy_details.approach": {
+            "title": "Nephrectomy Approach"
         },
-        "surgery_procedure.pathology_report.laterality": {
-            "title": "Tumor Laterality"
+        "nephr_robotic_assist":{
+            "title": "Nephrectomy Robotic Assist"
         },
         "surgery_procedure.pathology_report.focality": {
             "title": "Tumor Focality"
@@ -111,7 +102,7 @@
             "title": "Margin Status"
         },
          "surgery_procedure.pathology_report.lvi": {
-            "title": "Lymphvascular invasion(LVI)"
+            "title": "Lymphvascular invasion (LVI)"
         },
         "surgery_procedure.pathology_report.micro_perinephric": {
             "title": "Perinephric Infiltration"
@@ -121,6 +112,12 @@
         },
         "surgery_procedure.pathology_report.micro_adrenal": {
             "title": "Ipsilateral Adrenal Gland Involvement"
+        },
+        "surgery_procedure.pathology_report.micro_sinus": {
+            "title": "Renal Sinus Involvement"
+        },
+        "surgery_procedure.pathology_report.micro_gerota": {
+            "title": "Gerotas Fascia Involvement"
         },
         "surgery_procedure.pathology_report.ihc.antibody": {
             "title": "IHC/FISH (Clinical lab)"
@@ -140,7 +137,7 @@
         "hospital_location": {
             "title": "Hospital Location"
         },
-        "surgery_procedure.procedure_type": {
+        "surgery_procedure.surgery_treatment": {
             "title": "Surgery Procedure"
         },
         "surgery_procedure.nephrectomy_details.type": {

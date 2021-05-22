@@ -12,7 +12,7 @@ class surgeryProcedureTable extends React.Component {
         let index = 0;
         for (let i = 0; i < data.length; i++) {
             let obj1 = {
-                procedure_type: data[i].procedure_type,
+                procedure_type: data[i].surgery_treatment,
             }
             if (data[i].procedure_type == "Nephrectomy") {
                 let robotic = "";
@@ -20,14 +20,14 @@ class surgeryProcedureTable extends React.Component {
                     robotic = 'Yes';
                 } else if (data[i].nephrectomy_details.robotic_assist === false) {
                     robotic = 'No';
-                } 
+                }
                 let obj2 = {
-                    procedure_type: "Nephrectomy",
+                    procedure_type: data[i].surgery_treatment ,
                     type: data[i].nephrectomy_details.type,
                     approach: data[i].nephrectomy_details.approach,
                     robotic_assist: robotic,
                 }
-                surgeryProceduresData[index] = obj2;            
+                surgeryProceduresData[index] = obj2;
             } else {
                 surgeryProceduresData[index] = obj1;
             }
@@ -38,10 +38,10 @@ class surgeryProcedureTable extends React.Component {
     }
 
     renderData() {
-       
+
             const tableColumns = {
                 procedure_type: {
-                    title: 'Procedure Type',
+                    title: 'Surgery Procedure',
                 },
                 type: {
                     title: 'Nephrectomy Type',
@@ -54,15 +54,15 @@ class surgeryProcedureTable extends React.Component {
                 },
 
 
-          
+
             };
             return (
                 <SortTablePanel title={this.props.tableTitle}>
                     <SortTable list={this.surgeryProcedures} columns={tableColumns} />
                 </SortTablePanel>
             );
-        
-        
+
+
     }
 
     render() {
@@ -72,14 +72,10 @@ class surgeryProcedureTable extends React.Component {
     }
 
     componentDidMount() {
-        
+
         this.renderData();
     }
 
 }
 
 export default surgeryProcedureTable;
-
-
-
-

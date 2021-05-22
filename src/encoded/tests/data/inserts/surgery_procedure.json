@@ -23,7 +23,7 @@
   },
   {
     "surgery": "KCESX708FIJ",
-    "procedure_type": "Metastectomy",
+    "procedure_type": "Excision",
     "hospital_location": "Parkland",
     "status": "released",
     "uuid": "7807ad0f-32f3-475a-a544-00014f2acc15"
@@ -41,7 +41,7 @@
   },
   {
     "surgery": "KCESX480NBU",
-    "procedure_type": "Metastectomy",
+    "procedure_type": "Excision",
     "status": "released",
     "uuid": "9f85a354-f0af-4e0c-ab13-c0171655e328"
   },
@@ -64,7 +64,7 @@
   },
   {
     "surgery": "KCESX802XRB",
-    "procedure_type": "Metastectomy",
+    "procedure_type": "Excision",
     "status": "released",
     "uuid": "dfc7df5b-383a-4413-9bed-62c3f1cfd1cc"
   },
@@ -111,7 +111,7 @@
   },
   {
     "surgery": "KCESX294KIZ",
-    "procedure_type": "Metastectomy",
+    "procedure_type": "Excision",
     "status": "released",
     "uuid": "bf2b0628-2d9b-4e17-b7de-1bd545ca5a8f"
   },

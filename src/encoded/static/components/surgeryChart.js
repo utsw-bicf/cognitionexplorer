@@ -29,16 +29,16 @@ class SurgeryChart extends React.Component {
         this.props.data.forEach((i) => {
           i.surgery_procedure.forEach((surgery_procedure) => {
               if (surgery_procedure.procedure_type === "Nephrectomy") {
-                nephDataPoints.push({ "date": Date.parse(i.date), "Date": i.date, "procedure_type": surgery_procedure.procedure_type, "hospital_location": i.hospital_location, "nephrectomy_details": surgery_procedure.nephrectomy_details})
+                nephDataPoints.push({ "date": Date.parse(i.date), "Date": i.date, "procedure_type": surgery_procedure.surgery_treatment, "hospital_location": i.hospital_location, "nephrectomy_details": surgery_procedure.nephrectomy_details})
               }
               else if (surgery_procedure.procedure_type === "Ablation") {
-                ablaDataPoints.push({ "date": Date.parse(i.date), "Date": i.date, "procedure_type": surgery_procedure.procedure_type, "hospital_location": i.hospital_location})
+                ablaDataPoints.push({ "date": Date.parse(i.date), "Date": i.date, "procedure_type": surgery_procedure.surgery_treatment, "hospital_location": i.hospital_location})
               }
-              else if (surgery_procedure.procedure_type === "Metastectomy") {
-                metDataPoints.push({ "date": Date.parse(i.date), "Date": i.date, "procedure_type": surgery_procedure.procedure_type, "hospital_location": i.hospital_location})
+              else if (surgery_procedure.surgery_treatment === "Metastasis (Excision)") {
+                metDataPoints.push({ "date": Date.parse(i.date), "Date": i.date, "procedure_type": surgery_procedure.surgery_treatment, "hospital_location": i.hospital_location})
               }
               else {
-                biopsyDataPoints.push({ "date": Date.parse(i.date), "Date": i.date, "procedure_type": surgery_procedure.procedure_type, "hospital_location": i.hospital_location})
+                biopsyDataPoints.push({ "date": Date.parse(i.date), "Date": i.date, "procedure_type": surgery_procedure.surgery_treatment, "hospital_location": i.hospital_location})
               }
             })
           });
@@ -94,7 +94,7 @@ class SurgeryChart extends React.Component {
                     family:  'Raleway, sans-serif',
                     size: 15
                 },
-                marker: { 
+                marker: {
                     color: '#D31E1E',
                     size: 15
                 }
@@ -114,15 +114,15 @@ class SurgeryChart extends React.Component {
                     family:  'Raleway, sans-serif',
                     size: 15
                 },
-                marker: { 
+                marker: {
                 color: '#D31E1E',
                 size: 15
                 }
             };
             data.push(trace2);
         }
-       
-        
+
+
         if (nephDataPoints.length > 0) {
             for (let i = 0; i < nephDataPoints.length; i++) {
                 traceNeph = {
@@ -208,7 +208,7 @@ class SurgeryChart extends React.Component {
         let diagnosisDate;
         if (this.props.diagnosis_date != "Not available") {
             diagnosisDate = new Date(this.props.diagnosis_date + ' 00:00:00' );
-           
+
         }
         if (diagnosisDate != null) {
             trace1 = {
@@ -224,7 +224,7 @@ class SurgeryChart extends React.Component {
                     family:  'Raleway, sans-serif',
                     size: 15
                 },
-                marker: { 
+                marker: {
                     color: '#D31E1E',
                     size: 15
                 }
@@ -280,5 +280,3 @@ class SurgeryChart extends React.Component {
 }
 
 export default SurgeryChart;
-
-
