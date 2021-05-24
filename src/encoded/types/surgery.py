@@ -116,7 +116,7 @@ class SurgeryProcedure(Item):
             "type": "string",
         })
     def surgery_treatment(self, request, procedure_type, pathology_report):
-        surgery_treatment = ""
+        surgery_treatment = "Unknown"
         if procedure_type in ["Not available"]:
             surgery_treatment = "Not available"
         elif procedure_type == "Ablation":
