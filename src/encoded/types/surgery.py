@@ -133,7 +133,7 @@ class SurgeryProcedure(Item):
                             surgery_treatment = 'Kidney (Biopsy)'
                         elif report_type == 'path_metastasis' and procedure_type in ["Excision", 'Reamings']:
                             surgery_treatment = 'Metastasis (Excision)'
-                        elif report_type == 'path_metastasis' and procedure_type in ["Biopsy"]:
+                        elif report_type == 'path_metastasis' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
                             surgery_treatment = 'Metastasis (Biopsy)'
         return surgery_treatment
 
