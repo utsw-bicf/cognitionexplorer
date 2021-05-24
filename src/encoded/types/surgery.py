@@ -124,6 +124,8 @@ class SurgeryProcedure(Item):
         else:
             if procedure_type == "Nephrectomy":
                 surgery_treatment = 'Kidney (Nephrectomy)'
+            elif procedure_type == "Metastectomy":
+                surgery_treatment = 'Metastasis (Excision)'
             else:
                 if len(pathology_report) > 0:
                     for path_record in pathology_report:
@@ -131,10 +133,14 @@ class SurgeryProcedure(Item):
                         report_type = path_object['path_source_procedure']
                         if report_type == 'path_biopsy' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
                             surgery_treatment = 'Kidney (Biopsy)'
+                        elif report_type == 'path_biopsy' and procedure_type in ["Excision", 'Reamings']:
+                            surgery_treatment = 'Kidney (Excision)'
                         elif report_type == 'path_metastasis' and procedure_type in ["Excision", 'Reamings']:
                             surgery_treatment = 'Metastasis (Excision)'
                         elif report_type == 'path_metastasis' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
                             surgery_treatment = 'Metastasis (Biopsy)'
+                else:
+                    surgery_treatment = procedure_type
         return surgery_treatment
 
 
