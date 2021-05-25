@@ -151,30 +151,30 @@ class SurgeryProcedure(Item):
     def surgery_diagnosis(self, request, procedure_type, pathology_report):
         surgery_diagnosis = None
         if procedure_type in ["Not available"]:
-            surgery_treatment = None
+            surgery_diagnosis = None
         elif procedure_type == "Ablation":
-            surgery_treatment = None
+            surgery_diagnosis = None
         else:
             if procedure_type == "Nephrectomy":
-                surgery_treatment = 'Kidney (Nephrectomy)'
+                surgery_diagnosis = 'Kidney (Nephrectomy)'
             elif procedure_type == "Metastectomy":
-                surgery_treatment = None
+                surgery_diagnosis = None
             else:
                 if len(pathology_report) > 0:
                     for path_record in pathology_report:
                         path_object = request.embed(path_record, '@@object')
                         report_type = path_object['path_source_procedure']
                         if report_type == 'path_biopsy' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
-                            surgery_treatment = 'Kidney (Biopsy)'
+                            surgery_diagnosis = 'Kidney (Biopsy)'
                         elif report_type == 'path_biopsy' and procedure_type in ["Excision", 'Reamings']:
-                            surgery_treatment = None
+                            surgery_diagnosis = None
                         elif report_type == 'path_metastasis' and procedure_type in ["Excision", 'Reamings']:
-                            surgery_treatment = None
+                            surgery_diagnosis = None
                         elif report_type == 'path_metastasis' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
-                            surgery_treatment = 'Metastasis (Biopsy)'
+                            surgery_diagnosis = 'Metastasis (Biopsy)'
                 else:
-                    surgery_treatment = None
-        return surgery_treatment
+                    surgery_diagnosis = None
+        return surgery_diagnosis
 
 
     def name(self):
