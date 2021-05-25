@@ -35,8 +35,10 @@ class FormsTable extends React.Component {
             b1v2_id: "",
             b4v3_name: "",
             b4v3_id: "",
-            b5_name: "",
-            b5_id: "",
+            b5v3_name: "",
+            b5v3_id: "",
+            b5v2_name: "",
+            b5v2_id: "",
             b6_name: "",
             b6_id: "",
             b7_name: "",
@@ -97,9 +99,13 @@ class FormsTable extends React.Component {
             visitObj.b4v2_id = data.ivp_b4v2[0]['@id']
             visitObj.b4v2_name = "ivp_b4v2"
         }
-        if (data.ivp_b5.length > 0) {
-            visitObj.b5_id = data.ivp_b5[0]['@id']
-            visitObj.b5_name = "ivp_b5"
+        if (data.ivp_b5v3.length > 0) {
+            visitObj.b5v3_id = data.ivp_b5v3[0]['@id']
+            visitObj.b5v3_name = "ivp_b5v3"
+        }
+        if (data.ivp_b5v2.length > 0) {
+            visitObj.b5v2_id = data.ivp_b5v2[0]['@id']
+            visitObj.b5v2_name = "ivp_b5v2"
         }
         if (data.ivp_b6.length > 0) {
             visitObj.b6_id = data.ivp_b6[0]['@id']
@@ -173,8 +179,8 @@ class FormsTable extends React.Component {
                 b1v2_id: "",
                 b4v3_name: "",
                 b4v3_id: "",
-                b5_name: "",
-                b5_id: "",
+                b5v3_name: "",
+                b5v3_id: "",
                 b6_name: "",
                 b6_id: "",
                 b7_name: "",
@@ -436,7 +442,8 @@ class FormsTable extends React.Component {
                     {form.b4v3_id && <span><a href={form.b4v3_id}>{form.b4v3_name}</a> </span>}
                     {form.b4v2_id && <span><a href={form.b4v2_id}>{form.b4v2_name}</a> </span>}
 
-                    {form.b5_id && <span><a href={form.b5_id}>{form.b5_name}</a> </span>}
+                    {form.b5v3_id && <span><a href={form.b5v3_id}>{form.b5v3_name}</a> </span>}
+                     {form.b5v2_id && <span><a href={form.b5v2_id}>{form.b5v2_name}</a> </span>}
                     {form.b6_id && <span><a href={form.b6_id}>{form.b6_name}</a> </span>}
                     {form.b7_id && <span><a href={form.b7_id}>{form.b7_name}</a> </span>}
                     {form.b8_id && <span><a href={form.b8_id}>{form.b8_name}</a> </span>}
