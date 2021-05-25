@@ -9,9 +9,7 @@
    
     "additionalProperties": false,
     "mixinProperties": [
-        {
-            "$ref": "ivp_b6.json#/properties"
-        },
+       
         {
             "$ref": "mixins.json#/schema_version"
           },
