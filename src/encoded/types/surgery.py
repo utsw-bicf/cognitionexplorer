@@ -112,11 +112,11 @@ class SurgeryProcedure(Item):
 
 
     @calculated_property(define=True, schema={
-            "title": "Surgery Procedure",
+            "title": "Surgery Management Procedure",
             "type": "string",
         })
     def surgery_treatment(self, request, procedure_type, pathology_report):
-        surgery_treatment = "Unknown"
+        surgery_treatment = None
         if procedure_type in ["Not available"]:
             surgery_treatment = "Not available"
         elif procedure_type == "Ablation":
@@ -132,15 +132,48 @@ class SurgeryProcedure(Item):
                         path_object = request.embed(path_record, '@@object')
                         report_type = path_object['path_source_procedure']
                         if report_type == 'path_biopsy' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
-                            surgery_treatment = 'Kidney (Biopsy)'
+                            surgery_treatment = None
                         elif report_type == 'path_biopsy' and procedure_type in ["Excision", 'Reamings']:
                             surgery_treatment = 'Kidney (Excision)'
                         elif report_type == 'path_metastasis' and procedure_type in ["Excision", 'Reamings']:
                             surgery_treatment = 'Metastasis (Excision)'
                         elif report_type == 'path_metastasis' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
+                            surgery_treatment = None
+                else:
+                    surgery_treatment = None
+        return surgery_treatment
+
+
+    @calculated_property(define=True, schema={
+            "title": "Surgery Diagnosis Procedure",
+            "type": "string",
+        })
+    def surgery_diagnosis(self, request, procedure_type, pathology_report):
+        surgery_diagnosis = None
+        if procedure_type in ["Not available"]:
+            surgery_treatment = None
+        elif procedure_type == "Ablation":
+            surgery_treatment = None
+        else:
+            if procedure_type == "Nephrectomy":
+                surgery_treatment = 'Kidney (Nephrectomy)'
+            elif procedure_type == "Metastectomy":
+                surgery_treatment = None
+            else:
+                if len(pathology_report) > 0:
+                    for path_record in pathology_report:
+                        path_object = request.embed(path_record, '@@object')
+                        report_type = path_object['path_source_procedure']
+                        if report_type == 'path_biopsy' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
+                            surgery_treatment = 'Kidney (Biopsy)'
+                        elif report_type == 'path_biopsy' and procedure_type in ["Excision", 'Reamings']:
+                            surgery_treatment = None
+                        elif report_type == 'path_metastasis' and procedure_type in ["Excision", 'Reamings']:
+                            surgery_treatment = None
+                        elif report_type == 'path_metastasis' and procedure_type in ["Biopsy", 'Fine needle aspiration']:
                             surgery_treatment = 'Metastasis (Biopsy)'
                 else:
-                    surgery_treatment = procedure_type
+                    surgery_treatment = None
         return surgery_treatment
 
 
