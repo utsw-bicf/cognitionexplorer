@@ -151,7 +151,7 @@ class SurgeryProcedure(Item):
     def surgery_diagnosis(self, request, procedure_type, pathology_report):
         surgery_diagnosis = None
         if procedure_type in ["Not available"]:
-            surgery_diagnosis = None
+            surgery_diagnosis = "Not available"
         elif procedure_type == "Ablation":
             surgery_diagnosis = None
         else:
