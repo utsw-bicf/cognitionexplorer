@@ -47,8 +47,10 @@ class FormsTable extends React.Component {
             b7v3_id: "",
             b7v2_name: "",
             b7v2_id: "",
-            b8_name: "",
-            b8_id: "",
+            b8v3_name: "",
+            b8v3_id: "",
+            b8v2_name: "",
+            b8v2_id: "",
             b9_name: "",
             b9_id: "",
             c2_name: "",
@@ -127,9 +129,13 @@ class FormsTable extends React.Component {
             visitObj.b7v2_id = data.ivp_b7v2[0]['@id']
             visitObj.b7v2_name = "ivp_b7v2"
         }
-        if (data.ivp_b8.length > 0) {
-            visitObj.b8_id = data.ivp_b8[0]['@id']
-            visitObj.b8_name = "ivp_b8"
+        if (data.ivp_b8v3.length > 0) {
+            visitObj.b8v3_id = data.ivp_b8v3[0]['@id']
+            visitObj.b8v3_name = "ivp_b8v3"
+        }
+        if (data.ivp_b8v2.length > 0) {
+            visitObj.b8v2_id = data.ivp_b8v2[0]['@id']
+            visitObj.b8v2_name = "ivp_b8v2"
         }
         if (data.ivp_b9.length > 0) {
             visitObj.b9_id = data.ivp_b9[0]['@id']
@@ -197,8 +203,8 @@ class FormsTable extends React.Component {
                 b6v3_id: "",
                 b7v3_name: "",
                 b7v3_id: "",
-                b8_name: "",
-                b8_id: "",
+                b8v3_name: "",
+                b8v3_id: "",
                 b9_name: "",
                 b9_id: "",
                 c1_name: "",
@@ -460,7 +466,8 @@ class FormsTable extends React.Component {
                     {form.b6v2_id && <span><a href={form.b6v2_id}>{form.b6v2_name}</a> </span>}
                     {form.b7v3_id && <span><a href={form.b7v3_id}>{form.b7v3_name}</a> </span>}
                     {form.b7v2_id && <span><a href={form.b7v2_id}>{form.b7v2_name}</a> </span>}
-                    {form.b8_id && <span><a href={form.b8_id}>{form.b8_name}</a> </span>}
+                    {form.b8v3_id && <span><a href={form.b8v3_id}>{form.b8v3_name}</a> </span>}
+                    {form.b8v2_id && <span><a href={form.b8v2_id}>{form.b8v2_name}</a> </span>}
                     {form.b9_id && <span><a href={form.b9_id}>{form.b9_name}</a> </span>}
                 </div>,
             },

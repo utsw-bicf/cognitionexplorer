@@ -9,9 +9,7 @@
     ],
     "additionalProperties": false,
     "mixinProperties": [
-        {
-            "$ref": "ivp_b8.json#/properties"
-        },
+       
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -40,7 +38,7 @@
             "default": "1"
         },
         "normal": {
-            "title": "Are all findings unremarkable (normal or normal for age)?",
+            "title": "1. Are all findings unremarkable (normal or normal for age)?",
             "type": "string",
             "enum": [
                 "1 Yes",
@@ -49,7 +47,7 @@
             ]
         },
         "focldef": {
-            "title": "Are focal deficits present indicative of central nervous system disorder?",
+            "title": "2. Are focal deficits present indicative of central nervous system disorder?",
             "type": "string",
             "enum": [
                 "1 Yes",
@@ -58,7 +56,7 @@
             ]
         },
         "gaitdis": {
-            "title": "Is gait disorder present indicative of central nervous system disorder?",
+            "title": "3. Is gait disorder present indicative of central nervous system disorder?",
             "type": "string",
             "enum": [
                 "1 Yes",
@@ -67,7 +65,7 @@
             ]
         },
         "eyemove": {
-            "title": "Are there eye movement abnormalities present indicative of central nervous system disorder?",
+            "title": "4. Are there eye movement abnormalities present indicative of central nervous system disorder?",
             "type": "string",
             "enum": [
                 "1 Yes",
@@ -81,342 +79,44 @@
             "title": "Status"
         },
         "normal": {
-            "title": "Are all findings unremarkable (normal or normal for age)?"
+            "title": "1. Are all findings unremarkable (normal or normal for age)?"
         },
         "focldef": {
-            "title": "Are focal deficits present indicative of central nervous system disorder?"
+            "title": "2. Are focal deficits present indicative of central nervous system disorder?"
         },
         "gaitdis": {
-            "title": "Is gait disorder present indicative of central nervous system disorder?"
+            "title": "3. Is gait disorder present indicative of central nervous system disorder?"
         },
         "eyemove": {
-            "title": "Are there eye movement abnormalities present indicative of central nervous system disorder?"
-        },
-        "normexam": {
-            "title": "1. Were there abnormal neurological exam findings?"
-        },
-        "note_b8.parksign": {
-            "title": "2. Parkinsonian signs"
-        },
-        "note_b8.parksign_left.resttrl": {
-            "title": "2a1. Resting tremor - arm"
-        },
-        "note_b8.parksign_left.slowingl": {
-            "title": "2b1. Slowing of fine motor movements"
-        },
-        "note_b8.parksign_left.rigidl": {
-            "title": "2c1. Rigidity - arm"
-        },
-        "note_b8.parksign-right.resttrr": {
-            "title": "2a2. Resting tremor - arm"
-        },
-        "note_b8.parksign-right.slowingr": {
-            "title": "2b2. Slowing of fine motor movements"
-        },
-        "note_b8.parksign-right.rigidr": {
-            "title": "2c2. Rigidity - arm"
-        },
-        "note_b8.parksign_cont.brady": {
-            "title": "2d. Bradykinesia"
-        },
-        "note_b8.parksign_cont.parkgait": {
-            "title": "2e. Parkinsonian gait disorder"
-        },
-        "note_b8.parksign_cont.postinst": {
-            "title": "2f. Postural instability"
-        },
-        "note_b8.cvdsigns": {
-            "title": "3. Neurological signs considered by examiner to be most likely consistent with cerebrovascular disease."
-        },
-        "note_b8.neurosign_present.cortdef": {
-            "title": "3a. Cortical cognitive deficit (e.g., aphasia, apraxia, neglect)"
-        },
-        "note_b8.neurosign_present.sivdfind": {
-            "title": "3b. Focal or other neurological findings consistent with SIVD(subcortical ischemic vascular dementia)"
-        },
-        "note_b8.neurosign_left.cvdmotl": {
-            "title": "3c1. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)"
-        },
-        "note_b8.neurosign_left.cortvisl": {
-            "title": "3d1. Cortical visual field loss"
-        },
-        "note_b8.neurosign_left.somatl": {
-            "title": "3e1. Somatosensory loss"
-        },
-        "note_b8.neurosign_right.cvdmotr": {
-            "title": "3c2. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)"
-        },
-        "note_b8.neurosign_right.cortvisr": {
-            "title": "3d2. Cortical visual field loss"
-        },
-        "note_b8.neurosign_right.somatr": {
-            "title": "3e2. Somatosensory loss"
-        },
-        "note_b8.postcort": {
-            "title": "4. Higher cortical visual problem suggesting posterior cortical atrophy (e.g., prosopagnosia, simultagnosia, Balint's syndrome) or apraxia of gaze"
-        },
-        "note_b8.pspcbs": {
-            "title": "5. Findings suggestive of progressive supranuclear palsy (PSP), corticobasal syndrome, or other related disorders"
-        },
-        "note_b8.find_present.eyepsp": {
-            "title": "5a. Eye movement changes consistent with PSP"
-        },
-        "note_b8.find_present.dyspsp": {
-            "title": "5b. Dysarthria consistent with PSP"
-        },
-        "note_b8.find_present.axialpsp": {
-            "title": "5c. Axial rigidity consistent with PSP"
-        },
-        "note_b8.find_present.gaitpsp": {
-            "title": "5d. Gait disorder consistent with PSP"
-        },
-        "note_b8.find_present.apraxsp": {
-            "title": "5e. Apraxia of speech"
-        },
-        "note_b8.find_left.apraxl": {
-            "title": "5f1. Apraxia consistent with CBS"
-        },
-        "note_b8.find_left.cortsenl": {
-            "title": "5g1. Cortical sensory deficits consistent with CBS"
-        },
-        "note_b8.find_left.ataxl": {
-            "title": "5h1. Ataxia consistent with CBS"
-        },
-        "note_b8.find_left.alienlml": {
-            "title": "5i1. Alien limb consistent with CBS"
-        },
-        "note_b8.find_left.dystonl": {
-            "title": "5j1. Dystonia consistent with CBS, PSP, or related disorder"
-        },
-        "note_b8.find_left.myocllt": {
-            "title": "5k1. Myoclonus consistent with CBS"
-        },
-        "note_b8.find_right.apraxr": {
-            "title": "5f2. Apraxia consistent with CBS"
-        },
-        "note_b8.find_right.cortsenr": {
-            "title": "5g2. Cortical sensory deficits consistent with CBS"
-        },
-        "note_b8.find_right.ataxr": {
-            "title": "5h2. Ataxia consistent with CBS"
-        },
-        "note_b8.find_right.alienlmr": {
-            "title": "5i2. Alien limb consistent with CBS"
-        },
-        "note_b8.find_right.dystonr": {
-            "title": "5j2. Dystonia consistent with CBS, PSP, or related disorder"
-        },
-        "note_b8.find_right.myoclrt": {
-            "title": "5k2. Myoclonus consistent with CBS"
-        },
-        "note_b8.alsfind": {
-            "title": "6. Findings suggesting ALS (e.g., muscle wasting, fasciculations, upper motor neuron and/or lower motor neuron signs)"
-        },
-        "note_b8.gaitnph": {
-            "title": "7. Normal-pressure hydrocephalus: gait apraxia"
-        },
-        "note_b8.othneur": {
-            "title": "8. Other findings (e.g., cerebellar ataxia, chorea, myoclonus)"
-        },
-        "note_b8.othneurx": {
-            "title": "8a. Other findings from neurological exam, please specify:"
+            "title": "4. Are there eye movement abnormalities present indicative of central nervous system disorder?"
         }
+        
     },
     "columns": {
         "status": {
             "title": "Status"
         },
         "normal": {
-            "title": "Are all findings unremarkable (normal or normal for age)?"
+            "title": "1. Are all findings unremarkable (normal or normal for age)?"
         },
         "focldef": {
-            "title": "Are focal deficits present indicative of central nervous system disorder?"
+            "title": "2. Are focal deficits present indicative of central nervous system disorder?"
         },
         "gaitdis": {
-            "title": "Is gait disorder present indicative of central nervous system disorder?"
+            "title": "3. Is gait disorder present indicative of central nervous system disorder?"
         },
         "eyemove": {
-            "title": "Are there eye movement abnormalities present indicative of central nervous system disorder?"
-        },
-        "normexam": {
-            "title": "1. Were there abnormal neurological exam findings?"
-        },
-        "note_b8.parksign": {
-            "title": "2. Parkinsonian signs"
-        },
-        "note_b8.parksign_left.resttrl": {
-            "title": "2a1. Resting tremor - arm"
-        },
-        "note_b8.parksign_left.slowingl": {
-            "title": "2b1. Slowing of fine motor movements"
-        },
-        "note_b8.parksign_left.rigidl": {
-            "title": "2c1. Rigidity - arm"
-        },
-        "note_b8.parksign-right.resttrr": {
-            "title": "2a2. Resting tremor - arm"
-        },
-        "note_b8.parksign-right.slowingr": {
-            "title": "2b2. Slowing of fine motor movements"
-        },
-        "note_b8.parksign-right.rigidr": {
-            "title": "2c2. Rigidity - arm"
-        },
-        "note_b8.parksign_cont.brady": {
-            "title": "2d. Bradykinesia"
-        },
-        "note_b8.parksign_cont.parkgait": {
-            "title": "2e. Parkinsonian gait disorder"
-        },
-        "note_b8.parksign_cont.postinst": {
-            "title": "2f. Postural instability"
-        },
-        "note_b8.cvdsigns": {
-            "title": "3. Neurological signs considered by examiner to be most likely consistent with cerebrovascular disease."
-        },
-        "note_b8.neurosign_present.cortdef": {
-            "title": "3a. Cortical cognitive deficit (e.g., aphasia, apraxia, neglect)"
-        },
-        "note_b8.neurosign_present.sivdfind": {
-            "title": "3b. Focal or other neurological findings consistent with SIVD(subcortical ischemic vascular dementia)"
-        },
-        "note_b8.neurosign_left.cvdmotl": {
-            "title": "3c1. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)"
-        },
-        "note_b8.neurosign_left.cortvisl": {
-            "title": "3d1. Cortical visual field loss"
-        },
-        "note_b8.neurosign_left.somatl": {
-            "title": "3e1. Somatosensory loss"
-        },
-        "note_b8.neurosign_right.cvdmotr": {
-            "title": "3c2. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc.)"
-        },
-        "note_b8.neurosign_right.cortvisr": {
-            "title": "3d2. Cortical visual field loss"
-        },
-        "note_b8.neurosign_right.somatr": {
-            "title": "3e2. Somatosensory loss"
-        },
-        "note_b8.postcort": {
-            "title": "4. Higher cortical visual problem suggesting posterior cortical atrophy (e.g., prosopagnosia, simultagnosia, Balint's syndrome) or apraxia of gaze"
-        },
-        "note_b8.pspcbs": {
-            "title": "5. Findings suggestive of progressive supranuclear palsy (PSP), corticobasal syndrome, or other related disorders"
-        },
-        "note_b8.find_present.eyepsp": {
-            "title": "5a. Eye movement changes consistent with PSP"
-        },
-        "note_b8.find_present.dyspsp": {
-            "title": "5b. Dysarthria consistent with PSP"
-        },
-        "note_b8.find_present.axialpsp": {
-            "title": "5c. Axial rigidity consistent with PSP"
-        },
-        "note_b8.find_present.gaitpsp": {
-            "title": "5d. Gait disorder consistent with PSP"
-        },
-        "note_b8.find_present.apraxsp": {
-            "title": "5e. Apraxia of speech"
-        },
-        "note_b8.find_left.apraxl": {
-            "title": "5f1. Apraxia consistent with CBS"
-        },
-        "note_b8.find_left.cortsenl": {
-            "title": "5g1. Cortical sensory deficits consistent with CBS"
-        },
-        "note_b8.find_left.ataxl": {
-            "title": "5h1. Ataxia consistent with CBS"
-        },
-        "note_b8.find_left.alienlml": {
-            "title": "5i1. Alien limb consistent with CBS"
-        },
-        "note_b8.find_left.dystonl": {
-            "title": "5j1. Dystonia consistent with CBS, PSP, or related disorder"
-        },
-        "note_b8.find_left.myocllt": {
-            "title": "5k1. Myoclonus consistent with CBS"
-        },
-        "note_b8.find_right.apraxr": {
-            "title": "5f2. Apraxia consistent with CBS"
-        },
-        "note_b8.find_right.cortsenr": {
-            "title": "5g2. Cortical sensory deficits consistent with CBS"
-        },
-        "note_b8.find_right.ataxr": {
-            "title": "5h2. Ataxia consistent with CBS"
-        },
-        "note_b8.find_right.alienlmr": {
-            "title": "5i2. Alien limb consistent with CBS"
-        },
-        "note_b8.find_right.dystonr": {
-            "title": "5j2. Dystonia consistent with CBS, PSP, or related disorder"
-        },
-        "note_b8.find_right.myoclrt": {
-            "title": "5k2. Myoclonus consistent with CBS"
-        },
-        "note_b8.alsfind": {
-            "title": "6. Findings suggesting ALS (e.g., muscle wasting, fasciculations, upper motor neuron and/or lower motor neuron signs)"
-        },
-        "note_b8.gaitnph": {
-            "title": "7. Normal-pressure hydrocephalus: gait apraxia"
-        },
-        "note_b8.othneur": {
-            "title": "8. Other findings (e.g., cerebellar ataxia, chorea, myoclonus)"
-        },
-        "note_b8.othneurx": {
-            "title": "8a. Other findings from neurological exam, please specify:"
+            "title": "4. Are there eye movement abnormalities present indicative of central nervous system disorder?"
         }
+       
     },
     "boost_values": {
         "patient": 1.0,
         "normal": 1.0,
         "focldef": 1.0,
         "gaitdis": 1.0,
-        "eyemove": 1.0,
-        "normexam": 1.0,
-        "note_b8.parksign": 1.0,
-        "note_b8.parksign_left.resttrl": 1.0,
-        "note_b8.parksign_left.slowingl": 1.0,
-        "note_b8.parksign_left.rigidl": 1.0,
-        "note_b8.parksign-right.resttrr": 1.0,
-        "note_b8.parksign-right.slowingr": 1.0,
-        "note_b8.parksign-right.rigidr": 1.0,
-        "note_b8.parksign_cont.brady": 1.0,
-        "note_b8.parksign_cont.parkgait": 1.0,
-        "note_b8.parksign_cont.postinst": 1.0,
-        "note_b8.cvdsigns": 1.0,
-        "note_b8.neurosign_present.cortdef": 1.0,
-        "note_b8.neurosign_present.sivdfind": 1.0,
-        "note_b8.neurosign_left.cvdmotl": 1.0,
-        "note_b8.neurosign_left.cortvisl": 1.0,
-        "note_b8.neurosign_left.somatl": 1.0,
-        "note_b8.neurosign_right.cvdmotr": 1.0,
-        "note_b8.neurosign_right.cortvisr": 1.0,
-        "note_b8.neurosign_right.somatr": 1.0,
-        "note_b8.postcort": 1.0,
-        "note_b8.pspcbs": 1.0,
-        "note_b8.find_present.eyepsp": 1.0,
-        "note_b8.find_present.dyspsp": 1.0,
-        "note_b8.find_present.axialpsp": 1.0,
-        "note_b8.find_present.gaitpsp": 1.0,
-        "note_b8.find_present.apraxsp": 1.0,
-        "note_b8.find_left.apraxl": 1.0,
-        "note_b8.find_left.cortsenl": 1.0,
-        "note_b8.find_left.ataxl": 1.0,
-        "note_b8.find_left.alienlml": 1.0,
-        "note_b8.find_left.dystonl": 1.0,
-        "note_b8.find_left.myocllt": 1.0,
-        "note_b8.find_right.apraxr": 1.0,
-        "note_b8.find_right.cortsenr": 1.0,
-        "note_b8.find_right.ataxr": 1.0,
-        "note_b8.find_right.alienlmr": 1.0,
-        "note_b8.find_right.dystonr": 1.0,
-        "note_b8.find_right.myoclrt": 1.0,
-        "note_b8.alsfind": 1.0,
-        "note_b8.gaitnph": 1.0,
-        "note_b8.othneur": 1.0,
-        "note_b8.othneurx": 1.0
+        "eyemove": 1.0
+        
     },
     "changelog": "/profiles/changelogs/ivp_b8v2.md"
 }
