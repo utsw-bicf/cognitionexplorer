@@ -7,6 +7,8 @@
     "identifyingProperties": [
         "uuid"
     ],
+    "additionalProperties": true,
+
     "required": [
         "patient",
         "adcid",
@@ -22,14 +24,11 @@
         "inrater",
         "ineduc",
         "inrelto",
-        "inknown",
         "inlivwth",
         "inrely"
     ],
     "mixinProperties": [
-        {
-            "$ref": "ivp_a2.json#/properties"
-        },
+   
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -59,7 +58,7 @@
         },
         "inbirmo": {
             "title": "1a. Co-participant's month of birth:",
-            "description": "Date can be submitted as MM.((MM) 1-12, 99 = Unknown)",
+            "description": "Date can be submitted as MM.((MM) 1-12, 99 = Unknown",
             "type": "string",
             "pattern": "^[0]?[1-9]|[1][0-2]|[99]$"
         },
@@ -168,62 +167,11 @@
         },
         "ineduc": {
             "title": "7. Co-participant's years of education -- use the codes below to report the level achieved; if an attempted level is not completed, enter the number of years completed:",
-            "description": "12 = High school or GED,16 = Bachelor's degree,18 = Master's degree;20 = Doctorate, >20 = Other,99 = Unknown(0-36, 99=unknown).If '21 >20', CONTINUE TO 'Years of education' and 'Type of degrees (eg. MPH, MBA, etc.)'.",
+            "description": "High school/GED = 12; Bachelors degree = 16; Master’s degree = 18; Doctorate = 20,99 = Unknown.(0-36, 99=unknown)",
             "type": "string",
-            "enum": [
-                "0 0",
-                "1 1",
-                "2 2",
-                "3 3",
-                "4 4",
-                "5 5",
-                "6 6",
-                "7 7",
-                "8 8",
-                "9 9",
-                "10 10",
-                "11 11",
-                "12 12",
-                "13 13",
-                "14 14",
-                "15 15",
-                "16 16",
-                "17 17",
-                "18 18",
-                "19 19",
-                "20 20",
-                "21 >20",
-                "99 99"
-            ]
+            "pattern": "^[0-2]?[0-9]$|^3[0-6]$|99"
         },
-        "ineduc_more_than_20": {
-            "title": "Years of education",
-            "description": "Years of education if more than 20 years",
-            "type": "string",
-            "enum": [
-                "1 21",
-                "2 22",
-                "3 23",
-                "4 24",
-                "5 25",
-                "6 26",
-                "7 27",
-                "8 28",
-                "9 29",
-                "10 30",
-                "11 31",
-                "12 32",
-                "13 33",
-                "14 34",
-                "15 35",
-                "16 36"
-            ]
-        },
-        "ineduc_type": {
-            "title": "Type of degrees (eg. MPH, MBA, etc.)",
-            "description": "Type of degrees if years of education is more than 20",
-            "type": "string"
-        },
+ 
         "inrelto": {
             "title": "8. What is co-participant's relationship to the subject?",
             "type": "string",
@@ -237,12 +185,13 @@
                 "7 Other"
             ]
         },
-        "inknown": {
-            "title": "8a. How long has the co-participant known the subject?",
-            "description": "((years) 0 - 120, 999 = Unknown)",
-            "type": "string",
-            "pattern": "^[0-9][0-9]?|[1][0-1][0-9]|[1][2][0]|999$"
+        "INRELTOX": {
+            "title": "8A Informant relationship, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+            
         },
+    
         "inlivwth": {
             "title": "9. Does the co-participant live with the subject?",
             "description": "If '0 No', CONTINUE TO 9a and 9b",
@@ -465,69 +414,7 @@
                 }
             ]
         },
-        {
-            "oneOf": [
-                {
-                    "properties": {
-                        "ineduc": {
-                            "enum": [
-                                "21 >20"
-                            ]
-                        }
-                    },
-                    "required": [
-                        "ineduc_more_than_20",
-                        "ineduc_type"
-                    ]
-                },
-                {
-                    "properties": {
-                        "ineduc": {
-                            "enum": [
-                                "0 0",
-                                "1 1",
-                                "2 2",
-                                "3 3",
-                                "4 4",
-                                "5 5",
-                                "6 6",
-                                "7 7",
-                                "8 8",
-                                "9 9",
-                                "10 10",
-                                "11 11",
-                                "12 12",
-                                "13 13",
-                                "14 14",
-                                "15 15",
-                                "16 16",
-                                "17 17",
-                                "18 18",
-                                "19 19",
-                                "20 20",
-                                "99 99"
-                            ]
-                        }
-                    },
-                    "allOf": [
-                        {
-                            "not": {
-                                "required": [
-                                    "ineduc_more_than_20"
-                                ]
-                            }
-                        },
-                        {
-                            "not": {
-                                "required": [
-                                    "ineduc_type"
-                                ]
-                            }
-                        }
-                    ]
-                }
-            ]
-        },
+        
         {
             "oneOf": [
                 {
@@ -599,17 +486,13 @@
         "ineduc": {
             "title": "7. Co-participant's years of education -- use the codes below to report the level achieved; if an attempted level is not completed, enter the number of years completed:"
         },
-        "ineduc_more_than_20": {
-            "title": "Years of education"
-        },
-        "ineduc_type": {
-            "title": "Type of degrees (eg. MPH, MBA, etc.)"
-        },
+   
+      
         "inrelto": {
             "title": "8. What is co-participant's relationship to the subject?"
         },
-        "inknown": {
-            "title": "8a. How long has the co-participant known the subject?"
+        "INRELTOX": {
+            "title": "8A Informant relationship, other – specify"
         },
         "inlivwth": {
             "title": "9. Does the co-participant live with the subject?"
@@ -646,17 +529,13 @@
         "ineduc": {
             "title": "7. Co-participant's years of education -- use the codes below to report the level achieved; if an attempted level is not completed, enter the number of years completed:"
         },
-        "ineduc_more_than_20": {
-            "title": "Years of education"
-        },
-        "ineduc_type": {
-            "title": "Type of degrees (eg. MPH, MBA, etc.)"
-        },
+    
+   
         "inrelto": {
             "title": "8. What is co-participant's relationship to the subject?"
         },
-        "inknown": {
-            "title": "8a. How long has the co-participant known the subject?"
+        "INRELTOX": {
+            "title": "8A Informant relationship, other – specify"
         },
         "inlivwth": {
             "title": "9. Does the co-participant live with the subject?"
@@ -680,10 +559,8 @@
         "inrater": 1.0,
         "inraterx": 1.0,
         "ineduc": 1.0,
-        "ineduc_more_than_20": 1.0,
-        "ineduc_type": 1.0,
         "inrelto": 1.0,
-        "inknown": 1.0,
+        "INRELTOX": 1.0,
         "inlivwth": 1.0,
         "invisits": 1.0,
         "incalls": 1.0,

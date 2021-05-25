@@ -26,11 +26,9 @@
         "inlivwth",
         "inrely"
     ],
-    "additionalProperties": false,
+    "additionalProperties": true,
     "mixinProperties": [
-        {
-            "$ref": "ivp_a2.json#/properties"
-        },
+       
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -231,8 +229,7 @@
                 "3 Sibling (by blood or through marriage or adoption)",
                 "4 Other relative (by blood or through marriage or adoption)",
                 "5 Friend, neighbor, or someone known through family, friends, work, or community (e.g., church)",
-                "6 Paid caregiver, health care provider, or clinician",
-                "7 Other"
+                "6 Paid caregiver, health care provider, or clinician"
             ]
         },
         "inknown": {

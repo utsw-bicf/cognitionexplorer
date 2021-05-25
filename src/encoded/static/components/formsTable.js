@@ -15,12 +15,14 @@ class FormsTable extends React.Component {
             visit_number: 1,
             visit_name: "Initial Visit",
             visit_date: data.ivp_a1v3[0]['visdate'],
-            a1_name: "ivp_a1v3",
-            a1_id: data.ivp_a1v3[0]['@id'],
+            a1v3_name: "ivp_a1v3",
+            a1v3_id: data.ivp_a1v3[0]['@id'],
             a1v2_name: "",
-            a1v2_id: "",
-            a2_name: "",
-            a2_id: "",
+            a1v2_id:"",
+            a2v2_name: "",
+            a2v2_id: "",
+            a2v3_name: "",
+            a2v3_id: "",
             a3_name: "",
             a3_id: "",
             a4_name: "",
@@ -61,9 +63,13 @@ class FormsTable extends React.Component {
             visitObj.a1v2_id = data.ivp_a1v2[0]['@id']
             visitObj.a1v2_name = "ivp_a1v2"
         }
-        if (data.ivp_a2.length > 0) {
-            visitObj.a2_id = data.ivp_a2[0]['@id']
-            visitObj.a2_name = "ivp_a2"
+        if (data.ivp_a2v2.length > 0) {
+            visitObj.a2v2_id = data.ivp_a2v2[0]['@id']
+            visitObj.a2v2_name = "ivp_a2v2"
+        }
+        if (data.ivp_a2v3.length > 0) {
+            visitObj.a2v3_id = data.ivp_a2v3[0]['@id']
+            visitObj.a2v3_name = "ivp_a2v3"
         }
         if (data.ivp_a3.length > 0) {
             visitObj.a3_id = data.ivp_a3[0]['@id']
@@ -135,8 +141,8 @@ class FormsTable extends React.Component {
                 visit_number: i + 2,
                 visit_name: "Follow Up Visit " + (i + 1),
                 visit_date: followUpVisitTimes[i],
-                a1_name: "",
-                a1_id: "",
+                a1v3_name: "",
+                a1v3_id: "",
                 a1v2_name: "",
                 a1v2_id: "",
                 a2_name: "",
@@ -395,9 +401,10 @@ class FormsTable extends React.Component {
             },
             a1_id: {
                 title: 'Form A',
-                display: form => <div>{form.a1_id && <span><a href={form.a1_id}>{form.a1_name}</a> </span>}
+                display: form => <div>{form.a1v3_id && <span><a href={form.a1v3_id}>{form.a1v3_name}</a> </span>}
                    {form.a1v2_id && <span><a href={form.a1v2_id}>{form.a1v2_name}</a> </span>}
-                    {form.a2_id && <span><a href={form.a2_id}>{form.a2_name}</a> </span>}
+                    {form.a2v3_id && <span><a href={form.a2v3_id}>{form.a2v3_name}</a> </span>}
+                    {form.a2v2_id && <span><a href={form.a2v2_id}>{form.a2v2_name}</a> </span>}
                     {form.a3_id && <span><a href={form.a3_id}>{form.a3_name}</a> </span>}
                     {form.a4_id && <span><a href={form.a4_id}>{form.a4_name}</a> </span>}
                     {form.a5_id && <span><a href={form.a5_id}>{form.a5_name}</a> </span>}

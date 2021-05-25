@@ -15,8 +15,8 @@ import re
     name="ivp_a1v3s",
     unique_key="uuid",
     properties={
-        "title": "UDS_FVP_A1V3 Forms",
-        "description": "UDS follow up forms A1V3:Subject Demographic results pages",
+        "title": "UDS_IVP_A1V3 Forms",
+        "description": "UDS initial visits forms A1V3:Subject Demographic results pages",
     },
 )
 class Ivp_a1v3(Item):

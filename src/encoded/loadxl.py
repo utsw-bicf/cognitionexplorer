@@ -21,13 +21,14 @@ ORDER = [
     'patient',
     'ivp_a1v3',
     'ivp_a1v2',
+    'ivp_a2v3',
+    'ivp_a2v2',
     'ivp_a3v3',
     'ivp_a3v2',
     'ivp_a4v3',
     'ivp_a4v2',
     'fvp_a1',
-    'ivp_a2v2',
-    'ivp_a2v3',
+ 
 
     'ivp_a4',
     'ivp_a3',
