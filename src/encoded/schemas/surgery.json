@@ -53,9 +53,6 @@
         "surgery_procedure.surgery_treatment": {
             "title": "Surgery Management Procedure"
         },
-        "surgery_procedure.surgery_treatment": {
-            "title": "Surgery Management Procedure"
-        },
         "surgery_procedure.surgery_diagnosis": {
             "title": "Surgery Diagnosis Procedure"
         },
@@ -145,6 +142,9 @@
         },
         "surgery_procedure.surgery_treatment": {
             "title": "Surgery Treatment Procedure"
+        },
+        "surgery_procedure.procedure_type": {
+            "title": "Procedure Type"
         },
         "surgery_procedure.nephrectomy_details.type": {
             "title": "Nephrectomy Type"
