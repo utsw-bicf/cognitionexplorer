@@ -1,5 +1,5 @@
 from snovault import (
-    abstract_collection,
+   
     calculated_property,
     collection,
     load_schema,
@@ -13,25 +13,7 @@ from .base import (
 import re
 
 
-@abstract_collection(
-    name="ivp_b4s",
-    unique_key="uuid",
-    properties={
-        "title": "UDS_IVP_B4 Forms",
-        "description": "UDS Initial visiting patients B4 forms results pages",
-    })
-class Ivp_b4(Item):
-    base_types = ['Ivp_b4'] + Item.base_types
-    embedded = [
-        
-    ]
-    rev = {
-    }
 
-
-audit_inherit = []
-set_status_up = []
-set_status_down = []
 
 
 @collection(
@@ -41,10 +23,10 @@ set_status_down = []
         "title": "UDS_IVP_B4V3 Forms",
         "description": "UDS Initial visiting patients B4V3 forms results pages",
     })
-class Ivp_b4v3(Ivp_b4):
+class Ivp_b4v3(Item):
     item_type = 'ivp_b4v3'
     schema = load_schema('encoded:schemas/ivp_b4v3.json')
-    embedded = Ivp_b4.embedded + []
+    embedded =  []
     rev = {
     }
     audit_inherit = []
@@ -61,10 +43,10 @@ class Ivp_b4v3(Ivp_b4):
         "title": "UDS_IVP_B4V2 Forms",
         "description": "UDS Initial visiting patients B4V2 forms results pages",
     })
-class Ivp_b4v2(Ivp_b4):
+class Ivp_b4v2(Item):
     item_type = 'ivp_b4v2'
     schema = load_schema('encoded:schemas/ivp_b4v2.json')
-    embedded = Ivp_b4.embedded + []
+    embedded = []
     rev = {
     }
     audit_inherit = []

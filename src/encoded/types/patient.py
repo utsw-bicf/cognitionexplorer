@@ -12,6 +12,7 @@ from pyramid.traversal import find_root, resource_path
 
 import re
 
+
 @collection(
     name="patients",
     unique_key="accession",
@@ -23,7 +24,7 @@ import re
 class Patient(Item):
     item_type = "patient"
     schema = load_schema("encoded:schemas/patient.json")
-    name_key ="accession"
+    name_key = "accession"
     embedded = [
         'ivp_a1v3',
         'ivp_a1v2',
@@ -40,7 +41,8 @@ class Patient(Item):
         'ivp_b1v2',
 
         'fvp_b1',
-        'ivp_b4',
+        'ivp_b4v3',
+        'ivp_b4v2',
         'ivp_b5',
         'fvp_b5',
         'tvp_b5',
@@ -72,7 +74,7 @@ class Patient(Item):
         'fvp_z1x',
         'tvp_d2',
         'tvp_t1',
-        'tvp_b4', 
+        'tvp_b4',
         'concussion_history',
     ]
     rev = {
@@ -91,7 +93,8 @@ class Patient(Item):
 
         'fvp_b1': ('Fvp_b1', 'patient'),
         'fvp_b1': ('Fvp_b1', 'patient'),
-        'ivp_b4': ('Ivp_b4', 'patient'),
+        'ivp_b4v3': ('Ivp_b4v3', 'patient'),
+        'ivp_b4v2': ('Ivp_b4v2', 'patient'),
         'ivp_b5': ('Ivp_b5', 'patient'),
         'fvp_b5': ('Fvp_b5', 'patient'),
         'tvp_b5': ('Tvp_b5', 'patient'),
@@ -128,7 +131,7 @@ class Patient(Item):
     }
 
     audit_inherit = [
-        
+
     ]
     set_status_up = []
     set_status_down = []
@@ -143,7 +146,7 @@ class Patient(Item):
     })
     def ivp_a1v3(self, request, ivp_a1v3):
         return paths_filtered_by_status(request, ivp_a1v3)
-        
+
     @calculated_property(schema={
         "title": "Ivp_a1v2",
         "type": "array",
@@ -154,7 +157,7 @@ class Patient(Item):
     })
     def ivp_a1v2(self, request, ivp_a1v2):
         return paths_filtered_by_status(request, ivp_a1v2)
-    
+
     @calculated_property(schema={
         "title": "Ivp_a2v3",
         "type": "array",
@@ -165,7 +168,7 @@ class Patient(Item):
     })
     def ivp_a2v3(self, request, ivp_a2v3):
         return paths_filtered_by_status(request, ivp_a2v3)
-        
+
     @calculated_property(schema={
         "title": "Ivp_a2v2",
         "type": "array",
@@ -176,7 +179,7 @@ class Patient(Item):
     })
     def ivp_a2v2(self, request, ivp_a2v2):
         return paths_filtered_by_status(request, ivp_a2v2)
-    
+
     @calculated_property(schema={
         "title": "Fvp_a1",
         "type": "array",
@@ -187,8 +190,6 @@ class Patient(Item):
     })
     def fvp_a1(self, request, fvp_a1):
         return paths_filtered_by_status(request, fvp_a1)
-    
-  
 
     @calculated_property(schema={
         "title": "Ivp_a3",
@@ -222,7 +223,7 @@ class Patient(Item):
     })
     def ivp_b1v3(self, request, ivp_b1v3):
         return paths_filtered_by_status(request, ivp_b1v3)
-    
+
     @calculated_property(schema={
         "title": "Ivp_b1v2",
         "type": "array",
@@ -246,16 +247,27 @@ class Patient(Item):
         return paths_filtered_by_status(request, ivp_a5)
 
     @calculated_property(schema={
-        "title": "Ivp_b4",
+        "title": "Ivp_b4v3",
         "type": "array",
         "items": {
             "type": 'string',
-            "linkTo": "Ivp_b4"
+            "linkTo": "Ivp_b4v3"
         },
     })
-    def ivp_b4(self, request, ivp_b4):
-        return paths_filtered_by_status(request, ivp_b4)
-    
+    def ivp_b4v3(self, request, ivp_b4v3):
+        return paths_filtered_by_status(request, ivp_b4v3)
+
+    @calculated_property(schema={
+            "title": "Ivp_b4v2",
+            "type": "array",
+            "items": {
+                "type": 'string',
+                    "linkTo": "Ivp_b4v2"
+            },
+        })
+    def ivp_b4v2(self, request, ivp_b4v2):
+        return paths_filtered_by_status(request, ivp_b4v2)
+
     @calculated_property(schema={
         "title": "Ivp_b5",
         "type": "array",
@@ -266,7 +278,7 @@ class Patient(Item):
     })
     def ivp_b5(self, request, ivp_b5):
         return paths_filtered_by_status(request, ivp_b5)
-       
+
     @calculated_property(schema={
         "title": "Ivp_b6",
         "type": "array",
@@ -277,7 +289,7 @@ class Patient(Item):
     })
     def ivp_b6(self, request, ivp_b6):
         return paths_filtered_by_status(request, ivp_b6)
-        
+
     @calculated_property(schema={
         "title": "Ivp_b7",
         "type": "array",
@@ -332,7 +344,7 @@ class Patient(Item):
     })
     def ivp_d1(self, request, ivp_d1):
         return paths_filtered_by_status(request, ivp_d1)
-      
+
     @calculated_property(schema={
         "title": "Ivp_d2",
         "type": "array",
@@ -376,7 +388,7 @@ class Patient(Item):
     })
     def fvp_b6(self, request, fvp_b6):
         return paths_filtered_by_status(request, fvp_b6)
-      
+
     @calculated_property(schema={
         "title": "Fvp_b4",
         "type": "array",
@@ -387,7 +399,7 @@ class Patient(Item):
     })
     def fvp_b4(self, request, fvp_b4):
         return paths_filtered_by_status(request, fvp_b4)
-    
+
     @calculated_property(schema={
         "title": "Fvp_c1",
         "type": "array",
@@ -398,7 +410,7 @@ class Patient(Item):
     })
     def fvp_c1(self, request, fvp_c1):
         return paths_filtered_by_status(request, fvp_c1)
-        
+
     @calculated_property(schema={
         "title": "Fvp_a3",
         "type": "array",
@@ -420,7 +432,7 @@ class Patient(Item):
     })
     def fvp_b9(self, request, fvp_b9):
         return paths_filtered_by_status(request, fvp_b9)
-      
+
     @calculated_property(schema={
         "title": "Fvp_b7",
         "type": "array",
@@ -431,7 +443,7 @@ class Patient(Item):
     })
     def fvp_b7(self, request, fvp_b7):
         return paths_filtered_by_status(request, fvp_b7)
-      
+
     @calculated_property(schema={
         "title": "Fvp_b5",
         "type": "array",
@@ -442,7 +454,7 @@ class Patient(Item):
     })
     def fvp_b5(self, request, fvp_b5):
         return paths_filtered_by_status(request, fvp_b5)
-      
+
     @calculated_property(schema={
         "title": "Fvp_b1",
         "type": "array",
@@ -454,7 +466,7 @@ class Patient(Item):
     def fvp_b1(self, request, fvp_b1):
         return paths_filtered_by_status(request, fvp_b1)
 
-    @calculated_property(schema={   
+    @calculated_property(schema={
         "title": "Fvp_d2",
         "type": "array",
         "items": {
@@ -464,7 +476,7 @@ class Patient(Item):
     })
     def fvp_d2(self, request, fvp_d2):
         return paths_filtered_by_status(request, fvp_d2)
-      
+
     @calculated_property(schema={
         "title": "Fvp_b8",
         "type": "array",
@@ -486,7 +498,6 @@ class Patient(Item):
     })
     def fvp_d1(self, request, fvp_d1):
         return paths_filtered_by_status(request, fvp_d1)
-      
 
     @calculated_property(schema={
         "title": "Tvp_a1",
@@ -553,7 +564,7 @@ class Patient(Item):
     })
     def tvp_d2(self, request, tvp_d2):
         return paths_filtered_by_status(request, tvp_d2)
-      
+
     @calculated_property(schema={
         "title": "Tvp_t1",
         "type": "array",
@@ -564,7 +575,7 @@ class Patient(Item):
     })
     def tvp_t1(self, request, tvp_t1):
         return paths_filtered_by_status(request, tvp_t1)
-    
+
     @calculated_property(schema={
         "title": "Tvp_b4",
         "type": "array",
@@ -586,7 +597,7 @@ class Patient(Item):
     })
     def tvp_b7(self, request, tvp_b7):
         return paths_filtered_by_status(request, tvp_b7)
-    
+
     @calculated_property(schema={
         "title": "Tvp_b5",
         "type": "array",
@@ -597,7 +608,7 @@ class Patient(Item):
     })
     def tvp_b5(self, request, tvp_b5):
         return paths_filtered_by_status(request, tvp_b5)
-    
+
     @calculated_property(schema={
         "title": "Tvp_a2",
         "type": "array",
@@ -619,7 +630,7 @@ class Patient(Item):
     })
     def m1(self, request, m1):
         return paths_filtered_by_status(request, m1)
-    
+
     @calculated_property(schema={
         "title": "Fvp_a4",
         "type": "array",
@@ -641,7 +652,7 @@ class Patient(Item):
     })
     def tvp_a4(self, request, tvp_a4):
         return paths_filtered_by_status(request, tvp_a4)
-    
+
     @calculated_property(schema={
         "title": "Concussion_history",
         "type": "array",
