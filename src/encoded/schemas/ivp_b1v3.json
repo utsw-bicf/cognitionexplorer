@@ -10,10 +10,9 @@
         "subj_phys_meas",
         "addi_phys_obse"
     ],
+    "additionalProperties": false,
     "mixinProperties": [
-        {
-            "$ref": "ivp_b1.json#/properties"
-        },
+     
         {
             "$ref": "mixins.json#/schema_version"
         },

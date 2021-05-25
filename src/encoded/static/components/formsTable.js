@@ -18,7 +18,7 @@ class FormsTable extends React.Component {
             a1v3_name: "ivp_a1v3",
             a1v3_id: data.ivp_a1v3[0]['@id'],
             a1v2_name: "",
-            a1v2_id:"",
+            a1v2_id: "",
             a2v2_name: "",
             a2v2_id: "",
             a2v3_name: "",
@@ -29,8 +29,10 @@ class FormsTable extends React.Component {
             a4_id: "",
             a5_name: "",
             a5_id: "",
-            b1_name: "",
-            b1_id: "",
+            b1v3_name: "",
+            b1v3_id: "",
+            b1v2_name: "",
+            b1v2_id: "",
             b4_name: "",
             b4_id: "",
             b5_name: "",
@@ -78,6 +80,14 @@ class FormsTable extends React.Component {
         if (data.ivp_a5.length > 0) {
             visitObj.a5_id = data.ivp_a5[0]['@id']
             visitObj.a5_name = "ivp_a5"
+        }
+        if (data.ivp_b1v2.length > 0) {
+            visitObj.b1v2_id = data.ivp_b1v2[0]['@id']
+            visitObj.b1v2_name = "ivp_b1v2"
+        }
+        if (data.ivp_b1v3.length > 0) {
+            visitObj.b1v3_id = data.ivp_b1v3[0]['@id']
+            visitObj.b1v3_name = "ivp_b1v3"
         }
         if (data.ivp_b4.length > 0) {
             visitObj.b4_id = data.ivp_b4[0]['@id']
@@ -153,8 +163,10 @@ class FormsTable extends React.Component {
                 a4_id: "",
                 a5_name: "",
                 a5_id: "",
-                b1_name: "",
-                b1_id: "",
+                b1v3_name: "",
+                b1v3_id: "",
+                b1v2_name: "",
+                b1v2_id: "",
                 b4_name: "",
                 b4_id: "",
                 b5_name: "",
@@ -402,7 +414,7 @@ class FormsTable extends React.Component {
             a1_id: {
                 title: 'Form A',
                 display: form => <div>{form.a1v3_id && <span><a href={form.a1v3_id}>{form.a1v3_name}</a> </span>}
-                   {form.a1v2_id && <span><a href={form.a1v2_id}>{form.a1v2_name}</a> </span>}
+                    {form.a1v2_id && <span><a href={form.a1v2_id}>{form.a1v2_name}</a> </span>}
                     {form.a2v3_id && <span><a href={form.a2v3_id}>{form.a2v3_name}</a> </span>}
                     {form.a2v2_id && <span><a href={form.a2v2_id}>{form.a2v2_name}</a> </span>}
                     {form.a3_id && <span><a href={form.a3_id}>{form.a3_name}</a> </span>}
@@ -415,8 +427,10 @@ class FormsTable extends React.Component {
 
             b1_id: {
                 title: 'Form B',
-                display: form => <div>{form.b1_id && <span><a href={form.b1_id}>{form.b1_name}</a> </span>}
+                display: form => <div>{form.b1v3_id && <span><a href={form.b1v3_id}>{form.b1v3_name}</a> </span>}
+                    {form.b1v2_id && <span><a href={form.b1v2_id}>{form.b1v2_name}</a> </span>}
                     {form.b4_id && <span><a href={form.b4_id}>{form.b4_name}</a> </span>}
+
                     {form.b5_id && <span><a href={form.b5_id}>{form.b5_name}</a> </span>}
                     {form.b6_id && <span><a href={form.b6_id}>{form.b6_name}</a> </span>}
                     {form.b7_id && <span><a href={form.b7_id}>{form.b7_name}</a> </span>}

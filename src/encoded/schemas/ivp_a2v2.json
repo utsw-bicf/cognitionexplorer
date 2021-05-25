@@ -7,7 +7,7 @@
     "identifyingProperties": [
         "uuid"
     ],
-    "additionalProperties": true,
+    "additionalProperties": false,
 
     "required": [
         "patient",
