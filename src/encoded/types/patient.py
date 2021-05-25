@@ -49,7 +49,8 @@ class Patient(Item):
         'tvp_b5',
         'ivp_b6v3',
         'ivp_b6v2',
-        'ivp_b7',
+        'ivp_b7v3',
+        'ivp_b7v2',
         'fvp_b7',
         'tvp_b7',
         'ivp_b8',
@@ -103,7 +104,8 @@ class Patient(Item):
         'tvp_b5': ('Tvp_b5', 'patient'),
         'ivp_b6v3': ('Ivp_b6v3', 'patient'),
         'ivp_b6v2': ('Ivp_b6v2', 'patient'),
-        'ivp_b7': ('Ivp_b7', 'patient'),
+        'ivp_b7v3': ('Ivp_b7v3', 'patient'),
+        'ivp_b7v2': ('Ivp_b7v2', 'patient'),
         'fvp_b7': ('Fvp_b7', 'patient'),
         'tvp_b7': ('Tvp_b7', 'patient'),
         'ivp_b8': ('Ivp_b8', 'patient'),
@@ -262,13 +264,13 @@ class Patient(Item):
         return paths_filtered_by_status(request, ivp_b4v3)
 
     @calculated_property(schema={
-            "title": "Ivp_b4v2",
-            "type": "array",
-            "items": {
+        "title": "Ivp_b4v2",
+        "type": "array",
+        "items": {
                 "type": 'string',
-                    "linkTo": "Ivp_b4v2"
-            },
-        })
+                "linkTo": "Ivp_b4v2"
+        },
+    })
     def ivp_b4v2(self, request, ivp_b4v2):
         return paths_filtered_by_status(request, ivp_b4v2)
 
@@ -315,16 +317,28 @@ class Patient(Item):
     })
     def ivp_b6v2(self, request, ivp_b6v2):
         return paths_filtered_by_status(request, ivp_b6v2)
+
     @calculated_property(schema={
-        "title": "Ivp_b7",
+        "title": "Ivp_b7v3",
         "type": "array",
         "items": {
             "type": 'string',
-            "linkTo": "Ivp_b7"
+            "linkTo": "Ivp_b7v3"
         },
     })
-    def ivp_b7(self, request, ivp_b7):
-        return paths_filtered_by_status(request, ivp_b7)
+    def ivp_b7v3(self, request, ivp_b7v3):
+        return paths_filtered_by_status(request, ivp_b7v3)
+
+    @calculated_property(schema={
+        "title": "Ivp_b7v2",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Ivp_b7v2"
+        },
+    })
+    def ivp_b7v2(self, request, ivp_b7v2):
+        return paths_filtered_by_status(request, ivp_b7v2)
 
     @calculated_property(schema={
         "title": "Ivp_b8",
