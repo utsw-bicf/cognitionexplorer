@@ -1,6 +1,6 @@
-## Changelog for fvp_b7.json
+## Changelog for fvp_b7v3.json
 
 
 ### Schema version 1
 
-* New schema for uds fvp_b7 added
+* New schema for uds fvp_b7v3 added
