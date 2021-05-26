@@ -12,16 +12,16 @@ import re
 
 
 @collection(
-    name="fvp_c2s",
+    name="fvp_c2v3s",
     unique_key="uuid",
     properties={
         "title": "UDS_FVP_A2 Forms",
         "description": "UDS follow-up visiting patients A2 forms results pages",
     },
 )
-class Fvp_c2(Item):
-    item_type = "fvp_c2"
-    schema = load_schema("encoded:schemas/fvp_c2.json")
+class Fvp_c2v3(Item):
+    item_type = "fvp_c2v3"
+    schema = load_schema("encoded:schemas/fvp_c2v3.json")
     embedded = [
     ]
     rev = {
