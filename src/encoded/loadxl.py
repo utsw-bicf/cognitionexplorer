@@ -65,7 +65,7 @@ ORDER = [
     # 'fvp_b7v3',
     # 'fvp_b5v3',
     # 'fvp_b1v3',
-    # 'fvp_d2',
+    # 'fvp_d2v3',
     # 'fvp_d1v3',
     # 'fvp_b8v3',
     'tvp_a1',
