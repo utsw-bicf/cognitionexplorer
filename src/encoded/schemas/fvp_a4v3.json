@@ -1,7 +1,7 @@
 {
     "title": "NACC Uniform Data Set (UDS) - FOLLOW-UPFORM A4: SUBJECT MEDICATIONS",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician or ADC staff. The purpose of the form is to record all prescription medications taken by the subject within the two weeks before the current visit. For prescription medications not listed here, please follow the instructions at the end of this form. OTC (non-prescription) medications need not be reported; however, a short list of medications that could be either prescription or OTC follows the prescription list. This list includes commonly reported medications that may be purchased over the counter (but that may also be prescription)",
-    "id": "/profiles/uds_fvp_a4.json",
+    "id": "/profiles/uds_fvp_a4v3.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -9603,5 +9603,5 @@
         "fu_not_listed_drugs.fu_drugid_35": 1.0,
         "fu_not_listed_drugs.fu_drug_name_35": 1.0
     },
-    "changelog": "/profiles/changelogs/fvp_a4.md"
+    "changelog": "/profiles/changelogs/fvp_a4v3.md"
 }
