@@ -12,16 +12,16 @@ import re
 
 
 @collection(
-    name="fvp_b4s",
+    name="fvp_b4v3s",
     unique_key="uuid",
     properties={
         "title": "UDS_FVP_B4 Forms",
         "description": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B4: CDR® Dementia Staging Instrument plus NACC FTLD Behavior & Language Domains ( CDR® NACC FTLD)",
     },
 )
-class Fvp_b4(Item):
-    item_type = "fvp_b4"
-    schema = load_schema("encoded:schemas/fvp_b4.json")
+class Fvp_b4v3(Item):
+    item_type = "fvp_b4v3"
+    schema = load_schema("encoded:schemas/fvp_b4v3.json")
     embedded = [
     ]
     rev = {
