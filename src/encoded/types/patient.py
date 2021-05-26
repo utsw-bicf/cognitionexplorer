@@ -71,7 +71,7 @@ class Patient(Item):
         # 'fvp_a4v3',
         'tvp_a4',
         # 'fvp_a3v3',
-        # 'fvp_b8',
+        # 'fvp_b8v3',
         'tvp_a1',
         'tvp_z1x',
         'ivp_z1x',
@@ -111,7 +111,7 @@ class Patient(Item):
         'tvp_b7': ('Tvp_b7', 'patient'),
         'ivp_b8v3': ('Ivp_b8v3', 'patient'),
         'ivp_b8v2': ('Ivp_b8v2', 'patient'),
-        # 'fvp_b8': ('Fvp_b8', 'patient'),
+        # 'fvp_b8v3': ('Fvp_b8v3', 'patient'),
         'ivp_b9': ('Ivp_b9', 'patient'),
         'ivp_c2': ('Ivp_c2', 'patient'),
         # 'fvp_b9': ('Fvp_b9', 'patient'),
@@ -530,15 +530,15 @@ class Patient(Item):
         return paths_filtered_by_status(request, fvp_d2)
 
     @calculated_property(schema={
-        "title": "Fvp_b8",
+        "title": "Fvp_b8v3",
         "type": "array",
         "items": {
             "type": 'string',
-            "linkTo": "Fvp_b8"
+            "linkTo": "Fvp_b8v3"
         },
     })
-    def fvp_b8(self, request, fvp_b8):
-        return paths_filtered_by_status(request, fvp_b8)
+    def fvp_b8v3(self, request, fvp_b8v3):
+        return paths_filtered_by_status(request, fvp_b8v3)
 
     @calculated_property(schema={
         "title": "Fvp_d1",
