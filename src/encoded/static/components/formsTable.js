@@ -225,11 +225,11 @@ class FormsTable extends React.Component {
             forms.push(visitObj)
         }
         console.log(forms)
-        for (let i = 0; i < data.fvp_a1.length; i++) {
-            let index = followUpVisitTimes.indexOf(data.fvp_a1[i]["visdate"]) + 1;
+        for (let i = 0; i < data.fvp_a1v3.length; i++) {
+            let index = followUpVisitTimes.indexOf(data.fvp_a1v3[i]["visdate"]) + 1;
             //console.log(index)
-            forms[index].a1_id = data.fvp_a1[i]['@id']
-            forms[index].a1_name = "fvp_a1"
+            forms[index].a1_id = data.fvp_a1v3[i]['@id']
+            forms[index].a1_name = "fvp_a1v3"
 
         }
         for (let i = 0; i < data.fvp_a2.length; i++) {
@@ -386,7 +386,7 @@ class FormsTable extends React.Component {
 
     getFollowUpVisitTimes(data) {
         let followUpVisitTimes = [];
-        data.fvp_a1.forEach(element => followUpVisitTimes.push(element["visdate"]))
+        data.fvp_a1v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.tvp_a1.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_a2.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_c2.forEach(element => followUpVisitTimes.push(element["visdate"]))
