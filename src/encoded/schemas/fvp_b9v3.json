@@ -1,7 +1,7 @@
 {
     "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B9: CLINICIAN JUDGMENT OF SYMPTOMS",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician. For additional clarification and examples, see UDS \nCoding Guidebook for Follow-up Visit Packet, Form B9. \nLink to NACC Coding Guidebook Check only one box per question.",
-    "id": "/profiles/uds_fvp_b9.json",
+    "id": "/profiles/uds_fvp_b9v3.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -996,5 +996,5 @@
         "fu_candidate.fu_lbdeval": 1.0,
         "fu_candidate.fu_ftldeval": 1.0
     },
-    "changelog": "/profiles/changelogs/fvp_b9.md"
+    "changelog": "/profiles/changelogs/fvp_b9v3.md"
 }
