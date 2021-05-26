@@ -1,7 +1,7 @@
 {
     "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B6: BEHAVIORAL ASSESSMENT - GERIATRIC DEPRESSION SCALE (GDS[1])",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional, based on subject response. For additional clarification and examples, see UDS Coding Guidebook for Follow-up Visit Packet, Form B6. Link to NACC Coding Guidebook Check only one answer per question.",
-    "id": "/profiles/uds_fvp_b6.json",
+    "id": "/profiles/uds_fvp_b6v3.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -333,5 +333,5 @@
         "fu_note_b6.fu_better": 1.0,
         "fu_note_b6.fu_gds": 1.0
     },
-    "changelog": "/profiles/changelogs/fvp_b6.md"
+    "changelog": "/profiles/changelogs/fvp_b6v3.md"
 }
