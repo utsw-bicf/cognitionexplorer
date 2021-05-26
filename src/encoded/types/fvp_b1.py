@@ -12,16 +12,16 @@ import re
 
 
 @collection(
-    name="fvp_b1s",
+    name="fvp_b1v3s",
     unique_key="uuid",
     properties={
         "title": "UDS_FVP_B1 Forms",
         "description": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B1: EVALUATION FORM - PHYSICAL",
     },
 )
-class Fvp_b1(Item):
-    item_type = "fvp_b1"
-    schema = load_schema("encoded:schemas/fvp_b1.json")
+class Fvp_b1v3(Item):
+    item_type = "fvp_b1v3"
+    schema = load_schema("encoded:schemas/fvp_b1v3.json")
     embedded = [
     ]
     rev = {
