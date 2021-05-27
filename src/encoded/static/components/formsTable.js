@@ -25,8 +25,10 @@ class FormsTable extends React.Component {
             a2v3_id: "",
             a3_name: "",
             a3_id: "",
-            a4_name: "",
-            a4_id: "",
+            a4v3_name: "",
+            a4v3_id: "",
+            a4v2_name: "",
+            a4v2_id: "",
             a5_name: "",
             a5_id: "",
             b1v3_name: "",
@@ -189,8 +191,10 @@ class FormsTable extends React.Component {
                 a2v2_id: "",
                 a3_name: "",
                 a3_id: "",
-                a4_name: "",
-                a4_id: "",
+                a4v3_name: "",
+                a4v3_id: "",
+                a4v2_name: "",
+                a4v2_id: "",
                 a5_name: "",
                 a5_id: "",
                 b1v3_name: "",
@@ -384,6 +388,12 @@ class FormsTable extends React.Component {
             forms[index].a4_id = data.fvp_a4v3[i]['@id']
             forms[index].a4_name = "fvp_a4v3"
         }
+        for (let i = 0; i < data.fvp_a4v2.length; i++) {
+            let index = followUpVisitTimes.indexOf(data.fvp_a4v2[i]["visdate"]) + 1;
+            // console.log(index)
+            forms[index].a4_id = data.fvp_a4v2[i]['@id']
+            forms[index].a4_name = "fvp_a4v2"
+        }
         for (let i = 0; i < data.tvp_a4.length; i++) {
             let index = followUpVisitTimes.indexOf(data.tvp_a4[i]["visdate"]) + 1;
             // console.log(index)
@@ -421,6 +431,7 @@ class FormsTable extends React.Component {
         data.fvp_d1v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_d2v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_a4v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
+        data.fvp_a4v2.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.tvp_a4.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_a3v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         followUpVisitTimes = [...new Set(followUpVisitTimes)];
