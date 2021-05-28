@@ -252,6 +252,18 @@ class FormsTable extends React.Component {
             forms[index].a2v2_name = "fvp_a2v2"
 
         }
+        for (let i = 0; i < data.fvp_a4v3.length; i++) {
+            let index = followUpVisitTimes.indexOf(data.fvp_a4v3[i]["visdate"]) + 1;
+            console.log(index)
+            forms[index].a4v3_id = data.fvp_a4v3[i]['@id']
+            forms[index].a4v3_name = "fvp_a4v3"
+        }
+        for (let i = 0; i < data.fvp_a4v2.length; i++) {
+            let index = followUpVisitTimes.indexOf(data.fvp_a4v2[i]["visdate"]) + 1;
+            console.log(index)
+            forms[index].a4v2_id = data.fvp_a4v2[i]['@id']
+            forms[index].a4v2_name = "fvp_a4v2"
+        }
         for (let i = 0; i < data.fvp_c2v3.length; i++) {
             let index = followUpVisitTimes.indexOf(data.fvp_c2v3[i]["visdate"]) + 1;
             console.log(index)
@@ -382,18 +394,7 @@ class FormsTable extends React.Component {
             forms[index].a2_id = data.tvp_a2[i]['@id']
             forms[index].a2_name = "tvp_a2"
         }
-        for (let i = 0; i < data.fvp_a4v3.length; i++) {
-            let index = followUpVisitTimes.indexOf(data.fvp_a4v3[i]["visdate"]) + 1;
-            // console.log(index)
-            forms[index].a4_id = data.fvp_a4v3[i]['@id']
-            forms[index].a4_name = "fvp_a4v3"
-        }
-        for (let i = 0; i < data.fvp_a4v2.length; i++) {
-            let index = followUpVisitTimes.indexOf(data.fvp_a4v2[i]["visdate"]) + 1;
-            // console.log(index)
-            forms[index].a4_id = data.fvp_a4v2[i]['@id']
-            forms[index].a4_name = "fvp_a4v2"
-        }
+ 
         for (let i = 0; i < data.tvp_a4.length; i++) {
             let index = followUpVisitTimes.indexOf(data.tvp_a4[i]["visdate"]) + 1;
             // console.log(index)
@@ -466,8 +467,10 @@ class FormsTable extends React.Component {
                     {form.a1v2_id && <span><a href={form.a1v2_id}>{form.a1v2_name}</a> </span>}
                     {form.a2v3_id && <span><a href={form.a2v3_id}>{form.a2v3_name}</a> </span>}
                     {form.a2v2_id && <span><a href={form.a2v2_id}>{form.a2v2_name}</a> </span>}
+                    {form.a4v3_id && <span><a href={form.a4v3_id}>{form.a4v3_name}</a> </span>}
+                    {form.a4v2_id && <span><a href={form.a4v2_id}>{form.a4v2_name}</a> </span>}
                     {form.a3_id && <span><a href={form.a3_id}>{form.a3_name}</a> </span>}
-                    {form.a4_id && <span><a href={form.a4_id}>{form.a4_name}</a> </span>}
+                    {/* {form.a4_id && <span><a href={form.a4_id}>{form.a4_name}</a> </span>} */}
                     {form.a5_id && <span><a href={form.a5_id}>{form.a5_name}</a> </span>}
                 </div>,
 
