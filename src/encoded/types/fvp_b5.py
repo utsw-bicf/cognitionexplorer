@@ -15,13 +15,32 @@ import re
     name="fvp_b5v3s",
     unique_key="uuid",
     properties={
-        "title": "UDS_FVP_B5 Forms",
-        "description": "UDS follow-up visiting patients B5 forms results pages",
+        "title": "UDS_FVP_B5V3 Forms",
+        "description": "UDS follow-up visiting patients B5V3 forms results pages",
     },
 )
 class Fvp_b5v3(Item):
     item_type = "fvp_b5v3"
     schema = load_schema("encoded:schemas/fvp_b5v3.json")
+    embedded = [
+    ]
+    rev = {
+    }
+    audit_inherit = []
+    set_status_up = []
+    set_status_down = []
+
+@collection(
+    name="fvp_b5v2s",
+    unique_key="uuid",
+    properties={
+        "title": "UDS_FVP_B5V2 Forms",
+        "description": "UDS follow-up visiting patients B5V2 forms results pages",
+    },
+)
+class Fvp_b5v2(Item):
+    item_type = "fvp_b5v2"
+    schema = load_schema("encoded:schemas/fvp_b5v2.json")
     embedded = [
     ]
     rev = {

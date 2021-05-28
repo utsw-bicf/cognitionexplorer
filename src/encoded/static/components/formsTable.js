@@ -209,6 +209,8 @@ class FormsTable extends React.Component {
                 b4v2_id: "",
                 b5v3_name: "",
                 b5v3_id: "",
+                b5v2_name: "",
+                b5v2_id: "",
                 b6v3_name: "",
                 b6v3_id: "",
                 b7v3_name: "",
@@ -310,8 +312,13 @@ class FormsTable extends React.Component {
         // }
         for (let i = 0; i < data.fvp_b5v3.length; i++) {
             let index = followUpVisitTimes.indexOf(data.fvp_b5v3[i]["visdate"]) + 1;
-            forms[index].b5_id = data.fvp_b5v3[i]['@id']
-            forms[index].b5_name = "fvp_b5v3"
+            forms[index].b5v3_id = data.fvp_b5v3[i]['@id']
+            forms[index].b5v3_name = "fvp_b5v3"
+        }
+        for (let i = 0; i < data.fvp_b5v2.length; i++) {
+            let index = followUpVisitTimes.indexOf(data.fvp_b5v2[i]["visdate"]) + 1;
+            forms[index].b5v2_id = data.fvp_b5v2[i]['@id']
+            forms[index].b5v2_name = "fvp_b5v2"
         }
         for (let i = 0; i < data.fvp_b1v3.length; i++) {
             let index = followUpVisitTimes.indexOf(data.fvp_b1v3[i]["visdate"]) + 1;
@@ -432,6 +439,7 @@ class FormsTable extends React.Component {
         data.fvp_b1v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_b1v2.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_b5v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
+        data.fvp_b5v2.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_b4v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_b4v2.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.tvp_b5.forEach(element => followUpVisitTimes.push(element["visdate"]))
@@ -503,7 +511,7 @@ class FormsTable extends React.Component {
                     {form.b4v2_id && <span><a href={form.b4v2_id}>{form.b4v2_name}</a> </span>}
 
                     {form.b5v3_id && <span><a href={form.b5v3_id}>{form.b5v3_name}</a> </span>}
-                     {form.b5v2_id && <span><a href={form.b5v2_id}>{form.b5v2_name}</a> </span>}
+                    {form.b5v2_id && <span><a href={form.b5v2_id}>{form.b5v2_name}</a> </span>}
                     {form.b6v3_id && <span><a href={form.b6v3_id}>{form.b6v3_name}</a> </span>}
                     {form.b6v2_id && <span><a href={form.b6v2_id}>{form.b6v2_name}</a> </span>}
                     {form.b7v3_id && <span><a href={form.b7v3_id}>{form.b7v3_name}</a> </span>}
