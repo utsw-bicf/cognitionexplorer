@@ -48,14 +48,6 @@
         "uuid": "3cbfa17c-88fd-4b84-ab19-4a8926529bf1"
     },
     {
-        "end_date": "1902-03-13",
-        "start_date": "1901-08-19",
-        "patient": "KCEPT294KIZ",
-        "name": "IL-2 (Aldesleukin)",
-        "status": "released",
-        "uuid": "0e611831-7bdd-44ed-86cb-8d9f625dfd0d"
-    },
-    {
         "end_date": "1903-09-24",
         "start_date": "1903-04-16",
         "patient": "KCEPT294KIZ",
