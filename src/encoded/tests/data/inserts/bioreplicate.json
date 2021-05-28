@@ -1,0 +1,38 @@
+
+
+[
+    {
+        "bioexperiment": "KCEBE000UIY",
+        "biological_replicate_number": 1,
+        "biolibrary": "KCELB987EAA",
+        "status": "released",
+        "technical_replicate_number": 1,
+        "uuid": "454c26c2-4252-49d7-a904-4ae479eb6743"
+    },
+    {
+        "bioexperiment": "KCEBE000UIY",
+        "biological_replicate_number": 2,
+        "biolibrary": "KCELB987FAA",
+        "technical_replicate_number": 1,
+        "status": "released",
+        "uuid": "1d8d4a65-1db6-4400-ba95-6db3d98fb55f"
+    },
+ 
+    {
+        "bioexperiment": "KCEBE765UIY",
+        "biological_replicate_number": 1,
+        "biolibrary": "KCELB012FAA",
+        "technical_replicate_number": 1,
+        "status": "released",
+        "uuid": "ceb403d7-a51b-45eb-a220-643b2d12ecbf"
+    },
+    {
+        "bioexperiment": "KCEBE765UIY",
+        "biological_replicate_number": 1,
+        "biolibrary": "KCELB012FAA",
+        "technical_replicate_number": 2,
+        "status": "released",
+        "uuid": "2fd08d63-cb83-421a-8454-a9505da559c4"
+    }
+
+]

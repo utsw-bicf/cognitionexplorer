@@ -1,0 +1,57 @@
+[
+    {
+        "biospecimen": "KCEBS708IJT",
+        "nucleic_acid_term_name": "DNA",
+        "status": "released",
+        "uuid": "e6f6c49d-89d4-4adb-baa4-38c103b1583c",
+        "documents": [
+            "kce:RNA extraction protocol from Qiagen"
+        ],
+        "accession": "KCELB012FAA",
+        "submitter_comment":"One sample was failed when sequencing, and have to repeat and combine the half of the failed sample"
+    },
+    {
+        "biospecimen": "KCEBS708IJT",
+        "nucleic_acid_term_name": "DNA",
+        "status": "released",
+        "uuid": "2f5757f7-59f1-4b26-bcb5-7aa9803776c8",
+        "accession": "KCELB745FAA",
+        "submitter_comment":"This is a test for submitter_comment"
+    },
+    {
+        "biospecimen": "KCEBS000AAB",
+        "nucleic_acid_term_name": "RNA",
+        "status": "released",
+        "uuid": "873440f2-13a2-4564-a127-3c88c9a33c8e",
+        "documents": [
+            "kce:ChIPSeq_protocol-Abcam",
+            "kce:Kidney biopsy collection from patient"
+        ],
+        "accession": "KCELB038EAA",
+        "submitter_comment":"This is a test for submitter_comment"
+    },
+    {
+        "biospecimen": "KCEBS087RNA",
+        "nucleic_acid_term_name": "RNA",
+        "status": "released",
+        "uuid": "3245ac16-1d07-4360-bb5c-a7f6dff52885",
+        "accession": "KCELB987EAA",
+        "submitter_comment":"This is a test for submitter_comment"
+    },
+    {
+        "biospecimen": "KCEBS087RNA",
+        "nucleic_acid_term_name": "DNA",
+        "status": "released",
+        "uuid": "86b12331-523d-4664-a492-c63ae4e2ddf7",
+        "accession": "KCELB987FAA",
+        "submitter_comment":"This is a test for submitter_comment"
+    },
+    {
+        "biospecimen": "KCEBS087RNA",
+        "nucleic_acid_term_name": "DNA",
+        "status": "released",
+        "uuid": "c0031917-a622-4200-a857-befc94641848",
+        "accession": "KCELB987GAA",
+        "submitter_comment":"This is a test for submitter_comment"
+    }
+]

@@ -514,7 +514,7 @@ class Patient(Item):
                 "tumor_size": {
                     "title": "Tumor Size",
                     "description": "Greatest dimension of tumor was recorded in cm. ",
-                    "type": "number"
+                    "type": "string"
                 },
                 "tumor_size_units": {
                     "title": "Tumor Size units",
@@ -543,7 +543,8 @@ class Patient(Item):
                     "enum": [
                         "6th edition",
                         "7th edition",
-                        "8th edition"
+                        "8th edition",
+                        "Not available"
                     ]
                 },
                 "date": {
@@ -603,18 +604,27 @@ class Patient(Item):
                     if len(surgery_path_report) > 0:
                         for path_report in surgery_path_report:
                             path_report_obj = request.embed(path_report, '@@object')
-                            t_stage = path_report_obj.get('t_stage')
-                            n_stage = path_report_obj.get('n_stage')
-                            m_stage = path_report_obj.get('m_stage')
+                            if 't_stage' in path_report_obj:
+                                t_stage = path_report_obj.get('t_stage')
+                            else:
+                                t_stage = "Not available"
+                            if 'n_stage' in path_report_obj:
+                                n_stage = path_report_obj.get('n_stage')
+                            else:
+                                n_stage = "Not available"
+                            if 'm_stage' in path_report_obj:
+                                m_stage = path_report_obj.get('m_stage')
+                            else:
+                                m_stage = "Not available"
                             histology = path_report_obj.get('histology')
                             date = surgery_object.get('date')
                             # handle missing data. if stage info is missing, rank it the -1(lowest)
                             # Also we assume non-RCC is already exluded from path report data
-                            if t_stage:
+                            if t_stage != "Not available":
                                 t_stage_rank =  tRanking[t_stage]
                             else:
                                 t_stage_rank = -1
-                            if n_stage:
+                            if n_stage != "Not available":
                                 n_stage_rank =  nRanking[n_stage]
                             else:
                                 n_stage_rank = -1
@@ -622,8 +632,23 @@ class Patient(Item):
                                 histology_rank =  histologyRanking[histology]
                             else:
                                 histology_rank = -1
-                            histology = path_report_obj.get('histology')
                             histology_filter = histology_filters.get(histology)
+                            if 'ajcc_version' in path_report_obj:
+                                ajcc_version = path_report_obj.get('ajcc_version')
+                            else:
+                                ajcc_version = "Not available"
+                            if 'ajcc_tnm_stage' in path_report_obj:
+                                stage = path_report_obj.get('ajcc_tnm_stage')
+                            else:
+                                stage = "Not available"
+                            if 'tumor_size' in path_report_obj:
+                                tumor_size = str(path_report_obj.get('tumor_size'))
+                            else:
+                                tumor_size = "Not available"
+                            if 'tumor_size_units' in path_report_obj:
+                                tumor_size_units = path_report_obj.get('tumor_size_units')
+                            else:
+                                tumor_size_units = "Not available"
                             tumor = {
                                 't_stage': t_stage,
                                 't_stage_rank': t_stage_rank,
@@ -633,14 +658,14 @@ class Patient(Item):
                                 'histology': histology,
                                 'histology_filter': histology_filter,
                                 'histology_rank': histology_rank,
-                                'tumor_size': path_report_obj.get('tumor_size'),
-                                'tumor_size_units': path_report_obj.get('tumor_size_units'),
+                                'tumor_size': tumor_size,
+                                'tumor_size_units': tumor_size_units,
                                 'path_report': path_report_obj.get('accession'),
                                 'path_report_id': path_report_obj.get('@id'),
                                 'surgery': surgery_object.get('accession'),
                                 'surgery_id': surgery_object.get('@id'),
-                                'stage': path_report_obj.get('ajcc_tnm_stage'),
-                                'ajcc_version': path_report_obj.get('ajcc_version'),
+                                'stage': stage,
+                                'ajcc_version': ajcc_version,
                                 'date': date
                             }
 
@@ -1397,6 +1422,7 @@ class Patient(Item):
             for radiation_record in radiation:
                 radiation_object = request.embed(radiation_record, '@@object')
                 #site mapping
+                radiation_site = ""
                 if radiation_object['site_general'] == "Adrenal gland, left" or radiation_object['site_general'] == "Adrenal gland, right":
                     radiation_site = "Adrenal"
                 elif radiation_object['site_general'] == "Spine" or radiation_object['site_general'] == "Bone":

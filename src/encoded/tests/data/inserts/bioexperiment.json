@@ -4,6 +4,7 @@
     "accession": "KCEBE000UIY",
     "assay_term_name": "whole exome sequencing",
     "lab": "james-brugarolas",
+    "award": "Kidney-SPORE",
     "status": "released",
     "uuid": "11fed14e-ba79-4ca2-a8c8-374dd11f9b5b"
   },
@@ -11,6 +12,7 @@
     "accession": "KCEBE765UIY",
     "assay_term_name": "RNA-seq",
     "lab": "james-brugarolas",
+    "award": "Kidney-SPORE",
     "status": "released",
     "uuid": "49441b19-b4a5-4a0f-a7cc-97b657c0c19c"
   }
