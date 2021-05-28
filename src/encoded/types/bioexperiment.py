@@ -35,13 +35,14 @@ class Bioexperiment(Biodataset,
     item_type = 'bioexperiment'
     schema = load_schema('encoded:schemas/bioexperiment.json')
     embedded = Biodataset.embedded + [
+        'award',
+        'lab',
         "submitted_by",
         'documents',
         'bioreplicate',
         'bioreplicate.biolibrary',
         'bioreplicate.biolibrary.documents',
         'bioreplicate.biolibrary.biospecimen',
-        'bioreplicate.biolibrary.biospecimen.part_of',
         'bioreplicate.biolibrary.biospecimen.part_of',
         'possible_controls',
         'bioreplicate.biolibrary.biospecimen.documents',
