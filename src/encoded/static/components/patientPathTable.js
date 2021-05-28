@@ -27,16 +27,23 @@ class patientPathTable extends React.Component {
                         surgery_accession: obj1.surgery_accession,
                         surgery_id: obj1.surgery_id,
                         surgery_date: obj1.surgery_date,
-                        procedure_type: data[i].surgery_procedure[j].surgery_treatment,
+                        procedure_type: data[i].surgery_procedure[j].procedure_type,
 
                     }
                     if (data[i].surgery_procedure[j].pathology_report.length > 0) {
                         for (let k = 0; k < data[i].surgery_procedure[j].pathology_report.length; k++) {
+                          var procedure_type = ''
+                          if (data[i].surgery_procedure[j].surgery_treatment) {
+                            procedure_type = data[i].surgery_procedure[j].surgery_treatment
+                          }
+                          else if (data[i].surgery_procedure[j].surgery_diagnosis) {
+                            procedure_type = data[i].surgery_procedure[j].surgery_diagnosis
+                          }
                             let obj3 = {
                                 surgery_accession: obj1.surgery_accession,
                                 surgery_id: obj1.surgery_id,
                                 surgery_date: obj1.surgery_date,
-                                procedure_type: data[i].surgery_procedure[j].surgery_treatment,
+                                procedure_type: procedure_type,
                                 path_accession: data[i].surgery_procedure[j].pathology_report[k].accession,
                                 path_id: data[i].surgery_procedure[j].pathology_report[k]['@id'],
                                 path_histology: data[i].surgery_procedure[j].pathology_report[k].histology,
@@ -52,6 +59,7 @@ class patientPathTable extends React.Component {
                         surgeryData[index] = obj2;
                         index++;
                     }
+
                 }
 
 

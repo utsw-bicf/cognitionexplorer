@@ -12,7 +12,7 @@ class surgeryProcedureTable extends React.Component {
         let index = 0;
         for (let i = 0; i < data.length; i++) {
             let obj1 = {
-                procedure_type: data[i].surgery_treatment,
+                procedure_type: data[i].surgery_diagnosis,
             }
             if (data[i].procedure_type == "Nephrectomy") {
                 let robotic = "";
@@ -22,7 +22,7 @@ class surgeryProcedureTable extends React.Component {
                     robotic = 'No';
                 }
                 let obj2 = {
-                    procedure_type: data[i].surgery_treatment ,
+                    procedure_type: data[i].surgery_diagnosis ,
                     type: data[i].nephrectomy_details.type,
                     approach: data[i].nephrectomy_details.approach,
                     robotic_assist: robotic,
