@@ -333,7 +333,6 @@ class SurgeryComponent extends React.Component {
                         </a>
                         <div className="result-item__data-row">
                             <div><strong>Surgery Date: </strong>{result.date}</div>
-                            <div><strong>Hospital Location: </strong>{result.hospital_location} </div>
                             {type1}
                         </div>
                     </div>

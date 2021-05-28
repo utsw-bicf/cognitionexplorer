@@ -18,7 +18,7 @@
         },
         "patient": {
             "title": "Patient",
-            "description": "The patient the lab was conducted for.",
+            "description": "The patient the medication was admistered for.",
             "type": "string",
             "linkTo": "Patient"
         },
