@@ -11,8 +11,18 @@ class surgeryProcedureTable extends React.Component {
         let surgeryProceduresData = [];
         let index = 0;
         for (let i = 0; i < data.length; i++) {
+            var procedure_type
+            if (data[i].surgery_treatment) {
+              procedure_type = data[i].surgery_treatment
+            }
+            else if (data[i].surgery_diagnosis) {
+              procedure_type = data[i].surgery_diagnosis
+            }
+            else {
+              procedure_type = data[i].procedure_type
+            }
             let obj1 = {
-                procedure_type: data[i].surgery_diagnosis,
+                procedure_type: procedure_type,
             }
             if (data[i].procedure_type == "Nephrectomy") {
                 let robotic = "";
