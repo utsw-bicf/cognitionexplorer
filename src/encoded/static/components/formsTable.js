@@ -37,6 +37,8 @@ class FormsTable extends React.Component {
             b1v2_id: "",
             b4v3_name: "",
             b4v3_id: "",
+            b4v2_name: "",
+            b4v2_id: "",
             b5v3_name: "",
             b5v3_id: "",
             b5v2_name: "",
@@ -203,6 +205,8 @@ class FormsTable extends React.Component {
                 b1v2_id: "",
                 b4v3_name: "",
                 b4v3_id: "",
+                b4v2_name: "",
+                b4v2_id: "",
                 b5v3_name: "",
                 b5v3_id: "",
                 b6v3_name: "",
@@ -279,13 +283,13 @@ class FormsTable extends React.Component {
 
         for (let i = 0; i < data.fvp_b4v3.length; i++) {
             let index = followUpVisitTimes.indexOf(data.fvp_b4v3[i]["visdate"]) + 1;
-            forms[index].b4_id = data.fvp_b4v3[i]['@id']
-            forms[index].b4_name = "fvp_b4v3"
+            forms[index].b4v3_id = data.fvp_b4v3[i]['@id']
+            forms[index].b4v3_name = "fvp_b4v3"
         }
         for (let i = 0; i < data.fvp_b4v2.length; i++) {
             let index = followUpVisitTimes.indexOf(data.fvp_b4v2[i]["visdate"]) + 1;
-            forms[index].b4_id = data.fvp_b4v2[i]['@id']
-            forms[index].b4_name = "fvp_b4v2"
+            forms[index].b4v2_id = data.fvp_b4v2[i]['@id']
+            forms[index].b4v2_name = "fvp_b4v2"
         }
         for (let i = 0; i < data.fvp_c1v3.length; i++) {
             let index = followUpVisitTimes.indexOf(data.fvp_c1v3[i]["visdate"]) + 1;

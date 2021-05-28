@@ -1,6 +1,6 @@
 [
     {
-        "patient": "000001",
+        "patient": "000000",
         "adcid": "25 University of Texas Southwestern",
         "visdate": "1980-05-23",
         "visitnum": "1",
@@ -25,7 +25,7 @@
         "uuid": "23cbc06d-1407-49d9-9eb1-6b13f993abd6"
     },
     {
-        "patient": "000001",
+        "patient": "000000",
         "adcid": "25 University of Texas Southwestern",
         "visdate": "1981-05-24",
         "visitnum": "2",
