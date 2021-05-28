@@ -286,7 +286,7 @@ class App extends React.Component {
         this.lock = new Auth0Lock(this.clientId, this.domain, {
             auth: {
                 responseType: 'token',
-                redirect: false,
+                redirect: true,
                 redirectUrl: `${hrefInfo.protocol}//${hrefInfo.host}/callback`,
             },
             theme: {
@@ -296,7 +296,7 @@ class App extends React.Component {
             languageDictionary: {
                 title: 'Log in to KCE',
             },
-            allowedConnections: ['google-oauth2'],
+            allowedConnections: ['KCE'],
         });
         this.lock.on('authenticated', this.handleAuth0Login);
 
@@ -1235,4 +1235,3 @@ module.exports.getRenderedProps = function getRenderedProps(document) {
     }
     return props;
 };
-
