@@ -162,13 +162,9 @@ class FormsTable extends React.Component {
             visitObj.m1_id = data.m1[0]['@id']
             visitObj.m1_name = "m1"
         }
-        if (data.ivp_a4v3.length > 0) {
-            visitObj.a4v3_id = data.ivp_a4v3[0]['@id']
-            visitObj.a4v3_name = "ivp_a4v3"
-        }
-        if (data.ivp_a4v2.length > 0) {
-            visitObj.a4v2_id = data.ivp_a4v2[0]['@id']
-            visitObj.a4v2_name = "ivp_a4v2"
+        if (data.ivp_a4.length > 0) {
+            visitObj.a4_id = data.ivp_a4[0]['@id']
+            visitObj.a4_name = "ivp_a4"
         }
         if (data.ivp_z1x.length > 0) {
             visitObj.z1x_id = data.ivp_z1x[0]['@id']
