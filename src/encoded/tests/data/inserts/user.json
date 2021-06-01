@@ -714,7 +714,7 @@
         "uuid": "7e763d5a-634b-4181-a812-4361183359e9"
     },
     {
-        "uuid": "e7bb4fa6-ef92-41b7-871a-5f64db3848fe",
+        
         "email": "david@glicksoftware.com",
         "first_name": "David",
         "groups": [
@@ -776,7 +776,7 @@
         "uuid": "6800d05f-7213-48b1-9ad8-254c73c5b83f"
     },
     {
-        "email": "mingzhu.nie@utsouthwestern.edu>",
+        "email": "mingzhu.nie@utsouthwestern.edu",
         "first_name": "Mingzhu",
         "groups": [
             "admin",
@@ -791,6 +791,7 @@
         ],
         "uuid": "41c729d0-f3ed-4d7c-b9fb-4cff87c92c04"
     },
+    
     {
         "email": "guillaume.jim@gmail.com",
         "first_name": "Guillaume",
