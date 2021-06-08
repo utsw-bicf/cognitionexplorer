@@ -231,8 +231,10 @@ class FormsTable extends React.Component {
                 b8v3_id: "",
                 b9_name: "",
                 b9_id: "",
-                c1_name: "",
-                c1_id: "",
+                c1v2_name: "",
+                c1v2_id: "",
+                c1v3_name: "",
+                c1v3_id: "",
                 c2_name: "",
                 c2_id: "",
                 d1_name: "",
@@ -315,6 +317,12 @@ class FormsTable extends React.Component {
             console.log(index)
             forms[index].c1_id = data.fvp_c1v3[i]['@id']
             forms[index].c1_name = "fvp_c1v3"
+        }
+        for (let i = 0; i < data.fvp_c1v2.length; i++) {
+            let index = followUpVisitTimes.indexOf(data.fvp_c1v2[i]["visdate"]) + 1;
+            console.log(index)
+            forms[index].c1v2_id = data.fvp_c1v2[i]['@id']
+            forms[index].c1v2_name = "fvp_c1v2"
         }
         for (let i = 0; i < data.fvp_b9v3.length; i++) {
             let index = followUpVisitTimes.indexOf(data.fvp_b9v3[i]["visdate"]) + 1;
@@ -480,6 +488,7 @@ class FormsTable extends React.Component {
         // data.tvp_b7v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_b9v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_c1v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
+        data.fvp_c1v2.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_d1v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_d2v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
         data.fvp_a4v3.forEach(element => followUpVisitTimes.push(element["visdate"]))
@@ -550,6 +559,7 @@ class FormsTable extends React.Component {
             c2_id: {
                 title: 'Form C',
                 display: form => <div>{form.c1v2_id && <span><a href={form.c1v2_id}>{form.c1v2_name}</a> </span>}
+                    {form.c1v3_id && <span><a href={form.c1v3_id}>{form.c1v3_name}</a> </span>}
                     {form.c2_id && <span><a href={form.c2_id}>{form.c2_name}</a> </span>}</div>
 
             },
