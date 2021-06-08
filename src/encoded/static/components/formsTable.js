@@ -57,6 +57,8 @@ class FormsTable extends React.Component {
             b8v2_id: "",
             b9_name: "",
             b9_id: "",
+            c1v2_name: "",
+            c1v2_id: "",
             c2_name: "",
             c2_id: "",
             d1_name: "",
@@ -148,6 +150,10 @@ class FormsTable extends React.Component {
         if (data.ivp_c2.length > 0) {
             visitObj.c2_id = data.ivp_c2[0]['@id']
             visitObj.c2_name = "ivp_c2"
+        }
+        if (data.ivp_c1v2.length > 0) {
+            visitObj.c1v2_id = data.ivp_c1v2[0]['@id']
+            visitObj.c1v2_name = "ivp_c1v2"
         }
 
         if (data.ivp_d1.length > 0) {
@@ -543,7 +549,7 @@ class FormsTable extends React.Component {
 
             c2_id: {
                 title: 'Form C',
-                display: form => <div>{form.c1_id && <span><a href={form.c1_id}>{form.c1_name}</a> </span>}
+                display: form => <div>{form.c1v2_id && <span><a href={form.c1v2_id}>{form.c1v2_name}</a> </span>}
                     {form.c2_id && <span><a href={form.c2_id}>{form.c2_name}</a> </span>}</div>
 
             },
