@@ -88,14 +88,9 @@
                 },
                 "MMSE": {
                     "title": "1D Total MMSE score (using D-L-R-O-W)",
-                    "description": "0 – 30 ",
+                    "description": "0 – 30,95-98 ",
                     "type": "string",
-                    "enum": [
-                        "95 Physical problem",
-                        "96 Cognitive/behavior problem",
-                        "97 Other problem",
-                        "98 Verbal refusal"
-                    ]
+                    "pattern": "^[0-2]?[0-9]$|^30$|^95$|^96$|^97$|^98$"
                 }
             }
         },
