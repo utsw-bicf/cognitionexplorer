@@ -286,7 +286,7 @@ class App extends React.Component {
         this.lock = new Auth0Lock(this.clientId, this.domain, {
             auth: {
                 responseType: 'token',
-                redirect: true,
+                redirect: false,
                 redirectUrl: `${hrefInfo.protocol}//${hrefInfo.host}/callback`,
             },
             theme: {
@@ -315,6 +315,7 @@ class App extends React.Component {
                 lockElements[0].appendChild(privacyDiv);
             }
         });
+        
 
         // Initialize browesr history mechanism
         if (this.constructor.historyEnabled()) {
