@@ -296,7 +296,7 @@ class App extends React.Component {
             languageDictionary: {
                 title: 'Log in to KCE',
             },
-            allowedConnections: ['google-oauth2'],
+            allowedConnections: ['KCE'],
         });
         this.lock.on('authenticated', this.handleAuth0Login);
 
@@ -315,6 +315,7 @@ class App extends React.Component {
                 lockElements[0].appendChild(privacyDiv);
             }
         });
+        
 
         // Initialize browesr history mechanism
         if (this.constructor.historyEnabled()) {
@@ -1235,4 +1236,3 @@ module.exports.getRenderedProps = function getRenderedProps(document) {
     }
     return props;
 };
-
