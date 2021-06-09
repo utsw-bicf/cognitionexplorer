@@ -64,7 +64,7 @@ ALLOW_CURRENT_AND_SUBMITTER_EDIT = [
 ] + ONLY_ADMIN_VIEW
 
 ALLOW_CURRENT = [
-    (Allow, Everyone, 'view'),
+    (Allow, 'group.verifed', 'view'),
 ] + ONLY_ADMIN_VIEW
 
 DELETED = [
@@ -163,6 +163,7 @@ class Item(snovault.Item):
         'deleted': DELETED,
         'replaced': DELETED,
         'restricted':ALLOW_VIEWING_GROUP_VIEW,
+        'public': ALLOW_EVERYONE_VIEW,
 
         # shared_status
         'current': ALLOW_CURRENT,

@@ -96,7 +96,8 @@
                 "deleted",
                 "in progress",
                 "restricted",
-                "released"
+                "released",
+                "public"
             ]
         }
     },
