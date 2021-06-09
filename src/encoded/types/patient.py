@@ -848,7 +848,7 @@ class Patient(Item):
             diagnosis_source = "Pathology report"
         else:
             if len(medication) > 0 or len(radiation) > 0:
-                
+
                 for medication_record in medication:
                     medication_object = request.embed(medication_record, '@@object')
                     non_path_dates.append(medication_object['start_date'])
@@ -1836,6 +1836,14 @@ class Medication(Item):
     schema = load_schema('encoded:schemas/medication.json')
     embeded = []
 
+    @calculated_property(condition='name', schema={
+        "title": "Medication name",
+        "type": "string",
+    })
+    def name(self, request, name):
+        if name in ['NKTR-214', 'NKTR-262', 'CPI-444']:
+            name = 'Experimental Medication'
+        return name
 
 @collection(
     name='supportive-medication',
@@ -1878,4 +1886,3 @@ def patient_basic_view(context, request):
         except KeyError:
             pass
     return filtered
-
