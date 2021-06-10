@@ -42,7 +42,7 @@ class SummaryChart extends React.Component {
                 xref: 'paper',
                 x: 0.05,
             },
-            xaxis: {
+            yaxis: {
               showticklabels: false
             },
             height: 500,
@@ -78,6 +78,7 @@ class SummaryChart extends React.Component {
 }
 
 export default SummaryChart;
+
 
 
 

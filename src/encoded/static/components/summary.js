@@ -226,7 +226,9 @@ class SummaryBody extends React.Component {
             x: x,
             y: y,
             type: 'bar',
-            text: y
+            text: y.map(String),
+            textposition: 'auto',
+            hoverinfo: 'none'
           }
 
         ]
@@ -373,4 +375,5 @@ Summary.propTypes = {
 };
 
 globals.contentViews.register(Summary, 'Summary');
+
 
