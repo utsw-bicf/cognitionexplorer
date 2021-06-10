@@ -1836,14 +1836,14 @@ class Medication(Item):
     schema = load_schema('encoded:schemas/medication.json')
     embeded = []
 
-    @calculated_property(condition='name', schema={
-        "title": "Medication name",
-        "type": "string",
-    })
-    def name(self, request, name):
+    @calculated_property()
+    def name(self):
+        properties = self.upgrade_properties()
+        name = properties['name']
         if name in ['NKTR-214', 'NKTR-262', 'CPI-444']:
             name = 'Experimental Medication'
         return name
+
 
 @collection(
     name='supportive-medication',
