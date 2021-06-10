@@ -25,13 +25,15 @@ class SummaryBody extends React.Component {
         const { context } = this.props;
         let numOfKidneySamples = 0;
         let numOfTumorgraftSample = 0
+        let numOfHumanSample = 0
 
         let facets = context.facets;
         let filters = context.filters;
         let isKidneySampleIncluded = this.getIsIncluded(filters, "biospecimen.anatomic_site_display", "Kidney");
 
         let isMouseSampleIncluded = this.getIsIncluded(filters, "biospecimen.species", "Mouse");
-
+        let isHumanSampleIncluded = this.getIsIncluded(filters, "biospecimen.species", "Human");
+        
         let anatomic_site = facets.filter(obj => {
             return obj.field === "biospecimen.anatomic_site_display"
           })
@@ -54,14 +56,25 @@ class SummaryBody extends React.Component {
           })
         if (species && species.length > 0){
             let terms = species[0].terms;
-            let result = terms.filter(obj => {
+            let result_mouse = terms.filter(obj => {
                 return obj.key === "Mouse"
             })
-            if (result && result.length > 0) {
+            let result_human = terms.filter(obj => {
+                return obj.key === "Human"
+            })
+            if (result_mouse && result_mouse.length > 0) {
                 if (isMouseSampleIncluded) {
-                    numOfTumorgraftSample = result[0].doc_count;
+                    numOfTumorgraftSample = result_mouse[0].doc_count;
                 } else {
                     numOfTumorgraftSample = 0;
+                }
+
+            }
+            if (result_human && result_human.length > 0) {
+                if (isMouseSampleIncluded) {
+                    numOfHumanSample = result_human[0].doc_count;
+                } else {
+                    numOfHumanSample = 0;
                 }
 
             }
@@ -83,6 +96,8 @@ class SummaryBody extends React.Component {
         }
         const selectedStageTerms = this.getSelectedTerms(facets, filters, "dominant_tumor.stage")
         const stageData = this.getPieChartData(facets, "dominant_tumor.stage", selectedStageTerms)
+        const selectedAssayTerms = this.getSelectedTerms(facets, filters, "biospecimen.biofile.assay_term_name")
+        const assayData = this.getBarChartData(facets, "biospecimen.biofile.assay_term_name", selectedAssayTerms)
         const selectedsubtypeTerms = this.getSelectedTerms(facets, filters, "dominant_tumor.histology_filter")
         const subtypeData = this.getPieChartData(facets, "dominant_tumor.histology_filter", selectedsubtypeTerms)
         const selectedSpecimenTerms = this.getSelectedTerms(facets, filters, "biospecimen.tissue_derivatives")
@@ -112,8 +127,8 @@ class SummaryBody extends React.Component {
 
                         <label style={totalLabelStyle}>
                             <ul style={{ listStyleType: "none" }}>
-                            <li><span style={numberStyle}>{numOfKidneySamples}</span><span>&nbsp;</span><span>&nbsp;</span><FontAwesomeIcon icon={faVial} size="4x" /></li>
-                            <li><span style={noteStyle}>Patients with Primary Kidney Samples</span></li>
+                            <li><span style={numberStyle}>{numOfHumanSample}</span><span>&nbsp;</span><span>&nbsp;</span><FontAwesomeIcon icon={faVial} size="4x" /></li>
+                            <li><span style={noteStyle}>Patients with Samples</span></li>
                             </ul>
                         </label>
 
@@ -124,12 +139,6 @@ class SummaryBody extends React.Component {
                             </ul>
                         </label>
 
-                        <label style={totalLabelStyle}>
-                            <ul style={{ listStyleType: "none" }}>
-                            <li><span style={numberStyle}>0</span><span>&nbsp;</span><span>&nbsp;</span><FontAwesomeIcon icon={faDna} size="4x" /></li>
-                            <li><span style={noteStyle}>Patients with Genomics Data</span></li>
-                            </ul>
-                        </label>
                     </div>
                     <hr/>
                     <Panel>
@@ -138,17 +147,18 @@ class SummaryBody extends React.Component {
                                 <SummaryChart  title="Dominant Tumor Histologic Subtypes" chartId="summaryChart1" data={subtypeData} ></SummaryChart>
                             </div>
                             <div className="panel__split-element">
-                                <SummaryChart  title="Dominant Tumor Stage" chartId="summaryChart2" data={stageData} ></SummaryChart>
+                                <SummaryChart  title="Metastatic Site" chartId="summaryChart3" data={metsData} ></SummaryChart>
                             </div>
 
                         </PanelBody>
                         <hr/>
                         <PanelBody addClasses="panel__split">
-                            <div className="panel__split-element">
-                                <SummaryChart  title="Metastatic Site" chartId="summaryChart3" data={metsData} ></SummaryChart>
-                            </div>
+                            
                             <div className="panel__split-element">
                                 <SummaryChart  title="Biospecimen Inventory" chartId="summaryChart4" data={specimenData} ></SummaryChart>
+                            </div>
+                            <div className="panel__split-element">
+                                <SummaryChart  title="Genomics Assay" chartId="summaryChart2" data={assayData} ></SummaryChart>
                             </div>
 
                         </PanelBody>
@@ -362,3 +372,4 @@ Summary.propTypes = {
 };
 
 globals.contentViews.register(Summary, 'Summary');
+
