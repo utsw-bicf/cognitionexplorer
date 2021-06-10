@@ -264,15 +264,15 @@ const PublicationComponent = (props, reactContext) => {
                 </Panel>
             : null}
 
-            {context.publication_data.length > 0 ?
+            {context.publication_data ?
                 <PublicationDataTable publicationDataIds={context.publication_data} />
             : null}
 
-            {context.datasets && context.datasets.length > 0 ?
+            {context.datasets  ?
                 <DatasetTable datasets={context.datasets} />
             : null }
 
-            {context.supplementary_data && context.supplementary_data.length > 0 ?
+            {context.supplementary_data  ?
                 <Panel>
                     <PanelHeading>
                         <h4>Related data</h4>

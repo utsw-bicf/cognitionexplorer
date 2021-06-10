@@ -48,7 +48,7 @@ const portal = {
                 { id: 'patientmatrix', title: 'Patient Matrix', url: '/matrix/?type=Patient&status=released' },
                 { id: 'sampletmatrix', title: 'Biospecimen Matrix', url: '/matrix/?type=Biospecimen&status=released' },
                 { id: 'sep-mm-2' },
-                { id: 'publications', title: 'Publications', url: '/search/?type=Publication&status=released' },
+                { id: 'publications', title: 'Publications', url: '/search/?type=Publication&status=public' },
             ],
         },
         {
