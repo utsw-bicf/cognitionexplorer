@@ -163,7 +163,7 @@ def getLabsAndVitalsRange(value, low, high, lowRange, normalRange, highRange):
      properties={
          'title': 'Patients',
          'description': 'Listing Patients',
-})
+     })
 class Patient(Item):
     item_type = 'patient'
     schema = load_schema('encoded:schemas/patient.json')
@@ -208,6 +208,9 @@ class Patient(Item):
 
     ]
     set_status_down = []
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view'])] + USER_ALLOW_CURRENT
+    }
 
     @calculated_property(schema={
         "title": "Last Follow-up Date",
@@ -848,7 +851,7 @@ class Patient(Item):
             diagnosis_source = "Pathology report"
         else:
             if len(medication) > 0 or len(radiation) > 0:
-                
+
                 for medication_record in medication:
                     medication_object = request.embed(medication_record, '@@object')
                     non_path_dates.append(medication_object['start_date'])
@@ -1680,6 +1683,9 @@ class LabResult(Item):
     item_type = 'lab_results'
     schema = load_schema('encoded:schemas/lab_results.json')
     embeded = []
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
 
 @collection(
@@ -1692,7 +1698,9 @@ class VitalResult(Item):
     item_type = 'vital_results'
     schema = load_schema('encoded:schemas/vital_results.json')
     embeded = []
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
 @collection(
     name='germline',
@@ -1704,7 +1712,9 @@ class Germline(Item):
     item_type = 'germline'
     schema = load_schema('encoded:schemas/germline.json')
     embeded = []
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
 @collection(
     name='ihc',
@@ -1716,6 +1726,9 @@ class Ihc(Item):
     item_type = 'ihc'
     schema = load_schema('encoded:schemas/ihc.json')
     embeded = []
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
 @collection(
     name='consent',
@@ -1727,7 +1740,9 @@ class Consent(Item):
     item_type = 'consent'
     schema = load_schema('encoded:schemas/consent.json')
     embeded = []
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
 @collection(
     name='radiation',
@@ -1739,6 +1754,9 @@ class Radiation(Item):
     item_type = 'radiation'
     schema = load_schema('encoded:schemas/radiation.json')
     embeded = []
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
     @calculated_property(condition='dose', schema={
         "title": "Dosage per Fraction",
@@ -1823,7 +1841,9 @@ class MedicalImaging(Item):
     item_type = 'medical-imaging'
     schema = load_schema('encoded:schemas/medical_imaging.json')
     embeded = []
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
 @collection(
     name='medication',
@@ -1835,7 +1855,9 @@ class Medication(Item):
     item_type = 'medication'
     schema = load_schema('encoded:schemas/medication.json')
     embeded = []
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
 @collection(
     name='supportive-medication',
@@ -1847,7 +1869,9 @@ class SupportiveMedication(Item):
     item_type = 'supportive_medication'
     schema = load_schema('encoded:schemas/supportive_medication.json')
     embeded = []
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
 @property
 def __name__(self):
@@ -1878,4 +1902,3 @@ def patient_basic_view(context, request):
         except KeyError:
             pass
     return filtered
-

@@ -3,6 +3,11 @@ from snovault import (
     collection,
     load_schema,
 )
+from pyramid.security import (
+    Allow,
+    Deny,
+    Everyone,
+)
 from .base import (
     Item,
     paths_filtered_by_status,
@@ -38,7 +43,10 @@ class Biolibrary(Item):
 
     ]
     set_status_down = []
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
+    
     @calculated_property(schema={
         "title": "Biofile",
         "type": "array",

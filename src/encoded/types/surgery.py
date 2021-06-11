@@ -8,8 +8,30 @@ from .base import (
     # SharedItem,
     paths_filtered_by_status,
 )
+from pyramid.security import (
+    Allow,
+    Deny,
+    Everyone,
+)
 from pyramid.traversal import find_root, resource_path
 import re
+
+ONLY_ADMIN_VIEW_DETAILS = [
+    (Allow, 'group.admin', ['view', 'view_details', 'edit']),
+    (Allow, 'group.read-only-admin', ['view', 'view_details']),
+    (Allow, 'remoteuser.INDEXER', ['view']),
+    (Allow, 'remoteuser.EMBED', ['view']),
+    (Deny, Everyone, ['view', 'view_details', 'edit']),
+]
+
+USER_ALLOW_CURRENT = [
+    (Allow, Everyone, 'view'),
+] + ONLY_ADMIN_VIEW_DETAILS
+
+USER_DELETED = [
+    (Deny, Everyone, 'visible_for_edit')
+] + ONLY_ADMIN_VIEW_DETAILS
+
 
 
 @collection(
@@ -36,6 +58,9 @@ class Surgery(Item):
     audit_inherit = []
     set_status_up = []
     set_status_down = []
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
     @calculated_property(
         schema={
@@ -95,6 +120,9 @@ class SurgeryProcedure(Item):
     ]
     rev = {
         "pathology_report": ("PathologyReport", "surgery_procedure"),
+    }
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
     }
 
     @calculated_property(

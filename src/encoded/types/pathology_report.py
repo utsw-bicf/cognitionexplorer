@@ -3,6 +3,11 @@ from snovault import (
     collection,
     load_schema,
 )
+from pyramid.security import (
+    Allow,
+    Deny,
+    Everyone,
+)
 from .base import (
     Item,
     # SharedItem,
@@ -11,6 +16,22 @@ from .base import (
 from pyramid.traversal import find_root, resource_path
 import re
 from .histology_filters import histology_filters
+
+ONLY_ADMIN_VIEW_DETAILS = [
+    (Allow, 'group.admin', ['view', 'view_details', 'edit']),
+    (Allow, 'group.read-only-admin', ['view', 'view_details']),
+    (Allow, 'remoteuser.INDEXER', ['view']),
+    (Allow, 'remoteuser.EMBED', ['view']),
+    (Deny, Everyone, ['view', 'view_details', 'edit']),
+]
+
+USER_ALLOW_CURRENT = [
+    (Allow, Everyone, 'view'),
+] + ONLY_ADMIN_VIEW_DETAILS
+
+USER_DELETED = [
+    (Deny, Everyone, 'visible_for_edit')
+] + ONLY_ADMIN_VIEW_DETAILS
 
 
 @collection(
@@ -34,7 +55,9 @@ class PathologyReport(Item):
     audit_inherit = []
     set_status_up = []
     set_status_down = []
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
     @calculated_property( define=True, schema={
         "title": "Pathology Report Tumor Range",
@@ -76,7 +99,5 @@ class PathologyReport(Item):
         }
     )
     def histology_filter(self, request, histology):
-        
+
         return histology_filters.get(histology)
-
-
