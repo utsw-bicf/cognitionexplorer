@@ -47,14 +47,14 @@ _tsv_mapping = OrderedDict([
     ('Biosample type', ['biosample_ontology.classification']),
     ('Biosample organism', ['replicates.library.biosample.organism.scientific_name']),
     ('Biosample genetic modifications methods', ['replicates.library.biosample.applied_modifications.method']),
-    ('Biosample genetic modifications categories', ['replicates.library.biosample.applied_modifications.category']),                                   
-    ('Biosample genetic modifications targets', ['replicates.library.biosample.applied_modifications.modified_site_by_target_id']),                                   
-    ('Biosample genetic modifications gene targets', ['replicates.library.biosample.applied_modifications.modified_site_by_gene_id']),                                   
+    ('Biosample genetic modifications categories', ['replicates.library.biosample.applied_modifications.category']),
+    ('Biosample genetic modifications targets', ['replicates.library.biosample.applied_modifications.modified_site_by_target_id']),
+    ('Biosample genetic modifications gene targets', ['replicates.library.biosample.applied_modifications.modified_site_by_gene_id']),
     ('Biosample genetic modifications site coordinates', ['replicates.library.biosample.applied_modifications.modified_site_by_coordinates.assembly',
                                                           'replicates.library.biosample.applied_modifications.modified_site_by_coordinates.chromosome',
                                                           'replicates.library.biosample.applied_modifications.modified_site_by_coordinates.start',
-                                                          'replicates.library.biosample.applied_modifications.modified_site_by_coordinates.end']),                                   
-    ('Biosample genetic modifications zygosity', ['replicates.library.biosample.applied_modifications.zygosity']), 
+                                                          'replicates.library.biosample.applied_modifications.modified_site_by_coordinates.end']),
+    ('Biosample genetic modifications zygosity', ['replicates.library.biosample.applied_modifications.zygosity']),
     ('Experiment target', ['target.name']),
     ('Library made from', ['replicates.library.nucleic_acid_term_name']),
     ('Library depleted in', ['replicates.library.depleted_in_term_name']),
@@ -489,7 +489,7 @@ def _batch_download_publicationdata(request):
     )
 
 
-@view_config(route_name='peak_metadata', request_method='GET')
+@view_config(route_name='peak_metadata', request_method='GET', permission='search')
 def peak_metadata(context, request):
     param_list = parse_qs(request.matchdict['search_params'])
     param_list['field'] = []
@@ -541,7 +541,7 @@ def peak_metadata(context, request):
     )
 
 
-@view_config(route_name='metadata', request_method='GET')
+@view_config(route_name='metadata', request_method='GET', permission='search')
 def metadata_tsv(context, request):
     qs = QueryString(request)
     param_list = qs.group_values_by_key()
@@ -682,7 +682,7 @@ def metadata_tsv(context, request):
     )
 
 
-@view_config(route_name='batch_download', request_method=('GET', 'POST'))
+@view_config(route_name='batch_download', request_method=('GET', 'POST'), permission='search')
 def batch_download(context, request):
     default_params = [
         ('limit', 'all'),
@@ -843,7 +843,7 @@ def restricted_files_present(exp_file):
 
 def is_no_file_available(exp_file):
     return exp_file.get('no_file_available', False)
-    
+
 
 def lookup_column_value(value, path):
     nodes = [value]
@@ -883,7 +883,7 @@ def _convert_camel_to_snake(type_str):
     return re.sub('([a-z0-9])([A-Z])', r'\1_\2', tmp).lower()
 
 
-@view_config(route_name='report_download', request_method='GET')
+@view_config(route_name='report_download', request_method='GET', permission='search')
 def report_download(context, request):
     downloadtime = datetime.datetime.now()
 
@@ -902,7 +902,7 @@ def report_download(context, request):
     def format_header(seq):
         newheader="%s\t%s%s?%s\r\n" % (downloadtime, request.host_url, '/report/', request.query_string)
         return(bytes(newheader, 'utf-8'))
-       
+
 
     # Work around Excel bug; can't open single column TSV with 'ID' header
     if len(columns) == 1 and '@id' in columns:
@@ -917,7 +917,7 @@ def report_download(context, request):
             values = [lookup_column_value(item, path) for path in columns]
             yield format_row(values)
 
-    
+
     # Stream response using chunked encoding.
     request.response.content_type = 'text/tsv'
     request.response.content_disposition = 'attachment;filename="{}_report_{}_{}_{}_{}h_{}m.tsv"'.format(

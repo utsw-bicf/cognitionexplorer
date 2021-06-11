@@ -10,7 +10,7 @@ import { Panel, PanelBody } from '../libs/ui/panel';
 import Tooltip from '../libs/ui/tooltip';
 
 
-const newsUri = '/search/?type=Page&news=true&status=released';
+const newsUri = '/searchv2_quick/?type=Page&news=true&status=public';
 dayjs.extend(utc);
 
 // Convert the selected organisms and assays into an encoded query.

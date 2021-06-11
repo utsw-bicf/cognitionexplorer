@@ -49,7 +49,10 @@ class HTTPForbidden extends React.Component {
             <div className={itemClass}>
                 <h1>Not available</h1>
                 {loggedIn ? <p>Your account is not allowed to view this page.</p> : <p>Please sign in to view this page.</p>}
-                {loggedIn ? null : <p>Or <a href="mailto:encode-help@lists.stanford.edu">Request an account.</a></p>}
+                {loggedIn ? null : <p> Users of any data provided by KCE agree not to attempt to reidentify any individual participant in any study represented by KCE data,
+                    for any purpose whatever. This includes, but is not limited to, the use of analytical techniques of reidentification on genomic or clinical data.</p>}
+                {loggedIn ? null : <p>Or <a href="mailto:kce@UTSouthwestern.edu">Request an account.</a></p>}
+
             </div>
         );
     }
@@ -74,17 +77,17 @@ const LoginDenied = (props) => {
     return (
         <div className={itemClass}>
             <h2>Our Apologies!</h2>
-            <p>The email address you have provided us does not match any user of the ENCODE Portal.</p>
-            <p>As you know, we have recently changed our login system.</p>
-
+            <p>The email address you have provided us does not match any user in the Portal.</p>
             <p>
-                The ENCODE Portal now uses a variety of common identity providers to verify you are who say you are.<br />
+                The KCE Portal uses a your UT Southwestern email to verify you are who say you are.<br />
                 The email address you use as your &ldquo;id&rdquo; must match exactly the email address in our system.
             </p>
 
-            <p>Please be aware that login access (to unreleased data) is available only to ENCODE Consortium members.</p>
-            <p>Please contact <a href="mailto:encode-help@lists.stanford.edu">Help Desk</a> if you need an account, or if your old account is not working.</p>
-            <p><a href="http://www.stanford.edu/site/terms.html">Terms and Conditions</a> &emsp; <a href="https://www.encodeproject.org/privacy-policy/">Privacy Policy</a></p>
+            <p>Please be aware that full download access is only avaiable to those that agree to all terms and conditions.</p>
+            <p> Users of any data provided by KCE agree not to attempt to reidentify any individual participant in any study represented by KCE data,
+                for any purpose whatever. This includes, but is not limited to, the use of analytical techniques of reidentification on genomic or clinical data.</p>
+            <p>Please contact <a href="mailto:kce@UTSouthwestern.edu">Help Desk</a> if you need an account</p>
+            <p><a href="https://www.utsouthwestern.edu/legal/privacy-policy.html">Privacy Policy</a></p>
         </div>
     );
 };

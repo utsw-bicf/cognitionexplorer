@@ -52,13 +52,16 @@ def includeme(config):
 
 DEFAULT_ITEM_TYPES = [
     'Award',
-    'Page',
-    'Publication',
     'Biofile',
     'Patient',
     'Biospecimen',
     'Surgery',
     'PathologyReport'
+]
+
+PUBLICATION_ITEM_TYPES = [
+    'Page',
+    'Publication',
 ]
 
 
@@ -93,8 +96,7 @@ def search(context, request):
     )
     return fr.render()
 
-
-@view_config(route_name='searchv2_raw', request_method='GET', permission='search')
+@view_config(route_name='searchv2_raw', request_method='GET', permission='summary')
 def searchv2_raw(context, request):
     fr = FieldedResponse(
         _meta={
@@ -109,16 +111,33 @@ def searchv2_raw(context, request):
     return fr.render()
 
 
-@view_config(route_name='searchv2_quick', request_method='GET', permission='search')
+@view_config(route_name='searchv2_quick', request_method='GET', permission='summary')
 def searchv2_quick(context, request):
+    # Note the order of rendering matters for some fields, e.g. AllResponseField and
+    # NotificationResponseField depend on results from BasicSearchWithFacetsResponseField.
     fr = FieldedResponse(
         _meta={
             'params_parser': ParamsParser(request)
         },
         response_fields=[
-            BasicSearchResponseField(
-                default_item_types=DEFAULT_ITEM_TYPES
-            )
+            TitleResponseField(
+                title=SEARCH_TITLE
+            ),
+            TypeResponseField(
+                at_type=[SEARCH_TITLE]
+            ),
+            IDResponseField(),
+            ContextResponseField(),
+            BasicSearchWithFacetsResponseField(
+                default_item_types=PUBLICATION_ITEM_TYPES
+            ),
+            AllResponseField(),
+            NotificationResponseField(),
+            FiltersResponseField(),
+            ClearFiltersResponseField(),
+            ColumnsResponseField(),
+            SortResponseField(),
+            DebugQueryResponseField()
         ]
     )
     return fr.render()
@@ -359,7 +378,7 @@ def mouse_development(context, request):
     return fr.render()
 
 
-@view_config(route_name='summary', request_method='GET', permission='search')
+@view_config(route_name='summary', request_method='GET', permission='summary')
 def summary(context, request):
     fr = FieldedResponse(
         _meta={
@@ -414,4 +433,3 @@ def audit(context, request):
         ]
     )
     return fr.render()
-
