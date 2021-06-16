@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP Form B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP VISIT PACKET - FORM B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional, based on information provided by the co-participant. For further information, see UDS Coding Guidebook for Follow-up Visit Packet, Form B7. Link to NACC Coding Guidebook Indicate the level of performance for each activity by checking the one appropriate response.",
     "id": "/profiles/uds_fvp_b7.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

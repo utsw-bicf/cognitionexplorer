@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP VISIT PACKETFORM C1: Neuropsychological Battery Summary Scores",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP VISIT PACKET - FORM C1: Neuropsychological Battery Summary Scores",
     "description": "INSTRUCTIONS: This form is to be completed by ADC or clinic staff. For test administration and scoring, see\nInstructions for Neuropsychological Battery Form C1. Link to C1 Instructions. \nLink to NACC Coding Guidebook \nPROTOCOL FOR ADMINISTERING the neuropsychological battery for UDS Version 3 FVP (using either Form C1 or Form \nC2): For subjects who had already been seen for one or more UDS visits before the implementation of Version 3, you \nmay: \na.) continue to follow those subjects with the old neuropsychological battery (Form C1): \n-ORb.) \nswitch those subjects to the new neuropsychological battery (Form C2). \nA given subject may be switched to the new battery at any time after Version 3 implementation, at the Center's \ndiscretion. \nKEY: If the subject cannot complete any of the following tests, please give the reason by entering one of the following codes: \n95/995 = Physical problem \n96/996 = Cognitive/behavior problem \n97/997 = Other problem \n98/998 = Verbal refusal",
     "id": "/profiles/uds_fvp_c1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

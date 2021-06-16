@@ -1,5 +1,5 @@
 {
-  "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM A1: SUBJECT DEMOGRAPHICS ",
+  "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKET - FORM A1: SUBJECT DEMOGRAPHICS ",
   "description": "INSTRUCTIONS: This form is to be completed by intake interviewer based on ADC scheduling records,subject interview\r, medical records, and proxy co-participant report (as needed),For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet.Form A1. Check only one box per question.",
   "comment": "Schema for submitting UDS_ivp_A1 form information.",
   "id": "/profiles/ivp_a1.json",

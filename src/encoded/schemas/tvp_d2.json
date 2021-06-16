@@ -1,6 +1,6 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - TELEPHONE FOLLOW UPFORM D2: Clinician-assessed Medical Conditions",
-    "description": "INSTRUCTIONS: This form is to be completed by a physician, physician's assistant, nurse practitioner, or other qualified practitioner. For additional clarification and examples, see UDS Coding Guidebook for Telephone Follow-Up Visit Packet, Form D2. Link to NACC Coding Guidebook.",
+    "title": "NACC Uniform Data Set (UDS) - TELEPHONE FOLLOW-UP PACKET - FORM D2: Clinician-assessed Medical Conditions",
+    "description": "INSTRUCTIONS: This form is to be completed by a physician, physician's assistant, nurse practitioner, or other qualified practitioner. For additional clarification and examples, see UDS Coding Guidebook for Telephone Follow-Up Packet, Form D2. Link to NACC Coding Guidebook.",
     "id": "/profiles/uds_tvp_d2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [

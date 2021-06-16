@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM D1: Clinician Diagnosis",
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKET - FORM D1: Clinician Diagnosis",
     "description": "INSTRUCTIONS:  This form is to be completed by the clinician. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form D1. Link to NACC Coding Guidebook. Check only one box per question.\nThis form is divided into three main sections:\nSection 1   Cognitive Status: Normal cognition/MCI/dementia and dementia  syndrome\nSection 2   Biomarkers, imaging and genetics:  Neurodegenerative imaging and CSF biomarkers, imaging evidence for CVD, and known genetic mutations for AD and FTLD\nSection 3   Etiological diagnoses:  presumed etiological diagnoses for the cognitive disorder.",
     "id": "/profiles/uds_ivp_d1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

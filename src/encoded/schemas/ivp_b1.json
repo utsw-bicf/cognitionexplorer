@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B1: EVALUATION FORM - PHYSICAL",
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKET - FORM B1: EVALUATION FORM - PHYSICAL",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form B1. Check only one box per question.\nLink to NACC Coding Guidebook",
     "id": "/profiles/uds_ivp_b1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

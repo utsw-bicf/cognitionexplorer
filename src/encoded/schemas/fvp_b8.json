@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B8: NEUROLOGICAL EXAMINATION FINDINGS",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP VISIT PACKET - FORM B8: NEUROLOGICAL EXAMINATION FINDINGS",
     "description": "INSTRUCTIONS: This form must be completed by a clinician with experience in assessing the neurological signs listed\nbelow and in attributing the observed findings to a particular syndrome. Please use your best clinical judgment in\nassigning the syndrome. For additional clarification and examples, see UDS Coding Guidebook for Follow-up Visit\nPacket, Form B8. Link to NACC Coding Guidebook",
     "id": "/profiles/uds_fvp_b8.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

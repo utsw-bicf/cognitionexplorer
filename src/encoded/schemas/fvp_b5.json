@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B5: BEHAVIORAL ASSESSMENT -\n Inventory Questionnaire (NPI-Q [1])",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP VISIT PACKET - FORM B5: BEHAVIORAL ASSESSMENT -\n Inventory Questionnaire (NPI-Q [1])",
     "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional based onco-participant interview, as described by the training video. (This is not to be completed by the subject as apaper-and-pencil self-report.) For information on NPI-Q Interviewer Certification, see UDS Coding Guidebook forFollow-up Visit Packet, Form B5. Link to NACC Coding GuidebookCheck only one box for each category of response.CORRECTED INSTRUCTIONS: Please answer the following questions based on changes that have occurred since thepatient first began to experience memory (i.e. cognitive) problems. Select 1=Yes only if the symptom(s) has beenpresent in the last month. Otherwise, select 0=No.For each item marked 1=Yes, rate the SEVERITY of the symptom (how it affects the patient):1 = Mild (noticeable, but not a significant change)2 = Moderate (significant, but not a dramatic change)3 = Severe (very marked or prominent, a dramatic change)",
     "id": "/profiles/uds_fvp_b5.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

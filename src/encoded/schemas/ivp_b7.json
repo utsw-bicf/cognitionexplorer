@@ -1,6 +1,6 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
-    "description": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKET - FORM B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
+    "description": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKET - FORM B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
     "comment": " ",
     "id": "/profiles/uds_ivp_b7.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
