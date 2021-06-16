@@ -231,21 +231,15 @@
             ]
         },
         "fu_INRELTOX": {
-            "title": "8A Informant relationship, other – specify",
+            "title": "9a. Informant relationship, other – specify",
             "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
             "type": "string"
             
         },
-        "fu_inknown": {
-            "title": "9a. How long has the co-participant known the subject?",
-            "description": "(Years) 0 - 120, 999 = Unknown",
-            "type": "string",
-            "pattern": "^[0-9][0-9]?|[1][0-1][0-9]|[1][2][0]|999$"
-        },
+     
         "fu_inlivwth": {
             "title": "10. Does the co-participant live with the subject?",
             "description": "If Yes, SKIP TO QUESTION 11;If No, continue to 10a and 10b.",
-            "comment": "",
             "type": "string",
             "enum": [
                 "0 No",
