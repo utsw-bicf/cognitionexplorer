@@ -238,6 +238,7 @@
         "educ_type": {
             "title": "Type of degrees",
             "description": "Examples:\nDDS\nDMD\nDO\nDPM - podiatrist\nDVM - veterinarian\nEd.D.\nJD - lawyer\nMBA \nMD\nMPH\nMS\nOD\nPharmD\nPhD\nPsyD\nSciD",
+            "comment":"Redcap field",
             "type": "string"
         },
         "maristat": {

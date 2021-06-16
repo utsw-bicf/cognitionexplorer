@@ -199,6 +199,7 @@
         "ineduc_more_than_20": {
             "title": "Years of education",
             "description": "Years of education if more than 20 years",
+            "comment":"Redcap field",
             "type": "string",
             "enum": [
                 "1 21",
