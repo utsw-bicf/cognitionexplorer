@@ -17,7 +17,6 @@
         "fu_insex",
         "fu_newinf",
         "fu_inrelto",
-        "fu_inknown",
         "fu_inlivwth",
         "fu_inrely"
     ],
@@ -685,9 +684,7 @@
         "fu_inrelto": {
             "title": "9. What is co-participant's relationship to the subject?"
         },
-        "fu_inknown": {
-            "title": "9a. How long has the co-participant known the subject?"
-        },
+    
         "fu_inlivwth": {
             "title": "10. Does the co-participant live with the subject?"
         },
@@ -750,9 +747,7 @@
         "fu_inrelto": {
             "title": "9. What is co-participant's relationship to the subject?"
         },
-        "fu_inknown": {
-            "title": "9a. How long has the co-participant known the subject?"
-        },
+     
         "fu_inlivwth": {
             "title": "10. Does the co-participant live with the subject?"
         },
@@ -783,7 +778,6 @@
         "fu_inraterx": 1.0,
         "fu_ineduc": 1.0,
         "fu_inrelto": 1.0,
-        "fu_inknown": 1.0,
         "fu_inlivwth": 1.0,
         "fu_invisits": 1.0,
         "fu_incalls": 1.0,
