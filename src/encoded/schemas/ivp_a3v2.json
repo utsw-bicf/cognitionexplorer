@@ -157,13 +157,13 @@
                     "type": "object",
                     "properties": {
                         "sib1yob": {
-                            "title": "5a3. Sibling 1 year of birth",
+                            "title": "5a1. Sibling 1 year of birth",
                             "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib1LIV": {
-                            "title": "5b3. Is Sibling 1 still living?",
+                            "title": "5b1. Is Sibling 1 still living?",
                             "description": "( 999 = Unknown)",
                             "type": "string",
                             "enum": [
@@ -173,13 +173,13 @@
                             ]
                         },
                         "sib1yod": {
-                            "title": "5c3. If Sibling 1 is deceased, indicate year of death",
+                            "title": "5c1. If Sibling 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
                         },
                         "sib1dem": {
-                            "title": "5d3. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?",
+                            "title": "5d1. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?",
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -188,7 +188,7 @@
                             ]
                         },
                         "sib1ons": {
-                            "title": "5e3. If Sibling 1 was demented, indicate age at onset",
+                            "title": "5e1. If Sibling 1 was demented, indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string"
                         }
@@ -2278,6 +2278,7 @@
             }
         }
     },
+ 
     "facets": {
         "status": {
             "title": "Status"
@@ -2411,216 +2412,7 @@
         "siblings.sib6.sib6ons": {
             "title": "5e6. If Sibling 1 was demented, indicate age at onset"
         },
-        "siblings.sib7.sib7yob": {
-            "title": "5a7. Sibling 7 year of birth"
-        },
-        "siblings.sib7.sib7LIV": {
-            "title": "5b7. Is Sibling 7 still living?"
-        },
-        "siblings.sib7.sib7yod": {
-            "title": "5c7. If Sibling 7 is deceased, indicate year of death"
-        },
-        "siblings.sib7.sib7dem": {
-            "title": "5d7. Does/did Sibling 7 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib7.sib7ons": {
-            "title": "5e7. If Sibling 7 was demented, indicate age at onset"
-        },
-        "siblings.sib8.sib8yob": {
-            "title": "5a8. Sibling 1 year of birth"
-        },
-        "siblings.sib8.sib8LIV": {
-            "title": "5b8. Is Sibling 1 still living?"
-        },
-        "siblings.sib8.sib8yod": {
-            "title": "5c8. If Sibling 1 is deceased, indicate year of death"
-        },
-        "siblings.sib8.sib8dem": {
-            "title": "5d8. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib8.sib8ons": {
-            "title": "5e8. If Sibling 1 was demented, indicate age at onset"
-        },
-        "siblings.sib9.sib9yob": {
-            "title": "5a9. Sibling 9 year of birth"
-        },
-        "siblings.sib9.sib9LIV": {
-            "title": "5b9. Is Sibling 9 still living?"
-        },
-        "siblings.sib9.sib9yod": {
-            "title": "5c9. If Sibling 9 is deceased, indicate year of death"
-        },
-        "siblings.sib9.sib9dem": {
-            "title": "5d9. Does/did Sibling 9 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib9.sib9ons": {
-            "title": "5e9. If Sibling 9 was demented, indicate age at onset"
-        },
-        "siblings.sib10.sib10yob": {
-            "title": "5a10. Sibling 10 year of birth"
-        },
-        "siblings.sib10.sib10LIV": {
-            "title": "5b10. Is Sibling 10 still living?"
-        },
-        "siblings.sib10.sib10yod": {
-            "title": "5c10. If Sibling 10 is deceased, indicate year of death"
-        },
-        "siblings.sib10.sib10dem": {
-            "title": "5d10. Does/did Sibling 10 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib10.sib10ons": {
-            "title": "5e10. If Sibling 10 was demented, indicate age at onset"
-        },
-        "siblings.sib11.sib11yob": {
-            "title": "5a11. Sibling 11 year of birth"
-        },
-        "siblings.sib11.sib11LIV": {
-            "title": "5b11. Is Sibling 11 still living?"
-        },
-        "siblings.sib11.sib11yod": {
-            "title": "5c11. If Sibling 11 is deceased, indicate year of death"
-        },
-        "siblings.sib11.sib11dem": {
-            "title": "5d11. Does/did Sibling 11 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib11.sib11ons": {
-            "title": "5e11. If Sibling 11 was demented, indicate age at onset"
-        },
-        "siblings.sib12.sib12yob": {
-            "title": "5a12. Sibling 12 year of birth"
-        },
-        "siblings.sib12.sib12LIV": {
-            "title": "5b12. Is Sibling 12 still living?"
-        },
-        "siblings.sib12.sib12yod": {
-            "title": "5c12. If Sibling 12 is deceased, indicate year of death"
-        },
-        "siblings.sib12.sib12dem": {
-            "title": "5d12. Does/did Sibling 12 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib12.sib12ons": {
-            "title": "5e12. If Sibling 12 was demented, indicate age at onset"
-        },
-        "siblings.sib13.sib13yob": {
-            "title": "5a13. Sibling 13 year of birth"
-        },
-        "siblings.sib13.sib13LIV": {
-            "title": "5b13. Is Sibling 13 still living?"
-        },
-        "siblings.sib13.sib13yod": {
-            "title": "5c13. If Sibling 13 is deceased, indicate year of death"
-        },
-        "siblings.sib13.sib13dem": {
-            "title": "5d13. Does/did Sibling 13 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib13.sib13ons": {
-            "title": "5e13. If Sibling 13 was demented, indicate age at onset"
-        },
-        "siblings.sib14.sib14yob": {
-            "title": "5a14. Sibling 14 year of birth"
-        },
-        "siblings.sib14.sib14LIV": {
-            "title": "5b14. Is Sibling 14 still living?"
-        },
-        "siblings.sib14.sib14yod": {
-            "title": "5c14. If Sibling 14 is deceased, indicate year of death"
-        },
-        "siblings.sib14.sib14dem": {
-            "title": "5d14. Does/did Sibling 14 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib14.sib14ons": {
-            "title": "5e14. If Sibling 14 was demented, indicate age at onset"
-        },
-        "siblings.sib15.sib15yob": {
-            "title": "5a15. Sibling 15 year of birth"
-        },
-        "siblings.sib15.sib15LIV": {
-            "title": "5b15. Is Sibling 15 still living?"
-        },
-        "siblings.sib15.sib15yod": {
-            "title": "5c15. If Sibling 15 is deceased, indicate year of death"
-        },
-        "siblings.sib15.sib15dem": {
-            "title": "5d15. Does/did Sibling 15 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib15.sib15ons": {
-            "title": "5e15. If Sibling 15 was demented, indicate age at onset"
-        },
-        "siblings.sib16.sib16yob": {
-            "title": "5a16. Sibling 16 year of birth"
-        },
-        "siblings.sib16.sib16LIV": {
-            "title": "5b16. Is Sibling 16 still living?"
-        },
-        "siblings.sib16.sib16yod": {
-            "title": "5c16. If Sibling 16 is deceased, indicate year of death"
-        },
-        "siblings.sib16.sib16dem": {
-            "title": "5d16. Does/did Sibling 16 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib16.sib16ons": {
-            "title": "5e16. If Sibling 16 was demented, indicate age at onset"
-        },
-        "siblings.sib17.sib17yob": {
-            "title": "5a17. Sibling 17 year of birth"
-        },
-        "siblings.sib17.sib17LIV": {
-            "title": "5b17. Is Sibling 17 still living?"
-        },
-        "siblings.sib17.sib17yod": {
-            "title": "5c17. If Sibling 17 is deceased, indicate year of death"
-        },
-        "siblings.sib17.sib17dem": {
-            "title": "5d17. Does/did Sibling 17 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib17.sib17ons": {
-            "title": "5e17. If Sibling 17 was demented, indicate age at onset"
-        },
-        "siblings.sib18.sib18yob": {
-            "title": "5a18. Sibling 18 year of birth"
-        },
-        "siblings.sib18.sib18LIV": {
-            "title": "5b18. Is Sibling 18 still living?"
-        },
-        "siblings.sib18.sib18yod": {
-            "title": "5c18. If Sibling 18 is deceased, indicate year of death"
-        },
-        "siblings.sib18.sib18dem": {
-            "title": "5d18. Does/did Sibling 18 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib18.sib18ons": {
-            "title": "5e18. If Sibling 18 was demented, indicate age at onset"
-        },
-        "siblings.sib19.sib19yob": {
-            "title": "5a19. Sibling 19 year of birth"
-        },
-        "siblings.sib19.sib19LIV": {
-            "title": "5b19. Is Sibling 19 still living?"
-        },
-        "siblings.sib19.sib19yod": {
-            "title": "5c19. If Sibling 19 is deceased, indicate year of death"
-        },
-        "siblings.sib19.sib19dem": {
-            "title": "5d19. Does/did Sibling 19 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib19.sib19ons": {
-            "title": "5e19. If Sibling 19 was demented, indicate age at onset"
-        },
-        "siblings.sib20.sib20yob": {
-            "title": "5a20. Sibling 20 year of birth"
-        },
-        "siblings.sib20.sib20LIV": {
-            "title": "5b20. Is Sibling 20 still living?"
-        },
-        "siblings.sib20.sib20yod": {
-            "title": "5c20. If Sibling 20 is deceased, indicate year of death"
-        },
-        "siblings.sib20.sib20dem": {
-            "title": "5d20. Does/did Sibling 20 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib20.sib20ons": {
-            "title": "5e20. If Sibling 20 was demented, indicate age at onset"
-        },
+       
         "children.kids": {
             "title": "6. How many biological children did the subject have?"
         },
@@ -2941,142 +2733,8 @@
         },
         "other_relatives.rel6.rel6ons": {
             "title": "9e6. If Relative 1 was demented, indicate age at onset"
-        },
-        "other_relatives.rel7.rel7yob": {
-            "title": "9a7. Relative 7 year of birth"
-        },
-        "other_relatives.rel7.rel7LIV": {
-            "title": "9b7. Is Relative 7 still living?"
-        },
-        "other_relatives.rel7.rel7yod": {
-            "title": "9c7. If Relative 7 is deceased, indicate year of death"
-        },
-        "other_relatives.rel7.rel7dem": {
-            "title": "9d7. Does/did Relative 7 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel7.rel7ons": {
-            "title": "9e7. If Relative 7 was demented, indicate age at onset"
-        },
-        "other_relatives.rel8.rel8yob": {
-            "title": "9a8. Relative 1 year of birth"
-        },
-        "other_relatives.rel8.rel8LIV": {
-            "title": "9b8. Is Relative 1 still living?"
-        },
-        "other_relatives.rel8.rel8yod": {
-            "title": "9c8. If Relative 1 is deceased, indicate year of death"
-        },
-        "other_relatives.rel8.rel8dem": {
-            "title": "9d8. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel8.rel8ons": {
-            "title": "9e8. If Relative 1 was demented, indicate age at onset"
-        },
-        "other_relatives.rel9.rel9yob": {
-            "title": "9a9. Relative 9 year of birth"
-        },
-        "other_relatives.rel9.rel9LIV": {
-            "title": "9b9. Is Relative 9 still living?"
-        },
-        "other_relatives.rel9.rel9yod": {
-            "title": "9c9. If Relative 9 is deceased, indicate year of death"
-        },
-        "other_relatives.rel9.rel9dem": {
-            "title": "9d9. Does/did Relative 9 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel9.rel9ons": {
-            "title": "9e9. If Relative 9 was demented, indicate age at onset"
-        },
-        "other_relatives.rel10.rel10yob": {
-            "title": "9a10. Relative 10 year of birth"
-        },
-        "other_relatives.rel10.rel10LIV": {
-            "title": "9b10. Is Relative 10 still living?"
-        },
-        "other_relatives.rel10.rel10yod": {
-            "title": "9c10. If Relative 10 is deceased, indicate year of death"
-        },
-        "other_relatives.rel10.rel10dem": {
-            "title": "9d10. Does/did Relative 10 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel10.rel10ons": {
-            "title": "9e10. If Relative 10 was demented, indicate age at onset"
-        },
-        "other_relatives.rel11.rel11yob": {
-            "title": "9a11. Relative 11 year of birth"
-        },
-        "other_relatives.rel11.rel11LIV": {
-            "title": "9b11. Is Relative 11 still living?"
-        },
-        "other_relatives.rel11.rel11yod": {
-            "title": "9c11. If Relative 11 is deceased, indicate year of death"
-        },
-        "other_relatives.rel11.rel11dem": {
-            "title": "9d11. Does/did Relative 11 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel11.rel11ons": {
-            "title": "9e11. If Relative 11 was demented, indicate age at onset"
-        },
-        "other_relatives.rel12.rel12yob": {
-            "title": "9a12. Relative 12 year of birth"
-        },
-        "other_relatives.rel12.rel12LIV": {
-            "title": "9b12. Is Relative 12 still living?"
-        },
-        "other_relatives.rel12.rel12yod": {
-            "title": "9c12. If Relative 12 is deceased, indicate year of death"
-        },
-        "other_relatives.rel12.rel12dem": {
-            "title": "9d12. Does/did Relative 12 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel12.rel12ons": {
-            "title": "9e12. If Relative 12 was demented, indicate age at onset"
-        },
-        "other_relatives.rel13.rel13yob": {
-            "title": "9a13. Relative 13 year of birth"
-        },
-        "other_relatives.rel13.rel13LIV": {
-            "title": "9b13. Is Relative 13 still living?"
-        },
-        "other_relatives.rel13.rel13yod": {
-            "title": "9c13. If Relative 13 is deceased, indicate year of death"
-        },
-        "other_relatives.rel13.rel13dem": {
-            "title": "9d13. Does/did Relative 13 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel13.rel13ons": {
-            "title": "9e13. If Relative 13 was demented, indicate age at onset"
-        },
-        "other_relatives.rel14.rel14yob": {
-            "title": "9a14. Relative 14 year of birth"
-        },
-        "other_relatives.rel14.rel14LIV": {
-            "title": "9b14. Is Relative 14 still living?"
-        },
-        "other_relatives.rel14.rel14yod": {
-            "title": "9c14. If Relative 14 is deceased, indicate year of death"
-        },
-        "other_relatives.rel14.rel14dem": {
-            "title": "9d14. Does/did Relative 14 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel14.rel14ons": {
-            "title": "9e14. If Relative 14 was demented, indicate age at onset"
-        },
-        "other_relatives.rel15.rel15yob": {
-            "title": "9a15. Relative 15 year of birth"
-        },
-        "other_relatives.rel15.rel15LIV": {
-            "title": "9b15. Is Relative 15 still living?"
-        },
-        "other_relatives.rel15.rel15yod": {
-            "title": "9c15. If Relative 15 is deceased, indicate year of death"
-        },
-        "other_relatives.rel15.rel15dem": {
-            "title": "9d15. Does/did Relative 15 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel15.rel15ons": {
-            "title": "9e15. If Relative 15 was demented, indicate age at onset"
         }
+      
     },
     "columns": {
         "status": {
@@ -3211,216 +2869,7 @@
         "siblings.sib6.sib6ons": {
             "title": "5e6. If Sibling 1 was demented, indicate age at onset"
         },
-        "siblings.sib7.sib7yob": {
-            "title": "5a7. Sibling 7 year of birth"
-        },
-        "siblings.sib7.sib7LIV": {
-            "title": "5b7. Is Sibling 7 still living?"
-        },
-        "siblings.sib7.sib7yod": {
-            "title": "5c7. If Sibling 7 is deceased, indicate year of death"
-        },
-        "siblings.sib7.sib7dem": {
-            "title": "5d7. Does/did Sibling 7 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib7.sib7ons": {
-            "title": "5e7. If Sibling 7 was demented, indicate age at onset"
-        },
-        "siblings.sib8.sib8yob": {
-            "title": "5a8. Sibling 1 year of birth"
-        },
-        "siblings.sib8.sib8LIV": {
-            "title": "5b8. Is Sibling 1 still living?"
-        },
-        "siblings.sib8.sib8yod": {
-            "title": "5c8. If Sibling 1 is deceased, indicate year of death"
-        },
-        "siblings.sib8.sib8dem": {
-            "title": "5d8. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib8.sib8ons": {
-            "title": "5e8. If Sibling 1 was demented, indicate age at onset"
-        },
-        "siblings.sib9.sib9yob": {
-            "title": "5a9. Sibling 9 year of birth"
-        },
-        "siblings.sib9.sib9LIV": {
-            "title": "5b9. Is Sibling 9 still living?"
-        },
-        "siblings.sib9.sib9yod": {
-            "title": "5c9. If Sibling 9 is deceased, indicate year of death"
-        },
-        "siblings.sib9.sib9dem": {
-            "title": "5d9. Does/did Sibling 9 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib9.sib9ons": {
-            "title": "5e9. If Sibling 9 was demented, indicate age at onset"
-        },
-        "siblings.sib10.sib10yob": {
-            "title": "5a10. Sibling 10 year of birth"
-        },
-        "siblings.sib10.sib10LIV": {
-            "title": "5b10. Is Sibling 10 still living?"
-        },
-        "siblings.sib10.sib10yod": {
-            "title": "5c10. If Sibling 10 is deceased, indicate year of death"
-        },
-        "siblings.sib10.sib10dem": {
-            "title": "5d10. Does/did Sibling 10 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib10.sib10ons": {
-            "title": "5e10. If Sibling 10 was demented, indicate age at onset"
-        },
-        "siblings.sib11.sib11yob": {
-            "title": "5a11. Sibling 11 year of birth"
-        },
-        "siblings.sib11.sib11LIV": {
-            "title": "5b11. Is Sibling 11 still living?"
-        },
-        "siblings.sib11.sib11yod": {
-            "title": "5c11. If Sibling 11 is deceased, indicate year of death"
-        },
-        "siblings.sib11.sib11dem": {
-            "title": "5d11. Does/did Sibling 11 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib11.sib11ons": {
-            "title": "5e11. If Sibling 11 was demented, indicate age at onset"
-        },
-        "siblings.sib12.sib12yob": {
-            "title": "5a12. Sibling 12 year of birth"
-        },
-        "siblings.sib12.sib12LIV": {
-            "title": "5b12. Is Sibling 12 still living?"
-        },
-        "siblings.sib12.sib12yod": {
-            "title": "5c12. If Sibling 12 is deceased, indicate year of death"
-        },
-        "siblings.sib12.sib12dem": {
-            "title": "5d12. Does/did Sibling 12 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib12.sib12ons": {
-            "title": "5e12. If Sibling 12 was demented, indicate age at onset"
-        },
-        "siblings.sib13.sib13yob": {
-            "title": "5a13. Sibling 13 year of birth"
-        },
-        "siblings.sib13.sib13LIV": {
-            "title": "5b13. Is Sibling 13 still living?"
-        },
-        "siblings.sib13.sib13yod": {
-            "title": "5c13. If Sibling 13 is deceased, indicate year of death"
-        },
-        "siblings.sib13.sib13dem": {
-            "title": "5d13. Does/did Sibling 13 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib13.sib13ons": {
-            "title": "5e13. If Sibling 13 was demented, indicate age at onset"
-        },
-        "siblings.sib14.sib14yob": {
-            "title": "5a14. Sibling 14 year of birth"
-        },
-        "siblings.sib14.sib14LIV": {
-            "title": "5b14. Is Sibling 14 still living?"
-        },
-        "siblings.sib14.sib14yod": {
-            "title": "5c14. If Sibling 14 is deceased, indicate year of death"
-        },
-        "siblings.sib14.sib14dem": {
-            "title": "5d14. Does/did Sibling 14 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib14.sib14ons": {
-            "title": "5e14. If Sibling 14 was demented, indicate age at onset"
-        },
-        "siblings.sib15.sib15yob": {
-            "title": "5a15. Sibling 15 year of birth"
-        },
-        "siblings.sib15.sib15LIV": {
-            "title": "5b15. Is Sibling 15 still living?"
-        },
-        "siblings.sib15.sib15yod": {
-            "title": "5c15. If Sibling 15 is deceased, indicate year of death"
-        },
-        "siblings.sib15.sib15dem": {
-            "title": "5d15. Does/did Sibling 15 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib15.sib15ons": {
-            "title": "5e15. If Sibling 15 was demented, indicate age at onset"
-        },
-        "siblings.sib16.sib16yob": {
-            "title": "5a16. Sibling 16 year of birth"
-        },
-        "siblings.sib16.sib16LIV": {
-            "title": "5b16. Is Sibling 16 still living?"
-        },
-        "siblings.sib16.sib16yod": {
-            "title": "5c16. If Sibling 16 is deceased, indicate year of death"
-        },
-        "siblings.sib16.sib16dem": {
-            "title": "5d16. Does/did Sibling 16 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib16.sib16ons": {
-            "title": "5e16. If Sibling 16 was demented, indicate age at onset"
-        },
-        "siblings.sib17.sib17yob": {
-            "title": "5a17. Sibling 17 year of birth"
-        },
-        "siblings.sib17.sib17LIV": {
-            "title": "5b17. Is Sibling 17 still living?"
-        },
-        "siblings.sib17.sib17yod": {
-            "title": "5c17. If Sibling 17 is deceased, indicate year of death"
-        },
-        "siblings.sib17.sib17dem": {
-            "title": "5d17. Does/did Sibling 17 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib17.sib17ons": {
-            "title": "5e17. If Sibling 17 was demented, indicate age at onset"
-        },
-        "siblings.sib18.sib18yob": {
-            "title": "5a18. Sibling 18 year of birth"
-        },
-        "siblings.sib18.sib18LIV": {
-            "title": "5b18. Is Sibling 18 still living?"
-        },
-        "siblings.sib18.sib18yod": {
-            "title": "5c18. If Sibling 18 is deceased, indicate year of death"
-        },
-        "siblings.sib18.sib18dem": {
-            "title": "5d18. Does/did Sibling 18 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib18.sib18ons": {
-            "title": "5e18. If Sibling 18 was demented, indicate age at onset"
-        },
-        "siblings.sib19.sib19yob": {
-            "title": "5a19. Sibling 19 year of birth"
-        },
-        "siblings.sib19.sib19LIV": {
-            "title": "5b19. Is Sibling 19 still living?"
-        },
-        "siblings.sib19.sib19yod": {
-            "title": "5c19. If Sibling 19 is deceased, indicate year of death"
-        },
-        "siblings.sib19.sib19dem": {
-            "title": "5d19. Does/did Sibling 19 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib19.sib19ons": {
-            "title": "5e19. If Sibling 19 was demented, indicate age at onset"
-        },
-        "siblings.sib20.sib20yob": {
-            "title": "5a20. Sibling 20 year of birth"
-        },
-        "siblings.sib20.sib20LIV": {
-            "title": "5b20. Is Sibling 20 still living?"
-        },
-        "siblings.sib20.sib20yod": {
-            "title": "5c20. If Sibling 20 is deceased, indicate year of death"
-        },
-        "siblings.sib20.sib20dem": {
-            "title": "5d20. Does/did Sibling 20 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "siblings.sib20.sib20ons": {
-            "title": "5e20. If Sibling 20 was demented, indicate age at onset"
-        },
+       
         "children.kids": {
             "title": "6. How many biological children did the subject have?"
         },
@@ -3741,142 +3190,8 @@
         },
         "other_relatives.rel6.rel6ons": {
             "title": "9e6. If Relative 1 was demented, indicate age at onset"
-        },
-        "other_relatives.rel7.rel7yob": {
-            "title": "9a7. Relative 7 year of birth"
-        },
-        "other_relatives.rel7.rel7LIV": {
-            "title": "9b7. Is Relative 7 still living?"
-        },
-        "other_relatives.rel7.rel7yod": {
-            "title": "9c7. If Relative 7 is deceased, indicate year of death"
-        },
-        "other_relatives.rel7.rel7dem": {
-            "title": "9d7. Does/did Relative 7 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel7.rel7ons": {
-            "title": "9e7. If Relative 7 was demented, indicate age at onset"
-        },
-        "other_relatives.rel8.rel8yob": {
-            "title": "9a8. Relative 1 year of birth"
-        },
-        "other_relatives.rel8.rel8LIV": {
-            "title": "9b8. Is Relative 1 still living?"
-        },
-        "other_relatives.rel8.rel8yod": {
-            "title": "9c8. If Relative 1 is deceased, indicate year of death"
-        },
-        "other_relatives.rel8.rel8dem": {
-            "title": "9d8. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel8.rel8ons": {
-            "title": "9e8. If Relative 1 was demented, indicate age at onset"
-        },
-        "other_relatives.rel9.rel9yob": {
-            "title": "9a9. Relative 9 year of birth"
-        },
-        "other_relatives.rel9.rel9LIV": {
-            "title": "9b9. Is Relative 9 still living?"
-        },
-        "other_relatives.rel9.rel9yod": {
-            "title": "9c9. If Relative 9 is deceased, indicate year of death"
-        },
-        "other_relatives.rel9.rel9dem": {
-            "title": "9d9. Does/did Relative 9 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel9.rel9ons": {
-            "title": "9e9. If Relative 9 was demented, indicate age at onset"
-        },
-        "other_relatives.rel10.rel10yob": {
-            "title": "9a10. Relative 10 year of birth"
-        },
-        "other_relatives.rel10.rel10LIV": {
-            "title": "9b10. Is Relative 10 still living?"
-        },
-        "other_relatives.rel10.rel10yod": {
-            "title": "9c10. If Relative 10 is deceased, indicate year of death"
-        },
-        "other_relatives.rel10.rel10dem": {
-            "title": "9d10. Does/did Relative 10 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel10.rel10ons": {
-            "title": "9e10. If Relative 10 was demented, indicate age at onset"
-        },
-        "other_relatives.rel11.rel11yob": {
-            "title": "9a11. Relative 11 year of birth"
-        },
-        "other_relatives.rel11.rel11LIV": {
-            "title": "9b11. Is Relative 11 still living?"
-        },
-        "other_relatives.rel11.rel11yod": {
-            "title": "9c11. If Relative 11 is deceased, indicate year of death"
-        },
-        "other_relatives.rel11.rel11dem": {
-            "title": "9d11. Does/did Relative 11 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel11.rel11ons": {
-            "title": "9e11. If Relative 11 was demented, indicate age at onset"
-        },
-        "other_relatives.rel12.rel12yob": {
-            "title": "9a12. Relative 12 year of birth"
-        },
-        "other_relatives.rel12.rel12LIV": {
-            "title": "9b12. Is Relative 12 still living?"
-        },
-        "other_relatives.rel12.rel12yod": {
-            "title": "9c12. If Relative 12 is deceased, indicate year of death"
-        },
-        "other_relatives.rel12.rel12dem": {
-            "title": "9d12. Does/did Relative 12 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel12.rel12ons": {
-            "title": "9e12. If Relative 12 was demented, indicate age at onset"
-        },
-        "other_relatives.rel13.rel13yob": {
-            "title": "9a13. Relative 13 year of birth"
-        },
-        "other_relatives.rel13.rel13LIV": {
-            "title": "9b13. Is Relative 13 still living?"
-        },
-        "other_relatives.rel13.rel13yod": {
-            "title": "9c13. If Relative 13 is deceased, indicate year of death"
-        },
-        "other_relatives.rel13.rel13dem": {
-            "title": "9d13. Does/did Relative 13 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel13.rel13ons": {
-            "title": "9e13. If Relative 13 was demented, indicate age at onset"
-        },
-        "other_relatives.rel14.rel14yob": {
-            "title": "9a14. Relative 14 year of birth"
-        },
-        "other_relatives.rel14.rel14LIV": {
-            "title": "9b14. Is Relative 14 still living?"
-        },
-        "other_relatives.rel14.rel14yod": {
-            "title": "9c14. If Relative 14 is deceased, indicate year of death"
-        },
-        "other_relatives.rel14.rel14dem": {
-            "title": "9d14. Does/did Relative 14 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel14.rel14ons": {
-            "title": "9e14. If Relative 14 was demented, indicate age at onset"
-        },
-        "other_relatives.rel15.rel15yob": {
-            "title": "9a15. Relative 15 year of birth"
-        },
-        "other_relatives.rel15.rel15LIV": {
-            "title": "9b15. Is Relative 15 still living?"
-        },
-        "other_relatives.rel15.rel15yod": {
-            "title": "9c15. If Relative 15 is deceased, indicate year of death"
-        },
-        "other_relatives.rel15.rel15dem": {
-            "title": "9d15. Does/did Relative 15 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
-        "other_relatives.rel15.rel15ons": {
-            "title": "9e15. If Relative 15 was demented, indicate age at onset"
         }
+      
     },
     "boost_values": {
         "patient": 1.0,
@@ -3923,76 +3238,7 @@
         "siblings.sib6.sib6yod": 1.0,
         "siblings.sib6.sib6dem": 1.0,
         "siblings.sib6.sib6ons": 1.0,
-        "siblings.sib7.sib7yob": 1.0,
-        "siblings.sib7.sib7LIV": 1.0,
-        "siblings.sib7.sib7yod": 1.0,
-        "siblings.sib7.sib7dem": 1.0,
-        "siblings.sib7.sib7ons": 1.0,
-        "siblings.sib8.sib8yob": 1.0,
-        "siblings.sib8.sib8LIV": 1.0,
-        "siblings.sib8.sib8yod": 1.0,
-        "siblings.sib8.sib8dem": 1.0,
-        "siblings.sib8.sib8ons": 1.0,
-        "siblings.sib9.sib9yob": 1.0,
-        "siblings.sib9.sib9LIV": 1.0,
-        "siblings.sib9.sib9yod": 1.0,
-        "siblings.sib9.sib9dem": 1.0,
-        "siblings.sib9.sib9ons": 1.0,
-        "siblings.sib10.sib10yob": 1.0,
-        "siblings.sib10.sib10LIV": 1.0,
-        "siblings.sib10.sib10yod": 1.0,
-        "siblings.sib10.sib10dem": 1.0,
-        "siblings.sib10.sib10ons": 1.0,
-        "siblings.sib11.sib11yob": 1.0,
-        "siblings.sib11.sib11LIV": 1.0,
-        "siblings.sib11.sib11yod": 1.0,
-        "siblings.sib11.sib11dem": 1.0,
-        "siblings.sib11.sib11ons": 1.0,
-        "siblings.sib12.sib12yob": 1.0,
-        "siblings.sib12.sib12LIV": 1.0,
-        "siblings.sib12.sib12yod": 1.0,
-        "siblings.sib12.sib12dem": 1.0,
-        "siblings.sib12.sib12ons": 1.0,
-        "siblings.sib13.sib13yob": 1.0,
-        "siblings.sib13.sib13LIV": 1.0,
-        "siblings.sib13.sib13yod": 1.0,
-        "siblings.sib13.sib13dem": 1.0,
-        "siblings.sib13.sib13ons": 1.0,
-        "siblings.sib14.sib14yob": 1.0,
-        "siblings.sib14.sib14LIV": 1.0,
-        "siblings.sib14.sib14yod": 1.0,
-        "siblings.sib14.sib14dem": 1.0,
-        "siblings.sib14.sib14ons": 1.0,
-        "siblings.sib15.sib15yob": 1.0,
-        "siblings.sib15.sib15LIV": 1.0,
-        "siblings.sib15.sib15yod": 1.0,
-        "siblings.sib15.sib15dem": 1.0,
-        "siblings.sib15.sib15ons": 1.0,
-        "siblings.sib16.sib16yob": 1.0,
-        "siblings.sib16.sib16LIV": 1.0,
-        "siblings.sib16.sib16yod": 1.0,
-        "siblings.sib16.sib16dem": 1.0,
-        "siblings.sib16.sib16ons": 1.0,
-        "siblings.sib17.sib17yob": 1.0,
-        "siblings.sib17.sib17LIV": 1.0,
-        "siblings.sib17.sib17yod": 1.0,
-        "siblings.sib17.sib17dem": 1.0,
-        "siblings.sib17.sib17ons": 1.0,
-        "siblings.sib18.sib18yob": 1.0,
-        "siblings.sib18.sib18LIV": 1.0,
-        "siblings.sib18.sib18yod": 1.0,
-        "siblings.sib18.sib18dem": 1.0,
-        "siblings.sib18.sib18ons": 1.0,
-        "siblings.sib19.sib19yob": 1.0,
-        "siblings.sib19.sib19LIV": 1.0,
-        "siblings.sib19.sib19yod": 1.0,
-        "siblings.sib19.sib19dem": 1.0,
-        "siblings.sib19.sib19ons": 1.0,
-        "siblings.sib20.sib20yob": 1.0,
-        "siblings.sib20.sib20LIV": 1.0,
-        "siblings.sib20.sib20yod": 1.0,
-        "siblings.sib20.sib20dem": 1.0,
-        "siblings.sib20.sib20ons": 1.0,
+       
         "children.kids": 1.0,
         "children.kid1.kid1yob": 1.0,
         "children.kid1.kid1LIV": 1.0,
@@ -4019,56 +3265,7 @@
         "children.kid5.kid5yod": 1.0,
         "children.kid5.kid5dem": 1.0,
         "children.kid5.kid5ons": 1.0,
-        "children.kid6.kid6yob": 1.0,
-        "children.kid6.kid6LIV": 1.0,
-        "children.kid6.kid6yod": 1.0,
-        "children.kid6.kid6dem": 1.0,
-        "children.kid6.kid6ons": 1.0,
-        "children.kid7.kid7yob": 1.0,
-        "children.kid7.kid7LIV": 1.0,
-        "children.kid7.kid7yod": 1.0,
-        "children.kid7.kid7dem": 1.0,
-        "children.kid7.kid7ons": 1.0,
-        "children.kid8.kid8yob": 1.0,
-        "children.kid8.kid8LIV": 1.0,
-        "children.kid8.kid8yod": 1.0,
-        "children.kid8.kid8dem": 1.0,
-        "children.kid8.kid8ons": 1.0,
-        "children.kid9.kid9yob": 1.0,
-        "children.kid9.kid9LIV": 1.0,
-        "children.kid9.kid9yod": 1.0,
-        "children.kid9.kid9dem": 1.0,
-        "children.kid9.kid9ons": 1.0,
-        "children.kid10.kid10yob": 1.0,
-        "children.kid10.kid10LIV": 1.0,
-        "children.kid10.kid10yod": 1.0,
-        "children.kid10.kid10dem": 1.0,
-        "children.kid10.kid10ons": 1.0,
-        "children.kid11.kid11yob": 1.0,
-        "children.kid11.kid11LIV": 1.0,
-        "children.kid11.kid11yod": 1.0,
-        "children.kid11.kid11dem": 1.0,
-        "children.kid11.kid11ons": 1.0,
-        "children.kid12.kid12yob": 1.0,
-        "children.kid12.kid12LIV": 1.0,
-        "children.kid12.kid12yod": 1.0,
-        "children.kid12.kid12dem": 1.0,
-        "children.kid12.kid12ons": 1.0,
-        "children.kid13.kid13yob": 1.0,
-        "children.kid13.kid13LIV": 1.0,
-        "children.kid13.kid13yod": 1.0,
-        "children.kid13.kid13dem": 1.0,
-        "children.kid13.kid13ons": 1.0,
-        "children.kid14.kid14yob": 1.0,
-        "children.kid14.kid14LIV": 1.0,
-        "children.kid14.kid14yod": 1.0,
-        "children.kid14.kid14dem": 1.0,
-        "children.kid14.kid14ons": 1.0,
-        "children.kid15.kid15yob": 1.0,
-        "children.kid15.kid15LIV": 1.0,
-        "children.kid15.kid15yod": 1.0,
-        "children.kid15.kid15dem": 1.0,
-        "children.kid15.kid15ons": 1.0,
+        
         "other_relatives.RELSDEM": 1.0,
         "other_relatives.rel1.rel1yob": 1.0,
         "other_relatives.rel1.rel1LIV": 1.0,
@@ -4099,52 +3296,8 @@
         "other_relatives.rel6.rel6LIV": 1.0,
         "other_relatives.rel6.rel6yod": 1.0,
         "other_relatives.rel6.rel6dem": 1.0,
-        "other_relatives.rel6.rel6ons": 1.0,
-        "other_relatives.rel7.rel7yob": 1.0,
-        "other_relatives.rel7.rel7LIV": 1.0,
-        "other_relatives.rel7.rel7yod": 1.0,
-        "other_relatives.rel7.rel7dem": 1.0,
-        "other_relatives.rel7.rel7ons": 1.0,
-        "other_relatives.rel8.rel8yob": 1.0,
-        "other_relatives.rel8.rel8LIV": 1.0,
-        "other_relatives.rel8.rel8yod": 1.0,
-        "other_relatives.rel8.rel8dem": 1.0,
-        "other_relatives.rel8.rel8ons": 1.0,
-        "other_relatives.rel9.rel9yob": 1.0,
-        "other_relatives.rel9.rel9LIV": 1.0,
-        "other_relatives.rel9.rel9yod": 1.0,
-        "other_relatives.rel9.rel9dem": 1.0,
-        "other_relatives.rel9.rel9ons": 1.0,
-        "other_relatives.rel10.rel10yob": 1.0,
-        "other_relatives.rel10.rel10LIV": 1.0,
-        "other_relatives.rel10.rel10yod": 1.0,
-        "other_relatives.rel10.rel10dem": 1.0,
-        "other_relatives.rel10.rel10ons": 1.0,
-        "other_relatives.rel11.rel11yob": 1.0,
-        "other_relatives.rel11.rel11LIV": 1.0,
-        "other_relatives.rel11.rel11yod": 1.0,
-        "other_relatives.rel11.rel11dem": 1.0,
-        "other_relatives.rel11.rel11ons": 1.0,
-        "other_relatives.rel12.rel12yob": 1.0,
-        "other_relatives.rel12.rel12LIV": 1.0,
-        "other_relatives.rel12.rel12yod": 1.0,
-        "other_relatives.rel12.rel12dem": 1.0,
-        "other_relatives.rel12.rel12ons": 1.0,
-        "other_relatives.rel13.rel13yob": 1.0,
-        "other_relatives.rel13.rel13LIV": 1.0,
-        "other_relatives.rel13.rel13yod": 1.0,
-        "other_relatives.rel13.rel13dem": 1.0,
-        "other_relatives.rel13.rel13ons": 1.0,
-        "other_relatives.rel14.rel14yob": 1.0,
-        "other_relatives.rel14.rel14LIV": 1.0,
-        "other_relatives.rel14.rel14yod": 1.0,
-        "other_relatives.rel14.rel14dem": 1.0,
-        "other_relatives.rel14.rel14ons": 1.0,
-        "other_relatives.rel15.rel15yob": 1.0,
-        "other_relatives.rel15.rel15LIV": 1.0,
-        "other_relatives.rel15.rel15yod": 1.0,
-        "other_relatives.rel15.rel15dem": 1.0,
-        "other_relatives.rel15.rel15ons": 1.0
+        "other_relatives.rel6.rel6ons": 1.0
+       
     },
     "changelog": "/profiles/changelogs/ivp_a3v2.md"
 }
