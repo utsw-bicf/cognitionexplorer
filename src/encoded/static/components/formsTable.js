@@ -89,9 +89,13 @@ class FormsTable extends React.Component {
             visitObj.a2v3_id = data.ivp_a2v3[0]['@id']
             visitObj.a2v3_name = "ivp_a2v3"
         }
-        if (data.ivp_a3.length > 0) {
-            visitObj.a3_id = data.ivp_a3[0]['@id']
-            visitObj.a3_name = "ivp_a3"
+        if (data.ivp_a3v3.length > 0) {
+            visitObj.a3v3_id = data.ivp_a3v3[0]['@id']
+            visitObj.a3v3_name = "ivp_a3v3"
+        }
+        if (data.ivp_a3v2.length > 0) {
+            visitObj.a3v2_id = data.ivp_a3v2[0]['@id']
+            visitObj.a3v2_name = "ivp_a3v2"
         }
         if (data.ivp_a5.length > 0) {
             visitObj.a5_id = data.ivp_a5[0]['@id']
@@ -531,7 +535,8 @@ class FormsTable extends React.Component {
                     {form.a2v2_id && <span><a href={form.a2v2_id}>{form.a2v2_name}</a> </span>}
                     {form.a4v3_id && <span><a href={form.a4v3_id}>{form.a4v3_name}</a> </span>}
                     {form.a4v2_id && <span><a href={form.a4v2_id}>{form.a4v2_name}</a> </span>}
-                    {form.a3_id && <span><a href={form.a3_id}>{form.a3_name}</a> </span>}
+                    {form.a3v2_id && <span><a href={form.a3v2_id}>{form.a3v2_name}</a> </span>}
+                    {form.a3v3_id && <span><a href={form.a3v3_id}>{form.a3v3_name}</a> </span>}
                     {/* {form.a4_id && <span><a href={form.a4_id}>{form.a4_name}</a> </span>} */}
                     {form.a5_id && <span><a href={form.a5_id}>{form.a5_name}</a> </span>}
                 </div>,

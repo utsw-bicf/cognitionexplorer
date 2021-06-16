@@ -63,7 +63,7 @@
                             "title": "1c. If subject’s mother is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "momdem": {
                             "title": "1d. Does/did subject’s mother have dementia, as indicated by symptoms, history or diagnosis?",
@@ -105,7 +105,7 @@
                             "title": "2c. If subject’s father is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "daddem": {
                             "title": "2d. Does/did subject’s father have dementia, as indicated by symptoms, history or diagnosis?",
@@ -176,7 +176,7 @@
                             "title": "5c1. If Sibling 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib1dem": {
                             "title": "5d1. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -218,7 +218,7 @@
                             "title": "5c2. If Sibling 2 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib2dem": {
                             "title": "5d2. Does/did Sibling 2 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -260,7 +260,7 @@
                             "title": "5c3. If Sibling 3 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib3dem": {
                             "title": "5d3. Does/did Sibling 3 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -302,7 +302,7 @@
                             "title": "5c4. If Sibling 4 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib4dem": {
                             "title": "5d4. Does/did Sibling 4 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -344,7 +344,7 @@
                             "title": "5c5. If Sibling 5 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib5dem": {
                             "title": "5d5. Does/did Sibling 5 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -386,7 +386,7 @@
                             "title": "5c6. If Sibling 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib6dem": {
                             "title": "5d6. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -428,7 +428,7 @@
                             "title": "5c7. If Sibling 7 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib7dem": {
                             "title": "5d7. Does/did Sibling 7 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -470,7 +470,7 @@
                             "title": "5c8. If Sibling 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib8dem": {
                             "title": "5d8. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -512,7 +512,7 @@
                             "title": "5c9. If Sibling 9 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib9dem": {
                             "title": "5d9. Does/did Sibling 9 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -554,7 +554,7 @@
                             "title": "5c10. If Sibling 10 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib10dem": {
                             "title": "5d10. Does/did Sibling 10 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -596,7 +596,7 @@
                             "title": "5c11. If Sibling 11 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib11dem": {
                             "title": "5d11. Does/did Sibling 11 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -638,7 +638,7 @@
                             "title": "5c12. If Sibling 12 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib12dem": {
                             "title": "5d12. Does/did Sibling 12 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -680,7 +680,7 @@
                             "title": "5c13. If Sibling 13 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib13dem": {
                             "title": "5d13. Does/did Sibling 13 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -722,7 +722,7 @@
                             "title": "5c14. If Sibling 14 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib14dem": {
                             "title": "5d14. Does/did Sibling 14 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -764,7 +764,7 @@
                             "title": "5c15. If Sibling 15 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib15dem": {
                             "title": "5d15. Does/did Sibling 15 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -806,7 +806,7 @@
                             "title": "5c16. If Sibling 16 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib16dem": {
                             "title": "5d16. Does/did Sibling 16 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -848,7 +848,7 @@
                             "title": "5c17. If Sibling 17 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib17dem": {
                             "title": "5d17. Does/did Sibling 17 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -890,7 +890,7 @@
                             "title": "5c18. If Sibling 18 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib18dem": {
                             "title": "5d18. Does/did Sibling 18 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -932,7 +932,7 @@
                             "title": "5c19. If Sibling 19 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib19dem": {
                             "title": "5d19. Does/did Sibling 19 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -974,7 +974,7 @@
                             "title": "5c20. If Sibling 20 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib20dem": {
                             "title": "5d20. Does/did Sibling 20 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1027,7 +1027,7 @@
                             "title": "7c1. If Child 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid1dem": {
                             "title": "7d1. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1069,7 +1069,7 @@
                             "title": "7c2. If Child 2 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid2dem": {
                             "title": "7d2. Does/did Child 2 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1111,7 +1111,7 @@
                             "title": "7c3. If Child 3 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid3dem": {
                             "title": "7d3. Does/did Child 3 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1153,7 +1153,7 @@
                             "title": "7c4. If Child 4 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid4dem": {
                             "title": "7d4. Does/did Child 4 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1195,7 +1195,7 @@
                             "title": "7c5. If Child 5 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid5dem": {
                             "title": "7d5. Does/did Child 5 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1237,7 +1237,7 @@
                             "title": "7c6. If Child 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid6dem": {
                             "title": "7d6. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1279,7 +1279,7 @@
                             "title": "7c7. If Child 7 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid7dem": {
                             "title": "7d7. Does/did Child 7 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1321,7 +1321,7 @@
                             "title": "7c8. If Child 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid8dem": {
                             "title": "7d8. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1363,7 +1363,7 @@
                             "title": "7c9. If Child 9 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid9dem": {
                             "title": "7d9. Does/did Child 9 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1405,7 +1405,7 @@
                             "title": "7c10. If Child 10 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid10dem": {
                             "title": "7d10. Does/did Child 10 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1447,7 +1447,7 @@
                             "title": "7c11. If Child 11 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid11dem": {
                             "title": "7d11. Does/did Child 11 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1489,7 +1489,7 @@
                             "title": "7c12. If Child 12 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid12dem": {
                             "title": "7d12. Does/did Child 12 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1531,7 +1531,7 @@
                             "title": "7c13. If Child 13 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid13dem": {
                             "title": "7d13. Does/did Child 13 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1573,7 +1573,7 @@
                             "title": "7c14. If Child 14 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid14dem": {
                             "title": "7d14. Does/did Child 14 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1615,7 +1615,7 @@
                             "title": "7c15. If Child 15 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid15dem": {
                             "title": "7d15. Does/did Child 15 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1669,7 +1669,7 @@
                             "title": "9c1. If Relative 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel1dem": {
                             "title": "9d1. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1711,7 +1711,7 @@
                             "title": "9c2. If Relative 2 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel2dem": {
                             "title": "9d2. Does/did Relative 2 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1753,7 +1753,7 @@
                             "title": "9c3. If Relative 3 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel3dem": {
                             "title": "9d3. Does/did Relative 3 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1795,7 +1795,7 @@
                             "title": "9c4. If Relative 4 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel4dem": {
                             "title": "9d4. Does/did Relative 4 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1837,7 +1837,7 @@
                             "title": "9c5. If Relative 5 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel5dem": {
                             "title": "9d5. Does/did Relative 5 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1879,7 +1879,7 @@
                             "title": "9c6. If Relative 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel6dem": {
                             "title": "9d6. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1921,7 +1921,7 @@
                             "title": "9c7. If Relative 7 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel7dem": {
                             "title": "9d7. Does/did Relative 7 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1963,7 +1963,7 @@
                             "title": "9c8. If Relative 1 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel8dem": {
                             "title": "9d8. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -2005,7 +2005,7 @@
                             "title": "9c9. If Relative 9 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel9dem": {
                             "title": "9d9. Does/did Relative 9 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -2047,7 +2047,7 @@
                             "title": "9c10. If Relative 10 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel10dem": {
                             "title": "9d10. Does/did Relative 10 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -2089,7 +2089,7 @@
                             "title": "9c11. If Relative 11 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel11dem": {
                             "title": "9d11. Does/did Relative 11 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -2131,7 +2131,7 @@
                             "title": "9c12. If Relative 12 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel12dem": {
                             "title": "9d12. Does/did Relative 12 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -2173,7 +2173,7 @@
                             "title": "9c13. If Relative 13 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel13dem": {
                             "title": "9d13. Does/did Relative 13 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -2215,7 +2215,7 @@
                             "title": "9c14. If Relative 14 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel14dem": {
                             "title": "9d14. Does/did Relative 14 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -2257,7 +2257,7 @@
                             "title": "9c15. If Relative 15 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$|^888$"
+                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel15dem": {
                             "title": "9d15. Does/did Relative 15 have dementia, as indicated by symptoms, history or diagnosis?",
