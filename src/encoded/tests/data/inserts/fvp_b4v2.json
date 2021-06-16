@@ -20,6 +20,8 @@
             "fu_comport": "0 None - 0 Socially appropriate behavior.",
             "fu_cdrlang": "2 Moderate - 2 Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective."
         },
+        "cdrsupp": 6.0,
+        "cdrtot": 7.5,
         "form_status": "Complete",
         "status": "released",
         "uuid": "23cbc06d-1407-49d9-9eb1-6b13f993abd6"
@@ -45,6 +47,8 @@
             "fu_comport": "0 None - 0 Socially appropriate behavior.",
             "fu_cdrlang": "2 Moderate - 2 Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective."
         },
+        "cdrsupp": 7.0,
+        "cdrtot": 7.5,
         "form_status": "Complete",
         "status": "released",
         "uuid": "0a213417-8817-4055-b5c8-e1c2a587aa86"

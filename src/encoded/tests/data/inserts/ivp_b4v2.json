@@ -19,6 +19,8 @@
         "comport": "1 Mild - 1 Mild but definite changes in behavior.",
         "cdrlang": "1 Mild - 1 Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading."
     },
+    "cdrsupp": 7.0,
+    "cdrtot": 7.5,
     "form_status": "Complete",
     "status": "released",
     "uuid": "24814921-614f-4208-b5fa-28fdc4b169c3"
