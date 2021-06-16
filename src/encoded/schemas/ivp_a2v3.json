@@ -219,6 +219,11 @@
                 "16 36"
             ]
         },
+        "ineduc_type": {
+            "title": "Type of degrees (eg. MPH, MBA, etc.)",
+            "comment":"Redcap field",
+            "type": "string"
+        },
   
         "inrelto": {
             "title": "8. What is co-participant's relationship to the subject?",

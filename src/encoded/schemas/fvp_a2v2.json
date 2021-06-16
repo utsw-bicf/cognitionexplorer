@@ -214,6 +214,8 @@
                 99
             ]
         },
+    
+        
         "fu_inrelto": {
             "title": "9. What is co-participant's relationship to the subject?",
             "type": "string",
@@ -223,8 +225,16 @@
                 "3 Sibling (by blood or through marriage or adoption)",
                 "4 Other relative (by blood or through marriage or adoption)",
                 "5 Friend, neighbor, or someone known through family, friends, work, or community (e.g., church)",
-                "6 Paid caregiver, health care provider, or clinician"
+                "6 Paid caregiver, health care provider, or clinician",
+                "7 Other"
+
             ]
+        },
+        "fu_INRELTOX": {
+            "title": "8A Informant relationship, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+            
         },
         "fu_inknown": {
             "title": "9a. How long has the co-participant known the subject?",
