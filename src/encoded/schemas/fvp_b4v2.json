@@ -154,6 +154,18 @@
                     ]
                 }
             }
+        },
+        "cdrsupp": {
+            "title": "Supplemental CDR sum",
+            "description": "Only for version 2",
+            "type": "number"
+            
+        }, 
+        "cdrtot": {
+            "title": "Standard+ Supp. CDR sum",
+            "description": "Only for version 2",
+            "type": "number"
+           
         }
     },
     "facets": {
