@@ -1,7 +1,7 @@
 {
     "title": "NACC UNIFORM DATA SET (UDS) - FOLLOW-UP VISIT PACKET Form A2: Co-participant Demographics",
     "description": "INSTRUCTIONS: This form is to be completed by intake interviewer based on co-participant's report. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form A2.Link to NACC Coding Guidebook. Check only one box per question.To print a copy of data collected for this form at previous UDS visit, go to https: //www.alz.washington.edu/MEMBER/siteprint.html",  
-    "id": "/profiles/uds_fvp_a2v2.json", 
+    "id": "/profiles/fvp_a2v2.json", 
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -17,7 +17,6 @@
         "fu_insex",
         "fu_newinf",
         "fu_inrelto",
-        "fu_inknown",
         "fu_inlivwth",
         "fu_inrely"
     ],
@@ -685,9 +684,10 @@
         "fu_inrelto": {
             "title": "9. What is co-participant's relationship to the subject?"
         },
-        "fu_inknown": {
-            "title": "9a. How long has the co-participant known the subject?"
+        "fu_INRELTOX": {
+            "title": "9a. Informant relationship, other – specify"
         },
+     
         "fu_inlivwth": {
             "title": "10. Does the co-participant live with the subject?"
         },
@@ -750,9 +750,10 @@
         "fu_inrelto": {
             "title": "9. What is co-participant's relationship to the subject?"
         },
-        "fu_inknown": {
-            "title": "9a. How long has the co-participant known the subject?"
+        "fu_INRELTOX": {
+            "title": "9a. Informant relationship, other – specify"
         },
+   
         "fu_inlivwth": {
             "title": "10. Does the co-participant live with the subject?"
         },
@@ -783,7 +784,7 @@
         "fu_inraterx": 1.0,
         "fu_ineduc": 1.0,
         "fu_inrelto": 1.0,
-        "fu_inknown": 1.0,
+        "fu_INRELTOX": 1.0,
         "fu_inlivwth": 1.0,
         "fu_invisits": 1.0,
         "fu_incalls": 1.0,
