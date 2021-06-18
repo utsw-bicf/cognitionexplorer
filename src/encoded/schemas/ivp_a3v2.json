@@ -373,17 +373,17 @@
                     }
                 },
                 "sib6": {
-                    "title": "Sibling 1",
+                    "title": "Sibling 6",
                     "type": "object",
                     "properties": {
                         "sib6yob": {
-                            "title": "5a6. Sibling 1 year of birth",
+                            "title": "5a6. Sibling 6 year of birth",
                             "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib6LIV": {
-                            "title": "5b6. Is Sibling 1 still living?",
+                            "title": "5b6. Is Sibling 6 still living?",
                            
                             "type": "string",
                             "enum": [
@@ -393,13 +393,13 @@
                             ]
                         },
                         "sib6yod": {
-                            "title": "5c6. If Sibling 1 is deceased, indicate year of death",
+                            "title": "5c6. If Sibling 6 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "sib6dem": {
-                            "title": "5d6. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?",
+                            "title": "5d6. Does/did Sibling 6 have dementia, as indicated by symptoms, history or diagnosis?",
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -408,7 +408,7 @@
                             ]
                         },
                         "sib6ons": {
-                            "title": "5e6. If Sibling 1 was demented, indicate age at onset",
+                            "title": "5e6. If Sibling 6 was demented, indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1245,17 +1245,17 @@
                     }
                 },
                 "kid6": {
-                    "title": "Child 1",
+                    "title": "Child 6",
                     "type": "object",
                     "properties": {
                         "kid6yob": {
-                            "title": "7a6. Child 1 year of birth",
+                            "title": "7a6. Child 6 year of birth",
                             "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid6LIV": {
-                            "title": "7b6. Is Child 1 still living?",
+                            "title": "7b6. Is Child 6 still living?",
                            
                             "type": "string",
                             "enum": [
@@ -1265,13 +1265,13 @@
                             ]
                         },
                         "kid6yod": {
-                            "title": "7c6. If Child 1 is deceased, indicate year of death",
+                            "title": "7c6. If Child 6 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid6dem": {
-                            "title": "7d6. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?",
+                            "title": "7d6. Does/did Child 6 have dementia, as indicated by symptoms, history or diagnosis?",
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1280,7 +1280,7 @@
                             ]
                         },
                         "kid6ons": {
-                            "title": "7e6. If Child 1 was demented, indicate age at onset",
+                            "title": "7e6. If Child 6 was demented, indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1331,17 +1331,17 @@
                     }
                 },
                 "kid8": {
-                    "title": "Child 1",
+                    "title": "Child 8",
                     "type": "object",
                     "properties": {
                         "kid8yob": {
-                            "title": "7a8. Child 1 year of birth",
+                            "title": "7a8. Child 8 year of birth",
                             "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid8LIV": {
-                            "title": "7b8. Is Child 1 still living?",
+                            "title": "7b8. Is Child 8 still living?",
                            
                             "type": "string",
                             "enum": [
@@ -1351,13 +1351,13 @@
                             ]
                         },
                         "kid8yod": {
-                            "title": "7c8. If Child 1 is deceased, indicate year of death",
+                            "title": "7c8. If Child 8 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "kid8dem": {
-                            "title": "7d8. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?",
+                            "title": "7d8. Does/did Child 8 have dementia, as indicated by symptoms, history or diagnosis?",
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1366,7 +1366,7 @@
                             ]
                         },
                         "kid8ons": {
-                            "title": "7e8. If Child 1 was demented, indicate age at onset",
+                            "title": "7e8. If Child 8 was demented, indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1902,17 +1902,17 @@
                     }
                 },
                 "rel6": {
-                    "title": "Relative 1",
+                    "title": "Relative 6",
                     "type": "object",
                     "properties": {
                         "rel6yob": {
-                            "title": "9a6. Relative 1 year of birth",
+                            "title": "9a6. Relative 6 year of birth",
                             "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel6LIV": {
-                            "title": "9b6. Is Relative 1 still living?",
+                            "title": "9b6. Is Relative 6 still living?",
                            
                             "type": "string",
                             "enum": [
@@ -1922,13 +1922,13 @@
                             ]
                         },
                         "rel6yod": {
-                            "title": "9c6. If Relative 1 is deceased, indicate year of death",
+                            "title": "9c6. If Relative 6 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel6dem": {
-                            "title": "9d6. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?",
+                            "title": "9d6. Does/did Relative 6 have dementia, as indicated by symptoms, history or diagnosis?",
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1937,7 +1937,7 @@
                             ]
                         },
                         "rel6ons": {
-                            "title": "9e6. If Relative 1 was demented, indicate age at onset",
+                            "title": "9e6. If Relative 6 was demented, indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1988,17 +1988,17 @@
                     }
                 },
                 "rel8": {
-                    "title": "Relative 1",
+                    "title": "Relative 8",
                     "type": "object",
                     "properties": {
                         "rel8yob": {
-                            "title": "9a8. Relative 1 year of birth",
+                            "title": "9a8. Relative 8 year of birth",
                             "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel8LIV": {
-                            "title": "9b8. Is Relative 1 still living?",
+                            "title": "9b8. Is Relative 8 still living?",
                            
                             "type": "string",
                             "enum": [
@@ -2008,13 +2008,13 @@
                             ]
                         },
                         "rel8yod": {
-                            "title": "9c8. If Relative 1 is deceased, indicate year of death",
+                            "title": "9c8. If Relative 8 is deceased, indicate year of death",
                             "description": "( 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "rel8dem": {
-                            "title": "9d8. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?",
+                            "title": "9d8. Does/did Relative 8 have dementia, as indicated by symptoms, history or diagnosis?",
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2023,7 +2023,7 @@
                             ]
                         },
                         "rel8ons": {
-                            "title": "9e8. If Relative 1 was demented, indicate age at onset",
+                            "title": "9e8. If Relative 8 was demented, indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
