@@ -25,7 +25,7 @@
         "siblings": {
             "TWIN": "0 No",
             "TWINTYPE": "9 Unknown",
-            "SIBS": "1",
+            "sibs": "1",
             "sib1": {
                 "sib1yob": "1923",
                 "sib1LIV": "0 No",

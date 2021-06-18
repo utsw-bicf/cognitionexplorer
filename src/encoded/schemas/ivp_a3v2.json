@@ -6,6 +6,7 @@
     "identifyingProperties": [
         "uuid"
     ],
+    "additionalProperties": false,
     "mixinProperties": [
         {
             "$ref": "mixins.json#/schema_version"
@@ -132,6 +133,8 @@
                 "TWIN": {
                     "title": "3. Is the subject a twin?",
                     "description": "If subject has no full siblings,  SKIP TO QUESTION 7; otherwise provide information on all full siblings below.For any full sibling with a neurological or psychiatric condition, the entire row must be filled out. If the clinician cannot determine the primary neurological problem/psychiatric condition after reviewing all avilable evidence, enter 9=Unknown in the Primary neurological problem/psychiatric condition column, and then skip the subsequent questions in the row. For a siblng with no neurological or psychiatric problem, enter 8=N/A - no neurological problem or psychiatric condition in the Primary neurological problem/psychiatric condition column, and then skip the subsequent questions in the row.( 0-20, 99=Unknown)",
+                    "type": "string",
+
                     "enum": [
                         "0 No",
                         "1 Yes",
@@ -140,6 +143,8 @@
                 },
                 "TWINTYPE": {
                     "title": "3a. If the subject is a twin, indicate type.",
+                    "type": "string",
+
                     "description": "If subject has no full siblings,  SKIP TO QUESTION 7; otherwise provide information on all full siblings below.For any full sibling with a neurological or psychiatric condition, the entire row must be filled out. If the clinician cannot determine the primary neurological problem/psychiatric condition after reviewing all avilable evidence, enter 9=Unknown in the Primary neurological problem/psychiatric condition column, and then skip the subsequent questions in the row. For a siblng with no neurological or psychiatric problem, enter 8=N/A - no neurological problem or psychiatric condition in the Primary neurological problem/psychiatric condition column, and then skip the subsequent questions in the row.( 0-20, 99=Unknown)",
                     "enum": [
                         "1 Monozygotic (i.e., identical)",
@@ -995,7 +1000,7 @@
             }
         },
         "children": {
-            "title": "Childern",
+            "title": "Children",
             "type": "object",
             "properties": {
                 "kids": {
@@ -1640,7 +1645,7 @@
             "type": "object",
             "properties": {
                 "RELSDEM": {
-                    "title": "8.Number of other demented (as defined on form) blood relatives(cousins, aunts, uncles, grandparents, half siblings), as indicated bysymptoms, history or diagnosis.",
+                    "title": "8.Number of other demented (as defined on form) blood relatives(cousins, aunts, uncles, grandparents, half siblings), as indicated by symptoms, history or diagnosis.",
                     "description": "(0-15, 99 = Unknown)",
                     "type": "string",
                     "pattern": "^[0-9]?$|^[1][0-5]$|^99$"
@@ -2278,7 +2283,6 @@
             }
         }
     },
- 
     "facets": {
         "status": {
             "title": "Status"
