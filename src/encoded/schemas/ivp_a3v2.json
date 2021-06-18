@@ -52,7 +52,6 @@
                         },
                         "MOMLIV": {
                             "title": "1b. Is subject’s mother still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -79,7 +78,7 @@
                             "title": "1e. If subject’s mother was demented, indicate age at onset",
                             "description": "(999 = Unknown)",
                             "type": "string",
-                            "pattern":"^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
                         }
                     }
                 },
@@ -95,7 +94,6 @@
                         },
                         "dadLIV": {
                             "title": "2b. Is subject’s father still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -122,7 +120,7 @@
                             "title": "2e. If subject’s father was demented, indicate age at onset",
                             "description": "(999 = Unknown)",
                             "type": "string",
-                            "pattern":"^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
                         }
                     }
                 }
@@ -169,7 +167,6 @@
                         },
                         "sib1LIV": {
                             "title": "5b1. Is Sibling 1 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -179,7 +176,7 @@
                         },
                         "sib1yod": {
                             "title": "5c1. If Sibling 1 is deceased, indicate year of death",
-                            "description": "( 9999 = Unknown)",
+                            "description": "(9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
@@ -212,7 +209,6 @@
                         },
                         "sib2LIV": {
                             "title": "5b2. Is Sibling 2 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -255,7 +251,6 @@
                         },
                         "sib3LIV": {
                             "title": "5b3. Is Sibling 3 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -298,7 +293,6 @@
                         },
                         "sib4LIV": {
                             "title": "5b4. Is Sibling 4 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -341,7 +335,6 @@
                         },
                         "sib5LIV": {
                             "title": "5b5. Is Sibling 5 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -384,7 +377,6 @@
                         },
                         "sib6LIV": {
                             "title": "5b6. Is Sibling 6 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -427,7 +419,6 @@
                         },
                         "sib7LIV": {
                             "title": "5b7. Is Sibling 7 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -470,7 +461,6 @@
                         },
                         "sib8LIV": {
                             "title": "5b8. Is Sibling 1 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -513,7 +503,6 @@
                         },
                         "sib9LIV": {
                             "title": "5b9. Is Sibling 9 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -556,7 +545,6 @@
                         },
                         "sib10LIV": {
                             "title": "5b10. Is Sibling 10 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -599,7 +587,6 @@
                         },
                         "sib11LIV": {
                             "title": "5b11. Is Sibling 11 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -642,7 +629,6 @@
                         },
                         "sib12LIV": {
                             "title": "5b12. Is Sibling 12 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -685,7 +671,6 @@
                         },
                         "sib13LIV": {
                             "title": "5b13. Is Sibling 13 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -728,7 +713,6 @@
                         },
                         "sib14LIV": {
                             "title": "5b14. Is Sibling 14 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -771,7 +755,6 @@
                         },
                         "sib15LIV": {
                             "title": "5b15. Is Sibling 15 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -814,7 +797,6 @@
                         },
                         "sib16LIV": {
                             "title": "5b16. Is Sibling 16 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -857,7 +839,6 @@
                         },
                         "sib17LIV": {
                             "title": "5b17. Is Sibling 17 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -900,7 +881,6 @@
                         },
                         "sib18LIV": {
                             "title": "5b18. Is Sibling 18 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -943,7 +923,6 @@
                         },
                         "sib19LIV": {
                             "title": "5b19. Is Sibling 19 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -986,7 +965,6 @@
                         },
                         "sib20LIV": {
                             "title": "5b20. Is Sibling 20 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1027,7 +1005,7 @@
                     "title": "6. How many biological children did the subject have?",
                     "description": "( 0-15, 99 = Unknown)",
                     "type": "string",
-                    "pattern":"^[0-9]$|^[1][0-5]$|^99$"
+                    "pattern": "^[0-9]$|^[1][0-5]$|^99$"
                 },
                 "kid1": {
                     "title": "Child 1",
@@ -1041,7 +1019,6 @@
                         },
                         "kid1LIV": {
                             "title": "7b1. Is Child 1 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1084,7 +1061,6 @@
                         },
                         "kid2LIV": {
                             "title": "7b2. Is Child 2 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1127,7 +1103,6 @@
                         },
                         "kid3LIV": {
                             "title": "7b3. Is Child 3 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1170,7 +1145,6 @@
                         },
                         "kid4LIV": {
                             "title": "7b4. Is Child 4 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1213,7 +1187,6 @@
                         },
                         "kid5LIV": {
                             "title": "7b5. Is Child 5 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1256,7 +1229,6 @@
                         },
                         "kid6LIV": {
                             "title": "7b6. Is Child 6 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1299,7 +1271,6 @@
                         },
                         "kid7LIV": {
                             "title": "7b7. Is Child 7 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1342,7 +1313,6 @@
                         },
                         "kid8LIV": {
                             "title": "7b8. Is Child 8 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1385,7 +1355,6 @@
                         },
                         "kid9LIV": {
                             "title": "7b9. Is Child 9 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1428,7 +1397,6 @@
                         },
                         "kid10LIV": {
                             "title": "7b10. Is Child 10 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1471,7 +1439,6 @@
                         },
                         "kid11LIV": {
                             "title": "7b11. Is Child 11 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1514,7 +1481,6 @@
                         },
                         "kid12LIV": {
                             "title": "7b12. Is Child 12 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1557,7 +1523,6 @@
                         },
                         "kid13LIV": {
                             "title": "7b13. Is Child 13 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1600,7 +1565,6 @@
                         },
                         "kid14LIV": {
                             "title": "7b14. Is Child 14 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1643,7 +1607,6 @@
                         },
                         "kid15LIV": {
                             "title": "7b15. Is Child 15 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1698,7 +1661,6 @@
                         },
                         "rel1LIV": {
                             "title": "9b1. Is Relative 1 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1712,17 +1674,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel1dem": {
-                            "title": "9d1. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel1ons": {
-                            "title": "9e1. If Relative 1 was demented, indicate age at onset",
+                            "title": "9d1. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1741,7 +1694,6 @@
                         },
                         "rel2LIV": {
                             "title": "9b2. Is Relative 2 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1755,17 +1707,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel2dem": {
-                            "title": "9d2. Does/did Relative 2 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel2ons": {
-                            "title": "9e2. If Relative 2 was demented, indicate age at onset",
+                            "title": "9d2. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1784,7 +1727,6 @@
                         },
                         "rel3LIV": {
                             "title": "9b3. Is Relative 3 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1798,17 +1740,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel3dem": {
-                            "title": "9d3. Does/did Relative 3 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel3ons": {
-                            "title": "9e3. If Relative 3 was demented, indicate age at onset",
+                            "title": "9d3. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1827,7 +1760,6 @@
                         },
                         "rel4LIV": {
                             "title": "9b4. Is Relative 4 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1841,17 +1773,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel4dem": {
-                            "title": "9d4. Does/did Relative 4 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel4ons": {
-                            "title": "9e4. If Relative 4 was demented, indicate age at onset",
+                            "title": "9d4. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1870,7 +1793,6 @@
                         },
                         "rel5LIV": {
                             "title": "9b5. Is Relative 5 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1884,17 +1806,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel5dem": {
-                            "title": "9d5. Does/did Relative 5 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel5ons": {
-                            "title": "9e5. If Relative 5 was demented, indicate age at onset",
+                            "title": "9d5. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1913,7 +1826,6 @@
                         },
                         "rel6LIV": {
                             "title": "9b6. Is Relative 6 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1927,17 +1839,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel6dem": {
-                            "title": "9d6. Does/did Relative 6 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel6ons": {
-                            "title": "9e6. If Relative 6 was demented, indicate age at onset",
+                            "title": "9d6. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1956,7 +1859,6 @@
                         },
                         "rel7LIV": {
                             "title": "9b7. Is Relative 7 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -1970,17 +1872,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel7dem": {
-                            "title": "9d7. Does/did Relative 7 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel7ons": {
-                            "title": "9e7. If Relative 7 was demented, indicate age at onset",
+                            "title": "9d7. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -1999,7 +1892,6 @@
                         },
                         "rel8LIV": {
                             "title": "9b8. Is Relative 8 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2013,17 +1905,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel8dem": {
-                            "title": "9d8. Does/did Relative 8 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel8ons": {
-                            "title": "9e8. If Relative 8 was demented, indicate age at onset",
+                            "title": "9d8. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -2042,7 +1925,6 @@
                         },
                         "rel9LIV": {
                             "title": "9b9. Is Relative 9 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2056,17 +1938,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel9dem": {
-                            "title": "9d9. Does/did Relative 9 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel9ons": {
-                            "title": "9e9. If Relative 9 was demented, indicate age at onset",
+                            "title": "9d9. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -2085,7 +1958,6 @@
                         },
                         "rel10LIV": {
                             "title": "9b10. Is Relative 10 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2099,17 +1971,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel10dem": {
-                            "title": "9d10. Does/did Relative 10 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel10ons": {
-                            "title": "9e10. If Relative 10 was demented, indicate age at onset",
+                            "title": "9d10. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -2128,7 +1991,6 @@
                         },
                         "rel11LIV": {
                             "title": "9b11. Is Relative 11 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2142,17 +2004,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel11dem": {
-                            "title": "9d11. Does/did Relative 11 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel11ons": {
-                            "title": "9e11. If Relative 11 was demented, indicate age at onset",
+                            "title": "9d11. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -2171,7 +2024,6 @@
                         },
                         "rel12LIV": {
                             "title": "9b12. Is Relative 12 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2185,17 +2037,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel12dem": {
-                            "title": "9d12. Does/did Relative 12 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel12ons": {
-                            "title": "9e12. If Relative 12 was demented, indicate age at onset",
+                            "title": "9d12. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -2214,7 +2057,6 @@
                         },
                         "rel13LIV": {
                             "title": "9b13. Is Relative 13 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2228,17 +2070,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel13dem": {
-                            "title": "9d13. Does/did Relative 13 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel13ons": {
-                            "title": "9e13. If Relative 13 was demented, indicate age at onset",
+                            "title": "9d13. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -2257,7 +2090,6 @@
                         },
                         "rel14LIV": {
                             "title": "9b14. Is Relative 14 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2271,17 +2103,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel14dem": {
-                            "title": "9d14. Does/did Relative 14 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel14ons": {
-                            "title": "9e14. If Relative 14 was demented, indicate age at onset",
+                            "title": "9d14. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -2300,7 +2123,6 @@
                         },
                         "rel15LIV": {
                             "title": "9b15. Is Relative 15 still living?",
-                           
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -2314,17 +2136,8 @@
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
-                        "rel15dem": {
-                            "title": "9d15. Does/did Relative 15 have dementia, as indicated by symptoms, history or diagnosis?",
-                            "type": "string",
-                            "enum": [
-                                "0 No",
-                                "1 Yes",
-                                "9 Unknown"
-                            ]
-                        },
                         "rel15ons": {
-                            "title": "9e15. If Relative 15 was demented, indicate age at onset",
+                            "title": "9d15. Indicate age at onset",
                             "description": "(999 = Age Unknown)",
                             "type": "string",
                             "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
@@ -2711,7 +2524,7 @@
             "title": "9d1. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel1.rel1ons": {
-            "title": "9e1. If Relative 1 was demented, indicate age at onset"
+            "title": "9d1. Indicate age at onset"
         },
         "other_relatives.rel2.rel2yob": {
             "title": "9a2. Relative 2 year of birth"
@@ -2726,7 +2539,7 @@
             "title": "9d2. Does/did Relative 2 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel2.rel2ons": {
-            "title": "9e2. If Relative 2 was demented, indicate age at onset"
+            "title": "9d2. Indicate age at onset"
         },
         "other_relatives.rel3.rel3yob": {
             "title": "9a3. Relative 3 year of birth"
@@ -2741,7 +2554,7 @@
             "title": "9d3. Does/did Relative 3 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel3.rel3ons": {
-            "title": "9e3. If Relative 3 was demented, indicate age at onset"
+            "title": "9d3. Indicate age at onset"
         },
         "other_relatives.rel4.rel4yob": {
             "title": "9a4. Relative 4 year of birth"
@@ -2756,7 +2569,7 @@
             "title": "9d4. Does/did Relative 4 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel4.rel4ons": {
-            "title": "9e4. If Relative 4 was demented, indicate age at onset"
+            "title": "9d4. Indicate age at onset"
         },
         "other_relatives.rel5.rel5yob": {
             "title": "9a5. Relative 5 year of birth"
@@ -2771,7 +2584,7 @@
             "title": "9d5. Does/did Relative 5 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel5.rel5ons": {
-            "title": "9e5. If Relative 5 was demented, indicate age at onset"
+            "title": "9d5. Indicate age at onset"
         },
         "other_relatives.rel6.rel6yob": {
             "title": "9a6. Relative 1 year of birth"
@@ -2786,7 +2599,7 @@
             "title": "9d6. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel6.rel6ons": {
-            "title": "9e6. If Relative 1 was demented, indicate age at onset"
+            "title": "9d6. Indicate age at onset"
         }
     },
     "columns": {
@@ -3166,7 +2979,7 @@
             "title": "9d1. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel1.rel1ons": {
-            "title": "9e1. If Relative 1 was demented, indicate age at onset"
+            "title": "9d1. Indicate age at onset"
         },
         "other_relatives.rel2.rel2yob": {
             "title": "9a2. Relative 2 year of birth"
@@ -3181,7 +2994,7 @@
             "title": "9d2. Does/did Relative 2 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel2.rel2ons": {
-            "title": "9e2. If Relative 2 was demented, indicate age at onset"
+            "title": "9d2. Indicate age at onset"
         },
         "other_relatives.rel3.rel3yob": {
             "title": "9a3. Relative 3 year of birth"
@@ -3196,7 +3009,7 @@
             "title": "9d3. Does/did Relative 3 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel3.rel3ons": {
-            "title": "9e3. If Relative 3 was demented, indicate age at onset"
+            "title": "9d3. Indicate age at onset"
         },
         "other_relatives.rel4.rel4yob": {
             "title": "9a4. Relative 4 year of birth"
@@ -3211,7 +3024,7 @@
             "title": "9d4. Does/did Relative 4 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel4.rel4ons": {
-            "title": "9e4. If Relative 4 was demented, indicate age at onset"
+            "title": "9d4. Indicate age at onset"
         },
         "other_relatives.rel5.rel5yob": {
             "title": "9a5. Relative 5 year of birth"
@@ -3226,7 +3039,7 @@
             "title": "9d5. Does/did Relative 5 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel5.rel5ons": {
-            "title": "9e5. If Relative 5 was demented, indicate age at onset"
+            "title": "9d5. Indicate age at onset"
         },
         "other_relatives.rel6.rel6yob": {
             "title": "9a6. Relative 1 year of birth"
@@ -3241,7 +3054,7 @@
             "title": "9d6. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
         "other_relatives.rel6.rel6ons": {
-            "title": "9e6. If Relative 1 was demented, indicate age at onset"
+            "title": "9d6. Indicate age at onset"
         }
     },
     "boost_values": {
