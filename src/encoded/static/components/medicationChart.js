@@ -191,7 +191,8 @@ class MedicationChart extends React.Component {
         zeroline: false,
         showline: true,
         showgrid: true,
-        fixedrange: true
+        fixedrange: true,
+        tickangle: 30
       },
       xaxis2: {
         type: 'date',

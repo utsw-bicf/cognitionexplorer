@@ -241,10 +241,11 @@ class SurgeryChart extends React.Component {
                 zeroline: false,
                 showline: true,
                 showgrid: true,
-                fixedrange: true
+                fixedrange: true,
+                tickangle: 30
             },
             margin: {
-                l: 150,
+                l: 120,
                 r: 20,
                 b: 30,
                 t: 60,
