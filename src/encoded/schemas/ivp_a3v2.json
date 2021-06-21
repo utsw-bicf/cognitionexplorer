@@ -2406,9 +2406,7 @@
         "other_relatives.rel_indicate.rel1.rel1yod": {
             "title": "9c1. If Relative 1 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel1.rel1dem": {
-            "title": "9d1. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel1.rel1ons": {
             "title": "9d1. Indicate age at onset"
         },
@@ -2421,9 +2419,7 @@
         "other_relatives.rel_indicate.rel2.rel2yod": {
             "title": "9c2. If Relative 2 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel2.rel2dem": {
-            "title": "9d2. Does/did Relative 2 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+      
         "other_relatives.rel_indicate.rel2.rel2ons": {
             "title": "9d2. Indicate age at onset"
         },
@@ -2436,9 +2432,7 @@
         "other_relatives.rel_indicate.rel3.rel3yod": {
             "title": "9c3. If Relative 3 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel3.rel3dem": {
-            "title": "9d3. Does/did Relative 3 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel3.rel3ons": {
             "title": "9d3. Indicate age at onset"
         },
@@ -2451,9 +2445,7 @@
         "other_relatives.rel_indicate.rel4.rel4yod": {
             "title": "9c4. If Relative 4 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel4.rel4dem": {
-            "title": "9d4. Does/did Relative 4 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+        
         "other_relatives.rel_indicate.rel4.rel4ons": {
             "title": "9d4. Indicate age at onset"
         },
@@ -2466,9 +2458,7 @@
         "other_relatives.rel_indicate.rel5.rel5yod": {
             "title": "9c5. If Relative 5 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel5.rel5dem": {
-            "title": "9d5. Does/did Relative 5 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel5.rel5ons": {
             "title": "9d5. Indicate age at onset"
         },
@@ -2481,9 +2471,7 @@
         "other_relatives.rel_indicate.rel6.rel6yod": {
             "title": "9c6. If Relative  6 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel6.rel6dem": {
-            "title": "9d6. Does/did Relative  6 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel6.rel6ons": {
             "title": "9d6. Indicate age at onset"
         }
@@ -2728,9 +2716,7 @@
         "other_relatives.rel_indicate.rel1.rel1yod": {
             "title": "9c1. If Relative 1 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel1.rel1dem": {
-            "title": "9d1. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel1.rel1ons": {
             "title": "9d1. Indicate age at onset"
         },
@@ -2743,9 +2729,7 @@
         "other_relatives.rel_indicate.rel2.rel2yod": {
             "title": "9c2. If Relative 2 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel2.rel2dem": {
-            "title": "9d2. Does/did Relative 2 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel2.rel2ons": {
             "title": "9d2. Indicate age at onset"
         },
@@ -2758,9 +2742,7 @@
         "other_relatives.rel_indicate.rel3.rel3yod": {
             "title": "9c3. If Relative 3 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel3.rel3dem": {
-            "title": "9d3. Does/did Relative 3 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel3.rel3ons": {
             "title": "9d3. Indicate age at onset"
         },
@@ -2773,9 +2755,7 @@
         "other_relatives.rel_indicate.rel4.rel4yod": {
             "title": "9c4. If Relative 4 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel4.rel4dem": {
-            "title": "9d4. Does/did Relative 4 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+        
         "other_relatives.rel_indicate.rel4.rel4ons": {
             "title": "9d4. Indicate age at onset"
         },
@@ -2788,9 +2768,7 @@
         "other_relatives.rel_indicate.rel5.rel5yod": {
             "title": "9c5. If Relative 5 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel5.rel5dem": {
-            "title": "9d5. Does/did Relative 5 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel5.rel5ons": {
             "title": "9d5. Indicate age at onset"
         },
@@ -2803,9 +2781,7 @@
         "other_relatives.rel_indicate.rel6.rel6yod": {
             "title": "9c6. If Relative 6 is deceased, indicate year of death"
         },
-        "other_relatives.rel_indicate.rel6.rel6dem": {
-            "title": "9d6. Does/did Relative 6 have dementia, as indicated by symptoms, history or diagnosis?"
-        },
+       
         "other_relatives.rel_indicate.rel6.rel6ons": {
             "title": "9d6. Indicate age at onset"
         }
@@ -2890,32 +2866,26 @@
         "other_relatives.rel_indicate.rel1.rel1yob": 1.0,
         "other_relatives.rel_indicate.rel1.rel1LIV": 1.0,
         "other_relatives.rel_indicate.rel1.rel1yod": 1.0,
-        "other_relatives.rel_indicate.rel1.rel1dem": 1.0,
         "other_relatives.rel_indicate.rel1.rel1ons": 1.0,
         "other_relatives.rel_indicate.rel2.rel2yob": 1.0,
         "other_relatives.rel_indicate.rel2.rel2LIV": 1.0,
         "other_relatives.rel_indicate.rel2.rel2yod": 1.0,
-        "other_relatives.rel_indicate.rel2.rel2dem": 1.0,
         "other_relatives.rel_indicate.rel2.rel2ons": 1.0,
         "other_relatives.rel_indicate.rel3.rel3yob": 1.0,
         "other_relatives.rel_indicate.rel3.rel3LIV": 1.0,
         "other_relatives.rel_indicate.rel3.rel3yod": 1.0,
-        "other_relatives.rel_indicate.rel3.rel3dem": 1.0,
         "other_relatives.rel_indicate.rel3.rel3ons": 1.0,
         "other_relatives.rel_indicate.rel4.rel4yob": 1.0,
         "other_relatives.rel_indicate.rel4.rel4LIV": 1.0,
         "other_relatives.rel_indicate.rel4.rel4yod": 1.0,
-        "other_relatives.rel_indicate.rel4.rel4dem": 1.0,
         "other_relatives.rel_indicate.rel4.rel4ons": 1.0,
         "other_relatives.rel_indicate.rel5.rel5yob": 1.0,
         "other_relatives.rel_indicate.rel5.rel5LIV": 1.0,
         "other_relatives.rel_indicate.rel5.rel5yod": 1.0,
-        "other_relatives.rel_indicate.rel5.rel5dem": 1.0,
         "other_relatives.rel_indicate.rel5.rel5ons": 1.0,
         "other_relatives.rel_indicate.rel6.rel6yob": 1.0,
         "other_relatives.rel_indicate.rel6.rel6LIV": 1.0,
         "other_relatives.rel_indicate.rel6.rel6yod": 1.0,
-        "other_relatives.rel_indicate.rel6.rel6dem": 1.0,
         "other_relatives.rel_indicate.rel6.rel6ons": 1.0
     },
     "changelog": "/profiles/changelogs/ivp_a3v2.md"
