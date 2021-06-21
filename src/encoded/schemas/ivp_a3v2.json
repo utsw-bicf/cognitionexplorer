@@ -2209,415 +2209,415 @@
         "siblings.sibs": {
             "title": "4. How many full siblings does the subject have?"
         },
-        "siblings.sib1.sib1yob": {
+        "siblings.sibs_indicate.sib1.sib1yob": {
             "title": "5a1. Sibling 1 year of birth"
         },
-        "siblings.sib1.sib1LIV": {
+        "siblings.sibs_indicate.sib1.sib1LIV": {
             "title": "5b1. Is Sibling 1 still living?"
         },
-        "siblings.sib1.sib1yod": {
+        "siblings.sibs_indicate.sib1.sib1yod": {
             "title": "5c1. If Sibling 1 is deceased, indicate year of death"
         },
-        "siblings.sib1.sib1dem": {
+        "siblings.sibs_indicate.sib1.sib1dem": {
             "title": "5d1. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib1.sib1ons": {
+        "siblings.sibs_indicate.sib1.sib1ons": {
             "title": "5e1. If Sibling 1 was demented, indicate age at onset"
         },
-        "siblings.sib2.sib2yob": {
+        "siblings.sibs_indicate.sib2.sib2yob": {
             "title": "5a2. Sibling 2 year of birth"
         },
-        "siblings.sib2.sib2LIV": {
+        "siblings.sibs_indicate.sib2.sib2LIV": {
             "title": "5b2. Is Sibling 2 still living?"
         },
-        "siblings.sib2.sib2yod": {
+        "siblings.sibs_indicate.sib2.sib2yod": {
             "title": "5c2. If Sibling 2 is deceased, indicate year of death"
         },
-        "siblings.sib2.sib2dem": {
+        "siblings.sibs_indicate.sib2.sib2dem": {
             "title": "5d2. Does/did Sibling 2 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib2.sib2ons": {
+        "siblings.sibs_indicate.sib2.sib2ons": {
             "title": "5e2. If Sibling 2 was demented, indicate age at onset"
         },
-        "siblings.sib3.sib3yob": {
+        "siblings.sibs_indicate.sib3.sib3yob": {
             "title": "5a3. Sibling 3 year of birth"
         },
-        "siblings.sib3.sib3LIV": {
+        "siblings.sibs_indicate.sib3.sib3LIV": {
             "title": "5b3. Is Sibling 3 still living?"
         },
-        "siblings.sib3.sib3yod": {
+        "siblings.sibs_indicate.sib3.sib3yod": {
             "title": "5c3. If Sibling 3 is deceased, indicate year of death"
         },
-        "siblings.sib3.sib3dem": {
+        "siblings.sibs_indicate.sib3.sib3dem": {
             "title": "5d3. Does/did Sibling 3 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib3.sib3ons": {
+        "siblings.sibs_indicate.sib3.sib3ons": {
             "title": "5e3. If Sibling 3 was demented, indicate age at onset"
         },
-        "siblings.sib4.sib4yob": {
+        "siblings.sibs_indicate.sib4.sib4yob": {
             "title": "5a4. Sibling 4 year of birth"
         },
-        "siblings.sib4.sib4LIV": {
+        "siblings.sibs_indicate.sib4.sib4LIV": {
             "title": "5b4. Is Sibling 4 still living?"
         },
-        "siblings.sib4.sib4yod": {
+        "siblings.sibs_indicate.sib4.sib4yod": {
             "title": "5c4. If Sibling 4 is deceased, indicate year of death"
         },
-        "siblings.sib4.sib4dem": {
+        "siblings.sibs_indicate.sib4.sib4dem": {
             "title": "5d4. Does/did Sibling 4 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib4.sib4ons": {
+        "siblings.sibs_indicate.sib4.sib4ons": {
             "title": "5e4. If Sibling 4 was demented, indicate age at onset"
         },
-        "siblings.sib5.sib5yob": {
+        "siblings.sibs_indicate.sib5.sib5yob": {
             "title": "5a5. Sibling 5 year of birth"
         },
-        "siblings.sib5.sib5LIV": {
+        "siblings.sibs_indicate.sib5.sib5LIV": {
             "title": "5b5. Is Sibling 5 still living?"
         },
-        "siblings.sib5.sib5yod": {
+        "siblings.sibs_indicate.sib5.sib5yod": {
             "title": "5c5. If Sibling 5 is deceased, indicate year of death"
         },
-        "siblings.sib5.sib5dem": {
+        "siblings.sibs_indicate.sib5.sib5dem": {
             "title": "5d5. Does/did Sibling 5 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib5.sib5ons": {
+        "siblings.sibs_indicate.sib5.sib5ons": {
             "title": "5e5. If Sibling 5 was demented, indicate age at onset"
         },
-        "siblings.sib6.sib6yob": {
+        "siblings.sibs_indicate.sib6.sib6yob": {
             "title": "5a6. Sibling 1 year of birth"
         },
-        "siblings.sib6.sib6LIV": {
+        "siblings.sibs_indicate.sib6.sib6LIV": {
             "title": "5b6. Is Sibling 1 still living?"
         },
-        "siblings.sib6.sib6yod": {
+        "siblings.sibs_indicate.sib6.sib6yod": {
             "title": "5c6. If Sibling 1 is deceased, indicate year of death"
         },
-        "siblings.sib6.sib6dem": {
+        "siblings.sibs_indicate.sib6.sib6dem": {
             "title": "5d6. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib6.sib6ons": {
+        "siblings.sibs_indicate.sib6.sib6ons": {
             "title": "5e6. If Sibling 1 was demented, indicate age at onset"
         },
         "children.kids": {
             "title": "6. How many biological children did the subject have?"
         },
-        "children.kid1.kid1yob": {
+        "children.kids_indicate.kid1.kid1yob": {
             "title": "7a1. Child 1 year of birth"
         },
-        "children.kid1.kid1LIV": {
+        "children.kids_indicate.kid1.kid1LIV": {
             "title": "7b1. Is Child 1 still living?"
         },
-        "children.kid1.kid1yod": {
+        "children.kids_indicate.kid1.kid1yod": {
             "title": "7c1. If Child 1 is deceased, indicate year of death"
         },
-        "children.kid1.kid1dem": {
+        "children.kids_indicate.kid1.kid1dem": {
             "title": "7d1. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid1.kid1ons": {
+        "children.kids_indicate.kid1.kid1ons": {
             "title": "7e1. If Child 1 was demented, indicate age at onset"
         },
-        "children.kid2.kid2yob": {
+        "children.kids_indicate.kid2.kid2yob": {
             "title": "7a2. Child 2 year of birth"
         },
-        "children.kid2.kid2LIV": {
+        "children.kids_indicate.kid2.kid2LIV": {
             "title": "7b2. Is Child 2 still living?"
         },
-        "children.kid2.kid2yod": {
+        "children.kids_indicate.kid2.kid2yod": {
             "title": "7c2. If Child 2 is deceased, indicate year of death"
         },
-        "children.kid2.kid2dem": {
+        "children.kids_indicate.kid2.kid2dem": {
             "title": "7d2. Does/did Child 2 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid2.kid2ons": {
+        "children.kids_indicate.kid2.kid2ons": {
             "title": "7e2. If Child 2 was demented, indicate age at onset"
         },
-        "children.kid3.kid3yob": {
+        "children.kids_indicate.kid3.kid3yob": {
             "title": "7a3. Child 3 year of birth"
         },
-        "children.kid3.kid3LIV": {
+        "children.kids_indicate.kid3.kid3LIV": {
             "title": "7b3. Is Child 3 still living?"
         },
-        "children.kid3.kid3yod": {
+        "children.kids_indicate.kid3.kid3yod": {
             "title": "7c3. If Child 3 is deceased, indicate year of death"
         },
-        "children.kid3.kid3dem": {
+        "children.kids_indicate.kid3.kid3dem": {
             "title": "7d3. Does/did Child 3 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid3.kid3ons": {
+        "children.kids_indicate.kid3.kid3ons": {
             "title": "7e3. If Child 3 was demented, indicate age at onset"
         },
-        "children.kid4.kid4yob": {
+        "children.kids_indicate.kid4.kid4yob": {
             "title": "7a4. Child 4 year of birth"
         },
-        "children.kid4.kid4LIV": {
+        "children.kids_indicate.kid4.kid4LIV": {
             "title": "7b4. Is Child 4 still living?"
         },
-        "children.kid4.kid4yod": {
+        "children.kids_indicate.kid4.kid4yod": {
             "title": "7c4. If Child 4 is deceased, indicate year of death"
         },
-        "children.kid4.kid4dem": {
+        "children.kids_indicate.kid4.kid4dem": {
             "title": "7d4. Does/did Child 4 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid4.kid4ons": {
+        "children.kids_indicate.kid4.kid4ons": {
             "title": "7e4. If Child 4 was demented, indicate age at onset"
         },
-        "children.kid5.kid5yob": {
+        "children.kids_indicate.kid5.kid5yob": {
             "title": "7a5. Child 5 year of birth"
         },
-        "children.kid5.kid5LIV": {
+        "children.kids_indicate.kid5.kid5LIV": {
             "title": "7b5. Is Child 5 still living?"
         },
-        "children.kid5.kid5yod": {
+        "children.kids_indicate.kid5.kid5yod": {
             "title": "7c5. If Child 5 is deceased, indicate year of death"
         },
-        "children.kid5.kid5dem": {
+        "children.kids_indicate.kid5.kid5dem": {
             "title": "7d5. Does/did Child 5 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid5.kid5ons": {
+        "children.kids_indicate.kid5.kid5ons": {
             "title": "7e5. If Child 5 was demented, indicate age at onset"
         },
-        "children.kid6.kid6yob": {
+        "children.kids_indicate.kid6.kid6yob": {
             "title": "7a6. Child 1 year of birth"
         },
-        "children.kid6.kid6LIV": {
+        "children.kids_indicate.kid6.kid6LIV": {
             "title": "7b6. Is Child 1 still living?"
         },
-        "children.kid6.kid6yod": {
+        "children.kids_indicate.kid6.kid6yod": {
             "title": "7c6. If Child 1 is deceased, indicate year of death"
         },
-        "children.kid6.kid6dem": {
+        "children.kids_indicate.kid6.kid6dem": {
             "title": "7d6. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid6.kid6ons": {
+        "children.kids_indicate.kid6.kid6ons": {
             "title": "7e6. If Child 1 was demented, indicate age at onset"
         },
-        "children.kid7.kid7yob": {
+        "children.kids_indicate.kid7.kid7yob": {
             "title": "7a7. Child 7 year of birth"
         },
-        "children.kid7.kid7LIV": {
+        "children.kids_indicate.kid7.kid7LIV": {
             "title": "7b7. Is Child 7 still living?"
         },
-        "children.kid7.kid7yod": {
+        "children.kids_indicate.kid7.kid7yod": {
             "title": "7c7. If Child 7 is deceased, indicate year of death"
         },
-        "children.kid7.kid7dem": {
+        "children.kids_indicate.kid7.kid7dem": {
             "title": "7d7. Does/did Child 7 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid7.kid7ons": {
+        "children.kids_indicate.kid7.kid7ons": {
             "title": "7e7. If Child 7 was demented, indicate age at onset"
         },
-        "children.kid8.kid8yob": {
+        "children.kids_indicate.kid8.kid8yob": {
             "title": "7a8. Child 1 year of birth"
         },
-        "children.kid8.kid8LIV": {
+        "children.kids_indicate.kid8.kid8LIV": {
             "title": "7b8. Is Child 1 still living?"
         },
-        "children.kid8.kid8yod": {
+        "children.kids_indicate.kid8.kid8yod": {
             "title": "7c8. If Child 1 is deceased, indicate year of death"
         },
-        "children.kid8.kid8dem": {
+        "children.kids_indicate.kid8.kid8dem": {
             "title": "7d8. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid8.kid8ons": {
+        "children.kids_indicate.kid8.kid8ons": {
             "title": "7e8. If Child 1 was demented, indicate age at onset"
         },
-        "children.kid9.kid9yob": {
+        "children.kids_indicate.kid9.kid9yob": {
             "title": "7a9. Child 9 year of birth"
         },
-        "children.kid9.kid9LIV": {
+        "children.kids_indicate.kid9.kid9LIV": {
             "title": "7b9. Is Child 9 still living?"
         },
-        "children.kid9.kid9yod": {
+        "children.kids_indicate.kid9.kid9yod": {
             "title": "7c9. If Child 9 is deceased, indicate year of death"
         },
-        "children.kid9.kid9dem": {
+        "children.kids_indicate.kid9.kid9dem": {
             "title": "7d9. Does/did Child 9 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid9.kid9ons": {
+        "children.kids_indicate.kid9.kid9ons": {
             "title": "7e9. If Child 9 was demented, indicate age at onset"
         },
-        "children.kid10.kid10yob": {
+        "children.kids_indicate.kid10.kid10yob": {
             "title": "7a10. Child 10 year of birth"
         },
-        "children.kid10.kid10LIV": {
+        "children.kids_indicate.kid10.kid10LIV": {
             "title": "7b10. Is Child 10 still living?"
         },
-        "children.kid10.kid10yod": {
+        "children.kids_indicate.kid10.kid10yod": {
             "title": "7c10. If Child 10 is deceased, indicate year of death"
         },
-        "children.kid10.kid10dem": {
+        "children.kids_indicate.kid10.kid10dem": {
             "title": "7d10. Does/did Child 10 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid10.kid10ons": {
+        "children.kids_indicate.kid10.kid10ons": {
             "title": "7e10. If Child 10 was demented, indicate age at onset"
         },
-        "children.kid11.kid11yob": {
+        "children.kids_indicate.kid11.kid11yob": {
             "title": "7a11. Child 11 year of birth"
         },
-        "children.kid11.kid11LIV": {
+        "children.kids_indicate.kid11.kid11LIV": {
             "title": "7b11. Is Child 11 still living?"
         },
-        "children.kid11.kid11yod": {
+        "children.kids_indicate.kid11.kid11yod": {
             "title": "7c11. If Child 11 is deceased, indicate year of death"
         },
-        "children.kid11.kid11dem": {
+        "children.kids_indicate.kid11.kid11dem": {
             "title": "7d11. Does/did Child 11 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid11.kid11ons": {
+        "children.kids_indicate.kid11.kid11ons": {
             "title": "7e11. If Child 11 was demented, indicate age at onset"
         },
-        "children.kid12.kid12yob": {
+        "children.kids_indicate.kid12.kid12yob": {
             "title": "7a12. Child 12 year of birth"
         },
-        "children.kid12.kid12LIV": {
+        "children.kids_indicate.kid12.kid12LIV": {
             "title": "7b12. Is Child 12 still living?"
         },
-        "children.kid12.kid12yod": {
+        "children.kids_indicate.kid12.kid12yod": {
             "title": "7c12. If Child 12 is deceased, indicate year of death"
         },
-        "children.kid12.kid12dem": {
+        "children.kids_indicate.kid12.kid12dem": {
             "title": "7d12. Does/did Child 12 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid12.kid12ons": {
+        "children.kids_indicate.kid12.kid12ons": {
             "title": "7e12. If Child 12 was demented, indicate age at onset"
         },
-        "children.kid13.kid13yob": {
+        "children.kids_indicate.kid13.kid13yob": {
             "title": "7a13. Child 13 year of birth"
         },
-        "children.kid13.kid13LIV": {
+        "children.kids_indicate.kid13.kid13LIV": {
             "title": "7b13. Is Child 13 still living?"
         },
-        "children.kid13.kid13yod": {
+        "children.kids_indicate.kid13.kid13yod": {
             "title": "7c13. If Child 13 is deceased, indicate year of death"
         },
-        "children.kid13.kid13dem": {
+        "children.kids_indicate.kid13.kid13dem": {
             "title": "7d13. Does/did Child 13 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid13.kid13ons": {
+        "children.kids_indicate.kid13.kid13ons": {
             "title": "7e13. If Child 13 was demented, indicate age at onset"
         },
-        "children.kid14.kid14yob": {
+        "children.kids_indicate.kid14.kid14yob": {
             "title": "7a14. Child 14 year of birth"
         },
-        "children.kid14.kid14LIV": {
+        "children.kids_indicate.kid14.kid14LIV": {
             "title": "7b14. Is Child 14 still living?"
         },
-        "children.kid14.kid14yod": {
+        "children.kids_indicate.kid14.kid14yod": {
             "title": "7c14. If Child 14 is deceased, indicate year of death"
         },
-        "children.kid14.kid14dem": {
+        "children.kids_indicate.kid14.kid14dem": {
             "title": "7d14. Does/did Child 14 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid14.kid14ons": {
+        "children.kids_indicate.kid14.kid14ons": {
             "title": "7e14. If Child 14 was demented, indicate age at onset"
         },
-        "children.kid15.kid15yob": {
+        "children.kids_indicate.kid15.kid15yob": {
             "title": "7a15. Child 15 year of birth"
         },
-        "children.kid15.kid15LIV": {
+        "children.kids_indicate.kid15.kid15LIV": {
             "title": "7b15. Is Child 15 still living?"
         },
-        "children.kid15.kid15yod": {
+        "children.kids_indicate.kid15.kid15yod": {
             "title": "7c15. If Child 15 is deceased, indicate year of death"
         },
-        "children.kid15.kid15dem": {
+        "children.kids_indicate.kid15.kid15dem": {
             "title": "7d15. Does/did Child 15 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid15.kid15ons": {
+        "children.kids_indicate.kid15.kid15ons": {
             "title": "7e15. If Child 15 was demented, indicate age at onset"
         },
         "other_relatives.RELSDEM": {
             "title": "8.Number of other demented (as defined on form) blood relatives(cousins, aunts, uncles, grandparents, half siblings), as indicated bysymptoms, history or diagnosis."
         },
-        "other_relatives.rel1.rel1yob": {
+        "other_relatives.rel_indicate.rel1.rel1yob": {
             "title": "9a1. Relative 1 year of birth"
         },
-        "other_relatives.rel1.rel1LIV": {
+        "other_relatives.rel_indicate.rel1.rel1LIV": {
             "title": "9b1. Is Relative 1 still living?"
         },
-        "other_relatives.rel1.rel1yod": {
+        "other_relatives.rel_indicate.rel1.rel1yod": {
             "title": "9c1. If Relative 1 is deceased, indicate year of death"
         },
-        "other_relatives.rel1.rel1dem": {
+        "other_relatives.rel_indicate.rel1.rel1dem": {
             "title": "9d1. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel1.rel1ons": {
+        "other_relatives.rel_indicate.rel1.rel1ons": {
             "title": "9d1. Indicate age at onset"
         },
-        "other_relatives.rel2.rel2yob": {
+        "other_relatives.rel_indicate.rel2.rel2yob": {
             "title": "9a2. Relative 2 year of birth"
         },
-        "other_relatives.rel2.rel2LIV": {
+        "other_relatives.rel_indicate.rel2.rel2LIV": {
             "title": "9b2. Is Relative 2 still living?"
         },
-        "other_relatives.rel2.rel2yod": {
+        "other_relatives.rel_indicate.rel2.rel2yod": {
             "title": "9c2. If Relative 2 is deceased, indicate year of death"
         },
-        "other_relatives.rel2.rel2dem": {
+        "other_relatives.rel_indicate.rel2.rel2dem": {
             "title": "9d2. Does/did Relative 2 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel2.rel2ons": {
+        "other_relatives.rel_indicate.rel2.rel2ons": {
             "title": "9d2. Indicate age at onset"
         },
-        "other_relatives.rel3.rel3yob": {
+        "other_relatives.rel_indicate.rel3.rel3yob": {
             "title": "9a3. Relative 3 year of birth"
         },
-        "other_relatives.rel3.rel3LIV": {
+        "other_relatives.rel_indicate.rel3.rel3LIV": {
             "title": "9b3. Is Relative 3 still living?"
         },
-        "other_relatives.rel3.rel3yod": {
+        "other_relatives.rel_indicate.rel3.rel3yod": {
             "title": "9c3. If Relative 3 is deceased, indicate year of death"
         },
-        "other_relatives.rel3.rel3dem": {
+        "other_relatives.rel_indicate.rel3.rel3dem": {
             "title": "9d3. Does/did Relative 3 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel3.rel3ons": {
+        "other_relatives.rel_indicate.rel3.rel3ons": {
             "title": "9d3. Indicate age at onset"
         },
-        "other_relatives.rel4.rel4yob": {
+        "other_relatives.rel_indicate.rel4.rel4yob": {
             "title": "9a4. Relative 4 year of birth"
         },
-        "other_relatives.rel4.rel4LIV": {
+        "other_relatives.rel_indicate.rel4.rel4LIV": {
             "title": "9b4. Is Relative 4 still living?"
         },
-        "other_relatives.rel4.rel4yod": {
+        "other_relatives.rel_indicate.rel4.rel4yod": {
             "title": "9c4. If Relative 4 is deceased, indicate year of death"
         },
-        "other_relatives.rel4.rel4dem": {
+        "other_relatives.rel_indicate.rel4.rel4dem": {
             "title": "9d4. Does/did Relative 4 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel4.rel4ons": {
+        "other_relatives.rel_indicate.rel4.rel4ons": {
             "title": "9d4. Indicate age at onset"
         },
-        "other_relatives.rel5.rel5yob": {
+        "other_relatives.rel_indicate.rel5.rel5yob": {
             "title": "9a5. Relative 5 year of birth"
         },
-        "other_relatives.rel5.rel5LIV": {
+        "other_relatives.rel_indicate.rel5.rel5LIV": {
             "title": "9b5. Is Relative 5 still living?"
         },
-        "other_relatives.rel5.rel5yod": {
+        "other_relatives.rel_indicate.rel5.rel5yod": {
             "title": "9c5. If Relative 5 is deceased, indicate year of death"
         },
-        "other_relatives.rel5.rel5dem": {
+        "other_relatives.rel_indicate.rel5.rel5dem": {
             "title": "9d5. Does/did Relative 5 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel5.rel5ons": {
+        "other_relatives.rel_indicate.rel5.rel5ons": {
             "title": "9d5. Indicate age at onset"
         },
-        "other_relatives.rel6.rel6yob": {
+        "other_relatives.rel_indicate.rel6.rel6yob": {
             "title": "9a6. Relative 1 year of birth"
         },
-        "other_relatives.rel6.rel6LIV": {
+        "other_relatives.rel_indicate.rel6.rel6LIV": {
             "title": "9b6. Is Relative 1 still living?"
         },
-        "other_relatives.rel6.rel6yod": {
+        "other_relatives.rel_indicate.rel6.rel6yod": {
             "title": "9c6. If Relative 1 is deceased, indicate year of death"
         },
-        "other_relatives.rel6.rel6dem": {
+        "other_relatives.rel_indicate.rel6.rel6dem": {
             "title": "9d6. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel6.rel6ons": {
+        "other_relatives.rel_indicate.rel6.rel6ons": {
             "title": "9d6. Indicate age at onset"
         }
     },
@@ -2664,415 +2664,415 @@
         "siblings.sibs": {
             "title": "4. How many full siblings does the subject have?"
         },
-        "siblings.sib1.sib1yob": {
+        "siblings.sibs_indicate.sib1.sib1yob": {
             "title": "5a1. Sibling 1 year of birth"
         },
-        "siblings.sib1.sib1LIV": {
+        "siblings.sibs_indicate.sib1.sib1LIV": {
             "title": "5b1. Is Sibling 1 still living?"
         },
-        "siblings.sib1.sib1yod": {
+        "siblings.sibs_indicate.sib1.sib1yod": {
             "title": "5c1. If Sibling 1 is deceased, indicate year of death"
         },
-        "siblings.sib1.sib1dem": {
+        "siblings.sibs_indicate.sib1.sib1dem": {
             "title": "5d1. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib1.sib1ons": {
+        "siblings.sibs_indicate.sib1.sib1ons": {
             "title": "5e1. If Sibling 1 was demented, indicate age at onset"
         },
-        "siblings.sib2.sib2yob": {
+        "siblings.sibs_indicate.sib2.sib2yob": {
             "title": "5a2. Sibling 2 year of birth"
         },
-        "siblings.sib2.sib2LIV": {
+        "siblings.sibs_indicate.sib2.sib2LIV": {
             "title": "5b2. Is Sibling 2 still living?"
         },
-        "siblings.sib2.sib2yod": {
+        "siblings.sibs_indicate.sib2.sib2yod": {
             "title": "5c2. If Sibling 2 is deceased, indicate year of death"
         },
-        "siblings.sib2.sib2dem": {
+        "siblings.sibs_indicate.sib2.sib2dem": {
             "title": "5d2. Does/did Sibling 2 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib2.sib2ons": {
+        "siblings.sibs_indicate.sib2.sib2ons": {
             "title": "5e2. If Sibling 2 was demented, indicate age at onset"
         },
-        "siblings.sib3.sib3yob": {
+        "siblings.sibs_indicate.sib3.sib3yob": {
             "title": "5a3. Sibling 3 year of birth"
         },
-        "siblings.sib3.sib3LIV": {
+        "siblings.sibs_indicate.sib3.sib3LIV": {
             "title": "5b3. Is Sibling 3 still living?"
         },
-        "siblings.sib3.sib3yod": {
+        "siblings.sibs_indicate.sib3.sib3yod": {
             "title": "5c3. If Sibling 3 is deceased, indicate year of death"
         },
-        "siblings.sib3.sib3dem": {
+        "siblings.sibs_indicate.sib3.sib3dem": {
             "title": "5d3. Does/did Sibling 3 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib3.sib3ons": {
+        "siblings.sibs_indicate.sib3.sib3ons": {
             "title": "5e3. If Sibling 3 was demented, indicate age at onset"
         },
-        "siblings.sib4.sib4yob": {
+        "siblings.sibs_indicate.sib4.sib4yob": {
             "title": "5a4. Sibling 4 year of birth"
         },
-        "siblings.sib4.sib4LIV": {
+        "siblings.sibs_indicate.sib4.sib4LIV": {
             "title": "5b4. Is Sibling 4 still living?"
         },
-        "siblings.sib4.sib4yod": {
+        "siblings.sibs_indicate.sib4.sib4yod": {
             "title": "5c4. If Sibling 4 is deceased, indicate year of death"
         },
-        "siblings.sib4.sib4dem": {
+        "siblings.sibs_indicate.sib4.sib4dem": {
             "title": "5d4. Does/did Sibling 4 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib4.sib4ons": {
+        "siblings.sibs_indicate.sib4.sib4ons": {
             "title": "5e4. If Sibling 4 was demented, indicate age at onset"
         },
-        "siblings.sib5.sib5yob": {
+        "siblings.sibs_indicate.sib5.sib5yob": {
             "title": "5a5. Sibling 5 year of birth"
         },
-        "siblings.sib5.sib5LIV": {
+        "siblings.sibs_indicate.sib5.sib5LIV": {
             "title": "5b5. Is Sibling 5 still living?"
         },
-        "siblings.sib5.sib5yod": {
+        "siblings.sibs_indicate.sib5.sib5yod": {
             "title": "5c5. If Sibling 5 is deceased, indicate year of death"
         },
-        "siblings.sib5.sib5dem": {
+        "siblings.sibs_indicate.sib5.sib5dem": {
             "title": "5d5. Does/did Sibling 5 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib5.sib5ons": {
+        "siblings.sibs_indicate.sib5.sib5ons": {
             "title": "5e5. If Sibling 5 was demented, indicate age at onset"
         },
-        "siblings.sib6.sib6yob": {
+        "siblings.sibs_indicate.sib6.sib6yob": {
             "title": "5a6. Sibling 1 year of birth"
         },
-        "siblings.sib6.sib6LIV": {
+        "siblings.sibs_indicate.sib6.sib6LIV": {
             "title": "5b6. Is Sibling 1 still living?"
         },
-        "siblings.sib6.sib6yod": {
+        "siblings.sibs_indicate.sib6.sib6yod": {
             "title": "5c6. If Sibling 1 is deceased, indicate year of death"
         },
-        "siblings.sib6.sib6dem": {
+        "siblings.sibs_indicate.sib6.sib6dem": {
             "title": "5d6. Does/did Sibling 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "siblings.sib6.sib6ons": {
+        "siblings.sibs_indicate.sib6.sib6ons": {
             "title": "5e6. If Sibling 1 was demented, indicate age at onset"
         },
         "children.kids": {
             "title": "6. How many biological children did the subject have?"
         },
-        "children.kid1.kid1yob": {
+        "children.kids_indicate.kid1.kid1yob": {
             "title": "7a1. Child 1 year of birth"
         },
-        "children.kid1.kid1LIV": {
+        "children.kids_indicate.kid1.kid1LIV": {
             "title": "7b1. Is Child 1 still living?"
         },
-        "children.kid1.kid1yod": {
+        "children.kids_indicate.kid1.kid1yod": {
             "title": "7c1. If Child 1 is deceased, indicate year of death"
         },
-        "children.kid1.kid1dem": {
+        "children.kids_indicate.kid1.kid1dem": {
             "title": "7d1. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid1.kid1ons": {
+        "children.kids_indicate.kid1.kid1ons": {
             "title": "7e1. If Child 1 was demented, indicate age at onset"
         },
-        "children.kid2.kid2yob": {
+        "children.kids_indicate.kid2.kid2yob": {
             "title": "7a2. Child 2 year of birth"
         },
-        "children.kid2.kid2LIV": {
+        "children.kids_indicate.kid2.kid2LIV": {
             "title": "7b2. Is Child 2 still living?"
         },
-        "children.kid2.kid2yod": {
+        "children.kids_indicate.kid2.kid2yod": {
             "title": "7c2. If Child 2 is deceased, indicate year of death"
         },
-        "children.kid2.kid2dem": {
+        "children.kids_indicate.kid2.kid2dem": {
             "title": "7d2. Does/did Child 2 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid2.kid2ons": {
+        "children.kids_indicate.kid2.kid2ons": {
             "title": "7e2. If Child 2 was demented, indicate age at onset"
         },
-        "children.kid3.kid3yob": {
+        "children.kids_indicate.kid3.kid3yob": {
             "title": "7a3. Child 3 year of birth"
         },
-        "children.kid3.kid3LIV": {
+        "children.kids_indicate.kid3.kid3LIV": {
             "title": "7b3. Is Child 3 still living?"
         },
-        "children.kid3.kid3yod": {
+        "children.kids_indicate.kid3.kid3yod": {
             "title": "7c3. If Child 3 is deceased, indicate year of death"
         },
-        "children.kid3.kid3dem": {
+        "children.kids_indicate.kid3.kid3dem": {
             "title": "7d3. Does/did Child 3 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid3.kid3ons": {
+        "children.kids_indicate.kid3.kid3ons": {
             "title": "7e3. If Child 3 was demented, indicate age at onset"
         },
-        "children.kid4.kid4yob": {
+        "children.kids_indicate.kid4.kid4yob": {
             "title": "7a4. Child 4 year of birth"
         },
-        "children.kid4.kid4LIV": {
+        "children.kids_indicate.kid4.kid4LIV": {
             "title": "7b4. Is Child 4 still living?"
         },
-        "children.kid4.kid4yod": {
+        "children.kids_indicate.kid4.kid4yod": {
             "title": "7c4. If Child 4 is deceased, indicate year of death"
         },
-        "children.kid4.kid4dem": {
+        "children.kids_indicate.kid4.kid4dem": {
             "title": "7d4. Does/did Child 4 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid4.kid4ons": {
+        "children.kids_indicate.kid4.kid4ons": {
             "title": "7e4. If Child 4 was demented, indicate age at onset"
         },
-        "children.kid5.kid5yob": {
+        "children.kids_indicate.kid5.kid5yob": {
             "title": "7a5. Child 5 year of birth"
         },
-        "children.kid5.kid5LIV": {
+        "children.kids_indicate.kid5.kid5LIV": {
             "title": "7b5. Is Child 5 still living?"
         },
-        "children.kid5.kid5yod": {
+        "children.kids_indicate.kid5.kid5yod": {
             "title": "7c5. If Child 5 is deceased, indicate year of death"
         },
-        "children.kid5.kid5dem": {
+        "children.kids_indicate.kid5.kid5dem": {
             "title": "7d5. Does/did Child 5 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid5.kid5ons": {
+        "children.kids_indicate.kid5.kid5ons": {
             "title": "7e5. If Child 5 was demented, indicate age at onset"
         },
-        "children.kid6.kid6yob": {
+        "children.kids_indicate.kid6.kid6yob": {
             "title": "7a6. Child 1 year of birth"
         },
-        "children.kid6.kid6LIV": {
+        "children.kids_indicate.kid6.kid6LIV": {
             "title": "7b6. Is Child 1 still living?"
         },
-        "children.kid6.kid6yod": {
+        "children.kids_indicate.kid6.kid6yod": {
             "title": "7c6. If Child 1 is deceased, indicate year of death"
         },
-        "children.kid6.kid6dem": {
+        "children.kids_indicate.kid6.kid6dem": {
             "title": "7d6. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid6.kid6ons": {
+        "children.kids_indicate.kid6.kid6ons": {
             "title": "7e6. If Child 1 was demented, indicate age at onset"
         },
-        "children.kid7.kid7yob": {
+        "children.kids_indicate.kid7.kid7yob": {
             "title": "7a7. Child 7 year of birth"
         },
-        "children.kid7.kid7LIV": {
+        "children.kids_indicate.kid7.kid7LIV": {
             "title": "7b7. Is Child 7 still living?"
         },
-        "children.kid7.kid7yod": {
+        "children.kids_indicate.kid7.kid7yod": {
             "title": "7c7. If Child 7 is deceased, indicate year of death"
         },
-        "children.kid7.kid7dem": {
+        "children.kids_indicate.kid7.kid7dem": {
             "title": "7d7. Does/did Child 7 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid7.kid7ons": {
+        "children.kids_indicate.kid7.kid7ons": {
             "title": "7e7. If Child 7 was demented, indicate age at onset"
         },
-        "children.kid8.kid8yob": {
+        "children.kids_indicate.kid8.kid8yob": {
             "title": "7a8. Child 1 year of birth"
         },
-        "children.kid8.kid8LIV": {
+        "children.kids_indicate.kid8.kid8LIV": {
             "title": "7b8. Is Child 1 still living?"
         },
-        "children.kid8.kid8yod": {
+        "children.kids_indicate.kid8.kid8yod": {
             "title": "7c8. If Child 1 is deceased, indicate year of death"
         },
-        "children.kid8.kid8dem": {
+        "children.kids_indicate.kid8.kid8dem": {
             "title": "7d8. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid8.kid8ons": {
+        "children.kids_indicate.kid8.kid8ons": {
             "title": "7e8. If Child 1 was demented, indicate age at onset"
         },
-        "children.kid9.kid9yob": {
+        "children.kids_indicate.kid9.kid9yob": {
             "title": "7a9. Child 9 year of birth"
         },
-        "children.kid9.kid9LIV": {
+        "children.kids_indicate.kid9.kid9LIV": {
             "title": "7b9. Is Child 9 still living?"
         },
-        "children.kid9.kid9yod": {
+        "children.kids_indicate.kid9.kid9yod": {
             "title": "7c9. If Child 9 is deceased, indicate year of death"
         },
-        "children.kid9.kid9dem": {
+        "children.kids_indicate.kid9.kid9dem": {
             "title": "7d9. Does/did Child 9 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid9.kid9ons": {
+        "children.kids_indicate.kid9.kid9ons": {
             "title": "7e9. If Child 9 was demented, indicate age at onset"
         },
-        "children.kid10.kid10yob": {
+        "children.kids_indicate.kid10.kid10yob": {
             "title": "7a10. Child 10 year of birth"
         },
-        "children.kid10.kid10LIV": {
+        "children.kids_indicate.kid10.kid10LIV": {
             "title": "7b10. Is Child 10 still living?"
         },
-        "children.kid10.kid10yod": {
+        "children.kids_indicate.kid10.kid10yod": {
             "title": "7c10. If Child 10 is deceased, indicate year of death"
         },
-        "children.kid10.kid10dem": {
+        "children.kids_indicate.kid10.kid10dem": {
             "title": "7d10. Does/did Child 10 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid10.kid10ons": {
+        "children.kids_indicate.kid10.kid10ons": {
             "title": "7e10. If Child 10 was demented, indicate age at onset"
         },
-        "children.kid11.kid11yob": {
+        "children.kids_indicate.kid11.kid11yob": {
             "title": "7a11. Child 11 year of birth"
         },
-        "children.kid11.kid11LIV": {
+        "children.kids_indicate.kid11.kid11LIV": {
             "title": "7b11. Is Child 11 still living?"
         },
-        "children.kid11.kid11yod": {
+        "children.kids_indicate.kid11.kid11yod": {
             "title": "7c11. If Child 11 is deceased, indicate year of death"
         },
-        "children.kid11.kid11dem": {
+        "children.kids_indicate.kid11.kid11dem": {
             "title": "7d11. Does/did Child 11 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid11.kid11ons": {
+        "children.kids_indicate.kid11.kid11ons": {
             "title": "7e11. If Child 11 was demented, indicate age at onset"
         },
-        "children.kid12.kid12yob": {
+        "children.kids_indicate.kid12.kid12yob": {
             "title": "7a12. Child 12 year of birth"
         },
-        "children.kid12.kid12LIV": {
+        "children.kids_indicate.kid12.kid12LIV": {
             "title": "7b12. Is Child 12 still living?"
         },
-        "children.kid12.kid12yod": {
+        "children.kids_indicate.kid12.kid12yod": {
             "title": "7c12. If Child 12 is deceased, indicate year of death"
         },
-        "children.kid12.kid12dem": {
+        "children.kids_indicate.kid12.kid12dem": {
             "title": "7d12. Does/did Child 12 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid12.kid12ons": {
+        "children.kids_indicate.kid12.kid12ons": {
             "title": "7e12. If Child 12 was demented, indicate age at onset"
         },
-        "children.kid13.kid13yob": {
+        "children.kids_indicate.kid13.kid13yob": {
             "title": "7a13. Child 13 year of birth"
         },
-        "children.kid13.kid13LIV": {
+        "children.kids_indicate.kid13.kid13LIV": {
             "title": "7b13. Is Child 13 still living?"
         },
-        "children.kid13.kid13yod": {
+        "children.kids_indicate.kid13.kid13yod": {
             "title": "7c13. If Child 13 is deceased, indicate year of death"
         },
-        "children.kid13.kid13dem": {
+        "children.kids_indicate.kid13.kid13dem": {
             "title": "7d13. Does/did Child 13 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid13.kid13ons": {
+        "children.kids_indicate.kid13.kid13ons": {
             "title": "7e13. If Child 13 was demented, indicate age at onset"
         },
-        "children.kid14.kid14yob": {
+        "children.kids_indicate.kid14.kid14yob": {
             "title": "7a14. Child 14 year of birth"
         },
-        "children.kid14.kid14LIV": {
+        "children.kids_indicate.kid14.kid14LIV": {
             "title": "7b14. Is Child 14 still living?"
         },
-        "children.kid14.kid14yod": {
+        "children.kids_indicate.kid14.kid14yod": {
             "title": "7c14. If Child 14 is deceased, indicate year of death"
         },
-        "children.kid14.kid14dem": {
+        "children.kids_indicate.kid14.kid14dem": {
             "title": "7d14. Does/did Child 14 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid14.kid14ons": {
+        "children.kids_indicate.kid14.kid14ons": {
             "title": "7e14. If Child 14 was demented, indicate age at onset"
         },
-        "children.kid15.kid15yob": {
+        "children.kids_indicate.kid15.kid15yob": {
             "title": "7a15. Child 15 year of birth"
         },
-        "children.kid15.kid15LIV": {
+        "children.kids_indicate.kid15.kid15LIV": {
             "title": "7b15. Is Child 15 still living?"
         },
-        "children.kid15.kid15yod": {
+        "children.kids_indicate.kid15.kid15yod": {
             "title": "7c15. If Child 15 is deceased, indicate year of death"
         },
-        "children.kid15.kid15dem": {
+        "children.kids_indicate.kid15.kid15dem": {
             "title": "7d15. Does/did Child 15 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "children.kid15.kid15ons": {
+        "children.kids_indicate.kid15.kid15ons": {
             "title": "7e15. If Child 15 was demented, indicate age at onset"
         },
         "other_relatives.RELSDEM": {
             "title": "8.Number of other demented (as defined on form) blood relatives(cousins, aunts, uncles, grandparents, half siblings), as indicated bysymptoms, history or diagnosis."
         },
-        "other_relatives.rel1.rel1yob": {
+        "other_relatives.rel_indicate.rel1.rel1yob": {
             "title": "9a1. Relative 1 year of birth"
         },
-        "other_relatives.rel1.rel1LIV": {
+        "other_relatives.rel_indicate.rel1.rel1LIV": {
             "title": "9b1. Is Relative 1 still living?"
         },
-        "other_relatives.rel1.rel1yod": {
+        "other_relatives.rel_indicate.rel1.rel1yod": {
             "title": "9c1. If Relative 1 is deceased, indicate year of death"
         },
-        "other_relatives.rel1.rel1dem": {
+        "other_relatives.rel_indicate.rel1.rel1dem": {
             "title": "9d1. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel1.rel1ons": {
+        "other_relatives.rel_indicate.rel1.rel1ons": {
             "title": "9d1. Indicate age at onset"
         },
-        "other_relatives.rel2.rel2yob": {
+        "other_relatives.rel_indicate.rel2.rel2yob": {
             "title": "9a2. Relative 2 year of birth"
         },
-        "other_relatives.rel2.rel2LIV": {
+        "other_relatives.rel_indicate.rel2.rel2LIV": {
             "title": "9b2. Is Relative 2 still living?"
         },
-        "other_relatives.rel2.rel2yod": {
+        "other_relatives.rel_indicate.rel2.rel2yod": {
             "title": "9c2. If Relative 2 is deceased, indicate year of death"
         },
-        "other_relatives.rel2.rel2dem": {
+        "other_relatives.rel_indicate.rel2.rel2dem": {
             "title": "9d2. Does/did Relative 2 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel2.rel2ons": {
+        "other_relatives.rel_indicate.rel2.rel2ons": {
             "title": "9d2. Indicate age at onset"
         },
-        "other_relatives.rel3.rel3yob": {
+        "other_relatives.rel_indicate.rel3.rel3yob": {
             "title": "9a3. Relative 3 year of birth"
         },
-        "other_relatives.rel3.rel3LIV": {
+        "other_relatives.rel_indicate.rel3.rel3LIV": {
             "title": "9b3. Is Relative 3 still living?"
         },
-        "other_relatives.rel3.rel3yod": {
+        "other_relatives.rel_indicate.rel3.rel3yod": {
             "title": "9c3. If Relative 3 is deceased, indicate year of death"
         },
-        "other_relatives.rel3.rel3dem": {
+        "other_relatives.rel_indicate.rel3.rel3dem": {
             "title": "9d3. Does/did Relative 3 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel3.rel3ons": {
+        "other_relatives.rel_indicate.rel3.rel3ons": {
             "title": "9d3. Indicate age at onset"
         },
-        "other_relatives.rel4.rel4yob": {
+        "other_relatives.rel_indicate.rel4.rel4yob": {
             "title": "9a4. Relative 4 year of birth"
         },
-        "other_relatives.rel4.rel4LIV": {
+        "other_relatives.rel_indicate.rel4.rel4LIV": {
             "title": "9b4. Is Relative 4 still living?"
         },
-        "other_relatives.rel4.rel4yod": {
+        "other_relatives.rel_indicate.rel4.rel4yod": {
             "title": "9c4. If Relative 4 is deceased, indicate year of death"
         },
-        "other_relatives.rel4.rel4dem": {
+        "other_relatives.rel_indicate.rel4.rel4dem": {
             "title": "9d4. Does/did Relative 4 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel4.rel4ons": {
+        "other_relatives.rel_indicate.rel4.rel4ons": {
             "title": "9d4. Indicate age at onset"
         },
-        "other_relatives.rel5.rel5yob": {
+        "other_relatives.rel_indicate.rel5.rel5yob": {
             "title": "9a5. Relative 5 year of birth"
         },
-        "other_relatives.rel5.rel5LIV": {
+        "other_relatives.rel_indicate.rel5.rel5LIV": {
             "title": "9b5. Is Relative 5 still living?"
         },
-        "other_relatives.rel5.rel5yod": {
+        "other_relatives.rel_indicate.rel5.rel5yod": {
             "title": "9c5. If Relative 5 is deceased, indicate year of death"
         },
-        "other_relatives.rel5.rel5dem": {
+        "other_relatives.rel_indicate.rel5.rel5dem": {
             "title": "9d5. Does/did Relative 5 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel5.rel5ons": {
+        "other_relatives.rel_indicate.rel5.rel5ons": {
             "title": "9d5. Indicate age at onset"
         },
-        "other_relatives.rel6.rel6yob": {
+        "other_relatives.rel_indicate.rel6.rel6yob": {
             "title": "9a6. Relative 1 year of birth"
         },
-        "other_relatives.rel6.rel6LIV": {
+        "other_relatives.rel_indicate.rel6.rel6LIV": {
             "title": "9b6. Is Relative 1 still living?"
         },
-        "other_relatives.rel6.rel6yod": {
+        "other_relatives.rel_indicate.rel6.rel6yod": {
             "title": "9c6. If Relative 1 is deceased, indicate year of death"
         },
-        "other_relatives.rel6.rel6dem": {
+        "other_relatives.rel_indicate.rel6.rel6dem": {
             "title": "9d6. Does/did Relative 1 have dementia, as indicated by symptoms, history or diagnosis?"
         },
-        "other_relatives.rel6.rel6ons": {
+        "other_relatives.rel_indicate.rel6.rel6ons": {
             "title": "9d6. Indicate age at onset"
         }
     },
@@ -3091,93 +3091,93 @@
         "siblings.TWIN": 1.0,
         "siblings.TWINTYPE": 1.0,
         "siblings.sibs": 1.0,
-        "siblings.sib1.sib1yob": 1.0,
-        "siblings.sib1.sib1LIV": 1.0,
-        "siblings.sib1.sib1yod": 1.0,
-        "siblings.sib1.sib1dem": 1.0,
-        "siblings.sib1.sib1ons": 1.0,
-        "siblings.sib2.sib2yob": 1.0,
-        "siblings.sib2.sib2LIV": 1.0,
-        "siblings.sib2.sib2yod": 1.0,
-        "siblings.sib2.sib2dem": 1.0,
-        "siblings.sib2.sib2ons": 1.0,
-        "siblings.sib3.sib3yob": 1.0,
-        "siblings.sib3.sib3LIV": 1.0,
-        "siblings.sib3.sib3yod": 1.0,
-        "siblings.sib3.sib3dem": 1.0,
-        "siblings.sib3.sib3ons": 1.0,
-        "siblings.sib4.sib4yob": 1.0,
-        "siblings.sib4.sib4LIV": 1.0,
-        "siblings.sib4.sib4yod": 1.0,
-        "siblings.sib4.sib4dem": 1.0,
-        "siblings.sib4.sib4ons": 1.0,
-        "siblings.sib5.sib5yob": 1.0,
-        "siblings.sib5.sib5LIV": 1.0,
-        "siblings.sib5.sib5yod": 1.0,
-        "siblings.sib5.sib5dem": 1.0,
-        "siblings.sib5.sib5ons": 1.0,
-        "siblings.sib6.sib6yob": 1.0,
-        "siblings.sib6.sib6LIV": 1.0,
-        "siblings.sib6.sib6yod": 1.0,
-        "siblings.sib6.sib6dem": 1.0,
-        "siblings.sib6.sib6ons": 1.0,
+        "siblings.sibs_indicate.sib1.sib1yob": 1.0,
+        "siblings.sibs_indicate.sib1.sib1LIV": 1.0,
+        "siblings.sibs_indicate.sib1.sib1yod": 1.0,
+        "siblings.sibs_indicate.sib1.sib1dem": 1.0,
+        "siblings.sibs_indicate.sib1.sib1ons": 1.0,
+        "siblings.sibs_indicate.sib2.sib2yob": 1.0,
+        "siblings.sibs_indicate.sib2.sib2LIV": 1.0,
+        "siblings.sibs_indicate.sib2.sib2yod": 1.0,
+        "siblings.sibs_indicate.sib2.sib2dem": 1.0,
+        "siblings.sibs_indicate.sib2.sib2ons": 1.0,
+        "siblings.sibs_indicate.sib3.sib3yob": 1.0,
+        "siblings.sibs_indicate.sib3.sib3LIV": 1.0,
+        "siblings.sibs_indicate.sib3.sib3yod": 1.0,
+        "siblings.sibs_indicate.sib3.sib3dem": 1.0,
+        "siblings.sibs_indicate.sib3.sib3ons": 1.0,
+        "siblings.sibs_indicate.sib4.sib4yob": 1.0,
+        "siblings.sibs_indicate.sib4.sib4LIV": 1.0,
+        "siblings.sibs_indicate.sib4.sib4yod": 1.0,
+        "siblings.sibs_indicate.sib4.sib4dem": 1.0,
+        "siblings.sibs_indicate.sib4.sib4ons": 1.0,
+        "siblings.sibs_indicate.sib5.sib5yob": 1.0,
+        "siblings.sibs_indicate.sib5.sib5LIV": 1.0,
+        "siblings.sibs_indicate.sib5.sib5yod": 1.0,
+        "siblings.sibs_indicate.sib5.sib5dem": 1.0,
+        "siblings.sibs_indicate.sib5.sib5ons": 1.0,
+        "siblings.sibs_indicate.sib6.sib6yob": 1.0,
+        "siblings.sibs_indicate.sib6.sib6LIV": 1.0,
+        "siblings.sibs_indicate.sib6.sib6yod": 1.0,
+        "siblings.sibs_indicate.sib6.sib6dem": 1.0,
+        "siblings.sibs_indicate.sib6.sib6ons": 1.0,
         "children.kids": 1.0,
-        "children.kid1.kid1yob": 1.0,
-        "children.kid1.kid1LIV": 1.0,
-        "children.kid1.kid1yod": 1.0,
-        "children.kid1.kid1dem": 1.0,
-        "children.kid1.kid1ons": 1.0,
-        "children.kid2.kid2yob": 1.0,
-        "children.kid2.kid2LIV": 1.0,
-        "children.kid2.kid2yod": 1.0,
-        "children.kid2.kid2dem": 1.0,
-        "children.kid2.kid2ons": 1.0,
-        "children.kid3.kid3yob": 1.0,
-        "children.kid3.kid3LIV": 1.0,
-        "children.kid3.kid3yod": 1.0,
-        "children.kid3.kid3dem": 1.0,
-        "children.kid3.kid3ons": 1.0,
-        "children.kid4.kid4yob": 1.0,
-        "children.kid4.kid4LIV": 1.0,
-        "children.kid4.kid4yod": 1.0,
-        "children.kid4.kid4dem": 1.0,
-        "children.kid4.kid4ons": 1.0,
-        "children.kid5.kid5yob": 1.0,
-        "children.kid5.kid5LIV": 1.0,
-        "children.kid5.kid5yod": 1.0,
-        "children.kid5.kid5dem": 1.0,
-        "children.kid5.kid5ons": 1.0,
+        "children.kids_indicate.kid1.kid1yob": 1.0,
+        "children.kids_indicate.kid1.kid1LIV": 1.0,
+        "children.kids_indicate.kid1.kid1yod": 1.0,
+        "children.kids_indicate.kid1.kid1dem": 1.0,
+        "children.kids_indicate.kid1.kid1ons": 1.0,
+        "children.kids_indicate.kid2.kid2yob": 1.0,
+        "children.kids_indicate.kid2.kid2LIV": 1.0,
+        "children.kids_indicate.kid2.kid2yod": 1.0,
+        "children.kids_indicate.kid2.kid2dem": 1.0,
+        "children.kids_indicate.kid2.kid2ons": 1.0,
+        "children.kids_indicate.kid3.kid3yob": 1.0,
+        "children.kids_indicate.kid3.kid3LIV": 1.0,
+        "children.kids_indicate.kid3.kid3yod": 1.0,
+        "children.kids_indicate.kid3.kid3dem": 1.0,
+        "children.kids_indicate.kid3.kid3ons": 1.0,
+        "children.kids_indicate.kid4.kid4yob": 1.0,
+        "children.kids_indicate.kid4.kid4LIV": 1.0,
+        "children.kids_indicate.kid4.kid4yod": 1.0,
+        "children.kids_indicate.kid4.kid4dem": 1.0,
+        "children.kids_indicate.kid4.kid4ons": 1.0,
+        "children.kids_indicate.kid5.kid5yob": 1.0,
+        "children.kids_indicate.kid5.kid5LIV": 1.0,
+        "children.kids_indicate.kid5.kid5yod": 1.0,
+        "children.kids_indicate.kid5.kid5dem": 1.0,
+        "children.kids_indicate.kid5.kid5ons": 1.0,
         "other_relatives.RELSDEM": 1.0,
-        "other_relatives.rel1.rel1yob": 1.0,
-        "other_relatives.rel1.rel1LIV": 1.0,
-        "other_relatives.rel1.rel1yod": 1.0,
-        "other_relatives.rel1.rel1dem": 1.0,
-        "other_relatives.rel1.rel1ons": 1.0,
-        "other_relatives.rel2.rel2yob": 1.0,
-        "other_relatives.rel2.rel2LIV": 1.0,
-        "other_relatives.rel2.rel2yod": 1.0,
-        "other_relatives.rel2.rel2dem": 1.0,
-        "other_relatives.rel2.rel2ons": 1.0,
-        "other_relatives.rel3.rel3yob": 1.0,
-        "other_relatives.rel3.rel3LIV": 1.0,
-        "other_relatives.rel3.rel3yod": 1.0,
-        "other_relatives.rel3.rel3dem": 1.0,
-        "other_relatives.rel3.rel3ons": 1.0,
-        "other_relatives.rel4.rel4yob": 1.0,
-        "other_relatives.rel4.rel4LIV": 1.0,
-        "other_relatives.rel4.rel4yod": 1.0,
-        "other_relatives.rel4.rel4dem": 1.0,
-        "other_relatives.rel4.rel4ons": 1.0,
-        "other_relatives.rel5.rel5yob": 1.0,
-        "other_relatives.rel5.rel5LIV": 1.0,
-        "other_relatives.rel5.rel5yod": 1.0,
-        "other_relatives.rel5.rel5dem": 1.0,
-        "other_relatives.rel5.rel5ons": 1.0,
-        "other_relatives.rel6.rel6yob": 1.0,
-        "other_relatives.rel6.rel6LIV": 1.0,
-        "other_relatives.rel6.rel6yod": 1.0,
-        "other_relatives.rel6.rel6dem": 1.0,
-        "other_relatives.rel6.rel6ons": 1.0
+        "other_relatives.rel_indicate.rel1.rel1yob": 1.0,
+        "other_relatives.rel_indicate.rel1.rel1LIV": 1.0,
+        "other_relatives.rel_indicate.rel1.rel1yod": 1.0,
+        "other_relatives.rel_indicate.rel1.rel1dem": 1.0,
+        "other_relatives.rel_indicate.rel1.rel1ons": 1.0,
+        "other_relatives.rel_indicate.rel2.rel2yob": 1.0,
+        "other_relatives.rel_indicate.rel2.rel2LIV": 1.0,
+        "other_relatives.rel_indicate.rel2.rel2yod": 1.0,
+        "other_relatives.rel_indicate.rel2.rel2dem": 1.0,
+        "other_relatives.rel_indicate.rel2.rel2ons": 1.0,
+        "other_relatives.rel_indicate.rel3.rel3yob": 1.0,
+        "other_relatives.rel_indicate.rel3.rel3LIV": 1.0,
+        "other_relatives.rel_indicate.rel3.rel3yod": 1.0,
+        "other_relatives.rel_indicate.rel3.rel3dem": 1.0,
+        "other_relatives.rel_indicate.rel3.rel3ons": 1.0,
+        "other_relatives.rel_indicate.rel4.rel4yob": 1.0,
+        "other_relatives.rel_indicate.rel4.rel4LIV": 1.0,
+        "other_relatives.rel_indicate.rel4.rel4yod": 1.0,
+        "other_relatives.rel_indicate.rel4.rel4dem": 1.0,
+        "other_relatives.rel_indicate.rel4.rel4ons": 1.0,
+        "other_relatives.rel_indicate.rel5.rel5yob": 1.0,
+        "other_relatives.rel_indicate.rel5.rel5LIV": 1.0,
+        "other_relatives.rel_indicate.rel5.rel5yod": 1.0,
+        "other_relatives.rel_indicate.rel5.rel5dem": 1.0,
+        "other_relatives.rel_indicate.rel5.rel5ons": 1.0,
+        "other_relatives.rel_indicate.rel6.rel6yob": 1.0,
+        "other_relatives.rel_indicate.rel6.rel6LIV": 1.0,
+        "other_relatives.rel_indicate.rel6.rel6yod": 1.0,
+        "other_relatives.rel_indicate.rel6.rel6dem": 1.0,
+        "other_relatives.rel_indicate.rel6.rel6ons": 1.0
     },
     "changelog": "/profiles/changelogs/ivp_a3v2.md"
 }
