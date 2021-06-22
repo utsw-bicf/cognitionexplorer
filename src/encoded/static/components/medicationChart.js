@@ -173,7 +173,7 @@ class MedicationChart extends React.Component {
     
     var layout = {
       autosize: true,
-      height: yIndex*80,
+      height: (yIndex+ 2)*65,
 
       xaxis: {
         type: 'date',
@@ -191,7 +191,9 @@ class MedicationChart extends React.Component {
         zeroline: false,
         showline: true,
         showgrid: true,
-        fixedrange: true
+        fixedrange: true,
+        tickangle: 30
+       
       },
       xaxis2: {
         type: 'date',
@@ -203,9 +205,9 @@ class MedicationChart extends React.Component {
       },
 
       margin: {
-        l: 120,
+        l: 150,
         r: 20,
-        b: 30,
+        b: 25,
         t: 60,
         pad: 4
       },
