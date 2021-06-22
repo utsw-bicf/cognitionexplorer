@@ -1855,9 +1855,20 @@ class Medication(Item):
     item_type = 'medication'
     schema = load_schema('encoded:schemas/medication.json')
     embeded = []
+
     STATUS_ACL = {
         'released': [(Allow, 'group.verification', ['view_details'])]
     }
+
+    @calculated_property()
+    def name(self):
+        properties = self.upgrade_properties()
+        name = properties['name']
+        if name in ['NKTR-214', 'NKTR-262', 'CPI-444']:
+            name = 'Experimental Medication'
+        return name
+
+
 
 @collection(
     name='supportive-medication',
