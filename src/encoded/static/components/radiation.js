@@ -264,11 +264,11 @@ data = data.concat(dumbbellData);
 
 let layout = {
 
-  height: (scaleYIndex+ 2)*65,
+  height: (scaleYIndex+ 2)*80,
   margin: {
-    l: 120,
+    l: 150,
     r: 20,
-    b: 20,
+    b: 25,
     t: 60,
     pad: 4
   },
