@@ -333,7 +333,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "amylcsf": {
@@ -342,7 +342,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "fdgad": {
@@ -351,7 +351,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "hippatr": {
@@ -360,7 +360,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "taupetad": {
@@ -369,7 +369,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "csftau": {
@@ -378,7 +378,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "fdgftld": {
@@ -387,7 +387,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "tpetftld": {
@@ -396,7 +396,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "mrftld": {
@@ -405,7 +405,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "datscan": {
@@ -414,7 +414,7 @@
                             "enum": [
                                 "0 No",
                                 "1 Yes",
-                                "8 Unknown, not assessed"
+                                "8 Unknown/not assessed"
                             ]
                         },
                         "othbiom": {
@@ -432,7 +432,7 @@
                     }
                 },
                 "image_find": {
-                    "title": "7. Is there evidence for cerebrovascular disease (CVD) on imaging?\nImaging Findings",
+                    "title": "7. Is there v (CVD) on imaging?\nImaging Findings",
                     "type": "object",
                     "properties": {
                         "imaglinf": {
