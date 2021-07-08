@@ -4,6 +4,11 @@ from snovault import (
     collection,
     load_schema,
 )
+from pyramid.security import (
+    Allow,
+    Deny,
+    Everyone,
+)
 from .base import (
     ALLOW_SUBMITTER_ADD,
     Item,
@@ -59,7 +64,9 @@ class Bioexperiment(Biodataset,
         'superseded_by': ('Bioexperiment', 'supersedes')
 
     })
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
     audit_inherit = [
         'original_files',
@@ -180,8 +187,8 @@ class Bioexperiment(Biodataset,
                         biospecimen_summary_list.append(biospecimen_summary_dict)
 
         return biospecimen_summary_list
-        
-    
+
+
 
     @calculated_property(schema={
         "title": "Replication type",
@@ -240,6 +247,3 @@ class Bioexperiment(Biodataset,
 
 
         return 'anisogenic'
-
-
-

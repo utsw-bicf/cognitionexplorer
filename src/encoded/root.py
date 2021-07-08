@@ -53,7 +53,8 @@ class EncodedRoot(Root):
     @reify
     def __acl__(self):
         acl = acl_from_settings(self.registry.settings) + [
-            (Allow, Everyone, ['list', 'search', 'search_audit', 'audit', 'signup']),
+            (Allow, Everyone, ['list', 'summary', 'search_audit', 'audit', 'signup']),
+            (Allow, 'group.verified', ['search']),
             (Allow, 'group.admin', ALL_PERMISSIONS),
             # Avoid schema validation errors during audit
             (Allow, 'remoteuser.EMBED', 'import_items'),

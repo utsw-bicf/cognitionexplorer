@@ -10,6 +10,11 @@ from snovault import (
 )
 from snovault.schema_utils import schema_validator
 from snovault.validation import ValidationFailure
+from pyramid.security import (
+    Allow,
+    Deny,
+    Everyone,
+)
 from .base import (
     Item,
     paths_filtered_by_status
@@ -90,7 +95,9 @@ class Biofile(Item):
     set_status_down = []
     public_s3_statuses = ['released', 'archived']
     private_s3_statuses = ['in progress', 'replaced', 'deleted', 'revoked']
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
     @calculated_property(schema={
         "title": "Title",
         "description": "The title of the file either the accession or the external_accession.",

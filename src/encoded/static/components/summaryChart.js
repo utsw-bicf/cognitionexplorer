@@ -42,6 +42,9 @@ class SummaryChart extends React.Component {
                 xref: 'paper',
                 x: 0.05,
             },
+            yaxis: {
+              showticklabels: false
+            },
             height: 500,
             width: 500,
             margin: {
@@ -75,6 +78,7 @@ class SummaryChart extends React.Component {
 }
 
 export default SummaryChart;
+
 
 
 

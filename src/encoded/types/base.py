@@ -163,6 +163,7 @@ class Item(snovault.Item):
         'deleted': DELETED,
         'replaced': DELETED,
         'restricted':ALLOW_VIEWING_GROUP_VIEW,
+        'public': ALLOW_CURRENT,
 
         # shared_status
         'current': ALLOW_CURRENT,

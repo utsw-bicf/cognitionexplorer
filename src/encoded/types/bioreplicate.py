@@ -3,6 +3,11 @@ from snovault import (
     collection,
     load_schema,
 )
+from pyramid.security import (
+    Allow,
+    Deny,
+    Everyone,
+)
 from .base import (
     ALLOW_SUBMITTER_ADD,
     Item,
@@ -36,6 +41,9 @@ class Bioreplicate(Item):
     set_status_up = [
     ]
     set_status_down = []
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
 
     @calculated_property(
         schema={

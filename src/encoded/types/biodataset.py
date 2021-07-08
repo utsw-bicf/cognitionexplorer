@@ -4,11 +4,15 @@ from snovault import (
     collection,
     load_schema,
 )
+from pyramid.security import (
+    Allow,
+    Deny,
+    Everyone,
+)
 from .base import (
     Item,
     paths_filtered_by_status,
 )
-
 from urllib.parse import quote_plus
 from urllib.parse import urljoin
 from .shared_calculated_properties import (
@@ -78,7 +82,10 @@ class Biodataset(Item):
     rev = {
         'original_files': ('Biofile', 'biodataset'),
     }
-
+    STATUS_ACL = {
+        'released': [(Allow, 'group.verification', ['view_details'])]
+    }
+    
     @calculated_property(schema={
         "title": "Original files",
         "type": "array",
@@ -357,6 +364,3 @@ class BioexperimentSeries(Bioseries):
     })
     def contributors(self, request, related_datasets):
         return request.select_distinct_values('lab', *related_datasets)
-
-
-

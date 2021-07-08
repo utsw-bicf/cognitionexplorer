@@ -2,7 +2,7 @@
     {
         "name": "homepage",
         "title": "The Kidney Cancer Program",
-        "status": "released",
+        "status": "public",
         "uuid": "27f9abd9-0081-4ade-8c82-95ec12b3a7dd",
         "layout": {
             "rows": [
@@ -50,7 +50,7 @@
         "name": "test-section",
         "title": "Test Section",
         "lab": "thomas-gingeras",
-        "status": "released",
+        "status": "public",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "41c4ea4e-7a8e-4b91-8fe3-384d0adc8735",
         "layout": {
@@ -77,7 +77,7 @@
         "parent": "/test-section",
         "name": "subpage",
         "title": "Subpage",
-        "status": "released",
+        "status": "public",
         "lab": "thomas-gingeras",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "331928f7-d8f7-4ea6-b4e0-8d380fb22974",
@@ -153,7 +153,7 @@
     {
         "name": "images",
         "title": "Images",
-        "status": "released",
+        "status": "public",
         "uuid": "61edd6b2-bfdb-4db1-b950-8845ac37f65c",
         "layout": {
             "rows": [
@@ -177,7 +177,7 @@
         "name": "help",
         "title": "Help",
         "lab": "thomas-gingeras",
-        "status": "released",
+        "status": "public",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "d28df7c5-a2eb-4451-a0ca-29b447a56f78",
         "layout": {
@@ -204,7 +204,7 @@
         "parent": "/help",
         "name": "project-overview",
         "title": "Project overview",
-        "status": "released",
+        "status": "public",
         "lab": "thomas-gingeras",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "c6568e16-0b9e-46ef-a4cf-e71873800d5e",
@@ -245,7 +245,7 @@
         "parent": "/help",
         "name": "getting-started",
         "title": "Using the portal",
-        "status": "released",
+        "status": "public",
         "lab": "thomas-gingeras",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "665cc658-6a6f-4f19-9356-53c85b169383",
@@ -303,7 +303,7 @@
         "parent": "/help",
         "name": "rest-api",
         "title": "The KCE REST API",
-        "status": "released",
+        "status": "public",
         "lab": "thomas-gingeras",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "489953c7-5808-47ed-aba6-8372966b9183",
@@ -361,7 +361,7 @@
         "parent": "/help",
         "name": "cohort",
         "title": "Guide to Cohort",
-        "status": "released",
+        "status": "public",
         "lab": "thomas-gingeras",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "87a5cc92-a5cd-4534-890d-3c1a4b64de48",
@@ -390,7 +390,7 @@
         "parent": "/help",
         "name": "citing-kce",
         "title": "Citing KCE",
-        "status": "released",
+        "status": "public",
         "lab": "venkat-malladi",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "fdf3b352-6079-4a58-96e2-33936a49e97d",
@@ -422,7 +422,7 @@
         "parent": "/help",
         "name": "contacts",
         "title": "Contact",
-        "status": "released",
+        "status": "public",
         "lab": "thomas-gingeras",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "c2c47d4e-3d87-4c90-a36c-79906eb81e7f",
@@ -454,7 +454,7 @@
         "parent": "/help",
         "name": "file-formats",
         "title": "Common File Formats Used by KCE",
-        "status": "released",
+        "status": "public",
         "lab": "thomas-gingeras",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "d8421759-e8f9-4d7c-9488-9826d46a2508",
@@ -486,7 +486,7 @@
         "parent": "/help",
         "name": "data-organization",
         "title": "Data Organization",
-        "status": "released",
+        "status": "public",
         "lab": "venkat-malladi",
         "submitted_by": "dignissim.euismod@amet.habitant",
         "uuid": "2f0fefc1-0c09-46c2-b6b1-ec05feebc8b9",
@@ -527,7 +527,7 @@
       "parent": "/help",
       "name": "dictionary",
       "title": "Dictionary",
-      "status": "released",
+      "status": "public",
       "lab": "venkat-malladi",
       "submitted_by": "/users/bec25393-2ab7-4e84-abbf-7241b455093b/",
       "uuid": "8642b9ec-bf5b-4491-be2c-29930cc4e98f",
@@ -567,7 +567,7 @@
     {
       "name": "data-standards",
       "title": "Data standards",
-      "status": "released",
+      "status": "public",
       "lab": "venkat-malladi",
       "submitted_by": "dignissim.euismod@amet.habitant",
       "uuid": "6189dbf8-a36a-4ddb-a2cb-e563ae44d298",
@@ -629,7 +629,7 @@
             "Publications"
         ],
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released",
+        "status": "public",
         "news_excerpt": "In a study published in Clinical Cancer Research, KCP investigators uncovered the first core dependency in clear cell RCC (ccRCC)",
         "uuid": "56c2ff7d-936b-49e8-bed8-b043f1e0ece8",
         "name": "2020-02-21-kcp-publication"
@@ -665,7 +665,7 @@
             "Conferences"
         ],
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released",
+        "status": "public",
         "news_excerpt": "The 3rd Annual Kidney Cancer Program Retreat, held at the UT Southwestern Faculty Club, brought together more than 30 medical students, interns, and residents to learn about research opportunities available with the KCP.",
         "uuid": "22ddca64-baba-4f39-a75a-2fd511af31c1",
         "name": "2019-12-16-kcp-retreat"
@@ -701,7 +701,7 @@
             "Publications"
         ],
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released",
+        "status": "public",
         "news_excerpt": "UT Southwestern investigators have developed an innovative framework for classifying renal cancer.",
         "uuid": "defcbf82-61f8-4107-aeca-c0923dd38ed7",
         "name": "2019-12-02-kcp-publication"
@@ -737,7 +737,7 @@
             "Publications"
         ],
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released",
+        "status": "public",
         "news_excerpt": "In a study published in Clinical Cancer Research, KCP investigators uncovered the first core dependency in clear cell RCC (ccRCC), the most common type of kidney cancer.",
         "uuid": "a8566841-426a-4d78-8875-3ed3c1edafaf",
         "name": "2019-11-14-kcp-publication"
@@ -777,7 +777,7 @@
         },
 
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released"
+        "status": "public"
 
 
     },
@@ -816,7 +816,7 @@
         },
 
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released"
+        "status": "public"
 
 
     },
@@ -855,7 +855,7 @@
         },
 
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released"
+        "status": "public"
     },
     {
         "title": "KCP recognized at World Affairs Council award dinner",
@@ -892,7 +892,7 @@
         },
 
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released"
+        "status": "public"
     },
     {
         "title": "Discovery of metabolic vulnerabilities in kidney tumors earns award for UTSW investigator",
@@ -929,7 +929,7 @@
         },
 
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released"
+        "status": "public"
     },
     {
         "title": "Annual patient conference highlights latest in kidney cancer treatments, clinical trials, and UTSW discoveries",
@@ -966,7 +966,7 @@
         },
 
         "submitted_by": "/users/627eedbc-7cb3-4de3-9743-a86266e435a6/",
-        "status": "released"
+        "status": "public"
     }
 
 
