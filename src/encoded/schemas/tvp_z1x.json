@@ -1,6 +1,6 @@
 {
     "title": "NACC Uniform Data Set (UDS) - TELEPHONE FOLLOW-UP PACKET - FORM Z1: Form Checklist",
-    "description": "INSTRUCCIONES: Este formulario debe ser completado por el personal cl&#237nico. El NACC espera que todos los formularios UDS se administren a todos los sujetos evaluados, pero entendemos que esto puede ser imposible cuando el sujeto est&#225 en estado terminal, cuando no hay informante, o por otras razones. Se requiere una explicaci&#243n abajo para los formatos no presentados. CLAVE: Si el formulario especificado no se complet&#243, por favor asigne uno de los siguientes c&#243digos: 95 = Problema f&#237sico 96 = Problema cognitivo/conductal 97 = Otro problema 98 = Rechazo verbal",
+    "description": "INSTRUCTIONS: This form is to be completed by clinic personnel. NACC expects and intends that all UDS forms will be attempted on all subjects, but we realize this may be impossible when the patient is terminally ill, or when there is no co-participant, or for other reasons. An explanation is required below for forms that are not submitted. KEY: If the specified form was not completed, please enter one of the following codes: 95 = Physical problem; 96 = Cognitive or behavioral problem; 97 = Other problem; 98 = Verbal refusal",
     "id": "/profiles/uds_tvp_z1x.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
