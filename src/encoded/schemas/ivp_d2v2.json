@@ -2,7 +2,7 @@
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM D2: Clinician-assessed Medical Conditions",
     "description": "INSTRUCTIONS: This form is to be completed by a physician, physician's assistant, nurse practitioner, or other qualified practitioner. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form D2. Link to NACC Coding Guidebook .\nMedical conditions and procedures \nThe following questions should be answered based on review of all available information, including new diagnoses made during the current visit, previous medical records, procedures, laboratory tests, and the clinical exam.",
     "comment": " ",
-    "id": "/profiles/uds_ivp_d2v2.json",
+    "id": "/profiles/ivp_d2v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
@@ -580,5 +580,5 @@
         "sele_note.othcond": 1.0,
         "sele_note.othcondx": 1.0
     },
-    "changelog": "/profiles/changelogs/ivp_d2.md"
+    "changelog": "/profiles/changelogs/ivp_d2v2.md"
 }

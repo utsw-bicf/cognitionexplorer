@@ -1,7 +1,7 @@
 {
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM Z1X: Form Checklist",
     "description": "INSTRUCTIONS: This form is to be completed by clinic personnel.\nNACC expects and intends that all UDS forms will be attempted on all subjects, but we realize this may be impossible\nwhen the patient is terminally ill, or when there is no co-participant, or for other reasons. An explanation is required\nbelow for forms that are not submitted.\nKEY: If the specified form was not completed, please enter one of the following codes:\n95 = Physical problem\n96 = Cognitive or behavior problem\n97 = Other problem\n98 = Verbal refusal\n*Key for FTLD MODULE ONLY: Allowable codes are 95-98 as above as well as 99=Unknown or inadequate\ninformation.",
-    "id": "/profiles/uds_ivp_z1xv2.json",
+    "id": "/profiles/ivp_z1xv2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
