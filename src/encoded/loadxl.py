@@ -33,6 +33,7 @@ ORDER = [
     'ivp_a5v3',
     'ivp_a5v2',
     'ivp_b2v2',
+    'ivp_b3v2',
     # 'fvp_a2v3',
     # 'fvp_a2v2',
     # 'fvp_a4v3',
