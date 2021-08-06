@@ -1,0 +1,1311 @@
+{
+    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form D1: Clinician Diagnosis – Cognitive Status and Dementia",
+    "description": "NOTE: This form is to be completed by the clinician. For diagnostic \ncriteria, see UDS Coding Guidebook for Initial Visit Packet, Form D1.\nCheck only one box per response category.\n",
+    "id": "/profiles/fvp_d1v2.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "WHODIDDX": {
+            "title": "1 Responses are based on:",
+            "type": "string",
+            "enum": [
+                "1 Diagnosis from single clinician",
+                "2 Consensus diagnosis"
+            ]
+        },
+        "NORMCOG": {
+            "title": "2 Does the subject have normal cognition (no MCI, dementia, or otherneurological condition resulting in cognitive impairment)?",
+            "description": "Skips If Yes, go to #14, PSP. If No, continue to #3, DEMENTED.",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "DEMENTED": {
+            "title": "3 Does the subject meet criteria for dementia (in accordance withstandard criteria for dementia of the Alzheimer’s type or for other non-Alzheimer’s dementing disorders)?",
+            "description": "Skips If Yes, go to #5, PROBAD. If No, continue to #4A, MCIAMEM.",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "cogn_impair": {
+            "title": "4. If the subject does not have normal cognition and is not clinically demented, indicate the type of\ncognitive impairment (choose only one impairment from items 4a thru 4e as being “present”;\nmark all others “absent”) and then designate the suspected underlying cause(s) of the impairment\nby completing items 5–30:\n",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "MCIAMEM": {
+                    "title": "4A Amnestic MCI – memory impairment only",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes) or #3, DEMENTED = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                },
+                "MCIAPLUS": {
+                    "title": "4B Amnestic MCI – memory impairment plus one or more other domains.",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes) or #3, DEMENTED = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                },
+                "MCIAPLAN": {
+                    "title": "4B1 Amnestic MCI – memory impairment plus language domain",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4B,MCIAPLUS = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIAPATT": {
+                    "title": "4B2 Amnestic MCI – memory impairment plus attention domain",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4B, MCIAPLUS = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIAPEX": {
+                    "title": "4B3 Amnestic MCI – memory impairment plus executive function domain",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4B,MCIAPLUS = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIAPVIS": {
+                    "title": "4B4 Amnestic MCI – memory impairment plus visuospatial domain",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4B,MCIAPLUS = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCINON1": {
+                    "title": "4C Non-amnestic MCI – single domain",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                },
+                "MCIN1LAN": {
+                    "title": "4C1 Non-amnestic MCI – single domain, language",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4C,MCINON1 = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIN1ATT": {
+                    "title": "4C2 Non-amnestic MCI – single domain, attention",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4C.MCINON1 = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIN1EX": {
+                    "title": "4C3 Non-amnestic MCI – single domain, executive function",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4C.MCINON1 = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIN1VIS": {
+                    "title": "4C4 Non-amnestic MCI – single domain, visuospatial",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4C.MCINON1 = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCINON2": {
+                    "title": "4D Non-amnestic MCI – multiple domains",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes) or #3, DEMENTED = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                },
+                "MCIN2LAN": {
+                    "title": "4D1 Non-amnestic MCI – multiple domains, language",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4D.MCINON2 = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIN2ATT": {
+                    "title": "4D2 Non-amnestic MCI – multiple domains, attention",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4D.MCINON2 = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIN2EX": {
+                    "title": "4D3 Non-amnestic MCI – multiple domains, executive function",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4D.MCINON2 = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "MCIN2VIS": {
+                    "title": "4D4 Non-amnestic MCI – multiple domains, visuospatial",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes), #3, DEMENTED = 1 (Yes), or #4D.MCINON2 = 0 (Absent).",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "IMPNOMCI": {
+                    "title": "4E Impaired, not MCI",
+                    "description": "Blank if #2, NORMCOG = 1 (Yes) or #3, DEMENTED = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                }
+            }
+        },
+        "PROBAD": {
+            "title": "5 Probable AD (NINCDS/ADRDA)",
+            "description": "Blank if #2, NORMCOG = 1 (Yes).Skips If present, complete #5A, PROBADIF, then go to #7, DLB.",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "PROBADIF": {
+            "title": "5A Probable AD, primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #5 PROBAD = 0 (Absent)",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "POSSAD": {
+            "title": "6 Possible AD (NINCDS/ADRDA)",
+            "description": "Blank if #2, NORMCOG = 1 (Yes) or #5, PROBAD = 1 (Present).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "POSSADIF": {
+            "title": "6A Possible AD, primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), #5, PROBAD = 1 (Present), or #6,POSSAD = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "DLB": {
+            "title": "7 Dementia with Lewy bodies",
+            "description": "Blank if #2, NORMCOG = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "DLBIF": {
+            "title": "7A Dementia with Lewy bodies, primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #7, DLB = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "VASC": {
+            "title": "8 Vascular dementia (NINDS/AIREN Probable)",
+            "description": "Blank if #2, NORMCOG = 1 (Yes).Skips If present, complete #8A, VASCIF, then go to #10, ALCDEM.",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "VASCIF": {
+            "title": "8A Vascular dementia (NINDS/AIREN Probable), primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #8, VASC = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "VASCPS": {
+            "title": "9 Vascular dementia (NINDS/AIREN Possible)",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #8, VASC = 1(Present)",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "VASCPSIF": {
+            "title": "9A Vascular dementia (NINDS/AIREN Possible), primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #8, VASC = 1 (Present) or #9, VASCPS = 0.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "ALCDEM": {
+            "title": "10 Alcohol-related dementia",
+            "description": "Blank if #2, NORMCOG = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "ALCDEMIF": {
+            "title": "10A Alcohol-related dementia, primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #10, ALCDEM = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "DEMUN": {
+            "title": "11 Dementia of undetermined etiology",
+            "description": "Blank if #2, NORMCOG = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "DEMUNIF": {
+            "title": "11A Dementia of undetermined etiology, primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #11, DEMUN = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "FTD": {
+            "title": "12 Frontotemporal dementia (behavioral/executive dementia)",
+            "description": "Blank if #2, NORMCOG = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "FTDIF": {
+            "title": "12A Frontotemporal dementia, primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #12, FTD = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "PPAPH": {
+            "title": "13 Primary progressive aphasia (aphasic dementia)",
+            "description": "Blank if #2, NORMCOG = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "PPAPHIF": {
+            "title": "13A Primary progressive aphasia, primary or contributing",
+            "description": "Blank if #2, NORMCOG = 1 (Yes), or #13, PPAPH = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing"
+            ]
+        },
+        "PNAPH": {
+            "title": "13A1 Progressive nonfluent aphasia",
+            "description": "Blank if #2, NORMCOG = 1 (Yes) or #13, PPAPH = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "SEMDEMAN": {
+            "title": "13A2 Semantic dementia – anomia plus word comprehension",
+            "description": "Blank if #2, NORMCOG = 1 (Yes) or #13, PPAPH = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "SEMDEMAG": {
+            "title": "13A3 Semantic dementia – agnosic variant",
+            "description": "Blank if #2, NORMCOG = 1 (Yes) or #13, PPAPH = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "PPAOTHR": {
+            "title": "13A4 Other (e.g. logopenic, anomic, transcortical, word deafness, syntacticcomprehension, motor speech disorder)",
+            "description": "Blank if #2, NORMCOG = 1 (Yes) or #13, PPAPH = 0 (Absent).",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "PSP": {
+            "title": "14 Progressive supranuclear palsy",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "PSPIF": {
+            "title": "14A Progressive supranuclear palsy, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "CORT": {
+            "title": "15 Corticobasal degeneration",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "CORTIF": {
+            "title": "15A Corticobasal degeneration, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "HUNT": {
+            "title": "16 Huntington’s disease",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "HUNTIF": {
+            "title": "16A Huntington’s disease, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "PRION": {
+            "title": "17 Prion disease",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "PRIONIF": {
+            "title": "17A Prion disease, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "MEDS": {
+            "title": "18 Cognitive dysfunction from medications",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "MEDSIF": {
+            "title": "18A Cognitive dysfunction from medications, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "DYSILL": {
+            "title": "19 Cognitive dysfunction from medical illnesses",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "DYSILLIF": {
+            "title": "19A Cognitive dysfunction from medical illnesses, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "DEP": {
+            "title": "20 Depression",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "DEPIF": {
+            "title": "20A Depression, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "OTHPSY": {
+            "title": "21 Other major psychiatric illness",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "OTHPSYIF": {
+            "title": "21A Other major psychiatric illness, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "DOWNS": {
+            "title": "22 Down’s syndrome",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "DOWNSIF": {
+            "title": "22A Down’s syndrome, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "PARK": {
+            "title": "23 Parkinson’s disease",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "PARKIF": {
+            "title": "23A Parkinson’s disease, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "STROKE": {
+            "title": "24 Stroke",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "STROKIF": {
+            "title": "24A Stroke, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "HYCEPH": {
+            "title": "25 Hydrocephalus",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "HYCEPHIF": {
+            "title": "25A Hydrocephalus, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "BRNINJ": {
+            "title": "26 Traumatic brain injury",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "BRNINJIF": {
+            "title": "26A Traumatic brain injury, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "NEOP": {
+            "title": "27 CNS neoplasm",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "NEOPIF": {
+            "title": "27A CNS neoplasm, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "COGOTH": {
+            "title": "28 Other cognitive/neurologic condition",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "COGOTHIF": {
+            "title": "28A Other cognitive/neurologic condition, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "COGOTHX": {
+            "title": "28B Other cognitive/neurologic condition, specify",
+            "description": "Blank if #28, COGOTH = 0 (Absent).",
+            "type": "string"
+        },
+        "COGOTH2": {
+            "title": "29 Other cognitive/neurologic condition",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "COGOTH2F": {
+            "title": "29A Other cognitive/neurologic condition, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "COGOTH2X": {
+            "title": "29B Other cognitive/neurologic condition, specify",
+            "description": "Blank if #29, COGOTH2 = 0 (Absent).",
+            "type": "string"
+        },
+        "COGOTH3": {
+            "title": "30 Other cognitive/neurologic condition",
+            "type": "string",
+            "enum": [
+                "0 Absent",
+                "1 Present"
+            ]
+        },
+        "COGOTH3F": {
+            "title": "30A Other cognitive/neurologic condition, primary or contributing",
+            "description": "Should be coded only if condition is present AND subject is cognitively impaired, otherwise leave blank.",
+            "type": "string",
+            "enum": [
+                "1 Primary",
+                "2 Contributing",
+                "3 Non-contributing"
+            ]
+        },
+        "COGOTH3X": {
+            "title": "30B Other cognitive/neurologic condition, specify",
+            "description": "Blank if #30, COGOTH3 = 0 (Absent).",
+            "type": "string"
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "WHODIDDX": {
+            "title": "1 Responses are based on:"
+        },
+        "NORMCOG": {
+            "title": "2 Does the subject have normal cognition (no MCI, dementia, or otherneurological condition resulting in cognitive impairment)?"
+        },
+        "DEMENTED": {
+            "title": "3 Does the subject meet criteria for dementia (in accordance withstandard criteria for dementia of the Alzheimer’s type or for other non-Alzheimer’s dementing disorders)?"
+        },
+        "cogn_impair.MCIAMEM": {
+            "title": "4A Amnestic MCI – memory impairment only"
+        },
+        "cogn_impair.MCIAPLUS": {
+            "title": "4B Amnestic MCI – memory impairment plus one or more other domains."
+        },
+        "cogn_impair.MCIAPLAN": {
+            "title": "4B1 Amnestic MCI – memory impairment plus language domain"
+        },
+        "cogn_impair.MCIAPATT": {
+            "title": "4B2 Amnestic MCI – memory impairment plus attention domain"
+        },
+        "cogn_impair.MCIAPEX": {
+            "title": "4B3 Amnestic MCI – memory impairment plus executive function domain"
+        },
+        "cogn_impair.MCIAPVIS": {
+            "title": "4B4 Amnestic MCI – memory impairment plus visuospatial domain"
+        },
+        "cogn_impair.MCINON1": {
+            "title": "4C Non-amnestic MCI – single domain"
+        },
+        "cogn_impair.MCIN1LAN": {
+            "title": "4C1 Non-amnestic MCI – single domain, language"
+        },
+        "cogn_impair.MCIN1ATT": {
+            "title": "4C2 Non-amnestic MCI – single domain, attention"
+        },
+        "cogn_impair.MCIN1EX": {
+            "title": "4C3 Non-amnestic MCI – single domain, executive function"
+        },
+        "cogn_impair.MCIN1VIS": {
+            "title": "4C4 Non-amnestic MCI – single domain, visuospatial"
+        },
+        "cogn_impair.MCINON2": {
+            "title": "4D Non-amnestic MCI – multiple domains"
+        },
+        "cogn_impair.MCIN2LAN": {
+            "title": "4D1 Non-amnestic MCI – multiple domains, language"
+        },
+        "cogn_impair.MCIN2ATT": {
+            "title": "4D2 Non-amnestic MCI – multiple domains, attention"
+        },
+        "cogn_impair.MCIN2EX": {
+            "title": "4D3 Non-amnestic MCI – multiple domains, executive function"
+        },
+        "cogn_impair.MCIN2VIS": {
+            "title": "4D4 Non-amnestic MCI – multiple domains, visuospatial"
+        },
+        "cogn_impair.IMPNOMCI": {
+            "title": "4E Impaired, not MCI"
+        },
+        "PROBAD": {
+            "title": "5 Probable AD (NINCDS/ADRDA)"
+        },
+        "PROBADIF": {
+            "title": "5A Probable AD, primary or contributing"
+        },
+        "POSSAD": {
+            "title": "6 Possible AD (NINCDS/ADRDA)"
+        },
+        "POSSADIF": {
+            "title": "6A Possible AD, primary or contributing"
+        },
+        "DLB": {
+            "title": "7 Dementia with Lewy bodies"
+        },
+        "DLBIF": {
+            "title": "7A Dementia with Lewy bodies, primary or contributing"
+        },
+        "VASC": {
+            "title": "8 Vascular dementia (NINDS/AIREN Probable)"
+        },
+        "VASCIF": {
+            "title": "8A Vascular dementia (NINDS/AIREN Probable), primary or contributing"
+        },
+        "VASCPS": {
+            "title": "9 Vascular dementia (NINDS/AIREN Possible)"
+        },
+        "VASCPSIF": {
+            "title": "9A Vascular dementia (NINDS/AIREN Possible), primary or contributing"
+        },
+        "ALCDEM": {
+            "title": "10 Alcohol-related dementia"
+        },
+        "ALCDEMIF": {
+            "title": "10A Alcohol-related dementia, primary or contributing"
+        },
+        "DEMUN": {
+            "title": "11 Dementia of undetermined etiology"
+        },
+        "DEMUNIF": {
+            "title": "11A Dementia of undetermined etiology, primary or contributing"
+        },
+        "FTD": {
+            "title": "12 Frontotemporal dementia (behavioral/executive dementia)"
+        },
+        "FTDIF": {
+            "title": "12A Frontotemporal dementia, primary or contributing"
+        },
+        "PPAPH": {
+            "title": "13 Primary progressive aphasia (aphasic dementia)"
+        },
+        "PPAPHIF": {
+            "title": "13A Primary progressive aphasia, primary or contributing"
+        },
+        "PNAPH": {
+            "title": "13A1 Progressive nonfluent aphasia"
+        },
+        "SEMDEMAN": {
+            "title": "13A2 Semantic dementia – anomia plus word comprehension"
+        },
+        "SEMDEMAG": {
+            "title": "13A3 Semantic dementia – agnosic variant"
+        },
+        "PPAOTHR": {
+            "title": "13A4 Other (e.g. logopenic, anomic, transcortical, word deafness, syntacticcomprehension, motor speech disorder)"
+        },
+        "PSP": {
+            "title": "14 Progressive supranuclear palsy"
+        },
+        "PSPIF": {
+            "title": "14A Progressive supranuclear palsy, primary or contributing"
+        },
+        "CORT": {
+            "title": "15 Corticobasal degeneration"
+        },
+        "CORTIF": {
+            "title": "15A Corticobasal degeneration, primary or contributing"
+        },
+        "HUNT": {
+            "title": "16 Huntington’s disease"
+        },
+        "HUNTIF": {
+            "title": "16A Huntington’s disease, primary or contributing"
+        },
+        "PRION": {
+            "title": "17 Prion disease"
+        },
+        "PRIONIF": {
+            "title": "17A Prion disease, primary or contributing"
+        },
+        "MEDS": {
+            "title": "18 Cognitive dysfunction from medications"
+        },
+        "MEDSIF": {
+            "title": "18A Cognitive dysfunction from medications, primary or contributing"
+        },
+        "DYSILL": {
+            "title": "19 Cognitive dysfunction from medical illnesses"
+        },
+        "DYSILLIF": {
+            "title": "19A Cognitive dysfunction from medical illnesses, primary or contributing"
+        },
+        "DEP": {
+            "title": "20 Depression"
+        },
+        "DEPIF": {
+            "title": "20A Depression, primary or contributing"
+        },
+        "OTHPSY": {
+            "title": "21 Other major psychiatric illness"
+        },
+        "OTHPSYIF": {
+            "title": "21A Other major psychiatric illness, primary or contributing"
+        },
+        "DOWNS": {
+            "title": "22 Down’s syndrome"
+        },
+        "DOWNSIF": {
+            "title": "22A Down’s syndrome, primary or contributing"
+        },
+        "PARK": {
+            "title": "23 Parkinson’s disease"
+        },
+        "PARKIF": {
+            "title": "23A Parkinson’s disease, primary or contributing"
+        },
+        "STROKE": {
+            "title": "24 Stroke"
+        },
+        "STROKIF": {
+            "title": "24A Stroke, primary or contributing"
+        },
+        "HYCEPH": {
+            "title": "25 Hydrocephalus"
+        },
+        "HYCEPHIF": {
+            "title": "25A Hydrocephalus, primary or contributing"
+        },
+        "BRNINJ": {
+            "title": "26 Traumatic brain injury"
+        },
+        "BRNINJIF": {
+            "title": "26A Traumatic brain injury, primary or contributing"
+        },
+        "NEOP": {
+            "title": "27 CNS neoplasm"
+        },
+        "NEOPIF": {
+            "title": "27A CNS neoplasm, primary or contributing"
+        },
+        "COGOTH": {
+            "title": "28 Other cognitive/neurologic condition"
+        },
+        "COGOTHIF": {
+            "title": "28A Other cognitive/neurologic condition, primary or contributing"
+        },
+        "COGOTHX": {
+            "title": "28B Other cognitive/neurologic condition, specify"
+        },
+        "COGOTH2": {
+            "title": "29 Other cognitive/neurologic condition"
+        },
+        "COGOTH2F": {
+            "title": "29A Other cognitive/neurologic condition, primary or contributing"
+        },
+        "COGOTH2X": {
+            "title": "29B Other cognitive/neurologic condition, specify"
+        },
+        "COGOTH3": {
+            "title": "30 Other cognitive/neurologic condition"
+        },
+        "COGOTH3F": {
+            "title": "30A Other cognitive/neurologic condition, primary or contributing"
+        },
+        "COGOTH3X": {
+            "title": "30B Other cognitive/neurologic condition, specify"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "WHODIDDX": {
+            "title": "1 Responses are based on:"
+        },
+        "NORMCOG": {
+            "title": "2 Does the subject have normal cognition (no MCI, dementia, or otherneurological condition resulting in cognitive impairment)?"
+        },
+        "DEMENTED": {
+            "title": "3 Does the subject meet criteria for dementia (in accordance withstandard criteria for dementia of the Alzheimer’s type or for other non-Alzheimer’s dementing disorders)?"
+        },
+        "cogn_impair.MCIAMEM": {
+            "title": "4A Amnestic MCI – memory impairment only"
+        },
+        "cogn_impair.MCIAPLUS": {
+            "title": "4B Amnestic MCI – memory impairment plus one or more other domains."
+        },
+        "cogn_impair.MCIAPLAN": {
+            "title": "4B1 Amnestic MCI – memory impairment plus language domain"
+        },
+        "cogn_impair.MCIAPATT": {
+            "title": "4B2 Amnestic MCI – memory impairment plus attention domain"
+        },
+        "cogn_impair.MCIAPEX": {
+            "title": "4B3 Amnestic MCI – memory impairment plus executive function domain"
+        },
+        "cogn_impair.MCIAPVIS": {
+            "title": "4B4 Amnestic MCI – memory impairment plus visuospatial domain"
+        },
+        "cogn_impair.MCINON1": {
+            "title": "4C Non-amnestic MCI – single domain"
+        },
+        "cogn_impair.MCIN1LAN": {
+            "title": "4C1 Non-amnestic MCI – single domain, language"
+        },
+        "cogn_impair.MCIN1ATT": {
+            "title": "4C2 Non-amnestic MCI – single domain, attention"
+        },
+        "cogn_impair.MCIN1EX": {
+            "title": "4C3 Non-amnestic MCI – single domain, executive function"
+        },
+        "cogn_impair.MCIN1VIS": {
+            "title": "4C4 Non-amnestic MCI – single domain, visuospatial"
+        },
+        "cogn_impair.MCINON2": {
+            "title": "4D Non-amnestic MCI – multiple domains"
+        },
+        "cogn_impair.MCIN2LAN": {
+            "title": "4D1 Non-amnestic MCI – multiple domains, language"
+        },
+        "cogn_impair.MCIN2ATT": {
+            "title": "4D2 Non-amnestic MCI – multiple domains, attention"
+        },
+        "cogn_impair.MCIN2EX": {
+            "title": "4D3 Non-amnestic MCI – multiple domains, executive function"
+        },
+        "cogn_impair.MCIN2VIS": {
+            "title": "4D4 Non-amnestic MCI – multiple domains, visuospatial"
+        },
+        "cogn_impair.IMPNOMCI": {
+            "title": "4E Impaired, not MCI"
+        },
+        "PROBAD": {
+            "title": "5 Probable AD (NINCDS/ADRDA)"
+        },
+        "PROBADIF": {
+            "title": "5A Probable AD, primary or contributing"
+        },
+        "POSSAD": {
+            "title": "6 Possible AD (NINCDS/ADRDA)"
+        },
+        "POSSADIF": {
+            "title": "6A Possible AD, primary or contributing"
+        },
+        "DLB": {
+            "title": "7 Dementia with Lewy bodies"
+        },
+        "DLBIF": {
+            "title": "7A Dementia with Lewy bodies, primary or contributing"
+        },
+        "VASC": {
+            "title": "8 Vascular dementia (NINDS/AIREN Probable)"
+        },
+        "VASCIF": {
+            "title": "8A Vascular dementia (NINDS/AIREN Probable), primary or contributing"
+        },
+        "VASCPS": {
+            "title": "9 Vascular dementia (NINDS/AIREN Possible)"
+        },
+        "VASCPSIF": {
+            "title": "9A Vascular dementia (NINDS/AIREN Possible), primary or contributing"
+        },
+        "ALCDEM": {
+            "title": "10 Alcohol-related dementia"
+        },
+        "ALCDEMIF": {
+            "title": "10A Alcohol-related dementia, primary or contributing"
+        },
+        "DEMUN": {
+            "title": "11 Dementia of undetermined etiology"
+        },
+        "DEMUNIF": {
+            "title": "11A Dementia of undetermined etiology, primary or contributing"
+        },
+        "FTD": {
+            "title": "12 Frontotemporal dementia (behavioral/executive dementia)"
+        },
+        "FTDIF": {
+            "title": "12A Frontotemporal dementia, primary or contributing"
+        },
+        "PPAPH": {
+            "title": "13 Primary progressive aphasia (aphasic dementia)"
+        },
+        "PPAPHIF": {
+            "title": "13A Primary progressive aphasia, primary or contributing"
+        },
+        "PNAPH": {
+            "title": "13A1 Progressive nonfluent aphasia"
+        },
+        "SEMDEMAN": {
+            "title": "13A2 Semantic dementia – anomia plus word comprehension"
+        },
+        "SEMDEMAG": {
+            "title": "13A3 Semantic dementia – agnosic variant"
+        },
+        "PPAOTHR": {
+            "title": "13A4 Other (e.g. logopenic, anomic, transcortical, word deafness, syntacticcomprehension, motor speech disorder)"
+        },
+        "PSP": {
+            "title": "14 Progressive supranuclear palsy"
+        },
+        "PSPIF": {
+            "title": "14A Progressive supranuclear palsy, primary or contributing"
+        },
+        "CORT": {
+            "title": "15 Corticobasal degeneration"
+        },
+        "CORTIF": {
+            "title": "15A Corticobasal degeneration, primary or contributing"
+        },
+        "HUNT": {
+            "title": "16 Huntington’s disease"
+        },
+        "HUNTIF": {
+            "title": "16A Huntington’s disease, primary or contributing"
+        },
+        "PRION": {
+            "title": "17 Prion disease"
+        },
+        "PRIONIF": {
+            "title": "17A Prion disease, primary or contributing"
+        },
+        "MEDS": {
+            "title": "18 Cognitive dysfunction from medications"
+        },
+        "MEDSIF": {
+            "title": "18A Cognitive dysfunction from medications, primary or contributing"
+        },
+        "DYSILL": {
+            "title": "19 Cognitive dysfunction from medical illnesses"
+        },
+        "DYSILLIF": {
+            "title": "19A Cognitive dysfunction from medical illnesses, primary or contributing"
+        },
+        "DEP": {
+            "title": "20 Depression"
+        },
+        "DEPIF": {
+            "title": "20A Depression, primary or contributing"
+        },
+        "OTHPSY": {
+            "title": "21 Other major psychiatric illness"
+        },
+        "OTHPSYIF": {
+            "title": "21A Other major psychiatric illness, primary or contributing"
+        },
+        "DOWNS": {
+            "title": "22 Down’s syndrome"
+        },
+        "DOWNSIF": {
+            "title": "22A Down’s syndrome, primary or contributing"
+        },
+        "PARK": {
+            "title": "23 Parkinson’s disease"
+        },
+        "PARKIF": {
+            "title": "23A Parkinson’s disease, primary or contributing"
+        },
+        "STROKE": {
+            "title": "24 Stroke"
+        },
+        "STROKIF": {
+            "title": "24A Stroke, primary or contributing"
+        },
+        "HYCEPH": {
+            "title": "25 Hydrocephalus"
+        },
+        "HYCEPHIF": {
+            "title": "25A Hydrocephalus, primary or contributing"
+        },
+        "BRNINJ": {
+            "title": "26 Traumatic brain injury"
+        },
+        "BRNINJIF": {
+            "title": "26A Traumatic brain injury, primary or contributing"
+        },
+        "NEOP": {
+            "title": "27 CNS neoplasm"
+        },
+        "NEOPIF": {
+            "title": "27A CNS neoplasm, primary or contributing"
+        },
+        "COGOTH": {
+            "title": "28 Other cognitive/neurologic condition"
+        },
+        "COGOTHIF": {
+            "title": "28A Other cognitive/neurologic condition, primary or contributing"
+        },
+        "COGOTHX": {
+            "title": "28B Other cognitive/neurologic condition, specify"
+        },
+        "COGOTH2": {
+            "title": "29 Other cognitive/neurologic condition"
+        },
+        "COGOTH2F": {
+            "title": "29A Other cognitive/neurologic condition, primary or contributing"
+        },
+        "COGOTH2X": {
+            "title": "29B Other cognitive/neurologic condition, specify"
+        },
+        "COGOTH3": {
+            "title": "30 Other cognitive/neurologic condition"
+        },
+        "COGOTH3F": {
+            "title": "30A Other cognitive/neurologic condition, primary or contributing"
+        },
+        "COGOTH3X": {
+            "title": "30B Other cognitive/neurologic condition, specify"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "WHODIDDX": 1.0,
+        "NORMCOG": 1.0,
+        "DEMENTED": 1.0,
+        "cogn_impair.MCIAMEM": 1.0,
+        "cogn_impair.MCIAPLUS": 1.0,
+        "cogn_impair.MCIAPLAN": 1.0,
+        "cogn_impair.MCIAPATT": 1.0,
+        "cogn_impair.MCIAPEX": 1.0,
+        "cogn_impair.MCIAPVIS": 1.0,
+        "cogn_impair.MCINON1": 1.0,
+        "cogn_impair.MCIN1LAN": 1.0,
+        "cogn_impair.MCIN1ATT": 1.0,
+        "cogn_impair.MCIN1EX": 1.0,
+        "cogn_impair.MCIN1VIS": 1.0,
+        "cogn_impair.MCINON2": 1.0,
+        "cogn_impair.MCIN2LAN": 1.0,
+        "cogn_impair.MCIN2ATT": 1.0,
+        "cogn_impair.MCIN2EX": 1.0,
+        "cogn_impair.MCIN2VIS": 1.0,
+        "cogn_impair.IMPNOMCI": 1.0,
+        "PROBAD": 1.0,
+        "PROBADIF": 1.0,
+        "POSSAD": 1.0,
+        "POSSADIF": 1.0,
+        "DLB": 1.0,
+        "DLBIF": 1.0,
+        "VASC": 1.0,
+        "VASCIF": 1.0,
+        "VASCPS": 1.0,
+        "VASCPSIF": 1.0,
+        "ALCDEM": 1.0,
+        "ALCDEMIF": 1.0,
+        "DEMUN": 1.0,
+        "DEMUNIF": 1.0,
+        "FTD": 1.0,
+        "FTDIF": 1.0,
+        "PPAPH": 1.0,
+        "PPAPHIF": 1.0,
+        "PNAPH": 1.0,
+        "SEMDEMAN": 1.0,
+        "SEMDEMAG": 1.0,
+        "PPAOTHR": 1.0,
+        "PSP": 1.0,
+        "PSPIF": 1.0,
+        "CORT": 1.0,
+        "CORTIF": 1.0,
+        "HUNT": 1.0,
+        "HUNTIF": 1.0,
+        "PRION": 1.0,
+        "PRIONIF": 1.0,
+        "MEDS": 1.0,
+        "MEDSIF": 1.0,
+        "DYSILL": 1.0,
+        "DYSILLIF": 1.0,
+        "DEP": 1.0,
+        "DEPIF": 1.0,
+        "OTHPSY": 1.0,
+        "OTHPSYIF": 1.0,
+        "DOWNS": 1.0,
+        "DOWNSIF": 1.0,
+        "PARK": 1.0,
+        "PARKIF": 1.0,
+        "STROKE": 1.0,
+        "STROKIF": 1.0,
+        "HYCEPH": 1.0,
+        "HYCEPHIF": 1.0,
+        "BRNINJ": 1.0,
+        "BRNINJIF": 1.0,
+        "NEOP": 1.0,
+        "NEOPIF": 1.0,
+        "COGOTH": 1.0,
+        "COGOTHIF": 1.0,
+        "COGOTHX": 1.0,
+        "COGOTH2": 1.0,
+        "COGOTH2F": 1.0,
+        "COGOTH2X": 1.0,
+        "COGOTH3": 1.0,
+        "COGOTH3F": 1.0,
+        "COGOTH3X": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_d1v2.md"
+}
