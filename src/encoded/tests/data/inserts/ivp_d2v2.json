@@ -1,4 +1,4 @@
-{
+[{
     "_test": "test patient",
     "formver": "3",
     "adcid": "25 University of Texas Southwestern",
@@ -34,4 +34,4 @@
       "antienc": "0 No",
       "othcond": "0 No"
     }
-  }
+  }]

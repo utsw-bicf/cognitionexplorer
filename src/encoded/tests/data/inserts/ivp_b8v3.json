@@ -1,4 +1,4 @@
-{
+[{
     "patient": "000000",
     "adcid": "25 University of Texas Southwestern",
     "visdate": "1979-05-20",
@@ -35,4 +35,4 @@
     "form_status": "Complete",
     "status": "released",
     "uuid": "71c0bc16-7d2c-4035-9348-dad821e540e8"
-}
+}]

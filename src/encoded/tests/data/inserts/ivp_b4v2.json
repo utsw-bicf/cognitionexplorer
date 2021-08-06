@@ -1,9 +1,8 @@
-{
+[{
     "patient": "000000",
     "adcid": "25 University of Texas Southwestern",
     "visdate": "2019-12-02",
     "visitnum": "1",
-    "header_complete": "Complete",
     "initials": "HY",
     "sec1": {
         "memory": "0 None - 0 No memory loss, or slight inconsistent forgetfulness.",
@@ -21,7 +20,6 @@
     },
     "cdrsupp": 7.0,
     "cdrtot": 7.5,
-    "form_status": "Complete",
     "status": "released",
     "uuid": "24814921-614f-4208-b5fa-28fdc4b169c3"
-}
+}]
