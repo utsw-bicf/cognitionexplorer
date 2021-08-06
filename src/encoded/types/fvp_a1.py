@@ -15,8 +15,8 @@ import re
     name="fvp_a1v3s",
     unique_key="uuid",
     properties={
-        "title": "UDS_FVP_A1 Forms",
-        "description": "UDS follow up forms A1:Subject Demographic results pages",
+        "title": "UDS_FVP_A1V3 Forms",
+        "description": "UDS follow up forms A1V3:Subject Demographic results pages",
     },
 )
 class Fvp_a1v3(Item):
@@ -29,3 +29,22 @@ class Fvp_a1v3(Item):
     audit_inherit = []
     set_status_up = []
     set_status_down = []
+
+@collection(
+    name="fvp_a1v2s",
+    unique_key="uuid",
+    properties={
+        "title": "UDS_FVP_A1V2 Forms",
+        "description": "UDS follow up forms A1V2:Subject Demographic results pages",
+    },
+)
+class Fvp_a1v2(Item):
+    item_type = "fvp_a1v2"
+    schema = load_schema("encoded:schemas/fvp_a1v2.json")
+    embedded = [
+    ]
+    rev = {
+    }
+    audit_inherit = []
+    set_status_up = []
+    set_status_down = []    
