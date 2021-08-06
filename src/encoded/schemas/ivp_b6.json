@@ -43,7 +43,7 @@
         },
         "satis": {
             "title": "1. Are you basically satisfied with your life?",
-            "description": "",
+            
             "comment": "",
             "type": "string",
             "enum": [

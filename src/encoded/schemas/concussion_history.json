@@ -1,6 +1,6 @@
 {
     "title": "Concussion History",
-    "description": "",
+    
     "id": "/profiles/concussion_history.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [

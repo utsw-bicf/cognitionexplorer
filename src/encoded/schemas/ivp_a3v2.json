@@ -1663,7 +1663,7 @@
                 },
                 "rel_indicate": {
                     "title": "9. For all \"other demented relatives\" (cousins, aunts, uncles, grandparents, half\nsiblings), indicate the following:\n",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "rel1": {

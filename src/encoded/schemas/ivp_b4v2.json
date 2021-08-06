@@ -43,7 +43,7 @@
         },
         "sec1": {
             "title": "SECTION 1: CDR® Dementia Staging Instrument1",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "memory": {

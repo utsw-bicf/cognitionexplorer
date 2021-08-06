@@ -49,7 +49,7 @@
             "properties": {
                 "fu_satis": {
                     "title": "1. Are you basically satisfied with your life?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -59,7 +59,7 @@
                 },
                 "fu_dropact": {
                     "title": "2. Have you dropped many of your activities and interests?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -69,7 +69,7 @@
                 },
                 "fu_empty": {
                     "title": "3. Do you feel that your life is empty?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -79,7 +79,7 @@
                 },
                 "fu_bored": {
                     "title": "4. Do you often get bored?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -89,7 +89,7 @@
                 },
                 "fu_spirits": {
                     "title": "5. Are you in good spirits most of the time?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -99,7 +99,7 @@
                 },
                 "fu_afraid": {
                     "title": "6. Are you afraid that something bad is going to happen to you?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -109,7 +109,7 @@
                 },
                 "fu_happy": {
                     "title": "7. Do you feel happy most of the time?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -119,7 +119,7 @@
                 },
                 "fu_helpless": {
                     "title": "8. Do you often feel helpless?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -129,7 +129,7 @@
                 },
                 "fu_stayhome": {
                     "title": "9. Do you prefer to stay at home, rather than going out and doing new things?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -139,7 +139,7 @@
                 },
                 "fu_memprob": {
                     "title": "10. Do you feel you have more problems with memory than most?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -149,7 +149,7 @@
                 },
                 "fu_wondrful": {
                     "title": "11. Do you think it is wonderful to be alive now?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -159,7 +159,7 @@
                 },
                 "fu_wrthless": {
                     "title": "12. Do you feel pretty worthless the way you are now?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -169,7 +169,7 @@
                 },
                 "fu_energy": {
                     "title": "13. Do you feel full of energy?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -179,7 +179,7 @@
                 },
                 "fu_hopeless": {
                     "title": "14. Do you feel that your situation is hopeless?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",
@@ -189,7 +189,7 @@
                 },
                 "fu_better": {
                     "title": "15. Do you think that most people are better off than you are?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 Yes",

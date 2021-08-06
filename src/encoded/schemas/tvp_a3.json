@@ -40,7 +40,7 @@
       },
       "tele_genetic_mutation": {
         "title": "GENETIC MUTATIONS",
-        "description": "",
+        
         "type": "object",
         "properties": {
           "tele_nwinfmut": {
@@ -168,7 +168,7 @@
           },
           "tele_mother": {
             "title": "5a. MOTHER:",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "tele_mommob": {
@@ -284,7 +284,7 @@
           },
           "tele_father": {
             "title": "",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "tele_dadmob": {
@@ -425,7 +425,7 @@
               },
               "tele_sib1": {
                 "title": "Sibling 1",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib1mob": {
@@ -541,7 +541,7 @@
               },
               "tele_sib2": {
                 "title": "Sibling 2",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib2mob": {
@@ -657,7 +657,7 @@
               },
               "tele_sib3": {
                 "title": "Sibling 3",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib3mob": {
@@ -773,7 +773,7 @@
               },
               "tele_sib4": {
                 "title": "Sibling 4",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib4mob": {
@@ -889,7 +889,7 @@
               },
               "tele_sib5": {
                 "title": "Sibling 5",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib5mob": {
@@ -1005,7 +1005,7 @@
               },
               "tele_sib6": {
                 "title": "Sibling 6",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib6mob": {
@@ -1121,7 +1121,7 @@
               },
               "tele_sib7": {
                 "title": "Sibling 7",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib7mob": {
@@ -1237,7 +1237,7 @@
               },
               "tele_sib8": {
                 "title": "Sibling 8",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib8mob": {
@@ -1353,7 +1353,7 @@
               },
               "tele_sib9": {
                 "title": "Sibling 9",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib9mob": {
@@ -1469,7 +1469,7 @@
               },
               "tele_sib10": {
                 "title": "Sibling 10",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib10mob": {
@@ -1585,7 +1585,7 @@
               },
               "tele_sib11": {
                 "title": "Sibling 11",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib11mob": {
@@ -1701,7 +1701,7 @@
               },
               "tele_sib12": {
                 "title": "Sibling 12",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib12mob": {
@@ -1817,7 +1817,7 @@
               },
               "tele_sib13": {
                 "title": "Sibling 13",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib13mob": {
@@ -1933,7 +1933,7 @@
               },
               "tele_sib14": {
                 "title": "Sibling 14",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib13mob": {
@@ -2049,7 +2049,7 @@
               },
               "tele_sib15": {
                 "title": "Sibling 15",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib15mob": {
@@ -2165,7 +2165,7 @@
               },
               "tele_sib16": {
                 "title": "Sibling 16",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib16mob": {
@@ -2281,7 +2281,7 @@
               },
               "tele_sib17": {
                 "title": "Sibling 17",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib17mob": {
@@ -2397,7 +2397,7 @@
               },
               "tele_sib18": {
                 "title": "Sibling 18",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib18mob": {
@@ -2513,7 +2513,7 @@
               },
               "tele_sib19": {
                 "title": "Sibling 19",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib19mob": {
@@ -2629,7 +2629,7 @@
               },
               "tele_sib20": {
                 "title": "Sibling 20",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_sib20mob": {
@@ -2765,7 +2765,7 @@
               },
               "tele_child1": {
                 "title": "Child 1",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid1mob": {
@@ -2881,7 +2881,7 @@
               },
               "tele_child2": {
                 "title": "Child 2",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid2mob": {
@@ -2997,7 +2997,7 @@
               },
               "tele_child3": {
                 "title": "Child 3",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid3mob": {
@@ -3113,7 +3113,7 @@
               },
               "tele_child4": {
                 "title": "Child 4",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid4mob": {
@@ -3229,7 +3229,7 @@
               },
               "tele_child5": {
                 "title": "Child 5",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid5mob": {
@@ -3345,7 +3345,7 @@
               },
               "tele_child6": {
                 "title": "Child 6",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid6mob": {
@@ -3461,7 +3461,7 @@
               },
               "tele_child7": {
                 "title": "Child 7",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid7mob": {
@@ -3577,7 +3577,7 @@
               },
               "tele_child8": {
                 "title": "Child 8",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid8mob": {
@@ -3693,7 +3693,7 @@
               },
               "tele_child9": {
                 "title": "Child 9",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid9mob": {
@@ -3809,7 +3809,7 @@
               },
               "tele_child10": {
                 "title": "Child 10",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid10mob": {
@@ -3925,7 +3925,7 @@
               },
               "tele_child11": {
                 "title": "Child 11",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid11mob": {
@@ -4041,7 +4041,7 @@
               },
               "tele_child12": {
                 "title": "Child 12",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid12mob": {
@@ -4157,7 +4157,7 @@
               },
               "tele_child13": {
                 "title": "Child 13",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid13mob": {
@@ -4273,7 +4273,7 @@
               },
               "tele_child14": {
                 "title": "Child 14",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid14mob": {
@@ -4389,7 +4389,7 @@
               },
               "tele_child15": {
                 "title": "Child 15",
-                "description": "",
+                
                 "type": "object",
                 "properties": {
                   "tele_kid15mob": {

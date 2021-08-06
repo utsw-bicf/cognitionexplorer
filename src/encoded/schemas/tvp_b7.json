@@ -40,7 +40,7 @@
         },
         "tele_help_with": {
             "title": "In the past four weeks, did the subject have difficulty or need help with:",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "tele_bills": {

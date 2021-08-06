@@ -54,7 +54,7 @@
         
         "npiqinf": {
             "title": "1. NPI CO-PARTICIPANT:",
-            "description": "",
+            
             "comment": "",
             "type": "string",
             "enum": [

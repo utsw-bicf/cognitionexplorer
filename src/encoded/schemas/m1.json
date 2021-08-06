@@ -71,7 +71,7 @@
         },
         "uds_ftld_sect": {
           "title": "Complete the UDS and FTLD sections below, as appropriate",
-          "description": "",
+          
           "type": "object",
           "properties": {
             "uds_status": {

@@ -43,7 +43,7 @@
        
         "subj_phys_meas": {
             "title": "Subject physical measurements",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "height": {

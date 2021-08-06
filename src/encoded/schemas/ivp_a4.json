@@ -39,7 +39,7 @@
       },
       "anymeds": {
         "title": "Is the subject currently taking any medications?",
-        "description": "",
+        
         "type": "string",
         "enum": [
           "0 No (END FORM HERE)",
@@ -9258,7 +9258,7 @@
       },
       "not_listed_drugs": {
         "title": "If a medication is not listed above, specify the drug or brand name and determine its drugID by using the Lookup Tool on NACC website at NACC online Drug Lookup",
-        "description": "",
+        
         "type": "object",
         "properties": {
           "drugid_31": {
@@ -9268,7 +9268,7 @@
           },
           "drug_name_31": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_32": {
@@ -9278,7 +9278,7 @@
           },
           "drug_name_32": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_33": {
@@ -9288,7 +9288,7 @@
           },
           "drug_name_33": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_34": {
@@ -9298,7 +9298,7 @@
           },
           "drug_name_34": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_35": {
@@ -9308,7 +9308,7 @@
           },
           "drug_name_35": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_36": {
@@ -9318,7 +9318,7 @@
           },
           "drug_name_36": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_37": {
@@ -9328,7 +9328,7 @@
           },
           "drug_name_37": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_38": {
@@ -9338,7 +9338,7 @@
           },
           "drug_name_38": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_39": {
@@ -9348,7 +9348,7 @@
           },
           "drug_name_39": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_40": {
@@ -9358,7 +9358,7 @@
           },
           "drug_name_40": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_41": {
@@ -9368,7 +9368,7 @@
           },
           "drug_name_41": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_42": {
@@ -9378,7 +9378,7 @@
           },
           "drug_name_42": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_43": {
@@ -9388,7 +9388,7 @@
           },
           "drug_name_43": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_44": {
@@ -9398,7 +9398,7 @@
           },
           "drug_name_44": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_45": {
@@ -9408,7 +9408,7 @@
           },
           "drug_name_45": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_46": {
@@ -9418,7 +9418,7 @@
           },
           "drug_name_46": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_47": {
@@ -9428,7 +9428,7 @@
           },
           "drug_name_47": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_48": {
@@ -9438,7 +9438,7 @@
           },
           "drug_name_48": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_49": {
@@ -9448,7 +9448,7 @@
           },
           "drug_name_49": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           },
           "drugid_50": {
@@ -9458,7 +9458,7 @@
           },
           "drug_name_50": {
             "title": "Type the name of the drug -",
-            "description": "",
+            
             "type": "string"
           }
         }

@@ -40,7 +40,7 @@
         },
         "fu_normexam": {
             "title": "1. Were there abnormal neurological exam findings?",
-            "description": "",
+            
             "type": "string",
             "enum": [
                 "0 No abnormal findings (END FORM HERE)",
@@ -50,7 +50,7 @@
         },
         "check_questions": {
             "title": "INSTRUCTIONS FOR QUESTIONS 2-8\nPlease complete the appropriate sections below, using your best clinical judgment in selecting findings that indicate\nthe likely syndrome(s) that is/are present.\nCHECK ALL OF THE GROUPS OF FINDINGS/SYNDROMES THAT WERE PRESENT:",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "fu_parksign": {
@@ -64,12 +64,12 @@
                 },
                 "park_left": {
                     "title": "Parkinsonian signs - LEFT",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_resttrl": {
                             "title": "2a1. Resting tremor",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -78,7 +78,7 @@
                         },
                         "fu_slowingl": {
                             "title": "2b1. Slowing of fine motor movements",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -87,7 +87,7 @@
                         },
                         "fu_rigidl": {
                             "title": "2c1. Rigidity",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -98,12 +98,12 @@
                 },
                 "park_right": {
                     "title": "Parkinsonian signs - RIGHT",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_resttrr": {
                             "title": "2a2. Resting tremor",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -112,7 +112,7 @@
                         },
                         "fu_slowingr": {
                             "title": "2b2. Slowing of fine motor movements",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -121,7 +121,7 @@
                         },
                         "fu_rigidr": {
                             "title": "2c2. Rigidity",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -132,12 +132,12 @@
                 },
                 "park_continue": {
                     "title": "Parkinsonian signs - continued",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_brady": {
                             "title": "2d. Bradykinesia",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -146,7 +146,7 @@
                         },
                         "fu_parkgait": {
                             "title": "2e. Parkinsonian gait disorder",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -155,7 +155,7 @@
                         },
                         "fu_postinst": {
                             "title": "2f. Postural instability",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -166,7 +166,7 @@
                 },
                 "fu_cvdsigns": {
                     "title": "3. Neurological signs considered by examiner to be most likely consistent with cerebrovascular disease",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No (SKIP TO QUESTION 4)",
@@ -175,12 +175,12 @@
                 },
                 "consist_mark": {
                     "title": "Findings consistent with stroke/cerebrovascular disease. Findings not marked Yes or Not\nassessed will default to No in the NACC database.",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_cortdef": {
                             "title": "3a. Cortical cognitive deficit (e.g., aphasia, apraxia, neglect)",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -189,7 +189,7 @@
                         },
                         "fu_sivdfind": {
                             "title": "3b. Focal or other neurological findings consistent with SIVD (subcortical ischemic vascular dementia)",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -200,12 +200,12 @@
                 },
                 "consist_left": {
                     "title": "Findings consistent with stroke/cerebrovascular disease - LEFT. Findings not marked Yes or\nNot assessed will default to No in the NACC database.",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_cvdmotl": {
                             "title": "3c1. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc..)",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -214,7 +214,7 @@
                         },
                         "fu_cortvisl": {
                             "title": "3d1. Cortical visual field loss",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -223,7 +223,7 @@
                         },
                         "fu_somatl": {
                             "title": "3e1. Somatosensory loss",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -234,12 +234,12 @@
                 },
                 "consist_right": {
                     "title": "Findings consistent with stroke/cerebrovascular disease - RIGHT. Findings not marked Yes or\nNot assessed will default to No in the NACC database.",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_cvdmotr": {
                             "title": "3c2. Motor (may include weakness of combinations of face, arm, and leg; reflex changes; etc..)",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -248,7 +248,7 @@
                         },
                         "fu_cortvisr": {
                             "title": "3d2. Cortical visual field loss",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -257,7 +257,7 @@
                         },
                         "fu_somatr": {
                             "title": "3e2. Somatosensory loss",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -268,12 +268,12 @@
                 },
                 "post_cort": {
                     "title": "Posterior cortical atrophy or apraxia of gaze",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_postcort": {
                             "title": "4. Higher cortical visual problem suggesting posterior cortical atrophy (e.g., prosopagnosia, simultagnosia, Balint's syndrome) or apraxia of gaze",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -284,12 +284,12 @@
                 },
                 "psp": {
                     "title": "PSP, corticobasal syndrome or other",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_pspcbs": {
                             "title": "5. Findings suggestive of progressive supranuclear palsy (PSP), corticobasal syndrome, or other related disorders",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "0 No (SKIP TO QUESTION 6)",
@@ -300,12 +300,12 @@
                 },
                 "findings": {
                     "title": "Findings - Findings not marked Yes or Not assessed will default to No in the NACC database.",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_eyepsp": {
                             "title": "5a. Eye movement changes consistent with PSP",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -314,7 +314,7 @@
                         },
                         "fu_dyspsp": {
                             "title": "5b. Dysarthria consistent with PSP",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -323,7 +323,7 @@
                         },
                         "fu_axialpsp": {
                             "title": "5c. Axial rigidity consistent with PSP",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -332,7 +332,7 @@
                         },
                         "fu_gaitpsp": {
                             "title": "5d. Gait disorder consistent with PSP",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -341,7 +341,7 @@
                         },
                         "fu_apraxsp": {
                             "title": "5e. Apraxia of speech",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -352,12 +352,12 @@
                 },
                 "finding_left": {
                     "title": "Findings - LEFT Findings not marked Yes or Not assessed will default to No in the NACC database.",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_apraxl": {
                             "title": "5f1. Apraxia consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -366,7 +366,7 @@
                         },
                         "fu_cortsenl": {
                             "title": "5g1. Cortical sensory deficits consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -375,7 +375,7 @@
                         },
                         "fu_ataxl": {
                             "title": "5h1. Ataxia consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -384,7 +384,7 @@
                         },
                         "fu_alienlml": {
                             "title": "5i1. Alien limb consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -393,7 +393,7 @@
                         },
                         "fu_dystonl": {
                             "title": "5j1. Dystonia consistent with CBS, PSP, or related disorder",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -402,7 +402,7 @@
                         },
                         "fu_myocllt": {
                             "title": "5k1. Myoclonus consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -413,12 +413,12 @@
                 },
                 "finding_right": {
                     "title": "Findings - RIGHT Findings not marked Yes or Not assessed will default to No in the NACC database.",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "fu_apraxr": {
                             "title": "5f2. Apraxia consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -427,7 +427,7 @@
                         },
                         "fu_cortsenr": {
                             "title": "5g2. Cortical sensory deficits consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -436,7 +436,7 @@
                         },
                         "fu_ataxr": {
                             "title": "5h2. Ataxia consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -445,7 +445,7 @@
                         },
                         "fu_alienlmr": {
                             "title": "5i2. Alien limb consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -454,7 +454,7 @@
                         },
                         "fu_dystonr": {
                             "title": "5j2. Dystonia consistent with CBS, PSP, or related disorder",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -463,7 +463,7 @@
                         },
                         "fu_myoclrt": {
                             "title": "5k2. Myoclonus consistent with CBS",
-                            "description": "",
+                            
                             "type": "string",
                             "enum": [
                                 "1 Yes",
@@ -474,7 +474,7 @@
                 },
                 "fu_alsfind": {
                     "title": "6. Findings suggesting ALS (e.g., muscle wasting, fasciculations, upper motor neuron and/or lower motor neuron signs)",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -483,7 +483,7 @@
                 },
                 "fu_gaitnph": {
                     "title": "7. Normal-pressure hydrocephalus: gait apraxia",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -492,7 +492,7 @@
                 },
                 "fu_othneur": {
                     "title": "8. Other findings (e.g., cerebellar ataxia, chorea, myoclonus)\n(NOTE: For this question, do not specify symptoms that have already been checked above)",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -501,7 +501,7 @@
                 },
                 "fu_othneurx": {
                     "title": "8a. Other findings from neurological exam, please specify:",
-                    "description": "",
+                    
                     "type": "string"
                 }
             }

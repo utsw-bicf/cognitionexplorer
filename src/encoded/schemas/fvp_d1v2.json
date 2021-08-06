@@ -63,7 +63,7 @@
         },
         "cogn_impair": {
             "title": "4. If the subject does not have normal cognition and is not clinically demented, indicate the type of\ncognitive impairment (choose only one impairment from items 4a thru 4e as being “present”;\nmark all others “absent”) and then designate the suspected underlying cause(s) of the impairment\nby completing items 5–30:\n",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "MCIAMEM": {

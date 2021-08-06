@@ -113,7 +113,7 @@
         },
         "cere_dise": {
             "title": "CEREBROVASCULAR DISEASE",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "CVDCOG": {
@@ -145,7 +145,7 @@
                 },
                 "if_yes": {
                     "title": "12a. If yes, indicate which imaging evidence was found:",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "CVDIMAG1": {

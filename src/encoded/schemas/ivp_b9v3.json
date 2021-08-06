@@ -74,7 +74,7 @@
             "properties": {
                 "decclcog": {
                     "title": "3. Based on the clinician's judgment, is the subject currently experiencing meaningful impairment in cognition?",
-                    "description": "",
+                    
                     "comment": "",
                     "type": "string",
                     "enum": [
@@ -255,7 +255,7 @@
         },
         "psych": {
             "title": "9c. Psychosis",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "bevhall": {

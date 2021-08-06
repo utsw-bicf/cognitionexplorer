@@ -312,7 +312,7 @@
                 },
                 "c_state": {
                     "title": "State",
-                    "description": "",
+                    
                     "comment": "",
                     "type": "string",
                     "enum": [
@@ -422,7 +422,7 @@
                 },
                 "alt_state": {
                     "title": "State",
-                    "description": "",
+                    
                     "comment": "",
                     "type": "string",
                     "enum": [

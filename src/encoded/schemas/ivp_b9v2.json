@@ -74,12 +74,12 @@
         },
         "cogn_symp": {
             "title": "COGNITIVE SYMPTOMS:",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "indicate_impair": {
                     "title": "4. Indicate whether the subject currently is impaired meaningfully, relative to\npreviously attained abilities, in the following cognitive domains or has\nfluctuating cognition:\n",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "COGMEM": {
@@ -202,12 +202,12 @@
         },
         "beha_symp": {
             "title": "BEHAVIOR SYMPTOMS:",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "indicate_beha_symp": {
                     "title": "7. Indicate whether the subject currently manifests the following behavioral\nsymptoms:\n",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "BEAPATHY": {
@@ -232,7 +232,7 @@
                         },
                         "psychosis": {
                             "title": "Psychosis",
-                            "description": "",
+                            
                             "type": "object",
                             "properties": {
                                 "BEVHALL": {
@@ -389,12 +389,12 @@
         },
         "motor_symp": {
             "title": "MOTOR SYMPTOMS:",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "indicate_motor_symp": {
                     "title": "10. Indicate whether the subject currently has the following motor symptoms:",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "MOGAIT": {
@@ -484,7 +484,7 @@
         },
         "overall": {
             "title": "OVERALL SUMMARY OF SYMPTOMS ONSET:",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "COURSE": {

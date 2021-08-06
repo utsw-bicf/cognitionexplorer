@@ -41,7 +41,7 @@
         },
         "phys_measr": {
             "title": "Subject physical measurements",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "fu_height": {
@@ -79,12 +79,12 @@
         },
         "addi_obser": {
             "title": "Additional physical observations",
-            "description": "",
+            
             "type": "object",
             "properties": {
                 "fu_vision": {
                     "title": "5. Without corrective lenses, is the subject's vision functionally normal?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -94,7 +94,7 @@
                 },
                 "fu_viscorr": {
                     "title": "6. Does the subject usually wear corrective lenses? (If no or unknown, SKIP TO QUESTION 7)",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -104,7 +104,7 @@
                 },
                 "fu_viswcorr": {
                     "title": "6a. If yes, is the subject's vision functionally normal with corrective lenses?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -114,7 +114,7 @@
                 },
                 "fu_hearing": {
                     "title": "7. Without a hearing aid(s), is the subject's hearing functionally normal?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -124,7 +124,7 @@
                 },
                 "fu_hearaid": {
                     "title": "8. Does the subject usually wear a hearing aid(s)? (If no or unknown, END FORM HERE)",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",
@@ -134,7 +134,7 @@
                 },
                 "fu_hearwaid": {
                     "title": "8a. If yes, is the subject's hearing functionally normal with a hearing aid(s)?",
-                    "description": "",
+                    
                     "type": "string",
                     "enum": [
                         "0 No",

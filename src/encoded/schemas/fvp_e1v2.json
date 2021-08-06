@@ -37,12 +37,12 @@
       },
       "neur_image": {
         "title": "Since the last visit, has neuroimaging been completed and available at your ADC?",
-        "description": "",
+        
         "type": "object",
         "properties": {
           "comp_tomo": {
             "title": "1. Computed tomography",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "CTFLM": {
@@ -67,7 +67,7 @@
           },
           "magn_clinic": {
             "title": "2. Magnetic resonance imaging – Clinical study",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "MRI1FLM": {
@@ -92,7 +92,7 @@
           },
           "magn_research_stru": {
             "title": "3. Magnetic resonance imaging – Research study/structural",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "MRI2FLM": {
@@ -117,7 +117,7 @@
           },
           "magn_research_func": {
             "title": "4. Magnetic resonance imaging – Research study/functional\n          ",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "MRI3FLM": {
@@ -142,7 +142,7 @@
           },
           "magn_spec": {
             "title": "5. Magnetic resonance spectroscopy ",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "MRISPFLM": {
@@ -167,7 +167,7 @@
           },
           "spect": {
             "title": "6. SPECT",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "SPECTFLM": {
@@ -192,7 +192,7 @@
           },
           "pet": {
             "title": "7. PET ",
-            "description": "",
+            
             "type": "object",
             "properties": {
               "PETFLM": {
@@ -219,7 +219,7 @@
       },
       "specimen": {
         "title": "Are specimens of the following available at your ADC? ",
-        "description": "",
+        
         "type": "object",
         "properties": {
           "DNA": {
@@ -253,7 +253,7 @@
       },
       "genotyping": {
         "title": "Is genotype data available at your ADC? ",
-        "description": "",
+        
         "type": "object",
         "properties": {
           "APOE": {

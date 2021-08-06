@@ -227,7 +227,7 @@
                         },
                         "cortvisr": {
                             "title": "3d2. Cortical visual field loss",
-                            "description": "",
+                            
                             "comment": "",
                             "type": "string",
                             "enum": [
@@ -237,7 +237,7 @@
                         },
                         "somatr": {
                             "title": "3e2. Somatosensory loss",
-                            "description": "",
+                            
                             "comment": "",
                             "type": "string",
                             "enum": [
@@ -267,7 +267,7 @@
                 },
                 "find_present": {
                     "title": "Findings - Findings not marked Yes or Not assessed will default to No in the NACC database.",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "eyepsp": {
@@ -358,7 +358,7 @@
                         },
                         "myocllt": {
                             "title": "5k1. Myoclonus consistent with CBS",
-                            "description": "",
+                            
                             "comment": "",
                             "type": "string",
                             "enum": [
@@ -370,7 +370,7 @@
                 },
                 "find_right": {
                     "title": "Findings - RIGHT Findings not marked Yes or Not assessed will default to No in the NACC database.",
-                    "description": "",
+                    
                     "type": "object",
                     "properties": {
                         "apraxr": {
