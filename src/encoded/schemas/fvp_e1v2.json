@@ -1,0 +1,411 @@
+{
+    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form E1: Imaging/Labs",
+    "description": "NOTE: This form is to be completed by ADC or clinic staff.For additional \nclarification and examples, see UDS Coding Guidebook for Initial Visit\nPacket, Form E1.Check only one box per response category.\n\n",
+    "id": "/profiles/fvp_e1v2.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+      "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+      {
+        "$ref": "mixins.json#/schema_version"
+      },
+      {
+        "$ref": "mixins.json#/submitted"
+      },
+      {
+        "$ref": "mixins.json#/standard_status"
+      },
+      {
+        "$ref": "mixins.json#/header"
+      },
+      {
+        "$ref": "mixins.json#/examinier_initials"
+      },
+      {
+        "$ref": "mixins.json#/form_status"
+      },
+      {
+        "$ref": "mixins.json#/uuid"
+      }
+    ],
+    "type": "object",
+    "properties": {
+      "schema_version": {
+        "default": "1"
+      },
+      "neur_image": {
+        "title": "Since the last visit, has neuroimaging been completed and available at your ADC?",
+        "description": "",
+        "type": "object",
+        "properties": {
+          "comp_tomo": {
+            "title": "1. Computed tomography",
+            "description": "",
+            "type": "object",
+            "properties": {
+              "CTFLM": {
+                "title": "1A Computed tomography, film",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              },
+              "CTDIG": {
+                "title": "1B Computed tomography, digital image",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              }
+            }
+          },
+          "magn_clinic": {
+            "title": "2. Magnetic resonance imaging – Clinical study",
+            "description": "",
+            "type": "object",
+            "properties": {
+              "MRI1FLM": {
+                "title": "2A Magnetic resonance imaging – Clinical study, film",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n              available to your Center researchers within a few hours, then this\n              question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              },
+              "MRI1DIG": {
+                "title": "2B Magnetic resonance imaging – Clinical study, digital image",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n              available to your Center researchers within a few hours, then this\n              question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              }
+            }
+          },
+          "magn_research_stru": {
+            "title": "3. Magnetic resonance imaging – Research study/structural",
+            "description": "",
+            "type": "object",
+            "properties": {
+              "MRI2FLM": {
+                "title": "3A Magnetic resonance imaging – Research study/structural, film",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n              available to your Center researchers within a few hours, then this\n              question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              },
+              "MRI2DIG": {
+                "title": "3B Magnetic resonance imaging – Research study/structural, digital image",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n              available to your Center researchers within a few hours, then this\n              question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              }
+            }
+          },
+          "magn_research_func": {
+            "title": "4. Magnetic resonance imaging – Research study/functional\n          ",
+            "description": "",
+            "type": "object",
+            "properties": {
+              "MRI3FLM": {
+                "title": "4A Magnetic resonance imaging – Research study/functional, film",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              },
+              "MRI3DIG": {
+                "title": "4B Magnetic resonance imaging – Research study/functional, digital image",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              }
+            }
+          },
+          "magn_spec": {
+            "title": "5. Magnetic resonance spectroscopy ",
+            "description": "",
+            "type": "object",
+            "properties": {
+              "MRISPFLM": {
+                "title": "5A Magnetic resonance spectroscopy, film",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              },
+              "MRISPDIG": {
+                "title": "5B Magnetic resonance spectroscopy, digital image",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              }
+            }
+          },
+          "spect": {
+            "title": "6. SPECT",
+            "description": "",
+            "type": "object",
+            "properties": {
+              "SPECTFLM": {
+                "title": "6A SPECT, film",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              },
+              "SPECTDIG": {
+                "title": "6B SPECT, digital image",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              }
+            }
+          },
+          "pet": {
+            "title": "7. PET ",
+            "description": "",
+            "type": "object",
+            "properties": {
+              "PETFLM": {
+                "title": "7A PET, film",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              },
+              "PETDIG": {
+                "title": "7B PET, digital image",
+                "comment": "Imaging (of the subject’s head) available at your ADC. If data are not\n          available to your Center researchers within a few hours, then this\n          question should be coded \"No\".",
+                "type": "string",
+                "enum": [
+                  "0 No",
+                  "1 Yes"
+                ]
+              }
+            }
+          }
+        }
+      },
+      "specimen": {
+        "title": "Are specimens of the following available at your ADC? ",
+        "description": "",
+        "type": "object",
+        "properties": {
+          "DNA": {
+            "title": "8 DNA",
+            "comment": "Specimens available at your ADC. If specimen and/or data are not\n      available to your Center researchers within a few hours, then this\n      question should be coded \"No\".",
+            "type": "string",
+            "enum": [
+              "0 No",
+              "1 Yes"
+            ]
+          },
+          "CSFANTEM": {
+            "title": "9 Cerebrospinal fluid – ante-mortem",
+            "comment": "Specimens available at your ADC. If specimen and/or data are not\n      available to your Center researchers within a few hours, then this\n      question should be coded \"No\".",
+            "type": "string",
+            "enum": [
+              "0 No",
+              "1 Yes"
+            ]
+          },
+          "SERUM": {
+            "title": "10 Serum/plasma",
+            "comment": "Specimens available at your ADC. If specimen and/or data are not\n      available to your Center researchers within a few hours, then this\n      question should be coded \"No\".",
+            "type": "string",
+            "enum": [
+              "0 No",
+              "1 Yes"
+            ]
+          }
+        }
+      },
+      "genotyping": {
+        "title": "Is genotype data available at your ADC? ",
+        "description": "",
+        "type": "object",
+        "properties": {
+          "APOE": {
+            "title": "11 APOE",
+            "comment": "If the subject’s APOE genotype (data) is not accessible to your Center researchers within a few hours, then this question should be coded \"No\".",
+            "type": "string",
+            "enum": [
+              "0 No",
+              "1 Yes"
+            ]
+          }
+        }
+      }
+    },
+    "facets": {
+      "status": {
+        "title": "Status"
+      },
+      "neur_image.comp_tomo.CTFLM": {
+        "title": "1A Computed tomography, film"
+      },
+      "neur_image.comp_tomo.CTDIG": {
+        "title": "1B Computed tomography, digital image"
+      },
+      "neur_image.magn_clinic.MRI1FLM": {
+        "title": "2A Magnetic resonance imaging – Clinical study, film"
+      },
+      "neur_image.magn_clinic.MRI1DIG": {
+        "title": "2B Magnetic resonance imaging – Clinical study, digital image"
+      },
+      "neur_image.magn_research_stru.MRI2FLM": {
+        "title": "3A Magnetic resonance imaging – Research study/structural, film"
+      },
+      "neur_image.magn_research_stru.MRI2DIG": {
+        "title": "3B Magnetic resonance imaging – Research study/structural, digital image"
+      },
+      "neur_image.magn_research_func.MRI3FLM": {
+        "title": "4A Magnetic resonance imaging – Research study/functional, film"
+      },
+      "neur_image.magn_research_func.MRI3DIG": {
+        "title": "4B Magnetic resonance imaging – Research study/functional, digital image"
+      },
+      "neur_image.magn_spec.MRISPFLM": {
+        "title": "5A Magnetic resonance spectroscopy, film"
+      },
+      "neur_image.magn_spec.MRISPDIG": {
+        "title": "5B Magnetic resonance spectroscopy, digital image"
+      },
+      "neur_image.spect.SPECTFLM": {
+        "title": "6A SPECT, film"
+      },
+      "neur_image.spect.SPECTDIG": {
+        "title": "6B SPECT, digital image"
+      },
+      "neur_image.pet.PETFLM": {
+        "title": "7A PET, film"
+      },
+      "neur_image.pet.PETDIG": {
+        "title": "7B PET, digital image"
+      },
+      "specimen.DNA": {
+        "title": "8 DNA"
+      },
+      "specimen.CSFANTEM": {
+        "title": "9 Cerebrospinal fluid – ante-mortem"
+      },
+      "specimen.SERUM": {
+        "title": "10 Serum/plasma"
+      },
+      "genotyping.APOE": {
+        "title": "11 APOE"
+      }
+    },
+    "columns": {
+      "status": {
+        "title": "Status"
+      },
+      "neur_image.comp_tomo.CTFLM": {
+        "title": "1A Computed tomography, film"
+      },
+      "neur_image.comp_tomo.CTDIG": {
+        "title": "1B Computed tomography, digital image"
+      },
+      "neur_image.magn_clinic.MRI1FLM": {
+        "title": "2A Magnetic resonance imaging – Clinical study, film"
+      },
+      "neur_image.magn_clinic.MRI1DIG": {
+        "title": "2B Magnetic resonance imaging – Clinical study, digital image"
+      },
+      "neur_image.magn_research_stru.MRI2FLM": {
+        "title": "3A Magnetic resonance imaging – Research study/structural, film"
+      },
+      "neur_image.magn_research_stru.MRI2DIG": {
+        "title": "3B Magnetic resonance imaging – Research study/structural, digital image"
+      },
+      "neur_image.magn_research_func.MRI3FLM": {
+        "title": "4A Magnetic resonance imaging – Research study/functional, film"
+      },
+      "neur_image.magn_research_func.MRI3DIG": {
+        "title": "4B Magnetic resonance imaging – Research study/functional, digital image"
+      },
+      "neur_image.magn_spec.MRISPFLM": {
+        "title": "5A Magnetic resonance spectroscopy, film"
+      },
+      "neur_image.magn_spec.MRISPDIG": {
+        "title": "5B Magnetic resonance spectroscopy, digital image"
+      },
+      "neur_image.spect.SPECTFLM": {
+        "title": "6A SPECT, film"
+      },
+      "neur_image.spect.SPECTDIG": {
+        "title": "6B SPECT, digital image"
+      },
+      "neur_image.pet.PETFLM": {
+        "title": "7A PET, film"
+      },
+      "neur_image.pet.PETDIG": {
+        "title": "7B PET, digital image"
+      },
+      "specimen.DNA": {
+        "title": "8 DNA"
+      },
+      "specimen.CSFANTEM": {
+        "title": "9 Cerebrospinal fluid – ante-mortem"
+      },
+      "specimen.SERUM": {
+        "title": "10 Serum/plasma"
+      },
+      "genotyping.APOE": {
+        "title": "11 APOE"
+      }
+    },
+    "boost_values": {
+      "patient": 1.0,
+      "neur_image.comp_tomo.CTFLM": 1.0,
+      "neur_image.comp_tomo.CTDIG": 1.0,
+      "neur_image.magn_clinic.MRI1FLM": 1.0,
+      "neur_image.magn_clinic.MRI1DIG": 1.0,
+      "neur_image.magn_research_stru.MRI2FLM": 1.0,
+      "neur_image.magn_research_stru.MRI2DIG": 1.0,
+      "neur_image.magn_research_func.MRI3FLM": 1.0,
+      "neur_image.magn_research_func.MRI3DIG": 1.0,
+      "neur_image.magn_spec.MRISPFLM": 1.0,
+      "neur_image.magn_spec.MRISPDIG": 1.0,
+      "neur_image.spect.SPECTFLM": 1.0,
+      "neur_image.spect.SPECTDIG": 1.0,
+      "neur_image.pet.PETFLM": 1.0,
+      "neur_image.pet.PETDIG": 1.0,
+      "specimen.DNA": 1.0,
+      "specimen.CSFANTEM": 1.0,
+      "specimen.SERUM": 1.0,
+      "genotyping.APOE": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_e1v2.md"
+  }
