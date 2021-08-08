@@ -1,0 +1,203 @@
+{
+    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form B2: Evaluation Form – HIS and CVD",
+    "description": "NOTE: This form is to be completed by the clinician or other trained healthADC \nprofessional.For additional clarification and examples, see UDS Coding\nGuidebook for Initial Visit Packet, Form B2.\n",
+    "id": "/profiles/ivp_b2v1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "hach_isch_score": {
+            "title": "HACHINSKI ISCHEMIC SCORE",
+            "description": "Please complete the following scale using information obtained from\nhistory/physical/neurological exam and/or medical records. Indicate if a\ncharacteristic is present or characteristic of the patient by circling the\nappropriate value.\n",
+            "type": "object",
+            "properties": {
+                "ABRUPT": {
+                    "title": "1 Abrupt onset (re: cognitive status)",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "2 Present"
+                    ]
+                },
+                "STEPWISE": {
+                    "title": "2 Stepwise deterioration (re: cognitive status)",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                },
+                "SOMATIC": {
+                    "title": "3 Somatic complaints",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                },
+                "EMOT": {
+                    "title": "4 Emotional incontinence",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                },
+                "HXHYPER": {
+                    "title": "5 History or presence of hypertension",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Present"
+                    ]
+                },
+                "HXSTROKE": {
+                    "title": "6 History of stroke",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "2 Present"
+                    ]
+                },
+                "FOCLSYM": {
+                    "title": "7 Focal neurological symptoms",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "2 Present"
+                    ]
+                },
+                "FOCLSIGN": {
+                    "title": "8 Focal neurological signs",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "2 Present"
+                    ]
+                },
+                "HACHIN": {
+                    "title": "9 Sum all circled answers for a total score",
+                    "description": "0 – 12",
+                    "type": "string"
+                }
+            }
+        }
+       
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "hach_isch_score.ABRUPT": {
+            "title": "1 Abrupt onset (re: cognitive status)"
+        },
+        "hach_isch_score.STEPWISE": {
+            "title": "2 Stepwise deterioration (re: cognitive status)"
+        },
+        "hach_isch_score.SOMATIC": {
+            "title": "3 Somatic complaints"
+        },
+        "hach_isch_score.EMOT": {
+            "title": "4 Emotional incontinence"
+        },
+        "hach_isch_score.HXHYPER": {
+            "title": "5 History or presence of hypertension"
+        },
+        "hach_isch_score.HXSTROKE": {
+            "title": "6 History of stroke"
+        },
+        "hach_isch_score.FOCLSYM": {
+            "title": "7 Focal neurological symptoms"
+        },
+        "hach_isch_score.FOCLSIGN": {
+            "title": "8 Focal neurological signs"
+        },
+        "hach_isch_score.HACHIN": {
+            "title": "9 Sum all circled answers for a total score"
+        }
+       
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "hach_isch_score.ABRUPT": {
+            "title": "1 Abrupt onset (re: cognitive status)"
+        },
+        "hach_isch_score.STEPWISE": {
+            "title": "2 Stepwise deterioration (re: cognitive status)"
+        },
+        "hach_isch_score.SOMATIC": {
+            "title": "3 Somatic complaints"
+        },
+        "hach_isch_score.EMOT": {
+            "title": "4 Emotional incontinence"
+        },
+        "hach_isch_score.HXHYPER": {
+            "title": "5 History or presence of hypertension"
+        },
+        "hach_isch_score.HXSTROKE": {
+            "title": "6 History of stroke"
+        },
+        "hach_isch_score.FOCLSYM": {
+            "title": "7 Focal neurological symptoms"
+        },
+        "hach_isch_score.FOCLSIGN": {
+            "title": "8 Focal neurological signs"
+        },
+        "hach_isch_score.HACHIN": {
+            "title": "9 Sum all circled answers for a total score"
+        }
+        
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "hach_isch_score.ABRUPT": 1.0,
+        "hach_isch_score.STEPWISE": 1.0,
+        "hach_isch_score.SOMATIC": 1.0,
+        "hach_isch_score.EMOT": 1.0,
+        "hach_isch_score.HXHYPER": 1.0,
+        "hach_isch_score.HXSTROKE": 1.0,
+        "hach_isch_score.FOCLSYM": 1.0,
+        "hach_isch_score.FOCLSIGN": 1.0,
+        "hach_isch_score.HACHIN": 1.0,
+        "cere_dise.CVDCOG": 1.0,
+        "cere_dise.STROKCOG": 1.0,
+        "cere_dise.CVDIMAG": 1.0,
+        "cere_dise.if_yes.CVDIMAG1": 1.0,
+        "cere_dise.if_yes.CVDIMAG2": 1.0,
+        "cere_dise.if_yes.CVDIMAG3": 1.0,
+        "cere_dise.if_yes.CVDIMAG4": 1.0,
+        "cere_dise.if_yes.CVDIMAGX": 1.0
+    },
+    "changelog": "/profiles/changelogs/ivp_b2v1.md"
+}

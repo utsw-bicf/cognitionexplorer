@@ -1,0 +1,23 @@
+[{
+    "patient": "000000",
+    "formver": "1.2",
+    "adcid": "25 University of Texas Southwestern",
+    "visdate": "2005-02-01",
+    "visitnum": "1",
+    "initials": "OK",
+    "hach_isch_score": {
+        "ABRUPT": "0 Absent",
+        "STEPWISE": "1 Present",
+        "SOMATIC": "0 Absent",
+        "EMOT": "1 Present",
+        "HXHYPER": "0 Absent",
+        "HXSTROKE": "0 Absent",
+        "FOCLSYM": "2 Present",
+        "FOCLSIGN": "0 Absent",
+        "HACHIN": "test"
+    },
+    
+    
+    "status": "released",
+    "uuid": "f94d3276-0c41-4ffe-a21e-5752531d3839"
+}]
