@@ -67,7 +67,8 @@ ORDER = [
     'ivp_b7v2',
     'ivp_b7v1',
     # 'ivp_b8v3',
-    # 'ivp_b8v2',
+    'ivp_b8v2',
+    'ivp_b8v1',
 
     # 'ivp_b9v3',
     # 'ivp_b9v2',

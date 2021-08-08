@@ -53,3 +53,22 @@ class Ivp_b8v2(Item):
 
     ]
     set_status_down = []
+
+@collection(
+    name='ivp_b8v1',
+    unique_key='uuid',
+    properties={
+        "title": "UDS_IVP_B8V1 Forms",
+        "description": "UDS Initial visiting patients B8V1 forms results pages",
+    })
+class Ivp_b8v1(Item):
+    item_type = 'ivp_b8v1'
+    schema = load_schema('encoded:schemas/ivp_b8v1.json')
+    embedded =  []
+    rev = {
+    }
+    audit_inherit = []
+    set_status_up = [
+
+    ]
+    set_status_down = []
