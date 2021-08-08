@@ -29,3 +29,22 @@ class Ivp_a2v2(Item):
     audit_inherit = []
     set_status_up = []
     set_status_down = []
+
+@collection(
+    name="ivp_a2v1s",
+    unique_key="uuid",
+    properties={
+        "title": "UDS_IVP_A2V2 Forms",
+        "description": "UDS initial visits forms A2V2:Informant Demographics results pages",
+    },
+)
+class Ivp_a2v1(Item):
+    item_type = "ivp_a2v1"
+    schema = load_schema("encoded:schemas/ivp_a2v1.json")
+    embedded = [
+    ]
+    rev = {
+    }
+    audit_inherit = []
+    set_status_up = []
+    set_status_down = []
