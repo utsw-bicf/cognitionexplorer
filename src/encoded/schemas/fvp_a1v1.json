@@ -1,0 +1,227 @@
+{
+    "title": "NACC Uniform Data Set (UDS),Follow-up Form A1: Subject Demographics",
+    "description": "NOTE: This form is to be completed by intake interviewer per ADC scheduling\nrecords, subject interview, medical records, and proxy informant report (as needed). \nFor additional clarification and examples, see UDS Coding Guidebook for\nFollow-up Visit Packet, Form A1. Check only one box per question.\n",
+    "id": "/profiles/fvp_a1v1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "birthday": {
+            "title": "1. Subject’s month/year of birth",
+            "type": "object",
+            "properties": {
+                "BIRTHMO": {
+                    "title": "1A Subject’s month of birth",
+                    "description": "(1 – 12), Date can be submitted as MM. BIRTHMO is available to all researchers upon request.",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 12
+                },
+                "BIRTHYR": {
+                    "title": "1B Subject’s year of birth",
+                    "description": "Date can be submitted as YYYY.1875 to (current year minus 15)",
+                    "type": "integer",
+                    "minimum": 1900
+                }
+            }
+        },
+        "SEX": {
+            "title": "2 Subject’s sex",
+            "type": "string",
+            "enum": [
+                "1 Male",
+                "2 Female"
+            ]
+        },
+        "LIVSIT": {
+            "title": "3 What is the subject’s living situation?",
+            "type": "string",
+            "enum": [
+                "1 Lives alone",
+                "2 Lives with spouse or partner",
+                "3 Lives with relative or friend",
+                "4 Lives with group",
+                "5 Other",
+                "9 Unknown"
+            ]
+        },
+        "LIVSITX": {
+            "title": "3A Living situation, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).Blank if #3, LIVSIT ≠ 5 (Other).",
+            "type": "string"
+        },
+        "INDEPEND": {
+            "title": "4 What is the subject’s level of independence?",
+            "type": "string",
+            "enum": [
+                "1 Able to live independently",
+                "2 Requires some assistance with complex activities",
+                "3 Requires some assistance with basic activities",
+                "4 Completely dependent",
+                "9 Unknown"
+            ]
+        },
+        "RESIDENC": {
+            "title": "5 What is the subject’s type of residence?",
+            "type": "string",
+            "enum": [
+                "1 Single family residence",
+                "2 Retirement community",
+                "3 Assisted living/boarding home/adult family home",
+                "4 Skilled nursing facility/nursing home",
+                "5 Other",
+                "9 Unknown"
+            ]
+        },
+        "RESIDENX": {
+            "title": "5A Type of residence, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“),ampersands (&), or percentage signs (%). Blank if #5, RESIDENC ≠ 5 (Other).",
+            "type": "string"
+        },
+        "ZIP": {
+            "title": "6 Subject’s primary residence zip code (first 3 digits)",
+            "description": "Must be valid zip code, in the range 006 – 999.ZIP is available to all researchers upon request.",
+            "type": "string"
+        },
+        "MARISTAT": {
+            "title": "7 Subject’s current marital status",
+            "type": "string",
+            "enum": [
+                "1 Married",
+                "2 Widowed",
+                "3 Divorced",
+                "4 Separated",
+                "5 Never married",
+                "6 Living as married",
+                "8 Other",
+                "9 Unknown"
+            ]
+        },
+        "MARISTAX": {
+            "title": "7A Marital status, other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“),ampersands (&), or percentage signs (%).Blank if #7, MARISTAT ≠ 8 (Other).",
+            "type": "string"
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "birthday.BIRTHMO": {
+            "title": "1A Subject’s month of birth"
+        },
+        "birthday.BIRTHYR": {
+            "title": "1B Subject’s year of birth"
+        },
+        "SEX": {
+            "title": "2 Subject’s sex"
+        },
+        "LIVSIT": {
+            "title": "3 What is the subject’s living situation?"
+        },
+        "LIVSITX": {
+            "title": "3A Living situation, other – specify"
+        },
+        "INDEPEND": {
+            "title": "4 What is the subject’s level of independence?"
+        },
+        "RESIDENC": {
+            "title": "5 What is the subject’s type of residence?"
+        },
+        "RESIDENX": {
+            "title": "5A Type of residence, other – specify"
+        },
+        "ZIP": {
+            "title": "6 Subject’s primary residence zip code (first 3 digits)"
+        },
+        "MARISTAT": {
+            "title": "7 Subject’s current marital status"
+        },
+        "MARISTAX": {
+            "title": "7A Marital status, other – specify"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "birthday.BIRTHMO": {
+            "title": "1A Subject’s month of birth"
+        },
+        "birthday.BIRTHYR": {
+            "title": "1B Subject’s year of birth"
+        },
+        "SEX": {
+            "title": "2 Subject’s sex"
+        },
+        "LIVSIT": {
+            "title": "3 What is the subject’s living situation?"
+        },
+        "LIVSITX": {
+            "title": "3A Living situation, other – specify"
+        },
+        "INDEPEND": {
+            "title": "4 What is the subject’s level of independence?"
+        },
+        "RESIDENC": {
+            "title": "5 What is the subject’s type of residence?"
+        },
+        "RESIDENX": {
+            "title": "5A Type of residence, other – specify"
+        },
+        "ZIP": {
+            "title": "6 Subject’s primary residence zip code (first 3 digits)"
+        },
+        "MARISTAT": {
+            "title": "7 Subject’s current marital status"
+        },
+        "MARISTAX": {
+            "title": "7A Marital status, other – specify"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "birthday.BIRTHMO": 1.0,
+        "birthday.BIRTHYR": 1.0,
+        "SEX": 1.0,
+        "LIVSIT": 1.0,
+        "LIVSITX": 1.0,
+        "INDEPEND": 1.0,
+        "RESIDENC": 1.0,
+        "RESIDENX": 1.0,
+        "ZIP": 1.0,
+        "MARISTAT": 1.0,
+        "MARISTAX": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_a1v1.md"
+}
