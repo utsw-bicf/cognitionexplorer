@@ -118,6 +118,7 @@ class Patient(Item):
         'fvp_c2v3',
         'fvp_b6v3',
         'fvp_b6v2',
+        'fvp_b6v1',
         'fvp_b4v3',
         'fvp_b4v2',
         'fvp_b4v1',
@@ -229,6 +230,7 @@ class Patient(Item):
         'fvp_c2v3': ('Fvp_c2v3', 'patient'),
         'fvp_b6v3': ('Fvp_b6v3', 'patient'),
         'fvp_b6v2': ('Fvp_b6v2', 'patient'),
+        'fvp_b6v1': ('Fvp_b6v1', 'patient'),
         'fvp_b4v3': ('Fvp_b4v3', 'patient'),
         'fvp_b4v2': ('Fvp_b4v2', 'patient'),
         'fvp_b4v1': ('Fvp_b4v1', 'patient'),
@@ -991,6 +993,19 @@ class Patient(Item):
     })
     def fvp_b6v2(self, request, fvp_b6v2):
         return paths_filtered_by_status(request, fvp_b6v2)
+
+
+    @calculated_property(schema={
+        "title": "Fvp_b6v1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_b6v1"
+        },
+    })
+    def fvp_b6v1(self, request, fvp_b6v1):
+        return paths_filtered_by_status(request, fvp_b6v1)
+
 
     @calculated_property(schema={
         "title": "Fvp_b4v3",
