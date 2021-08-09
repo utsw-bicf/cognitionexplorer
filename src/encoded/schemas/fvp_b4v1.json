@@ -1,0 +1,196 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B4®: Dementia Staging Instrument plus NACC FTLD Behario & Language Domains (CDR® Plus NACC FTLD)",
+    "description": "NOTE: This form is to be completed by the clinician, based on informant report and neurological exam of the Examiner’s initials:__ __ __\nsubject. In the extremely rare instances when no informant is available, the clinician must complete the CDRutilizing\nall other available information and his/her best clinical judgment.Score only as decline from previous level due to cognitive loss,\nnot impairment due to other factors. For further information, see UDS Coding Guidebook pages 32–33.\n",
+    "comment": "Schema for submitting UDS ivp_b4 form information. ",
+    "id": "/profiles/fvp_b4v1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "memory": {
+            "title": "1. MEMORY",
+            "type": "string",
+            "enum": [
+                "0 None - 0 No memory loss, or slight inconsistent forgetfulness.",
+                "0.5 Questionable - 0.5 Consistent slight forgetfulness; partial recollection of events; \"benign\" forgetfulness.",
+                "1 Mild - 1 Moderate memory loss, more marked for recent events; defect interferes with everyday activities.",
+                "2 Moderate - 2 Severe memory loss; only highly learned material retained; new material rapidly lost.",
+                "3 Severe - 3 Severe memory loss; only fragments remain."
+            ]
+        },
+        "orient": {
+            "title": "2. ORIENTATION",
+            "type": "string",
+            "enum": [
+                "0 None - 0 Fully oriented",
+                "0.5 Questionable - 0.5 Fully oriented except for slight difficulty with time relationships.",
+                "1 Mild - 1 Moderate difficulty with time relationships; oriented for place at examination; may have geographic disorientation elsewhere.",
+                "2 Moderate - 2 Severe difficulty with time relationships; usually disoriented to time, often to place.",
+                "3 Severe - 3 Oriented to person only."
+            ]
+        },
+        "judgment": {
+            "title": "3. JUDGMENT & PROBLEM SOLVING",
+            "type": "string",
+            "enum": [
+                "0 None - 0 Solves everyday problems, handles business & financial affairs well; judgment good in relation to past performance.",
+                "0.5 Questionable - 0.5 Slight impairment in solving problems, similarities, and differences.",
+                "1 Mild - 1 Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained.",
+                "2 Moderate - 2 Severely impaired in handling problems, similarities, and differences; social judgment usually impaired.",
+                "3 Severe - 3 Unable to make judgments or solve problems."
+            ]
+        },
+        "commun": {
+            "title": "4. COMMUNITY AFFAIRS",
+            "type": "string",
+            "enum": [
+                "0 None - 0 Independent function at usual level in job, shopping, volunteer and social groups.",
+                "0.5 Questionable - 0.5 Slight impairment in these activities.",
+                "1 Mild - 1 Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
+                "2 Moderate - 2 No pretense of independent function outside the home; appears well enough to be taken to functions outside the family home.",
+                "3 Severe - 3 No pretense of independent function outside the home; appears too ill to be taken to functions outside the family home."
+            ]
+        },
+        "homehobb": {
+            "title": "5. HOME & HOBBIES",
+            "type": "string",
+            "enum": [
+                "0 None - 0 Life at home, hobbies, and intellectual interests well maintained.",
+                "0.5 Questionable - 0.5 Life at home, hobbies, and intellectual interests slightly impaired.",
+                "1 Mild - 1 Mild but definite impairment of function at home; more difficult chores abandoned; more complicated hobbies and interests abandoned.",
+                "2 Moderate - 2 Only simple chores preserved; very restricted interests, poorly maintained.",
+                "3 Severe - 3 No significant function in the home."
+            ]
+        },
+        "perscare": {
+            "title": "6. PERSONAL CARE",
+            "type": "string",
+            "enum": [
+                "0 None / Questionable - 0Fully capable of self-care (=0).",
+                "1 Mild - 1 Needs prompting.",
+                "2 Moderate - 2 Requires assistance in dressing, hygiene, keeping of personal effects.",
+                "3 Severe - 3 Requires much help with personal care; frequent incontinence."
+            ]
+        },
+        "cdrsum": {
+            "title": "7. CDR SUM OF BOXES",
+            "description": "Link to Global CDR calculation tool: https://www.alz.washington.edu/cdrnacc.html",
+            "type": "string"
+        },
+        "cdrglob": {
+            "title": "8. GLOBAL CDR",
+            "description": "Link to Global CDR calculation tool",
+            "type": "string",
+            "enum": [
+                "0 0.0 = No Impairment",
+                "0.5 0.5 = Questionable impariment",
+                "1 1.0 = Mild impairment",
+                "2 2.0 = Moderate impairment",
+                "3 3.0 = Severe impairment"
+            ]
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "memory": {
+            "title": "1. MEMORY"
+        },
+        "orient": {
+            "title": "2. ORIENTATION"
+        },
+        "judgment": {
+            "title": "3. JUDGMENT & PROBLEM SOLVING"
+        },
+        "commun": {
+            "title": "4. COMMUNITY AFFAIRS"
+        },
+        "homehobb": {
+            "title": "5. HOME & HOBBIES"
+        },
+        "perscare": {
+            "title": "6. PERSONAL CARE"
+        },
+        "cdrsum": {
+            "title": "7. CDR SUM OF BOXES"
+        },
+        "cdrglob": {
+            "title": "8. GLOBAL CDR"
+        }
+      
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "memory": {
+            "title": "1. MEMORY"
+        },
+        "orient": {
+            "title": "2. ORIENTATION"
+        },
+        "judgment": {
+            "title": "3. JUDGMENT & PROBLEM SOLVING"
+        },
+        "commun": {
+            "title": "4. COMMUNITY AFFAIRS"
+        },
+        "homehobb": {
+            "title": "5. HOME & HOBBIES"
+        },
+        "perscare": {
+            "title": "6. PERSONAL CARE"
+        },
+        "cdrsum": {
+            "title": "7. CDR SUM OF BOXES"
+        },
+        "cdrglob": {
+            "title": "8. GLOBAL CDR"
+        }
+     
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "memory": 1.0,
+        "orient": 1.0,
+        "judgment": 1.0,
+        "commun": 1.0,
+        "homehobb": 1.0,
+        "perscare": 1.0,
+        "cdrsum": 1.0,
+        "cdrglob": 1.0
+       
+    },
+    "changelog": "/profiles/changelogs/fvp_b4v1.md"
+}

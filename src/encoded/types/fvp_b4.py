@@ -48,3 +48,22 @@ class Fvp_b4v2(Item):
     audit_inherit = []
     set_status_up = []
     set_status_down = []
+
+@collection(
+    name="fvp_b4v1s",
+    unique_key="uuid",
+    properties={
+        "title": "UDS_FVP_B4V1 Forms",
+        "description": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B4V1: CDR® Dementia Staging Instrument plus NACC FTLD Behavior & Language Domains ( CDR® NACC FTLD)",
+    },
+)
+class Fvp_b4v1(Item):
+    item_type = "fvp_b4v1"
+    schema = load_schema("encoded:schemas/fvp_b4v1.json")
+    embedded = [
+    ]
+    rev = {
+    }
+    audit_inherit = []
+    set_status_up = []
+    set_status_down = []
