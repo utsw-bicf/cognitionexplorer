@@ -41,12 +41,13 @@ ORDER = [
     'ivp_b3v1',
     'ivp_e1v2',
     'ivp_e1v1',
+
+    'ivp_z1v2',
+    'ivp_z1v1',
     # 'fvp_e1v2',
     # 'fvp_z1v2',
     # 'fvp_b2v2',
     # 'fvp_b3v2',
-    # 'ivp_z1v2',
-
     # 'fvp_a2v3',
     # 'fvp_a2v2',
     # 'fvp_a4v3',

@@ -52,8 +52,10 @@ class Patient(Item):
         'ivp_e1v2',
         'ivp_e1v1',
         'fvp_e1v2',
-        'fvp_z1v2',
         'ivp_z1v2',
+        'ivp_z1v1',
+        'fvp_z1v2',
+      
         'fvp_b2v2',
         'fvp_b3v2',
         'ivp_b3v2',
@@ -153,10 +155,12 @@ class Patient(Item):
         'ivp_e1v2': ('Ivp_e1v2', 'patient'),
         'ivp_e1v1': ('Ivp_e1v1', 'patient'),
         'fvp_e1v2': ('Fvp_e1v2', 'patient'),
-        'fvp_z1v2': ('Fvp_z1v2', 'patient'),
         'fvp_b2v2': ('Fvp_b2v2', 'patient'),
         'fvp_b3v2': ('Fvp_b3v2', 'patient'),
         'ivp_z1v2': ('Ivp_z1v2', 'patient'),
+        'ivp_z1v1': ('Ivp_z1v1', 'patient'),
+        'fvp_z1v2': ('Fvp_z1v2', 'patient'),
+
         'ivp_b3v2': ('Ivp_b3v2', 'patient'),
         'ivp_b3v1': ('Ivp_b3v1', 'patient'),
 
@@ -799,16 +803,6 @@ class Patient(Item):
     def fvp_e1v2(self, request, fvp_e1v2):
         return paths_filtered_by_status(request, fvp_e1v2)
 
-    @calculated_property(schema={
-        "title": "Fvp_z1v2",
-        "type": "array",
-        "items": {
-            "type": 'string',
-            "linkTo": "Fvp_z1v2"
-        },
-    })
-    def fvp_z1v2(self, request, fvp_z1v2):
-        return paths_filtered_by_status(request, fvp_z1v2)
 
     @calculated_property(schema={
         "title": "Fvp_b2v2",
@@ -842,6 +836,28 @@ class Patient(Item):
     })
     def ivp_z1v2(self, request, ivp_z1v2):
         return paths_filtered_by_status(request, ivp_z1v2)
+
+    @calculated_property(schema={
+        "title": "Ivp_z1v1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Ivp_z1v1"
+        },
+    })
+    def ivp_z1v1(self, request, ivp_z1v1):
+        return paths_filtered_by_status(request, ivp_z1v1)
+
+    @calculated_property(schema={
+        "title": "Fvp_z1v2",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_z1v2"
+        },
+    })
+    def fvp_z1v2(self, request, fvp_z1v2):
+        return paths_filtered_by_status(request, fvp_z1v2)
 
     @calculated_property(schema={
         "title": "Ivp_a4v3",
