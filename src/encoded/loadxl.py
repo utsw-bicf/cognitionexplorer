@@ -47,7 +47,8 @@ ORDER = [
     # 'ivp_z1v1'#need to retest
     # 'fvp_e1v2',
     # 'fvp_z1v2',
-    # 'fvp_b2v2',
+    'fvp_b2v2',
+    'fvp_b2v1',
     # 'fvp_b3v2',
     # 'fvp_a2v3',
     'fvp_a2v2',
