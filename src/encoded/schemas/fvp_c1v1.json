@@ -1,0 +1,467 @@
+{
+    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet--Form C1: MMSE and Neuropsychological Battery",
+    "description": "NOTE: This form is to be completed by ADC or clinic staff. For test administrationADC Visit #:__ __ __\nand scoring, see UDS Coding Guidebook for Initial Visit Packet, Form C1.\nKEY: If the subject cannot complete any of the following exams, please use\nthe following codes for test scores (except for the Trail Making Test):\n95 = Physical problem 97 = Other problem\n96 = Cognitive/behavior problem 98 = Verbal refusal\n",
+    "id": "/profiles/fvp_c1v1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "c1_1": {
+            "title": "1. Mini-Mental State Examination",
+            "type": "object",
+            "properties": {
+                "MMSELOC": {
+                    "title": "1A The administration of the MMSE was:",
+                    "description": " ",
+                    "type": "string",
+                    "enum": [
+                        "1 In ADC/clinic",
+                        "2 In home",
+                        "3 In person-other"
+                    ]
+                },
+                "MMSELAN": {
+                    "title": "1A1 Language of MMSE administration",
+                    "description": " ",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish",
+                        "3 Other"
+                    ]
+                },
+                "MMSELANX": {
+                    "title": "1A2 Language of MMSE, other – specify",
+                    "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #1A1, MMSELAN ≠ 3 (Other).",
+                    "type": "string"
+                },
+                "MMSEORDA": {
+                    "title": "1B1 MMSE orientation subscale score, time",
+                    "description": "(0-5, 95-98), 95/995 = Physical problem 96/996 = Cognitive/behavior problem 97/997 = Other problem 98/998 = Verbal refusal",
+                    "type": "string",
+                    "pattern": "^[0-5]$|^95$|^96$|^97$|^98$"
+                },
+                "MMSEORLO": {
+                    "title": "1B2 MMSE orientation subscale score, place",
+                    "description": "(0-5, 95-98), 95/995 = Physical problem 96/996 = Cognitive/behavior problem 97/997 = Other problem 98/998 = Verbal refusal",
+                    "type": "string",
+                    "pattern": "^[0-5]$|^95$|^96$|^97$|^98$"
+                },
+                "MMSE": {
+                    "title": "1C Total MMSE score (using D-L-R-O-W)",
+                    "description": "0 – 30 ",
+                    "type": "string",
+                    "enum": [
+                        "95 Physical problem",
+                        "96 Cognitive/behavior problem",
+                        "97 Other problem",
+                        "98 Verbal refusal"
+                    ]
+                }
+            }
+        },
+        "NPSYCLOC": {
+            "title": "2 The remainder of the battery was administered:",
+            "description": " ",
+            "type": "string",
+            "enum": [
+                "1 In ADC/clinic",
+                "2 In home",
+                "3 In person-other"
+            ]
+        },
+        "NPSYLAN": {
+            "title": "2A Language of test (neuropsychological battery) administration",
+            "description": " ",
+            "type": "string",
+            "enum": [
+                "1 English",
+                "2 Spanish",
+                "3 Other"
+            ]
+        },
+        "NPSYLANX": {
+            "title": "2A1 Language of test (neuropsychological battery), other – specify",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“) ampersands (&), or percentage signs (%). Blank if #2A, NPSYLAN ≠ 3 (Other). ",
+            "type": "string"
+        },
+        "c1_3": {
+            "title": "3.Logical Memory IA – Immediate",
+            "type": "object",
+            "properties": {
+                "LOGIMO": {
+                    "title": "3a. If this test has been administered to the subject within the past three months, specify the date previously administered",
+                    "description": "Date can be submitted as YYYY-MM-DD,(Current Year or Previous Year), 88/88/8888 = N/A",
+                    "type": "string",
+                    "anyOf": [
+                        {
+                            "format": "date"
+                        }
+                    ]
+                },
+                "LOGIPREV": {
+                    "title": "3B Total score from the previous test administration:",
+                    "description": "(0-25, 88 = N/A)",
+                    "type": "string",
+                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^88$"
+                },
+                "LOGIMEM": {
+                    "title": "3C Total number of story units recalled from this current test administration: ",
+                    "description": "(0-25, 88 = N/A)",
+                    "type": "string",
+                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^88$"
+                }
+            }
+        },
+        "c1_4": {
+            "title": "4.Digit Span Forward",
+            "type": "object",
+            "properties": {
+                "DIGIF": {
+                    "title": "4A Total number of trials correct prior to two consecutive errors at the same digit length: ",
+                    "description": "(0-12, 95-98)",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-2]$|^95$|^96$|^97$|^98$"
+                },
+                "DIGIFLEN": {
+                    "title": "4B Digit span forward length:",
+                    "description": " (0 – 8,95-98) ",
+                    "type": "string",
+                    "pattern": "^[0-8]$|^95$|^96$|^97$|^98$"
+                }
+            }
+        },
+        "c1_5": {
+            "title": "5.Digit Span Backward",
+            "type": "object",
+            "properties": {
+                "DIGIB": {
+                    "title": "5A Total number of trials correct prior to two consecutive errors at the same digit length:",
+                    "description": "(0-12, 95-98)",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-2]$|^95$|^96$|^97$|^98$"
+                },
+                "DIGIBLEN": {
+                    "title": "5B Digit span backward length:",
+                    "description": "(0 – 7,95-98) ",
+                    "type": "string",
+                    "pattern": "^[0-7]$|^95$|^96$|^97$|^98$"
+                }
+            }
+        },
+        "c1_6": {
+            "title": "6.Category Fluency",
+            "type": "object",
+            "properties": {
+                "ANIMALS": {
+                    "title": "6A Category fluency, Animals – Total number of animals named in 60 seconds:",
+                    "type": "string",
+                    "description": "(0-77, 95-98)",
+                    "pattern": "^[1-6]?[0-9]$|^7[0-7]$|^95$|^96$|^97$|^98$"
+                },
+                "VEG": {
+                    "title": "6B Category fluency, Vegetables – Total number of vegetables named in 60 seconds:",
+                    "description": "(0-77, 95-98)",
+                    "type": "string",
+                    "pattern": "^[1-6]?[0-9]$|^7[0-7]$|^95$|^96$|^97$|^98$"
+                }
+            }
+        },
+        "c1_7": {
+            "title": "7. Trail Making Test",
+            "type": "object",
+            "properties": {
+                "TRAILA": {
+                    "title": "7A Part A – Total number of seconds to complete (if not finished by 150 seconds, enter 150):",
+                    "description": "(0-150, 995-998)(if not finished by 150 seconds, enter 150):(If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 8b)",
+                    "type": "string",
+                    "pattern": "^[0-9]?[0-9]$|^1[0-4][0-9]$|^150$|^995$|^996$|^997$|^998$"
+                },
+                "TRAILB": {
+                    "title": "7B Part B – Total number of seconds to complete (if not finished by 300 seconds, enter 300):",
+                    "description": "(0-300, 995-998)(if not finished by 300 seconds, enter 300): (If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 9a)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]?[0-9]$|^300$|^995$|^996$|^997$|^998$"
+                }
+            }
+        },
+        "c1_8": {
+            "title": "8. WAIS-R Digit Symbo",
+            "type": "object",
+            "properties": {
+                "WAIS": {
+                    "title": "8A Total number of items correctly completed in 90 seconds:",
+                    "description": " 0 – 93, 95-98",
+                    "type": "string",
+                    "pattern": "^[0-8]?[0-9]$|^9[0-3]$|^95$|^96$|^97$|^98$"
+                }
+            }
+        },
+        "c1_9": {
+            "title": "9.Logical Memory IIA – Delayed",
+            "type": "object",
+            "properties": {
+                "MEMUNITS": {
+                    "title": "9A Logical Memory IIA – Delayed: Total number of story units recalled:",
+                    "description": "0 – 25,95-98 ",
+                    "type": "string",
+                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^95$|^96$|^97$|^98$"
+                },
+                "MEMTIME": {
+                    "title": "9B Logical Memory IIA – Delayed: Time elapsed since Logical Memory IA –Immediate: (minutes)",
+                    "description": "0 – 85, 88 N/A,99 Unknown",
+                    "type": "string",
+                    "pattern": "^[0-7]?[0-9]$|^8[0-5]$|^88$|^99$"
+                }
+            }
+        },
+        "c1_10": {
+            "title": "10.Boston Naming Test (30 Odd-numbered items)",
+            "type": "object",
+            "properties": {
+                "BOSTON": {
+                    "title": "10A Boston Naming Test – (30 Odd-numbered items) total score:",
+                    "description": " 0 – 30,95-98 ",
+                    "type": "string",
+                    "pattern": "^[0-2]?[0-9]$|^30$|^95$|^96$|^97$|^98$"
+                }
+            }
+        },
+        "c1_11": {
+            "title": "11.Overall Appraisal",
+            "type": "object",
+            "properties": {
+                "COGSTAT": {
+                    "title": "11A Based on the neuropsychological examination, the subject’s cognitive status is deemed: ",
+                    "description": " ",
+                    "type": "string",
+                    "enum": [
+                        "1 Better than normal for age",
+                        "2 Normal for age",
+                        "3 One or two test scores abnormal",
+                        "4 Most test scores are abnormal or lower than expected",
+                        "0 Clinician unable to render opinion"
+                    ]
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "c1_1.MMSELOC": {
+            "title": "1A The administration of the MMSE was:"
+        },
+        "c1_1.MMSELAN": {
+            "title": "1A1 Language of MMSE administration"
+        },
+        "c1_1.MMSELANX": {
+            "title": "1A2 Language of MMSE, other – specify"
+        },
+        "c1_1.MMSEORDA": {
+            "title": "1B1 MMSE orientation subscale score, time"
+        },
+        "c1_1.MMSEORLO": {
+            "title": "1B2 MMSE orientation subscale score, place"
+        },
+        "c1_1.MMSE": {
+            "title": "1C Total MMSE score (using D-L-R-O-W)"
+        },
+        "NPSYCLOC": {
+            "title": "2 The remainder of the battery was administered:"
+        },
+        "NPSYLAN": {
+            "title": "2A Language of test (neuropsychological battery) administration"
+        },
+        "NPSYLANX": {
+            "title": "2A1 Language of test (neuropsychological battery), other – specify"
+        },
+        "c1_3.LOGIMO": {
+            "title": "3a. If this test has been administered to the subject within the past three months, specify the date previously administered"
+        },
+        "c1_3.LOGIPREV": {
+            "title": "3B Total score from the previous test administration:"
+        },
+        "c1_3.LOGIMEM": {
+            "title": "3C Total number of story units recalled from this current test administration: "
+        },
+        "c1_4.DIGIF": {
+            "title": "4A Total number of trials correct prior to two consecutive errors at the same digit length: "
+        },
+        "c1_4.DIGIFLEN": {
+            "title": "4B Digit span forward length:"
+        },
+        "c1_5.DIGIB": {
+            "title": "5A Total number of trials correct prior to two consecutive errors at the same digit length:"
+        },
+        "c1_5.DIGIBLEN": {
+            "title": "5B Digit span backward length:"
+        },
+        "c1_6.ANIMALS": {
+            "title": "6A Category fluency, Animals – Total number of animals named in 60 seconds:"
+        },
+        "c1_6.VEG": {
+            "title": "6B Category fluency, Vegetables – Total number of vegetables named in 60 seconds:"
+        },
+        "c1_7.TRAILA": {
+            "title": "7A Part A – Total number of seconds to complete (if not finished by 150 seconds, enter 150):"
+        },
+        "c1_7.TRAILB": {
+            "title": "7B Part B – Total number of seconds to complete (if not finished by 300 seconds, enter 300):"
+        },
+        "c1_8.WAIS": {
+            "title": "8A Total number of items correctly completed in 90 seconds:"
+        },
+        "c1_9.MEMUNITS": {
+            "title": "9A Logical Memory IIA – Delayed: Total number of story units recalled:"
+        },
+        "c1_9.MEMTIME": {
+            "title": "9B Logical Memory IIA – Delayed: Time elapsed since Logical Memory IA –Immediate: (minutes)"
+        },
+        "c1_10.BOSTON": {
+            "title": "10A Boston Naming Test – (30 Odd-numbered items) total score:"
+        },
+        "c1_11.COGSTAT": {
+            "title": "11A Based on the UDS neuropsychological examination, the subject’s cognitive status is deemed: "
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "c1_1.MMSELOC": {
+            "title": "1A The administration of the MMSE was:"
+        },
+        "c1_1.MMSELAN": {
+            "title": "1A1 Language of MMSE administration"
+        },
+        "c1_1.MMSELANX": {
+            "title": "1A2 Language of MMSE, other – specify"
+        },
+        "c1_1.MMSEORDA": {
+            "title": "1B1 MMSE orientation subscale score, time"
+        },
+        "c1_1.MMSEORLO": {
+            "title": "1B2 MMSE orientation subscale score, place"
+        },
+        "c1_1.MMSE": {
+            "title": "1C Total MMSE score (using D-L-R-O-W)"
+        },
+        "NPSYCLOC": {
+            "title": "2 The remainder of the battery was administered:"
+        },
+        "NPSYLAN": {
+            "title": "2A Language of test (neuropsychological battery) administration"
+        },
+        "NPSYLANX": {
+            "title": "2A1 Language of test (neuropsychological battery), other – specify"
+        },
+        "c1_3.LOGIMO": {
+            "title": "3a. If this test has been administered to the subject within the past three months, specify the date previously administered"
+        },
+        "c1_3.LOGIPREV": {
+            "title": "3B Total score from the previous test administration:"
+        },
+        "c1_3.LOGIMEM": {
+            "title": "3C Total number of story units recalled from this current test administration: "
+        },
+        "c1_4.DIGIF": {
+            "title": "4A Total number of trials correct prior to two consecutive errors at the same digit length: "
+        },
+        "c1_4.DIGIFLEN": {
+            "title": "4B Digit span forward length:"
+        },
+        "c1_5.DIGIB": {
+            "title": "5A Total number of trials correct prior to two consecutive errors at the same digit length:"
+        },
+        "c1_5.DIGIBLEN": {
+            "title": "5B Digit span backward length:"
+        },
+        "c1_6.ANIMALS": {
+            "title": "6A Category fluency, Animals – Total number of animals named in 60 seconds:"
+        },
+        "c1_6.VEG": {
+            "title": "6B Category fluency, Vegetables – Total number of vegetables named in 60 seconds:"
+        },
+        "c1_7.TRAILA": {
+            "title": "7A Part A – Total number of seconds to complete (if not finished by 150 seconds, enter 150):"
+        },
+        "c1_7.TRAILB": {
+            "title": "7B Part B – Total number of seconds to complete (if not finished by 300 seconds, enter 300):"
+        },
+        "c1_8.WAIS": {
+            "title": "8A Total number of items correctly completed in 90 seconds:"
+        },
+        "c1_9.MEMUNITS": {
+            "title": "9A Logical Memory IIA – Delayed: Total number of story units recalled:"
+        },
+        "c1_9.MEMTIME": {
+            "title": "9B Logical Memory IIA – Delayed: Time elapsed since Logical Memory IA –Immediate: (minutes)"
+        },
+        "c1_10.BOSTON": {
+            "title": "10A Boston Naming Test – (30 Odd-numbered items) total score:"
+        },
+        "c1_11.COGSTAT": {
+            "title": "11A Based on the UDS neuropsychological examination, the subject’s cognitive status is deemed: "
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "c1_1.MMSELOC": 1.0,
+        "c1_1.MMSELAN": 1.0,
+        "c1_1.MMSELANX": 1.0,
+        "c1_1.MMSEORDA": 1.0,
+        "c1_1.MMSEORLO": 1.0,
+        "c1_1.MMSE": 1.0,
+        "NPSYCLOC": 1.0,
+        "NPSYLAN": 1.0,
+        "NPSYLANX": 1.0,
+        "c1_3.LOGIMO": 1.0,
+        "c1_3.LOGIPREV": 1.0,
+        "c1_3.LOGIMEM": 1.0,
+        "c1_4.DIGIF": 1.0,
+        "c1_4.DIGIFLEN": 1.0,
+        "c1_5.DIGIB": 1.0,
+        "c1_5.DIGIBLEN": 1.0,
+        "c1_6.ANIMALS": 1.0,
+        "c1_6.VEG": 1.0,
+        "c1_7.TRAILA": 1.0,
+        "c1_7.TRAILB": 1.0,
+        "c1_8.WAIS": 1.0,
+        "c1_9.MEMUNITS": 1.0,
+        "c1_9.MEMTIME": 1.0,
+        "c1_10.BOSTON": 1.0,
+        "c1_11.COGSTAT": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_c1v1.md"
+}
