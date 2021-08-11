@@ -1,0 +1,771 @@
+{
+    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form B9: Clinician Judgment of Symptoms",
+    "description": "NOTE: This form is to be completed by the clinician. For additional clarificationADC \nand examples, see UDS Coding Guidebook for Initial Visit Packet, Form B9.\nCheck only one box per question. \n",
+    "id": "/profiles/fvp_b9v1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "B9CHG": {
+            "title": "0Z",
+            "description": "Indicate whether the information has changed since the previous UDS visit by checking only one of the three boxes below and following the corresponding instructions:",
+            "comment": "Skips If 1 (first box is checked), end form here. If 3 (third box is checked), complete only questions 4, 7, and 10.",
+            "type": "string",
+            "enum": [
+                "1 There have been no meaningful changes in the subject’s cognition, behavior, or motor function since the previous UDS visit. (If this box is checked, end form here.)",
+                "2 At the previous UDS visit, the clinician DID NOT report a decline in the subject’s memory, non-memory cognitive abilities, behavior, or motor function (i.e., question 3a = ‘0’). However, there have been meaningful changes since then. (If this box is checked, complete this entire form.)",
+                "3 At the previous UDS visit, the clinician DID report a decline in the subject’s memory, non-memory cognitive abilities, behavior, or motor function (i.e., question 3a = ‘1’). Since then, there have been additional meaningful changes.(If this box is checked, complete questions 4, 7, and 10 only.)"
+            ]
+        }, 
+        
+        "memo_comp": {
+            "title": "MEMORY COMPLAINT/AGE OF ONSET:",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "DECSUB": {
+                    "title": "1 Does the subject report a decline in memory relative to previously attained abilities?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "DECIN": {
+                    "title": "2 Does the informant report a decline in subject’s memory relative to previously attained abilities?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "DECCLIN": {
+                    "title": "3A Does the clinician believe there has been a current meaningful decline in the subject’s memory, non-memory cognitive abilities, behavior, or ability to manage his/her affairs?",
+                    "description": "Skips If no, end form here.",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "DECAGE": {
+                    "title": "3B At what age did the decline begin (based upon the clinician’s assessment)?",
+                    "description": "15 – 110,999 Unknown, Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string"
+                }
+            }
+        },
+        "cogn_symp": {
+            "title": "COGNITIVE SYMPTOMS:",
+            "type": "object",
+            "properties": {
+                "indicate_impair": {
+                    "title": "4.Has there been a meaningful decline in the subject’s usual abilities for any\nof the following?:\n",
+                    "type": "object",
+                    "properties": {
+                        "COGMEM": {
+                            "title": "4A Memory (For example, does s/he forget conversations and/or dates; repeat questions and/or statements; misplace more than usual; forget names of people s/he knows well?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "COGJUDG": {
+                            "title": "4B Judgment and problem-solving (For example, does s/he have trouble handling money (tips); paying bills; shopping; preparing meals; handling appliances; handling medications; driving?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "COGLANG": {
+                            "title": "4C Language (For example, does s/he have hesitant speech; have trouble finding words; use inappropriate words without self-correction?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "COGVIS": {
+                            "title": "4D Visuospatial function (Difficulty interpreting visual stimuli and finding his/her way around).",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "COGATTN": {
+                            "title": "4E Attention/concentration (For example, does the subject have a short attention span or ability to concentrate? Is s/he easily distracted?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "COGOTHR": {
+                            "title": "4F Cognitive symptoms, other",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "COGOTHRX": {
+                            "title": "4F1 Cognitive symptoms, other – specify",
+                            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).Blank if #3A, DECCLIN = 0 (No), or if #4G, COGOTHR ≠ 1 (Yes).",
+                            "type": "string"
+                        }
+                    }
+                },
+                "COGFRST": {
+                    "title": "5 Indicate the predominant symptom which was first recognized as a decline in the subject’s cognition:",
+                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 Memory",
+                        "2 Judgment and problem solving",
+                        "3 Language",
+                        "4 Visuospatial function",
+                        "5 Attention/concentration",
+                        "6 Other",
+                        "88 N/A",
+                        "99 Unknown"
+                    ]
+                },
+                "COGFRSTX": {
+                    "title": "5A First predominant cognitive symptom, other – specify",
+                    "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).Blank if #3A, DECCLIN = 0 (No), or if #5, COGFRST ≠ 6 (Other).",
+                    "type": "string"
+                },
+                "COGMODE": {
+                    "title": "6 Mode of onset of cognitive symptoms:",
+                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 Gradual (> 6 months)",
+                        "2 Subacute (< 6 months)",
+                        "3 Abrupt (within days)",
+                        "4 Other",
+                        "88 NA",
+                        "99 Unknown"
+                    ]
+                },
+                "COGMODEX": {
+                    "title": "6A Cognitive symptoms onset mode, other – specify",
+                    "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #3A, DECCLIN = 0 (No) or if #6, COGMODE ≠ 4 (Other).",
+                    "type": "string"
+                }
+            }
+        },
+        "beha_symp": {
+            "title": "BEHAVIOR SYMPTOMS:",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "indicate_beha_symp": {
+                    "title": "7.Which of the following meaningful changes in behavior have been present during the course of the illness?",
+                    "description": "",
+                    "type": "object",
+                    "properties": {
+                        "BEAPATHY": {
+                            "title": "7A Apathy/withdrawal (Has the subject lost interest in or displayed a reduced ability to initiate usual activities and social interaction, such as conversing with family and/or friends?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "BEDEP": {
+                            "title": "7B Depression (Has the subject seemed depressed for more than two weeks at a time; e.g., loss of interest or pleasure in nearly all activities, sadness, hopelessness, loss of appetite, fatigue?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "psychosis": {
+                            "title": "Psychosis",
+                            "description": "",
+                            "type": "object",
+                            "properties": {
+                                "BEVHALL": {
+                                    "title": "7C1 Visual hallucinations",
+                                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes",
+                                        "9 Unknown"
+                                    ]
+                                },
+                                "BEAHALL": {
+                                    "title": "7C2 Auditory hallucinations",
+                                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes",
+                                        "9 Unknown"
+                                    ]
+                                },
+                                "BEDEL": {
+                                    "title": "7C3 Abnormal/false/delusional beliefs",
+                                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes",
+                                        "9 Unknown"
+                                    ]
+                                }
+                            }
+                        },
+                        "BEDISIN": {
+                            "title": "7D Disinhibition (Does the subject use inappropriate coarse language or exhibit inappropriate speech or behaviors in public or in the home? Does s/he talk personally to strangers or have disregard for personal hygiene?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "BEIRRIT": {
+                            "title": "7E Irritability (Does the subject overreact, such as shouting at family members or others?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "BEAGIT": {
+                            "title": "7F Agitation (Does the subject have trouble sitting still; does s/he shout, hit, and/or kick?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "BEPERCH": {
+                            "title": "7G Personality change (Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness [without delusions], unusual dress, or dietary changes? Does the subject fail to take other’s feeling into account?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "BEOTHR": {
+                            "title": "7H Behavior symptoms, other",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "BEOTHRX": {
+                            "title": "7H1 Behavior symptoms, other – specify",
+                            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #3A, DECCLIN = 0 (No), or if #7I, BEOTHR ≠ 1 (Yes).",
+                            "type": "string"
+                        }
+                    }
+                },
+                "BEFRST": {
+                    "title": "8 Indicate the predominant symptom which was first recognized as a decline in the subject’s behavioral symptoms:",
+                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 Apathy/withdrawal",
+                        "2 Depression",
+                        "3 Psychosis",
+                        "4 Disinhibition",
+                        "5 Irritability",
+                        "6 Agitation",
+                        "7 Personality change",
+                        "8 Other",
+                        "88 NA",
+                        "99 Unknown"
+                    ]
+                },
+                "BEFRSTX": {
+                    "title": "8A First predominant behavior symptom, other – specify",
+                    "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #3A, DECCLIN = 0 (No), or if #8, BEFRST ≠ 8 (Other).",
+                    "type": "string"
+                },
+                "BEMODE": {
+                    "title": "9 Mode of onset of behavioral symptoms:",
+                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 Gradual (> 6 months)",
+                        "2 Subacute (< 6 months)",
+                        "3 Abrupt (within days)",
+                        "4 Other",
+                        "88 NA",
+                        "99 Unknown"
+                    ]
+                },
+                "BEMODEX": {
+                    "title": "9A Behavioral symptoms onset mode, other – specify",
+                    "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“),ampersands (&), or percentage signs (%). Blank if #3A, DECCLIN = 0 (No), or if #9 BEMODE ≠ 4 (Other).",
+                    "type": "string"
+                }
+            }
+        },
+        "motor_symp": {
+            "title": "MOTOR SYMPTOMS:",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "indicate_motor_symp": {
+                    "title": "10.Which of the following meaningful changes in motor function have been\npresent during the course of the illness?\n",
+                    "type": "object",
+                    "properties": {
+                        "MOGAIT": {
+                            "title": "10A Gait disorder (Has the subject’s walking changed, not specifically due to arthritis or an injury? Is s/he unsteady, or does s/he shuffle when walking, have little or no arm-swing, or drag a foot?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "MOFALLS": {
+                            "title": "10B Falls (Does the subject fall more than usual?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "MOTREM": {
+                            "title": "10C Tremor (Has the subject had rhythmic shaking, especially in the hands, arms, legs, head, mouth or tongue?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "MOSLOW": {
+                            "title": "10D Slowness (Has the subject noticeably slowed down in walking or moving or handwriting, other than due to an injury or illness? Has his/her facial expression changed, or become more “wooden” or masked and unexpressive?)",
+                            "description": "Blank if #3A, DECCLIN = 0 (No).",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        }
+                    }
+                },
+                "MOFRST": {
+                    "title": "11 Indicate the predominant symptom which was first recognized as a decline in the subject’s motor symptoms:",
+                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 Gait disorder",
+                        "2 Falls",
+                        "3 Tremor",
+                        "4 Slowness",
+                        "88 NA",
+                        "99 Unknown"
+                    ]
+                },
+                "MOMODE": {
+                    "title": "12 Mode of onset of motor symptoms:",
+                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 Gradual (> 6 months)",
+                        "2 Subacute (< 6 months)",
+                        "3 Abrupt (within days)",
+                        "4 Other",
+                        "88 NA",
+                        "99 Unknown"
+                    ]
+                },
+                "MOMODEX": {
+                    "title": "12X Motor symptoms onset mode, other – specify",
+                    "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #3A, DECCLIN = 0 (No), or if #12 MOMODE ≠ 4 (Other).",
+                    "type": "string"
+                }
+            }
+        },
+        "overall": {
+            "title": "OVERALL SUMMARY OF SYMPTOMS ONSET:",
+            "description": "",
+            "type": "object",
+            "properties": {
+                "COURSE": {
+                    "title": "13 Course of overall cognitive/behavioral/motor syndrome:",
+                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 Gradual progressive",
+                        "2 Stepwise",
+                        "3 Static",
+                        "4 Fluctuating",
+                        "5 Improved",
+                        "9 Unknown"
+                    ]
+                },
+                "FRSTCHG": {
+                    "title": "14 Indicate the predominant domain which was first recognized as changed in the subject:",
+                    "description": "Blank if #3A, DECCLIN = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 Cognition",
+                        "2 Behavior",
+                        "3 Motor function",
+                        "9 Unknown"
+                    ]
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "memo_comp.DECSUB": {
+            "title": "1 Does the subject report a decline in memory relative to previously attained abilities?"
+        },
+        "memo_comp.DECIN": {
+            "title": "2 Does the informant report a decline in subject’s memory relative to previously attained abilities?"
+        },
+        "memo_comp.DECCLIN": {
+            "title": "3A Does the clinician believe there has been a current meaningful decline in the subject’s memory, non-memory cognitive abilities, behavior, or ability to manage his/her affairs, or have there been motor/movement changes relative to previously attained abilities?"
+        },
+        "memo_comp.DECAGE": {
+            "title": "3B At what age did the cognitive decline begin (based upon the clinician’s assessment)?"
+        },
+        "cogn_symp.indicate_impair.COGMEM": {
+            "title": "4A Memory (For example, does s/he forget conversations and/or dates; repeat questions and/or statements; misplace more than usual; forget names of people s/he knows well?)"
+        },
+        "cogn_symp.indicate_impair.COGJUDG": {
+            "title": "4B Judgment and problem-solving (For example, does s/he have trouble handling money (tips); paying bills; shopping; preparing meals; handling appliances; handling medications; driving?)"
+        },
+        "cogn_symp.indicate_impair.COGLANG": {
+            "title": "4C Language (For example, does s/he have hesitant speech; have trouble finding words; use inappropriate words without self-correction?)"
+        },
+        "cogn_symp.indicate_impair.COGVIS": {
+            "title": "4D Visuospatial function (Difficulty interpreting visual stimuli and finding his/her way around)."
+        },
+        "cogn_symp.indicate_impair.COGATTN": {
+            "title": "4E Attention/concentration (For example, does the subject have a short attention span or ability to concentrate? Is s/he easily distracted?)"
+        },
+        "cogn_symp.indicate_impair.COGOTHR": {
+            "title": "4F Cognitive symptoms, other"
+        },
+        "cogn_symp.indicate_impair.COGOTHRX": {
+            "title": "4F1 Cognitive symptoms, other – specify"
+        },
+        "cogn_symp.COGFRST": {
+            "title": "5 Indicate the predominant symptom which was first recognized as a decline in the subject’s cognition:"
+        },
+        "cogn_symp.COGFRSTX": {
+            "title": "5A First predominant cognitive symptom, other – specify"
+        },
+        "cogn_symp.COGMODE": {
+            "title": "6 Mode of onset of cognitive symptoms:"
+        },
+        "cogn_symp.COGMODEX": {
+            "title": "6A Cognitive symptoms onset mode, other – specify"
+        },
+        "beha_symp.indicate_beha_symp.BEAPATHY": {
+            "title": "7A Apathy/withdrawal (Has the subject lost interest in or displayed a reduced ability to initiate usual activities and social interaction, such as conversing with family and/or friends?)"
+        },
+        "beha_symp.indicate_beha_symp.BEDEP": {
+            "title": "7B Depression (Has the subject seemed depressed for more than two weeks at a time; e.g., loss of interest or pleasure in nearly all activities, sadness, hopelessness, loss of appetite, fatigue?)"
+        },
+        "beha_symp.indicate_beha_symp.psychosis.BEVHALL": {
+            "title": "7C1 Visual hallucinations"
+        },
+        "beha_symp.indicate_beha_symp.psychosis.BEAHALL": {
+            "title": "7C2 Auditory hallucinations"
+        },
+        "beha_symp.indicate_beha_symp.psychosis.BEDEL": {
+            "title": "7C3 Abnormal/false/delusional beliefs"
+        },
+        "beha_symp.indicate_beha_symp.BEDISIN": {
+            "title": "7D Disinhibition (Does the subject use inappropriate coarse language or exhibit inappropriate speech or behaviors in public or in the home? Does s/he talk personally to strangers or have disregard for personal hygiene?)"
+        },
+        "beha_symp.indicate_beha_symp.BEIRRIT": {
+            "title": "7E Irritability (Does the subject overreact, such as shouting at family members or others?)"
+        },
+        "beha_symp.indicate_beha_symp.BEAGIT": {
+            "title": "7F Agitation (Does the subject have trouble sitting still; does s/he shout, hit, and/or kick?)"
+        },
+        "beha_symp.indicate_beha_symp.BEPERCH": {
+            "title": "7G Personality change (Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness [without delusions, unusual dress, or dietary changes? Does the subject fail to take other’s feeling into account?)"
+        },
+        "beha_symp.indicate_beha_symp.BEOTHR": {
+            "title": "7H Behavior symptoms, other"
+        },
+        "beha_symp.indicate_beha_symp.BEOTHRX": {
+            "title": "7H1 Behavior symptoms, other – specify"
+        },
+        "beha_symp.BEFRST": {
+            "title": "8 Indicate the predominant symptom which was first recognized as a decline in the subject’s behavioral symptoms:"
+        },
+        "beha_symp.BEFRSTX": {
+            "title": "8A First predominant behavior symptom, other – specify"
+        },
+        "beha_symp.BEMODE": {
+            "title": "9 Mode of onset of behavioral symptoms:"
+        },
+        "beha_symp.BEMODEX": {
+            "title": "9A Behavioral symptoms onset mode, other – specify"
+        },
+        "motor_symp.indicate_motor_symp.MOGAIT": {
+            "title": "10A Gait disorder (Has the subject’s walking changed, not specifically due to arthritis or an injury? Is s/he unsteady, or does s/he shuffle when walking, have little or no arm-swing, or drag a foot?)"
+        },
+        "motor_symp.indicate_motor_symp.MOFALLS": {
+            "title": "10B Falls (Does the subject fall more than usual?)"
+        },
+        "motor_symp.indicate_motor_symp.MOTREM": {
+            "title": "10C Tremor (Has the subject had rhythmic shaking, especially in the hands, arms, legs, head, mouth or tongue?)"
+        },
+        "motor_symp.indicate_motor_symp.MOSLOW": {
+            "title": "10D Slowness (Has the subject noticeably slowed down in walking or moving or handwriting, other than due to an injury or illness? Has his/her facial expression changed, or become more “wooden” or masked and unexpressive?)"
+        },
+        "motor_symp.MOFRST": {
+            "title": "11 Indicate the predominant symptom which was first recognized as a decline in the subject’s motor symptoms:"
+        },
+        "motor_symp.MOMODE": {
+            "title": "12 Mode of onset of motor symptoms:"
+        },
+        "motor_symp.MOMODEX": {
+            "title": "12X Motor symptoms onset mode, other – specify"
+        },
+        "overall.COURSE": {
+            "title": "13 Course of overall cognitive/behavioral/motor syndrome:"
+        },
+        "overall.FRSTCHG": {
+            "title": "14 Indicate the predominant domain which was first recognized as changed in the subject:"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "memo_comp.DECSUB": {
+            "title": "1 Does the subject report a decline in memory relative to previously attained abilities?"
+        },
+        "memo_comp.DECIN": {
+            "title": "2 Does the informant report a decline in subject’s memory relative to previously attained abilities?"
+        },
+        "memo_comp.DECCLIN": {
+            "title": "3A Does the clinician believe there has been a current meaningful decline in the subject’s memory, non-memory cognitive abilities, behavior, or ability to manage his/her affairs, or have there been motor/movement changes relative to previously attained abilities?"
+        },
+        "memo_comp.DECAGE": {
+            "title": "3B At what age did the cognitive decline begin (based upon the clinician’s assessment)?"
+        },
+        "cogn_symp.indicate_impair.COGMEM": {
+            "title": "4A Memory (For example, does s/he forget conversations and/or dates; repeat questions and/or statements; misplace more than usual; forget names of people s/he knows well?)"
+        },
+        "cogn_symp.indicate_impair.COGJUDG": {
+            "title": "4B Judgment and problem-solving (For example, does s/he have trouble handling money (tips); paying bills; shopping; preparing meals; handling appliances; handling medications; driving?)"
+        },
+        "cogn_symp.indicate_impair.COGLANG": {
+            "title": "4C Language (For example, does s/he have hesitant speech; have trouble finding words; use inappropriate words without self-correction?)"
+        },
+        "cogn_symp.indicate_impair.COGVIS": {
+            "title": "4D Visuospatial function (Difficulty interpreting visual stimuli and finding his/her way around)."
+        },
+        "cogn_symp.indicate_impair.COGATTN": {
+            "title": "4E Attention/concentration (For example, does the subject have a short attention span or ability to concentrate? Is s/he easily distracted?)"
+        },
+        "cogn_symp.indicate_impair.COGOTHR": {
+            "title": "4F Cognitive symptoms, other"
+        },
+        "cogn_symp.indicate_impair.COGOTHRX": {
+            "title": "4F1 Cognitive symptoms, other – specify"
+        },
+        "cogn_symp.COGFRST": {
+            "title": "5 Indicate the predominant symptom which was first recognized as a decline in the subject’s cognition:"
+        },
+        "cogn_symp.COGFRSTX": {
+            "title": "5A First predominant cognitive symptom, other – specify"
+        },
+        "cogn_symp.COGMODE": {
+            "title": "6 Mode of onset of cognitive symptoms:"
+        },
+        "cogn_symp.COGMODEX": {
+            "title": "6A Cognitive symptoms onset mode, other – specify"
+        },
+        "beha_symp.indicate_beha_symp.BEAPATHY": {
+            "title": "7A Apathy/withdrawal (Has the subject lost interest in or displayed a reduced ability to initiate usual activities and social interaction, such as conversing with family and/or friends?)"
+        },
+        "beha_symp.indicate_beha_symp.BEDEP": {
+            "title": "7B Depression (Has the subject seemed depressed for more than two weeks at a time; e.g., loss of interest or pleasure in nearly all activities, sadness, hopelessness, loss of appetite, fatigue?)"
+        },
+        "beha_symp.indicate_beha_symp.psychosis.BEVHALL": {
+            "title": "7C1 Visual hallucinations"
+        },
+        "beha_symp.indicate_beha_symp.psychosis.BEAHALL": {
+            "title": "7C2 Auditory hallucinations"
+        },
+        "beha_symp.indicate_beha_symp.psychosis.BEDEL": {
+            "title": "7C3 Abnormal/false/delusional beliefs"
+        },
+        "beha_symp.indicate_beha_symp.BEDISIN": {
+            "title": "7D Disinhibition (Does the subject use inappropriate coarse language or exhibit inappropriate speech or behaviors in public or in the home? Does s/he talk personally to strangers or have disregard for personal hygiene?)"
+        },
+        "beha_symp.indicate_beha_symp.BEIRRIT": {
+            "title": "7E Irritability (Does the subject overreact, such as shouting at family members or others?)"
+        },
+        "beha_symp.indicate_beha_symp.BEAGIT": {
+            "title": "7F Agitation (Does the subject have trouble sitting still; does s/he shout, hit, and/or kick?)"
+        },
+        "beha_symp.indicate_beha_symp.BEPERCH": {
+            "title": "7G Personality change (Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness [without delusions, unusual dress, or dietary changes? Does the subject fail to take other’s feeling into account?)"
+        },
+        "beha_symp.indicate_beha_symp.BEOTHR": {
+            "title": "7H Behavior symptoms, other"
+        },
+        "beha_symp.indicate_beha_symp.BEOTHRX": {
+            "title": "7H1 Behavior symptoms, other – specify"
+        },
+        "beha_symp.BEFRST": {
+            "title": "8 Indicate the predominant symptom which was first recognized as a decline in the subject’s behavioral symptoms:"
+        },
+        "beha_symp.BEFRSTX": {
+            "title": "8A First predominant behavior symptom, other – specify"
+        },
+        "beha_symp.BEMODE": {
+            "title": "9 Mode of onset of behavioral symptoms:"
+        },
+        "beha_symp.BEMODEX": {
+            "title": "9A Behavioral symptoms onset mode, other – specify"
+        },
+        "motor_symp.indicate_motor_symp.MOGAIT": {
+            "title": "10A Gait disorder (Has the subject’s walking changed, not specifically due to arthritis or an injury? Is s/he unsteady, or does s/he shuffle when walking, have little or no arm-swing, or drag a foot?)"
+        },
+        "motor_symp.indicate_motor_symp.MOFALLS": {
+            "title": "10B Falls (Does the subject fall more than usual?)"
+        },
+        "motor_symp.indicate_motor_symp.MOTREM": {
+            "title": "10C Tremor (Has the subject had rhythmic shaking, especially in the hands, arms, legs, head, mouth or tongue?)"
+        },
+        "motor_symp.indicate_motor_symp.MOSLOW": {
+            "title": "10D Slowness (Has the subject noticeably slowed down in walking or moving or handwriting, other than due to an injury or illness? Has his/her facial expression changed, or become more “wooden” or masked and unexpressive?)"
+        },
+        "motor_symp.MOFRST": {
+            "title": "11 Indicate the predominant symptom which was first recognized as a decline in the subject’s motor symptoms:"
+        },
+        "motor_symp.MOMODE": {
+            "title": "12 Mode of onset of motor symptoms:"
+        },
+        "motor_symp.MOMODEX": {
+            "title": "12X Motor symptoms onset mode, other – specify"
+        },
+        "overall.COURSE": {
+            "title": "13 Course of overall cognitive/behavioral/motor syndrome:"
+        },
+        "overall.FRSTCHG": {
+            "title": "14 Indicate the predominant domain which was first recognized as changed in the subject:"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "memo_comp.DECSUB": 1.0,
+        "memo_comp.DECIN": 1.0,
+        "memo_comp.DECCLIN": 1.0,
+        "memo_comp.DECAGE": 1.0,
+        "cogn_symp.indicate_impair.COGMEM": 1.0,
+        "cogn_symp.indicate_impair.COGJUDG": 1.0,
+        "cogn_symp.indicate_impair.COGLANG": 1.0,
+        "cogn_symp.indicate_impair.COGVIS": 1.0,
+        "cogn_symp.indicate_impair.COGATTN": 1.0,
+        "cogn_symp.indicate_impair.COGOTHR": 1.0,
+        "cogn_symp.indicate_impair.COGOTHRX": 1.0,
+        "cogn_symp.COGFRST": 1.0,
+        "cogn_symp.COGFRSTX": 1.0,
+        "cogn_symp.COGMODE": 1.0,
+        "cogn_symp.COGMODEX": 1.0,
+        "beha_symp.indicate_beha_symp.BEAPATHY": 1.0,
+        "beha_symp.indicate_beha_symp.BEDEP": 1.0,
+        "beha_symp.indicate_beha_symp.psychosis.BEVHALL": 1.0,
+        "beha_symp.indicate_beha_symp.psychosis.BEAHALL": 1.0,
+        "beha_symp.indicate_beha_symp.psychosis.BEDEL": 1.0,
+        "beha_symp.indicate_beha_symp.BEDISIN": 1.0,
+        "beha_symp.indicate_beha_symp.BEIRRIT": 1.0,
+        "beha_symp.indicate_beha_symp.BEAGIT": 1.0,
+        "beha_symp.indicate_beha_symp.BEPERCH": 1.0,
+        "beha_symp.indicate_beha_symp.BEOTHR": 1.0,
+        "beha_symp.indicate_beha_symp.BEOTHRX": 1.0,
+        "beha_symp.BEFRST": 1.0,
+        "beha_symp.BEFRSTX": 1.0,
+        "beha_symp.BEMODE": 1.0,
+        "beha_symp.BEMODEX": 1.0,
+        "motor_symp.indicate_motor_symp.MOGAIT": 1.0,
+        "motor_symp.indicate_motor_symp.MOFALLS": 1.0,
+        "motor_symp.indicate_motor_symp.MOTREM": 1.0,
+        "motor_symp.indicate_motor_symp.MOSLOW": 1.0,
+        "motor_symp.MOFRST": 1.0,
+        "motor_symp.MOMODE": 1.0,
+        "motor_symp.MOMODEX": 1.0,
+        "overall.COURSE": 1.0,
+        "overall.FRSTCHG": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_b9v1.md"
+}

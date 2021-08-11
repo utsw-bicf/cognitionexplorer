@@ -48,3 +48,23 @@ class Fvp_b9v2(Item):
     audit_inherit = []
     set_status_up = []
     set_status_down = []
+
+
+@collection(
+    name="fvp_b9v1s",
+    unique_key="uuid",
+    properties={
+        "title": "UDS_FVP_B9V1 Forms",
+        "description": "UDS follow-up visiting patients B9V1 forms results pages",
+    },
+)
+class Fvp_b9v1(Item):
+    item_type = "fvp_b9v1"
+    schema = load_schema("encoded:schemas/fvp_b9v1.json")
+    embedded = [
+    ]
+    rev = {
+    }
+    audit_inherit = []
+    set_status_up = []
+    set_status_down = []

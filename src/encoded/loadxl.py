@@ -102,7 +102,8 @@ ORDER = [
     'fvp_a5v2',
     'fvp_a5v1',
     # 'fvp_b9v3',
-    # 'fvp_b9v2',
+    'fvp_b9v2',
+    'fvp_b9v1',#need to retest
     # 'fvp_b7v3',
     'fvp_b7v2',
     'fvp_b7v1',
