@@ -38,6 +38,7 @@ class Patient(Item):
         'tvp_a1',
         'ivp_a3v3',
         'ivp_a3v2',
+        'ivp_a3v1',
 
         'fvp_a2v3',
         'fvp_a2v2',
@@ -135,6 +136,7 @@ class Patient(Item):
         'tvp_a4',
         'fvp_a3v3',
         'fvp_a3v2',
+        'fvp_a3v1',
         'fvp_b8v3',
         'fvp_b8v2',
         'fvp_b8v1',
@@ -159,6 +161,7 @@ class Patient(Item):
         'fvp_a1v1': ('Fvp_a1v1', 'patient'),
         'ivp_a3v3': ('Ivp_a3v3', 'patient'),
         'ivp_a3v2': ('Ivp_a3v2', 'patient'),
+        'ivp_a3v1': ('Ivp_a3v1', 'patient'),
         'tvp_a2': ('Tvp_a2', 'patient'),
         'tvp_a3': ('Tvp_a3', 'patient'),
         'fvp_a2v3': ('Fvp_a2v3', 'patient'),
@@ -255,6 +258,7 @@ class Patient(Item):
         'tvp_a4': ('Tvp_a4', 'patient'),
         'fvp_a3v3': ('Fvp_a3v3', 'patient'),
         'fvp_a3v2': ('Fvp_a3v2', 'patient'),
+        'fvp_a3v1': ('Fvp_a3v1', 'patient'),
         'tvp_a1': ('Tvp_a1', 'patient'),
         'tvp_z1x': ('Tvp_z1x', 'patient'),
         'ivp_z1x': ('Ivp_z1x', 'patient'),
@@ -393,6 +397,18 @@ class Patient(Item):
     })
     def ivp_a3v2(self, request, ivp_a3v2):
         return paths_filtered_by_status(request, ivp_a3v2)
+
+    @calculated_property(schema={
+        "title": "Ivp_a3v1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Ivp_a3v1"
+        },
+    })
+    def ivp_a3v1(self, request, ivp_a3v1):
+        return paths_filtered_by_status(request, ivp_a3v1)
+
     @calculated_property(schema={
         "title": "Fvp_a2v3",
         "type": "array",
@@ -1136,7 +1152,19 @@ class Patient(Item):
     })
     def fvp_a3v2(self, request, fvp_a3v2):
         return paths_filtered_by_status(request, fvp_a3v2)
-        
+
+ 
+    @calculated_property(schema={
+        "title": "Fvp_a3v1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_a3v1"
+        },
+    })
+    def fvp_a3v1(self, request, fvp_a3v1):
+        return paths_filtered_by_status(request, fvp_a3v1)
+
     @calculated_property(schema={
         "title": "Fvp_b9v3",
         "type": "array",

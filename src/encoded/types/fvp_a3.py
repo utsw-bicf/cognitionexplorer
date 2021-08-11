@@ -48,3 +48,22 @@ class Fvp_a3v2(Item):
     audit_inherit = []
     set_status_up = []
     set_status_down = []
+
+@collection(
+    name="fvp_a3v1s",
+    unique_key="uuid",
+    properties={
+        "title": "UDS_FVP_A3V1 Forms",
+        "description": "UDS follow up forms A3V1:Subject Family History results pages",
+    },
+)
+class Fvp_a3v1(Item):
+    item_type = "fvp_a3v1"
+    schema = load_schema("encoded:schemas/fvp_a3v1.json")
+    embedded = [
+    ]
+    rev = {
+    }
+    audit_inherit = []
+    set_status_up = []
+    set_status_down = []
