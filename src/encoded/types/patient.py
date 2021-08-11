@@ -121,6 +121,7 @@ class Patient(Item):
         
         'ivp_d2',
         'ivp_a4v2',
+        'ivp_a4v1',
         'ivp_a4v3',
         'fvp_c2v3',
         'fvp_b6v3',
@@ -133,6 +134,7 @@ class Patient(Item):
         'm1',
         'fvp_a4v3',
         'fvp_a4v2',
+        'fvp_a4v1',
         'tvp_a4',
         'fvp_a3v3',
         'fvp_a3v2',
@@ -243,6 +245,7 @@ class Patient(Item):
         'fvp_d1v1': ('Fvp_d1v1', 'patient'),
         'ivp_d2': ('Ivp_d2', 'patient'),
         'ivp_a4v2': ('Ivp_a4v2', 'patient'),
+        'ivp_a4v1': ('Ivp_a4v1', 'patient'),
         'ivp_a4v3': ('Ivp_a4v3', 'patient'),
         'fvp_c2v3': ('Fvp_c2v3', 'patient'),
         'fvp_b6v3': ('Fvp_b6v3', 'patient'),
@@ -255,6 +258,7 @@ class Patient(Item):
         'm1': ('M1', 'patient'),
         'fvp_a4v3': ('Fvp_a4v3', 'patient'),
         'fvp_a4v2': ('Fvp_a4v2', 'patient'),
+        'fvp_a4v1': ('Fvp_a4v1', 'patient'),
         'tvp_a4': ('Tvp_a4', 'patient'),
         'fvp_a3v3': ('Fvp_a3v3', 'patient'),
         'fvp_a3v2': ('Fvp_a3v2', 'patient'),
@@ -1016,6 +1020,18 @@ class Patient(Item):
         return paths_filtered_by_status(request, ivp_a4v2)
 
     @calculated_property(schema={
+        "title": "Ivp_a4v1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Ivp_a4v1"
+        },
+    })
+    def ivp_a4v1(self, request, ivp_a4v1):
+        return paths_filtered_by_status(request, ivp_a4v1)
+
+
+    @calculated_property(schema={
         "title": "Fvp_c2v3",
         "type": "array",
         "items": {
@@ -1536,6 +1552,19 @@ class Patient(Item):
     })
     def fvp_a4v2(self, request, fvp_a4v2):
         return paths_filtered_by_status(request, fvp_a4v2)
+
+
+    @calculated_property(schema={
+        "title": "Fvp_a4v1",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_a4v1"
+        },
+    })
+    def fvp_a4v1(self, request, fvp_a4v1):
+        return paths_filtered_by_status(request, fvp_a4v1)
+
 
     @calculated_property(schema={
         "title": "Tvp_a4",
