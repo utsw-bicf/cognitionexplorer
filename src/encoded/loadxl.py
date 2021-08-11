@@ -44,10 +44,11 @@ ORDER = [
     'ivp_e1v1',
 
     'ivp_z1v2',
-    # 'ivp_z1v1'#need to retest
+    # 'ivp_z1v1',#need to retests
     'fvp_e1v2',
     'fvp_e1v1',
-    # 'fvp_z1v2',
+    'fvp_z1v2',
+    'fvp_z1v1',
     'fvp_b2v2',
     'fvp_b2v1',
     'fvp_b3v2',
@@ -105,7 +106,7 @@ ORDER = [
     'fvp_a5v1',
     # 'fvp_b9v3',
     'fvp_b9v2',
-    'fvp_b9v1',#need to retest
+    'fvp_b9v1',
     # 'fvp_b7v3',
     'fvp_b7v2',
     'fvp_b7v1',
