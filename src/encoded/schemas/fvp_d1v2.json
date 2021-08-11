@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form D1: Clinician Diagnosis – Cognitive Status and Dementia",
+    "title": "NACC Uniform Data Set (UDS) – FOLLOW-UP Visit Packet, Form D1: Clinician Diagnosis – Cognitive Status and Dementia",
     "description": "NOTE: This form is to be completed by the clinician. For diagnostic \ncriteria, see UDS Coding Guidebook for Initial Visit Packet, Form D1.\nCheck only one box per response category.\n",
     "id": "/profiles/fvp_d1v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

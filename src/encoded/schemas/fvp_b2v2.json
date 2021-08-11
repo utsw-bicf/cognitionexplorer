@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form B2: Evaluation Form – HIS and CVD",
+    "title": "NACC Uniform Data Set (UDS) – FOLLOW-UP Visit Packet, Form B2: Evaluation Form – HIS and CVD",
     "description": "NOTE: This form is to be completed by the clinician or other trained healthADC \nprofessional.For additional clarification and examples, see UDS Coding\nGuidebook for Initial Visit Packet, Form B2.\n",
     "id": "/profiles/fvp_b2v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - FOLLOW UPFORM D2: Clinician-assessed Medical Conditions",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW UP FORM D2: Clinician-assessed Medical Conditions",
     "description": "INSTRUCTIONS: This form is to be completed by a physician, physician's assistant, nurse practitioner, or other \nqualified practitioner. For additional clarification and examples, see UDS Coding Guidebook for Follow-up Visit \nPacket, Form D2. Link to NACC Coding Guidebook \nMedical Conditions and procedures. \nThe following questions should be answered based on review of all available information, including new diagnoses \nmade during the current visit, previous medical records, procedures, laboratory tests, and the clinical exam.",
     "id": "/profiles/uds_fvp_b.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

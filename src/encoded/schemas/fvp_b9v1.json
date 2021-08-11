@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form B9: Clinician Judgment of Symptoms",
+    "title": "NACC Uniform Data Set (UDS) – FOLLOW-UP Visit Packet, Form B9: Clinician Judgment of Symptoms",
     "description": "NOTE: This form is to be completed by the clinician. For additional clarificationADC \nand examples, see UDS Coding Guidebook for Initial Visit Packet, Form B9.\nCheck only one box per question. \n",
     "id": "/profiles/fvp_b9v1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

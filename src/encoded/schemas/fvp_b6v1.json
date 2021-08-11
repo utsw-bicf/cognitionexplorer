@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B6: BEHAVIORAL ASSESSMENT - GERIATRIC DEPRESSION SCALE (GDS[1])",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP VISIT PACKETFORM B6: BEHAVIORAL ASSESSMENT - GERIATRIC DEPRESSION SCALE (GDS[1])",
 "description": "NOTE: This form is to be completed by the clinician, based on subject response.\nFor additional clarification and examples, see UDS Coding Guidebook page 35.\nCircle only one number per question.\n",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "id": "/profiles/fvp_b6v1.json",

@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet--Form C1: MMSE and Neuropsychological Battery",
+    "title": "NACC Uniform Data Set (UDS) – FOLLOW-UP Visit Packet--Form C1: MMSE and Neuropsychological Battery",
     "description": "NOTE: This form is to be completed by ADC or clinic staff. For test administrationADC Visit #:__ __ __\nand scoring, see UDS Coding Guidebook for Initial Visit Packet, Form C1.\nKEY: If the subject cannot complete any of the following exams, please use\nthe following codes for test scores (except for the Trail Making Test):\n95 = Physical problem 97 = Other problem\n96 = Cognitive/behavior problem 98 = Verbal refusal\n",
     "id": "/profiles/fvp_c1v1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

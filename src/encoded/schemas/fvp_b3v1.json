@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet\nForm B3: Evaluation Form –\nUnified Parkinson’s Disease Rating Scale (UPDRS1) – Motor Exam\n",
+    "title": "NACC Uniform Data Set (UDS) –FOLLOW-UP Visit Packet\nForm B3: Evaluation Form –\nUnified Parkinson’s Disease Rating Scale (UPDRS1) – Motor Exam\n",
     "description": "NOTE: This form is to be completed by the clinician.For additional \nclarification and examples, see UDS Coding Guidebook pages 26–31.\nCheck only one box per question.\n",
     "id": "/profiles/fvp_b3v1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

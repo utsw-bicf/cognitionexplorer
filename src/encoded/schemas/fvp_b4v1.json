@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B4®: Dementia Staging Instrument plus NACC FTLD Behario & Language Domains (CDR® Plus NACC FTLD)",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP VISIT PACKETForm B4®: Dementia Staging Instrument plus NACC FTLD Behario & Language Domains (CDR® Plus NACC FTLD)",
     "description": "NOTE: This form is to be completed by the clinician, based on informant report and neurological exam of the Examiner’s initials:__ __ __\nsubject. In the extremely rare instances when no informant is available, the clinician must complete the CDRutilizing\nall other available information and his/her best clinical judgment.Score only as decline from previous level due to cognitive loss,\nnot impairment due to other factors. For further information, see UDS Coding Guidebook pages 32–33.\n",
     "comment": "Schema for submitting UDS ivp_b4 form information. ",
     "id": "/profiles/fvp_b4v1.json",

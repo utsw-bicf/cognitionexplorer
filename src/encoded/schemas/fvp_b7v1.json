@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP VISIT PACKETForm B7: FUNCTIONAL ASSESSMENT - FUNCTIONAL ACTIVITIES SCALE (FAS[1])",
     "description": "NOTE: This form is to be completed by the clinician, based on information provided by informant.For additionalExaminer’sinitials:__ __ __\nclarification and examples, see UDS Coding Guidebook page 36. Indicate the level of performance for each\nactivity by circling the one appropriate response.\n",
     "id": "/profiles/fvp_b7v1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

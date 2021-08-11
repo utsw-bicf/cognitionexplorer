@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) - FOLLOW UPForm C2: Neuropsychological Battery Scores",
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW UP Form C2: Neuropsychological Battery Scores",
     "description": "INSTRUCTIONS: This form is to be completed by ADC or clinic staff. For test administration and scoring, see Instructions for Neuropsychological Battery Form C2. Link to C2 Instructions . Any new subjects who enroll in the UDS after the implementation of UDS3 must be assessed with the new neuropsychological test battery (Form C2). Link to NACC Coding Guidebook KEY: If the subject cannot complete any of the following exams, please give the reason by entering one of the following codes: 95/995=Physical problem 96/996=Cognitive/behavior problem 97/997=Other problem 98/998=Verbal refusal",
     "id": "/profiles/uds_fvp_c2v3.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

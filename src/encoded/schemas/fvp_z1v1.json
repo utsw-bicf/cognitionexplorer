@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet.Form Z1: Form Checklist",
+    "title": "NACC Uniform Data Set (UDS) – FOLLOW-UP Visit Packet.Form Z1: Form Checklist",
     "description": "NOTE: This form is to be completed by clinic staff.\nNACC expects and intends that all UDS forms will be attempted on all subjects, but we realize this may be impossible\nwhen the patient is terminally ill, or when there is no informant, or for other reasons. NACC requires that Forms Z1,\nA1, A5, B4, B9, C1, D1, and E1 be submitted for a subject to be included in the UDS database, even though these\nforms may include some missing data.\nFor forms not designated as required, if it is not feasible to collect all or almost all of the data elements for a subject\nand the ADC therefore decides not to attempt collection of those data, an explanation must be provided. Please\nindicate this decision below by including the appropriate explanatory code and any additional comments.\nKEY: If the specified form was not completed, please enter one of the following codes:\n95 = Physical problem 97 = Other problem\n96 = Cognitive/behavior problem 98 = Verbal refusal\n",
     "id": "/profiles/fvp_z1v1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",

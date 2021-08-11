@@ -1,5 +1,5 @@
 {
-    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form E1: Imaging/Labs",
+    "title": "NACC Uniform Data Set (UDS) – FOLLOW-UP Visit Packet, Form E1: Imaging/Labs",
     "description": "NOTE: This form is to be completed by ADC or clinic staff.For additional \nclarification and examples, see UDS Coding Guidebook for Initial Visit\nPacket, Form E1.Check only one box per response category.\n\n",
     "id": "/profiles/fvp_e1v2.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
