@@ -1,0 +1,121 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B8: NEUROLOGICAL EXAMINATION FINDINGS",
+    "description": "INSTRUCTIONS: This form must be completed by a clinician with experience in assessing the neurological signs listed below and in attributing the observed findings to a particular syndrome. Please use your best clinical judgment in assigning the syndrome. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form B8. Link to NACC Coding Guidebook",
+    "id": "/profiles/fvp_b8v1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+       
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "normal": {
+            "title": "1. Are all findings unremarkable (normal or normal for age)?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "focldef": {
+            "title": "2. Are focal deficits present indicative of central nervous system disorder?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "gaitdis": {
+            "title": "3. Is gait disorder present indicative of central nervous system disorder?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "eyemove": {
+            "title": "4. Are there eye movement abnormalities present indicative of central nervous system disorder?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "normal": {
+            "title": "1. Are all findings unremarkable (normal or normal for age)?"
+        },
+        "focldef": {
+            "title": "2. Are focal deficits present indicative of central nervous system disorder?"
+        },
+        "gaitdis": {
+            "title": "3. Is gait disorder present indicative of central nervous system disorder?"
+        },
+        "eyemove": {
+            "title": "4. Are there eye movement abnormalities present indicative of central nervous system disorder?"
+        }
+        
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "normal": {
+            "title": "1. Are all findings unremarkable (normal or normal for age)?"
+        },
+        "focldef": {
+            "title": "2. Are focal deficits present indicative of central nervous system disorder?"
+        },
+        "gaitdis": {
+            "title": "3. Is gait disorder present indicative of central nervous system disorder?"
+        },
+        "eyemove": {
+            "title": "4. Are there eye movement abnormalities present indicative of central nervous system disorder?"
+        }
+       
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "normal": 1.0,
+        "focldef": 1.0,
+        "gaitdis": 1.0,
+        "eyemove": 1.0
+        
+    },
+    "changelog": "/profiles/changelogs/fvp_b8v1.md"
+}
