@@ -3,7 +3,8 @@
         "name": "First cohort",
         "elements": [
             "/patients/000015/",
-            "/patients/000014/",
+            "/patients/000000/",
+            "/patients/000001/",
             "/patients/000013/",
             "/patients/000010/"
         ],
