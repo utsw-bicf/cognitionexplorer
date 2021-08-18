@@ -123,12 +123,18 @@
             "properties": {
                 "LOGIMO": {
                     "title": "3a. If this test has been administered to the subject within the past three months, specify the date previously administered",
-                    "description": "Date can be submitted as YYYY-MM-DD,(Current Year or Previous Year, 88/888 = N/A)",
+                    "description": "Date can be submitted as YYYY-MM-DD,(Current Year or Previous Year, 8888-88-88 = N/A)",
                     "type": "string",
                     "anyOf": [
                         {
                             "format": "date"
+                        },
+                      
+                        {
+                           "pattern": "^8888-88-88$"
+
                         }
+                        
                     ]
                 },
                 "LOGIPREV": {
