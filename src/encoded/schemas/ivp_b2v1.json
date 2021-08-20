@@ -189,15 +189,8 @@
         "hach_isch_score.HXSTROKE": 1.0,
         "hach_isch_score.FOCLSYM": 1.0,
         "hach_isch_score.FOCLSIGN": 1.0,
-        "hach_isch_score.HACHIN": 1.0,
-        "cere_dise.CVDCOG": 1.0,
-        "cere_dise.STROKCOG": 1.0,
-        "cere_dise.CVDIMAG": 1.0,
-        "cere_dise.if_yes.CVDIMAG1": 1.0,
-        "cere_dise.if_yes.CVDIMAG2": 1.0,
-        "cere_dise.if_yes.CVDIMAG3": 1.0,
-        "cere_dise.if_yes.CVDIMAG4": 1.0,
-        "cere_dise.if_yes.CVDIMAGX": 1.0
+        "hach_isch_score.HACHIN": 1.0
+      
     },
     "changelog": "/profiles/changelogs/ivp_b2v1.md"
 }
