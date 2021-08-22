@@ -23,137 +23,137 @@ ORDER = [
 
 
     'ivp_a1v3',#pass
-    'ivp_a2v3',#pass
-    'ivp_a3v3',#pass
-    'ivp_a4v3',#pass
-    'ivp_a5v3',#pass
-    'ivp_b1v3',#pass
-    'ivp_b4v3',#pass
-    'ivp_b5v3', #pass
-    'ivp_b6v3', #pass
-    'ivp_b7v3',#pass
-    'ivp_b8v3',#pass
-    'ivp_b9v3',#pass
-    'ivp_c2v3',#pass
-    'ivp_d1v3',#pass
-    'ivp_d2v3',#pass
-    'ivp_z1xv3',#pass
+    # 'ivp_a2v3',#pass
+    # 'ivp_a3v3',#pass
+    # 'ivp_a4v3',#pass
+    # 'ivp_a5v3',#pass
+    # 'ivp_b1v3',#pass
+    # 'ivp_b4v3',#pass
+    # 'ivp_b5v3', #pass
+    # 'ivp_b6v3', #pass
+    # 'ivp_b7v3',#pass
+    # 'ivp_b8v3',#pass
+    # 'ivp_b9v3',#pass
+    # 'ivp_c2v3',#pass
+    # 'ivp_d1v3',#pass
+    # 'ivp_d2v3',#pass
+    # 'ivp_z1xv3',#pass
 
 
-    'fvp_a1v3',#pass
-    'fvp_a2v3',#pass
-    'fvp_a3v3',#error 1 real patient data, cannot load
-    'fvp_a4v3',#pass
-    'fvp_b1v3',#pass
-    'fvp_b4v3',#pass
-    'fvp_b5v3',#pass
-    'fvp_b6v3',#pass
-    'fvp_b7v3',#pass
-    'fvp_b8v3',#pass
-    'fvp_b9v3',#error 1 real patient data, cannot load
-    'fvp_c1v3',#pass
-    'fvp_c2v3',#pass
-    'fvp_d1v3',#pass
-    'fvp_d2v3',#pass
-    'fvp_z1xv3',#pass
+    # 'fvp_a1v3',#pass
+    # 'fvp_a2v3',#pass
+    # 'fvp_a3v3',#error 1 real patient data, cannot load
+    # 'fvp_a4v3',#pass
+    # 'fvp_b1v3',#pass
+    # 'fvp_b4v3',#pass
+    # 'fvp_b5v3',#pass
+    # 'fvp_b6v3',#pass
+    # 'fvp_b7v3',#pass
+    # 'fvp_b8v3',#pass
+    # 'fvp_b9v3',#error 1 real patient data, cannot load
+    # 'fvp_c1v3',#pass
+    # 'fvp_c2v3',#pass
+    # 'fvp_d1v3',#pass
+    # 'fvp_d2v3',#pass
+    # 'fvp_z1xv3',#pass
 
  #======================Version 2===========================
 
-    'ivp_a1v2',#pass
-    'ivp_a2v2',#pass
-    'ivp_a3v2',#failed
-    'ivp_a4v2',#pass
-    'ivp_a5v2',#pass
-    'ivp_b1v2',#pass
-    'ivp_b2v2',#pass
-    'ivp_b3v2',#failed
-    'ivp_b4v2',#pass
-    'ivp_b5v2',#pass
-    'ivp_b6v2',#pass
-    'ivp_b7v2',#pass
-    'ivp_b8v2',#pass
-    'ivp_b9v2',#pass
-    'ivp_c1v2',#failed
-    'ivp_c2v2',
-    'ivp_d1v2',#pass
-    'ivp_d2v2',
-    'ivp_e1v2',#pass
-    'ivp_z1v2',#pass
-    'ivp_z1xv2',
+    # 'ivp_a1v2',#pass
+    # 'ivp_a2v2',#pass
+    # 'ivp_a3v2',#failed
+    # 'ivp_a4v2',#pass
+    # 'ivp_a5v2',#pass
+    # 'ivp_b1v2',#pass
+    # 'ivp_b2v2',#pass
+    # 'ivp_b3v2',#failed
+    # 'ivp_b4v2',#pass
+    # 'ivp_b5v2',#pass
+    # 'ivp_b6v2',#pass
+    # 'ivp_b7v2',#pass
+    # 'ivp_b8v2',#pass
+    # 'ivp_b9v2',#pass
+    # 'ivp_c1v2',#failed
+    # 'ivp_c2v2',
+    # 'ivp_d1v2',#pass
+    # 'ivp_d2v2',
+    # 'ivp_e1v2',#pass
+    # 'ivp_z1v2',#pass
+    # 'ivp_z1xv2',
 
-    'fvp_a1v2',#pass
-    'fvp_a2v2',#pass
-    'fvp_a3v2',#pass
-    'fvp_a4v2',#pass
-    'fvp_a5v2',#pass
-    'fvp_b1v2',#pass
-    'fvp_b2v2',#pass
-    'fvp_b3v2',#failed
-    'fvp_b4v2',#pass
-    'fvp_b5v2',#pass
-    'fvp_b6v2',#pass
-    'fvp_b7v2',#pass
-    'fvp_b8v2',#pass
-    'fvp_b9v2',#pass
-    'fvp_c1v2',#failed
-    'fvp_d1v2',#pass
-    'fvp_e1v2',#pass
-    'fvp_z1v2',#pass
+    # 'fvp_a1v2',#pass
+    # 'fvp_a2v2',#pass
+    # 'fvp_a3v2',#pass
+    # 'fvp_a4v2',#pass
+    # 'fvp_a5v2',#pass
+    # 'fvp_b1v2',#pass
+    # 'fvp_b2v2',#pass
+    # 'fvp_b3v2',#failed
+    # 'fvp_b4v2',#pass
+    # 'fvp_b5v2',#pass
+    # 'fvp_b6v2',#pass
+    # 'fvp_b7v2',#pass
+    # 'fvp_b8v2',#pass
+    # 'fvp_b9v2',#pass
+    # 'fvp_c1v2',#failed
+    # 'fvp_d1v2',#pass
+    # 'fvp_e1v2',#pass
+    # 'fvp_z1v2',#pass
 #======================Version 1===========================
-    'ivp_a1v1',
-    'ivp_a2v1',
-    'ivp_a3v1',
-    'ivp_a4v1',
-    'ivp_a5v1',
-    'ivp_b1v1',
-    'ivp_b2v1',
-    'ivp_b3v1',
-    'ivp_b4v1',
-    'ivp_b5v1',
-    'ivp_b6v1',
-    'ivp_b7v1',
-    'ivp_b8v1',
-    'ivp_b9v1',
-    'ivp_c1v1',
-    'ivp_d1v1',
-    'ivp_e1v1',
-    'ivp_z1v1',
+    # 'ivp_a1v1',
+    # 'ivp_a2v1',
+    # 'ivp_a3v1',
+    # 'ivp_a4v1',
+    # 'ivp_a5v1',
+    # 'ivp_b1v1',
+    # 'ivp_b2v1',
+    # 'ivp_b3v1',
+    # 'ivp_b4v1',
+    # 'ivp_b5v1',
+    # 'ivp_b6v1',
+    # 'ivp_b7v1',
+    # 'ivp_b8v1',
+    # 'ivp_b9v1',
+    # 'ivp_c1v1',
+    # 'ivp_d1v1',
+    # 'ivp_e1v1',
+    # 'ivp_z1v1',
 
-    'fvp_a1v1',
-    'fvp_a2v1',
-    'fvp_a3v1',
-    'fvp_a4v1',
-    'fvp_a5v1',
-    'fvp_b1v1',
-    'fvp_b2v1',
-    'fvp_b3v1',
-    'fvp_b4v1',
-    'fvp_b5v1',
-    'fvp_b6v1',
-    'fvp_b7v1',
-    'fvp_b8v1',
-    'fvp_b9v1',
-    'fvp_c1v1',
-    'fvp_d1v1',
-    'fvp_e1v1',
-    'fvp_z1v1',
+    # 'fvp_a1v1',
+    # 'fvp_a2v1',
+    # 'fvp_a3v1',
+    # 'fvp_a4v1',
+    # 'fvp_a5v1',
+    # 'fvp_b1v1',
+    # 'fvp_b2v1',
+    # 'fvp_b3v1',
+    # 'fvp_b4v1',
+    # 'fvp_b5v1',
+    # 'fvp_b6v1',
+    # 'fvp_b7v1',
+    # 'fvp_b8v1',
+    # 'fvp_b9v1',
+    # 'fvp_c1v1',
+    # 'fvp_d1v1',
+    # 'fvp_e1v1',
+    # 'fvp_z1v1',
 
 #======================speed up===========================
     
-    'tvp_a1',
-    'tvp_a2',
-    'tvp_a3',
-    'tvp_a4',
-    'tvp_b4',
-    'tvp_b5',
-    'tvp_b7',
-    'tvp_d2',
-    'tvp_t1',
-    'tvp_z1x',
+    # 'tvp_a1',
+    # 'tvp_a2',
+    # 'tvp_a3',
+    # 'tvp_a4',
+    # 'tvp_b4',
+    # 'tvp_b5',
+    # 'tvp_b7',
+    # 'tvp_d2',
+    # 'tvp_t1',
+    # 'tvp_z1x',
 
-    'm1',
-    'concussion_history',
-    'cart'
+    # 'm1',
+    # 'concussion_history',
+    # 'cart'
     ]
 
 
