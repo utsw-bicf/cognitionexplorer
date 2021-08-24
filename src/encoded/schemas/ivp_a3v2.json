@@ -46,9 +46,9 @@
                     "properties": {
                         "momyob": {
                             "title": "1a. Mother’s year of birth",
-                            "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                            "description": "(Date can be submitted as YYYY.((YYYY) 1850 to current, 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                            "pattern": "^185[0-9]|18[6-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "MOMLIV": {
                             "title": "1b. Is subject’s mother still living?",
@@ -61,7 +61,7 @@
                         },
                         "momyod": {
                             "title": "1c. If subject’s mother is deceased, indicate year of death",
-                            "description": "( 9999 = Unknown)",
+                            "description": "1875 - current ( 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
@@ -76,9 +76,9 @@
                         },
                         "momonset": {
                             "title": "1e. If subject’s mother was demented, indicate age at onset",
-                            "description": "(999 = Unknown)",
+                            "description": "15-110 (999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                         }
                     }
                 },
@@ -88,9 +88,9 @@
                     "properties": {
                         "dadyob": {
                             "title": "2a. Father’s year of birth",
-                            "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                            "description": "(Date can be submitted as YYYY.((YYYY) 1850 to current, 9999 = Unknown)",
                             "type": "string",
-                            "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                            "pattern": "^185[0-9]|18[6-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
                         "dadLIV": {
                             "title": "2b. Is subject’s father still living?",
@@ -103,7 +103,7 @@
                         },
                         "dadyod": {
                             "title": "2c. If subject’s father is deceased, indicate year of death",
-                            "description": "( 9999 = Unknown)",
+                            "description": "1875 - current ( 9999 = Unknown)",
                             "type": "string",
                             "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                         },
@@ -118,9 +118,9 @@
                         },
                         "dadonset": {
                             "title": "2e. If subject’s father was demented, indicate age at onset",
-                            "description": "(999 = Unknown)",
+                            "description": "15-110 (999 = Unknown)",
                             "type": "string",
-                            "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                         }
                     }
                 }
@@ -152,8 +152,10 @@
                 },
                 "sibs": {
                     "title": "4. How many full siblings does the subject have?",
-                    "description": "If subject has no full siblings,  SKIP TO QUESTION 7; otherwise provide information on all full siblings below.For any full sibling with a neurological or psychiatric condition, the entire row must be filled out. If the clinician cannot determine the primary neurological problem/psychiatric condition after reviewing all avilable evidence, enter 9=Unknown in the Primary neurological problem/psychiatric condition column, and then skip the subsequent questions in the row. For a siblng with no neurological or psychiatric problem, enter 8=N/A - no neurological problem or psychiatric condition in the Primary neurological problem/psychiatric condition column, and then skip the subsequent questions in the row.( 0-20, 99=Unknown)",
-                    "type": "string"
+                    "description": "0-20 (99 = Unknown).If subject has no full siblings,  SKIP TO QUESTION 7; otherwise provide information on all full siblings below.For any full sibling with a neurological or psychiatric condition, the entire row must be filled out. If the clinician cannot determine the primary neurological problem/psychiatric condition after reviewing all avilable evidence, enter 9=Unknown in the Primary neurological problem/psychiatric condition column, and then skip the subsequent questions in the row. For a siblng with no neurological or psychiatric problem, enter 8=N/A - no neurological problem or psychiatric condition in the Primary neurological problem/psychiatric condition column, and then skip the subsequent questions in the row.( 0-20, 99=Unknown)",
+                    "type": "string",
+                    "pattern": "^[0-1]?[0-9]$|^20$|^99$"
+
                 },
                 "sibs_indicate": {
                     "title": "5. For all full siblings,indicate the following:",
@@ -165,7 +167,7 @@
                             "properties": {
                                 "sib1yob": {
                                     "title": "5a1. Sibling 1 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -180,7 +182,7 @@
                                 },
                                 "sib1yod": {
                                     "title": "5c1. If Sibling 1 is deceased, indicate year of death",
-                                    "description": "(9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -195,9 +197,9 @@
                                 },
                                 "sib1ons": {
                                     "title": "5e1. If Sibling 1 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -207,7 +209,7 @@
                             "properties": {
                                 "sib2yob": {
                                     "title": "5a2. Sibling 2 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -222,7 +224,7 @@
                                 },
                                 "sib2yod": {
                                     "title": "5c2. If Sibling 2 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -237,9 +239,9 @@
                                 },
                                 "sib2ons": {
                                     "title": "5e2. If Sibling 2 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -249,7 +251,7 @@
                             "properties": {
                                 "sib3yob": {
                                     "title": "5a3. Sibling 3 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -264,7 +266,7 @@
                                 },
                                 "sib3yod": {
                                     "title": "5c3. If Sibling 3 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -279,9 +281,9 @@
                                 },
                                 "sib3ons": {
                                     "title": "5e3. If Sibling 3 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -291,7 +293,7 @@
                             "properties": {
                                 "sib4yob": {
                                     "title": "5a4. Sibling 4 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -306,7 +308,7 @@
                                 },
                                 "sib4yod": {
                                     "title": "5c4. If Sibling 4 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -321,9 +323,9 @@
                                 },
                                 "sib4ons": {
                                     "title": "5e4. If Sibling 4 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -333,7 +335,7 @@
                             "properties": {
                                 "sib5yob": {
                                     "title": "5a5. Sibling 5 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -348,7 +350,7 @@
                                 },
                                 "sib5yod": {
                                     "title": "5c5. If Sibling 5 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -363,9 +365,9 @@
                                 },
                                 "sib5ons": {
                                     "title": "5e5. If Sibling 5 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -375,7 +377,7 @@
                             "properties": {
                                 "sib6yob": {
                                     "title": "5a6. Sibling 6 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -390,7 +392,7 @@
                                 },
                                 "sib6yod": {
                                     "title": "5c6. If Sibling 6 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -405,9 +407,9 @@
                                 },
                                 "sib6ons": {
                                     "title": "5e6. If Sibling 6 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -417,7 +419,7 @@
                             "properties": {
                                 "sib7yob": {
                                     "title": "5a7. Sibling 7 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -432,7 +434,7 @@
                                 },
                                 "sib7yod": {
                                     "title": "5c7. If Sibling 7 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -447,9 +449,9 @@
                                 },
                                 "sib7ons": {
                                     "title": "5e7. If Sibling 7 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -459,7 +461,7 @@
                             "properties": {
                                 "sib8yob": {
                                     "title": "5a8. Sibling 1 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -474,7 +476,7 @@
                                 },
                                 "sib8yod": {
                                     "title": "5c8. If Sibling 1 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -489,9 +491,9 @@
                                 },
                                 "sib8ons": {
                                     "title": "5e8. If Sibling 1 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -501,7 +503,7 @@
                             "properties": {
                                 "sib9yob": {
                                     "title": "5a9. Sibling 9 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -516,7 +518,7 @@
                                 },
                                 "sib9yod": {
                                     "title": "5c9. If Sibling 9 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -531,9 +533,9 @@
                                 },
                                 "sib9ons": {
                                     "title": "5e9. If Sibling 9 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -543,7 +545,7 @@
                             "properties": {
                                 "sib10yob": {
                                     "title": "5a10. Sibling 10 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -558,7 +560,7 @@
                                 },
                                 "sib10yod": {
                                     "title": "5c10. If Sibling 10 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -573,9 +575,9 @@
                                 },
                                 "sib10ons": {
                                     "title": "5e10. If Sibling 10 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -585,7 +587,7 @@
                             "properties": {
                                 "sib11yob": {
                                     "title": "5a11. Sibling 11 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -600,7 +602,7 @@
                                 },
                                 "sib11yod": {
                                     "title": "5c11. If Sibling 11 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -615,9 +617,9 @@
                                 },
                                 "sib11ons": {
                                     "title": "5e11. If Sibling 11 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -627,7 +629,7 @@
                             "properties": {
                                 "sib12yob": {
                                     "title": "5a12. Sibling 12 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -642,7 +644,7 @@
                                 },
                                 "sib12yod": {
                                     "title": "5c12. If Sibling 12 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -657,9 +659,9 @@
                                 },
                                 "sib12ons": {
                                     "title": "5e12. If Sibling 12 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -669,7 +671,7 @@
                             "properties": {
                                 "sib13yob": {
                                     "title": "5a13. Sibling 13 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -684,7 +686,7 @@
                                 },
                                 "sib13yod": {
                                     "title": "5c13. If Sibling 13 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -699,9 +701,9 @@
                                 },
                                 "sib13ons": {
                                     "title": "5e13. If Sibling 13 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -711,7 +713,7 @@
                             "properties": {
                                 "sib14yob": {
                                     "title": "5a14. Sibling 14 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -726,7 +728,7 @@
                                 },
                                 "sib14yod": {
                                     "title": "5c14. If Sibling 14 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -741,9 +743,9 @@
                                 },
                                 "sib14ons": {
                                     "title": "5e14. If Sibling 14 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -753,7 +755,7 @@
                             "properties": {
                                 "sib15yob": {
                                     "title": "5a15. Sibling 15 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -768,7 +770,7 @@
                                 },
                                 "sib15yod": {
                                     "title": "5c15. If Sibling 15 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -783,9 +785,9 @@
                                 },
                                 "sib15ons": {
                                     "title": "5e15. If Sibling 15 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -795,7 +797,7 @@
                             "properties": {
                                 "sib16yob": {
                                     "title": "5a16. Sibling 16 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -810,7 +812,7 @@
                                 },
                                 "sib16yod": {
                                     "title": "5c16. If Sibling 16 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -825,9 +827,9 @@
                                 },
                                 "sib16ons": {
                                     "title": "5e16. If Sibling 16 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -837,7 +839,7 @@
                             "properties": {
                                 "sib17yob": {
                                     "title": "5a17. Sibling 17 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -852,7 +854,7 @@
                                 },
                                 "sib17yod": {
                                     "title": "5c17. If Sibling 17 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -867,9 +869,9 @@
                                 },
                                 "sib17ons": {
                                     "title": "5e17. If Sibling 17 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -879,7 +881,7 @@
                             "properties": {
                                 "sib18yob": {
                                     "title": "5a18. Sibling 18 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -894,7 +896,7 @@
                                 },
                                 "sib18yod": {
                                     "title": "5c18. If Sibling 18 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -909,9 +911,9 @@
                                 },
                                 "sib18ons": {
                                     "title": "5e18. If Sibling 18 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -921,7 +923,7 @@
                             "properties": {
                                 "sib19yob": {
                                     "title": "5a19. Sibling 19 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -936,7 +938,7 @@
                                 },
                                 "sib19yod": {
                                     "title": "5c19. If Sibling 19 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -951,9 +953,9 @@
                                 },
                                 "sib19ons": {
                                     "title": "5e19. If Sibling 19 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -963,7 +965,7 @@
                             "properties": {
                                 "sib20yob": {
                                     "title": "5a20. Sibling 20 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -978,7 +980,7 @@
                                 },
                                 "sib20yod": {
                                     "title": "5c20. If Sibling 20 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -993,9 +995,9 @@
                                 },
                                 "sib20ons": {
                                     "title": "5e20. If Sibling 20 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         }
@@ -1023,9 +1025,9 @@
                             "properties": {
                                 "kid1yob": {
                                     "title": "7a1. Child 1 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid1LIV": {
                                     "title": "7b1. Is Child 1 still living?",
@@ -1038,9 +1040,9 @@
                                 },
                                 "kid1yod": {
                                     "title": "7c1. If Child 1 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid1dem": {
                                     "title": "7d1. Does/did Child 1 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1053,9 +1055,9 @@
                                 },
                                 "kid1ons": {
                                     "title": "7e1. If Child 1 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1065,9 +1067,9 @@
                             "properties": {
                                 "kid2yob": {
                                     "title": "7a2. Child 2 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid2LIV": {
                                     "title": "7b2. Is Child 2 still living?",
@@ -1080,9 +1082,9 @@
                                 },
                                 "kid2yod": {
                                     "title": "7c2. If Child 2 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid2dem": {
                                     "title": "7d2. Does/did Child 2 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1095,9 +1097,9 @@
                                 },
                                 "kid2ons": {
                                     "title": "7e2. If Child 2 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1107,9 +1109,9 @@
                             "properties": {
                                 "kid3yob": {
                                     "title": "7a3. Child 3 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid3LIV": {
                                     "title": "7b3. Is Child 3 still living?",
@@ -1122,9 +1124,9 @@
                                 },
                                 "kid3yod": {
                                     "title": "7c3. If Child 3 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid3dem": {
                                     "title": "7d3. Does/did Child 3 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1137,9 +1139,9 @@
                                 },
                                 "kid3ons": {
                                     "title": "7e3. If Child 3 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1149,9 +1151,9 @@
                             "properties": {
                                 "kid4yob": {
                                     "title": "7a4. Child 4 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid4LIV": {
                                     "title": "7b4. Is Child 4 still living?",
@@ -1164,9 +1166,9 @@
                                 },
                                 "kid4yod": {
                                     "title": "7c4. If Child 4 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid4dem": {
                                     "title": "7d4. Does/did Child 4 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1179,9 +1181,9 @@
                                 },
                                 "kid4ons": {
                                     "title": "7e4. If Child 4 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1191,9 +1193,9 @@
                             "properties": {
                                 "kid5yob": {
                                     "title": "7a5. Child 5 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid5LIV": {
                                     "title": "7b5. Is Child 5 still living?",
@@ -1206,9 +1208,9 @@
                                 },
                                 "kid5yod": {
                                     "title": "7c5. If Child 5 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid5dem": {
                                     "title": "7d5. Does/did Child 5 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1221,9 +1223,9 @@
                                 },
                                 "kid5ons": {
                                     "title": "7e5. If Child 5 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1233,9 +1235,9 @@
                             "properties": {
                                 "kid6yob": {
                                     "title": "7a6. Child 6 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid6LIV": {
                                     "title": "7b6. Is Child 6 still living?",
@@ -1248,9 +1250,9 @@
                                 },
                                 "kid6yod": {
                                     "title": "7c6. If Child 6 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid6dem": {
                                     "title": "7d6. Does/did Child 6 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1263,9 +1265,9 @@
                                 },
                                 "kid6ons": {
                                     "title": "7e6. If Child 6 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1275,9 +1277,9 @@
                             "properties": {
                                 "kid7yob": {
                                     "title": "7a7. Child 7 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid7LIV": {
                                     "title": "7b7. Is Child 7 still living?",
@@ -1290,9 +1292,9 @@
                                 },
                                 "kid7yod": {
                                     "title": "7c7. If Child 7 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid7dem": {
                                     "title": "7d7. Does/did Child 7 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1305,9 +1307,9 @@
                                 },
                                 "kid7ons": {
                                     "title": "7e7. If Child 7 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1317,9 +1319,9 @@
                             "properties": {
                                 "kid8yob": {
                                     "title": "7a8. Child 8 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid8LIV": {
                                     "title": "7b8. Is Child 8 still living?",
@@ -1332,9 +1334,9 @@
                                 },
                                 "kid8yod": {
                                     "title": "7c8. If Child 8 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid8dem": {
                                     "title": "7d8. Does/did Child 8 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1347,9 +1349,9 @@
                                 },
                                 "kid8ons": {
                                     "title": "7e8. If Child 8 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1359,9 +1361,9 @@
                             "properties": {
                                 "kid9yob": {
                                     "title": "7a9. Child 9 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid9LIV": {
                                     "title": "7b9. Is Child 9 still living?",
@@ -1374,9 +1376,9 @@
                                 },
                                 "kid9yod": {
                                     "title": "7c9. If Child 9 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid9dem": {
                                     "title": "7d9. Does/did Child 9 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1389,9 +1391,9 @@
                                 },
                                 "kid9ons": {
                                     "title": "7e9. If Child 9 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1401,9 +1403,9 @@
                             "properties": {
                                 "kid10yob": {
                                     "title": "7a10. Child 10 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid10LIV": {
                                     "title": "7b10. Is Child 10 still living?",
@@ -1416,9 +1418,9 @@
                                 },
                                 "kid10yod": {
                                     "title": "7c10. If Child 10 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid10dem": {
                                     "title": "7d10. Does/did Child 10 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1431,9 +1433,9 @@
                                 },
                                 "kid10ons": {
                                     "title": "7e10. If Child 10 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1443,9 +1445,9 @@
                             "properties": {
                                 "kid11yob": {
                                     "title": "7a11. Child 11 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid11LIV": {
                                     "title": "7b11. Is Child 11 still living?",
@@ -1458,9 +1460,9 @@
                                 },
                                 "kid11yod": {
                                     "title": "7c11. If Child 11 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid11dem": {
                                     "title": "7d11. Does/did Child 11 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1473,9 +1475,9 @@
                                 },
                                 "kid11ons": {
                                     "title": "7e11. If Child 11 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1485,9 +1487,9 @@
                             "properties": {
                                 "kid12yob": {
                                     "title": "7a12. Child 12 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid12LIV": {
                                     "title": "7b12. Is Child 12 still living?",
@@ -1500,9 +1502,9 @@
                                 },
                                 "kid12yod": {
                                     "title": "7c12. If Child 12 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid12dem": {
                                     "title": "7d12. Does/did Child 12 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1515,9 +1517,9 @@
                                 },
                                 "kid12ons": {
                                     "title": "7e12. If Child 12 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1527,9 +1529,9 @@
                             "properties": {
                                 "kid13yob": {
                                     "title": "7a13. Child 13 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid13LIV": {
                                     "title": "7b13. Is Child 13 still living?",
@@ -1542,9 +1544,9 @@
                                 },
                                 "kid13yod": {
                                     "title": "7c13. If Child 13 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid13dem": {
                                     "title": "7d13. Does/did Child 13 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1557,9 +1559,9 @@
                                 },
                                 "kid13ons": {
                                     "title": "7e13. If Child 13 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1569,9 +1571,9 @@
                             "properties": {
                                 "kid14yob": {
                                     "title": "7a14. Child 14 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid14LIV": {
                                     "title": "7b14. Is Child 14 still living?",
@@ -1584,9 +1586,9 @@
                                 },
                                 "kid14yod": {
                                     "title": "7c14. If Child 14 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid14dem": {
                                     "title": "7d14. Does/did Child 14 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1599,9 +1601,9 @@
                                 },
                                 "kid14ons": {
                                     "title": "7e14. If Child 14 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1611,9 +1613,9 @@
                             "properties": {
                                 "kid15yob": {
                                     "title": "7a15. Child 15 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1910 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid15LIV": {
                                     "title": "7b15. Is Child 15 still living?",
@@ -1626,9 +1628,9 @@
                                 },
                                 "kid15yod": {
                                     "title": "7c15. If Child 15 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern":"^19[1-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "kid15dem": {
                                     "title": "7d15. Does/did Child 15 have dementia, as indicated by symptoms, history or diagnosis?",
@@ -1641,9 +1643,9 @@
                                 },
                                 "kid15ons": {
                                     "title": "7e15. If Child 15 was demented, indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         }
@@ -1672,9 +1674,9 @@
                             "properties": {
                                 "rel1yob": {
                                     "title": "9a1. Relative 1 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel1LIV": {
                                     "title": "9b1. Is Relative 1 still living?",
@@ -1687,15 +1689,15 @@
                                 },
                                 "rel1yod": {
                                     "title": "9c1. If Relative 1 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1800 to current year(9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel1ons": {
                                     "title": "9d1. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1705,9 +1707,9 @@
                             "properties": {
                                 "rel2yob": {
                                     "title": "9a2. Relative 2 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel2LIV": {
                                     "title": "9b2. Is Relative 2 still living?",
@@ -1720,15 +1722,15 @@
                                 },
                                 "rel2yod": {
                                     "title": "9c2. If Relative 2 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel2ons": {
                                     "title": "9d2. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1738,9 +1740,9 @@
                             "properties": {
                                 "rel3yob": {
                                     "title": "9a3. Relative 3 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel3LIV": {
                                     "title": "9b3. Is Relative 3 still living?",
@@ -1753,15 +1755,15 @@
                                 },
                                 "rel3yod": {
                                     "title": "9c3. If Relative 3 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel3ons": {
                                     "title": "9d3. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1771,9 +1773,9 @@
                             "properties": {
                                 "rel4yob": {
                                     "title": "9a4. Relative 4 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel4LIV": {
                                     "title": "9b4. Is Relative 4 still living?",
@@ -1786,15 +1788,15 @@
                                 },
                                 "rel4yod": {
                                     "title": "9c4. If Relative 4 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel4ons": {
                                     "title": "9d4. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1804,9 +1806,9 @@
                             "properties": {
                                 "rel5yob": {
                                     "title": "9a5. Relative 5 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel5LIV": {
                                     "title": "9b5. Is Relative 5 still living?",
@@ -1819,15 +1821,15 @@
                                 },
                                 "rel5yod": {
                                     "title": "9c5. If Relative 5 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel5ons": {
                                     "title": "9d5. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1837,9 +1839,9 @@
                             "properties": {
                                 "rel6yob": {
                                     "title": "9a6. Relative 6 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel6LIV": {
                                     "title": "9b6. Is Relative 6 still living?",
@@ -1852,15 +1854,15 @@
                                 },
                                 "rel6yod": {
                                     "title": "9c6. If Relative 6 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel6ons": {
                                     "title": "9d6. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1870,9 +1872,9 @@
                             "properties": {
                                 "rel7yob": {
                                     "title": "9a7. Relative 7 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel7LIV": {
                                     "title": "9b7. Is Relative 7 still living?",
@@ -1885,15 +1887,15 @@
                                 },
                                 "rel7yod": {
                                     "title": "9c7. If Relative 7 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel7ons": {
                                     "title": "9d7. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1903,9 +1905,9 @@
                             "properties": {
                                 "rel8yob": {
                                     "title": "9a8. Relative 8 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel8LIV": {
                                     "title": "9b8. Is Relative 8 still living?",
@@ -1918,15 +1920,15 @@
                                 },
                                 "rel8yod": {
                                     "title": "9c8. If Relative 8 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel8ons": {
                                     "title": "9d8. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1936,9 +1938,9 @@
                             "properties": {
                                 "rel9yob": {
                                     "title": "9a9. Relative 9 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel9LIV": {
                                     "title": "9b9. Is Relative 9 still living?",
@@ -1951,15 +1953,15 @@
                                 },
                                 "rel9yod": {
                                     "title": "9c9. If Relative 9 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel9ons": {
                                     "title": "9d9. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -1969,9 +1971,9 @@
                             "properties": {
                                 "rel10yob": {
                                     "title": "9a10. Relative 10 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel10LIV": {
                                     "title": "9b10. Is Relative 10 still living?",
@@ -1984,15 +1986,15 @@
                                 },
                                 "rel10yod": {
                                     "title": "9c10. If Relative 10 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel10ons": {
                                     "title": "9d10. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -2002,9 +2004,9 @@
                             "properties": {
                                 "rel11yob": {
                                     "title": "9a11. Relative 11 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel11LIV": {
                                     "title": "9b11. Is Relative 11 still living?",
@@ -2017,15 +2019,15 @@
                                 },
                                 "rel11yod": {
                                     "title": "9c11. If Relative 11 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel11ons": {
                                     "title": "9d11. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -2035,9 +2037,9 @@
                             "properties": {
                                 "rel12yob": {
                                     "title": "9a12. Relative 12 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel12LIV": {
                                     "title": "9b12. Is Relative 12 still living?",
@@ -2050,15 +2052,15 @@
                                 },
                                 "rel12yod": {
                                     "title": "9c12. If Relative 12 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel12ons": {
                                     "title": "9d12. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -2068,9 +2070,9 @@
                             "properties": {
                                 "rel13yob": {
                                     "title": "9a13. Relative 13 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel13LIV": {
                                     "title": "9b13. Is Relative 13 still living?",
@@ -2083,15 +2085,15 @@
                                 },
                                 "rel13yod": {
                                     "title": "9c13. If Relative 13 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel13ons": {
                                     "title": "9d13. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -2101,9 +2103,9 @@
                             "properties": {
                                 "rel14yob": {
                                     "title": "9a14. Relative 14 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel14LIV": {
                                     "title": "9b14. Is Relative 14 still living?",
@@ -2116,15 +2118,15 @@
                                 },
                                 "rel14yod": {
                                     "title": "9c14. If Relative 14 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
-                                    "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
+                                    "pattern": "^18[0-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel14ons": {
                                     "title": "9d14. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         },
@@ -2134,7 +2136,7 @@
                             "properties": {
                                 "rel15yob": {
                                     "title": "9a15. Relative 15 year of birth",
-                                    "description": "(Date can be submitted as YYYY.((YYYY) 1875 to 2099, 9999 = Unknown)",
+                                    "description": "(Date can be submitted as YYYY.((YYYY) 1800 to current, 9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
@@ -2149,15 +2151,15 @@
                                 },
                                 "rel15yod": {
                                     "title": "9c15. If Relative 15 is deceased, indicate year of death",
-                                    "description": "( 9999 = Unknown)",
+                                    "description": "1875 - current (9999 = Unknown)",
                                     "type": "string",
                                     "pattern": "^187[5-9]|18[8-9][0-9]|19[0-9][0-9]|20[0-9][0-9]|9999$"
                                 },
                                 "rel15ons": {
                                     "title": "9d15. Indicate age at onset",
-                                    "description": "(999 = Age Unknown)",
+                                   "description": "15 - 110 (999 = Age Unknown)",
                                     "type": "string",
-                                    "pattern": "^[0-9]?[0-9]$|^[1][0-4][0-9]$|^150$|^999$"
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^999$"
                                 }
                             }
                         }
