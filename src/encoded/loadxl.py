@@ -61,7 +61,7 @@ ORDER = [
 
     # 'ivp_a1v2',#pass
     # 'ivp_a2v2',#pass
-    # 'ivp_a3v2',#failed
+    'ivp_a3v2',#failed
     # 'ivp_a4v2',#pass
     # 'ivp_a5v2',#pass
     # 'ivp_b1v2',#pass
@@ -73,7 +73,7 @@ ORDER = [
     # 'ivp_b7v2',#pass
     # 'ivp_b8v2',#pass
     # 'ivp_b9v2',#pass
-    # 'ivp_c1v2',#failed
+    'ivp_c1v2',#failed
     # 'ivp_c2v2',
     # 'ivp_d1v2',#pass
     # 'ivp_d2v2',
@@ -83,7 +83,7 @@ ORDER = [
 
     # 'fvp_a1v2',#pass
     # 'fvp_a2v2',#pass
-    # 'fvp_a3v2',#pass
+    'fvp_a3v2',#pass
     # 'fvp_a4v2',#pass
     # 'fvp_a5v2',#pass
     # 'fvp_b1v2',#pass
@@ -95,7 +95,7 @@ ORDER = [
     # 'fvp_b7v2',#pass
     # 'fvp_b8v2',#pass
     # 'fvp_b9v2',#pass
-    # 'fvp_c1v2',#failed
+    'fvp_c1v2',#failed
     # 'fvp_d1v2',#pass
     # 'fvp_e1v2',#pass
     # 'fvp_z1v2',#pass
