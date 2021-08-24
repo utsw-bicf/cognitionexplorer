@@ -66,7 +66,7 @@ ORDER = [
     # 'ivp_a5v2',#pass
     # 'ivp_b1v2',#pass
     # 'ivp_b2v2',#pass
-    # 'ivp_b3v2',#failed
+    'ivp_b3v2',#failed
     # 'ivp_b4v2',#pass
     # 'ivp_b5v2',#pass
     # 'ivp_b6v2',#pass
@@ -88,7 +88,7 @@ ORDER = [
     # 'fvp_a5v2',#pass
     # 'fvp_b1v2',#pass
     # 'fvp_b2v2',#pass
-    # 'fvp_b3v2',#failed
+    'fvp_b3v2',#failed
     # 'fvp_b4v2',#pass
     # 'fvp_b5v2',#pass
     # 'fvp_b6v2',#pass
