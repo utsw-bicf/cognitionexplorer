@@ -53,10 +53,7 @@
                 "4 Unintelligible"
             ]
         },
-        "speech_untest": {
-            "title": "Specify reason",
-            "type": "string"
-        },
+  
         "face_exp": {
             "title": "2. Facial expression",
             "type": "string",
@@ -68,10 +65,7 @@
                 "4 Masked or fixed facies with severe or complete loss of facial expression; lips parted ¼ inches or more"
             ]
         },
-        "face_exp_untest": {
-            "title": "Specify reason",
-            "type": "string"
-        },
+ 
         "trem_at_rest": {
             "title": "3. Tremor at rest",
             "type": "object",
@@ -130,27 +124,8 @@
                         "3 Moderate in amplitude and present most of the time",
                         "4 Marked in amplitude and present most of the time"
                     ]
-                },
-                "fac_lip_chin_untest": {
-                    "title": "Face, lips, chin\nSpecify reason",
-                    "type": "string"
-                },
-                "r_hand_untest": {
-                    "title": "Right hand\nSpecify reason",
-                    "type": "string"
-                },
-                "l_hand_untest": {
-                    "title": "Left hand\nSpecify reason",
-                    "type": "string"
-                },
-                "r_foot_untest": {
-                    "title": "Right foot\nSpecify reason",
-                    "type": "string"
-                },
-                "l_foot_untest": {
-                    "title": "Left foot\nSpecify reason",
-                    "type": "string"
                 }
+               
             }
         },
         "action_trem_hands": {
@@ -178,15 +153,8 @@
                         "3 Moderate in amplitude with posture holding as well as action",
                         "4 Marked in amplitude; interferes with feeding"
                     ]
-                },
-                "act_r_hand_untest": {
-                    "title": "Right hand\nSpecify reason",
-                    "type": "string"
-                },
-                "act_l_hand_untest": {
-                    "title": "Left hand\nSpecify reason",
-                    "type": "string"
                 }
+      
             }
         },
         "rigidity": {
@@ -247,27 +215,8 @@
                         "3 Marked, but full range of motion easily achieved",
                         "4 Severe; range of motion achieved with difficulty"
                     ]
-                },
-                "rig_neck_untest": {
-                    "title": "Neck\nSpecify reason",
-                    "type": "string"
-                },
-                "r_up_untest": {
-                    "title": "Right upper extremity\nSpecify reason",
-                    "type": "string"
-                },
-                "l_up_untest": {
-                    "title": "Left upper extremity\nSpecify reason",
-                    "type": "string"
-                },
-                "r_low_untest": {
-                    "title": "Right lower extremity\nSpecify reason",
-                    "type": "string"
-                },
-                "l_low_untest": {
-                    "title": "Left lower extremity\nSpecify reason",
-                    "type": "string"
                 }
+                
             }
         },
         "finger_taps": {
@@ -285,6 +234,10 @@
                         "4 Can barely perform the task",
                         "8 Untestable"
                     ]
+                },  
+               "taps_r_untest": {
+                    "title": "6a1. Right hand\nSpecify reason",
+                    "type": "string"
                 },
                 "taps_l": {
                     "title": "6b. Left hand",
@@ -298,12 +251,9 @@
                         "8 Untestable"
                     ]
                 },
-                "taps_r_untest": {
-                    "title": "Right hand\nSpecify reason",
-                    "type": "string"
-                },
+           
                 "taps_l_untest": {
-                    "title": "Left hand\nSpecify reason",
+                    "title": "6b1. Left hand\nSpecify reason",
                     "type": "string"
                 }
             }
@@ -324,6 +274,10 @@
                         "8 Untestable"
                     ]
                 },
+                "movem_r_untest": {
+                    "title": "7a1. Right hand\nSpecify reason",
+                    "type": "string"
+                },
                 "movem_l": {
                     "title": "7b. Left hand",
                     "type": "string",
@@ -336,12 +290,9 @@
                         "8 Untestable"
                     ]
                 },
-                "movem_r_untest": {
-                    "title": "Right hand\nSpecify reason",
-                    "type": "string"
-                },
+               
                 "movem_l_untest": {
-                    "title": "Left hand\nSpecify reason",
+                    "title": "7b1. Left hand\nSpecify reason",
                     "type": "string"
                 }
             }
@@ -361,6 +312,9 @@
                         "4 Can barely perform the task",
                         "8 Untestable"
                     ]
+                },    "rap_alt_r_untest": {
+                    "title": "8a1. Right hand\nSpecify reason",
+                    "type": "string"
                 },
                 "rap_alt_l": {
                     "title": "8b. Left hand",
@@ -374,12 +328,9 @@
                         "8 Untestable"
                     ]
                 },
-                "rap_alt_r_untest": {
-                    "title": "Right hand\nSpecify reason",
-                    "type": "string"
-                },
+            
                 "rap_alt_l_untest": {
-                    "title": "Left hand\nSpecify reason",
+                    "title": "8b1. Left hand\nSpecify reason",
                     "type": "string"
                 }
             }
@@ -399,6 +350,10 @@
                         "4 Can barely perform the task",
                         "8 Untestable"
                     ]
+                }, 
+                 "leg_agil_r_untest": {
+                    "title": "9a1. Right leg\nSpecify reason",
+                    "type": "string"
                 },
                 "leg_agil_l": {
                     "title": "9b. Left leg",
@@ -412,12 +367,9 @@
                         "8 Untestable"
                     ]
                 },
-                "leg_agil_r_untest": {
-                    "title": "Right leg\nSpecify reason",
-                    "type": "string"
-                },
+             
                 "leg_agil_l_untest": {
-                    "title": "Left leg\nSpecify reason",
+                    "title": "9b1. Left leg\nSpecify reason",
                     "type": "string"
                 }
             }
@@ -435,7 +387,7 @@
             ]
         },
         "arise_chair_untest": {
-            "title": "Specify reason",
+            "title": "10a. Specify reason",
             "type": "string"
         },
         "posture": {
@@ -451,7 +403,7 @@
             ]
         },
         "posture_untest": {
-            "title": "Specify reason",
+            "title": "11a. Specify reason",
             "type": "string"
         },
         "gait": {
@@ -467,7 +419,7 @@
             ]
         },
         "gait_untest": {
-            "title": "Specify reason",
+            "title": "12a. Specify reason",
             "type": "string"
         },
         "post_stab": {
@@ -483,7 +435,7 @@
             ]
         },
         "post_stab_untest": {
-            "title": "Specify reason",
+            "title": "13a. Specify reason",
             "type": "string"
         },
         "bradykin": {
@@ -498,7 +450,7 @@
             ]
         },
         "bradykin_untest": {
-            "title": "Specify reason",
+            "title": "14a. Specify reason",
             "type": "string"
         }
     },
@@ -512,15 +464,11 @@
         "speech": {
             "title": "1. Speech"
         },
-        "speech_untest": {
-            "title": "Specify reason"
-        },
+     
         "face_exp": {
             "title": "2. Facial expression"
         },
-        "face_exp_untest": {
-            "title": "Specify reason"
-        },
+    
         "trem_at_rest.fac_lip_chin": {
             "title": "3a. Face, lips, chin"
         },
@@ -536,33 +484,14 @@
         "trem_at_rest.l_foot": {
             "title": "3e. Left foot"
         },
-        "trem_at_rest.fac_lip_chin_untest": {
-            "title": "Face, lips, chin\nSpecify reason"
-        },
-        "trem_at_rest.r_hand_untest": {
-            "title": "trem_at_rest.right hand\nSpecify reason"
-        },
-        "trem_at_rest.l_hand_untest": {
-            "title": "trem_at_rest.left hand\nSpecify reason"
-        },
-        "trem_at_rest.r_foot_untest": {
-            "title": "trem_at_rest.right foot\nSpecify reason"
-        },
-        "trem_at_rest.l_foot_untest": {
-            "title": "trem_at_rest.left foot\nSpecify reason"
-        },
+       
         "action_trem_hands.act_r_hand": {
             "title": "4a. Right hand"
         },
         "action_trem_hands.act_l_hand": {
             "title": "4b. Left hand"
         },
-        "action_trem_hands.act_r_hand_untest": {
-            "title": "Right hand\nSpecify reason"
-        },
-        "action_trem_hands.act_l_hand_untest": {
-            "title": "Left hand\nSpecify reason"
-        },
+    
         "rigidity.rig_neck": {
             "title": "5a. Neck"
         },
@@ -578,98 +507,88 @@
         "rigidity.l_low": {
             "title": "5e. Left lower extremity"
         },
-        "rigidity.rig_neck_untest": {
-            "title": "Neck\nSpecify reason"
-        },
-        "rigidity.r_up_untest": {
-            "title": "rigidity.right upper extremity\nSpecify reason"
-        },
-        "rigidity.l_up_untest": {
-            "title": "rigidity.left upper extremity\nSpecify reason"
-        },
-        "rigidity.r_low_untest": {
-            "title": "rigidity.right lower extremity\nSpecify reason"
-        },
-        "rigidity.l_low_untest": {
-            "title": "rigidity.left lower extremity\nSpecify reason"
-        },
+  
         "finger_taps.taps_r": {
             "title": "6a. Right hand"
+        },
+        "finger_taps.taps_r_untest": {
+            "title": "6a1. Right hand\nSpecify reason"
         },
         "finger_taps.taps_l": {
             "title": "6b. Left hand"
         },
-        "finger_taps.taps_r_untest": {
-            "title": "Right hand\nSpecify reason"
-        },
+     
         "finger_taps.taps_l_untest": {
-            "title": "Left hand\nSpecify reason"
+            "title": "6b1. Left hand\nSpecify reason"
         },
         "hand_move.movem_r": {
-            "title": "7a, Right hand"
+            "title": "7a. Right hand"
+        },
+          "hand_move.movem_r_untest": {
+            "title": "7a1. Right hand\nSpecify reason"
         },
         "hand_move.movem_l": {
             "title": "7b. Left hand"
         },
-        "hand_move.movem_r_untest": {
-            "title": "Right hand\nSpecify reason"
-        },
+      
         "hand_move.movem_l_untest": {
-            "title": "Left hand\nSpecify reason"
+            "title": "7b1. Left hand\nSpecify reason"
         },
         "move_of_hands.rap_alt_r": {
             "title": "8a. Right hand"
         },
+           "move_of_hands.rap_alt_r_untest": {
+            "title": "8a1. Right hand\nSpecify reason"
+        },
         "move_of_hands.rap_alt_l": {
             "title": "8b. Left hand"
         },
-        "move_of_hands.rap_alt_r_untest": {
-            "title": "Right hand\nSpecify reason"
-        },
+     
         "move_of_hands.rap_alt_l_untest": {
-            "title": "Left hand\nSpecify reason"
+            "title": "8b1. Left hand\nSpecify reason"
         },
         "leg_agil.leg_agil_r": {
             "title": "9a. Right leg"
         },
+          "leg_agil.leg_agil_r_untest": {
+            "title": "9a1. Right leg\nSpecify reason"
+        },
         "leg_agil.leg_agil_l": {
             "title": "9b. Left leg"
         },
-        "leg_agil.leg_agil_r_untest": {
-            "title": "Right leg\nSpecify reason"
-        },
+      
         "leg_agil.leg_agil_l_untest": {
-            "title": "Left leg\nSpecify reason"
+            "title": "9b1. Left leg\nSpecify reason"
         },
         "arise_chair": {
             "title": "10. Arising from chair(patient attempts to rise from a straight-backed chair, with arms folded across chest)"
         },
         "arise_chair_untest": {
-            "title": "Specify reason"
+            "title": "10a.Specify reason"
         },
         "posture": {
             "title": "11. Posture"
         },
         "posture_untest": {
-            "title": "Specify reason"
+            "title": "11a. Specify reason"
         },
         "gait": {
             "title": "12. Gait"
         },
         "gait_untest": {
-            "title": "Specify reason"
+            "title": "12a. Specify reason"
         },
         "post_stab": {
             "title": "13. Posture stability(response to sudden, strong posterior displacement produced by pull on shoulders while patient erect with eyes open and feet slightly apart; patient is prepared)"
         },
         "post_stab_untest": {
-            "title": "Specify reason"
+            "title": "13a. Specify reason"
         },
         "bradykin": {
             "title": "14. Body bradykinesia and hypokinesia(combining slowness, hesitancy, decreased arm swing, small amplitude, and poverty of movement in general)"
         },
         "bradykin_untest": {
-            "title": "Specify reason"
+            "title": "14a. Specify reason"
         }
     },
     "columns": {
@@ -682,15 +601,11 @@
         "speech": {
             "title": "1. Speech"
         },
-        "speech_untest": {
-            "title": "Specify reason"
-        },
+     
         "face_exp": {
             "title": "2. Facial expression"
         },
-        "face_exp_untest": {
-            "title": "Specify reason"
-        },
+    
         "trem_at_rest.fac_lip_chin": {
             "title": "3a. Face, lips, chin"
         },
@@ -706,33 +621,14 @@
         "trem_at_rest.l_foot": {
             "title": "3e. Left foot"
         },
-        "trem_at_rest.fac_lip_chin_untest": {
-            "title": "Face, lips, chin\nSpecify reason"
-        },
-        "trem_at_rest.r_hand_untest": {
-            "title": "trem_at_rest.right hand\nSpecify reason"
-        },
-        "trem_at_rest.l_hand_untest": {
-            "title": "trem_at_rest.left hand\nSpecify reason"
-        },
-        "trem_at_rest.r_foot_untest": {
-            "title": "trem_at_rest.right foot\nSpecify reason"
-        },
-        "trem_at_rest.l_foot_untest": {
-            "title": "trem_at_rest.left foot\nSpecify reason"
-        },
+       
         "action_trem_hands.act_r_hand": {
             "title": "4a. Right hand"
         },
         "action_trem_hands.act_l_hand": {
             "title": "4b. Left hand"
         },
-        "action_trem_hands.act_r_hand_untest": {
-            "title": "Right hand\nSpecify reason"
-        },
-        "action_trem_hands.act_l_hand_untest": {
-            "title": "Left hand\nSpecify reason"
-        },
+    
         "rigidity.rig_neck": {
             "title": "5a. Neck"
         },
@@ -748,157 +644,133 @@
         "rigidity.l_low": {
             "title": "5e. Left lower extremity"
         },
-        "rigidity.rig_neck_untest": {
-            "title": "Neck\nSpecify reason"
-        },
-        "rigidity.r_up_untest": {
-            "title": "rigidity.right upper extremity\nSpecify reason"
-        },
-        "rigidity.l_up_untest": {
-            "title": "rigidity.left upper extremity\nSpecify reason"
-        },
-        "rigidity.r_low_untest": {
-            "title": "rigidity.right lower extremity\nSpecify reason"
-        },
-        "rigidity.l_low_untest": {
-            "title": "rigidity.left lower extremity\nSpecify reason"
-        },
+  
         "finger_taps.taps_r": {
             "title": "6a. Right hand"
+        },
+        "finger_taps.taps_r_untest": {
+            "title": "6a1. Right hand\nSpecify reason"
         },
         "finger_taps.taps_l": {
             "title": "6b. Left hand"
         },
-        "finger_taps.taps_r_untest": {
-            "title": "Right hand\nSpecify reason"
-        },
+     
         "finger_taps.taps_l_untest": {
-            "title": "Left hand\nSpecify reason"
+            "title": "6b1. Left hand\nSpecify reason"
         },
         "hand_move.movem_r": {
-            "title": "7a, Right hand"
+            "title": "7a. Right hand"
+        },
+          "hand_move.movem_r_untest": {
+            "title": "7a1. Right hand\nSpecify reason"
         },
         "hand_move.movem_l": {
             "title": "7b. Left hand"
         },
-        "hand_move.movem_r_untest": {
-            "title": "Right hand\nSpecify reason"
-        },
+      
         "hand_move.movem_l_untest": {
-            "title": "Left hand\nSpecify reason"
+            "title": "7b1. Left hand\nSpecify reason"
         },
         "move_of_hands.rap_alt_r": {
             "title": "8a. Right hand"
         },
+           "move_of_hands.rap_alt_r_untest": {
+            "title": "8a1. Right hand\nSpecify reason"
+        },
         "move_of_hands.rap_alt_l": {
             "title": "8b. Left hand"
         },
-        "move_of_hands.rap_alt_r_untest": {
-            "title": "Right hand\nSpecify reason"
-        },
+     
         "move_of_hands.rap_alt_l_untest": {
-            "title": "Left hand\nSpecify reason"
+            "title": "8b1. Left hand\nSpecify reason"
         },
         "leg_agil.leg_agil_r": {
             "title": "9a. Right leg"
         },
+          "leg_agil.leg_agil_r_untest": {
+            "title": "9a1. Right leg\nSpecify reason"
+        },
         "leg_agil.leg_agil_l": {
             "title": "9b. Left leg"
         },
-        "leg_agil.leg_agil_r_untest": {
-            "title": "Right leg\nSpecify reason"
-        },
+      
         "leg_agil.leg_agil_l_untest": {
-            "title": "Left leg\nSpecify reason"
+            "title": "9b1. Left leg\nSpecify reason"
         },
         "arise_chair": {
             "title": "10. Arising from chair(patient attempts to rise from a straight-backed chair, with arms folded across chest)"
         },
         "arise_chair_untest": {
-            "title": "Specify reason"
+            "title": "10a.Specify reason"
         },
         "posture": {
             "title": "11. Posture"
         },
         "posture_untest": {
-            "title": "Specify reason"
+            "title": "11a. Specify reason"
         },
         "gait": {
             "title": "12. Gait"
         },
         "gait_untest": {
-            "title": "Specify reason"
+            "title": "12a. Specify reason"
         },
         "post_stab": {
             "title": "13. Posture stability(response to sudden, strong posterior displacement produced by pull on shoulders while patient erect with eyes open and feet slightly apart; patient is prepared)"
         },
         "post_stab_untest": {
-            "title": "Specify reason"
+            "title": "13a. Specify reason"
         },
         "bradykin": {
             "title": "14. Body bradykinesia and hypokinesia(combining slowness, hesitancy, decreased arm swing, small amplitude, and poverty of movement in general)"
         },
         "bradykin_untest": {
-            "title": "Specify reason"
+            "title": "14a. Specify reason"
         }
     },
     "boost_values": {
         "patient": 1.0,
-        "pdnormal": 1.0,
-        "speech": 1.0,
-        "speech_untest": 1.0,
-        "face_exp": 1.0,
-        "face_exp_untest": 1.0,
-        "trem_at_rest.fac_lip_chin": 1.0,
-        "trem_at_rest.r_hand": 1.0,
-        "trem_at_rest.l_hand": 1.0,
-        "trem_at_rest.r_foot": 1.0,
-        "trem_at_rest.l_foot": 1.0,
-        "trem_at_rest.fac_lip_chin_untest": 1.0,
-        "trem_at_rest.r_hand_untest": 1.0,
-        "trem_at_rest.l_hand_untest": 1.0,
-        "trem_at_rest.r_foot_untest": 1.0,
-        "trem_at_rest.l_foot_untest": 1.0,
-        "action_trem_hands.act_r_hand": 1.0,
-        "action_trem_hands.act_l_hand": 1.0,
-        "action_trem_hands.act_r_hand_untest": 1.0,
-        "action_trem_hands.act_l_hand_untest": 1.0,
-        "rigidity.rig_neck": 1.0,
-        "rigidity.r_up": 1.0,
-        "rigidity.l_up": 1.0,
-        "rigidity.r_low": 1.0,
-        "rigidity.l_low": 1.0,
-        "rigidity.rig_neck_untest": 1.0,
-        "rigidity.r_up_untest": 1.0,
-        "rigidity.l_up_untest": 1.0,
-        "rigidity.r_low_untest": 1.0,
-        "rigidity.l_low_untest": 1.0,
-        "finger_taps.taps_r": 1.0,
-        "finger_taps.taps_l": 1.0,
-        "finger_taps.taps_r_untest": 1.0,
-        "finger_taps.taps_l_untest": 1.0,
-        "hand_move.movem_r": 1.0,
-        "hand_move.movem_l": 1.0,
-        "hand_move.movem_r_untest": 1.0,
-        "hand_move.movem_l_untest": 1.0,
-        "move_of_hands.rap_alt_r": 1.0,
-        "move_of_hands.rap_alt_l": 1.0,
-        "move_of_hands.rap_alt_r_untest": 1.0,
-        "move_of_hands.rap_alt_l_untest": 1.0,
-        "leg_agil.leg_agil_r": 1.0,
-        "leg_agil.leg_agil_l": 1.0,
-        "leg_agil.leg_agil_r_untest": 1.0,
-        "leg_agil.leg_agil_l_untest": 1.0,
-        "arise_chair": 1.0,
-        "arise_chair_untest": 1.0,
-        "posture": 1.0,
-        "posture_untest": 1.0,
-        "gait": 1.0,
-        "gait_untest": 1.0,
-        "post_stab": 1.0,
-        "post_stab_untest": 1.0,
-        "bradykin": 1.0,
-        "bradykin_untest": 1.0
+          "pdnormal": 1.0,
+    "speech": 1.0,
+    "face_exp": 1.0,
+    "trem_at_rest.fac_lip_chin": 1.0,
+    "trem_at_rest.r_hand": 1.0,
+    "trem_at_rest.l_hand": 1.0,
+    "trem_at_rest.r_foot": 1.0,
+    "trem_at_rest.l_foot": 1.0,
+    "action_trem_hands.act_r_hand": 1.0,
+    "action_trem_hands.act_l_hand": 1.0,
+    "rigidity.rig_neck": 1.0,
+    "rigidity.r_up": 1.0,
+    "rigidity.l_up": 1.0,
+    "rigidity.r_low": 1.0,
+    "rigidity.l_low": 1.0,
+    "finger_taps.taps_r": 1.0,
+    "finger_taps.taps_r_untest": 1.0,
+    "finger_taps.taps_l": 1.0,
+    "finger_taps.taps_l_untest": 1.0,
+    "hand_move.movem_r": 1.0,
+    "hand_move.movem_r_untest": 1.0,
+    "hand_move.movem_l": 1.0,
+    "hand_move.movem_l_untest": 1.0,
+    "move_of_hands.rap_alt_r": 1.0,
+    "move_of_hands.rap_alt_r_untest": 1.0,
+    "move_of_hands.rap_alt_l": 1.0,
+    "move_of_hands.rap_alt_l_untest": 1.0,
+    "leg_agil.leg_agil_r": 1.0,
+    "leg_agil.leg_agil_r_untest": 1.0,
+    "leg_agil.leg_agil_l": 1.0,
+    "leg_agil.leg_agil_l_untest": 1.0,
+    "arise_chair": 1.0,
+    "arise_chair_untest": 1.0,
+    "posture": 1.0,
+    "posture_untest": 1.0,
+    "gait": 1.0,
+    "gait_untest": 1.0,
+    "post_stab": 1.0,
+    "post_stab_untest": 1.0,
+    "bradykin": 1.0,
+    "bradykin_untest": 1.0
     },
     "changelog": "/profiles/changelogs/ivp_b3v1.md"
 }
