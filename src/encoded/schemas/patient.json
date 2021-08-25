@@ -150,7 +150,7 @@
           "type": "string"
       },
       "astonid": {
-          "title": "Medical Record Number(Such as, AstonID (MRN))",
+          "title": "AstonID (MRN)",
           "description": "For version 1(revised 08/29/2005) only.UTSouthwestern Aston hospital Medical Number",
           "comment": "@HIDDEN,CE personnel are allowed to set this value.",
           "type": "string",
