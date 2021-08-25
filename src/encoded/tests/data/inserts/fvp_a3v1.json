@@ -5,23 +5,23 @@
     "visdate": "2006-02-01",
     "visitnum": "1",
     "initials": "OK",
+    "A3CHG":false,
     "parents": {
+        "PARCHG":false,
         "MOMDEM": "1 Yes",
         "MOMONSET": "68",
         "MOMAGE": "80",
         "DADDEM": "0 No"
       },
       "siblings": {
-        "TWIN": "0 No",
-        "SIBS": "1",
-        "SIBSDEM": "0"
+        "SIBCHG":true
+        
       },
       "children": {
-        "KIDS": "1",
-        "KIDSDEM": "0"
+        "KIDCHG":true
       },
       "other_relatives": {
-        "RELSDEM": "0"
+        "RELCHG":true
       },
     "status": "released",
     "uuid": "0b78bc79-b06c-4ece-81a0-edfa5f20ddd0"

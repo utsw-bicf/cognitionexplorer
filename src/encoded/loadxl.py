@@ -104,7 +104,7 @@ ORDER = [
     # 'ivp_a2v1',
     # 'ivp_a3v1',
     # 'ivp_a4v1',
-    # 'ivp_a5v1',
+    'ivp_a5v1',
     # 'ivp_b1v1',
     # 'ivp_b2v1',
     'ivp_b3v1',
@@ -121,7 +121,7 @@ ORDER = [
 
     # 'fvp_a1v1',
     # 'fvp_a2v1',
-    # 'fvp_a3v1',
+    'fvp_a3v1',
     # 'fvp_a4v1',
     # 'fvp_a5v1',
     # 'fvp_b1v1',

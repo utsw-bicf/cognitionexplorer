@@ -35,10 +35,18 @@
         "schema_version": {
             "default": "1"
         },
+        "A3CHG": {
+                    "title": "Review with the subject/informant the data collected for this form at the previous UDS visit; if there have been no changes, check this box and end form here.",
+                    "type": "boolean"
+                },
         "parents": {
             "title": "Parents",
             "type": "object",
             "properties": {
+                "PARCHG": {
+                    "title": "Check this box if there has been no change to PARENTS information\n and then proceed to SIBLINGS. Otherwise, complete items 1 and 2\n below.",
+                    "type": "boolean"
+                },
                 "MOMDEM": {
                     "title": "1 Did the subject’s mother have dementia (as defined on form), as indicated by symptoms, history or diagnosis?",
                     "type": "string",
@@ -99,6 +107,10 @@
             "title": "SIBLINGS",
             "type": "object",
             "properties": {
+                "SIBCHG": {
+                    "title": "Check this box if there has been no change to SIBLINGS information\nand then proceed to CHILDREN. Otherwise, complete items 3–5\nbelow.",
+                    "type": "boolean"
+                },
                 "TWIN": {
                     "title": "3 Is the subject a twin?",
                     "type": "string",
@@ -214,6 +226,10 @@
             "title": "CHILDREN",
             "type": "object",
             "properties": {
+                "KIDCHG": {
+                    "title": "Check this box if there has been no change to CHILDREN information and then proceed to OTHER RELATIVES. Otherwise, complete items 6 and 7 below",
+                    "type": "boolean"
+                },
                 "KIDS": {
                     "title": "6 How many biological children did the subject have?",
                     "description": "0 – 25, 99 = Unknown",
@@ -310,6 +326,10 @@
             "title": "OTHER RELATIVES",
             "type": "object",
             "properties": {
+                "RELCHG": {
+                    "title": "Check this box if there has been no change to OTHER RELATIVES\n information and then end form here. Otherwise, complete item 8\n below.",
+                    "type": "boolean"
+                },
                 "RELSDEM": {
                     "title": "8 Number of other blood relatives with dementia (as defined on form) (cousins, aunts, uncles, grandparents, half siblings), as indicated by symptoms, history or diagnosis.",
                     "description": "0 – 50,99 = Unknown",
