@@ -1,91 +1,89 @@
+
 [
     {
         "patient": "000000",
+        "formver": "1.2",
         "adcid": "25 University of Texas Southwestern",
-        "visdate": "2015-01-01",
+        "visdate": "2003-02-01",
         "visitnum": "1",
-        "initials": "DT",
-        "His_of_cig_alc": {
-            "cig_smok": {
-                "tobac30": "9 Unknown",
-                "tobac100": "9 Unknown",
-                "smokyrs": "87",
-                "packsper": "9 Unknown",
-                "quitsmok": "999"
-            },
-            "alc_use": {
-                "alcoccas": "1 Yes",
-                "alcfreq": "4 Daily or almost daily"
-            }
-        },
-        "cardi_dise": {
-            "cvhatt": "0 Absent",
-            "hattmult": "1 Yes",
-            "hattyear": "2003",
-            "cvafib": "0 Absent",
-            "cvangio": "0 Absent",
-            "cvbypass": "0 Absent",
-            "cvpacdef": "0 Absent",
-            "cvchf": "0 Absent",
-            "cvangina": "0 Absent",
-            "cvhvalve": "0 Absent",
-            "cvothr": "0 Absent"
+        "initials": "OK",
+        "card_dise": {
+            "CVHATT": "0 Absent",
+            "CVAFIB": "1 Recent/Active",
+            "CVANGIO": "2 Remote/Inactive",
+            "CVBYPASS": "9 Unknown",
+            "CVPACE": "0 Absent",
+            "CVCHF": "1 Recent/Active",
+            "CVOTHR": "2 Remote/Inactive",
+            "CVOTHRX": "test"
         },
         "cere_dise": {
-            "cbstroke": "0 Absent",
-            "strokmul": "0 No",
-            "strokyr": "2003",
-            "cbtia": "0 Absent",
-            "tiamult": "0 No",
-            "tiayear": "2003"
+            "CBSTROKE": "0 Absent",
+            "STROK1YR": "Test",
+            "STROK2YR": "Test",
+            "STROK3YR": "Test",
+            "STROK4YR": "Test",
+            "STROK5YR": "Test",
+            "STROK6YR": "Test",
+            "CBTIA": "1 Recent/Active",
+            "TIA1YR": "Test",
+            "TIA2YR": "Test",
+            "TIA3YR": "Test",
+            "TIA4YR": "Test",
+            "TIA5YR": "Test",
+            "TIA6YR": "Test",
+            "CBOTHR": "2 Remote/Inactive",
+            "CBOTHRX": "Test"
         },
-        "neuro_cond": {
-            "pd": "0 Absent",
-            "pdyr": "2003",
-            "pdothr": "0 Absent",
-            "pdothryr": "2000",
-            "seizures": "0 Absent",
-            "tbi": "0 Absent",
-            "tbibrief": "1 Single",
-            "tbiexten": "1 Single",
-            "tbiwolos": "1 Single",
-            "tbiyear": "2000"
+        "park_dise": {
+            "PD": "0 Absent",
+            "PDYR": "Test",
+            "PDOTHR": "1 Recent/Active",
+            "PDOTHRYR": "test"
+        },
+        "other_neur_cond": {
+            "SEIZURES": "0 Absent",
+            "TRAUMBRF": "1 Recent/Active",
+            "TRAUMEXT": "2 Remote/Inactive",
+            "TRAUMCHR": "9 Unknown",
+            "NCOTHR": "0 Absent",
+            "NCOTHRX": "test"
         },
         "medi_cond": {
-            "diabetes": "0 Absent",
-            "diabtype": "1 Type 1",
-            "hyperten": "1 Recent/Active",
-            "hypercho": "0 Absent",
-            "b12def": "0 Absent",
-            "thyroid": "0 Absent",
-            "arthrit": "0 Absent",
-            "arthtype": "1 Rheumatoid",
-            "arthspin": "0 Absent",
-            "arthunk": "0 Absent",
-            "incontu": "0 Absent",
-            "incontf": "0 Absent",
-            "apnea": "0 Absent",
-            "rbd": "0 Absent",
-            "insomn": "0 Absent",
-            "othsleep": "0 Absent"
+            "HYPERTEN": "0 Absent",
+            "HYPERCHO": "1 Recent/Active",
+            "DIABETES": "2 Remote/Inactive",
+            "B12DEF": "9 Unknown",
+            "THYROID": "0 Absent",
+            "INCONTU": "0 Absent",
+            "INCONTF": "1 Recent/Active"
         },
-        "sub_abus": {
-            "alcohol": "0 Absent",
-            "abusothr": "0 Absent"
+        "depr": {
+            "DEP2YRS": "0 No",
+            "DEPOTHR": "1 Yes"
         },
-        "psych_cond": {
-            "ptsd": "0 Absent",
-            "bipolar": "0 Absent",
-            "schiz": "0 Absent",
-            "dep2yrs": "0 No",
-            "depothr": "9 Unknown",
-            "anxiety": "0 Absent",
-            "ocd": "0 Absent",
-            "npsydev": "0 Absent",
-            "psycdis": "0 Absent"
+        "sub_abuse_and_psyc": {
+            "alcohol": {
+                "ALCOHOL": "0 Absent"
+            },
+            "cigarette": {
+                "TOBAC30": "0 No",
+                "TOBAC100": "1 Yes",
+                "SMOKYRS": "test",
+                "PACKSPER": "1 1 cigarette – < ½ pack",
+                "QUITSMOK": "test"
+            },
+            "other_subs": {
+                "ABUSOTHR": "0 Absent",
+                "ABUSX": "test"
+            },
+            "PSYCDIS": "0 Absent",
+            "PSYCDISX": "test"
         },
         "status": "released",
-        "uuid": "eb8f072e-f129-443c-b97d-06bef2539caf"
+        "uuid": "e6bb64a6-a26a-49cb-b871-868b37c250a4"
     }
+    
+]
    
-  ]
+ 
