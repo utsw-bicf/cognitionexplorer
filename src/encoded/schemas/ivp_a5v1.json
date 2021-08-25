@@ -1,31 +1,13 @@
 {
-    "title": "uds_ivp_a5v1",
-    "description": "Schema for submitting UDS ivp_A5V1 form information.INSTRUCTIONS: This form is to be completed by the clinician or ADC staff. For additional clarification and examples, see UDS Coding Guidebook page 20-23, Form A5. Check only one box per question.Link to 'http: //www.alz.washington.edu/NONMEMBER/UDS/DOCS/VER3/UDS3_fvp_guidebook.pdf', NACC Coding Guidebook </a>",
-    "comment": "Schema for submitting UDS_ivp_A5V1 form information.",
+    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet: Form A5: Subject Health History",
+    "description": "NOTE: This form is to be completed by the clinician. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form A5. Check only one box per question.",
     "id": "/profiles/ivp_a5v1.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
     ],
-    "required": [
-        "patient",
-        "adcid",
-        "visdate",
-        "visitnum",
-        "initials",
-        "His_of_cig_alc",
-        "cardi_dise",
-        "cere_dise",
-        "neuro_cond",
-        "medi_cond",
-        "sub_abus",
-        "psych_cond"
-    ],
     "additionalProperties": false,
     "mixinProperties": [
-        {
-            "$ref": "ivp_a5.json#/properties"
-        },
         {
             "$ref": "mixins.json#/schema_version"
         },
@@ -53,16 +35,409 @@
         "schema_version": {
             "default": "1"
         },
-        "His_of_cig_alc": {
-            "title": "1. History of cigarette smoking and alcohol use",
+        "card_dise": {
+            "title": "1. Cardiovascular disease",
             "type": "object",
             "properties": {
-                "cig_smok": {
-                    "title": "Cigarette smoking",
+                "CVHATT": {
+                    "title": "1A Heart attack/cardiac arrest",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "CVAFIB": {
+                    "title": "1B Atrial fibrillation",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "CVANGIO": {
+                    "title": "1C Angioplasty/endarterectomy/stent",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "CVBYPASS": {
+                    "title": "1D Cardiac bypass procedure",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "CVPACE": {
+                    "title": "1E Pacemaker",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "CVCHF": {
+                    "title": "1F Congestive heart failure",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "CVOTHR": {
+                    "title": "1G Cardiovascular disease, other",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "CVOTHRX": {
+                    "title": "1G1 Cardiovascular disease, other (specify)",
+                    "description": "Any text or numbers, but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #1G, CVOTHR = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                }
+            }
+        },
+        "cere_dise": {
+            "title": "2. Cerebrovascular disease",
+            "type": "object",
+            "properties": {
+                "CBSTROKE": {
+                    "title": "2A Stroke",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "STROK1YR": {
+                    "title": "2A1 If recent/active or remote/inactive, indicate year in which stroke occurred.",
+                    "description": "Between year of birth and date of visit.9999 = Year unknown,Blank if #2A, CBSTROKE = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "STROK2YR": {
+                    "title": "2A2 If recent/active or remote/inactive, indicate year in which stroke occurred.",
+                    "description": "Between year of birth and date of visit. 9999 = Year unknown, Blank if #2A, CBSTROKE = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "STROK3YR": {
+                    "title": "2A3 If recent/active or remote/inactive, indicate year in which stroke occurred.",
+                    "description": "Between year of birth and date of visit. 9999 = Year unknown.Blank if #2A, CBSTROKE = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "STROK4YR": {
+                    "title": "2A4 If recent/active or remote/inactive, indicate year in which stroke occurred.",
+                    "description": "Between year of birth and date of visit.9999 = Year unknown.Blank if #2A, CBSTROKE = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "STROK5YR": {
+                    "title": "2A5 If recent/active or remote/inactive, indicate year in which stroke occurred.",
+                    "description": "Between year of birth and date of visit. 9999 = Year unknown. Blank if #2A, CBSTROKE = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "STROK6YR": {
+                    "title": "2A6 If recent/active or remote/inactive, indicate year in which stroke occurred.",
+                    "description": "Between year of birth and date of visit. 9999 = Year unknown. Blank if #2A, CBSTROKE = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "CBTIA": {
+                    "title": "2B Transient ischemic attack",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "TIA1YR": {
+                    "title": "2B1 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred.",
+                    "description": "Between year of birth and date of visit. 9999 = Year unknown. Blank if #2B, CBTIA = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "TIA2YR": {
+                    "title": "2B2 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred.",
+                    "description": "Between year of birth and date of visit.9999 = Year unknown.Blank if #2B, CBTIA = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "TIA3YR": {
+                    "title": "2B3 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred.",
+                    "description": "Between year of birth and date of visit.9999 = Year unknown. Blank if #2B, CBTIA = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "TIA4YR": {
+                    "title": "2B4 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred.",
+                    "description": "Between year of birth and date of visit.9999 = Year unknown. Blank if #2B, CBTIA = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "TIA5YR": {
+                    "title": "2B5 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred.",
+                    "description": "Between year of birth and date of visit. 9999 = Year unknown.Blank if #2B, CBTIA = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "TIA6YR": {
+                    "title": "2B6 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred.",
+                    "description": "Between year of birth and date of visit. 9999 = Year unknown. Blank if #2B, CBTIA = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                },
+                "CBOTHR": {
+                    "title": "2C Cerebrovascular disease, other",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "CBOTHRX": {
+                    "title": "2C1 Cerebrovascular disease, other (specify)",
+                    "description": "Any text or numbers, but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #2C, CBOTHR = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                }
+            }
+        },
+        "park_dise": {
+            "title": "3. Parkinsonian features ",
+            "type": "object",
+            "properties": {
+                "PD": {
+                    "title": "3A Parkinson’s disease",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "9 Unknown"
+                    ]
+                },
+                "PDYR": {
+                    "title": "3A1 If Parkinson’s disease recent/active, indicate year of diagnosis.",
+                    "description": "Between year of birth and date of visit. 9999 = Year unknown, Blank if #3A, PD ≠ 1 (Recent/Active).",
+                    "type": "string"
+                },
+                "PDOTHR": {
+                    "title": "3B Other Parkinsonism disorder",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "9 Unknown"
+                    ]
+                },
+                "PDOTHRYR": {
+                    "title": "3B1 If other Parkinson’s disorder recent/active, indicate year of diagnosis.",
+                    "description": "Between year of birth and date of visit.9999 = Year unknown, Blank if #3B, PDOTHR ≠ 1 (Recent/Active).",
+                    "type": "string"
+                }
+            }
+        },
+        "other_neur_cond": {
+            "title": "4. Other neurologic conditions ",
+            "type": "object",
+            "properties": {
+                "SEIZURES": {
+                    "title": "4A Seizures",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "TRAUMBRF": {
+                    "title": "4B1 Traumatic brain injury with brief loss of consciousness ( < 5 minutes)",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "TRAUMEXT": {
+                    "title": "4B2 Traumatic brain injury with extended loss of consciousness ( > 5 minutes)",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "TRAUMCHR": {
+                    "title": "4B3 Traumatic brain injury with chronic deficit or dysfunction",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "NCOTHR": {
+                    "title": "4C Other neurologic conditions, other",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "NCOTHRX": {
+                    "title": "4C1 Other neurologic conditions, other (specify)",
+                    "description": "Any text or numbers, but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #4C, NCOTHR = 0 (Absent) or 9 (Unknown).",
+                    "type": "string"
+                }
+            }
+        },
+        "medi_cond": {
+            "title": "5. Medical/metabolic conditions",
+            "type": "object",
+            "properties": {
+                "HYPERTEN": {
+                    "title": "5A Hypertension",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "HYPERCHO": {
+                    "title": "5B Hypercholesterolemia",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "DIABETES": {
+                    "title": "5C Diabetes",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "B12DEF": {
+                    "title": "5D B12 deficiency",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "THYROID": {
+                    "title": "5E Thyroid disease",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "INCONTU": {
+                    "title": "5F Incontinence – urinary",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                },
+                "INCONTF": {
+                    "title": "5G Incontinence – bowel",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Recent/Active",
+                        "2 Remote/Inactive",
+                        "9 Unknown"
+                    ]
+                }
+            }
+        },
+        "depr": {
+            "title": "6. Depression",
+            "type": "object",
+            "properties": {
+                "DEP2YRS": {
+                    "title": "6A Depression, active within the past 2 years",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "DEPOTHR": {
+                    "title": "6B Depression, other episodes (prior to 2 years)",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                }
+            }
+        },
+        "sub_abuse_and_psyc": {
+            "title": "7. Substance abuse and psychiatric disorders",
+            "type": "object",
+            "properties": {
+                "alcohol": {
+                    "title": "a. Substance abuse – alcohol",
                     "type": "object",
                     "properties": {
-                        "tobac30": {
-                            "title": "1a. Has subject smoked within last 30 days?",
+                        "ALCOHOL": {
+                            "title": "7A1 Substance abuse – alcohol. Clinically significant impairment occurring over a 12-month period manifested in one of the following: work, driving, legal or social.",
+                            "type": "string",
+                            "enum": [
+                                "0 Absent",
+                                "1 Recent/Active",
+                                "2 Remote/Inactive",
+                                "9 Unknown"
+                            ]
+                        }
+                    }
+                },
+                "cigarette": {
+                    "title": "b. Cigarette smoking history",
+                    "type": "object",
+                    "properties": {
+                        "TOBAC30": {
+                            "title": "7B1 Cigarette smoking history – Has subject smoked within last 30 days?",
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -70,9 +445,8 @@
                                 "9 Unknown"
                             ]
                         },
-                        "tobac100": {
-                            "title": "1b. Has subject smoked more than 100 cigarettes in his/her life?",
-                            "description": "(If No or Unknown, SKIP TO QUESTION 1F)",
+                        "TOBAC100": {
+                            "title": "7B2 Cigarette smoking history - Has subject smoked more than 100 cigarettes in his/her life?",
                             "type": "string",
                             "enum": [
                                 "0 No",
@@ -80,468 +454,54 @@
                                 "9 Unknown"
                             ]
                         },
-                        "smokyrs": {
-                            "title": "1c. Total years smoked:",
-                            "description": "(00-87, 99 = Unknown)",
-                            "type": "string",
-                            "pattern": "^[0-7]?[0-9]$|^[8][0-7]$|^99$"
+                        "SMOKYRS": {
+                            "title": "7B3 Total years smoked",
+                            "description": "00 – 87，88=NA，99=Unknown",
+                            "type": "string"
                         },
-                        "packsper": {
-                            "title": "1d. Average number of packs smoked per day:",
+                        "PACKSPER": {
+                            "title": "7B4 Average number of packs/day smoked",
                             "type": "string",
                             "enum": [
-                                "1 1 cigarette to less then 1/2 pack",
-                                "2 1/2 pack to less than 1 pack",
-                                "3 1 pack to less than 1 1/2 packs",
-                                "4 1 1/2 packs to less than 2 packs",
-                                "5 2 packs or more",
+                                "1 1 cigarette – < ½ pack",
+                                "2 ½ – < 1 pack",
+                                "3 1 – < 1½ pack",
+                                "4 1½ – < 2 packs",
+                                "5 > 2 packs",
                                 "8 N/A",
                                 "9 Unknown"
                             ]
                         },
-                        "quitsmok": {
-                            "title": "1e. If the subject quit smoking, specify the age at which he/she last smoked (i.e., quit) ",
-                            "description": "(008 - 110, 888 = N/A, 999 = Unknown)",
-                            "type": "string",
-                            "pattern": "^[0]?[0]?[8-9]|[0]?[0-9][0-9]|[1][0][0-9]|[1][1][0]|888|999$"
+                        "QUITSMOK": {
+                            "title": "7B5 If subject quit smoking, specify age when last smoked (i.e., quit)",
+                            "description": "8 to current age，888=N/A，999=Unknown",
+                            "type": "string"
                         }
                     }
-                   
                 },
-                "alc_use": {
-                    "title": "Alcohol Use",
+                "other_subs": {
+                    "title": "c. Other abused substances",
                     "type": "object",
                     "properties": {
-                        "alcoccas": {
-                            "title": "1f. In the past three months, has the subject consumed any alcohol?",
+                        "ABUSOTHR": {
+                            "title": "7C1 Clinically significant impairment, due to other abused substances, occurring over a 12-month period manifested in one of the following: work, driving, legal or social.",
                             "type": "string",
                             "enum": [
-                                "0 No (SKIP TO QUESTION 2a)",
-                                "1 Yes",
-                                "9 Unknown (SKIP TO QUESTION 2a)"
-                            ]
-                        },
-                        "alcfreq": {
-                            "title": "1g. During the past three months, how often did the subject have at least one drink of any alcoholic beverage such as wine, beer, malt liquor, or spirits?",
-                            "type": "string",
-                            "enum": [
-                                "0 Less than once a month",
-                                "1 About once a month",
-                                "2 About once a week",
-                                "3 A few times a week",
-                                "4 Daily or almost daily",
+                                "0 Absent",
+                                "1 Recent/Active",
+                                "2 Remote/Inactive",
                                 "9 Unknown"
                             ]
-                        }
-                    }
-              
-                }
-            }
-         
-        },
-        "cardi_dise": {
-            "title": "FOR SECTIONS 2-7, BELOW, record the presence or absence of a history of these conditions at this visit, as determined by the clinician's best judgment following the medical history interview with the subject and co-participant A CONDITION SHOULD BE CONSIDERED ...Absent IF... it is not indicated by information obtained from the subject and copartipant interview.Recent. Active IF... it happened within the last year or still requires active management and is consistent with information obtained from the subject and co-partipant interview.Remote/ Inactive IF ... it existed or occurred in the past (more than one year ago) but was resolved or there is no treatment currently under way.Unknown IF ... there is insufficient information available from the subject and co-partipant interview.\n2. Cardiovascular disease",
-            "type": "object",
-            "properties": {
-                "cvhatt": {
-                    "title": "2a. Heart attack / cardiac arrest ",
-                    "description": "(If absent or unknown, SKIP TO QUESTION 2b)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "hattmult": {
-                    "title": "2a1. More than one heart attack?",
-                    "type": "string",
-                    "enum": [
-                        "0 No",
-                        "1 Yes",
-                        "9 Unknown"
-                    ]
-                },
-                "hattyear": {
-                    "title": "2a2. Year of most recent heart attack",
-                    "description": "(1900 - current year, 9999 = Unknown)",
-                    "type": "string",
-                    "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-                },
-                "cvafib": {
-                    "title": "2b. Atrial fibrillation",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "cvangio": {
-                    "title": "2c. Angioplasty / endarterectomy / stent",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "cvbypass": {
-                    "title": "2d. Cardiac bypass procedure",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "cvpacdef": {
-                    "title": "2e. Pacemaker and/or defibrillator",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "cvchf": {
-                    "title": "2f. Congestive heart failure",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "cvangina": {
-                    "title": "2g. Angina",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "cvhvalve": {
-                    "title": "2h. Heart valve replacement or repair",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "cvothr": {
-                    "title": "2i. Other cardiovascular disease (specify)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "cvothrx": {
-                    "title": "2i1. Other cardiovascular disease (specify):",
-                    "type": "string"
-                }
-            }
-            
-        },
-        "cere_dise": {
-            "title": "3. Cerebrovascular disease",
-            "type": "object",
-            "properties": {
-                "cbstroke": {
-                    "title": "3a. Stroke-by history, not exam (imaging is not required)",
-                    "description": "(If absent or unknown, SKIP TO QUESTION 3b)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "strokmul": {
-                    "title": "3a1. More than one stroke?",
-                    "type": "string",
-                    "enum": [
-                        "0 No",
-                        "1 Yes",
-                        "9 Unknown"
-                    ]
-                },
-                "strokyr": {
-                    "title": "3a2. Year of most recent stroke",
-                    "description": "(1900 - current year, 9999 = Unknown)",
-                    "type": "string",
-                    "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-                },
-                "cbtia": {
-                    "title": "3b. Transient ischemic attack (TIA)",
-                    "description": "(If absent or unknown, SKIP TO QUESTION 4a)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "tiamult": {
-                    "title": "3b1. More than one TIA?",
-                    "type": "string",
-                    "enum": [
-                        "0 No",
-                        "1 Yes",
-                        "9 Unknown"
-                    ]
-                },
-                "tiayear": {
-                    "title": "3b2. Year of most recent TIA",
-                    "description": "(1900 - current year, 9999 = Unknown)",
-                    "type": "string",
-                    "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-                }
-            }
-         
-        },
-        "neuro_cond": {
-            "title": "4. Neurologic conditions ",
-            "type": "object",
-            "properties": {
-                "pd": {
-                    "title": "4a. Parkinson's disease (PD)",
-                    "description": "(If absent or unknown, SKIP TO QUESTION 4b)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "9 Unknown"
-                    ]
-                },
-                "pdyr": {
-                    "title": "4a1. Year of PD diagnosis",
-                    "description": "(1900 - current year, 9999 = Unknown)",
-                    "type": "string",
-                    "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-                },
-                "pdothr": {
-                    "title": "4b. Other parkinsonism disorder (e.g., PSP, CBD)",
-                    "description": "(If absent or unknown, SKIP TO QUESTION 4c)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "9 Unknown"
-                    ]
-                },
-                "pdothryr": {
-                    "title": "4b1. Year of parkinsonism disorder diagnosis",
-                    "description": "(1900 - current year, 9999 = Unknown)",
-                    "type": "string",
-                    "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-                },
-                "seizures": {
-                    "title": "4c. Seizures",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "tbi": {
-                    "title": "4d. Traumatic brain injury (TBI)",
-                    "description": "(If Absent or Unknown, SKIP TO QUESTION 5a)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "tbibrief": {
-                    "title": "4d1. TBI with brief loss of consciousness (< 5 minutes)",
-                    "type": "string",
-                    "enum": [
-                        "0 No",
-                        "1 Single",
-                        "2 Repeated/multiple",
-                        "9 Unknown"
-                    ]
-                },
-                "tbiexten": {
-                    "title": "4d2. TBI with extended loss of consciousness (≥5 minutes)",
-                    "type": "string",
-                    "enum": [
-                        "0 No",
-                        "1 Single",
-                        "2 Repeated/multiple",
-                        "9 Unknown"
-                    ]
-                },
-                "tbiwolos": {
-                    "title": "4d3. TBI without loss of consciousness (as might result from military detonations or sports injuries)?",
-                    "type": "string",
-                    "enum": [
-                        "0 No",
-                        "1 Single",
-                        "2 Repeated/multiple",
-                        "9 Unknown"
-                    ]
-                },
-                "tbiyear": {
-                    "title": "4d4. Year of most recent TBI",
-                    "description": "(1900 - current year, 9999 = Unknown)",
-                    "type": "string",
-                    "pattern": "^[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
-                }
-            }
-            
-        },
-        "medi_cond": {
-            "title": "5. Medical conditions",
-            "description": "If any of the conditions still require active management and/or medications, please select 'Recent/active.'",
-            "type": "object",
-            "properties": {
-                "diabetes": {
-                    "title": "5a. Diabetes",
-                    "description": "(If absent or unknown, SKIP TO QUESTION 5b)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "diabtype": {
-                    "title": "5a1. If Recent/active or Remote/inactive, which type?",
-                    "type": "string",
-                    "enum": [
-                        "1 Type 1",
-                        "2 Type 2",
-                        "3 Other type (diabetes insipidus, latent autoimmune diabetes/type 1.5, gestational diabetes)",
-                        "9 Unknown"
-                    ]
-                },
-                "hyperten": {
-                    "title": "5b. Hypertension",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "hypercho": {
-                    "title": "5c. Hypercholesterolemia",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "b12def": {
-                    "title": "5d. B12 deficiency",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "thyroid": {
-                    "title": "5e. Thyroid disease",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "arthrit": {
-                    "title": "5f. Arthritis ",
-                    "description": "(If absent or unknown, SKIP TO QUESTION 5g)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "arthtype": {
-                    "title": "5f1. Type of Arthritis",
-                    "description": "(If both rheumatoid and osteo arthritis are present, select rheumatoid arthritis.)",
-                    "type": "string",
-                    "enum": [
-                        "1 Rheumatoid",
-                        "2 Osteoarthritis",
-                        "3 Other",
-                        "9 Unknown"
-                    ]
-                },
-                "arthtypx": {
-                    "title": "5f1a. Other Arthritis (specify)",
-                    "type": "string"
-                },
-                "note_a5": {
-                    "title": "5f2. Region(s) affected (check all that apply):",
-                    "type": "object",
-                    "properties": {
-                        "arthupex": {
-                            "title": "5f2a. Region affected: upper extremity",
-                            "type": "string",
-                            "enum": [
-                                "1 Upper Extremity"
-                            ]
                         },
-                        "arthloex": {
-                            "title": "5f2b. Region affected: lower extremity",
-                            "type": "string",
-                            "enum": [
-                                "0 absent",
-                                "1 Lower Extremity"
-                            ]
-                        },
-                        "arthspin": {
-                            "title": "5f2c. Region affected: spine",
-                            "type": "string",
-                            "enum": [
-                                "0 Absent",
-                                "1 Spine"
-                            ]
-                        },
-                        "arthunk": {
-                            "title": "5f2d. Region affected: Unknown",
-                            "type": "string",
-                            "enum": [
-                                "0 Absent",
-                                "1 Unknown"
-                            ]
+                        "ABUSX": {
+                            "title": "7C2 If other abused substances recent/active or remote/inactive, specify",
+                            "description": "Any text or numbers, but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #7C1, ABUSOTHR ≠ 1 (Recent/Active) or 2 (remote/inactive).",
+                            "type": "string"
                         }
                     }
                 },
-                "incontu": {
-                    "title": "5g. Incontinence -- Urinary",
+                "PSYCDIS": {
+                    "title": "7D Psychiatric disorders",
                     "type": "string",
                     "enum": [
                         "0 Absent",
@@ -550,690 +510,397 @@
                         "9 Unknown"
                     ]
                 },
-                "incontf": {
-                    "title": "5h. Incontinence -- Bowel",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "apnea": {
-                    "title": "5i. Sleep apnea",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "rbd": {
-                    "title": "5j. REM sleep behavior disorder(RBD)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "insomn": {
-                    "title": "5k. Hyposomnia/insomnia",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "othsleep": {
-                    "title": "5l. Other sleep disorder",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "othsleex": {
-                    "title": "5l1. Other sleep disorder (specify)",
+                "PSYCDISX": {
+                    "title": "7D1 If psychiatric disorders recent/active or remote/inactive, specify",
+                    "description": "Any text or numbers, but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%). Blank if #7D PSYCDIS ≠ 1 (Recent/Active) or 2 (Remote/Inactive).",
                     "type": "string"
                 }
             }
-           
-        },
-        "sub_abus": {
-            "title": "6. Substance abuse ",
-            "type": "object",
-            "properties": {
-                "alcohol": {
-                    "title": "6a. Alcohol abuse: clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social.",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "abusothr": {
-                    "title": "6b. Other abused substances:Clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social.",
-                    "description": "(If absent or unkown, SKIP TO QUESTION 7a) ",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "abusx": {
-                    "title": "6b1. If recent/active or remote/inactive, specify abused substance: ",
-                    "type": "string"
-                }
-            }
-            
-        },
-        "psych_cond": {
-            "title": "7. Psychiatric conditions, diagnosed or treated by a physician",
-            "type": "object",
-            "properties": {
-                "ptsd": {
-                    "title": "7a. Post-traumatic stress disorder (PTSD)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "bipolar": {
-                    "title": "7b. Bipolar disorder",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "schiz": {
-                    "title": "7c. Schizophrenia",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "dep2yrs": {
-                    "title": "7d1. Active depression in the last two years",
-                    "type": "string",
-                    "enum": [
-                        "0 No",
-                        "1 Yes",
-                        "9 Unknown"
-                    ]
-                },
-                "depothr": {
-                    "title": "7d2. Depression episodes more than two years ago",
-                    "type": "string",
-                    "enum": [
-                        "0 No",
-                        "1 Yes",
-                        "9 Unknown"
-                    ]
-                },
-                "anxiety": {
-                    "title": "7e. Anxiety",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "ocd": {
-                    "title": "7f. Obsessive-complusive disorder (OCD)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "npsydev": {
-                    "title": "7g. Developmental neuropsychiatric disorders (e.g.,autism spectrum disorder [ASD], attention-deficit hyperactivity disorder [ADHD], dyslexia)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "psycdis": {
-                    "title": "7h. Other psychiatric disorders (If absent or unknown, END FORM HERE.)",
-                    "type": "string",
-                    "enum": [
-                        "0 Absent",
-                        "1 Recent/Active",
-                        "2 Remote/Inactive",
-                        "9 Unknown"
-                    ]
-                },
-                "psycdisx": {
-                    "title": "7h1. If recent/active or remote/inactive, specify disorder:",
-                    "type": "string"
-                }
-            }
-            
         }
     },
     "facets": {
         "status": {
             "title": "Status"
         },
-        "His_of_cig_alc.cig_smok.tobac30": {
-            "title": "1a. Has subject smoked within last 30 days?"
+        "card_dise.CVHATT": {
+            "title": "1A Heart attack/cardiac arrest"
         },
-        "His_of_cig_alc.cig_smok.tobac100": {
-            "title": "1b. Has subject smoked more than 100 cigarettes in his/her life?"
+        "card_dise.CVAFIB": {
+            "title": "1B Atrial fibrillation"
         },
-        "His_of_cig_alc.cig_smok.smokyrs": {
-            "title": "1c. Total years smoked:"
+        "card_dise.CVANGIO": {
+            "title": "1C Angioplasty/endarterectomy/stent"
         },
-        "His_of_cig_alc.cig_smok.packsper": {
-            "title": "1d. Average number of packs smoked per day:"
+        "card_dise.CVBYPASS": {
+            "title": "1D Cardiac bypass procedure"
         },
-        "His_of_cig_alc.cig_smok.quitsmok": {
-            "title": "1e. If the subject quit smoking, specify the age at which he/she last smoked (i.e., quit) "
+        "card_dise.CVPACE": {
+            "title": "1E Pacemaker"
         },
-        "His_of_cig_alc.alc_use.alcoccas": {
-            "title": "1f. In the past three months, has the subject consumed any alcohol?"
+        "card_dise.CVCHF": {
+            "title": "1F Congestive heart failure"
         },
-        "His_of_cig_alc.alc_use.alcfreq": {
-            "title": "1g. During the past three months, how often did the subject have at least one drink of any alcoholic beverage such as wine, beer, malt liquor, or spirits?"
+        "card_dise.CVOTHR": {
+            "title": "1G Cardiovascular disease, other"
         },
-        "cardi_dise.cvhatt": {
-            "title": "2a. Heart attack / cardiac arrest "
+        "card_dise.CVOTHRX": {
+            "title": "1G1 Cardiovascular disease, other (specify)"
         },
-        "cardi_dise.hattmult": {
-            "title": "2a1. More than one heart attack?"
+        "cere_dise.CBSTROKE": {
+            "title": "2A Stroke"
         },
-        "cardi_dise.hattyear": {
-            "title": "2a2. Year of most recent heart attack"
+        "cere_dise.STROK1YR": {
+            "title": "2A1 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvafib": {
-            "title": "2b. Atrial fibrillation"
+        "cere_dise.STROK2YR": {
+            "title": "2A2 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvangio": {
-            "title": "2c. Angioplasty / endarterectomy / stent"
+        "cere_dise.STROK3YR": {
+            "title": "2A3 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvbypass": {
-            "title": "2d. Cardiac bypass procedure"
+        "cere_dise.STROK4YR": {
+            "title": "2A4 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvpacdef": {
-            "title": "2e. Pacemaker and/or defibrillator"
+        "cere_dise.STROK5YR": {
+            "title": "2A5 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvchf": {
-            "title": "2f. Congestive heart failure"
+        "cere_dise.STROK6YR": {
+            "title": "2A6 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvangina": {
-            "title": "2g. Angina"
+        "cere_dise.CBTIA": {
+            "title": "2B Transient ischemic attack"
         },
-        "cardi_dise.cvhvalve": {
-            "title": "2h. Heart valve replacement or repair"
+        "cere_dise.TIA1YR": {
+            "title": "2B1 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cardi_dise.cvothr": {
-            "title": "2i. Other cardiovascular disease (specify)"
+        "cere_dise.TIA2YR": {
+            "title": "2B2 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cardi_dise.cvothrx": {
-            "title": "2i1. Other cardiovascular disease (specify):"
+        "cere_dise.TIA3YR": {
+            "title": "2B3 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cere_dise.cbstroke": {
-            "title": "3a. Stroke-by history, not exam (imaging is not required)"
+        "cere_dise.TIA4YR": {
+            "title": "2B4 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cere_dise.strokmul": {
-            "title": "3a1. More than one stroke?"
+        "cere_dise.TIA5YR": {
+            "title": "2B5 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cere_dise.strokyr": {
-            "title": "3a2. Year of most recent stroke"
+        "cere_dise.TIA6YR": {
+            "title": "2B6 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cere_dise.cbtia": {
-            "title": "3b. Transient ischemic attack (TIA)"
+        "cere_dise.CBOTHR": {
+            "title": "2C Cerebrovascular disease, other"
         },
-        "cere_dise.tiamult": {
-            "title": "3b1. More than one TIA?"
+        "cere_dise.CBOTHRX": {
+            "title": "2C1 Cerebrovascular disease, other (specify)"
         },
-        "cere_dise.tiayear": {
-            "title": "3b2. Year of most recent TIA"
+        "park_dise.PD": {
+            "title": "3A Parkinson’s disease"
         },
-        "neuro_cond.pd": {
-            "title": "4a. Parkinson's disease (PD)"
+        "park_dise.PDYR": {
+            "title": "3A1 If Parkinson’s disease recent/active, indicate year of diagnosis."
         },
-        "neuro_cond.pdyr": {
-            "title": "4a1. Year of PD diagnosis"
+        "park_dise.PDOTHR": {
+            "title": "3B Other Parkinsonism disorder"
         },
-        "neuro_cond.pdothr": {
-            "title": "4b. Other parkinsonism disorder (e.g., PSP, CBD)"
+        "park_dise.PDOTHRYR": {
+            "title": "3B1 If other Parkinson’s disorder recent/active, indicate year of diagnosis."
         },
-        "neuro_cond.pdothryr": {
-            "title": "4b1. Year of parkinsonism disorder diagnosis"
+        "other_neur_cond.SEIZURES": {
+            "title": "4A Seizures"
         },
-        "neuro_cond.seizures": {
-            "title": "4c. Seizures"
+        "other_neur_cond.TRAUMBRF": {
+            "title": "4B1 Traumatic brain injury with brief loss of consciousness ( < 5 minutes)"
         },
-        "neuro_cond.tbi": {
-            "title": "4d. Traumatic brain injury (TBI)"
+        "other_neur_cond.TRAUMEXT": {
+            "title": "4B2 Traumatic brain injury with extended loss of consciousness ( > 5 minutes)"
         },
-        "neuro_cond.tbibrief": {
-            "title": "4d1. TBI with brief loss of consciousness (< 5 minutes)"
+        "other_neur_cond.TRAUMCHR": {
+            "title": "4B3 Traumatic brain injury with chronic deficit or dysfunction"
         },
-        "neuro_cond.tbiexten": {
-            "title": "4d2. TBI with extended loss of consciousness (≥5 minutes)"
+        "other_neur_cond.NCOTHR": {
+            "title": "4C Other neurologic conditions, other"
         },
-        "neuro_cond.tbiwolos": {
-            "title": "4d3. TBI without loss of consciousness (as might result from military detonations or sports injuries)?"
+        "other_neur_cond.NCOTHRX": {
+            "title": "4C1 Other neurologic conditions, other (specify)"
         },
-        "neuro_cond.tbiyear": {
-            "title": "4d4. Year of most recent TBI"
+        "medi_cond.HYPERTEN": {
+            "title": "5A Hypertension"
         },
-        "medi_cond.diabetes": {
-            "title": "5a. Diabetes"
+        "medi_cond.HYPERCHO": {
+            "title": "5B Hypercholesterolemia"
         },
-        "medi_cond.diabtype": {
-            "title": "5a1. If Recent/active or Remote/inactive, which type?"
+        "medi_cond.DIABETES": {
+            "title": "5C Diabetes"
         },
-        "medi_cond.hyperten": {
-            "title": "5b. Hypertension"
+        "medi_cond.B12DEF": {
+            "title": "5D B12 deficiency"
         },
-        "medi_cond.hypercho": {
-            "title": "5c. Hypercholesterolemia"
+        "medi_cond.THYROID": {
+            "title": "5E Thyroid disease"
         },
-        "medi_cond.b12def": {
-            "title": "5d. B12 deficiency"
+        "medi_cond.INCONTU": {
+            "title": "5F Incontinence – urinary"
         },
-        "medi_cond.thyroid": {
-            "title": "5e. Thyroid disease"
+        "medi_cond.INCONTF": {
+            "title": "5G Incontinence – bowel"
         },
-        "medi_cond.arthrit": {
-            "title": "5f. Arthritis "
+        "depr.DEP2YRS": {
+            "title": "6A Depression, active within the past 2 years"
         },
-        "medi_cond.arthtype": {
-            "title": "5f1. Type of Arthritis"
+        "depr.DEPOTHR": {
+            "title": "6B Depression, other episodes (prior to 2 years)"
         },
-        "medi_cond.arthtypx": {
-            "title": "5f1a. Other Arthritis (specify)"
+        "sub_abuse_and_psyc.alcohol.ALCOHOL": {
+            "title": "7A1 Substance abuse – alcohol. Clinically significant impairment occurring over a 12-month period manifested in one of the following: work, driving, legal or social."
         },
-        "medi_cond.note_a5": {
-            "title": "5f2. Region(s) affected (check all that apply):"
+        "sub_abuse_and_psyc.cigarette.TOBAC30": {
+            "title": "7B1 Cigarette smoking history – Has subject smoked within last 30 days?"
         },
-        "medi_cond.note_a5.arthupex": {
-            "title": "5f2a. Region affected: upper extremity"
+        "sub_abuse_and_psyc.cigarette.TOBAC100": {
+            "title": "7B2 Cigarette smoking history - Has subject smoked more than 100 cigarettes in his/her life?"
         },
-        "medi_cond.note_a5.arthloex": {
-            "title": "5f2b. Region affected: lower extremity"
+        "sub_abuse_and_psyc.cigarette.SMOKYRS": {
+            "title": "7B3 Total years smoked"
         },
-        "medi_cond.note_a5.arthspin": {
-            "title": "5f2c. Region affected: spine"
+        "sub_abuse_and_psyc.cigarette.PACKSPER": {
+            "title": "7B4 Average number of packs/day smoked"
         },
-        "medi_cond.note_a5.arthunk": {
-            "title": "5f2d. Region affected: Unknown"
+        "sub_abuse_and_psyc.cigarette.QUITSMOK": {
+            "title": "7B5 If subject quit smoking, specify age when last smoked (i.e., quit)"
         },
-        "medi_cond.incontu": {
-            "title": "5g. Incontinence -- Urinary"
+        "sub_abuse_and_psyc.other_subs.ABUSOTHR": {
+            "title": "7C1 Clinically significant impairment, due to other abused substances, occurring over a 12-month period manifested in one of the following: work, driving, legal or social."
         },
-        "medi_cond.incontf": {
-            "title": "5h. Incontinence -- Bowel"
+        "sub_abuse_and_psyc.other_subs.ABUSX": {
+            "title": "7C2 If other abused substances recent/active or remote/inactive, specify"
         },
-        "medi_cond.apnea": {
-            "title": "5i. Sleep apnea"
+        "sub_abuse_and_psyc.PSYCDIS": {
+            "title": "7D Psychiatric disorders"
         },
-        "medi_cond.rbd": {
-            "title": "5j. REM sleep behavior disorder(RBD)"
-        },
-        "medi_cond.insomn": {
-            "title": "5k. Hyposomnia/insomnia"
-        },
-        "medi_cond.othsleep": {
-            "title": "5l. Other sleep disorder"
-        },
-        "medi_cond.othsleex": {
-            "title": "5l1. Other sleep disorder (specify)"
-        },
-        "sub_abus.alcohol": {
-            "title": "6a. Alcohol abuse: clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social."
-        },
-        "sub_abus.abusothr": {
-            "title": "6b. Other abused substances:Clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social."
-        },
-        "sub_abus.abusx": {
-            "title": "6b1. If recent/active or remote/inactive, specify abused substance: "
-        },
-        "psych_cond.ptsd": {
-            "title": "7a. Post-traumatic stress disorder (PTSD)"
-        },
-        "psych_cond.bipolar": {
-            "title": "7b. Bipolar disorder"
-        },
-        "psych_cond.schiz": {
-            "title": "7c. Schizophrenia"
-        },
-        "psych_cond.dep2yrs": {
-            "title": "7d1. Active depression in the last two years"
-        },
-        "psych_cond.depothr": {
-            "title": "7d2. Depression episodes more than two years ago"
-        },
-        "psych_cond.anxiety": {
-            "title": "7e. Anxiety"
-        },
-        "psych_cond.ocd": {
-            "title": "7f. Obsessive-complusive disorder (OCD)"
-        },
-        "psych_cond.npsydev": {
-            "title": "7g. Developmental neuropsychiatric disorders (e.g.,autism spectrum disorder [ASD], attention-deficit hyperactivity disorder [ADHD], dyslexia)"
-        },
-        "psych_cond.psycdis": {
-            "title": "7h. Other psychiatric disorders (If absent or unknown, END FORM HERE.)"
-        },
-        "psych_cond.psycdisx": {
-            "title": "7h1. If recent/active or remote/inactive, specify disorder:"
+        "sub_abuse_and_psyc.PSYCDISX": {
+            "title": "7D1 If psychiatric disorders recent/active or remote/inactive, specify"
         }
     },
     "columns": {
         "status": {
             "title": "Status"
         },
-        "His_of_cig_alc.cig_smok.tobac30": {
-            "title": "1a. Has subject smoked within last 30 days?"
+        "card_dise.CVHATT": {
+            "title": "1A Heart attack/cardiac arrest"
         },
-        "His_of_cig_alc.cig_smok.tobac100": {
-            "title": "1b. Has subject smoked more than 100 cigarettes in his/her life?"
+        "card_dise.CVAFIB": {
+            "title": "1B Atrial fibrillation"
         },
-        "His_of_cig_alc.cig_smok.smokyrs": {
-            "title": "1c. Total years smoked:"
+        "card_dise.CVANGIO": {
+            "title": "1C Angioplasty/endarterectomy/stent"
         },
-        "His_of_cig_alc.cig_smok.packsper": {
-            "title": "1d. Average number of packs smoked per day:"
+        "card_dise.CVBYPASS": {
+            "title": "1D Cardiac bypass procedure"
         },
-        "His_of_cig_alc.cig_smok.quitsmok": {
-            "title": "1e. If the subject quit smoking, specify the age at which he/she last smoked (i.e., quit) "
+        "card_dise.CVPACE": {
+            "title": "1E Pacemaker"
         },
-        "His_of_cig_alc.alc_use.alcoccas": {
-            "title": "1f. In the past three months, has the subject consumed any alcohol?"
+        "card_dise.CVCHF": {
+            "title": "1F Congestive heart failure"
         },
-        "His_of_cig_alc.alc_use.alcfreq": {
-            "title": "1g. During the past three months, how often did the subject have at least one drink of any alcoholic beverage such as wine, beer, malt liquor, or spirits?"
+        "card_dise.CVOTHR": {
+            "title": "1G Cardiovascular disease, other"
         },
-        "cardi_dise.cvhatt": {
-            "title": "2a. Heart attack / cardiac arrest "
+        "card_dise.CVOTHRX": {
+            "title": "1G1 Cardiovascular disease, other (specify)"
         },
-        "cardi_dise.hattmult": {
-            "title": "2a1. More than one heart attack?"
+        "cere_dise.CBSTROKE": {
+            "title": "2A Stroke"
         },
-        "cardi_dise.hattyear": {
-            "title": "2a2. Year of most recent heart attack"
+        "cere_dise.STROK1YR": {
+            "title": "2A1 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvafib": {
-            "title": "2b. Atrial fibrillation"
+        "cere_dise.STROK2YR": {
+            "title": "2A2 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvangio": {
-            "title": "2c. Angioplasty / endarterectomy / stent"
+        "cere_dise.STROK3YR": {
+            "title": "2A3 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvbypass": {
-            "title": "2d. Cardiac bypass procedure"
+        "cere_dise.STROK4YR": {
+            "title": "2A4 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvpacdef": {
-            "title": "2e. Pacemaker and/or defibrillator"
+        "cere_dise.STROK5YR": {
+            "title": "2A5 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvchf": {
-            "title": "2f. Congestive heart failure"
+        "cere_dise.STROK6YR": {
+            "title": "2A6 If recent/active or remote/inactive, indicate year in which stroke occurred."
         },
-        "cardi_dise.cvangina": {
-            "title": "2g. Angina"
+        "cere_dise.CBTIA": {
+            "title": "2B Transient ischemic attack"
         },
-        "cardi_dise.cvhvalve": {
-            "title": "2h. Heart valve replacement or repair"
+        "cere_dise.TIA1YR": {
+            "title": "2B1 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cardi_dise.cvothr": {
-            "title": "2i. Other cardiovascular disease (specify)"
+        "cere_dise.TIA2YR": {
+            "title": "2B2 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cardi_dise.cvothrx": {
-            "title": "2i1. Other cardiovascular disease (specify):"
+        "cere_dise.TIA3YR": {
+            "title": "2B3 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cere_dise.cbstroke": {
-            "title": "3a. Stroke-by history, not exam (imaging is not required)"
+        "cere_dise.TIA4YR": {
+            "title": "2B4 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cere_dise.strokmul": {
-            "title": "3a1. More than one stroke?"
+        "cere_dise.TIA5YR": {
+            "title": "2B5 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cere_dise.strokyr": {
-            "title": "3a2. Year of most recent stroke"
+        "cere_dise.TIA6YR": {
+            "title": "2B6 If recent/active or remote/inactive, indicate year in which transient ischemic attack occurred."
         },
-        "cere_dise.cbtia": {
-            "title": "3b. Transient ischemic attack (TIA)"
+        "cere_dise.CBOTHR": {
+            "title": "2C Cerebrovascular disease, other"
         },
-        "cere_dise.tiamult": {
-            "title": "3b1. More than one TIA?"
+        "cere_dise.CBOTHRX": {
+            "title": "2C1 Cerebrovascular disease, other (specify)"
         },
-        "cere_dise.tiayear": {
-            "title": "3b2. Year of most recent TIA"
+        "park_dise.PD": {
+            "title": "3A Parkinson’s disease"
         },
-        "neuro_cond.pd": {
-            "title": "4a. Parkinson's disease (PD)"
+        "park_dise.PDYR": {
+            "title": "3A1 If Parkinson’s disease recent/active, indicate year of diagnosis."
         },
-        "neuro_cond.pdyr": {
-            "title": "4a1. Year of PD diagnosis"
+        "park_dise.PDOTHR": {
+            "title": "3B Other Parkinsonism disorder"
         },
-        "neuro_cond.pdothr": {
-            "title": "4b. Other parkinsonism disorder (e.g., PSP, CBD)"
+        "park_dise.PDOTHRYR": {
+            "title": "3B1 If other Parkinson’s disorder recent/active, indicate year of diagnosis."
         },
-        "neuro_cond.pdothryr": {
-            "title": "4b1. Year of parkinsonism disorder diagnosis"
+        "other_neur_cond.SEIZURES": {
+            "title": "4A Seizures"
         },
-        "neuro_cond.seizures": {
-            "title": "4c. Seizures"
+        "other_neur_cond.TRAUMBRF": {
+            "title": "4B1 Traumatic brain injury with brief loss of consciousness ( < 5 minutes)"
         },
-        "neuro_cond.tbi": {
-            "title": "4d. Traumatic brain injury (TBI)"
+        "other_neur_cond.TRAUMEXT": {
+            "title": "4B2 Traumatic brain injury with extended loss of consciousness ( > 5 minutes)"
         },
-        "neuro_cond.tbibrief": {
-            "title": "4d1. TBI with brief loss of consciousness (< 5 minutes)"
+        "other_neur_cond.TRAUMCHR": {
+            "title": "4B3 Traumatic brain injury with chronic deficit or dysfunction"
         },
-        "neuro_cond.tbiexten": {
-            "title": "4d2. TBI with extended loss of consciousness (≥5 minutes)"
+        "other_neur_cond.NCOTHR": {
+            "title": "4C Other neurologic conditions, other"
         },
-        "neuro_cond.tbiwolos": {
-            "title": "4d3. TBI without loss of consciousness (as might result from military detonations or sports injuries)?"
+        "other_neur_cond.NCOTHRX": {
+            "title": "4C1 Other neurologic conditions, other (specify)"
         },
-        "neuro_cond.tbiyear": {
-            "title": "4d4. Year of most recent TBI"
+        "medi_cond.HYPERTEN": {
+            "title": "5A Hypertension"
         },
-        "medi_cond.diabetes": {
-            "title": "5a. Diabetes"
+        "medi_cond.HYPERCHO": {
+            "title": "5B Hypercholesterolemia"
         },
-        "medi_cond.diabtype": {
-            "title": "5a1. If Recent/active or Remote/inactive, which type?"
+        "medi_cond.DIABETES": {
+            "title": "5C Diabetes"
         },
-        "medi_cond.hyperten": {
-            "title": "5b. Hypertension"
+        "medi_cond.B12DEF": {
+            "title": "5D B12 deficiency"
         },
-        "medi_cond.hypercho": {
-            "title": "5c. Hypercholesterolemia"
+        "medi_cond.THYROID": {
+            "title": "5E Thyroid disease"
         },
-        "medi_cond.b12def": {
-            "title": "5d. B12 deficiency"
+        "medi_cond.INCONTU": {
+            "title": "5F Incontinence – urinary"
         },
-        "medi_cond.thyroid": {
-            "title": "5e. Thyroid disease"
+        "medi_cond.INCONTF": {
+            "title": "5G Incontinence – bowel"
         },
-        "medi_cond.arthrit": {
-            "title": "5f. Arthritis "
+        "depr.DEP2YRS": {
+            "title": "6A Depression, active within the past 2 years"
         },
-        "medi_cond.arthtype": {
-            "title": "5f1. Type of Arthritis"
+        "depr.DEPOTHR": {
+            "title": "6B Depression, other episodes (prior to 2 years)"
         },
-        "medi_cond.arthtypx": {
-            "title": "5f1a. Other Arthritis (specify)"
+        "sub_abuse_and_psyc.alcohol.ALCOHOL": {
+            "title": "7A1 Substance abuse – alcohol. Clinically significant impairment occurring over a 12-month period manifested in one of the following: work, driving, legal or social."
         },
-        "medi_cond.note_a5": {
-            "title": "5f2. Region(s) affected (check all that apply):"
+        "sub_abuse_and_psyc.cigarette.TOBAC30": {
+            "title": "7B1 Cigarette smoking history – Has subject smoked within last 30 days?"
         },
-        "medi_cond.note_a5.arthupex": {
-            "title": "5f2a. Region affected: upper extremity"
+        "sub_abuse_and_psyc.cigarette.TOBAC100": {
+            "title": "7B2 Cigarette smoking history - Has subject smoked more than 100 cigarettes in his/her life?"
         },
-        "medi_cond.note_a5.arthloex": {
-            "title": "5f2b. Region affected: lower extremity"
+        "sub_abuse_and_psyc.cigarette.SMOKYRS": {
+            "title": "7B3 Total years smoked"
         },
-        "medi_cond.note_a5.arthspin": {
-            "title": "5f2c. Region affected: spine"
+        "sub_abuse_and_psyc.cigarette.PACKSPER": {
+            "title": "7B4 Average number of packs/day smoked"
         },
-        "medi_cond.note_a5.arthunk": {
-            "title": "5f2d. Region affected: Unknown"
+        "sub_abuse_and_psyc.cigarette.QUITSMOK": {
+            "title": "7B5 If subject quit smoking, specify age when last smoked (i.e., quit)"
         },
-        "medi_cond.incontu": {
-            "title": "5g. Incontinence -- Urinary"
+        "sub_abuse_and_psyc.other_subs.ABUSOTHR": {
+            "title": "7C1 Clinically significant impairment, due to other abused substances, occurring over a 12-month period manifested in one of the following: work, driving, legal or social."
         },
-        "medi_cond.incontf": {
-            "title": "5h. Incontinence -- Bowel"
+        "sub_abuse_and_psyc.other_subs.ABUSX": {
+            "title": "7C2 If other abused substances recent/active or remote/inactive, specify"
         },
-        "medi_cond.apnea": {
-            "title": "5i. Sleep apnea"
+        "sub_abuse_and_psyc.PSYCDIS": {
+            "title": "7D Psychiatric disorders"
         },
-        "medi_cond.rbd": {
-            "title": "5j. REM sleep behavior disorder(RBD)"
-        },
-        "medi_cond.insomn": {
-            "title": "5k. Hyposomnia/insomnia"
-        },
-        "medi_cond.othsleep": {
-            "title": "5l. Other sleep disorder"
-        },
-        "medi_cond.othsleex": {
-            "title": "5l1. Other sleep disorder (specify)"
-        },
-        "sub_abus.alcohol": {
-            "title": "6a. Alcohol abuse: clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social."
-        },
-        "sub_abus.abusothr": {
-            "title": "6b. Other abused substances:Clinically significant impairment occuring over a 12 - month period manifested in one of the following areas: work, driving, legal, or social."
-        },
-        "sub_abus.abusx": {
-            "title": "6b1. If recent/active or remote/inactive, specify abused substance: "
-        },
-        "psych_cond.ptsd": {
-            "title": "7a. Post-traumatic stress disorder (PTSD)"
-        },
-        "psych_cond.bipolar": {
-            "title": "7b. Bipolar disorder"
-        },
-        "psych_cond.schiz": {
-            "title": "7c. Schizophrenia"
-        },
-        "psych_cond.dep2yrs": {
-            "title": "7d1. Active depression in the last two years"
-        },
-        "psych_cond.depothr": {
-            "title": "7d2. Depression episodes more than two years ago"
-        },
-        "psych_cond.anxiety": {
-            "title": "7e. Anxiety"
-        },
-        "psych_cond.ocd": {
-            "title": "7f. Obsessive-complusive disorder (OCD)"
-        },
-        "psych_cond.npsydev": {
-            "title": "7g. Developmental neuropsychiatric disorders (e.g.,autism spectrum disorder [ASD], attention-deficit hyperactivity disorder [ADHD], dyslexia)"
-        },
-        "psych_cond.psycdis": {
-            "title": "7h. Other psychiatric disorders (If absent or unknown, END FORM HERE.)"
-        },
-        "psych_cond.psycdisx": {
-            "title": "7h1. If recent/active or remote/inactive, specify disorder:"
+        "sub_abuse_and_psyc.PSYCDISX": {
+            "title": "7D1 If psychiatric disorders recent/active or remote/inactive, specify"
         }
     },
     "boost_values": {
         "patient": 1.0,
-        "His_of_cig_alc.cig_smok.tobac30": 1.0,
-        "His_of_cig_alc.cig_smok.tobac100": 1.0,
-        "His_of_cig_alc.cig_smok.smokyrs": 1.0,
-        "His_of_cig_alc.cig_smok.packsper": 1.0,
-        "His_of_cig_alc.cig_smok.quitsmok": 1.0,
-        "His_of_cig_alc.alc_use.alcoccas": 1.0,
-        "His_of_cig_alc.alc_use.alcfreq": 1.0,
-        "cardi_dise.cvhatt": 1.0,
-        "cardi_dise.hattmult": 1.0,
-        "cardi_dise.hattyear": 1.0,
-        "cardi_dise.cvafib": 1.0,
-        "cardi_dise.cvangio": 1.0,
-        "cardi_dise.cvbypass": 1.0,
-        "cardi_dise.cvpacdef": 1.0,
-        "cardi_dise.cvchf": 1.0,
-        "cardi_dise.cvangina": 1.0,
-        "cardi_dise.cvhvalve": 1.0,
-        "cardi_dise.cvothr": 1.0,
-        "cardi_dise.cvothrx": 1.0,
-        "cere_dise.cbstroke": 1.0,
-        "cere_dise.strokmul": 1.0,
-        "cere_dise.strokyr": 1.0,
-        "cere_dise.cbtia": 1.0,
-        "cere_dise.tiamult": 1.0,
-        "cere_dise.tiayear": 1.0,
-        "neuro_cond.pd": 1.0,
-        "neuro_cond.pdyr": 1.0,
-        "neuro_cond.pdothr": 1.0,
-        "neuro_cond.pdothryr": 1.0,
-        "neuro_cond.seizures": 1.0,
-        "neuro_cond.tbi": 1.0,
-        "neuro_cond.tbibrief": 1.0,
-        "neuro_cond.tbiexten": 1.0,
-        "neuro_cond.tbiwolos": 1.0,
-        "neuro_cond.tbiyear": 1.0,
-        "medi_cond.diabetes": 1.0,
-        "medi_cond.diabtype": 1.0,
-        "medi_cond.hyperten": 1.0,
-        "medi_cond.hypercho": 1.0,
-        "medi_cond.b12def": 1.0,
-        "medi_cond.thyroid": 1.0,
-        "medi_cond.arthrit": 1.0,
-        "medi_cond.arthtype": 1.0,
-        "medi_cond.arthtypx": 1.0,
-        "medi_cond.note_a5": 1.0,
-        "medi_cond.note_a5.arthupex": 1.0,
-        "medi_cond.note_a5.arthloex": 1.0,
-        "medi_cond.note_a5.arthspin": 1.0,
-        "medi_cond.note_a5.arthunk": 1.0,
-        "medi_cond.incontu": 1.0,
-        "medi_cond.incontf": 1.0,
-        "medi_cond.apnea": 1.0,
-        "medi_cond.rbd": 1.0,
-        "medi_cond.insomn": 1.0,
-        "medi_cond.othsleep": 1.0,
-        "medi_cond.othsleex": 1.0,
-        "sub_abus.alcohol": 1.0,
-        "sub_abus.abusothr": 1.0,
-        "sub_abus.abusx": 1.0,
-        "psych_cond.ptsd": 1.0,
-        "psych_cond.bipolar": 1.0,
-        "psych_cond.schiz": 1.0,
-        "psych_cond.dep2yrs": 1.0,
-        "psych_cond.depothr": 1.0,
-        "psych_cond.anxiety": 1.0,
-        "psych_cond.ocd": 1.0,
-        "psych_cond.npsydev": 1.0,
-        "psych_cond.psycdis": 1.0,
-        "psych_cond.psycdisx": 1.0
+        "card_dise.CVHATT": 1.0,
+        "card_dise.CVAFIB": 1.0,
+        "card_dise.CVANGIO": 1.0,
+        "card_dise.CVBYPASS": 1.0,
+        "card_dise.CVPACE": 1.0,
+        "card_dise.CVCHF": 1.0,
+        "card_dise.CVOTHR": 1.0,
+        "card_dise.CVOTHRX": 1.0,
+        "cere_dise.CBSTROKE": 1.0,
+        "cere_dise.STROK1YR": 1.0,
+        "cere_dise.STROK2YR": 1.0,
+        "cere_dise.STROK3YR": 1.0,
+        "cere_dise.STROK4YR": 1.0,
+        "cere_dise.STROK5YR": 1.0,
+        "cere_dise.STROK6YR": 1.0,
+        "cere_dise.CBTIA": 1.0,
+        "cere_dise.TIA1YR": 1.0,
+        "cere_dise.TIA2YR": 1.0,
+        "cere_dise.TIA3YR": 1.0,
+        "cere_dise.TIA4YR": 1.0,
+        "cere_dise.TIA5YR": 1.0,
+        "cere_dise.TIA6YR": 1.0,
+        "cere_dise.CBOTHR": 1.0,
+        "cere_dise.CBOTHRX": 1.0,
+        "park_dise.PD": 1.0,
+        "park_dise.PDYR": 1.0,
+        "park_dise.PDOTHR": 1.0,
+        "park_dise.PDOTHRYR": 1.0,
+        "other_neur_cond.SEIZURES": 1.0,
+        "other_neur_cond.TRAUMBRF": 1.0,
+        "other_neur_cond.TRAUMEXT": 1.0,
+        "other_neur_cond.TRAUMCHR": 1.0,
+        "other_neur_cond.NCOTHR": 1.0,
+        "other_neur_cond.NCOTHRX": 1.0,
+        "medi_cond.HYPERTEN": 1.0,
+        "medi_cond.HYPERCHO": 1.0,
+        "medi_cond.DIABETES": 1.0,
+        "medi_cond.B12DEF": 1.0,
+        "medi_cond.THYROID": 1.0,
+        "medi_cond.INCONTU": 1.0,
+        "medi_cond.INCONTF": 1.0,
+        "depr.DEP2YRS": 1.0,
+        "depr.DEPOTHR": 1.0,
+        "sub_abuse_and_psyc.alcohol.ALCOHOL": 1.0,
+        "sub_abuse_and_psyc.cigarette.TOBAC30": 1.0,
+        "sub_abuse_and_psyc.cigarette.TOBAC100": 1.0,
+        "sub_abuse_and_psyc.cigarette.SMOKYRS": 1.0,
+        "sub_abuse_and_psyc.cigarette.PACKSPER": 1.0,
+        "sub_abuse_and_psyc.cigarette.QUITSMOK": 1.0,
+        "sub_abuse_and_psyc.other_subs.ABUSOTHR": 1.0,
+        "sub_abuse_and_psyc.other_subs.ABUSX": 1.0,
+        "sub_abuse_and_psyc.PSYCDIS": 1.0,
+        "sub_abuse_and_psyc.PSYCDISX": 1.0
     },
     "changelog": "/profiles/changelogs/ivp_a5v1.md"
 }
