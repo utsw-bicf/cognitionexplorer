@@ -722,44 +722,44 @@ export function valueOnly(str) {
 /**
  * Display a block of accessory controls on object-display pages, e.g. the audit indicator button.
  */
-// export const ItemAccessories = ({ item, audit, hasCartControls }, reactContext) => (
-//     <div className="item-accessories">
-//         <div className="item-accessories--left">
-//             {audit ?
-//                 audit.auditIndicators(item.audit, audit.auditId, { session: reactContext.session, sessionProperties: reactContext.session_properties, except: audit.except })
-//             : null}
-//         </div>
-//         <div className="item-accessories--right">
-//             <DisplayAsJson />
-//             {hasCartControls ?
-//                 <CartToggle element={item} />
-//             : null}
-//         </div>
-//     </div>
-// );
+export const ItemAccessories = ({ item, audit, hasCartControls }, reactContext) => (
+    <div className="item-accessories">
+        <div className="item-accessories--left">
+            {audit ?
+                audit.auditIndicators(item.audit, audit.auditId, { session: reactContext.session, sessionProperties: reactContext.session_properties, except: audit.except })
+            : null}
+        </div>
+        <div className="item-accessories--right">
+            <DisplayAsJson />
+            {hasCartControls ?
+                <CartToggle element={item} />
+            : null}
+        </div>
+    </div>
+);
 
-// ItemAccessories.propTypes = {
-//     /** Object being displayed that needs these accessories */
-//     item: PropTypes.object.isRequired,
-//     /** Audit information */
-//     audit: PropTypes.shape({
-//         auditIndicators: PropTypes.func, // Function to display audit indicators
-//         auditId: PropTypes.string, // Audit HTML ID to use for a11y
-//         except: PropTypes.string, // Don't link any references to this @id
-//     }),
-//     /** True if object has cart controls */
-//     hasCartControls: PropTypes.bool,
-// };
+ItemAccessories.propTypes = {
+    /** Object being displayed that needs these accessories */
+    item: PropTypes.object.isRequired,
+    /** Audit information */
+    audit: PropTypes.shape({
+        auditIndicators: PropTypes.func, // Function to display audit indicators
+        auditId: PropTypes.string, // Audit HTML ID to use for a11y
+        except: PropTypes.string, // Don't link any references to this @id
+    }),
+    /** True if object has cart controls */
+    hasCartControls: PropTypes.bool,
+};
 
-// ItemAccessories.defaultProps = {
-//     audit: null,
-//     hasCartControls: false,
-// };
+ItemAccessories.defaultProps = {
+    audit: null,
+    hasCartControls: false,
+};
 
-// ItemAccessories.contextTypes = {
-//     session: PropTypes.object,
-//     session_properties: PropTypes.object,
-// };
+ItemAccessories.contextTypes = {
+    session: PropTypes.object,
+    session_properties: PropTypes.object,
+};
 
 
 // Convert assembly and annotation to a single value
@@ -789,54 +789,54 @@ export function valueOnly(str) {
 //                 "WS245"
 // outlier:
 //                 "None"
-// export function computeAssemblyAnnotationValue(assembly, annotation) {
-//     // There are three levels of sorting
-//     // First level of sorting: most recent assemblies are ordered first (represented by numerical component of assembly)
-//     // Second level of sorting: assemblies without '-minimal' are sorted before assemblies with '-minimal' at the end (represented by tenths place value which is 5 if there is no '-minimial')
-//     // Third level of sorting: Annotations within an assembly are ordered with most recent first, with more recent annotations having a higher annotation number (with the exception of "ENSEMBL V65") (represented by the annotation number divided by 10,000, or, the three decimal places after the tenths place)
-//     let assemblyNumber = +assembly.match(/[0-9]+/g)[0];
-//     if (assembly.indexOf('minimal') === -1) {
-//         // If there is no '-minimal', add 0.5 which will order this assembly ahead of any assembly with '-minimal' and the same numerical component
-//         assemblyNumber += 0.5;
-//     }
-//     if (annotation) {
-//         const annotationNumber = +annotation.match(/[0-9]+/g)[0];
-//         let annotationDecimal = 0;
-//         // All of the annotations are in order numerically except for "ENSEMBL V65" which should be ordered behind "M2"
-//         // We divide by 10000 because the highest annotation number (for now) is 245
-//         if (+annotationNumber === 65) {
-//             annotationDecimal = (+annotationNumber / 1000000);
-//         } else {
-//             annotationDecimal = (+annotationNumber / 10000);
-//         }
-//         assemblyNumber += annotationDecimal;
-//         return assemblyNumber;
-//     }
-//     return assemblyNumber;
-// }
+export function computeAssemblyAnnotationValue(assembly, annotation) {
+    // There are three levels of sorting
+    // First level of sorting: most recent assemblies are ordered first (represented by numerical component of assembly)
+    // Second level of sorting: assemblies without '-minimal' are sorted before assemblies with '-minimal' at the end (represented by tenths place value which is 5 if there is no '-minimial')
+    // Third level of sorting: Annotations within an assembly are ordered with most recent first, with more recent annotations having a higher annotation number (with the exception of "ENSEMBL V65") (represented by the annotation number divided by 10,000, or, the three decimal places after the tenths place)
+    let assemblyNumber = +assembly.match(/[0-9]+/g)[0];
+    if (assembly.indexOf('minimal') === -1) {
+        // If there is no '-minimal', add 0.5 which will order this assembly ahead of any assembly with '-minimal' and the same numerical component
+        assemblyNumber += 0.5;
+    }
+    if (annotation) {
+        const annotationNumber = +annotation.match(/[0-9]+/g)[0];
+        let annotationDecimal = 0;
+        // All of the annotations are in order numerically except for "ENSEMBL V65" which should be ordered behind "M2"
+        // We divide by 10000 because the highest annotation number (for now) is 245
+        if (+annotationNumber === 65) {
+            annotationDecimal = (+annotationNumber / 1000000);
+        } else {
+            annotationDecimal = (+annotationNumber / 10000);
+        }
+        assemblyNumber += annotationDecimal;
+        return assemblyNumber;
+    }
+    return assemblyNumber;
+}
 
 
-// /**
-//  * Determine whether the given file is visualizable or not. Needs to be kept in sync with
-//  * is_file_visualizable in batch_download.py.
-//  * @param {object} file File object to test for visualizability
-//  *
-//  * @return {bool} True if file is visualizable
-//  */
-// export const isFileVisualizable = file => (
-//     (file.file_format === 'bigWig' || file.file_format === 'bigBed')
-//         && (file.file_format_type !== 'bedMethyl')
-//         && (file.file_format_type !== 'bedLogR')
-//         && (file.file_format_type !== 'idr_peak')
-//         && (file.file_format_type !== 'tss_peak')
-//         && (file.file_format_type !== 'pepMap')
-//         && (file.file_format_type !== 'modPepMap')
-//         && ['released', 'in progress', 'archived'].indexOf(file.status) > -1
-// );
+/**
+ * Determine whether the given file is visualizable or not. Needs to be kept in sync with
+ * is_file_visualizable in batch_download.py.
+ * @param {object} file File object to test for visualizability
+ *
+ * @return {bool} True if file is visualizable
+ */
+export const isFileVisualizable = file => (
+    (file.file_format === 'bigWig' || file.file_format === 'bigBed')
+        && (file.file_format_type !== 'bedMethyl')
+        && (file.file_format_type !== 'bedLogR')
+        && (file.file_format_type !== 'idr_peak')
+        && (file.file_format_type !== 'tss_peak')
+        && (file.file_format_type !== 'pepMap')
+        && (file.file_format_type !== 'modPepMap')
+        && ['released', 'in progress', 'archived'].indexOf(file.status) > -1
+);
 
 
-// // Not all files can be visualized on the Valis genome browser
-// // Some of these files should be visualizable later, after updates to browser
-// export function filterForVisualizableFiles(fileList) {
-//     return fileList.filter(file => isFileVisualizable(file));
-// }
+// Not all files can be visualized on the Valis genome browser
+// Some of these files should be visualizable later, after updates to browser
+export function filterForVisualizableFiles(fileList) {
+    return fileList.filter(file => isFileVisualizable(file));
+}
