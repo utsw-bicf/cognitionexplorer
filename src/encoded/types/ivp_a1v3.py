@@ -8,7 +8,7 @@ from .base import (
     # SharedItem,
     paths_filtered_by_status,
 )
-from pyramid.traversal import find_root, resource_path
+# from pyramid.traversal import find_root, resource_path
 import re
 
 
