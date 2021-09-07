@@ -101,6 +101,18 @@
             ]
         }
     },
+    "form_status": {
+        "form_status": {
+            "title": "Complete?",
+            "type": "string",
+            "default": "Incomplete",
+            "enum": [
+                "Incomplete",
+                "Unverified",
+                "Complete"
+            ]
+        }
+    },
     "shared_status": {
         "status": {
             "title": "Status",
@@ -140,6 +152,108 @@
             "linkTo": "User",
             "serverDefault": "userid",
             "permission": "import_items"
+        }
+    },
+    "examinier_initials": {
+        "initials": {
+            "title": "Examiner's initials (xxx)",
+            "description": "Examiner's initials,format XXX.",
+            "type": "string",
+            "pattern": "^([A-Z]( )?([A-Z])?[A-Z])$"
+        }
+    },
+    "header": {
+        "patient": {
+            "title": "Patient",
+            "description": "PID. The patient the form belongs for.",
+            "type": "string",
+            "linkTo": "Patient"
+          },
+
+        "formver": {
+            "title": "Form Version Number",
+            "description": "Form Version Number for UDS3",
+            "type": "string",
+            "enum": [
+                "3",
+                "2",
+                "1",
+                "3.10"
+            ]
+        },
+        "adcid": {
+            "title": "Center ID",
+            "description": "Center ID, ADC name",
+            "type": "string",
+            "default": "25 University of Texas Southwestern",
+            "enum": [
+                "2 Boston University",
+                "3 Case Western University",
+                "4 Columbia University",
+                "5 Duke University",
+                "6 Emory University",
+                "7 Massachusetts ADRC",
+                "8 Indiana University",
+                "9 Johns Hopkins University",
+                "10 Mayo Clinic",
+                "11 Mount Sinai",
+                "12 New York University",
+                "13 Northwestern University",
+                "14 Oregon Health & Science University",
+                "15 Rush University",
+                "16 University of California, Davis",
+                "17 University of California, Los Angeles",
+                "18 University of California, San Diego",
+                "19 University of Kentucky",
+                "20 University of Michigan",
+                "21 University of Pennsylvania",
+                "22 University of Pittsburgh",
+                "25 University of Texas Southwestern",
+                "26 University of Washington",
+                "27 Washington University in Saint Louis",
+                "28 University of Alabama",
+                "30 University of Southern California",
+                "31 University of California, Irvine",
+                "32 Stanford University",
+                "33 Arizona ADC",
+                "34 University of Arkansas",
+                "35 University of California, San Francisco",
+                "36 Florida ADC",
+                "37 University of Wisconsin",
+                "38 University of Kansas",
+                "39 Stanford University #2",
+                "40 Yale University",
+                "41 Florida ADRC",
+                "42 Wake Forest University",
+                "43 Univeristy of Michigan ADC"
+            ]
+        },
+        "visdate": {
+            "title": "Visit date",
+            "description": "Date of visit,format as YYYY-MM-DD",
+            "comment": "Date can be submitted as YYYY-MM-DD.",
+            "type": "string",
+            "anyOf": [
+                {
+                    "format": "date"
+                }
+            ]
+        },
+        "visitnum": {
+            "title": "ADC Visit #",
+            "description": "Visit numbers used inside ADC system, for example, 1 for ivp, 2 for fvp...",
+            "type": "string",
+            "pattern": "^([0-9]?[0-9]?[0-9])$"
+        },
+        "header_complete": {
+            "title": "Header_complete",
+            "type": "string",
+            "default": "Incomplete",
+            "enum": [
+                "Incomplete",
+                "Unverified",
+                "Complete"
+            ]
         }
     },
     "review": {

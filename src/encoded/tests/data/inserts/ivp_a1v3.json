@@ -1,0 +1,28 @@
+[
+    {
+      "prestat": "1 Case, patient, or proband",
+      "prespart": "2 Longitudinal follow-up planned",
+      "source": "1 Primarily ADC-funded (Clinical Core, Satellite Core, or other ADC Core or project)",
+      "birthmo": 1,
+      "birthyr": 1938,
+      "sex": "2 Female",
+      "hispanic": "0 No (If No, SKIP TO QUESTION 9)",
+      "race": "1 White",
+      "racesec": "88 None Reported",
+      "raceter": "88 None Reported",
+      "primlang": "1 English",
+      "educ": "12",
+      "livsitua": "3 Lives with one other person: a relative, friend, or roommate",
+      "independ": "4 Completely dependent",
+      "zip": "757",
+      "handed": "2 Right-handed",
+      "formver": "3",
+      "adcid": "25 University of Texas Southwestern",
+      "visdate": "2015-01-01",
+      "visitnum": "1",
+      "status": "released",
+      "uuid": "91d384c2-255a-4b33-aee4-c277f355ec55",
+      "patient": "000000",
+      "initials": "DT"
+    }
+  ]
