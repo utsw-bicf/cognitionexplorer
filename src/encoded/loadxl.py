@@ -22,27 +22,9 @@ ORDER = [
     'document',
     'patient',
     'ivp_a1v3',
-    # 'surgery',
-    # 'surgery_procedure',
-    # 'pathology_report',
-    # 'biospecimen',
-    # 'bioreference',
-    
-    # 'bioexperiment',
-    # 'platform',
-    # 'biolibrary',
-    # 'bioreplicate',
-    # 'biofile',
-    # 'ihc',
-    # 'medication',
-    # 'supportive_medication',
-    # 'germline',
-    # 'consent',
-    # 'radiation',
-    # 'medical_imaging',
+   
     # 'cart',
-    #'lab_results',
-    #'vital_results'
+   
 ]
 
 IS_ATTACHMENT = [
