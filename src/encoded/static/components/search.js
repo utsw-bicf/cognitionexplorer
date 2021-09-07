@@ -257,203 +257,203 @@ const Patient = auditDecor(PatientComponent);
 
 globals.listingViews.register(Patient, 'Patient');
 
-class PathologyComponent extends React.Component {
-    render() {
-        const result = this.props.context;
+// class PathologyComponent extends React.Component {
+//     render() {
+//         const result = this.props.context;
 
-        return (
-            <li className={resultItemClass(result)}>
-                <div className="result-item">
-                    <div className="result-item__data">
-                        <a href={result['@id']} className="result-item__link">
-                            {`${result.accession} `}
-                        </a>
-                        <div className="result-item__data-row">
-                            <div><strong>Tumor Size Range:</strong>{result.tumor_size}{result.tumor_size_units}</div>
-                            <div><strong>Histologic Subtype: </strong>{result.histology}</div>
-                            <div><strong>Tumor Grade: </strong>{result.grade}</div>
-                            <div><strong>pT stage: </strong>{result.ajcc_p_stage}</div>
-                            <div><strong>AJCC TNM Stage: </strong>{result.ajcc_tnm_stage}</div>
-                            <div><strong>Laterality: </strong>{result.laterality}</div>
-                        </div>
-                    </div>
-                    <div className="result-item__meta">
-                        <div className="result-item__meta-title">Pathology Report</div>
-                        <div className="result-item__meta-id">{` ${result.accession}`}</div>
-                        <Status item={result.status} badgeSize="small" css="result-table__status" />
-                        {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
-                    </div>
-                    <PickerActions {...this.props} />
-                </div>
-                {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
-            </li>
-        );
-    }
-}
+//         return (
+//             <li className={resultItemClass(result)}>
+//                 <div className="result-item">
+//                     <div className="result-item__data">
+//                         <a href={result['@id']} className="result-item__link">
+//                             {`${result.accession} `}
+//                         </a>
+//                         <div className="result-item__data-row">
+//                             <div><strong>Tumor Size Range:</strong>{result.tumor_size}{result.tumor_size_units}</div>
+//                             <div><strong>Histologic Subtype: </strong>{result.histology}</div>
+//                             <div><strong>Tumor Grade: </strong>{result.grade}</div>
+//                             <div><strong>pT stage: </strong>{result.ajcc_p_stage}</div>
+//                             <div><strong>AJCC TNM Stage: </strong>{result.ajcc_tnm_stage}</div>
+//                             <div><strong>Laterality: </strong>{result.laterality}</div>
+//                         </div>
+//                     </div>
+//                     <div className="result-item__meta">
+//                         <div className="result-item__meta-title">Pathology Report</div>
+//                         <div className="result-item__meta-id">{` ${result.accession}`}</div>
+//                         <Status item={result.status} badgeSize="small" css="result-table__status" />
+//                         {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
+//                     </div>
+//                     <PickerActions {...this.props} />
+//                 </div>
+//                 {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
+//             </li>
+//         );
+//     }
+// }
+// /* eslint-enable react/prefer-stateless-function */
+
+// PathologyComponent.propTypes = {
+//     context: PropTypes.object.isRequired, // Target search results
+//     auditIndicators: PropTypes.func.isRequired, // Audit decorator function
+//     auditDetail: PropTypes.func.isRequired, // Audit decorator function
+// };
+
+// PathologyComponent.contextTypes = {
+//     session: PropTypes.object, // Login information from <App>
+// };
+
+// const PathologyReport = auditDecor(PathologyComponent);
+
+// globals.listingViews.register(PathologyReport, 'PathologyReport');
+
+// class SurgeryComponent extends React.Component {
+//     render() {
+//         const result = this.props.context;
+//         const surgeryProcedure = result.surgery_procedure;
+//         let type1 = [];
+//         for (let i = 0; i < surgeryProcedure.length; i++) {
+//             type1.push(<div><strong>Surgery Procedure: </strong>{surgeryProcedure[i].procedure_type}</div>);
+//         }
+//         return (
+//             < li className={resultItemClass(result)}>
+//                 <div className="result-item">
+//                     <div className="result-item__data">
+//                         <a href={result['@id']} className="result-item__link">
+//                             {`${result.accession} `}
+//                         </a>
+//                         <div className="result-item__data-row">
+//                             <div><strong>Surgery Date: </strong>{result.date}</div>
+//                             {type1}
+//                         </div>
+//                     </div>
+//                     <div className="result-item__meta">
+//                         <div className="result-item__meta-title">Surgery</div>
+//                         <div className="result-item__meta-id">{` ${result.accession}`}</div>
+//                         <Status item={result.status} badgeSize="small" css="result-table__status" />
+//                         {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
+//                     </div>
+//                     <PickerActions {...this.props} />
+//                 </div>
+//                 {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
+//             </li >
+//         );
+//     }
+// }
 /* eslint-enable react/prefer-stateless-function */
 
-PathologyComponent.propTypes = {
-    context: PropTypes.object.isRequired, // Target search results
-    auditIndicators: PropTypes.func.isRequired, // Audit decorator function
-    auditDetail: PropTypes.func.isRequired, // Audit decorator function
-};
+// SurgeryComponent.propTypes = {
+//     context: PropTypes.object.isRequired, // Target search results
+//     auditIndicators: PropTypes.func.isRequired, // Audit decorator function
+//     auditDetail: PropTypes.func.isRequired, // Audit decorator function
+// };
 
-PathologyComponent.contextTypes = {
-    session: PropTypes.object, // Login information from <App>
-};
+// SurgeryComponent.contextTypes = {
+//     session: PropTypes.object, // Login information from <App>
+// };
 
-const PathologyReport = auditDecor(PathologyComponent);
+// const Surgery = auditDecor(SurgeryComponent);
 
-globals.listingViews.register(PathologyReport, 'PathologyReport');
-
-class SurgeryComponent extends React.Component {
-    render() {
-        const result = this.props.context;
-        const surgeryProcedure = result.surgery_procedure;
-        let type1 = [];
-        for (let i = 0; i < surgeryProcedure.length; i++) {
-            type1.push(<div><strong>Surgery Procedure: </strong>{surgeryProcedure[i].procedure_type}</div>);
-        }
-        return (
-            < li className={resultItemClass(result)}>
-                <div className="result-item">
-                    <div className="result-item__data">
-                        <a href={result['@id']} className="result-item__link">
-                            {`${result.accession} `}
-                        </a>
-                        <div className="result-item__data-row">
-                            <div><strong>Surgery Date: </strong>{result.date}</div>
-                            {type1}
-                        </div>
-                    </div>
-                    <div className="result-item__meta">
-                        <div className="result-item__meta-title">Surgery</div>
-                        <div className="result-item__meta-id">{` ${result.accession}`}</div>
-                        <Status item={result.status} badgeSize="small" css="result-table__status" />
-                        {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
-                    </div>
-                    <PickerActions {...this.props} />
-                </div>
-                {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
-            </li >
-        );
-    }
-}
-/* eslint-enable react/prefer-stateless-function */
-
-SurgeryComponent.propTypes = {
-    context: PropTypes.object.isRequired, // Target search results
-    auditIndicators: PropTypes.func.isRequired, // Audit decorator function
-    auditDetail: PropTypes.func.isRequired, // Audit decorator function
-};
-
-SurgeryComponent.contextTypes = {
-    session: PropTypes.object, // Login information from <App>
-};
-
-const Surgery = auditDecor(SurgeryComponent);
-
-globals.listingViews.register(Surgery, 'Surgery');
+// globals.listingViews.register(Surgery, 'Surgery');
 
 /* eslint-disable react/prefer-stateless-function */
-class BiofileComponent extends React.Component {
-    render() {
-        const result = this.props.context;
-        return (
-            <li>
-                <div className="clearfix">
-                    <PickerActions {...this.props} />
-                    <div className="pull-right search-meta">
-                        <p className="type meta-title">Biofile</p>
-                        <p className="type">{` ${result.accession}`}</p>
-                        <Status item={result.status} badgeSize="small" css="result-table__status" />
-                        {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
-                    </div>
-                    <div className="accession">
-                        <a href={result['@id']}>
-                            {`${result.accession} `}
+// class BiofileComponent extends React.Component {
+//     render() {
+//         const result = this.props.context;
+//         return (
+//             <li>
+//                 <div className="clearfix">
+//                     <PickerActions {...this.props} />
+//                     <div className="pull-right search-meta">
+//                         <p className="type meta-title">Biofile</p>
+//                         <p className="type">{` ${result.accession}`}</p>
+//                         <Status item={result.status} badgeSize="small" css="result-table__status" />
+//                         {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
+//                     </div>
+//                     <div className="accession">
+//                         <a href={result['@id']}>
+//                             {`${result.accession} `}
 
-                        </a>
-                    </div>
-                    <div className="data-row">
-                        <div><strong>File format: </strong>{result.file_format}</div>
-                        <div><strong>Output type: </strong>{result.output_type}</div>
-                    </div>
-                </div>
-                {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
-            </li>
-        );
-    }
-}
-/* eslint-enable react/prefer-stateless-function */
+//                         </a>
+//                     </div>
+//                     <div className="data-row">
+//                         <div><strong>File format: </strong>{result.file_format}</div>
+//                         <div><strong>Output type: </strong>{result.output_type}</div>
+//                     </div>
+//                 </div>
+//                 {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
+//             </li>
+//         );
+//     }
+// }
+// /* eslint-enable react/prefer-stateless-function */
 
-BiofileComponent.propTypes = {
-    context: PropTypes.object.isRequired, // Target search results
-    auditIndicators: PropTypes.func.isRequired, // Audit decorator function
-    auditDetail: PropTypes.func.isRequired, // Audit decorator function
-};
+// BiofileComponent.propTypes = {
+//     context: PropTypes.object.isRequired, // Target search results
+//     auditIndicators: PropTypes.func.isRequired, // Audit decorator function
+//     auditDetail: PropTypes.func.isRequired, // Audit decorator function
+// };
 
-BiofileComponent.contextTypes = {
-    session: PropTypes.object, // Login information from <App>
-};
+// BiofileComponent.contextTypes = {
+//     session: PropTypes.object, // Login information from <App>
+// };
 
-const Biofile = auditDecor(BiofileComponent);
+// const Biofile = auditDecor(BiofileComponent);
 
-globals.listingViews.register(Biofile, 'Biofile');
+// globals.listingViews.register(Biofile, 'Biofile');
 
 /* eslint-disable react/prefer-stateless-function */
-class BiospecimenComponent extends React.Component {
-    render() {
-       const { cartControls } = this.props;
-        const result = this.props.context;
-        const tissueType = (result.tissue_type && result.sample_type == 'Tissue') ? ` ${result.tissue_type}` : '';
-        const anatomicSite = (result.anatomic_site_display && result.sample_type == 'Tissue') ? ` ${result.anatomic_site_display}` : '';
+// class BiospecimenComponent extends React.Component {
+//     render() {
+//        const { cartControls } = this.props;
+//         const result = this.props.context;
+//         const tissueType = (result.tissue_type && result.sample_type == 'Tissue') ? ` ${result.tissue_type}` : '';
+//         const anatomicSite = (result.anatomic_site_display && result.sample_type == 'Tissue') ? ` ${result.anatomic_site_display}` : '';
 
-        return (
-            <li className={resultItemClass(result)}>
-                <div className="result-item">
-                    <div className="result-item__data">
-                        <a href={result['@id']} className="result-item__link">
-                            {`${result.accession} `}
-                        </a>
-                        <div className="result-item__data-row">
-                            <div><strong>Sample type: </strong>{result.sample_type}</div>
-                            <div><strong>Tissue derivatives: </strong>{result.tissue_derivatives}</div>
-                            <div><strong>Tissue type: </strong>{result.tissue_type}</div>
-                            <div><strong>Anatomic site: </strong>{result.anatomic_site_display}</div>
-                        </div>
-                    </div>
-                    <div className="result-item__meta">
-                        <div className="result-item__meta-title">Biospecimen</div>
-                        <div className="result-item__meta-id">{` ${result.accession}`}</div>
-                        <Status item={result.status} badgeSize="small" css="result-table__status" />
-                        {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
-                    </div>
-                    <PickerActions {...this.props} />
+//         return (
+//             <li className={resultItemClass(result)}>
+//                 <div className="result-item">
+//                     <div className="result-item__data">
+//                         <a href={result['@id']} className="result-item__link">
+//                             {`${result.accession} `}
+//                         </a>
+//                         <div className="result-item__data-row">
+//                             <div><strong>Sample type: </strong>{result.sample_type}</div>
+//                             <div><strong>Tissue derivatives: </strong>{result.tissue_derivatives}</div>
+//                             <div><strong>Tissue type: </strong>{result.tissue_type}</div>
+//                             <div><strong>Anatomic site: </strong>{result.anatomic_site_display}</div>
+//                         </div>
+//                     </div>
+//                     <div className="result-item__meta">
+//                         <div className="result-item__meta-title">Biospecimen</div>
+//                         <div className="result-item__meta-id">{` ${result.accession}`}</div>
+//                         <Status item={result.status} badgeSize="small" css="result-table__status" />
+//                         {this.props.auditIndicators(result.audit, result['@id'], { session: this.context.session, search: true })}
+//                     </div>
+//                     <PickerActions {...this.props} />
 
-                </div>
-                {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
-            </li>
-        );
-    }
+//                 </div>
+//                 {this.props.auditDetail(result.audit, result['@id'], { session: this.context.session, except: result['@id'], forcedEditLink: true })}
+//             </li>
+//         );
+//     }
 
-}
-/* eslint-enable react/prefer-stateless-function */
+// }
+// /* eslint-enable react/prefer-stateless-function */
 
-BiospecimenComponent.propTypes = {
-    context: PropTypes.object.isRequired, // Biosample search results
-    cartControls: PropTypes.bool, // True if displayed in active cart
-    auditIndicators: PropTypes.func.isRequired, // Audit decorator function
-    auditDetail: PropTypes.func.isRequired, // Audit decorator function
-};
+// BiospecimenComponent.propTypes = {
+//     context: PropTypes.object.isRequired, // Biosample search results
+//     cartControls: PropTypes.bool, // True if displayed in active cart
+//     auditIndicators: PropTypes.func.isRequired, // Audit decorator function
+//     auditDetail: PropTypes.func.isRequired, // Audit decorator function
+// };
 
-BiospecimenComponent.contextTypes = {
-    session: PropTypes.object, // Login information from <App>
-};
+// BiospecimenComponent.contextTypes = {
+//     session: PropTypes.object, // Login information from <App>
+// };
 
-const Biospecimen = auditDecor(BiospecimenComponent);
+// const Biospecimen = auditDecor(BiospecimenComponent);
 
-globals.listingViews.register(Biospecimen, 'Biospecimen');
+// globals.listingViews.register(Biospecimen, 'Biospecimen');
 
 const Image = (props) => {
     const result = props.context;
@@ -488,111 +488,111 @@ globals.listingViews.register(Image, 'Image');
 
 
 
-const BioexperimentComponent = (props, reactContext) => {
-    const { cartControls } = props;
-    const result = props.context;
+// const BioexperimentComponent = (props, reactContext) => {
+//     const { cartControls } = props;
+//     const result = props.context;
 
-    return (
-        <li className={resultItemClass(result)}>
-            <div className="result-item">
-                <div className="result-item__data">
-                    <a href={result['@id']} className="result-item__link">
-                            {result.assay_term_name ?
-                                <span>{result.assay_term_name}</span> : null
-                            }
-                    </a>
-                </div>
-                <div className="result-item__meta">
-                    <div className="result-item__meta-title">Bioexperiment</div>
-                    <div className="result-item__meta-id">{` ${result.accession}`}</div>
-                    <Status item={result.status} badgeSize="small" css="result-table__status" />
-                    {props.auditIndicators(result.audit, result['@id'], { session: reactContext.session, search: true })}
-                </div>
-                <PickerActions {...props} />
-            </div>
-            { props.auditDetail(result.audit, result['@id'], { session: reactContext.session, except: result['@id'], forcedEditLink: true }) }
-        </li >
-    );
-};
+//     return (
+//         <li className={resultItemClass(result)}>
+//             <div className="result-item">
+//                 <div className="result-item__data">
+//                     <a href={result['@id']} className="result-item__link">
+//                             {result.assay_term_name ?
+//                                 <span>{result.assay_term_name}</span> : null
+//                             }
+//                     </a>
+//                 </div>
+//                 <div className="result-item__meta">
+//                     <div className="result-item__meta-title">Bioexperiment</div>
+//                     <div className="result-item__meta-id">{` ${result.accession}`}</div>
+//                     <Status item={result.status} badgeSize="small" css="result-table__status" />
+//                     {props.auditIndicators(result.audit, result['@id'], { session: reactContext.session, search: true })}
+//                 </div>
+//                 <PickerActions {...props} />
+//             </div>
+//             { props.auditDetail(result.audit, result['@id'], { session: reactContext.session, except: result['@id'], forcedEditLink: true }) }
+//         </li >
+//     );
+// };
 
-BioexperimentComponent.propTypes = {
-    context: PropTypes.object.isRequired, // Experiment search results
-    cartControls: PropTypes.bool, // True if displayed in active cart
-    auditIndicators: PropTypes.func.isRequired, // Audit decorator function
-    auditDetail: PropTypes.func.isRequired,
-};
+// BioexperimentComponent.propTypes = {
+//     context: PropTypes.object.isRequired, // Experiment search results
+//     cartControls: PropTypes.bool, // True if displayed in active cart
+//     auditIndicators: PropTypes.func.isRequired, // Audit decorator function
+//     auditDetail: PropTypes.func.isRequired,
+// };
 
-BioexperimentComponent.defaultProps = {
-    cartControls: false,
-};
+// BioexperimentComponent.defaultProps = {
+//     cartControls: false,
+// };
 
-BioexperimentComponent.contextTypes = {
-    session: PropTypes.object, // Login information from <App>
-};
+// BioexperimentComponent.contextTypes = {
+//     session: PropTypes.object, // Login information from <App>
+// };
 
-const Bioexperiment = auditDecor(BioexperimentComponent);
+// const Bioexperiment = auditDecor(BioexperimentComponent);
 
-globals.listingViews.register(Bioexperiment, 'Bioexperiment');
+// globals.listingViews.register(Bioexperiment, 'Bioexperiment');
 
-const BiodatasetComponent = (props, reactContext) => {
-    const result = props.context;
-    let biosampleTerm;
+// const BiodatasetComponent = (props, reactContext) => {
+//     const result = props.context;
+//     let biosampleTerm;
 
-    // Determine whether the dataset is a series or not
-    const seriesDataset = result['@type'].indexOf('Bioseries') >= 0;
-    // Get the biosample info for Series types if any. Can be string or array. If array, only use iff 1 term name exists
-    if (seriesDataset) {
-        biosampleTerm = (result.assay_term_name) ? result.assay_term_name : '';
-        // biosampleTerm = (result.biospecimen && Array.isArray(result.biospecimen) && result.biospecimen.length === 1 && result.biospecimen[0].sample_type) ? result.biospecimen[0].sample_type : ((result.biospecimen && result.biospecimen.sample_type) ? result.biospecimen.sample_type : '');
+//     // Determine whether the dataset is a series or not
+//     const seriesDataset = result['@type'].indexOf('Bioseries') >= 0;
+//     // Get the biosample info for Series types if any. Can be string or array. If array, only use iff 1 term name exists
+//     if (seriesDataset) {
+//         biosampleTerm = (result.assay_term_name) ? result.assay_term_name : '';
+//         // biosampleTerm = (result.biospecimen && Array.isArray(result.biospecimen) && result.biospecimen.length === 1 && result.biospecimen[0].sample_type) ? result.biospecimen[0].sample_type : ((result.biospecimen && result.biospecimen.sample_type) ? result.biospecimen.sample_type : '');
 
 
-    }
+//     }
 
-    const haveSeries = result['@type'].indexOf('Bioseries') >= 0;
-    const haveFileSet = result['@type'].indexOf('BiofileSet') >= 0;
+//     const haveSeries = result['@type'].indexOf('Bioseries') >= 0;
+//     const haveFileSet = result['@type'].indexOf('BiofileSet') >= 0;
 
-    return (
-        <li className={resultItemClass(result)}>
-            <div className="result-item">
-                <div className="result-item__data">
-                    <a href={result['@id']} className="result-item__link">
-                            {biodatasetTypes[result['@type'][0]]}
-                            {seriesDataset ?
-                                <span>
-                                    {biosampleTerm ? <span>{` in ${biosampleTerm}`}</span> : null}
+//     return (
+//         <li className={resultItemClass(result)}>
+//             <div className="result-item">
+//                 <div className="result-item__data">
+//                     <a href={result['@id']} className="result-item__link">
+//                             {biodatasetTypes[result['@type'][0]]}
+//                             {seriesDataset ?
+//                                 <span>
+//                                     {biosampleTerm ? <span>{` in ${biosampleTerm}`}</span> : null}
 
-                                </span>
-                                :
-                                <span>{result.description ? <span>{`: ${result.description}`}</span> : null}</span>
-                            }
-                    </a>
-                </div>
-                <div className="result-item__meta">
-                    <div className="result-item__meta-title">{haveSeries ? 'Bioseries' : (haveFileSet ? 'BiofileSet' : 'Biodataset')}</div>
-                    <div className="result-item__meta-id">{` ${result.accession}`}</div>
-                    <Status item={result.status} badgeSize="small" css="result-table__status" />
-                    {props.auditIndicators(result.audit, result['@id'], { session: reactContext.session, search: true })}
-                </div>
-                <PickerActions {...props} />
-            </div>
-            {props.auditDetail(result.audit, result['@id'], { session: reactContext.session, except: result['@id'], forcedEditLink: true })}
-        </li>
-    );
-};
+//                                 </span>
+//                                 :
+//                                 <span>{result.description ? <span>{`: ${result.description}`}</span> : null}</span>
+//                             }
+//                     </a>
+//                 </div>
+//                 <div className="result-item__meta">
+//                     <div className="result-item__meta-title">{haveSeries ? 'Bioseries' : (haveFileSet ? 'BiofileSet' : 'Biodataset')}</div>
+//                     <div className="result-item__meta-id">{` ${result.accession}`}</div>
+//                     <Status item={result.status} badgeSize="small" css="result-table__status" />
+//                     {props.auditIndicators(result.audit, result['@id'], { session: reactContext.session, search: true })}
+//                 </div>
+//                 <PickerActions {...props} />
+//             </div>
+//             {props.auditDetail(result.audit, result['@id'], { session: reactContext.session, except: result['@id'], forcedEditLink: true })}
+//         </li>
+//     );
+// };
 
-BiodatasetComponent.propTypes = {
-    context: PropTypes.object.isRequired, // Dataset search results
-    auditIndicators: PropTypes.func.isRequired, // Audit decorator function
-    auditDetail: PropTypes.func.isRequired, // Audit decorator function
-};
+// BiodatasetComponent.propTypes = {
+//     context: PropTypes.object.isRequired, // Dataset search results
+//     auditIndicators: PropTypes.func.isRequired, // Audit decorator function
+//     auditDetail: PropTypes.func.isRequired, // Audit decorator function
+// };
 
-BiodatasetComponent.contextTypes = {
-    session: PropTypes.object, // Login information from <App>
-};
+// BiodatasetComponent.contextTypes = {
+//     session: PropTypes.object, // Login information from <App>
+// };
 
-const Biodataset = auditDecor(BiodatasetComponent);
+// const Biodataset = auditDecor(BiodatasetComponent);
 
-globals.listingViews.register(Biodataset, 'Biodataset');
+// globals.listingViews.register(Biodataset, 'Biodataset');
 
 /**
  * Entry field for filtering the results list when search results appear in edit forms.
