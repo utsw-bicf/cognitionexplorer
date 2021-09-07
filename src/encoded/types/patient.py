@@ -42,10 +42,12 @@ class Patient(Item):
     name_key = 'accession'
     embedded = [
         'ivp_a1v3',
+        'fvp_a1v3',
         
         ]
     rev = {
          'ivp_a1v3': ('Ivp_a1v3', 'patient'),
+         'fvp_a1v3': ('Fvp_a1v3', 'patient'),
        
     }
     set_status_up = [
@@ -68,3 +70,15 @@ class Patient(Item):
     })
     def ivp_a1v3(self, request, ivp_a1v3):
         return paths_filtered_by_status(request, ivp_a1v3)
+
+
+    @calculated_property(schema={
+        "title": "Fvp_a1v3",
+        "type": "array",
+        "items": {
+            "type": 'string',
+            "linkTo": "Fvp_a1v3"
+        },
+    })
+    def fvp_a1v3(self, request, fvp_a1v3):
+        return paths_filtered_by_status(request, fvp_a1v3)

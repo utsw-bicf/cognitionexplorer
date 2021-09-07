@@ -2,10 +2,11 @@
     {
         "name": "First cohort",
         "elements": [
-            "/patients/KCEPT359MHZ/",
-            "/patients/KCEPT873QVK/",
-            "/patients/KCEPT802XRB/",
-            "/patients/KCEPT186NZW/"
+            "/patients/000000/",
+            "/patients/000001/",
+            "/patients/000015/",
+            "/patients/000010/",
+            "/patients/000013/"
         ],
         "identifier": "venkat-malladi-first-cohort",
         "submitted_by": "venkat.malladi@utsouthwestern.edu",
