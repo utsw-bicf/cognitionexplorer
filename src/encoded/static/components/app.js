@@ -40,7 +40,7 @@ const portal = {
             id: 'data',
             title: 'Data',
             children: [
-                { id: 'patientsearch', title: 'Patient Search', url: '/summary/?type=Patient&status=released' },
+                { id: 'patientsearch', title: 'Patient Search', url: '/search/?type=Patient&status=released' },
                 { id: 'Surgerysearch', title: 'Surgery/Pathreports Search', url: '/search/?type=Surgery&status=released' },
                 { id: 'samplesearch', title: 'Biospecimen Search', url: '/search/?type=Biospecimen&status=released' },
                 { id: 'bioexperimentsearch', title: 'Bioexperiment Search', url: '/search/?type=Bioexperiment&status=released' },
