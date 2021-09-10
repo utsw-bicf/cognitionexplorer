@@ -1,0 +1,56 @@
+[
+    {
+        "patient": "000000",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "1980-05-23",
+        "visitnum": "1",
+        "initials": "JAR",
+        "header_complete": "Complete",
+        "sec1": {
+            "fu_memory": "0 None - 0 No memory loss, or slight inconsistent forgetfulness.",
+            "fu_orient": "0 None - 0 Fully oriented",
+            "fu_judgment": "0.5 Questionable - 0.5 <br>Slight impairment in solving problems, similarities, and differences.",
+            "fu_commun": "1 Mild - 1 Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
+            "fu_homehobb": "3 Severe - 3 No significant function in the home.",
+            "fu_perscare": "2 Moderate - 2 Requires assistance in dressing, hygiene, keeping of personal effects.",
+            "fu_cdrsum": 679,
+            "fu_cdrglob": "1 1.0 = Mild impairment"
+        },
+        "sec2": {
+            "fu_comport": "0 None - 0 Socially appropriate behavior.",
+            "fu_cdrlang": "2 Moderate - 2 Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective."
+        },
+        "cdrsupp": 6.0,
+        "cdrtot": 7.5,
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "23cbc06d-1407-49d9-9eb1-6b13f993abd6"
+    },
+    {
+        "patient": "000000",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "1981-05-24",
+        "visitnum": "2",
+        "initials": "JAR",
+        "header_complete": "Complete",
+        "sec1": {
+            "fu_memory": "0 None - 0 No memory loss, or slight inconsistent forgetfulness.",
+            "fu_orient": "0 None - 0 Fully oriented",
+            "fu_judgment": "0.5 Questionable - 0.5 <br>Slight impairment in solving problems, similarities, and differences.",
+            "fu_commun": "1 Mild - 1 Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
+            "fu_homehobb": "3 Severe - 3 No significant function in the home.",
+            "fu_perscare": "2 Moderate - 2 Requires assistance in dressing, hygiene, keeping of personal effects.",
+            "fu_cdrsum": 789,
+            "fu_cdrglob": "1 1.0 = Mild impairment"
+        },
+        "sec2": {
+            "fu_comport": "0 None - 0 Socially appropriate behavior.",
+            "fu_cdrlang": "2 Moderate - 2 Moderate to severe impairments in either speech or comprehension; has difficulty communicating thoughts; writing may be slightly more effective."
+        },
+        "cdrsupp": 7.0,
+        "cdrtot": 7.5,
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "0a213417-8817-4055-b5c8-e1c2a587aa86"
+    }
+]

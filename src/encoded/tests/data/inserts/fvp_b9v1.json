@@ -1,0 +1,71 @@
+
+  [  {
+        "patient": "000000",
+        "formver": "1.2",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-01",
+        "visitnum": "1",
+        "initials": "OK",
+        "B9CHG":  "2 At the previous UDS visit, the clinician DID NOT report a decline in the subject’s memory, non-memory cognitive abilities, behavior, or motor function (i.e., question 3a = ‘0’). However, there have been meaningful changes since then. (If this box is checked, complete this entire form.)",
+               
+        "memo_comp": {
+            "DECSUB": "0 No",
+            "DECIN": "0 No",
+            "DECCLIN": "1 Yes",
+            "DECAGE": "test"
+        },
+        "cogn_symp": {
+            "indicate_impair": {
+                "COGMEM": "0 No",
+                "COGJUDG": "1 Yes",
+                "COGLANG": "9 Unknown",
+                "COGVIS": "0 No",
+                "COGATTN": "1 Yes",
+                "COGOTHR": "1 Yes",
+                "COGOTHRX": "test"
+            },
+            "COGFRST": "1 Memory",
+            "COGFRSTX": "test",
+            "COGMODE": "1 Gradual (> 6 months)",
+            "COGMODEX": "test"
+        },
+        "beha_symp": {
+            "indicate_beha_symp": {
+                "BEAPATHY": "0 No",
+                "BEDEP": "1 Yes",
+                "psychosis": {
+                    "BEVHALL": "9 Unknown",
+                    "BEAHALL": "1 Yes",
+                    "BEDEL": "9 Unknown"
+                },
+                "BEDISIN": "0 No",
+                "BEIRRIT": "1 Yes",
+                "BEAGIT": "9 Unknown",
+                "BEPERCH": "0 No",
+                "BEOTHR": "9 Unknown",
+                "BEOTHRX": "test"
+            },
+            "BEFRST": "1 Apathy/withdrawal",
+            "BEFRSTX": "test",
+            "BEMODE": "2 Subacute (< 6 months)",
+            "BEMODEX": "test"
+        },
+        "motor_symp": {
+            "indicate_motor_symp": {
+                "MOGAIT": "0 No",
+                "MOFALLS": "1 Yes",
+                "MOTREM": "9 Unknown",
+                "MOSLOW": "0 No"
+            },
+            "MOFRST": "1 Gait disorder",
+            "MOMODE": "1 Gradual (> 6 months)",
+            "MOMODEX": "test"
+        },
+        "overall": {
+            "COURSE": "1 Gradual progressive",
+            "FRSTCHG": "2 Behavior"
+        },
+        "status": "released",
+        "uuid": "4ce63b36-b04b-459f-afe7-6abb55d85720"
+    }
+]

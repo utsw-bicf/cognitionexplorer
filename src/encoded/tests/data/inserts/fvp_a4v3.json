@@ -1,0 +1,52 @@
+[
+    {
+        "patient": "000000",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2001-02-01",
+        "visitnum": "1",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "fu_anymeds": "1 Yes",
+        "fu_drugid_1": "d00049 acetaminophen (Anacin, Tempra, Tylenol)",
+        "fu_drugid_2": "d03428 acetaminophen - HYDROcodone (Vicodin)",
+        "fu_drugid_3": "d00051 Adalat",
+        "fu_drugid_4": "d00015 Advil",
+        "fu_not_listed_drugs": {
+            "fu_drugid_31": "test",
+            "fu_drug_name_31": "test",
+            "fu_drugid_32": "test-test",
+            "fu_drug_name_32": "test-test",
+            "fu_drugid_33": "test-test-test",
+            "fu_drug_name_33": "test-test-test"
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "67e5bf73-f2eb-4f04-8968-cf326d200564"
+    },
+    {
+        "patient": "000000",
+        "formver": "3",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2002-02-04",
+        "visitnum": "2",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "fu_anymeds": "1 Yes",
+        "fu_drugid_1": "d00049 acetaminophen (Anacin, Tempra, Tylenol)",
+        "fu_drugid_2": "d03428 acetaminophen - HYDROcodone (Vicodin)",
+        "fu_drugid_3": "d00051 Adalat",
+        "fu_drugid_4": "d00015 Advil",
+        "fu_not_listed_drugs": {
+            "fu_drugid_31": "test",
+            "fu_drug_name_31": "test",
+            "fu_drugid_32": "test-test",
+            "fu_drug_name_32": "test-test",
+            "fu_drugid_33": "test-test-test",
+            "fu_drug_name_33": "test-test-test"
+        },
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "9f4e0198-5205-4994-9713-5f9dfd1d1757"
+    }
+]

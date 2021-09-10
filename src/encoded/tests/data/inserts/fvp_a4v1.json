@@ -1,0 +1,31 @@
+[
+    {
+        "patient": "000000",
+        "formver": "1.2",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2006-02-01",
+        "visitnum": "1",
+        "initials": "OK",
+        "PMEDS": "1 Yes",
+        "PMA": "Advil",
+        "1a_medi_strength": {
+          "PMAS": 99999,
+          "PMASU": "1 µg"
+        },
+        "1a_frequency": {
+          "PMAF": 10,
+          "PMAFU": "1 daily"
+        },
+        "1a_pre_prn": {
+          "PMAP": "0 No"
+        },
+        "1a_prn_frequency": {
+          "PMAPF": 2,
+          "PMAPFU": "1 daily"
+        },
+        "NMEDS": "0 No",
+        "VITASUPS": "0 No",
+        
+        "status": "released",
+        "uuid": "91545e5a-4efd-46a6-8cad-c592b6fac26f"
+    }]
