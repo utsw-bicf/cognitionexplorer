@@ -1,0 +1,48 @@
+[{
+    "patient": "000000",
+    "formver": "2",
+    "adcid": "25 University of Texas Southwestern",
+    "visdate": "2001-02-01",
+    "visitnum": "1",
+    "initials": "OK",
+    "neur_image": {
+        "comp_tomo": {
+            "CTFLM": "0 No",
+            "CTDIG": "0 No"
+        },
+        "magn_clinic": {
+            "MRI1FLM": "0 No",
+            "MRI1DIG": "0 No"
+        },
+        "magn_research_stru": {
+            "MRI2FLM": "1 Yes",
+            "MRI2DIG": "0 No"
+        },
+        "magn_research_func": {
+            "MRI3FLM": "0 No",
+            "MRI3DIG": "1 Yes"
+        },
+        "magn_spec": {
+            "MRISPFLM": "0 No",
+            "MRISPDIG": "1 Yes"
+        },
+        "spect": {
+            "SPECTFLM": "0 No",
+            "SPECTDIG": "1 Yes"
+        },
+        "pet": {
+            "PETFLM": "0 No",
+            "PETDIG": "1 Yes"
+        }
+    },
+    "specimen": {
+        "DNA": "0 No",
+        "CSFANTEM": "1 Yes",
+        "SERUM": "0 No"
+    },
+    "genotyping": {
+        "APOE": "0 No"
+    },
+    "status": "released",
+    "uuid": "06dc3119-e620-4786-916d-e39d54f8759c"
+}]

@@ -1,0 +1,57 @@
+[
+    {
+        "patient": "000000",
+        "formver": "2",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2008-04-01",
+        "visitnum": "1",
+        "header_complete": "Complete",
+        "initials": "OK",
+        "pdnormal": true,
+        "speech": "0 Normal",
+        "face_exp": "1 Minimal hypomimia, could be normal \"poker face\"",
+        "trem_at_rest": {
+            "fac_lip_chin": "0 Absent",
+            "r_hand": "1 Slight and infrequently present",
+            "l_hand": "2 Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present",
+            "r_foot": "3 Moderate in amplitude and present most of the time",
+            "l_foot": "4 Marked in amplitude and present most of the time"
+        },
+        "action_trem_hands": {
+            "act_r_hand": "0 Absent",
+            "act_l_hand": "1 Slight; present with action"
+        },
+        "rigidity": {
+            "rig_neck": "0 Absent",
+            "r_up": "4 Severe; range of motion achieved with difficulty",
+            "l_up": "8 Untestable",
+            "r_low": "2 Mild to moderate",
+            "l_low": "4 Severe; range of motion achieved with difficulty",
+            "l_up_untest": "test"
+        },
+        "finger_taps": {
+            "taps_r": "0 Normal",
+            "taps_l": "1 Mild slowing and/or reduction in amplitude"
+        },
+        "hand_move": {
+            "movem_r": "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+            "movem_l": "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement"
+        },
+        "move_of_hands": {
+            "rap_alt_r": "4 Can barely perform the task",
+            "rap_alt_l": "0 Normal"
+        },
+        "leg_agil": {
+            "leg_agil_r": "1 Mild slowing and/or reduction in amplitude",
+            "leg_agil_l": "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement"
+        },
+        "arise_chair": "3 Tends to fall back and may have to try more than one time, but can get up without help",
+        "posture": "0 Normal",
+        "gait": "1 Walks slowly; may shuffle with short steps, but no festination (hastening steps) or propulsion",
+        "post_stab": "2 Absence of postural response; would fall if not caught by examiner",
+        "bradykin": "3 Moderate slowness, poverty or small amplitude of movement",
+        "form_status": "Complete",
+        "status": "released",
+        "uuid": "15781e64-36da-4d59-a0b2-a9d03a7e41df"
+    }
+]

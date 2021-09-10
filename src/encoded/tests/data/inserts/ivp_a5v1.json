@@ -1,0 +1,89 @@
+
+[
+    {
+        "patient": "000000",
+        "formver": "1.2",
+        "adcid": "25 University of Texas Southwestern",
+        "visdate": "2003-02-01",
+        "visitnum": "1",
+        "initials": "OK",
+        "card_dise": {
+            "CVHATT": "0 Absent",
+            "CVAFIB": "1 Recent/Active",
+            "CVANGIO": "2 Remote/Inactive",
+            "CVBYPASS": "9 Unknown",
+            "CVPACE": "0 Absent",
+            "CVCHF": "1 Recent/Active",
+            "CVOTHR": "2 Remote/Inactive",
+            "CVOTHRX": "test"
+        },
+        "cere_dise": {
+            "CBSTROKE": "0 Absent",
+            "STROK1YR": "Test",
+            "STROK2YR": "Test",
+            "STROK3YR": "Test",
+            "STROK4YR": "Test",
+            "STROK5YR": "Test",
+            "STROK6YR": "Test",
+            "CBTIA": "1 Recent/Active",
+            "TIA1YR": "Test",
+            "TIA2YR": "Test",
+            "TIA3YR": "Test",
+            "TIA4YR": "Test",
+            "TIA5YR": "Test",
+            "TIA6YR": "Test",
+            "CBOTHR": "2 Remote/Inactive",
+            "CBOTHRX": "Test"
+        },
+        "park_dise": {
+            "PD": "0 Absent",
+            "PDYR": "Test",
+            "PDOTHR": "1 Recent/Active",
+            "PDOTHRYR": "test"
+        },
+        "other_neur_cond": {
+            "SEIZURES": "0 Absent",
+            "TRAUMBRF": "1 Recent/Active",
+            "TRAUMEXT": "2 Remote/Inactive",
+            "TRAUMCHR": "9 Unknown",
+            "NCOTHR": "0 Absent",
+            "NCOTHRX": "test"
+        },
+        "medi_cond": {
+            "HYPERTEN": "0 Absent",
+            "HYPERCHO": "1 Recent/Active",
+            "DIABETES": "2 Remote/Inactive",
+            "B12DEF": "9 Unknown",
+            "THYROID": "0 Absent",
+            "INCONTU": "0 Absent",
+            "INCONTF": "1 Recent/Active"
+        },
+        "depr": {
+            "DEP2YRS": "0 No",
+            "DEPOTHR": "1 Yes"
+        },
+        "sub_abuse_and_psyc": {
+            "alcohol": {
+                "ALCOHOL": "0 Absent"
+            },
+            "cigarette": {
+                "TOBAC30": "0 No",
+                "TOBAC100": "1 Yes",
+                "SMOKYRS": "test",
+                "PACKSPER": "1 1 cigarette – < ½ pack",
+                "QUITSMOK": "test"
+            },
+            "other_subs": {
+                "ABUSOTHR": "0 Absent",
+                "ABUSX": "test"
+            },
+            "PSYCDIS": "0 Absent",
+            "PSYCDISX": "test"
+        },
+        "status": "released",
+        "uuid": "e6bb64a6-a26a-49cb-b871-868b37c250a4"
+    }
+    
+]
+   
+ 

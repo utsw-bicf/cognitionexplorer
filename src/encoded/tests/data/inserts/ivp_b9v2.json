@@ -1,0 +1,73 @@
+[
+  {
+      "patient": "000000",
+      "formver": "2",
+      "adcid": "25 University of Texas Southwestern",
+      "visdate": "2001-02-01",
+      "visitnum": "1",
+      "initials": "OK",
+      "memo_comp": {
+          "DECSUB": "0 No",
+          "DECIN": "0 No",
+          "DECCLIN": "1 Yes",
+          "DECAGE": "test"
+      },
+      "cogn_symp": {
+          "indicate_impair": {
+              "COGMEM": "0 No",
+              "COGJUDG": "1 Yes",
+              "COGLANG": "9 Unknown",
+              "COGVIS": "0 No",
+              "COGATTN": "1 Yes",
+              "COGFLUC": "0 No",
+              "COGOTHR": "1 Yes",
+              "COGOTHRX": "test"
+          },
+          "COGFRST": "1 Memory",
+          "COGFRSTX": "test",
+          "COGMODE": "1 Gradual (> 6 months)",
+          "COGMODEX": "test"
+      },
+      "beha_symp": {
+          "indicate_beha_symp": {
+              "BEAPATHY": "0 No",
+              "BEDEP": "1 Yes",
+              "psychosis": {
+                  "BEVHALL": "9 Unknown",
+                  "BEVWELL": "0 No",
+                  "BEAHALL": "1 Yes",
+                  "BEDEL": "9 Unknown"
+              },
+              "BEDISIN": "0 No",
+              "BEIRRIT": "1 Yes",
+              "BEAGIT": "9 Unknown",
+              "BEPERCH": "0 No",
+              "BEREM": "1 Yes",
+              "BEOTHR": "9 Unknown",
+              "BEOTHRX": "test"
+          },
+          "BEFRST": "1 Apathy/withdrawal",
+          "BEFRSTX": "test",
+          "BEMODE": "2 Subacute (< 6 months)",
+          "BEMODEX": "test"
+      },
+      "motor_symp": {
+          "indicate_motor_symp": {
+              "MOGAIT": "0 No",
+              "MOFALLS": "1 Yes",
+              "MOTREM": "9 Unknown",
+              "MOSLOW": "0 No"
+          },
+          "MOFRST": "1 Gait disorder",
+          "MOMODE": "1 Gradual (> 6 months)",
+          "MOMODEX": "test",
+          "MOMOPARK": "88 NA"
+      },
+      "overall": {
+          "COURSE": "1 Gradual progressive",
+          "FRSTCHG": "2 Behavior"
+      },
+      "status": "released",
+      "uuid": "5e2fc9a4-d8d1-4050-9d9b-04dad03eec98"
+  }
+]

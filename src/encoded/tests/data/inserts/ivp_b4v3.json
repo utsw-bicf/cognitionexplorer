@@ -1,0 +1,25 @@
+[{
+    "patient": "000000",
+    "adcid": "25 University of Texas Southwestern",
+    "visdate": "2019-12-02",
+    "visitnum": "1",
+    "header_complete": "Complete",
+    "initials": "HY",
+    "sec1": {
+        "memory": "0 None - 0 No memory loss, or slight inconsistent forgetfulness.",
+        "orient": "0 None - 0 Fully oriented",
+        "judgment": "1 Mild - 1 Moderate difficulty in handling problems, similarities, and differences; social judgment usually maintained.",
+        "commun": "1 Mild - 1 Unable to function independently at these activities, although may still be engaged in some; appears normal to casual inspection.",
+        "homehobb": "3 Severe - 3 No significant function in the home.",
+        "perscare": "0 None / Questionable - 0Fully capable of self-care (=0).",
+        "cdrsum": "5.0",
+        "cdrglob": "0 0.0 = No Impairment"
+    },
+    "sec2": {
+        "comport": "1 Mild - 1 Mild but definite changes in behavior.",
+        "cdrlang": "1 Mild - 1 Moderate word finding difficulty in speech; cannot name objects in environment; reduced phrase length and/or agrammatical speech; and/or reduced comprehension in conversation and reading."
+    },
+    "form_status": "Complete",
+    "status": "released",
+    "uuid": "d7629345-af88-4948-9caa-0c926200acdf"
+}]

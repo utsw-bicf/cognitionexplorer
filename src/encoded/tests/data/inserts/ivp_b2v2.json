@@ -1,0 +1,33 @@
+[{
+    "patient": "000000",
+    "formver": "2",
+    "adcid": "25 University of Texas Southwestern",
+    "visdate": "2001-02-01",
+    "visitnum": "1",
+    "initials": "OK",
+    "hach_isch_score": {
+        "ABRUPT": "0 Absent",
+        "STEPWISE": "1 Present",
+        "SOMATIC": "0 Absent",
+        "EMOT": "1 Present",
+        "HXHYPER": "0 Absent",
+        "HXSTROKE": "0 Absent",
+        "FOCLSYM": "2 Present",
+        "FOCLSIGN": "0 Absent",
+        "HACHIN": "test"
+    },
+    "cere_dise": {
+        "CVDCOG": "0 No",
+        "STROKCOG": "1 Yes",
+        "CVDIMAG": "1 Yes",
+        "if_yes": {
+            "CVDIMAG1": "0 No",
+            "CVDIMAG2": "0 No",
+            "CVDIMAG3": "1 Yes",
+            "CVDIMAG4": "1 Yes",
+            "CVDIMAGX": "test"
+        }
+    },
+    "status": "released",
+    "uuid": "13e83522-98a2-4c24-9601-9465025f49d1"
+}]
