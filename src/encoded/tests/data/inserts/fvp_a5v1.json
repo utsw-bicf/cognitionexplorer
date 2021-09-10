@@ -1,7 +1,7 @@
 [
     {
         "patient": "000000",
-        "formver": "1.2",
+        "formver": "1",
         "adcid": "25 University of Texas Southwestern",
         "visdate": "2003-02-01",
         "visitnum": "1",
@@ -84,7 +84,7 @@
     },
     {
         "patient": "000000",
-        "formver": "1.2",
+        "formver": "1",
         "adcid": "25 University of Texas Southwestern",
         "visdate": "2004-02-04",
         "visitnum": "2",
