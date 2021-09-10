@@ -1,0 +1,504 @@
+{
+    "title": "NACC Uniform Data Set (UDS),Follow-Up Form Z1: Form Checklist",
+    "description": "NOTE: This form is to be completed by clinic staff.\nNACC expects and intends that all UDS forms will be attempted on all subjects, but we realize this may be impossible\nwhen the patient is terminally ill, or when there is no informant, or for other reasons. NACC requires that Forms Z1,\nA1, A5, B4, B9, C1, D1, and E1 be submitted for a subject to be included in the UDS database, even though these\nforms may include some missing data.\nFor forms not designated as required, if it is not feasible to collect all or almost all of the data elements for a subject\nand the ADC therefore decides not to attempt collection of those data, an explanation must be provided. Please\nindicate this decision below by including the appropriate explanatory code and any additional comments.\nKEY: If the specified form was not completed, please enter one of the following codes:\n95 = Physical problem 97 = Other problem\n96 = Cognitive/behavior problem 98 = Verbal refusal",
+    "id": "/profiles/fvp_z1v2.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "A2SUB": {
+            "title": "1 Form A2, Informant Demographics submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "A2NOT": {
+            "title": "1A Reason Form A2, Informant Demographics not submitted",
+            "description": "Blank if #1, A2SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "A2COMM": {
+            "title": "1B Form A2, Informant Demographics, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "A3SUB": {
+            "title": "2 Form A3, Subject Family History submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "A3NOT": {
+            "title": "2A Reason Form A3, Subject Family History not submitted",
+            "description": "Blank if #2, A3SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "A3COMM": {
+            "title": "2B Form A3, Subject Family History, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "A4SUB": {
+            "title": "3 Form A4, Subject Medications submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "A4NOT": {
+            "title": "3A Reason Form A4, Subject Medications not submitted",
+            "description": "Blank if #3, A4SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "A4COMM": {
+            "title": "3B Form A4, Subject Medications, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "B1SUB": {
+            "title": "4 Form B1, Evaluation Form – Physical submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "B1NOT": {
+            "title": "4A Reason Form B1, Evaluation Form – Physical not submitted",
+            "description": "Blank if #4, B1SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "B1COMM": {
+            "title": "4B Form B1, Evaluation Form – Physical, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "B2SUB": {
+            "title": "5 Form B2, Evaluation Form – HIS and CVD submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "B2NOT": {
+            "title": "5A Reason Form B2, Evaluation Form – HIS and CVD not submitted",
+            "description": "Blank if #5, B2SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "B2COMM": {
+            "title": "5B Form B2, Evaluation Form – HIS and CVD, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "B3SUB": {
+            "title": "6 Form B3, Evaluation Form – UPDRS submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "B3NOT": {
+            "title": "6A Reason Form B3 Evaluation Form – UPDRS not submitted",
+            "description": "Blank if #6, B3SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "B3COMM": {
+            "title": "6B Form B3, Evaluation Form – UPDRS, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "B5SUB": {
+            "title": "7 Form B5 or B5S, Behavioral Assessment – NPI-Q submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "B5NOT": {
+            "title": "7A Reason Form B5 or B5S, Behavioral Assessment – NPI-Q not submitted",
+            "description": "Blank if #7, B5SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "B5COMM": {
+            "title": "7B Form B5 or B5S, Behavioral Assessment – NPI-Q, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“),ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "B6SUB": {
+            "title": "8 Form B6 or B6S, Behavioral Assessment – GDS submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "B6NOT": {
+            "title": "8A Reason Form B6 or B6S, Behavioral Assessment – GDS not submitted",
+            "description": "Blank if #8, B6SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "B6COMM": {
+            "title": "8B Form B6 or B6S, Behavioral Assessment – GDS, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "B7SUB": {
+            "title": "9 Form B7 or B7S, Functional Assessment – FAQ submitted",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "B7NOT": {
+            "title": "9A Reason Form B7 or B7S, Functional Assessment – FAQ not submitted",
+            "description": "Blank if #9, B7SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "B7COMM": {
+            "title": "9B Form B7 or B7S, Functional Assessment – FAQ, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "B8SUB": {
+            "title": "10 Form B8, Evaluation – Physical/Neurological Exam Findings",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "B8NOT": {
+            "title": "10A Reason Form B8, Evaluation – Physical/Neurological Exam Findings not submitted",
+            "description": "Blank if #10, B8SUB = 1 (Yes).",
+            "type": "string",
+            "enum": [
+                "95 Physical problem",
+                "96 Cognitive/behavior problem",
+                "97 Other problem",
+                "98 Verbal refusal"
+            ]
+        },
+        "B8COMM": {
+            "title": "10B Form B8, Evaluation – Physical/Neurological Exam Findings, comments (provide if needed)",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "A2SUB": {
+            "title": "1 Form A2, Informant Demographics submitted"
+        },
+        "A2NOT": {
+            "title": "1A Reason Form A2, Informant Demographics not submitted"
+        },
+        "A2COMM": {
+            "title": "1B Form A2, Informant Demographics, comments (provide if needed)"
+        },
+        "A3SUB": {
+            "title": "2 Form A3, Subject Family History submitted"
+        },
+        "A3NOT": {
+            "title": "2A Reason Form A3, Subject Family History not submitted"
+        },
+        "A3COMM": {
+            "title": "2B Form A3, Subject Family History, comments (provide if needed)"
+        },
+        "A4SUB": {
+            "title": "3 Form A4, Subject Medications submitted"
+        },
+        "A4NOT": {
+            "title": "3A Reason Form A4, Subject Medications not submitted"
+        },
+        "A4COMM": {
+            "title": "3B Form A4, Subject Medications, comments (provide if needed)"
+        },
+        "B1SUB": {
+            "title": "4 Form B1, Evaluation Form – Physical submitted"
+        },
+        "B1NOT": {
+            "title": "4A Reason Form B1, Evaluation Form – Physical not submitted"
+        },
+        "B1COMM": {
+            "title": "4B Form B1, Evaluation Form – Physical, comments (provide if needed)"
+        },
+        "B2SUB": {
+            "title": "5 Form B2, Evaluation Form – HIS and CVD submitted"
+        },
+        "B2NOT": {
+            "title": "5A Reason Form B2, Evaluation Form – HIS and CVD not submitted"
+        },
+        "B2COMM": {
+            "title": "5B Form B2, Evaluation Form – HIS and CVD, comments (provide if needed)"
+        },
+        "B3SUB": {
+            "title": "6 Form B3, Evaluation Form – UPDRS submitted"
+        },
+        "B3NOT": {
+            "title": "6A Reason Form B3 Evaluation Form – UPDRS not submitted"
+        },
+        "B3COMM": {
+            "title": "6B Form B3, Evaluation Form – UPDRS, comments (provide if needed)"
+        },
+        "B5SUB": {
+            "title": "7 Form B5 or B5S, Behavioral Assessment – NPI-Q submitted"
+        },
+        "B5NOT": {
+            "title": "7A Reason Form B5 or B5S, Behavioral Assessment – NPI-Q not submitted"
+        },
+        "B5COMM": {
+            "title": "7B Form B5 or B5S, Behavioral Assessment – NPI-Q, comments (provide if needed)"
+        },
+        "B6SUB": {
+            "title": "8 Form B6 or B6S, Behavioral Assessment – GDS submitted"
+        },
+        "B6NOT": {
+            "title": "8A Reason Form B6 or B6S, Behavioral Assessment – GDS not submitted"
+        },
+        "B6COMM": {
+            "title": "8B Form B6 or B6S, Behavioral Assessment – GDS, comments (provide if needed)"
+        },
+        "B7SUB": {
+            "title": "9 Form B7 or B7S, Functional Assessment – FAQ submitted"
+        },
+        "B7NOT": {
+            "title": "9A Reason Form B7 or B7S, Functional Assessment – FAQ not submitted"
+        },
+        "B7COMM": {
+            "title": "9B Form B7 or B7S, Functional Assessment – FAQ, comments (provide if needed)"
+        },
+        "B8SUB": {
+            "title": "10 Form B8, Evaluation – Physical/Neurological Exam Findings"
+        },
+        "B8NOT": {
+            "title": "10A Reason Form B8, Evaluation – Physical/Neurological Exam Findings not submitted"
+        },
+        "B8COMM": {
+            "title": "10B Form B8, Evaluation – Physical/Neurological Exam Findings, comments (provide if needed)"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "A2SUB": {
+            "title": "1 Form A2, Informant Demographics submitted"
+        },
+        "A2NOT": {
+            "title": "1A Reason Form A2, Informant Demographics not submitted"
+        },
+        "A2COMM": {
+            "title": "1B Form A2, Informant Demographics, comments (provide if needed)"
+        },
+        "A3SUB": {
+            "title": "2 Form A3, Subject Family History submitted"
+        },
+        "A3NOT": {
+            "title": "2A Reason Form A3, Subject Family History not submitted"
+        },
+        "A3COMM": {
+            "title": "2B Form A3, Subject Family History, comments (provide if needed)"
+        },
+        "A4SUB": {
+            "title": "3 Form A4, Subject Medications submitted"
+        },
+        "A4NOT": {
+            "title": "3A Reason Form A4, Subject Medications not submitted"
+        },
+        "A4COMM": {
+            "title": "3B Form A4, Subject Medications, comments (provide if needed)"
+        },
+        "B1SUB": {
+            "title": "4 Form B1, Evaluation Form – Physical submitted"
+        },
+        "B1NOT": {
+            "title": "4A Reason Form B1, Evaluation Form – Physical not submitted"
+        },
+        "B1COMM": {
+            "title": "4B Form B1, Evaluation Form – Physical, comments (provide if needed)"
+        },
+        "B2SUB": {
+            "title": "5 Form B2, Evaluation Form – HIS and CVD submitted"
+        },
+        "B2NOT": {
+            "title": "5A Reason Form B2, Evaluation Form – HIS and CVD not submitted"
+        },
+        "B2COMM": {
+            "title": "5B Form B2, Evaluation Form – HIS and CVD, comments (provide if needed)"
+        },
+        "B3SUB": {
+            "title": "6 Form B3, Evaluation Form – UPDRS submitted"
+        },
+        "B3NOT": {
+            "title": "6A Reason Form B3 Evaluation Form – UPDRS not submitted"
+        },
+        "B3COMM": {
+            "title": "6B Form B3, Evaluation Form – UPDRS, comments (provide if needed)"
+        },
+        "B5SUB": {
+            "title": "7 Form B5 or B5S, Behavioral Assessment – NPI-Q submitted"
+        },
+        "B5NOT": {
+            "title": "7A Reason Form B5 or B5S, Behavioral Assessment – NPI-Q not submitted"
+        },
+        "B5COMM": {
+            "title": "7B Form B5 or B5S, Behavioral Assessment – NPI-Q, comments (provide if needed)"
+        },
+        "B6SUB": {
+            "title": "8 Form B6 or B6S, Behavioral Assessment – GDS submitted"
+        },
+        "B6NOT": {
+            "title": "8A Reason Form B6 or B6S, Behavioral Assessment – GDS not submitted"
+        },
+        "B6COMM": {
+            "title": "8B Form B6 or B6S, Behavioral Assessment – GDS, comments (provide if needed)"
+        },
+        "B7SUB": {
+            "title": "9 Form B7 or B7S, Functional Assessment – FAQ submitted"
+        },
+        "B7NOT": {
+            "title": "9A Reason Form B7 or B7S, Functional Assessment – FAQ not submitted"
+        },
+        "B7COMM": {
+            "title": "9B Form B7 or B7S, Functional Assessment – FAQ, comments (provide if needed)"
+        },
+        "B8SUB": {
+            "title": "10 Form B8, Evaluation – Physical/Neurological Exam Findings"
+        },
+        "B8NOT": {
+            "title": "10A Reason Form B8, Evaluation – Physical/Neurological Exam Findings not submitted"
+        },
+        "B8COMM": {
+            "title": "10B Form B8, Evaluation – Physical/Neurological Exam Findings, comments (provide if needed)"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "A2SUB": 1.0,
+        "A2NOT": 1.0,
+        "A2COMM": 1.0,
+        "A3SUB": 1.0,
+        "A3NOT": 1.0,
+        "A3COMM": 1.0,
+        "A4SUB": 1.0,
+        "A4NOT": 1.0,
+        "A4COMM": 1.0,
+        "B1SUB": 1.0,
+        "B1NOT": 1.0,
+        "B1COMM": 1.0,
+        "B2SUB": 1.0,
+        "B2NOT": 1.0,
+        "B2COMM": 1.0,
+        "B3SUB": 1.0,
+        "B3NOT": 1.0,
+        "B3COMM": 1.0,
+        "B5SUB": 1.0,
+        "B5NOT": 1.0,
+        "B5COMM": 1.0,
+        "B6SUB": 1.0,
+        "B6NOT": 1.0,
+        "B6COMM": 1.0,
+        "B7SUB": 1.0,
+        "B7NOT": 1.0,
+        "B7COMM": 1.0,
+        "B8SUB": 1.0,
+        "B8NOT": 1.0,
+        "B8COMM": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_z1v2.md"
+}

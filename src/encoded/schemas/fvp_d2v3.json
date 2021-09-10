@@ -1,0 +1,570 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW UP FORM D2: Clinician-assessed Medical Conditions",
+    "description": "INSTRUCTIONS: This form is to be completed by a physician, physician's assistant, nurse practitioner, or other \nqualified practitioner. For additional clarification and examples, see UDS Coding Guidebook for Follow-up Visit \nPacket, Form D2. Link to NACC Coding Guidebook \nMedical Conditions and procedures. \nThe following questions should be answered based on review of all available information, including new diagnoses \nmade during the current visit, previous medical records, procedures, laboratory tests, and the clinical exam.",
+    "id": "/profiles/uds_fvp_b.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "fu_cancer",
+        "fu_diabet",
+        "fu_myoinf",
+        "fu_conghrt",
+        "fu_afibrill",
+        "fu_hypert",
+        "fu_angina",
+        "fu_hypchol",
+        "fu_vb12def",
+        "fu_thydis",
+        "fu_arth",
+        "fu_urineinc",
+        "fu_bowlinc",
+        "fu_sleepap",
+        "fu_remdis",
+        "fu_hyposom",
+        "fu_sleepoth",
+        "fu_angiocp",
+        "fu_angiopci",
+        "fu_pacemake",
+        "fu_hvalve",
+        "fu_antienc",
+        "fu_othcond"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "fu_cancer": {
+            "title": "1. Cancer (excluding non-melanoma skin cancer), primary or metastatic",
+            "type": "string",
+            "enum": [
+                "0 No (SKIP TO QUESTION 2)",
+                "1 Yes, primary/non-metastatic",
+                "2 Yes, metastatic",
+                "8 Not assessed (SKIP TO QUESTION 2)"
+            ]
+        },
+        "fu_cancsite": {
+            "title": "1a. If yes, specify primary site:",
+            "type": "string"
+        },
+        "fu_diabet": {
+            "title": "2. Diabetes",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes, Type I",
+                "2 Yes, Type II",
+                "3 Yes, other type(diabetes insipidus, latent autoimmune diabetes/type 1.5, gestational diabetes)",
+                "9 Not assessed or unknown"
+            ]
+        },
+        "fu_myoinf": {
+            "title": "3. Myocardial infarct",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_conghrt": {
+            "title": "4. Congestive heart failure",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_afibrill": {
+            "title": "5. Atrial fibrillation",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_hypert": {
+            "title": "6. Hypertension",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_angina": {
+            "title": "7. Angina",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_hypchol": {
+            "title": "8. Hypercholesterolemia",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_vb12def": {
+            "title": "9. B12 deficiency",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_thydis": {
+            "title": "10. Thyroid disease",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_arth": {
+            "title": "11. Arthritis  If No or Not assessed,  SKIP TO QUESTION 12 ",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_artype": {
+            "title": "11a. If yes, what type?",
+            "type": "string",
+            "enum": [
+                "1 Rheumatoid",
+                "2 Osteoarthritis",
+                "3 Other (SPECIFY BELOW):",
+                "9 Unknown"
+            ]
+        },
+        "fu_artypex": {
+            "title": "11a1.  If other type of arthritis SPECIFY:",
+            "type": "string"
+        },
+        "fu_note_d2_3": {
+            "title": "11b.  If yes, regions affected (check at least one):",
+            "type": "object",
+            "properties": {
+                "fu_artupex": {
+                    "title": "11b1. 1 Upper extremity",
+                    "type": "boolean"
+                    
+                },
+                "fu_artloex": {
+                    "title": "11b2. 1 Lower extremity",
+                    "type": "boolean"
+                    
+                },
+                "fu_artspin": {
+                    "title": "11b3. 1 Spine",
+                    "type": "boolean"
+                   
+                },
+                "fu_artunkn": {
+                    "title": "11b4.  1 Unknown",
+                    "type": "boolean"
+                    
+                }
+            }
+        },
+        "fu_urineinc": {
+            "title": "12. Incontinence - urinary",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_bowlinc": {
+            "title": "13. Incontinence - bowel",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_sleepap": {
+            "title": "14. Sleep apnea",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_remdis": {
+            "title": "15. REM sleep behavior disorder (RBD)",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_hyposom": {
+            "title": "16. Hyposomnia/insomnia",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_sleepoth": {
+            "title": "17. Other sleep disorder (SPECIFY BELOW):",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_sleepotx": {
+            "title": "17a. Specify other sleep disorder:",
+            "type": "string"
+        },
+        "fu_angiocp": {
+            "title": "18. Carotid procedure: angioplasty, endarterectomy, or stent",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_angiopci": {
+            "title": "19. Percutaneous coronary intervention: angioplasty and/or stent",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_pacemake": {
+            "title": "20. Procedure: pacemaker and/or defibrillator",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_hvalve": {
+            "title": "21. Procedure: heart valve replacement or repair",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_antienc": {
+            "title": "22. Antibody-mediated encephalopathy",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes",
+                "8 Not assessed"
+            ]
+        },
+        "fu_antiencx": {
+            "title": "22a. Antibody-mediated encephalopathy SPECIFY:",
+            "type": "string"
+        },
+        "fu_othcond": {
+            "title": "23. Other medical conditions or procedures not listed above (IF YES, SPECIFY BELOW):",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "fu_othcondx": {
+            "title": "23a. If other medical conditions SPECIFY:",
+            "type": "string"
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_cancer": {
+            "title": "1. Cancer (excluding non-melanoma skin cancer), primary or metastatic"
+        },
+        "fu_cancsite": {
+            "title": "1a. If yes, specify primary site:"
+        },
+        "fu_diabet": {
+            "title": "2. Diabetes"
+        },
+        "fu_myoinf": {
+            "title": "3. Myocardial infarct"
+        },
+        "fu_conghrt": {
+            "title": "4. Congestive heart failure"
+        },
+        "fu_afibrill": {
+            "title": "5. Atrial fibrillation"
+        },
+        "fu_hypert": {
+            "title": "6. Hypertension"
+        },
+        "fu_angina": {
+            "title": "7. Angina"
+        },
+        "fu_hypchol": {
+            "title": "8. Hypercholesterolemia"
+        },
+        "fu_vb12def": {
+            "title": "9. B12 deficiency"
+        },
+        "fu_thydis": {
+            "title": "10. Thyroid disease"
+        },
+        "fu_arth": {
+            "title": "11. Arthritis <i>If No or Not assessed,</i><b>SKIP TO QUESTION 12</b>"
+        },
+        "fu_artype": {
+            "title": "11a. If yes, what type?"
+        },
+        "fu_artypex": {
+            "title": "11a1.  If other type of arthritis SPECIFY:"
+        },
+        "fu_note_d2_3.fu_artupex": {
+            "title": "11b1. 1 Upper extremity"
+        },
+        "fu_note_d2_3.fu_artloex": {
+            "title": "11b2. 1 Lower extremity"
+        },
+        "fu_note_d2_3.fu_artspin": {
+            "title": "11b3. 1 Spine"
+        },
+        "fu_note_d2_3.fu_artunkn": {
+            "title": "11b4.  1 Unknown"
+        },
+        "fu_urineinc": {
+            "title": "12. Incontinence - urinary"
+        },
+        "fu_bowlinc": {
+            "title": "13. Incontinence - bowel"
+        },
+        "fu_sleepap": {
+            "title": "14. Sleep apnea"
+        },
+        "fu_remdis": {
+            "title": "15. REM sleep behavior disorder (RBD)"
+        },
+        "fu_hyposom": {
+            "title": "16. Hyposomnia/insomnia"
+        },
+        "fu_sleepoth": {
+            "title": "17. Other sleep disorder (SPECIFY BELOW):"
+        },
+        "fu_sleepotx": {
+            "title": "17a. Specify other sleep disorder:"
+        },
+        "fu_angiocp": {
+            "title": "18. Carotid procedure: angioplasty, endarterectomy, or stent"
+        },
+        "fu_angiopci": {
+            "title": "19. Percutaneous coronary intervention: angioplasty and/or stent"
+        },
+        "fu_pacemake": {
+            "title": "20. Procedure: pacemaker and/or defibrillator"
+        },
+        "fu_hvalve": {
+            "title": "21. Procedure: heart valve replacement or repair"
+        },
+        "fu_antienc": {
+            "title": "22. Antibody-mediated encephalopathy"
+        },
+        "fu_antiencx": {
+            "title": "22a. Antibody-mediated encephalopathy SPECIFY:"
+        },
+        "fu_othcond": {
+            "title": "23. Other medical conditions or procedures not listed above (IF YES, SPECIFY BELOW):"
+        },
+        "fu_othcondx": {
+            "title": "23a. If other medical conditions SPECIFY:"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_cancer": {
+            "title": "1. Cancer (excluding non-melanoma skin cancer), primary or metastatic"
+        },
+        "fu_cancsite": {
+            "title": "1a. If yes, specify primary site:"
+        },
+        "fu_diabet": {
+            "title": "2. Diabetes"
+        },
+        "fu_myoinf": {
+            "title": "3. Myocardial infarct"
+        },
+        "fu_conghrt": {
+            "title": "4. Congestive heart failure"
+        },
+        "fu_afibrill": {
+            "title": "5. Atrial fibrillation"
+        },
+        "fu_hypert": {
+            "title": "6. Hypertension"
+        },
+        "fu_angina": {
+            "title": "7. Angina"
+        },
+        "fu_hypchol": {
+            "title": "8. Hypercholesterolemia"
+        },
+        "fu_vb12def": {
+            "title": "9. B12 deficiency"
+        },
+        "fu_thydis": {
+            "title": "10. Thyroid disease"
+        },
+        "fu_arth": {
+            "title": "11. Arthritis <i>If No or Not assessed,</i><b>SKIP TO QUESTION 12</b>"
+        },
+        "fu_artype": {
+            "title": "11a. If yes, what type?"
+        },
+        "fu_artypex": {
+            "title": "11a1.  If other type of arthritis SPECIFY:"
+        },
+        "fu_note_d2_3.fu_artupex": {
+            "title": "11b1. 1 Upper extremity"
+        },
+        "fu_note_d2_3.fu_artloex": {
+            "title": "11b2. 1 Lower extremity"
+        },
+        "fu_note_d2_3.fu_artspin": {
+            "title": "11b3. 1 Spine"
+        },
+        "fu_note_d2_3.fu_artunkn": {
+            "title": "11b4.  1 Unknown"
+        },
+        "fu_urineinc": {
+            "title": "12. Incontinence - urinary"
+        },
+        "fu_bowlinc": {
+            "title": "13. Incontinence - bowel"
+        },
+        "fu_sleepap": {
+            "title": "14. Sleep apnea"
+        },
+        "fu_remdis": {
+            "title": "15. REM sleep behavior disorder (RBD)"
+        },
+        "fu_hyposom": {
+            "title": "16. Hyposomnia/insomnia"
+        },
+        "fu_sleepoth": {
+            "title": "17. Other sleep disorder (SPECIFY BELOW):"
+        },
+        "fu_sleepotx": {
+            "title": "17a. Specify other sleep disorder:"
+        },
+        "fu_angiocp": {
+            "title": "18. Carotid procedure: angioplasty, endarterectomy, or stent"
+        },
+        "fu_angiopci": {
+            "title": "19. Percutaneous coronary intervention: angioplasty and/or stent"
+        },
+        "fu_pacemake": {
+            "title": "20. Procedure: pacemaker and/or defibrillator"
+        },
+        "fu_hvalve": {
+            "title": "21. Procedure: heart valve replacement or repair"
+        },
+        "fu_antienc": {
+            "title": "22. Antibody-mediated encephalopathy"
+        },
+        "fu_antiencx": {
+            "title": "22a. Antibody-mediated encephalopathy SPECIFY:"
+        },
+        "fu_othcond": {
+            "title": "23. Other medical conditions or procedures not listed above (IF YES, SPECIFY BELOW):"
+        },
+        "fu_othcondx": {
+            "title": "23a. If other medical conditions SPECIFY:"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "fu_cancer": 1.0,
+        "fu_cancsite": 1.0,
+        "fu_diabet": 1.0,
+        "fu_myoinf": 1.0,
+        "fu_conghrt": 1.0,
+        "fu_afibrill": 1.0,
+        "fu_hypert": 1.0,
+        "fu_angina": 1.0,
+        "fu_hypchol": 1.0,
+        "fu_vb12def": 1.0,
+        "fu_thydis": 1.0,
+        "fu_arth": 1.0,
+        "fu_artype": 1.0,
+        "fu_note_d2_3.fu_artupex": 1.0,
+        "fu_note_d2_3.fu_artloex": 1.0,
+        "fu_note_d2_3.fu_artspin": 1.0,
+        "fu_note_d2_3.fu_artunkn": 1.0,
+        "fu_urineinc": 1.0,
+        "fu_bowlinc": 1.0,
+        "fu_sleepap": 1.0,
+        "fu_remdis": 1.0,
+        "fu_hyposom": 1.0,
+        "fu_sleepoth": 1.0,
+        "fu_angiocp": 1.0,
+        "fu_angiopci": 1.0,
+        "fu_pacemake": 1.0,
+        "fu_hvalve": 1.0,
+        "fu_antienc": 1.0,
+        "fu_othcond": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_b7v3.md"
+}

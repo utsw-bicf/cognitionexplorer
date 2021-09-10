@@ -1,0 +1,1080 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW UP Form C2: Neuropsychological Battery Scores",
+    "description": "INSTRUCTIONS: This form is to be completed by ADC or clinic staff. For test administration and scoring, see Instructions for Neuropsychological Battery Form C2. Link to C2 Instructions . Any new subjects who enroll in the UDS after the implementation of UDS3 must be assessed with the new neuropsychological test battery (Form C2). Link to NACC Coding Guidebook KEY: If the subject cannot complete any of the following exams, please give the reason by entering one of the following codes: 95/995=Physical problem 96/996=Cognitive/behavior problem 97/997=Other problem 98/998=Verbal refusal",
+    "id": "/profiles/uds_fvp_c2v3.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "fu_1",
+        "fu_2",
+        "fu_3",
+        "fu_4",
+        "fu_5",
+        "fu_6",
+        "fu_7",
+        "fu_8",
+        "fu_9",
+        "fu_10",
+        "fu_11",
+        "fu_12",
+        "fu_13"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "fu_1": {
+            "title": "1. Montreal Cognitive Assessment (MoCA)",
+            "type": "object",
+            "properties": {
+                "fu_mocacomp": {
+                    "title": "1a. Was any part of the MoCA administered?",
+                    "type": "string",
+                    "enum": [
+                        "0 No (If No, enter reason code, 95-98) below i Question 1a1 and (SKIP TO QUESTION 2a)",
+                        "1 Yes (CONTINUE WITH QUESTION 1b)"
+                    ]
+                },
+                "fu_mocareas": {
+                    "title": "1a1. Was any part of MoCA administered?  If no, enter reason code, 95-98)",
+                    "type": "string",
+                    "enum": [
+                        "95 = Physical problem",
+                        "96 = Cognitive/behavior problem",
+                        "97 = Other problem",
+                        "98 = Verbal refusal"
+                    ]
+                },
+                "fu_mocaloc": {
+                    "title": "1b. MoCA was administered:",
+                    "type": "string",
+                    "enum": [
+                        "1 In ADC or clinic",
+                        "2 In home",
+                        "3 In person - other"
+                    ]
+                },
+                "fu_mocalan": {
+                    "title": "1c. Language of MoCA administration:",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish",
+                        "3 Other(SPECIFY BELOW):"
+                    ]
+                },
+                "fu_mocalanx": {
+                    "title": "1c1. Specify language of MoCA administration",
+                    "type": "string"
+                },
+                "fu_mocavis": {
+                    "title": "1d. Subject was unable to complete one or more sections due to visual impairment: ",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "fu_mocahear": {
+                    "title": "1e. Subject was unable to complete one or more sections due to hearing impairment: ",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "fu_mocatots": {
+                    "title": "1f. TOTAL RAW SCORE - UNCORRECTED (Not corrected for education or visual/hearing impairment)  (Enter 88 if any of the following MoCA items where not administered:  1g-1l, 1n-1t, 1w-1bb)",
+                    "description": "((0-30, 88)),WARNING - a value of 88 should be entered in the box above.  At least one of the following MoCA items was not administered: 1g-1l, 1n-1t, 1w-1bb.",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^30$|^88$"
+                },
+                "fu_mocatrai": {
+                    "title": "1g. Visuospatial/executive -- Trails",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocacube": {
+                    "title": "1h. Visuospatial/executive -- Cube",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocacloc": {
+                    "title": "1i. Visuospatial/executive -- Clock contour",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaclon": {
+                    "title": "1j.  Visuospatial/executive -- Clock numbers",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocacloh": {
+                    "title": "1k. Visuospatial/executive -- Clock hands",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocanami": {
+                    "title": "1l.  Language -- Naming",
+                    "description": "((0-3, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-3]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaregi": {
+                    "title": "1m. Memory -- Registration (two trials)",
+                    "description": "((0-10, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^10$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocadigi": {
+                    "title": "1n. Attention -- Digits",
+                    "description": "((0-2, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-2]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocalett": {
+                    "title": "1o. Attention -- Letter A",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaser": {
+                    "title": "1p. Attention -- Serial 7s",
+                    "description": "((0-3, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-3]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocarepe": {
+                    "title": "1q. Language -- Repetition",
+                    "description": "((0-2, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-2]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaflue": {
+                    "title": "1r. Language -- Fluency",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaabst": {
+                    "title": "1s. Abstraction",
+                    "description": "((0-2, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-2]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocarecn": {
+                    "title": "1t. Delayed recall -- No cue",
+                    "description": "((0-5, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-5]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocarecc": {
+                    "title": "1u. Delayed recall -- Category cue",
+                    "description": "((0-5; 88=not applicable))",
+                    "type": "string",
+                    "pattern": "^[0-5]$||^88$"
+                },
+                "fu_mocarecr": {
+                    "title": "1v. Delayed recall -- Recognition",
+                    "description": "((0-5; 88=not applicable))",
+                    "type": "string",
+                    "pattern": "^[0-5]$||^88$"
+                },
+                "fu_mocaordt": {
+                    "title": "1w. Orientation -- Date",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaormo": {
+                    "title": "1x. Orientation -- Month",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaoryr": {
+                    "title": "1y. Orientation -- Year",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaordy": {
+                    "title": "1z. Orientation -- Day",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaorpl": {
+                    "title": "1aa. Orientation -- Place",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_mocaorct": {
+                    "title": "1bb. Orientation -- City",
+                    "description": "((0-1, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-1]$|^95$|^96$|^97$|^98$"
+                }
+            }
+        },
+        "fu_2": {
+            "title": "2. ADMINISTRATION OF THE REMAINDER OF THE BATTERY",
+            "type": "object",
+            "properties": {
+                "fu_npsycloc_c": {
+                    "title": "2a. The tests following the MoCA were administered:",
+                    "type": "string",
+                    "enum": [
+                        "1 In ADC or clinic",
+                        "2 In home",
+                        "3 In person - other"
+                    ]
+                },
+                "fu_npsylan_c": {
+                    "title": "2b. Test following MoCA:  Language of test administration.",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish",
+                        "3 Other(SPECIFY BELOW):"
+                    ]
+                },
+                "fu_npsylanx_c": {
+                    "title": "2b1. Other language of tests following the MoCA:",
+                    "type": "string"
+                }
+            }
+        },
+        "fu_3": {
+            "title": "3. Craft Story 21 Recall (Immediate)",
+            "type": "object",
+            "properties": {
+                "fu_craftvrs": {
+                    "title": "3a. Total story units recalled, verbatim scoring (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 4a.)",
+                    "description": "((0-44, 95-98))",
+                    "type": "string",
+                    "pattern": "^[1-3]?[0-9]$|^4[0-4]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_crafturs": {
+                    "title": "3b. Total story units recalled, paraphrase scoring (0-25)",
+                    "description": "(0-25)",
+                    "type": "string",
+                    "pattern": "^[1]?[0-9]$|^2[0-5]$"
+                }
+            }
+        },
+        "fu_4": {
+            "title": "4. Benson Complex Figure Copy",
+            "type": "object",
+            "properties": {
+                "fu_udsbentc": {
+                    "title": "4a. Total score for copy of Benson figure (If test not completed, enter reason code, 95-98)",
+                    "description": "((0-17, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-7]$|^95$|^96$|^97$|^98$"
+                }
+            }
+        },
+        "fu_5": {
+            "title": "5. Number Span Test: Forward",
+            "type": "object",
+            "properties": {
+                "fu_digforct": {
+                    "title": "5a. Number of correct trials (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 6a.)",
+                    "description": "((0-14, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-4]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_digforsl": {
+                    "title": "5b. Longest span forward",
+                    "description": "(0, 3-9)",
+                    "type": "string",
+                    "pattern": "^0$|^[3-9]$"
+                }
+            }
+        },
+        "fu_6": {
+            "title": "6. Number Span Test: Backward",
+            "type": "object",
+            "properties": {
+                "fu_digbacct": {
+                    "title": "6a. Number of correct trials (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 7a.)",
+                    "description": "((0-14, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-4]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_digbacls": {
+                    "title": "6b. Longest span backward",
+                    "description": "(0, 2-8)",
+                    "type": "string",
+                    "pattern": "^0$|^[2-8]$"
+                }
+            }
+        },
+        "fu_7": {
+            "title": "7. Category Fluency",
+            "type": "object",
+            "properties": {
+                "fu_animals_c": {
+                    "title": "7a.  Animals: Total number of animals named in 60 seconds (If test not completed, enter reason code, 95-98)",
+                    "description": "(0-77, 95-98)",
+                    "type": "string",
+                    "pattern": "^[1-6]?[0-9]$|^7[0-7]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_veg_c": {
+                    "title": "7b.  Vegetables: Total number of vegetables named in 60 seconds (If test not completed, enter reason code, 95-98)",
+                    "description": "(0-77, 95-98)",
+                    "type": "string",
+                    "pattern": "^[1-6]?[0-9]$|^7[0-7]$|^95$|^96$|^97$|^98$"
+                }
+            }
+        },
+        "fu_8": {
+            "title": "8. Trail Making Test",
+            "type": "object",
+            "properties": {
+                "fu_traila_c": {
+                    "title": "8a. PART A: Total number of seconds to complete (if not finished by 150 seconds, enter 150) (If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 8b.)",
+                    "description": "(0-150, 995-998)",
+                    "type": "string",
+                    "pattern": "^[0-9]?[0-9]$|^1[0-4][0-9]$|^150$|^995$|^996$|^997$|^998$"
+                },
+                "fu_trailarr_c": {
+                    "title": "8a1. Number of commission errors",
+                    "description": "(0-40)",
+                    "type": "string",
+                    "pattern": "^[1-3]?[0-9]$|^40$"
+                },
+                "fu_trailali_c": {
+                    "title": "8a2. Number of correct lines",
+                    "description": "(0-24)",
+                    "type": "string",
+                    "pattern": "^[1]?[0-9]$|^2[0-4]$"
+                },
+                "fu_trailb_c": {
+                    "title": "8b. PART B: Total number of seconds to complete (if not finished by 300 seconds, enter 300)  (If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 9a.)",
+                    "description": "(0-300, 995-998)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]?[0-9]$|^300$|^995$|^996$|^997$|^998$"
+                },
+                "fu_trailbrr_c": {
+                    "title": "8b1. Number of commission errors",
+                    "description": "(0-40)",
+                    "type": "string",
+                    "pattern": "^[1-3]?[0-9]$|^40$"
+                },
+                "fu_trailbli_c": {
+                    "title": "8b2. Number of correct lines",
+                    "description": "(0-24)",
+                    "type": "string",
+                    "pattern": "^[1]?[0-9]$|^2[0-4]$"
+                }
+            }
+        },
+        "fu_9": {
+            "title": "9. Craft Story 21 recall (Delayed)",
+            "type": "object",
+            "properties": {
+                "fu_craftdvr": {
+                    "title": "9a. Total story units recalled, verbatim scoring (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 10a.)",
+                    "description": "((0-44, 95-98))",
+                    "type": "string",
+                    "pattern": "^[1-3]?[0-9]$|^4[0-4]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_craftdre": {
+                    "title": "9b. Total story units recalled, paraphrase scoring (0-25)",
+                    "description": "(0-25)",
+                    "type": "string",
+                    "pattern": "^[1]?[0-9]$|^2[0-5]$"
+                },
+                "fu_craftdti": {
+                    "title": "9c. Delay time (minutes) (99=Unknown)",
+                    "description": "(0-85 minutes 99=Unknown)",
+                    "type": "string",
+                    "pattern": "^[1-7]?[0-9]$|8[0-5]$|^99$"
+                },
+                "fu_craftcue": {
+                    "title": "9d. Cue (boy) needed",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "fu_10": {
+            "title": "10. Benson Complex Figure Recall",
+            "type": "object",
+            "properties": {
+                "fu_udsbentd": {
+                    "title": "10a. Total score for drawing of Benson figure following 10- to 15-minute delay (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 11a.)",
+                    "description": "((0-17, 95-98))",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-7]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_udsbenrs": {
+                    "title": "10b. Recognized original stimulus from among four options? ",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "fu_11": {
+            "title": "11. Multilingual Naming Test (MINT)",
+            "type": "object",
+            "properties": {
+                "fu_minttots": {
+                    "title": "11a. Total score (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 12a.)",
+                    "description": "(0-32, 95-98)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^3[0-2]$|^95$|^96$|^97$|^98$"
+                },
+                "fu_minttotw": {
+                    "title": "11b. Total correct without semantic cue",
+                    "description": "(0-32)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^3[0-2]$"
+                },
+                "fu_mintscng": {
+                    "title": "11c. Semantic cues: Number given",
+                    "description": "(0-32)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^3[0-2]$"
+                },
+                "fu_mintscnc": {
+                    "title": "11d. Semantic cues: Number correct with cue (88=not applicable)",
+                    "description": "(0-32, 88)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^3[0-2]$|^88$"
+                },
+                "fu_mintpcng": {
+                    "title": "11e. Phonemic cues: Number given",
+                    "description": "(0-32)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^3[0-2]$"
+                },
+                "fu_mintpcnc": {
+                    "title": "11f. Phonemic cues: Number correct with cue (88=not applicable)",
+                    "description": "(0-32, 88)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^3[0-2]$|^88$"
+                }
+            }
+        },
+        "fu_12": {
+            "title": "12. Verbal Fluency: Phonemic Test",
+            "type": "object",
+            "properties": {
+                "fu_udsverfc": {
+                    "title": "12a. Number of correct F-words generated in 1 minute (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 12d.)",
+                    "description": "(0-40, 95-98)",
+                    "type": "string",
+                    "pattern": "^[1-3]?[0-9]$|^40$|^95$|^96$|^97$|^98$"
+                },
+                "fu_udsverfn": {
+                    "title": "12b. Number of F-words repeated in 1 minute",
+                    "description": "(0-15)",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-5]$"
+                },
+                "fu_udsvernf": {
+                    "title": "12c. Number of F-words and rule violation errors in 1 minute",
+                    "description": "(0-15)",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-5]$"
+                },
+                "fu_udsverlc": {
+                    "title": "12d. Number of correct L-words generated in 1 minute (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 13a.)",
+                    "description": "(0-40, 95-98)",
+                    "type": "string",
+                    "pattern": "^[1-3]?[0-9]$|^40$|^95$|^96$|^97$|^98$"
+                },
+                "fu_udsverlr": {
+                    "title": "12e. Number of L-words repeated in 1 minute",
+                    "description": "(0-15)",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-5]$"
+                },
+                "fu_udsverln": {
+                    "title": "12f. Number of non-L-words and rule violation errors in 1 minute",
+                    "description": "(0-15)",
+                    "type": "string",
+                    "pattern": "^[0-9]$|^1[0-5]$"
+                },
+                "fu_udsvertn": {
+                    "title": "12g. TOTAL number of correct F-words and L-words",
+                    "description": "(0-80)",
+                    "type": "string",
+                    "pattern": "^[1-7]?[0-9]$|^80$"
+                },
+                "fu_udsverte": {
+                    "title": "12h. TOTAL number of F-words and L-words repetition errors",
+                    "description": "(0-30)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^30$"
+                },
+                "fu_udsverti": {
+                    "title": "12i. TOTAL number of non-F/L-words and rule violation errors",
+                    "description": "(0-30)",
+                    "type": "string",
+                    "pattern": "^[1-2]?[0-9]$|^30$"
+                }
+            }
+        },
+        "fu_13": {
+            "title": "13. Overall appraisal",
+            "type": "object",
+            "properties": {
+                "fu_cogstat_c": {
+                    "title": "13a. Per the clinician (e.g., neuropsychologist, behavioral neurologist, or other suitably qualified clinician), based on the UDS neuropsychological examination, the subject's cognitive status is deemed:",
+                    "type": "string",
+                    "enum": [
+                        "1 Better than normal for age",
+                        "2 Normal for age",
+                        "3 One or two test scores are abnormal",
+                        "4 Three or more scores are abnormal or lower than expected",
+                        "0 Clinician unable to render opinion"
+                    ]
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_1.fu_mocacomp": {
+            "title": "1a. Was any part of the MoCA administered?"
+        },
+        "fu_1.fu_mocareas": {
+            "title": "1a1. Was any part of MoCA administered?  If no, enter reason code, 95-98)"
+        },
+        "fu_1.fu_mocaloc": {
+            "title": "1b. MoCA was administered:"
+        },
+        "fu_1.fu_mocalan": {
+            "title": "1c. Language of MoCA administration:"
+        },
+        "fu_1.fu_mocalanx": {
+            "title": "1c1. Specify language of MoCA administration"
+        },
+        "fu_1.fu_mocavis": {
+            "title": "1d. Subject was unable to complete one or more sections due to visual impairment: "
+        },
+        "fu_1.fu_mocahear": {
+            "title": "1e. Subject was unable to complete one or more sections due to hearing impairment: "
+        },
+        "fu_1.fu_mocatots": {
+            "title": "1f. TOTAL RAW SCORE - UNCORRECTED (Not corrected for education or visual/hearing impairment)  (Enter 88 if any of the following MoCA items where not administered:  1g-1l, 1n-1t, 1w-1bb)"
+        },
+        "fu_1.fu_mocatrai": {
+            "title": "1g. Visuospatial/executive -- Trails"
+        },
+        "fu_1.fu_mocacube": {
+            "title": "1h. Visuospatial/executive -- Cube"
+        },
+        "fu_1.fu_mocacloc": {
+            "title": "1i. Visuospatial/executive -- Clock contour"
+        },
+        "fu_1.fu_mocaclon": {
+            "title": "1j.  Visuospatial/executive -- Clock numbers"
+        },
+        "fu_1.fu_mocacloh": {
+            "title": "1k. Visuospatial/executive -- Clock hands"
+        },
+        "fu_1.fu_mocanami": {
+            "title": "1l.  Language -- Naming"
+        },
+        "fu_1.fu_mocaregi": {
+            "title": "1m. Memory -- Registration (two trials)"
+        },
+        "fu_1.fu_mocadigi": {
+            "title": "1n. Attention -- Digits"
+        },
+        "fu_1.fu_mocalett": {
+            "title": "1o. Attention -- Letter A"
+        },
+        "fu_1.fu_mocaser": {
+            "title": "1p. Attention -- Serial 7s"
+        },
+        "fu_1.fu_mocarepe": {
+            "title": "1q. Language -- Repetition"
+        },
+        "fu_1.fu_mocaflue": {
+            "title": "1r. Language -- Fluency"
+        },
+        "fu_1.fu_mocaabst": {
+            "title": "1s. Abstraction"
+        },
+        "fu_1.fu_mocarecn": {
+            "title": "1t. Delayed recall -- No cue"
+        },
+        "fu_1.fu_mocarecc": {
+            "title": "1u. Delayed recall -- Category cue"
+        },
+        "fu_1.fu_mocarecr": {
+            "title": "1v. Delayed recall -- Recognition"
+        },
+        "fu_1.fu_mocaordt": {
+            "title": "1w. Orientation -- Date"
+        },
+        "fu_1.fu_mocaormo": {
+            "title": "1x. Orientation -- Month"
+        },
+        "fu_1.fu_mocaoryr": {
+            "title": "1y. Orientation -- Year"
+        },
+        "fu_1.fu_mocaordy": {
+            "title": "1z. Orientation -- Day"
+        },
+        "fu_1.fu_mocaorpl": {
+            "title": "1aa. Orientation -- Place"
+        },
+        "fu_1.fu_mocaorct": {
+            "title": "1bb. Orientation -- City"
+        },
+        "fu_2.fu_npsycloc_c": {
+            "title": "2a. The tests following the MoCA were administered:"
+        },
+        "fu_2.fu_npsylan_c": {
+            "title": "2b. Test following MoCA:  Language of test administration."
+        },
+        "fu_2.fu_npsylanx_c": {
+            "title": "2b1. Other language of tests following the MoCA:"
+        },
+        "fu_3.fu_craftvrs": {
+            "title": "3a. Total story units recalled, verbatim scoring (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 4a.)"
+        },
+        "fu_3.fu_crafturs": {
+            "title": "3b. Total story units recalled, paraphrase scoring (0-25)"
+        },
+        "fu_4.fu_udsbentc": {
+            "title": "4a. Total score for copy of Benson figure (If test not completed, enter reason code, 95-98)"
+        },
+        "fu_5.fu_digforct": {
+            "title": "5a. Number of correct trials (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 6a.)"
+        },
+        "fu_5.fu_digforsl": {
+            "title": "5b. Longest span forward"
+        },
+        "fu_6.fu_digbacct": {
+            "title": "6a. Number of correct trials (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 7a.)"
+        },
+        "fu_6.fu_digbacls": {
+            "title": "6b. Longest span backward"
+        },
+        "fu_7.fu_animals_c": {
+            "title": "7a.  Animals: Total number of animals named in 60 seconds (If test not completed, enter reason code, 95-98)"
+        },
+        "fu_7.fu_veg_c": {
+            "title": "7b.  Vegetables: Total number of vegetables named in 60 seconds (If test not completed, enter reason code, 95-98)"
+        },
+        "fu_8.fu_traila_c": {
+            "title": "8a. PART A: Total number of seconds to complete (if not finished by 150 seconds, enter 150) (If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 8b.)"
+        },
+        "fu_8.fu_trailarr_c": {
+            "title": "8a1. Number of commission errors"
+        },
+        "fu_8.fu_trailali_c": {
+            "title": "8a2. Number of correct lines"
+        },
+        "fu_8.fu_trailb_c": {
+            "title": "8b. PART B: Total number of seconds to complete (if not finished by 300 seconds, enter 300)  (If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 9a.)"
+        },
+        "fu_8.fu_trailbrr_c": {
+            "title": "8b1. Number of commission errors"
+        },
+        "fu_8.fu_trailbli_c": {
+            "title": "8b2. Number of correct lines"
+        },
+        "fu_9.fu_craftdvr": {
+            "title": "9a. Total story units recalled, verbatim scoring (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 10a.)"
+        },
+        "fu_9.fu_craftdre": {
+            "title": "9b. Total story units recalled, paraphrase scoring (0-25)"
+        },
+        "fu_9.fu_craftdti": {
+            "title": "9c. Delay time (minutes) (99=Unknown)"
+        },
+        "fu_9.fu_craftcue": {
+            "title": "9d. Cue (boy) needed"
+        },
+        "fu_10.fu_udsbentd": {
+            "title": "10a. Total score for drawing of Benson figure following 10- to 15-minute delay (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 11a.)"
+        },
+        "fu_10.fu_udsbenrs": {
+            "title": "10b. Recognized original stimulus from among four options? "
+        },
+        "fu_11.fu_minttots": {
+            "title": "11a. Total score (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 12a.)"
+        },
+        "fu_11.fu_minttotw": {
+            "title": "11b. Total correct without semantic cue"
+        },
+        "fu_11.fu_mintscng": {
+            "title": "11c. Semantic cues: Number given"
+        },
+        "fu_11.fu_mintscnc": {
+            "title": "11d. Semantic cues: Number correct with cue (88=not applicable)"
+        },
+        "fu_11.fu_mintpcng": {
+            "title": "11e. Phonemic cues: Number given"
+        },
+        "fu_11.fu_mintpcnc": {
+            "title": "11f. Phonemic cues: Number correct with cue (88=not applicable)"
+        },
+        "fu_12.fu_udsverfc": {
+            "title": "12a. Number of correct F-words generated in 1 minute (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 12d.)"
+        },
+        "fu_12.fu_udsverfn": {
+            "title": "12b. Number of F-words repeated in 1 minute"
+        },
+        "fu_12.fu_udsvernf": {
+            "title": "12c. Number of F-words and rule violation errors in 1 minute"
+        },
+        "fu_12.fu_udsverlc": {
+            "title": "12d. Number of correct L-words generated in 1 minute (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 13a.)"
+        },
+        "fu_12.fu_udsverlr": {
+            "title": "12e. Number of L-words repeated in 1 minute"
+        },
+        "fu_12.fu_udsverln": {
+            "title": "12f. Number of non-L-words and rule violation errors in 1 minute"
+        },
+        "fu_12.fu_udsvertn": {
+            "title": "12g. TOTAL number of correct F-words and L-words"
+        },
+        "fu_12.fu_udsverte": {
+            "title": "12h. TOTAL number of F-words and L-words repetition errors"
+        },
+        "fu_12.fu_udsverti": {
+            "title": "12i. TOTAL number of non-F/L-words and rule violation errors"
+        },
+        "fu_13.fu_cogstat_c": {
+            "title": "13a. Per the clinician (e.g., neuropsychologist, behavioral neurologist, or other suitably qualified clinician), based on the UDS neuropsychological examination, the subject's cognitive status is deemed:"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_1.fu_mocacomp": {
+            "title": "1a. Was any part of the MoCA administered?"
+        },
+        "fu_1.fu_mocareas": {
+            "title": "1a1. Was any part of MoCA administered?  If no, enter reason code, 95-98)"
+        },
+        "fu_1.fu_mocaloc": {
+            "title": "1b. MoCA was administered:"
+        },
+        "fu_1.fu_mocalan": {
+            "title": "1c. Language of MoCA administration:"
+        },
+        "fu_1.fu_mocalanx": {
+            "title": "1c1. Specify language of MoCA administration"
+        },
+        "fu_1.fu_mocavis": {
+            "title": "1d. Subject was unable to complete one or more sections due to visual impairment: "
+        },
+        "fu_1.fu_mocahear": {
+            "title": "1e. Subject was unable to complete one or more sections due to hearing impairment: "
+        },
+        "fu_1.fu_mocatots": {
+            "title": "1f. TOTAL RAW SCORE - UNCORRECTED (Not corrected for education or visual/hearing impairment)  (Enter 88 if any of the following MoCA items where not administered:  1g-1l, 1n-1t, 1w-1bb)"
+        },
+        "fu_1.fu_mocatrai": {
+            "title": "1g. Visuospatial/executive -- Trails"
+        },
+        "fu_1.fu_mocacube": {
+            "title": "1h. Visuospatial/executive -- Cube"
+        },
+        "fu_1.fu_mocacloc": {
+            "title": "1i. Visuospatial/executive -- Clock contour"
+        },
+        "fu_1.fu_mocaclon": {
+            "title": "1j.  Visuospatial/executive -- Clock numbers"
+        },
+        "fu_1.fu_mocacloh": {
+            "title": "1k. Visuospatial/executive -- Clock hands"
+        },
+        "fu_1.fu_mocanami": {
+            "title": "1l.  Language -- Naming"
+        },
+        "fu_1.fu_mocaregi": {
+            "title": "1m. Memory -- Registration (two trials)"
+        },
+        "fu_1.fu_mocadigi": {
+            "title": "1n. Attention -- Digits"
+        },
+        "fu_1.fu_mocalett": {
+            "title": "1o. Attention -- Letter A"
+        },
+        "fu_1.fu_mocaser": {
+            "title": "1p. Attention -- Serial 7s"
+        },
+        "fu_1.fu_mocarepe": {
+            "title": "1q. Language -- Repetition"
+        },
+        "fu_1.fu_mocaflue": {
+            "title": "1r. Language -- Fluency"
+        },
+        "fu_1.fu_mocaabst": {
+            "title": "1s. Abstraction"
+        },
+        "fu_1.fu_mocarecn": {
+            "title": "1t. Delayed recall -- No cue"
+        },
+        "fu_1.fu_mocarecc": {
+            "title": "1u. Delayed recall -- Category cue"
+        },
+        "fu_1.fu_mocarecr": {
+            "title": "1v. Delayed recall -- Recognition"
+        },
+        "fu_1.fu_mocaordt": {
+            "title": "1w. Orientation -- Date"
+        },
+        "fu_1.fu_mocaormo": {
+            "title": "1x. Orientation -- Month"
+        },
+        "fu_1.fu_mocaoryr": {
+            "title": "1y. Orientation -- Year"
+        },
+        "fu_1.fu_mocaordy": {
+            "title": "1z. Orientation -- Day"
+        },
+        "fu_1.fu_mocaorpl": {
+            "title": "1aa. Orientation -- Place"
+        },
+        "fu_1.fu_mocaorct": {
+            "title": "1bb. Orientation -- City"
+        },
+        "fu_2.fu_npsycloc_c": {
+            "title": "2a. The tests following the MoCA were administered:"
+        },
+        "fu_2.fu_npsylan_c": {
+            "title": "2b. Test following MoCA:  Language of test administration."
+        },
+        "fu_2.fu_npsylanx_c": {
+            "title": "2b1. Other language of tests following the MoCA:"
+        },
+        "fu_3.fu_craftvrs": {
+            "title": "3a. Total story units recalled, verbatim scoring (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 4a.)"
+        },
+        "fu_3.fu_crafturs": {
+            "title": "3b. Total story units recalled, paraphrase scoring (0-25)"
+        },
+        "fu_4.fu_udsbentc": {
+            "title": "4a. Total score for copy of Benson figure (If test not completed, enter reason code, 95-98)"
+        },
+        "fu_5.fu_digforct": {
+            "title": "5a. Number of correct trials (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 6a.)"
+        },
+        "fu_5.fu_digforsl": {
+            "title": "5b. Longest span forward"
+        },
+        "fu_6.fu_digbacct": {
+            "title": "6a. Number of correct trials (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 7a.)"
+        },
+        "fu_6.fu_digbacls": {
+            "title": "6b. Longest span backward"
+        },
+        "fu_7.fu_animals_c": {
+            "title": "7a.  Animals: Total number of animals named in 60 seconds (If test not completed, enter reason code, 95-98)"
+        },
+        "fu_7.fu_veg_c": {
+            "title": "7b.  Vegetables: Total number of vegetables named in 60 seconds (If test not completed, enter reason code, 95-98)"
+        },
+        "fu_8.fu_traila_c": {
+            "title": "8a. PART A: Total number of seconds to complete (if not finished by 150 seconds, enter 150) (If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 8b.)"
+        },
+        "fu_8.fu_trailarr_c": {
+            "title": "8a1. Number of commission errors"
+        },
+        "fu_8.fu_trailali_c": {
+            "title": "8a2. Number of correct lines"
+        },
+        "fu_8.fu_trailb_c": {
+            "title": "8b. PART B: Total number of seconds to complete (if not finished by 300 seconds, enter 300)  (If test not completed, enter reason code, 995-998, and SKIP TO QUESTION 9a.)"
+        },
+        "fu_8.fu_trailbrr_c": {
+            "title": "8b1. Number of commission errors"
+        },
+        "fu_8.fu_trailbli_c": {
+            "title": "8b2. Number of correct lines"
+        },
+        "fu_9.fu_craftdvr": {
+            "title": "9a. Total story units recalled, verbatim scoring (If test not completed, enter reason code, 95-98, and SKIP TO QUESTION 10a.)"
+        },
+        "fu_9.fu_craftdre": {
+            "title": "9b. Total story units recalled, paraphrase scoring (0-25)"
+        },
+        "fu_9.fu_craftdti": {
+            "title": "9c. Delay time (minutes) (99=Unknown)"
+        },
+        "fu_9.fu_craftcue": {
+            "title": "9d. Cue (boy) needed"
+        },
+        "fu_10.fu_udsbentd": {
+            "title": "10a. Total score for drawing of Benson figure following 10- to 15-minute delay (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 11a.)"
+        },
+        "fu_10.fu_udsbenrs": {
+            "title": "10b. Recognized original stimulus from among four options? "
+        },
+        "fu_11.fu_minttots": {
+            "title": "11a. Total score (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 12a.)"
+        },
+        "fu_11.fu_minttotw": {
+            "title": "11b. Total correct without semantic cue"
+        },
+        "fu_11.fu_mintscng": {
+            "title": "11c. Semantic cues: Number given"
+        },
+        "fu_11.fu_mintscnc": {
+            "title": "11d. Semantic cues: Number correct with cue (88=not applicable)"
+        },
+        "fu_11.fu_mintpcng": {
+            "title": "11e. Phonemic cues: Number given"
+        },
+        "fu_11.fu_mintpcnc": {
+            "title": "11f. Phonemic cues: Number correct with cue (88=not applicable)"
+        },
+        "fu_12.fu_udsverfc": {
+            "title": "12a. Number of correct F-words generated in 1 minute (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 12d.)"
+        },
+        "fu_12.fu_udsverfn": {
+            "title": "12b. Number of F-words repeated in 1 minute"
+        },
+        "fu_12.fu_udsvernf": {
+            "title": "12c. Number of F-words and rule violation errors in 1 minute"
+        },
+        "fu_12.fu_udsverlc": {
+            "title": "12d. Number of correct L-words generated in 1 minute (If test not completed, enter reason code, 95-98) and SKIP TO QUESTION 13a.)"
+        },
+        "fu_12.fu_udsverlr": {
+            "title": "12e. Number of L-words repeated in 1 minute"
+        },
+        "fu_12.fu_udsverln": {
+            "title": "12f. Number of non-L-words and rule violation errors in 1 minute"
+        },
+        "fu_12.fu_udsvertn": {
+            "title": "12g. TOTAL number of correct F-words and L-words"
+        },
+        "fu_12.fu_udsverte": {
+            "title": "12h. TOTAL number of F-words and L-words repetition errors"
+        },
+        "fu_12.fu_udsverti": {
+            "title": "12i. TOTAL number of non-F/L-words and rule violation errors"
+        },
+        "fu_13.fu_cogstat_c": {
+            "title": "13a. Per the clinician (e.g., neuropsychologist, behavioral neurologist, or other suitably qualified clinician), based on the UDS neuropsychological examination, the subject's cognitive status is deemed:"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "fu_1.fu_mocacomp": 1.0,
+        "fu_1.fu_mocareas": 1.0,
+        "fu_1.fu_mocaloc": 1.0,
+        "fu_1.fu_mocalan": 1.0,
+        "fu_1.fu_mocalanx": 1.0,
+        "fu_1.fu_mocavis": 1.0,
+        "fu_1.fu_mocahear": 1.0,
+        "fu_1.fu_mocatots": 1.0,
+        "fu_1.fu_mocatrai": 1.0,
+        "fu_1.fu_mocacube": 1.0,
+        "fu_1.fu_mocacloc": 1.0,
+        "fu_1.fu_mocaclon": 1.0,
+        "fu_1.fu_mocacloh": 1.0,
+        "fu_1.fu_mocanami": 1.0,
+        "fu_1.fu_mocaregi": 1.0,
+        "fu_1.fu_mocadigi": 1.0,
+        "fu_1.fu_mocalett": 1.0,
+        "fu_1.fu_mocaser": 1.0,
+        "fu_1.fu_mocarepe": 1.0,
+        "fu_1.fu_mocaflue": 1.0,
+        "fu_1.fu_mocaabst": 1.0,
+        "fu_1.fu_mocarecn": 1.0,
+        "fu_1.fu_mocarecc": 1.0,
+        "fu_1.fu_mocarecr": 1.0,
+        "fu_1.fu_mocaordt": 1.0,
+        "fu_1.fu_mocaormo": 1.0,
+        "fu_1.fu_mocaoryr": 1.0,
+        "fu_1.fu_mocaordy": 1.0,
+        "fu_1.fu_mocaorpl": 1.0,
+        "fu_1.fu_mocaorct": 1.0,
+        "fu_2.fu_npsycloc_c": 1.0,
+        "fu_2.fu_npsylan_c": 1.0,
+        "fu_2.fu_npsylanx_c": 1.0,
+        "fu_3.fu_craftvrs": 1.0,
+        "fu_3.fu_crafturs": 1.0,
+        "fu_4.fu_udsbentc": 1.0,
+        "fu_5.fu_digforct": 1.0,
+        "fu_5.fu_digforsl": 1.0,
+        "fu_6.fu_digbacct": 1.0,
+        "fu_6.fu_digbacls": 1.0,
+        "fu_7.fu_animals_c": 1.0,
+        "fu_7.fu_veg_c": 1.0,
+        "fu_8.fu_traila_c": 1.0,
+        "fu_8.fu_trailarr_c": 1.0,
+        "fu_8.fu_trailali_c": 1.0,
+        "fu_8.fu_trailb_c": 1.0,
+        "fu_8.fu_trailbrr_c": 1.0,
+        "fu_8.fu_trailbli_c": 1.0,
+        "fu_9.fu_craftdvr": 1.0,
+        "fu_9.fu_craftdre": 1.0,
+        "fu_9.fu_craftdti": 1.0,
+        "fu_9.fu_craftcue": 1.0,
+        "fu_10.fu_udsbentd": 1.0,
+        "fu_10.fu_udsbenrs": 1.0,
+        "fu_11.fu_minttots": 1.0,
+        "fu_11.fu_minttotw": 1.0,
+        "fu_11.fu_mintscng": 1.0,
+        "fu_11.fu_mintscnc": 1.0,
+        "fu_11.fu_mintpcng": 1.0,
+        "fu_11.fu_mintpcnc": 1.0,
+        "fu_12.fu_udsverfc": 1.0,
+        "fu_12.fu_udsverfn": 1.0,
+        "fu_12.fu_udsvernf": 1.0,
+        "fu_12.fu_udsverlc": 1.0,
+        "fu_12.fu_udsverlr": 1.0,
+        "fu_12.fu_udsverln": 1.0,
+        "fu_12.fu_udsvertn": 1.0,
+        "fu_12.fu_udsverte": 1.0,
+        "fu_12.fu_udsverti": 1.0,
+        "fu_13.fu_cogstat_c": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_c2v3.md"
+}

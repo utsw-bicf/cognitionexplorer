@@ -1,0 +1,789 @@
+{
+    "title": "NACC UNIFORM DATA SET (UDS) - FOLLOW-UP VISIT PACKET Form A2: Co-participant Demographics",
+    "description": "INSTRUCTIONS: This form is to be completed by intake interviewer based on co-participant's report. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form A2.Link to NACC Coding Guidebook. Check only one box per question.To print a copy of data collected for this form at previous UDS visit, go to https: //www.alz.washington.edu/MEMBER/siteprint.html",  
+    "id": "/profiles/uds_fvp_a2v3.json", 
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "patient",
+        "adcid",
+        "visdate",
+        "visitnum",
+        "initials",
+        "fu_inbirmo",
+        "fu_inbiryr",
+        "fu_insex",
+        "fu_newinf",
+        "fu_inrelto",
+        "fu_inknown",
+        "fu_inlivwth",
+        "fu_inrely"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+	"patient": {
+            "title": "Patient",
+            "description": "The patient the form belongs for.",
+            "type": "string",
+            "linkTo": "Patient"
+        },
+        "fu_inbirmo": {
+            "title": "1a. Co-participant's month of birth",
+            "description": "(MM) 1 - 12, 99 = Unknown",
+            "type": "string",
+            "pattern": "^[0]?[1-9]|[1][0-2]|[99]$"
+        },
+        "fu_inbiryr": {
+            "title": "1b. Co-participant's year of birth",
+            "description": "(YYYY) 1875 to (current year minus 15), 9999 = Unknown",
+            "type": "string",
+            "pattern": "^[1][8][7][5-9]|[1][8][8-9][0-9]|[1][9][0-9][0-9]|[2][0][0-9][0-9]|[9999]$"
+        },
+        "fu_insex": {
+            "title": "2. Co-participant's sex:",
+            "type": "string",
+            "enum": [
+                "1 Male",
+                "2 Female"
+            ]
+        },
+        "fu_newinf": {
+            "title": "3. Is this a new co-participant -- i.e., one who was not a co-participant at any past UDS visit?",
+            "description": "If No, SKIP TO QUESTION 9;If Yes, continue to 4.",
+            "type": "string",
+            "enum": [
+                "0 No (If No, SKIP TO QUESTION 9)",
+                "1 Yes"
+            ]
+        },
+        "fu_inhisp": {
+            "title": "4. Does the co-participant report being of Hispanic/Latino ethnicity (i.e., having origins from a mainly Spanish-speaking Latin American country), regardless of race?",
+            "description": "If No, SKIP TO QUESTION 5;if Unknown, SKIP TO QUESTION 5;If Yes, continue to 4a.",
+            "type": "string",
+            "enum": [
+                "0 No (If No, SKIP TO QUESTION 5)",
+                "1 Yes",
+                "9 Unknown (If Unknown, SKIP TO QUESTION 5)"
+            ]
+        },
+        "fu_inhispor": {
+            "title": "4a. If yes, what are the co-participant's reported origins?",
+            "description": "If Other, please specify in 4a1.",
+            "type": "string",
+            "enum": [
+                "1 Mexican/Chicano/Mexican-American",
+                "2 Puerto Rican",
+                "3 Cuban",
+                "4 Dominican",
+                "5 Central American",
+                "6 South American",
+                "50 Other (specify)",
+                "99 Unknown"
+            ]
+        },
+        "fu_inhispox": {
+            "title": "4a1. If other ethnic origins please specify:",
+            "type": "string"
+        },
+        "fu_inrace": {
+            "title": "5. What does co-participant report as his or her race?",
+            "description": "If Other, please specify in 5a.",
+            "type": "string",
+            "enum": [
+                "1 White",
+                "2 Black or African American",
+                "3 American Indian or Alaska Native",
+                "4 Native Hawaiian or Other Pacific Islander",
+                "5 Asian",
+                "50 Other (specify)",
+                "99 Unknown"
+            ]
+        },
+        "fu_inracex": {
+            "title": "5a.  If other race, please specify:",
+            "type": "string"
+        },
+        "fu_inrasec": {
+            "title": "6. What additional race does the co-participant report?",
+            "description": "If Other, please specify in 6a.",
+            "type": "string",
+            "enum": [
+                "1 White",
+                "2 Black or African American",
+                "3 American Indian or Alaska Native",
+                "4 Native Hawaiian or Other Pacific Islander",
+                "5 Asian",
+                "50 Other (specify)",
+                "88 None Reported",
+                "99 Unknown"
+            ]
+        },
+        "fu_inrasecx": {
+            "title": "6a. If other 2nd race, please specify:",
+            "type": "string"
+        },
+        "fu_inrater": {
+            "title": "7. What additional race, beyond those reported in questions 5 and 6, does the co-participant report?",
+            "description": "If Other, please specify in 7a.",
+            "type": "string",
+            "enum": [
+                "1 White",
+                "2 Black or African American",
+                "3 American Indian or Alaska Native",
+                "4 Native Hawaiian or other Pacific Islander",
+                "5 Asian",
+                "50 Other (specify)",
+                "88 None Reported",
+                "99 Unknown"
+            ]
+        },
+        "fu_inraterx": {
+            "title": "7a. If other 3rd race, please specify:",
+            "type": "string"
+        },
+        "fu_ineduc": {
+            "title": "8. Co-participant's years of education -- use the codes below to report the level achieved; if an attempted level is not completed, enter the number of years completed:",
+            "description": "12 = high school GED, 16 = bachelor's degree, 18 = master's degree,20 = doctorate,99 = unknown(0-36, 99=unknown)",
+            "type": "integer",
+            "enum": [
+                1,
+                2,
+                3,
+                4,
+                5,
+                6,
+                7,
+                8,
+                9,
+                10,
+                11,
+                12,
+                13,
+                14,
+                15,
+                16,
+                17,
+                18,
+                19,
+                20,
+                21,
+                22,
+                23,
+                24,
+                25,
+                26,
+                27,
+                28,
+                29,
+                30,
+                31,
+                32,
+                33,
+                34,
+                35,
+                36,
+                99
+            ]
+        },
+        "fu_inrelto": {
+            "title": "9. What is co-participant's relationship to the subject?",
+            "type": "string",
+            "enum": [
+                "1 Spouse, partner, or companion (include ex-spouse, ex-partner, fiance(e). boyfriend, girlfriend)",
+                "2 Child (by blood or through marriage or adoption)",
+                "3 Sibling (by blood or through marriage or adoption)",
+                "4 Other relative (by blood or through marriage or adoption)",
+                "5 Friend, neighbor, or someone known through family, friends, work, or community (e.g., church)",
+                "6 Paid caregiver, health care provider, or clinician"
+            ]
+        },
+        "fu_inknown": {
+            "title": "9a. How long has the co-participant known the subject?",
+            "description": "(Years) 0 - 120, 999 = Unknown",
+            "type": "string",
+            "pattern": "^[0-9][0-9]?|[1][0-1][0-9]|[1][2][0]|999$"
+        },
+        "fu_inlivwth": {
+            "title": "10. Does the co-participant live with the subject?",
+            "description": "If Yes, SKIP TO QUESTION 11;If No, continue to 10a and 10b.",
+            "comment": "",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes (If Yes, SKIP TO QUESTION 11)"
+            ]
+        },
+        "fu_invisits": {
+            "title": "10a. If no, approximate frequency of in-person visits:",
+            "type": "string",
+            "enum": [
+                "1 Daily",
+                "2 At least",
+                "3 times per week",
+                "3 Weekly",
+                "4 At least",
+                "3 times per month",
+                "5 Monthly",
+                "6 Less than once a month"
+            ]
+        },
+        "fu_incalls": {
+            "title": "10b. If no, approximate frequency of telephone contact:",
+            "type": "string",
+            "enum": [
+                "1 Daily",
+                "2 At least",
+                "3 times per week",
+                "3 Weekly",
+                "4 At least",
+                "3 times per month",
+                "5 Monthly",
+                "6 Less than once a month"
+            ]
+        },
+        "fu_inrely": {
+            "title": "11. Is there a question about the co-participant's reliability?",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        }
+    },
+  
+    "allOf":[
+        {
+            "oneOf": [
+                {
+                    "properties": {
+                        "fu_newinf": {
+                            "enum": [
+                                "0 No (If No, SKIP TO QUESTION 9)"
+                            ]
+                        }
+                    },
+                    "allOf": [
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inhisp"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inhispor"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inhispox"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inrace"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inracex"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inrasec"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inrasecx"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inrater"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_inraterx"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_ineduc"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "properties": {
+                        "fu_newinf": {
+                            "enum": [
+                                "1 Yes"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "fu_inhisp",
+                        "fu_inrace",
+                        "fu_inrasec",
+                        "fu_inrater",
+                        "fu_ineduc"
+                    ],
+                    "allOf": [
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inhisp": {
+                                            "enum": [
+                                                "1 Yes"
+                                            ]
+                                        },
+                                        "fu_inhispor": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inhispox"
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inhisp": {
+                                            "enum": [
+                                                "1 Yes"
+                                            ]
+                                        },
+                                        "fu_inhispor": {
+                                            "enum": [
+                                                "1 Mexican/Chicano/Mexican-American",
+                                                "2 Puerto Rican",
+                                                "3 Cuban",
+                                                "4 Dominican",
+                                                "5 Central American",
+                                                "6 South American",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "not": {
+                                        "required": [
+                                            "fu_inhispox"
+                                        ]
+                                    }
+                                    
+                                },
+                                {
+                                    "properties": {
+                                        "fu_inhisp": {
+                                            "enum": [
+                                                "0 No (If No, SKIP TO QUESTION 5)",
+                                                "9 Unknown (If Unknown, SKIP TO QUESTION 5)"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inhispor"
+                                                ]
+                                            }
+                                        },
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inhispox"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                }
+                               
+                               
+                            ]
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                       
+                                        "fu_inrace": {
+                                            "enum": [
+                                                "1 White",
+                                                "2 Black or African American",
+                                                "3 American Indian or Alaska Native",
+                                                "4 Native Hawaiian or Other Pacific Islander",
+                                                "5 Asian",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inracex"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inrace": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inracex"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inrasec": {
+                                            "enum": [
+                                                "1 White",
+                                                "2 Black or African American",
+                                                "3 American Indian or Alaska Native",
+                                                "4 Native Hawaiian or Other Pacific Islander",
+                                                "5 Asian",
+                                                "88 None Reported",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inrasecx"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                       
+                                        "fu_inrasec": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inrasecx"
+                                    ]
+                                }
+                            ]
+                        },
+                        {
+                            "oneOf": [
+                                {
+                                    "properties": {
+                                       
+                                        "fu_inrater": {
+                                            "enum": [
+                                                "1 White",
+                                                "2 Black or African American",
+                                                "3 American Indian or Alaska Native",
+                                                "4 Native Hawaiian or other Pacific Islander",
+                                                "5 Asian",
+                                                "88 None Reported",
+                                                "99 Unknown"
+                                            ]
+                                        }
+                                    },
+                                    "allOf": [
+                                        {
+                                            "not": {
+                                                "required": [
+                                                    "fu_inraterx"
+                                                ]
+                                            }
+                                        }
+                                    ]
+                                },
+                                {
+                                    "properties": {
+                                        
+                                        "fu_inrater": {
+                                            "enum": [
+                                                "50 Other (specify)"
+                                            ]
+                                        }
+                                    },
+                                    "required": [
+                                        "fu_inraterx"
+                                    ]
+                                }
+                            ]
+                        }
+                        
+                    ]
+                    
+                }
+            ]
+        },
+        {
+            "oneOf": [
+                {
+                    "properties": {
+                        "fu_inlivwth": {
+                            "enum": [
+                                "1 Yes (If Yes, SKIP TO QUESTION 11)"
+                            ]
+                        }
+                    },
+                    "allOf": [
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_invisits"
+                                ]
+                            }
+                        },
+                        {
+                            "not": {
+                                "required": [
+                                    "fu_incalls"
+                                ]
+                            }
+                        }
+                    ]
+                },
+                {
+                    "properties": {
+                        "fu_inlivwth": {
+                            "enum": [
+                                "0 No"
+                            ]
+                        }
+                    },
+                    "required": [
+                        "fu_invisits",
+                        "fu_incalls"
+                    ]
+                }
+            ]
+        }
+    ],
+   
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_inbirmo": {
+            "title": "1a. Co-participant's month of birth"
+        },
+        "fu_inbiryr": {
+            "title": "1b. Co-participant's year of birth"
+        },
+        "fu_insex": {
+            "title": "2. Co-participant's sex:"
+        },
+        "fu_newinf": {
+            "title": "3. Is this a new co-participant -- i.e., one who was not a co-participant at any past UDS visit?"
+        },
+        "fu_inhisp": {
+            "title": "4. Does the co-participant report being of Hispanic/Latino ethnicity (i.e., having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "fu_inhispor": {
+            "title": "4a. If yes, what are the co-participant's reported origins?"
+        },
+        "fu_inhispox": {
+            "title": "4a1. If other ethnic origins please specify:"
+        },
+        "fu_inrace": {
+            "title": "5. What does co-participant report as his or her race?"
+        },
+        "fu_inracex": {
+            "title": "5a.  If other race, please specify:"
+        },
+        "fu_inrasec": {
+            "title": "6. What additional race does the co-participant report?"
+        },
+        "fu_inrasecx": {
+            "title": "6a. If other 2nd race, please specify:"
+        },
+        "fu_inrater": {
+            "title": "7. What additional race, beyond those reported in questions 5 and 6, does the co-participant report?"
+        },
+        "fu_inraterx": {
+            "title": "7a. If other 3rd race, please specify:"
+        },
+        "fu_ineduc": {
+            "title": "8. Co-participant's years of education -- use the codes below to report the level achieved; if an attempted level is not completed, enter the number of years completed:"
+        },
+        "fu_inrelto": {
+            "title": "9. What is co-participant's relationship to the subject?"
+        },
+        "fu_inknown": {
+            "title": "9a. How long has the co-participant known the subject?"
+        },
+        "fu_inlivwth": {
+            "title": "10. Does the co-participant live with the subject?"
+        },
+        "fu_invisits": {
+            "title": "10a. If no, approximate frequency of in-person visits:"
+        },
+        "fu_incalls": {
+            "title": "10b. If no, approximate frequency of telephone contact:"
+        },
+        "fu_inrely": {
+            "title": "11. Is there a question about the co-participant's reliability?"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_inbirmo": {
+            "title": "1a. Co-participant's month of birth"
+        },
+        "fu_inbiryr": {
+            "title": "1b. Co-participant's year of birth"
+        },
+        "fu_insex": {
+            "title": "2. Co-participant's sex:"
+        },
+        "fu_newinf": {
+            "title": "3. Is this a new co-participant -- i.e., one who was not a co-participant at any past UDS visit?"
+        },
+        "fu_inhisp": {
+            "title": "4. Does the co-participant report being of Hispanic/Latino ethnicity (i.e., having origins from a mainly Spanish-speaking Latin American country), regardless of race?"
+        },
+        "fu_inhispor": {
+            "title": "4a. If yes, what are the co-participant's reported origins?"
+        },
+        "fu_inhispox": {
+            "title": "4a1. If other ethnic origins please specify:"
+        },
+        "fu_inrace": {
+            "title": "5. What does co-participant report as his or her race?"
+        },
+        "fu_inracex": {
+            "title": "5a.  If other race, please specify:"
+        },
+        "fu_inrasec": {
+            "title": "6. What additional race does the co-participant report?"
+        },
+        "fu_inrasecx": {
+            "title": "6a. If other 2nd race, please specify:"
+        },
+        "fu_inrater": {
+            "title": "7. What additional race, beyond those reported in questions 5 and 6, does the co-participant report?"
+        },
+        "fu_inraterx": {
+            "title": "7a. If other 3rd race, please specify:"
+        },
+        "fu_ineduc": {
+            "title": "8. Co-participant's years of education -- use the codes below to report the level achieved; if an attempted level is not completed, enter the number of years completed:"
+        },
+        "fu_inrelto": {
+            "title": "9. What is co-participant's relationship to the subject?"
+        },
+        "fu_inknown": {
+            "title": "9a. How long has the co-participant known the subject?"
+        },
+        "fu_inlivwth": {
+            "title": "10. Does the co-participant live with the subject?"
+        },
+        "fu_invisits": {
+            "title": "10a. If no, approximate frequency of in-person visits:"
+        },
+        "fu_incalls": {
+            "title": "10b. If no, approximate frequency of telephone contact:"
+        },
+        "fu_inrely": {
+            "title": "11. Is there a question about the co-participant's reliability?"
+        }
+    },
+    "boost_values": {
+        "patient":1.0,
+        "fu_inbirmo": 1.0,
+        "fu_inbiryr": 1.0,
+        "fu_insex": 1.0,
+        "fu_newinf": 1.0,
+        "fu_inhisp": 1.0,
+        "fu_inhispor": 1.0,
+        "fu_inhispox": 1.0,
+        "fu_inrace": 1.0,
+        "fu_inracex": 1.0,
+        "fu_inrasec": 1.0,
+        "fu_inrasecx": 1.0,
+        "fu_inrater": 1.0,
+        "fu_inraterx": 1.0,
+        "fu_ineduc": 1.0,
+        "fu_inrelto": 1.0,
+        "fu_inknown": 1.0,
+        "fu_inlivwth": 1.0,
+        "fu_invisits": 1.0,
+        "fu_incalls": 1.0,
+        "fu_inrely": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_a2v3.md"
+}

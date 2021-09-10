@@ -1,0 +1,1000 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW-UP FORM B9: CLINICIAN JUDGMENT OF SYMPTOMS",
+    "description": "INSTRUCTIONS: This form is to be completed by the clinician. For additional clarification and examples, see UDS \nCoding Guidebook for Follow-up Visit Packet, Form B9. \nLink to NACC Coding Guidebook Check only one box per question.",
+    "id": "/profiles/uds_fvp_b9v3.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+   
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "fu_decl_memo": {
+            "title": "Declines in memory reported by subject and co-participant",
+            "type": "object",
+            "properties": {
+                "fu_decsub": {
+                    "title": "1. Does the subject report a decline in memory (relative to previously attained abilities)?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "8 Could not be assessed/subject is too impaired"
+                    ]
+                },
+                "fu_decin": {
+                    "title": "2. Does the co-participant report a decline in the subject's memory (relative to previously attained abilities)?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "8 There is no co-participant"
+                    ]
+                }
+            }
+        },
+        "fu_cogn_symp": {
+            "title": "Cognitive symptoms",
+            "type": "object",
+            "properties": {
+                "fu_decclcog": {
+                    "title": "3. Based on the clinician's judgment, is the subject currently experiencing meaningful impairment in cognition?",
+                    "type": "string",
+                    "enum": [
+                        "0 No (If no, SKIP TO QUESTION 8)",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "fu_meaning_impair": {
+            "title": "4. Indicate whether the subject currently is meaningfully impaired, relative to previously attained abilities, in the following cognitive domains, or has fluctuating cognition:",
+            "type": "object",
+            "properties": {
+                "fu_cogmem": {
+                    "title": "4a.  Memory : For example, does s/he forget conversations and/or dates, repeat questions and/or statements, misplace things more than usual, forget names of people s/he knows well?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_cogori": {
+                    "title": "4b.  Orientation : For example, does s/he have trouble knowing the day, month, and year, or not recognize familiar locations, or get lost in familiar locations?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_cogjudg": {
+                    "title": "4c.  Executive function - judgment, planning, problem-solving : Does s/he have trouble handling money (e.g., tips), paying bills, preparing meals, shopping, using appliances, handling medications, driving?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_coglang": {
+                    "title": "4d.  Language : Does s/he have hesitant speech, have trouble finding words, use inappropriate words without self-correction?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_cogvis": {
+                    "title": "4e.  Visuospatial function : Does s/he have difficulty interpreting visual stimuli and finding his/her way around?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_cogattn": {
+                    "title": "4f.  Attention, concentration : Does the subject have a short attention span or limited ability to concentrate? Is s/he easily distracted?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_cogfluc": {
+                    "title": "4g.  Fluctuating cognition : Does the subject exhibit pronounced variation in attention and alertness, noticeably over hours or days - for example, long lapses or periods of staring into space, or times when his/her ideas have a disorganized flow?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_display_cogflago": {
+                    "title": "This is a good place to add piping to display age when fluctuating cognition began from all visits.",
+                    "type": "object",
+                    "properties": {
+                        "fu_cogflago": {
+                            "title": "4g1. If yes, at what age did the fluctuating cognition begin? (The clinician must use his/her best judgment to estimate an age of onset.)",
+                            "description": "777 = Age of onset provided at previous UDS visit;((15-110; 777 = provided at previous visit))",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^1[0][0-9]$|^110$|^777$"
+                        }
+                    }
+                },
+                "fu_cogothr": {
+                    "title": "4h. Other cognitive symptoms, specify:",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "fu_cogothrx": {
+                    "title": "4h1. If yes, there are other cognitive symptoms, specify:",
+                    "type": "string"
+                },
+                "fu_cogfpred": {
+                    "title": "5. Indicate the  predominant  symptom that was first recognized as a decline in the subject's cognition:",
+                    "description": "NOTE: Enter 0 if this information was provided on a previously submitted Form B9. ",
+                    "type": "string",
+                    "enum": [
+                        "0 Assessed at a previous UDS visit",
+                        "1 Memory",
+                        "2 Orientation",
+                        "3 Executive function - judgment, planning, problem-solving",
+                        "4 Language",
+                        "5 Visuospatial function",
+                        "6 Attention/concentration",
+                        "7 Fluctuating cognition",
+                        "8 Other (SPECIFY):",
+                        "99 Unknown"
+                    ]
+                },
+                "fu_cogfprex": {
+                    "title": "5a. If there are other predominant symptoms, specify:",
+                    "type": "string"
+                },
+                "fu_cogmode": {
+                    "title": "6. Mode of onset of cognitive symptoms:",
+                    "type": "string",
+                    "enum": [
+                        "1 Gradual",
+                        "2 Subacute",
+                        "3 Abrupt",
+                        "4 Other (SPECIFY):",
+                        "99 Unknown"
+                    ]
+                },
+                "fu_cogmodex": {
+                    "title": "6a. If there are other mode of onset of cognitive symptoms, specify:",
+                    "type": "string"
+                },
+                "fu_decage": {
+                    "title": "7. Based on the clinician's assessment, at what age did the cognitive decline begin? (The clinician must use his/her best judgment to estimate an age of onset.)",
+                    "description": "777 = Age of onset provided at previous UDS visit; ((15-110; 777 = provided at previous visit))",
+                    "type": "string",
+                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^1[0][0-9]$|^110$|^777$"
+                }
+            }
+        },
+        "fu_bhvr_symp": {
+            "title": "Behavioral symptoms",
+            "type": "object",
+            "properties": {
+                "fu_decclbe": {
+                    "title": "8. Based on the clinician's judgment, is the subject currently experiencing any kind of behavioral symptoms?",
+                    "type": "string",
+                    "enum": [
+                        "0 No (If No, SKIP TO QUESTION 13)",
+                        "1 Yes"
+                    ]
+                },
+                "fu_bhvr_change": {
+                    "title": "9. Indicate whether the subject currently manifests meaningful change in behavior in any of the following ways:",
+                    "type": "object",
+                    "properties": {
+                        "fu_beapathy": {
+                            "title": "9a.  Apathy, withdrawal : Has the subject lost interest in or displayed a reduced ability to initiate usual activities and social interaction, such as conversing with family and/or friends?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_bedep": {
+                            "title": "9b.  Depressed mood : Has the subject seemed depressed for more than two weeks at a time, e.g., shown loss of interest or pleasure in nearly all activities, sadness, hopelessness, loss of appetite, fatigue?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_pcycho": {
+                            "title": "9c. Psychosis",
+                            "type": "object",
+                            "properties": {
+                                "fu_bevhall": {
+                                    "title": "9c1. Visual hallucinations",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes",
+                                        "9 Unknown"
+                                    ]
+                                },
+                                "fu_bevwell": {
+                                    "title": "9c1a. If Yes, are the hallucinations well formed and detailed?",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes",
+                                        "9 Unknown"
+                                    ]
+                                },
+                                "fu_bevhago": {
+                                    "title": "9c1b. If well formed, clear-cut visual hallucinations, at what age did these visual hallucinations begin? (The clinician must use his/her best judgment to estimate an age of onset.)",
+                                    "description": "777 = Age of onset provided at previous UDS visit; 888 = N/A, not well-formed; ((15-110; 777 = provided at previous visit; 888 = N/A, not well-formed))",
+                                    "type": "string",
+                                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^1[0][0-9]$|^110$|^777$|^888$"
+                                },
+                                "fu_beahall": {
+                                    "title": "9c2. Auditory hallucinations",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes",
+                                        "9 Unknown"
+                                    ]
+                                },
+                                "fu_bedel": {
+                                    "title": "9c3. Abnormal, false, or delusional beliefs",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes",
+                                        "9 Unknown"
+                                    ]
+                                }
+                            }
+                        },
+                        "fu_bedisin": {
+                            "title": "9d.  Disinhibition : Does the subject use inappropriate coarse language or exhibit inappropriate speech or behaviors in public or in the home? Does s/he talk personally to strangers or have disregard for personal hygiene?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_beirrit": {
+                            "title": "9e.  Irritability : Does the subject overreact, e.g., by shouting at family members or others?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_beagit": {
+                            "title": "9f.  Agitation : Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_beperch": {
+                            "title": "9g.  Personality change : Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_berem": {
+                            "title": "9h.  REM sleep behavior disorder : While sleeping, does the subject appear to act out his/her dreams (e.g., punch or flail their arms, shout, or scream)?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_beremago": {
+                            "title": "9h1. If yes, at what age did the REM sleep behavior disorder begin? (The clinician must use his/her best judgment to estimate an age of onset.)",
+                            "description": "777 = Age of onset provided at previous UDS visit; ((15-110; 777 = provided at previous visit))",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^1[0][0-9]$|^110$|^777$"
+                        },
+                        "fu_beanx": {
+                            "title": "9i.  Anxiety : For example, does s/he show signs of nervousness (e.g., frequent sighing, anxious facial expressions, or hand-wringing) and/or excessive worrying?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_beothr": {
+                            "title": "9j. Other behavioral symptoms, specify:",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes"
+                            ]
+                        },
+                        "fu_beothrx": {
+                            "title": "9j1. If there are other behavioral symptoms, specify:",
+                            "type": "string"
+                        }
+                    }
+                },
+                "fu_befpred": {
+                    "title": "10. Indicate the  predominant  symptom that was first recognized as a decline in the subject's behavior: ",
+                    "description": "NOTE: Enter 0 if this information was provided on a previously submitted Form B9. ",
+                    "type": "string",
+                    "enum": [
+                        "0 Assessed at a previous UDS visit",
+                        "1 Apathy/withdrawal",
+                        "2 Depressed mood",
+                        "3 Psychosis",
+                        "4 Disinhibition",
+                        "5 Irritability",
+                        "6 Agitation",
+                        "7 Personality change",
+                        "8 REM sleep behavior disorder",
+                        "9 Anxiety",
+                        "10 Other (SPECIFY):",
+                        "99 Unknown"
+                    ]
+                },
+                "fu_befpredx": {
+                    "title": "10a. If there are other predominant symptoms, specify:",
+                    "type": "string"
+                },
+                "fu_bemode": {
+                    "title": "11. Mode of onset of behavioral symptoms:",
+                    "type": "string",
+                    "enum": [
+                        "1 Gradual",
+                        "2 Subacute",
+                        "3 Abrupt",
+                        "4 Other (SPECIFY):",
+                        "99 Unknown"
+                    ]
+                },
+                "fu_bemodex": {
+                    "title": "11a. If there are other mode of onset of behavioral symptoms, specify:",
+                    "type": "string"
+                },
+                "fu_beage": {
+                    "title": "12. Based on the clinician's assessment, at what age did the behavioral symptoms begin? (The clinician must use his/her best judgment to estimate an age of onset.)",
+                    "description": "777 = Age of onset provided at previous UDS visit; ((15-110; 777 = provided at previous visit))",
+                    "type": "string",
+                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^1[0][0-9]$|^110$|^777$"
+                }
+            }
+        },
+        "fu_motor_symp": {
+            "title": "Motor symptoms",
+            "type": "object",
+            "properties": {
+                "fu_decclmot": {
+                    "title": "13. Based on the clinician's judgment, is the subject currently experiencing any motor symptoms?",
+                    "type": "string",
+                    "enum": [
+                        "0 No (If No, SKIP TO QUESTION 20)",
+                        "1 Yes"
+                    ]
+                },
+                "fu_motor_meaning_change": {
+                    "title": "14. Indicate whether the subject currently has meaningful change in motor function in any of the following areas:",
+                    "type": "object",
+                    "properties": {
+                        "fu_mogait": {
+                            "title": "14a.  Gait disorder : Has the subject's walking changed, not specifically due to arthritis or an injury? Is s/he unsteady, or does s/he shuffle when walking, have little to no arm-swing, or drag a foot?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_mofalls": {
+                            "title": "14b.  Falls : Does the subject fall more than usual?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_motrem": {
+                            "title": "14c.  Tremor : Has the subject had rhythmic shaking, especially in the hands, arms, legs, head, mouth, or tongue?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_moslow": {
+                            "title": "14d.  Slowness : Has the subject noticeably slowed down in walking, moving, or writing by hand, other than due to an injury or illness? Has his/her facial expression changed or become more wooden, or masked and unexpressive?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        }
+                    }
+                },
+                "fu_mofrst": {
+                    "title": "15. Indicate the  predominant  symptom that was first recognized as a decline in the subject's motor function:  NOTE: Enter 0 if this information was provided on a previously submitted Form B9. ",
+                    "type": "string",
+                    "enum": [
+                        "0 Assessed at a previous UDS visit",
+                        "1 Gait disorder",
+                        "2 Falls",
+                        "3 Tremor",
+                        "4 Slowness",
+                        "99 Unknown"
+                    ]
+                },
+                "fu_momode": {
+                    "title": "16. Mode of onset of motor symptoms:",
+                    "type": "string",
+                    "enum": [
+                        "1 Gradual",
+                        "2 Subacute",
+                        "3 Abrupt",
+                        "4 Other (SPECIFY):",
+                        "99 Unknown"
+                    ]
+                },
+                "fu_momodex": {
+                    "title": "16a. If there are other mode of onset of motor symptoms, specify:",
+                    "type": "string"
+                },
+                "fu_momopark": {
+                    "title": "17. Were changes in motor function suggestive of parkinsonism? (If No or Unknown, SKIP TO QUESTION 18)",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_parkage": {
+                    "title": "17a. If Yes, at what age did the motor symptoms suggestive of parkinsonism begin? (The clinician must use his/her best judgment to estimate an age of onset.)",
+                    "description": "777 = Age of onset provided at previous UDS visit; ((15-110; 777 = provided at previous visit))",
+                    "type": "string",
+                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^1[0][0-9]$|^110$|^777$"
+                },
+                "fu_momoals": {
+                    "title": "18. Were changes in motor function suggestive of amyotrophic lateral sclerosis? (If No or Unknown, SKIP TO QUESTION 19)",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_alsage": {
+                    "title": "18a. If Yes, at what age did the motor symptoms suggestive of ALS begin? (The clinician must use his/her best judgment to estimate an age of onset.)",
+                    "description": "777 = Age of onset provided at previous UDS visit; ((15-110; 777 = provided at previous visit))",
+                    "type": "string",
+                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^1[0][0-9]$|^110$|^777$"
+                },
+                "fu_moage": {
+                    "title": "19. Based on the clinician's assessment, at what age did the motor changes begin? (The clinician must use his/her best judgment to estimate an age of onset of motor changes.)",
+                    "description": "777 = Age of onset provided at previous UDS visit; ((15-110; 777 = provided at previous visit))",
+                    "type": "string",
+                    "pattern": "^1[5-9]$|^[2-9][0-9]$|^1[0][0-9]$|^110$|^777$"
+                }
+            }
+        },
+        "fu_overall_course": {
+            "title": "Overall course of decline and predominant domain",
+            "type": "object",
+            "properties": {
+                "fu_course": {
+                    "title": "20. Overall course of decline of cognitive / behavioral / motor syndrome:",
+                    "type": "string",
+                    "enum": [
+                        "1 Gradually progressive",
+                        "2 Stepwise",
+                        "3 Static",
+                        "4 Fluctuating",
+                        "5 Improved",
+                        "8 N/A",
+                        "9 Unknown"
+                    ]
+                },
+                "fu_frstchg": {
+                    "title": "21. Indicate the predominant domain that was first recognized as changed in the subject:  NOTE: Enter 0 if this information was provided on a previously submitted Form B9. ",
+                    "type": "string",
+                    "enum": [
+                        "0 Assessed at a previous UDS visit",
+                        "1 Cognition",
+                        "2 Behavior",
+                        "3 Motor function",
+                        "8 N/A",
+                        "9 Unknown"
+                    ]
+                }
+            }
+        },
+        "fu_candidate": {
+            "title": "Candidate for further evaluation for Lewy body disease or frontotemporal lobar degeneration",
+            "type": "object",
+            "properties": {
+                "fu_lbdeval": {
+                    "title": "22. Is the subject a potential candidate for further evaluation for Lewy body disease?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                },
+                "fu_ftldeval": {
+                    "title": "23. Is the subject a potential candidate for further evaluation for frontotemporal lobar degeneration?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_decl_memo.fu_decsub": {
+            "title": "1. Does the subject report a decline in memory (relative to previously attained abilities)?"
+        },
+        "fu_decl_memo.fu_decin": {
+            "title": "2. Does the co-participant report a decline in the subject's memory (relative to previously attained abilities)?"
+        },
+        "fu_cogn_symp.fu_decclcog": {
+            "title": "3. Based on the clinician's judgment, is the subject currently experiencing meaningful impairment in cognition?"
+        },
+        "fu_meaning_impair.fu_cogmem": {
+            "title": "4a.  Memory : For example, does s/he forget conversations and/or dates, repeat questions and/or statements, misplace things more than usual, forget names of people s/he knows well?"
+        },
+        "fu_meaning_impair.fu_cogori": {
+            "title": "4b.  Orientation : For example, does s/he have trouble knowing the day, month, and year, or not recognize familiar locations, or get lost in familiar locations?"
+        },
+        "fu_meaning_impair.fu_cogjudg": {
+            "title": "4c.  Executive function - judgment, planning, problem-solving : Does s/he have trouble handling money (e.g., tips), paying bills, preparing meals, shopping, using appliances, handling medications, driving?"
+        },
+        "fu_meaning_impair.fu_coglang": {
+            "title": "4d.  Language : Does s/he have hesitant speech, have trouble finding words, use inappropriate words without self-correction?"
+        },
+        "fu_meaning_impair.fu_cogvis": {
+            "title": "4e.  Visuospatial function : Does s/he have difficulty interpreting visual stimuli and finding his/her way around?"
+        },
+        "fu_meaning_impair.fu_cogattn": {
+            "title": "4f.  Attention, concentration : Does the subject have a short attention span or limited ability to concentrate? Is s/he easily distracted?"
+        },
+        "fu_meaning_impair.fu_cogfluc": {
+            "title": "4g.  Fluctuating cognition : Does the subject exhibit pronounced variation in attention and alertness, noticeably over hours or days - for example, long lapses or periods of staring into space, or times when his/her ideas have a disorganized flow?"
+        },
+        "fu_meaning_impair.fu_display_cogflago.fu_cogflago": {
+            "title": "4g1. If yes, at what age did the fluctuating cognition begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_meaning_impair.fu_cogothr": {
+            "title": "4h. Other cognitive symptoms, specify:"
+        },
+        "fu_meaning_impair.fu_cogothrx": {
+            "title": "4h1. If yes, there are other cognitive symptoms, specify:"
+        },
+        "fu_meaning_impair.fu_cogfpred": {
+            "title": "5. Indicate the  predominant  symptom that was first recognized as a decline in the subject's cognition:"
+        },
+        "fu_meaning_impair.fu_cogfprex": {
+            "title": "5a. If there are other predominant symptoms, specify:"
+        },
+        "fu_meaning_impair.fu_cogmode": {
+            "title": "6. Mode of onset of cognitive symptoms:"
+        },
+        "fu_meaning_impair.fu_cogmodex": {
+            "title": "6a. If there are other mode of onset of cognitive symptoms, specify:"
+        },
+        "fu_meaning_impair.fu_decage": {
+            "title": "7. Based on the clinician's assessment, at what age did the cognitive decline begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_bhvr_symp.fu_decclbe": {
+            "title": "8. Based on the clinician's judgment, is the subject currently experiencing any kind of behavioral symptoms?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beapathy": {
+            "title": "9a.  Apathy, withdrawal : Has the subject lost interest in or displayed a reduced ability to initiate usual activities and social interaction, such as conversing with family and/or friends?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_bedep": {
+            "title": "9b.  Depressed mood : Has the subject seemed depressed for more than two weeks at a time, e.g., shown loss of interest or pleasure in nearly all activities, sadness, hopelessness, loss of appetite, fatigue?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevhall": {
+            "title": "9c1. Visual hallucinations"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevwell": {
+            "title": "9c1a. If Yes, are the hallucinations well formed and detailed?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevhago": {
+            "title": "9c1b. If well formed, clear-cut visual hallucinations, at what age did these visual hallucinations begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_beahall": {
+            "title": "9c2. Auditory hallucinations"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bedel": {
+            "title": "9c3. Abnormal, false, or delusional beliefs"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_bedisin": {
+            "title": "9d.  Disinhibition : Does the subject use inappropriate coarse language or exhibit inappropriate speech or behaviors in public or in the home? Does s/he talk personally to strangers or have disregard for personal hygiene?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beirrit": {
+            "title": "9e.  Irritability : Does the subject overreact, e.g., by shouting at family members or others?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beagit": {
+            "title": "9f.  Agitation : Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beperch": {
+            "title": "9g.  Personality change : Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_berem": {
+            "title": "9h.  REM sleep behavior disorder : While sleeping, does the subject appear to act out his/her dreams (e.g., punch or flail their arms, shout, or scream)?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beremago": {
+            "title": "9h1. If yes, at what age did the REM sleep behavior disorder begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beanx": {
+            "title": "9i.  Anxiety : For example, does s/he show signs of nervousness (e.g., frequent sighing, anxious facial expressions, or hand-wringing) and/or excessive worrying?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beothr": {
+            "title": "9j. Other behavioral symptoms, specify:"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beothrx": {
+            "title": "9j1. If there are other behavioral symptoms, specify:"
+        },
+        "fu_bhvr_symp.fu_befpred": {
+            "title": "10. Indicate the  predominant  symptom that was first recognized as a decline in the subject's behavior: "
+        },
+        "fu_bhvr_symp.fu_befpredx": {
+            "title": "10a. If there are other predominant symptoms, specify:"
+        },
+        "fu_bhvr_symp.fu_bemode": {
+            "title": "11. Mode of onset of behavioral symptoms:"
+        },
+        "fu_bhvr_symp.fu_bemodex": {
+            "title": "11a. If there are other mode of onset of behavioral symptoms, specify:"
+        },
+        "fu_bhvr_symp.fu_beage": {
+            "title": "12. Based on the clinician's assessment, at what age did the behavioral symptoms begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_motor_symp.fu_decclmot": {
+            "title": "13. Based on the clinician's judgment, is the subject currently experiencing any motor symptoms?"
+        },
+        "fu_motor_symp.fu_motor_meaning_change.fu_mogait": {
+            "title": "14a.  Gait disorder : Has the subject's walking changed, not specifically due to arthritis or an injury? Is s/he unsteady, or does s/he shuffle when walking, have little to no arm-swing, or drag a foot?"
+        },
+        "fu_motor_symp.fu_motor_meaning_change.fu_mofalls": {
+            "title": "14b.  Falls : Does the subject fall more than usual?"
+        },
+        "fu_motor_symp.fu_motor_meaning_change.fu_motrem": {
+            "title": "14c.  Tremor : Has the subject had rhythmic shaking, especially in the hands, arms, legs, head, mouth, or tongue?"
+        },
+        "fu_motor_symp.fu_motor_meaning_change.fu_moslow": {
+            "title": "14d.  Slowness : Has the subject noticeably slowed down in walking, moving, or writing by hand, other than due to an injury or illness? Has his/her facial expression changed or become more wooden, or masked and unexpressive?"
+        },
+        "fu_motor_symp.fu_mofrst": {
+            "title": "15. Indicate the  predominant  symptom that was first recognized as a decline in the subject's motor function:  NOTE: Enter 0 if this information was provided on a previously submitted Form B9. "
+        },
+        "fu_motor_symp.fu_momode": {
+            "title": "16. Mode of onset of motor symptoms:"
+        },
+        "fu_motor_symp.fu_momodex": {
+            "title": "16a. If there are other mode of onset of motor symptoms, specify:"
+        },
+        "fu_motor_symp.fu_momopark": {
+            "title": "17. Were changes in motor function suggestive of parkinsonism? (If No or Unknown, SKIP TO QUESTION 18)"
+        },
+        "fu_motor_symp.fu_parkage": {
+            "title": "17a. If Yes, at what age did the motor symptoms suggestive of parkinsonism begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_motor_symp.fu_momoals": {
+            "title": "18. Were changes in motor function suggestive of amyotrophic lateral sclerosis? (If No or Unknown, SKIP TO QUESTION 19)"
+        },
+        "fu_motor_symp.fu_alsage": {
+            "title": "18a. If Yes, at what age did the motor symptoms suggestive of ALS begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_motor_symp.fu_moage": {
+            "title": "19. Based on the clinician's assessment, at what age did the motor changes begin? (The clinician must use his/her best judgment to estimate an age of onset of motor changes.)"
+        },
+        "fu_overall_course.fu_course": {
+            "title": "20. Overall course of decline of cognitive / behavioral / motor syndrome:"
+        },
+        "fu_overall_course.fu_frstchg": {
+            "title": "21. Indicate the predominant domain that was first recognized as changed in the subject:  NOTE: Enter 0 if this information was provided on a previously submitted Form B9. "
+        },
+        "fu_candidate.fu_lbdeval": {
+            "title": "22. Is the subject a potential candidate for further evaluation for Lewy body disease?"
+        },
+        "fu_candidate.fu_ftldeval": {
+            "title": "23. Is the subject a potential candidate for further evaluation for frontotemporal lobar degeneration?"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_decl_memo.fu_decsub": {
+            "title": "1. Does the subject report a decline in memory (relative to previously attained abilities)?"
+        },
+        "fu_decl_memo.fu_decin": {
+            "title": "2. Does the co-participant report a decline in the subject's memory (relative to previously attained abilities)?"
+        },
+        "fu_cogn_symp.fu_decclcog": {
+            "title": "3. Based on the clinician's judgment, is the subject currently experiencing meaningful impairment in cognition?"
+        },
+        "fu_meaning_impair.fu_cogmem": {
+            "title": "4a.  Memory : For example, does s/he forget conversations and/or dates, repeat questions and/or statements, misplace things more than usual, forget names of people s/he knows well?"
+        },
+        "fu_meaning_impair.fu_cogori": {
+            "title": "4b.  Orientation : For example, does s/he have trouble knowing the day, month, and year, or not recognize familiar locations, or get lost in familiar locations?"
+        },
+        "fu_meaning_impair.fu_cogjudg": {
+            "title": "4c.  Executive function - judgment, planning, problem-solving : Does s/he have trouble handling money (e.g., tips), paying bills, preparing meals, shopping, using appliances, handling medications, driving?"
+        },
+        "fu_meaning_impair.fu_coglang": {
+            "title": "4d.  Language : Does s/he have hesitant speech, have trouble finding words, use inappropriate words without self-correction?"
+        },
+        "fu_meaning_impair.fu_cogvis": {
+            "title": "4e.  Visuospatial function : Does s/he have difficulty interpreting visual stimuli and finding his/her way around?"
+        },
+        "fu_meaning_impair.fu_cogattn": {
+            "title": "4f.  Attention, concentration : Does the subject have a short attention span or limited ability to concentrate? Is s/he easily distracted?"
+        },
+        "fu_meaning_impair.fu_cogfluc": {
+            "title": "4g.  Fluctuating cognition : Does the subject exhibit pronounced variation in attention and alertness, noticeably over hours or days - for example, long lapses or periods of staring into space, or times when his/her ideas have a disorganized flow?"
+        },
+        "fu_meaning_impair.fu_display_cogflago.fu_cogflago": {
+            "title": "4g1. If yes, at what age did the fluctuating cognition begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_meaning_impair.fu_cogothr": {
+            "title": "4h. Other cognitive symptoms, specify:"
+        },
+        "fu_meaning_impair.fu_cogothrx": {
+            "title": "4h1. If yes, there are other cognitive symptoms, specify:"
+        },
+        "fu_meaning_impair.fu_cogfpred": {
+            "title": "5. Indicate the  predominant  symptom that was first recognized as a decline in the subject's cognition:"
+        },
+        "fu_meaning_impair.fu_cogfprex": {
+            "title": "5a. If there are other predominant symptoms, specify:"
+        },
+        "fu_meaning_impair.fu_cogmode": {
+            "title": "6. Mode of onset of cognitive symptoms:"
+        },
+        "fu_meaning_impair.fu_cogmodex": {
+            "title": "6a. If there are other mode of onset of cognitive symptoms, specify:"
+        },
+        "fu_meaning_impair.fu_decage": {
+            "title": "7. Based on the clinician's assessment, at what age did the cognitive decline begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_bhvr_symp.fu_decclbe": {
+            "title": "8. Based on the clinician's judgment, is the subject currently experiencing any kind of behavioral symptoms?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beapathy": {
+            "title": "9a.  Apathy, withdrawal : Has the subject lost interest in or displayed a reduced ability to initiate usual activities and social interaction, such as conversing with family and/or friends?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_bedep": {
+            "title": "9b.  Depressed mood : Has the subject seemed depressed for more than two weeks at a time, e.g., shown loss of interest or pleasure in nearly all activities, sadness, hopelessness, loss of appetite, fatigue?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevhall": {
+            "title": "9c1. Visual hallucinations"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevwell": {
+            "title": "9c1a. If Yes, are the hallucinations well formed and detailed?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevhago": {
+            "title": "9c1b. If well formed, clear-cut visual hallucinations, at what age did these visual hallucinations begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_beahall": {
+            "title": "9c2. Auditory hallucinations"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bedel": {
+            "title": "9c3. Abnormal, false, or delusional beliefs"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_bedisin": {
+            "title": "9d.  Disinhibition : Does the subject use inappropriate coarse language or exhibit inappropriate speech or behaviors in public or in the home? Does s/he talk personally to strangers or have disregard for personal hygiene?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beirrit": {
+            "title": "9e.  Irritability : Does the subject overreact, e.g., by shouting at family members or others?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beagit": {
+            "title": "9f.  Agitation : Does the subject have trouble sitting still? Does s/he shout, hit, and/or kick?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beperch": {
+            "title": "9g.  Personality change : Does the subject exhibit bizarre behavior or behavior uncharacteristic of the subject, such as unusual collecting, suspiciousness (without delusions), unusual dress, or dietary changes? Does the subject fail to take others' feelings into account?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_berem": {
+            "title": "9h.  REM sleep behavior disorder : While sleeping, does the subject appear to act out his/her dreams (e.g., punch or flail their arms, shout, or scream)?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beremago": {
+            "title": "9h1. If yes, at what age did the REM sleep behavior disorder begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beanx": {
+            "title": "9i.  Anxiety : For example, does s/he show signs of nervousness (e.g., frequent sighing, anxious facial expressions, or hand-wringing) and/or excessive worrying?"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beothr": {
+            "title": "9j. Other behavioral symptoms, specify:"
+        },
+        "fu_bhvr_symp.fu_bhvr_change.fu_beothrx": {
+            "title": "9j1. If there are other behavioral symptoms, specify:"
+        },
+        "fu_bhvr_symp.fu_befpred": {
+            "title": "10. Indicate the  predominant  symptom that was first recognized as a decline in the subject's behavior: "
+        },
+        "fu_bhvr_symp.fu_befpredx": {
+            "title": "10a. If there are other predominant symptoms, specify:"
+        },
+        "fu_bhvr_symp.fu_bemode": {
+            "title": "11. Mode of onset of behavioral symptoms:"
+        },
+        "fu_bhvr_symp.fu_bemodex": {
+            "title": "11a. If there are other mode of onset of behavioral symptoms, specify:"
+        },
+        "fu_bhvr_symp.fu_beage": {
+            "title": "12. Based on the clinician's assessment, at what age did the behavioral symptoms begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_motor_symp.fu_decclmot": {
+            "title": "13. Based on the clinician's judgment, is the subject currently experiencing any motor symptoms?"
+        },
+        "fu_motor_symp.fu_motor_meaning_change.fu_mogait": {
+            "title": "14a.  Gait disorder : Has the subject's walking changed, not specifically due to arthritis or an injury? Is s/he unsteady, or does s/he shuffle when walking, have little to no arm-swing, or drag a foot?"
+        },
+        "fu_motor_symp.fu_motor_meaning_change.fu_mofalls": {
+            "title": "14b.  Falls : Does the subject fall more than usual?"
+        },
+        "fu_motor_symp.fu_motor_meaning_change.fu_motrem": {
+            "title": "14c.  Tremor : Has the subject had rhythmic shaking, especially in the hands, arms, legs, head, mouth, or tongue?"
+        },
+        "fu_motor_symp.fu_motor_meaning_change.fu_moslow": {
+            "title": "14d.  Slowness : Has the subject noticeably slowed down in walking, moving, or writing by hand, other than due to an injury or illness? Has his/her facial expression changed or become more wooden, or masked and unexpressive?"
+        },
+        "fu_motor_symp.fu_mofrst": {
+            "title": "15. Indicate the  predominant  symptom that was first recognized as a decline in the subject's motor function:  NOTE: Enter 0 if this information was provided on a previously submitted Form B9. "
+        },
+        "fu_motor_symp.fu_momode": {
+            "title": "16. Mode of onset of motor symptoms:"
+        },
+        "fu_motor_symp.fu_momodex": {
+            "title": "16a. If there are other mode of onset of motor symptoms, specify:"
+        },
+        "fu_motor_symp.fu_momopark": {
+            "title": "17. Were changes in motor function suggestive of parkinsonism? (If No or Unknown, SKIP TO QUESTION 18)"
+        },
+        "fu_motor_symp.fu_parkage": {
+            "title": "17a. If Yes, at what age did the motor symptoms suggestive of parkinsonism begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_motor_symp.fu_momoals": {
+            "title": "18. Were changes in motor function suggestive of amyotrophic lateral sclerosis? (If No or Unknown, SKIP TO QUESTION 19)"
+        },
+        "fu_motor_symp.fu_alsage": {
+            "title": "18a. If Yes, at what age did the motor symptoms suggestive of ALS begin? (The clinician must use his/her best judgment to estimate an age of onset.)"
+        },
+        "fu_motor_symp.fu_moage": {
+            "title": "19. Based on the clinician's assessment, at what age did the motor changes begin? (The clinician must use his/her best judgment to estimate an age of onset of motor changes.)"
+        },
+        "fu_overall_course.fu_course": {
+            "title": "20. Overall course of decline of cognitive / behavioral / motor syndrome:"
+        },
+        "fu_overall_course.fu_frstchg": {
+            "title": "21. Indicate the predominant domain that was first recognized as changed in the subject:  NOTE: Enter 0 if this information was provided on a previously submitted Form B9. "
+        },
+        "fu_candidate.fu_lbdeval": {
+            "title": "22. Is the subject a potential candidate for further evaluation for Lewy body disease?"
+        },
+        "fu_candidate.fu_ftldeval": {
+            "title": "23. Is the subject a potential candidate for further evaluation for frontotemporal lobar degeneration?"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "fu_decl_memo.fu_decsub": 1.0,
+        "fu_decl_memo.fu_decin": 1.0,
+        "fu_cogn_symp.fu_decclcog": 1.0,
+        "fu_meaning_impair.fu_cogmem": 1.0,
+        "fu_meaning_impair.fu_cogori": 1.0,
+        "fu_meaning_impair.fu_cogjudg": 1.0,
+        "fu_meaning_impair.fu_coglang": 1.0,
+        "fu_meaning_impair.fu_cogvis": 1.0,
+        "fu_meaning_impair.fu_cogattn": 1.0,
+        "fu_meaning_impair.fu_cogfluc": 1.0,
+        "fu_meaning_impair.fu_display_cogflago.fu_cogflago": 1.0,
+        "fu_meaning_impair.fu_cogothr": 1.0,
+        "fu_meaning_impair.fu_cogothrx": 1.0,
+        "fu_meaning_impair.fu_cogfpred": 1.0,
+        "fu_meaning_impair.fu_cogfprex": 1.0,
+        "fu_meaning_impair.fu_cogmode": 1.0,
+        "fu_meaning_impair.fu_cogmodex": 1.0,
+        "fu_meaning_impair.fu_decage": 1.0,
+        "fu_bhvr_symp.fu_decclbe": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_beapathy": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_bedep": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevhall": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevwell": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bevhago": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_beahall": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_pcycho.fu_bedel": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_bedisin": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_beirrit": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_beagit": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_beperch": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_berem": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_beremago": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_beanx": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_beothr": 1.0,
+        "fu_bhvr_symp.fu_bhvr_change.fu_beothrx": 1.0,
+        "fu_bhvr_symp.fu_befpred": 1.0,
+        "fu_bhvr_symp.fu_befpredx": 1.0,
+        "fu_bhvr_symp.fu_bemode": 1.0,
+        "fu_bhvr_symp.fu_bemodex": 1.0,
+        "fu_bhvr_symp.fu_beage": 1.0,
+        "fu_motor_symp.fu_decclmot": 1.0,
+        "fu_motor_symp.fu_motor_meaning_change.fu_mogait": 1.0,
+        "fu_motor_symp.fu_motor_meaning_change.fu_mofalls": 1.0,
+        "fu_motor_symp.fu_motor_meaning_change.fu_motrem": 1.0,
+        "fu_motor_symp.fu_motor_meaning_change.fu_moslow": 1.0,
+        "fu_motor_symp.fu_mofrst": 1.0,
+        "fu_motor_symp.fu_momode": 1.0,
+        "fu_motor_symp.fu_momodex": 1.0,
+        "fu_motor_symp.fu_momopark": 1.0,
+        "fu_motor_symp.fu_parkage": 1.0,
+        "fu_motor_symp.fu_momoals": 1.0,
+        "fu_motor_symp.fu_alsage": 1.0,
+        "fu_motor_symp.fu_moage": 1.0,
+        "fu_overall_course.fu_course": 1.0,
+        "fu_overall_course.fu_frstchg": 1.0,
+        "fu_candidate.fu_lbdeval": 1.0,
+        "fu_candidate.fu_ftldeval": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_b9v3.md"
+}

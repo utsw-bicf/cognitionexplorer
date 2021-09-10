@@ -1,0 +1,4548 @@
+{
+    "title": "NACC Uniform Data Set (UDS) – Follow-up Visit Packet,Form A4: Subject Medications",
+    "description": "NOTE: This form is to be completed by the clinician or ADC staff.Record ALL medications (prescription,Examiner’s initials:__ __ __\nnon-prescription, and vitamins/supplements) takenby the subject within the past two weeks.For additional\nclarification, see UDS Coding Guidebook page 19.\nInclude the strength of the medication, the corresponding unit (micrograms, milliliters, international units), and the number of doses (pills,injections, drops, puffs)\nprescribed per day/week/month. Indicate if the medication is prescribed to be used only as needed (PRN) and the average frequency of use of the PRN\nmedication (number of pills, injections, drops, puffs taken per day/week/month).It is helpful to ask the subject to bring the medications to the research assessment,\nso more complete information can be obtained.If the subject does not bring the medications or a detailed list to the assessment, telephone follow-up may be\nnecessary. Record the name and dosage of the medication as the subject is actually taking it.\n",
+    "id": "/profiles/fvp_a4v1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "PMEDS": {
+            "title": "1 Is the subject currently taking any prescription medications?",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "PMA": {
+            "title": "1A Prescription medication A name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1a_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMAS": {
+                    "title": "1A1 Prescription medication A strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMASU": {
+                    "title": "1A2 Prescription medication A strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1a_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMAF": {
+                    "title": "1A3 Prescription medication A frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMAFU": {
+                    "title": "1A4 Prescription medication A frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1a_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMAP": {
+                    "title": "1A5 Prescription medication A – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1a_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMAPF": {
+                    "title": "1A6 Prescription medication A PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMAPFU": {
+                    "title": "1A7 Prescription medication A PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMB": {
+            "title": "1B Prescription medication B name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1B_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMBS": {
+                    "title": "1B1 Prescription medication B strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMBSU": {
+                    "title": "1B2 Prescription medication B strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1B_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMBF": {
+                    "title": "1B3 Prescription medication B frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMBFU": {
+                    "title": "1B4 Prescription medication B frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1B_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMBP": {
+                    "title": "1B5 Prescription medication B – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1B_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMBPF": {
+                    "title": "1B6 Prescription medication B PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMBPFU": {
+                    "title": "1B7 Prescription medication B PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMC": {
+            "title": "1C Prescription medication C name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1C_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMCS": {
+                    "title": "1C1 Prescription medication C strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMCSU": {
+                    "title": "1C2 Prescription medication C strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1C_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMCF": {
+                    "title": "1C3 Prescription medication C frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMCFU": {
+                    "title": "1C4 Prescription medication C frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1C_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMCP": {
+                    "title": "1C5 Prescription medication C – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1C_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMCPF": {
+                    "title": "1C6 Prescription medication C PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMCPFU": {
+                    "title": "1C7 Prescription medication C PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMD": {
+            "title": "1D Prescription medication D name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1D_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMDS": {
+                    "title": "1D1 Prescription medication D strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMDSU": {
+                    "title": "1D2 Prescription medication D strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1D_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMDF": {
+                    "title": "1D3 Prescription medication D frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMDFU": {
+                    "title": "1D4 Prescription medication D frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1D_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMDP": {
+                    "title": "1D5 Prescription medication D – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1D_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMDPF": {
+                    "title": "1D6 Prescription medication D PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMDPFU": {
+                    "title": "1D7 Prescription medication D PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PME": {
+            "title": "1E Prescription medication E name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1E_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMES": {
+                    "title": "1E1 Prescription medication E strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMESU": {
+                    "title": "1E2 Prescription medication E strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1E_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMEF": {
+                    "title": "1E3 Prescription medication E frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMEFU": {
+                    "title": "1E4 Prescription medication E frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1E_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMEP": {
+                    "title": "1E5 Prescription medication E – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1E_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMEPF": {
+                    "title": "1E6 Prescription medication E PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMEPFU": {
+                    "title": "1E7 Prescription medication E PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMF": {
+            "title": "1F Prescription medication F name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1F_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMFS": {
+                    "title": "1F1 Prescription medication F strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMFSU": {
+                    "title": "1F2 Prescription medication F strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1F_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMFF": {
+                    "title": "1F3 Prescription medication F frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMFFU": {
+                    "title": "1F4 Prescription medication F frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1F_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMFP": {
+                    "title": "1F5 Prescription medication F – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1F_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMFPF": {
+                    "title": "1F6 Prescription medication F PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMFPFU": {
+                    "title": "1F7 Prescription medication F PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMG": {
+            "title": "1G Prescription medication G name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1G_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMGS": {
+                    "title": "1G1 Prescription medication G strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMGSU": {
+                    "title": "1G2 Prescription medication G strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1G_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMGF": {
+                    "title": "1G3 Prescription medication G frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMGFU": {
+                    "title": "1G4 Prescription medication G frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1G_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMGP": {
+                    "title": "1G5 Prescription medication G – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1G_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMGPF": {
+                    "title": "1G6 Prescription medication G PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMGPFU": {
+                    "title": "1G7 Prescription medication G PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMH": {
+            "title": "1H Prescription medication H name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1H_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMHS": {
+                    "title": "1H1 Prescription medication H strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMHSU": {
+                    "title": "1H2 Prescription medication H strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1H_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMHF": {
+                    "title": "1H3 Prescription medication H frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMHFU": {
+                    "title": "1H4 Prescription medication H frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1H_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMHP": {
+                    "title": "1H5 Prescription medication H – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1H_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMHPF": {
+                    "title": "1H6 Prescription medication H PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMHPFU": {
+                    "title": "1H7 Prescription medication H PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMI": {
+            "title": "1I Prescription medication I name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1I_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMIS": {
+                    "title": "1I1 Prescription medication I strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMISU": {
+                    "title": "1I2 Prescription medication I strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1I_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMIF": {
+                    "title": "1I3 Prescription medication I frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMIFU": {
+                    "title": "1I4 Prescription medication I frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1I_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMIP": {
+                    "title": "1I5 Prescription medication I – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1I_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMIPF": {
+                    "title": "1I6 Prescription medication I PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMIPFU": {
+                    "title": "1I7 Prescription medication I PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMJ": {
+            "title": "1J Prescription medication J name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1J_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMJS": {
+                    "title": "1J1 Prescription medication J strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMJSU": {
+                    "title": "1J2 Prescription medication J strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1J_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMJF": {
+                    "title": "1J3 Prescription medication J frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMJFU": {
+                    "title": "1J4 Prescription medication J frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1J_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMJP": {
+                    "title": "1J5 Prescription medication J – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1J_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMJPF": {
+                    "title": "1J6 Prescription medication J PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMJPFU": {
+                    "title": "1J7 Prescription medication J PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMK": {
+            "title": "1K Prescription medication K name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1K_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMKS": {
+                    "title": "1K1 Prescription medication K strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMKSU": {
+                    "title": "1K2 Prescription medication K strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1K_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMKF": {
+                    "title": "1K3 Prescription medication K frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMKFU": {
+                    "title": "1K4 Prescription medication K frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1K_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMKP": {
+                    "title": "1K5 Prescription medication K – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1K_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMKPF": {
+                    "title": "1K6 Prescription medication K PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMKPFU": {
+                    "title": "1K7 Prescription medication K PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PML": {
+            "title": "1L Prescription medication L name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1L_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMLS": {
+                    "title": "1L1 Prescription medication L strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMLSU": {
+                    "title": "1L2 Prescription medication L strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1L_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMLF": {
+                    "title": "1L3 Prescription medication L frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMLFU": {
+                    "title": "1L4 Prescription medication L frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1L_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMLP": {
+                    "title": "1L5 Prescription medication L – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1L_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMLPF": {
+                    "title": "1L6 Prescription medication L PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMLPFU": {
+                    "title": "1L7 Prescription medication L PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMM": {
+            "title": "1M Prescription medication M name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1M_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMMS": {
+                    "title": "1M1 Prescription medication M strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMMSU": {
+                    "title": "1M2 Prescription medication M strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1M_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMMF": {
+                    "title": "1M3 Prescription medication M frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMMFU": {
+                    "title": "1M4 Prescription medication M frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1M_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMMP": {
+                    "title": "1M5 Prescription medication M – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1M_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMMPF": {
+                    "title": "1M6 Prescription medication M PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMMPFU": {
+                    "title": "1M7 Prescription medication M PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMN": {
+            "title": "1N Prescription medication N name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1N_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMNS": {
+                    "title": "1N1 Prescription medication N strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMNSU": {
+                    "title": "1N2 Prescription medication N strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1N_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMNF": {
+                    "title": "1N3 Prescription medication N frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMNFU": {
+                    "title": "1N4 Prescription medication N frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1N_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMNP": {
+                    "title": "1N5 Prescription medication N – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1N_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMNPF": {
+                    "title": "1N6 Prescription medication N PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMNPFU": {
+                    "title": "1N7 Prescription medication N PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMO": {
+            "title": "1O Prescription medication O name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1O_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMOS": {
+                    "title": "1O1 Prescription medication O strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMOSU": {
+                    "title": "1O2 Prescription medication O strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1O_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMOF": {
+                    "title": "1O3 Prescription medication O frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMOFU": {
+                    "title": "1O4 Prescription medication O frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1O_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMOP": {
+                    "title": "1O5 Prescription medication O – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1O_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMOPF": {
+                    "title": "1O6 Prescription medication O PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMOPFU": {
+                    "title": "1O7 Prescription medication O PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMP": {
+            "title": "1P Prescription medication P name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1P_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMPS": {
+                    "title": "1P1 Prescription medication P strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMPSU": {
+                    "title": "1P2 Prescription medication P strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1P_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMPF": {
+                    "title": "1P3 Prescription medication P frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMPFU": {
+                    "title": "1P4 Prescription medication P frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1P_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMPP": {
+                    "title": "1P5 Prescription medication P – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1P_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMPPF": {
+                    "title": "1P6 Prescription medication P PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMPPFU": {
+                    "title": "1P7 Prescription medication P PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMQ": {
+            "title": "1Q Prescription medication Q name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1Q_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMQS": {
+                    "title": "1Q1 Prescription medication Q strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMQSU": {
+                    "title": "1Q2 Prescription medication Q strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1Q_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMQF": {
+                    "title": "1Q3 Prescription medication Q frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMQFU": {
+                    "title": "1Q4 Prescription medication Q frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1Q_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMQP": {
+                    "title": "1Q5 Prescription medication Q – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1Q_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMQPF": {
+                    "title": "1Q6 Prescription medication Q PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMQPFU": {
+                    "title": "1Q7 Prescription medication Q PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMR": {
+            "title": "1R Prescription medication R name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1R_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMRS": {
+                    "title": "1R1 Prescription medication R strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMRSU": {
+                    "title": "1R2 Prescription medication R strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1R_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMRF": {
+                    "title": "1R3 Prescription medication R frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMRFU": {
+                    "title": "1R4 Prescription medication R frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1R_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMRP": {
+                    "title": "1R5 Prescription medication R – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1R_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMRPF": {
+                    "title": "1R6 Prescription medication R PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMRPFU": {
+                    "title": "1R7 Prescription medication R PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMS": {
+            "title": "1S Prescription medication S name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1S_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMSS": {
+                    "title": "1S1 Prescription medication S strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMSSU": {
+                    "title": "1S2 Prescription medication S strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1S_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMSF": {
+                    "title": "1S3 Prescription medication S frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMSFU": {
+                    "title": "1S4 Prescription medication S frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1S_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMSP": {
+                    "title": "1S5 Prescription medication S – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1S_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMSPF": {
+                    "title": "1S6 Prescription medication S PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMSPFU": {
+                    "title": "1S7 Prescription medication S PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "PMT": {
+            "title": "1T Prescription medication T name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "1T_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "PMTS": {
+                    "title": "1T1 Prescription medication T strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "PMTSU": {
+                    "title": "1T2 Prescription medication T strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "1T_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMTF": {
+                    "title": "1T3 Prescription medication T frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99, Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMTFU": {
+                    "title": "1T4 Prescription medication T frequency units",
+                    "description": "Blank if #1A5, PMAP = 1 (Yes).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "1T_pre_prn": {
+            "title": "Prescribed as PRN? (if yes, also indicate PRN frequency)",
+            "type": "object",
+            "properties": {
+                "PMTP": {
+                    "title": "1T5 Prescription medication T – Prescribed as PRN?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes"
+                    ]
+                }
+            }
+        },
+        "1T_prn_frequency": {
+            "title": "PRN Frequency (average for the past 2 weeks): Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "PMTPF": {
+                    "title": "1T6 Prescription medication T PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month.",
+                    "description": "> 0 to 99,Blank if #1A5, PMAP = 0 (No).",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "PMTPFU": {
+                    "title": "1T7 Prescription medication T PRN frequency units",
+                    "description": "Blank if #1A5, PMAP = 0 (No).",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 montly"
+                    ]
+                }
+            }
+        },
+        "NMEDS": {
+            "title": "2 Is the subject currently taking any non-prescription medications(OTC)?",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "NMA": {
+            "title": "2A Non-prescription medication A name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2A_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMAS": {
+                    "title": "2A1 Non-prescription medication A strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMASU": {
+                    "title": "2A2 Non-prescription medication A strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2A_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMAF": {
+                    "title": "2A3 Non-prescription medication A frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMAFU": {
+                    "title": "2A4 Non-prescription medication A frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMB": {
+            "title": "2B Non-prescription medication B name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2B_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMBS": {
+                    "title": "2B1 Non-prescription medication B strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMBSU": {
+                    "title": "2B2 Non-prescription medication B strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2B_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMBF": {
+                    "title": "2B3 Non-prescription medication B frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMBFU": {
+                    "title": "2B4 Non-prescription medication B frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMC": {
+            "title": "2C Non-prescription medication C name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2C_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMCS": {
+                    "title": "2C1 Non-prescription medication C strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMCSU": {
+                    "title": "2C2 Non-prescription medication C strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2C_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMCF": {
+                    "title": "2C3 Non-prescription medication C frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMCFU": {
+                    "title": "2C4 Non-prescription medication C frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMD": {
+            "title": "2D Non-prescription medication D name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2D_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMDS": {
+                    "title": "2D1 Non-prescription medication D strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMDSU": {
+                    "title": "2D2 Non-prescription medication D strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2D_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMDF": {
+                    "title": "2D3 Non-prescription medication D frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMDFU": {
+                    "title": "2D4 Non-prescription medication D frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NME": {
+            "title": "2E Non-prescription medication E name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2E_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMES": {
+                    "title": "2E1 Non-prescription medication E strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMESU": {
+                    "title": "2E2 Non-prescription medication E strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2E_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMEF": {
+                    "title": "2E3 Non-prescription medication E frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMEFU": {
+                    "title": "2E4 Non-prescription medication E frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMF": {
+            "title": "2F Non-prescription medication F name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2F_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMFS": {
+                    "title": "2F1 Non-prescription medication F strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMFSU": {
+                    "title": "2F2 Non-prescription medication F strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2F_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMFF": {
+                    "title": "2F3 Non-prescription medication F frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMFFU": {
+                    "title": "2F4 Non-prescription medication F frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMG": {
+            "title": "2G Non-prescription medication G name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2G_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMGS": {
+                    "title": "2G1 Non-prescription medication G strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMGSU": {
+                    "title": "2G2 Non-prescription medication G strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2G_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMGF": {
+                    "title": "2G3 Non-prescription medication G frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMGFU": {
+                    "title": "2G4 Non-prescription medication G frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMH": {
+            "title": "2H Non-prescription medication H name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2H_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMHS": {
+                    "title": "2H1 Non-prescription medication H strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMHSU": {
+                    "title": "2H2 Non-prescription medication H strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2H_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMHF": {
+                    "title": "2H3 Non-prescription medication H frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMHFU": {
+                    "title": "2H4 Non-prescription medication H frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMI": {
+            "title": "2I Non-prescription medication I name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2I_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMIS": {
+                    "title": "2I1 Non-prescription medication I strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMISU": {
+                    "title": "2I2 Non-prescription medication I strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2I_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMIF": {
+                    "title": "2I3 Non-prescription medication I frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMIFU": {
+                    "title": "2I4 Non-prescription medication I frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMJ": {
+            "title": "2J Non-prescription medication J name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2J_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMJS": {
+                    "title": "2J1 Non-prescription medication J strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMJSU": {
+                    "title": "2J2 Non-prescription medication J strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2J_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMJF": {
+                    "title": "2J3 Non-prescription medication J frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMJFU": {
+                    "title": "2J4 Non-prescription medication J frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMK": {
+            "title": "2K Non-prescription medication K name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2K_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMKS": {
+                    "title": "2K1 Non-prescription medication K strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMKSU": {
+                    "title": "2K2 Non-prescription medication K strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2K_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMKF": {
+                    "title": "2K3 Non-prescription medication K frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMKFU": {
+                    "title": "2K4 Non-prescription medication K frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NML": {
+            "title": "2L Non-prescription medication L name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2L_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMLS": {
+                    "title": "2L1 Non-prescription medication L strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMLSU": {
+                    "title": "2L2 Non-prescription medication L strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2L_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMLF": {
+                    "title": "2L3 Non-prescription medication L frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMLFU": {
+                    "title": "2L4 Non-prescription medication L frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMM": {
+            "title": "2M Non-prescription medication M name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2M_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMMS": {
+                    "title": "2M1 Non-prescription medication M strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMMSU": {
+                    "title": "2M2 Non-prescription medication M strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2M_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMMF": {
+                    "title": "2M3 Non-prescription medication M frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMMFU": {
+                    "title": "2M4 Non-prescription medication M frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMN": {
+            "title": "2N Non-prescription medication N name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2N_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMNS": {
+                    "title": "2N1 Non-prescription medication N strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMNSU": {
+                    "title": "2N2 Non-prescription medication N strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2N_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMNF": {
+                    "title": "2N3 Non-prescription medication N frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMNFU": {
+                    "title": "2N4 Non-prescription medication N frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMO": {
+            "title": "2O Non-prescription medication O name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2O_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMOS": {
+                    "title": "2O1 Non-prescription medication O strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMOSU": {
+                    "title": "2O2 Non-prescription medication O strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2O_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMOF": {
+                    "title": "2O3 Non-prescription medication O frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMOFU": {
+                    "title": "2O4 Non-prescription medication O frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMP": {
+            "title": "2P Non-prescription medication P name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2P_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMPS": {
+                    "title": "2P1 Non-prescription medication P strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMPSU": {
+                    "title": "2P2 Non-prescription medication P strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2P_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMPF": {
+                    "title": "2P3 Non-prescription medication P frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMPFU": {
+                    "title": "2P4 Non-prescription medication P frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMQ": {
+            "title": "2Q Non-prescription medication Q name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2Q_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMQS": {
+                    "title": "2Q1 Non-prescription medication Q strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMQSU": {
+                    "title": "2Q2 Non-prescription medication Q strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2Q_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMQF": {
+                    "title": "2Q3 Non-prescription medication Q frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMQFU": {
+                    "title": "2Q4 Non-prescription medication Q frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMR": {
+            "title": "2R Non-prescription medication R name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2R_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMRS": {
+                    "title": "2R1 Non-prescription medication R strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMRSU": {
+                    "title": "2R2 Non-prescription medication R strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2R_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMRF": {
+                    "title": "2R3 Non-prescription medication R frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMRFU": {
+                    "title": "2R4 Non-prescription medication R frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMS": {
+            "title": "2S Non-prescription medication S name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2S_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMSS": {
+                    "title": "2S1 Non-prescription medication S strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMSSU": {
+                    "title": "2S2 Non-prescription medication S strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2S_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMSF": {
+                    "title": "2S3 Non-prescription medication S frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMSFU": {
+                    "title": "2S4 Non-prescription medication S frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "NMT": {
+            "title": "2T Non-prescription medication T name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "2T_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "NMTS": {
+                    "title": "2T1 Non-prescription medication T strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "NMTSU": {
+                    "title": "2T2 Non-prescription medication T strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "2T_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "NMTF": {
+                    "title": "2T3 Non-prescription medication T frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "NMTFU": {
+                    "title": "2T4 Non-prescription medication T frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VITASUPS": {
+            "title": "3 Is the subject currently taking any vitamins or supplements?",
+            "type": "string",
+            "enum": [
+                "0 No",
+                "1 Yes"
+            ]
+        },
+        "VSA": {
+            "title": "3A Vitamin/supplement A name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3A_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSAS": {
+                    "title": "3A1 Vitamin/supplement A strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSASU": {
+                    "title": "3A2 Vitamin/supplement A strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3A_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSAF": {
+                    "title": "3A3 Vitamin/supplement A frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSAFU": {
+                    "title": "3A4 Vitamin/supplement A frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSB": {
+            "title": "3B Vitamin/supplement B name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3B_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSBS": {
+                    "title": "3B1 Vitamin/supplement B strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSBSU": {
+                    "title": "3B2 Vitamin/supplement B strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3B_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSBF": {
+                    "title": "3B3 Vitamin/supplement B frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSBFU": {
+                    "title": "3B4 Vitamin/supplement B frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSC": {
+            "title": "3C Vitamin/supplement C name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3C_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSCS": {
+                    "title": "3C1 Vitamin/supplement C strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSCSU": {
+                    "title": "3C2 Vitamin/supplement C strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3C_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSCF": {
+                    "title": "3C3 Vitamin/supplement C frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSCFU": {
+                    "title": "3C4 Vitamin/supplement C frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSD": {
+            "title": "3D Vitamin/supplement D name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3D_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSDS": {
+                    "title": "3D1 Vitamin/supplement D strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSDSU": {
+                    "title": "3D2 Vitamin/supplement D strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3D_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSDF": {
+                    "title": "3D3 Vitamin/supplement D frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSDFU": {
+                    "title": "3D4 Vitamin/supplement D frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSE": {
+            "title": "3E Vitamin/supplement E name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3E_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSES": {
+                    "title": "3E1 Vitamin/supplement E strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSESU": {
+                    "title": "3E2 Vitamin/supplement E strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3E_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSEF": {
+                    "title": "3E3 Vitamin/supplement E frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSEFU": {
+                    "title": "3E4 Vitamin/supplement E frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSF": {
+            "title": "3F Vitamin/supplement F name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3F_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSFS": {
+                    "title": "3F1 Vitamin/supplement F strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSFSU": {
+                    "title": "3F2 Vitamin/supplement F strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3F_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSFF": {
+                    "title": "3F3 Vitamin/supplement F frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSFFU": {
+                    "title": "3F4 Vitamin/supplement F frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSG": {
+            "title": "3G Vitamin/supplement G name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3G_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSGS": {
+                    "title": "3G1 Vitamin/supplement G strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSGSU": {
+                    "title": "3G2 Vitamin/supplement G strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3G_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSGF": {
+                    "title": "3G3 Vitamin/supplement G frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSGFU": {
+                    "title": "3G4 Vitamin/supplement G frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSH": {
+            "title": "3H Vitamin/supplement H name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3H_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSHS": {
+                    "title": "3H1 Vitamin/supplement H strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSHSU": {
+                    "title": "3H2 Vitamin/supplement H strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3H_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSHF": {
+                    "title": "3H3 Vitamin/supplement H frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSHFU": {
+                    "title": "3H4 Vitamin/supplement H frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSI": {
+            "title": "3I Vitamin/supplement I name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3I_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSIS": {
+                    "title": "3I1 Vitamin/supplement I strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSISU": {
+                    "title": "3I2 Vitamin/supplement I strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3I_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSIF": {
+                    "title": "3I3 Vitamin/supplement I frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSIFU": {
+                    "title": "3I4 Vitamin/supplement I frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSJ": {
+            "title": "3J Vitamin/supplement J name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3J_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSJS": {
+                    "title": "3J1 Vitamin/supplement J strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSJSU": {
+                    "title": "3J2 Vitamin/supplement J strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3J_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSJF": {
+                    "title": "3J3 Vitamin/supplement J frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSJFU": {
+                    "title": "3J4 Vitamin/supplement J frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSK": {
+            "title": "3K Vitamin/supplement K name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3K_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSKS": {
+                    "title": "3K1 Vitamin/supplement K strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSKSU": {
+                    "title": "3K2 Vitamin/supplement K strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3K_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSKF": {
+                    "title": "3K3 Vitamin/supplement K frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSKFU": {
+                    "title": "3K4 Vitamin/supplement K frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSL": {
+            "title": "3L Vitamin/supplement L name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3L_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSLS": {
+                    "title": "3L1 Vitamin/supplement L strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSLSU": {
+                    "title": "3L2 Vitamin/supplement L strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3L_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSLF": {
+                    "title": "3L3 Vitamin/supplement L frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSLFU": {
+                    "title": "3L4 Vitamin/supplement L frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSM": {
+            "title": "3M Vitamin/supplement M name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3M_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSMS": {
+                    "title": "3M1 Vitamin/supplement M strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSMSU": {
+                    "title": "3M2 Vitamin/supplement M strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3M_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSMF": {
+                    "title": "3M3 Vitamin/supplement M frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSMFU": {
+                    "title": "3M4 Vitamin/supplement M frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSN": {
+            "title": "3N Vitamin/supplement N name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3N_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSNS": {
+                    "title": "3N1 Vitamin/supplement N strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSNSU": {
+                    "title": "3N2 Vitamin/supplement N strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3N_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSNF": {
+                    "title": "3N3 Vitamin/supplement N frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSNFU": {
+                    "title": "3N4 Vitamin/supplement N frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSO": {
+            "title": "3O Vitamin/supplement O name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3O_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSOS": {
+                    "title": "3O1 Vitamin/supplement O strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSOSU": {
+                    "title": "3O2 Vitamin/supplement O strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3O_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSOF": {
+                    "title": "3O3 Vitamin/supplement O frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSOFU": {
+                    "title": "3O4 Vitamin/supplement O frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSP": {
+            "title": "3P Vitamin/supplement P name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3P_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSPS": {
+                    "title": "3P1 Vitamin/supplement P strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSPSU": {
+                    "title": "3P2 Vitamin/supplement P strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3P_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSPF": {
+                    "title": "3P3 Vitamin/supplement P frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSPFU": {
+                    "title": "3P4 Vitamin/supplement P frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSQ": {
+            "title": "3Q Vitamin/supplement Q name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3Q_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSQS": {
+                    "title": "3Q1 Vitamin/supplement Q strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSQSU": {
+                    "title": "3Q2 Vitamin/supplement Q strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3Q_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSQF": {
+                    "title": "3Q3 Vitamin/supplement Q frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSQFU": {
+                    "title": "3Q4 Vitamin/supplement Q frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSR": {
+            "title": "3R Vitamin/supplement R name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3R_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSRS": {
+                    "title": "3R1 Vitamin/supplement R strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSRSU": {
+                    "title": "3R2 Vitamin/supplement R strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3R_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSRF": {
+                    "title": "3R3 Vitamin/supplement R frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSRFU": {
+                    "title": "3R4 Vitamin/supplement R frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VSS": {
+            "title": "3S Vitamin/supplement S name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3S_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSSS": {
+                    "title": "3S1 Vitamin/supplement S strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSSSU": {
+                    "title": "3S2 Vitamin/supplement S strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3S_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSSF": {
+                    "title": "3S3 Vitamin/supplement S frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSSFU": {
+                    "title": "3S4 Vitamin/supplement S frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        },
+        "VST": {
+            "title": "3T Vitamin/supplement T name",
+            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "type": "string"
+        },
+        "3T_medi_strength": {
+            "title": "Medication strength: Enter numeric value for strength, then indicate the appropriate unit of measure (μg, mg, mL, IU)",
+            "type": "object",
+            "properties": {
+                "VSTS": {
+                    "title": "3T1 Vitamin/supplement T strength",
+                    "description": "> 0.00 to 99999 (decimals allowed)",
+                    "type": "number",
+                    "minimum": 0.00,
+                    "maximum": 99999,
+                    "exclusiveMinimum": true
+                },
+                "VSTSU": {
+                    "title": "3T2 Vitamin/supplement T strength units",
+                    "type": "string",
+                    "enum": [
+                        "1 µg",
+                        "2 mg",
+                        "3 ml",
+                        "4 IU"
+                    ]
+                }
+            }
+        },
+        "3T_frequency": {
+            "title": "Frequency: Enter numeric value for total number of doses taken per Day, Week, or Month",
+            "type": "object",
+            "properties": {
+                "VSTF": {
+                    "title": "3T3 Vitamin/supplement T frequency: total number of doses per day, week or month",
+                    "description": "> 0 to 99",
+                    "type": "integer",
+                    "minimum": 1,
+                    "maximum": 99
+                },
+                "VSTFU": {
+                    "title": "3T4 Vitamin/supplement T frequency units",
+                    "type": "string",
+                    "enum": [
+                        "1 daily",
+                        "2 weekly",
+                        "3 monthly"
+                    ]
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "PMEDS": {
+            "title": "1 Is the subject currently taking any prescription medications?"
+        },
+        "PMA": {
+            "title": "1A Prescription medication A name"
+        },
+        "1a_medi_strength.PMAS": {
+            "title": "1A1 Prescription medication A strength"
+        },
+        "1a_medi_strength.PMASU": {
+            "title": "1A2 Prescription medication A strength units"
+        },
+        "1a_frequency.PMAF": {
+            "title": "1A3 Prescription medication A frequency: total number of doses per day, week or month"
+        },
+        "1a_frequency.PMAFU": {
+            "title": "1A4 Prescription medication A frequency units"
+        },
+        "1a_pre_prn.PMAP": {
+            "title": "1A5 Prescription medication A – Prescribed as PRN?"
+        },
+        "1a_prn_frequency.PMAPF": {
+            "title": "1A6 Prescription medication A PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1a_prn_frequency.PMAPFU": {
+            "title": "1A7 Prescription medication A PRN frequency units"
+        },
+        "PMB": {
+            "title": "1B Prescription medication B name"
+        },
+        "1B_medi_strength.PMBS": {
+            "title": "1B1 Prescription medication B strength"
+        },
+        "1B_medi_strength.PMBSU": {
+            "title": "1B2 Prescription medication B strength units"
+        },
+        "1B_frequency.PMBF": {
+            "title": "1B3 Prescription medication B frequency: total number of doses per day, week or month"
+        },
+        "1B_frequency.PMBFU": {
+            "title": "1B4 Prescription medication B frequency units"
+        },
+        "1B_pre_prn.PMBP": {
+            "title": "1B5 Prescription medication B – Prescribed as PRN?"
+        },
+        "1B_prn_frequency.PMBPF": {
+            "title": "1B6 Prescription medication B PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1B_prn_frequency.PMBPFU": {
+            "title": "1B7 Prescription medication B PRN frequency units"
+        },
+        "PMC": {
+            "title": "1C Prescription medication C name"
+        },
+        "1C_medi_strength.PMCS": {
+            "title": "1C1 Prescription medication C strength"
+        },
+        "1C_medi_strength.PMCSU": {
+            "title": "1C2 Prescription medication C strength units"
+        },
+        "1C_frequency.PMCF": {
+            "title": "1C3 Prescription medication C frequency: total number of doses per day, week or month"
+        },
+        "1C_frequency.PMCFU": {
+            "title": "1C4 Prescription medication C frequency units"
+        },
+        "1C_pre_prn.PMCP": {
+            "title": "1C5 Prescription medication C – Prescribed as PRN?"
+        },
+        "1C_prn_frequency.PMCPF": {
+            "title": "1C6 Prescription medication C PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1C_prn_frequency.PMCPFU": {
+            "title": "1C7 Prescription medication C PRN frequency units"
+        },
+        "PMD": {
+            "title": "1D Prescription medication D name"
+        },
+        "1D_medi_strength.PMDS": {
+            "title": "1D1 Prescription medication D strength"
+        },
+        "1D_medi_strength.PMDSU": {
+            "title": "1D2 Prescription medication D strength units"
+        },
+        "1D_frequency.PMDF": {
+            "title": "1D3 Prescription medication D frequency: total number of doses per day, week or month"
+        },
+        "1D_frequency.PMDFU": {
+            "title": "1D4 Prescription medication D frequency units"
+        },
+        "1D_pre_prn.PMDP": {
+            "title": "1D5 Prescription medication D – Prescribed as PRN?"
+        },
+        "1D_prn_frequency.PMDPF": {
+            "title": "1D6 Prescription medication D PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1D_prn_frequency.PMDPFU": {
+            "title": "1D7 Prescription medication D PRN frequency units"
+        },
+        "PME": {
+            "title": "1E Prescription medication E name"
+        },
+        "1E_medi_strength.PMES": {
+            "title": "1E1 Prescription medication E strength"
+        },
+        "1E_medi_strength.PMESU": {
+            "title": "1E2 Prescription medication E strength units"
+        },
+        "1E_frequency.PMEF": {
+            "title": "1E3 Prescription medication E frequency: total number of doses per day, week or month"
+        },
+        "1E_frequency.PMEFU": {
+            "title": "1E4 Prescription medication E frequency units"
+        },
+        "1E_pre_prn.PMEP": {
+            "title": "1E5 Prescription medication E – Prescribed as PRN?"
+        },
+        "1E_prn_frequency.PMEPF": {
+            "title": "1E6 Prescription medication E PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1E_prn_frequency.PMEPFU": {
+            "title": "1E7 Prescription medication E PRN frequency units"
+        },
+        "NMEDS": {
+            "title": "2 Is the subject currently taking any non-prescription medications(OTC)?"
+        },
+        "NMA": {
+            "title": "2A Non-prescription medication A name"
+        },
+        "2A_medi_strength.NMAS": {
+            "title": "2A1 Non-prescription medication A strength"
+        },
+        "2A_medi_strength.NMASU": {
+            "title": "2A2 Non-prescription medication A strength units"
+        },
+        "2A_frequency.NMAF": {
+            "title": "2A3 Non-prescription medication A frequency: total number of doses per day, week or month"
+        },
+        "2A_frequency.NMAFU": {
+            "title": "2A4 Non-prescription medication A frequency units"
+        },
+        "NMB": {
+            "title": "2B Non-prescription medication B name"
+        },
+        "2B_medi_strength.NMBS": {
+            "title": "2B1 Non-prescription medication B strength"
+        },
+        "2B_medi_strength.NMBSU": {
+            "title": "2B2 Non-prescription medication B strength units"
+        },
+        "2B_frequency.NMBF": {
+            "title": "2B3 Non-prescription medication B frequency: total number of doses per day, week or month"
+        },
+        "2B_frequency.NMBFU": {
+            "title": "2B4 Non-prescription medication B frequency units"
+        },
+        "NMC": {
+            "title": "2C Non-prescription medication C name"
+        },
+        "2C_medi_strength.NMCS": {
+            "title": "2C1 Non-prescription medication C strength"
+        },
+        "2C_medi_strength.NMCSU": {
+            "title": "2C2 Non-prescription medication C strength units"
+        },
+        "2C_frequency.NMCF": {
+            "title": "2C3 Non-prescription medication C frequency: total number of doses per day, week or month"
+        },
+        "2C_frequency.NMCFU": {
+            "title": "2C4 Non-prescription medication C frequency units"
+        },
+        "NMD": {
+            "title": "2D Non-prescription medication D name"
+        },
+        "2D_medi_strength.NMDS": {
+            "title": "2D1 Non-prescription medication D strength"
+        },
+        "2D_medi_strength.NMDSU": {
+            "title": "2D2 Non-prescription medication D strength units"
+        },
+        "2D_frequency.NMDF": {
+            "title": "2D3 Non-prescription medication D frequency: total number of doses per day, week or month"
+        },
+        "2D_frequency.NMDFU": {
+            "title": "2D4 Non-prescription medication D frequency units"
+        },
+        "NME": {
+            "title": "2E Non-prescription medication E name"
+        },
+        "2E_medi_strength.NMES": {
+            "title": "2E1 Non-prescription medication E strength"
+        },
+        "2E_medi_strength.NMESU": {
+            "title": "2E2 Non-prescription medication E strength units"
+        },
+        "2E_frequency.NMEF": {
+            "title": "2E3 Non-prescription medication E frequency: total number of doses per day, week or month"
+        },
+        "2E_frequency.NMEFU": {
+            "title": "2E4 Non-prescription medication E frequency units"
+        },
+        "VITASUPS": {
+            "title": "3 Is the subject currently taking any vitamins or supplements?"
+        },
+        "VSA": {
+            "title": "3A Vitamin/supplement A name"
+        },
+        "3A_medi_strength.VSAS": {
+            "title": "3A1 Vitamin/supplement A strength"
+        },
+        "3A_medi_strength.VSASU": {
+            "title": "3A2 Vitamin/supplement A strength units"
+        },
+        "3A_frequency.VSAF": {
+            "title": "3A3 Vitamin/supplement A frequency: total number of doses per day, week or month"
+        },
+        "3A_frequency.VSAFU": {
+            "title": "3A4 Vitamin/supplement A frequency units"
+        },
+        "VSB": {
+            "title": "3B Vitamin/supplement B name"
+        },
+        "3B_medi_strength.VSBS": {
+            "title": "3B1 Vitamin/supplement B strength"
+        },
+        "3B_medi_strength.VSBSU": {
+            "title": "3B2 Vitamin/supplement B strength units"
+        },
+        "3B_frequency.VSBF": {
+            "title": "3B3 Vitamin/supplement B frequency: total number of doses per day, week or month"
+        },
+        "3B_frequency.VSBFU": {
+            "title": "3B4 Vitamin/supplement B frequency units"
+        },
+        "VSC": {
+            "title": "3C Vitamin/supplement C name"
+        },
+        "3C_medi_strength.VSCS": {
+            "title": "3C1 Vitamin/supplement C strength"
+        },
+        "3C_medi_strength.VSCSU": {
+            "title": "3C2 Vitamin/supplement C strength units"
+        },
+        "3C_frequency.VSCF": {
+            "title": "3C3 Vitamin/supplement C frequency: total number of doses per day, week or month"
+        },
+        "3C_frequency.VSCFU": {
+            "title": "3C4 Vitamin/supplement C frequency units"
+        },
+        "VSD": {
+            "title": "3D Vitamin/supplement D name"
+        },
+        "3D_medi_strength.VSDS": {
+            "title": "3D1 Vitamin/supplement D strength"
+        },
+        "3D_medi_strength.VSDSU": {
+            "title": "3D2 Vitamin/supplement D strength units"
+        },
+        "3D_frequency.VSDF": {
+            "title": "3D3 Vitamin/supplement D frequency: total number of doses per day, week or month"
+        },
+        "3D_frequency.VSDFU": {
+            "title": "3D4 Vitamin/supplement D frequency units"
+        },
+        "VSE": {
+            "title": "3E Vitamin/supplement E name"
+        },
+        "3E_medi_strength.VSES": {
+            "title": "3E1 Vitamin/supplement E strength"
+        },
+        "3E_medi_strength.VSESU": {
+            "title": "3E2 Vitamin/supplement E strength units"
+        },
+        "3E_frequency.VSEF": {
+            "title": "3E3 Vitamin/supplement E frequency: total number of doses per day, week or month"
+        },
+        "3E_frequency.VSEFU": {
+            "title": "3E4 Vitamin/supplement E frequency units"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "PMEDS": {
+            "title": "1 Is the subject currently taking any prescription medications?"
+        },
+        "PMA": {
+            "title": "1A Prescription medication A name"
+        },
+        "1a_medi_strength.PMAS": {
+            "title": "1A1 Prescription medication A strength"
+        },
+        "1a_medi_strength.PMASU": {
+            "title": "1A2 Prescription medication A strength units"
+        },
+        "1a_frequency.PMAF": {
+            "title": "1A3 Prescription medication A frequency: total number of doses per day, week or month"
+        },
+        "1a_frequency.PMAFU": {
+            "title": "1A4 Prescription medication A frequency units"
+        },
+        "1a_pre_prn.PMAP": {
+            "title": "1A5 Prescription medication A – Prescribed as PRN?"
+        },
+        "1a_prn_frequency.PMAPF": {
+            "title": "1A6 Prescription medication A PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1a_prn_frequency.PMAPFU": {
+            "title": "1A7 Prescription medication A PRN frequency units"
+        },
+        "PMB": {
+            "title": "1B Prescription medication B name"
+        },
+        "1B_medi_strength.PMBS": {
+            "title": "1B1 Prescription medication B strength"
+        },
+        "1B_medi_strength.PMBSU": {
+            "title": "1B2 Prescription medication B strength units"
+        },
+        "1B_frequency.PMBF": {
+            "title": "1B3 Prescription medication B frequency: total number of doses per day, week or month"
+        },
+        "1B_frequency.PMBFU": {
+            "title": "1B4 Prescription medication B frequency units"
+        },
+        "1B_pre_prn.PMBP": {
+            "title": "1B5 Prescription medication B – Prescribed as PRN?"
+        },
+        "1B_prn_frequency.PMBPF": {
+            "title": "1B6 Prescription medication B PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1B_prn_frequency.PMBPFU": {
+            "title": "1B7 Prescription medication B PRN frequency units"
+        },
+        "PMC": {
+            "title": "1C Prescription medication C name"
+        },
+        "1C_medi_strength.PMCS": {
+            "title": "1C1 Prescription medication C strength"
+        },
+        "1C_medi_strength.PMCSU": {
+            "title": "1C2 Prescription medication C strength units"
+        },
+        "1C_frequency.PMCF": {
+            "title": "1C3 Prescription medication C frequency: total number of doses per day, week or month"
+        },
+        "1C_frequency.PMCFU": {
+            "title": "1C4 Prescription medication C frequency units"
+        },
+        "1C_pre_prn.PMCP": {
+            "title": "1C5 Prescription medication C – Prescribed as PRN?"
+        },
+        "1C_prn_frequency.PMCPF": {
+            "title": "1C6 Prescription medication C PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1C_prn_frequency.PMCPFU": {
+            "title": "1C7 Prescription medication C PRN frequency units"
+        },
+        "PMD": {
+            "title": "1D Prescription medication D name"
+        },
+        "1D_medi_strength.PMDS": {
+            "title": "1D1 Prescription medication D strength"
+        },
+        "1D_medi_strength.PMDSU": {
+            "title": "1D2 Prescription medication D strength units"
+        },
+        "1D_frequency.PMDF": {
+            "title": "1D3 Prescription medication D frequency: total number of doses per day, week or month"
+        },
+        "1D_frequency.PMDFU": {
+            "title": "1D4 Prescription medication D frequency units"
+        },
+        "1D_pre_prn.PMDP": {
+            "title": "1D5 Prescription medication D – Prescribed as PRN?"
+        },
+        "1D_prn_frequency.PMDPF": {
+            "title": "1D6 Prescription medication D PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1D_prn_frequency.PMDPFU": {
+            "title": "1D7 Prescription medication D PRN frequency units"
+        },
+        "PME": {
+            "title": "1E Prescription medication E name"
+        },
+        "1E_medi_strength.PMES": {
+            "title": "1E1 Prescription medication E strength"
+        },
+        "1E_medi_strength.PMESU": {
+            "title": "1E2 Prescription medication E strength units"
+        },
+        "1E_frequency.PMEF": {
+            "title": "1E3 Prescription medication E frequency: total number of doses per day, week or month"
+        },
+        "1E_frequency.PMEFU": {
+            "title": "1E4 Prescription medication E frequency units"
+        },
+        "1E_pre_prn.PMEP": {
+            "title": "1E5 Prescription medication E – Prescribed as PRN?"
+        },
+        "1E_prn_frequency.PMEPF": {
+            "title": "1E6 Prescription medication E PRN frequency (average for the past 2 weeks): total number of doses taken per day, week or month."
+        },
+        "1E_prn_frequency.PMEPFU": {
+            "title": "1E7 Prescription medication E PRN frequency units"
+        },
+        "NMEDS": {
+            "title": "2 Is the subject currently taking any non-prescription medications(OTC)?"
+        },
+        "NMA": {
+            "title": "2A Non-prescription medication A name"
+        },
+        "2A_medi_strength.NMAS": {
+            "title": "2A1 Non-prescription medication A strength"
+        },
+        "2A_medi_strength.NMASU": {
+            "title": "2A2 Non-prescription medication A strength units"
+        },
+        "2A_frequency.NMAF": {
+            "title": "2A3 Non-prescription medication A frequency: total number of doses per day, week or month"
+        },
+        "2A_frequency.NMAFU": {
+            "title": "2A4 Non-prescription medication A frequency units"
+        },
+        "NMB": {
+            "title": "2B Non-prescription medication B name"
+        },
+        "2B_medi_strength.NMBS": {
+            "title": "2B1 Non-prescription medication B strength"
+        },
+        "2B_medi_strength.NMBSU": {
+            "title": "2B2 Non-prescription medication B strength units"
+        },
+        "2B_frequency.NMBF": {
+            "title": "2B3 Non-prescription medication B frequency: total number of doses per day, week or month"
+        },
+        "2B_frequency.NMBFU": {
+            "title": "2B4 Non-prescription medication B frequency units"
+        },
+        "NMC": {
+            "title": "2C Non-prescription medication C name"
+        },
+        "2C_medi_strength.NMCS": {
+            "title": "2C1 Non-prescription medication C strength"
+        },
+        "2C_medi_strength.NMCSU": {
+            "title": "2C2 Non-prescription medication C strength units"
+        },
+        "2C_frequency.NMCF": {
+            "title": "2C3 Non-prescription medication C frequency: total number of doses per day, week or month"
+        },
+        "2C_frequency.NMCFU": {
+            "title": "2C4 Non-prescription medication C frequency units"
+        },
+        "NMD": {
+            "title": "2D Non-prescription medication D name"
+        },
+        "2D_medi_strength.NMDS": {
+            "title": "2D1 Non-prescription medication D strength"
+        },
+        "2D_medi_strength.NMDSU": {
+            "title": "2D2 Non-prescription medication D strength units"
+        },
+        "2D_frequency.NMDF": {
+            "title": "2D3 Non-prescription medication D frequency: total number of doses per day, week or month"
+        },
+        "2D_frequency.NMDFU": {
+            "title": "2D4 Non-prescription medication D frequency units"
+        },
+        "NME": {
+            "title": "2E Non-prescription medication E name"
+        },
+        "2E_medi_strength.NMES": {
+            "title": "2E1 Non-prescription medication E strength"
+        },
+        "2E_medi_strength.NMESU": {
+            "title": "2E2 Non-prescription medication E strength units"
+        },
+        "2E_frequency.NMEF": {
+            "title": "2E3 Non-prescription medication E frequency: total number of doses per day, week or month"
+        },
+        "2E_frequency.NMEFU": {
+            "title": "2E4 Non-prescription medication E frequency units"
+        },
+        "VITASUPS": {
+            "title": "3 Is the subject currently taking any vitamins or supplements?"
+        },
+        "VSA": {
+            "title": "3A Vitamin/supplement A name"
+        },
+        "3A_medi_strength.VSAS": {
+            "title": "3A1 Vitamin/supplement A strength"
+        },
+        "3A_medi_strength.VSASU": {
+            "title": "3A2 Vitamin/supplement A strength units"
+        },
+        "3A_frequency.VSAF": {
+            "title": "3A3 Vitamin/supplement A frequency: total number of doses per day, week or month"
+        },
+        "3A_frequency.VSAFU": {
+            "title": "3A4 Vitamin/supplement A frequency units"
+        },
+        "VSB": {
+            "title": "3B Vitamin/supplement B name"
+        },
+        "3B_medi_strength.VSBS": {
+            "title": "3B1 Vitamin/supplement B strength"
+        },
+        "3B_medi_strength.VSBSU": {
+            "title": "3B2 Vitamin/supplement B strength units"
+        },
+        "3B_frequency.VSBF": {
+            "title": "3B3 Vitamin/supplement B frequency: total number of doses per day, week or month"
+        },
+        "3B_frequency.VSBFU": {
+            "title": "3B4 Vitamin/supplement B frequency units"
+        },
+        "VSC": {
+            "title": "3C Vitamin/supplement C name"
+        },
+        "3C_medi_strength.VSCS": {
+            "title": "3C1 Vitamin/supplement C strength"
+        },
+        "3C_medi_strength.VSCSU": {
+            "title": "3C2 Vitamin/supplement C strength units"
+        },
+        "3C_frequency.VSCF": {
+            "title": "3C3 Vitamin/supplement C frequency: total number of doses per day, week or month"
+        },
+        "3C_frequency.VSCFU": {
+            "title": "3C4 Vitamin/supplement C frequency units"
+        },
+        "VSD": {
+            "title": "3D Vitamin/supplement D name"
+        },
+        "3D_medi_strength.VSDS": {
+            "title": "3D1 Vitamin/supplement D strength"
+        },
+        "3D_medi_strength.VSDSU": {
+            "title": "3D2 Vitamin/supplement D strength units"
+        },
+        "3D_frequency.VSDF": {
+            "title": "3D3 Vitamin/supplement D frequency: total number of doses per day, week or month"
+        },
+        "3D_frequency.VSDFU": {
+            "title": "3D4 Vitamin/supplement D frequency units"
+        },
+        "VSE": {
+            "title": "3E Vitamin/supplement E name"
+        },
+        "3E_medi_strength.VSES": {
+            "title": "3E1 Vitamin/supplement E strength"
+        },
+        "3E_medi_strength.VSESU": {
+            "title": "3E2 Vitamin/supplement E strength units"
+        },
+        "3E_frequency.VSEF": {
+            "title": "3E3 Vitamin/supplement E frequency: total number of doses per day, week or month"
+        },
+        "3E_frequency.VSEFU": {
+            "title": "3E4 Vitamin/supplement E frequency units"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "PMEDS": 1.0,
+        "PMA": 1.0,
+        "1a_medi_strength.PMAS": 1.0,
+        "1a_medi_strength.PMASU": 1.0,
+        "1a_frequency.PMAF": 1.0,
+        "1a_frequency.PMAFU": 1.0,
+        "1a_pre_prn.PMAP": 1.0,
+        "1a_prn_frequency.PMAPF": 1.0,
+        "1a_prn_frequency.PMAPFU": 1.0,
+        "PMB": 1.0,
+        "1B_medi_strength.PMBS": 1.0,
+        "1B_medi_strength.PMBSU": 1.0,
+        "1B_frequency.PMBF": 1.0,
+        "1B_frequency.PMBFU": 1.0,
+        "1B_pre_prn.PMBP": 1.0,
+        "1B_prn_frequency.PMBPF": 1.0,
+        "1B_prn_frequency.PMBPFU": 1.0,
+        "PMC": 1.0,
+        "1C_medi_strength.PMCS": 1.0,
+        "1C_medi_strength.PMCSU": 1.0,
+        "1C_frequency.PMCF": 1.0,
+        "1C_frequency.PMCFU": 1.0,
+        "1C_pre_prn.PMCP": 1.0,
+        "1C_prn_frequency.PMCPF": 1.0,
+        "1C_prn_frequency.PMCPFU": 1.0,
+        "PMD": 1.0,
+        "1D_medi_strength.PMDS": 1.0,
+        "1D_medi_strength.PMDSU": 1.0,
+        "1D_frequency.PMDF": 1.0,
+        "1D_frequency.PMDFU": 1.0,
+        "1D_pre_prn.PMDP": 1.0,
+        "1D_prn_frequency.PMDPF": 1.0,
+        "1D_prn_frequency.PMDPFU": 1.0,
+        "PME": 1.0,
+        "1E_medi_strength.PMES": 1.0,
+        "1E_medi_strength.PMESU": 1.0,
+        "1E_frequency.PMEF": 1.0,
+        "1E_frequency.PMEFU": 1.0,
+        "1E_pre_prn.PMEP": 1.0,
+        "1E_prn_frequency.PMEPF": 1.0,
+        "1E_prn_frequency.PMEPFU": 1.0,
+        "NMEDS": 1.0,
+        "NMA": 1.0,
+        "2A_medi_strength.NMAS": 1.0,
+        "2A_medi_strength.NMASU": 1.0,
+        "2A_frequency.NMAF": 1.0,
+        "2A_frequency.NMAFU": 1.0,
+        "NMB": 1.0,
+        "2B_medi_strength.NMBS": 1.0,
+        "2B_medi_strength.NMBSU": 1.0,
+        "2B_frequency.NMBF": 1.0,
+        "2B_frequency.NMBFU": 1.0,
+        "NMC": 1.0,
+        "2C_medi_strength.NMCS": 1.0,
+        "2C_medi_strength.NMCSU": 1.0,
+        "2C_frequency.NMCF": 1.0,
+        "2C_frequency.NMCFU": 1.0,
+        "NMD": 1.0,
+        "2D_medi_strength.NMDS": 1.0,
+        "2D_medi_strength.NMDSU": 1.0,
+        "2D_frequency.NMDF": 1.0,
+        "2D_frequency.NMDFU": 1.0,
+        "NME": 1.0,
+        "2E_medi_strength.NMES": 1.0,
+        "2E_medi_strength.NMESU": 1.0,
+        "2E_frequency.NMEF": 1.0,
+        "2E_frequency.NMEFU": 1.0,
+        "VITASUPS": 1.0,
+        "VSA": 1.0,
+        "3A_medi_strength.VSAS": 1.0,
+        "3A_medi_strength.VSASU": 1.0,
+        "3A_frequency.VSAF": 1.0,
+        "3A_frequency.VSAFU": 1.0,
+        "VSB": 1.0,
+        "3B_medi_strength.VSBS": 1.0,
+        "3B_medi_strength.VSBSU": 1.0,
+        "3B_frequency.VSBF": 1.0,
+        "3B_frequency.VSBFU": 1.0,
+        "VSC": 1.0,
+        "3C_medi_strength.VSCS": 1.0,
+        "3C_medi_strength.VSCSU": 1.0,
+        "3C_frequency.VSCF": 1.0,
+        "3C_frequency.VSCFU": 1.0,
+        "VSD": 1.0,
+        "3D_medi_strength.VSDS": 1.0,
+        "3D_medi_strength.VSDSU": 1.0,
+        "3D_frequency.VSDF": 1.0,
+        "3D_frequency.VSDFU": 1.0,
+        "VSE": 1.0,
+        "3E_medi_strength.VSES": 1.0,
+        "3E_medi_strength.VSESU": 1.0,
+        "3E_frequency.VSEF": 1.0,
+        "3E_frequency.VSEFU": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_a4v1.md"
+}

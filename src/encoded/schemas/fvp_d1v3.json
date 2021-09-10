@@ -1,0 +1,2126 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - FOLLOW UP FORM D1: Clinician Diagnosis",
+    "description": "INSTRUCTIONS: This form is to be completed by the clinician. For additional clarification and examples, see UDS Coding Guidebook for Follow-Up Visit Packet, Form D1. Link to NACC Coding Guidebook Check only one box per question. This form is divided into three main sections: Section 1&nbsp&nbsp Cognitive Status: Normal cognition/MCI/dementia and dementia syndrome Section 2&nbsp&nbsp Biomarkers, imaging and genetics: Neurodegenerative imaging and CSF biomarkers, imaging evidence for CVD, and known genetic mutations for AD and FTLD Section 3 Etiological diagnoses: presumed etiological diagnoses for the cognitive disorder",
+    "id": "/profiles/uds_fvp_d1v3.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "fu_dxmethod"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "fu_dxmethod": {
+            "title": "1. Diagnosis method - responses in this form are based on diagnosis by:",
+            "type": "string",
+            "enum": [
+                "1 A single clinician",
+                "2 A formal consensus panel",
+                "3 Other (e.g., two or more clinicians or other informal group)"
+            ]
+        },
+        "fu_sec1": {
+            "title": "SECTION 1: Cognitive and behavioral status",
+            "type": "object",
+            "properties": {
+                "fu_normcog": {
+                    "title": "2. Does the subject have normal cognition (global CDR=0 and/or neuropsychological testing within normal range) and normal behavior (i.e., the subject does not exhibit behavior sufficient to diagnose MCI or dementia due to FTLD or LBD)?",
+                    "description": "ALL-CAUSE DEMENTIA \nThe subject has cognitive or behavioral (neuropsychiatric) symptoms that meet all of the following criteria:  \n- Interfere with ability to function as before at work or at usual activities? \n- Represent a decline from previous levels of functioning? \n- Are not explained by delirium or major psychiatric disorder? \n-  Include cognitive impairment detected and diagnosed through a combination of 1) history-taking and 2) objective cognitive \nassessment (bedside or neuropsychological testing)? \n \nAND  \nImpairment in one* or more of the following domains. \nImpaired ability to acquire and remember new information \nImpaired reasoning and handling of complex tasks, poor judgment \nImpaired visuospatial abilities \nImpaired language functions \nChanges in personality, behavior, or comportment \n \n*In the event of single-domain impairment (e.g., language in PPA, behavior in bvFTD, posterior cortical atrophy),   \nthe subject must not fulfill criteria for MCI.",
+                    "type": "string",
+                    "enum": [
+                        "0 No (CONTINUE TO QUESTION 3)",
+                        "1 Yes (SKIP TO QUESTION 6)"
+                    ]
+                },
+                "fu_demented": {
+                    "title": "3. Does the subject meet the criteria for dementia?",
+                    "type": "string",
+                    "enum": [
+                        "0 No (SKIP TO QUESTION 5)",
+                        "1 Yes (CONTINUE TO QUESTION 4)"
+                    ]
+                },
+                "fu_note_d1_3": {
+                    "title": "4.  If the subject meets criteria for dementia, answer Questions 4a-4f below and then SKIP TO QUESTION 6.",
+                    "description": "Based entirely on the history and examination (including neuropsychological testing), what is the cognitive/behavioral syndrome?  Select one or more as Present; all others will default to Absent in the NACC database.",
+                    "type": "object",
+                    "properties": {
+                        "fu_note_d1_5": {
+                            "title": "Dementia syndrome",
+                            "type": "object",
+                            "properties": {
+                                "fu_amndem": {
+                                    "title": "4a. Amnestic multidomain dementia syndrome",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_pca": {
+                                    "title": "4b. Posterior cortical atrophy syndrome (or primary visual presentation)",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_ppasyn": {
+                                    "title": "4c. Primary progressive aphasia (PPA) syndrome",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_ppasynt": {
+                                    "title": "4c1.",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Meets criteria for semantic PPA",
+                                        "2 Meets criteria for logopenic PPA",
+                                        "3 Meets criteria for nonfluent/agrammatic PPA",
+                                        "4 PPA other/not otherwise specified"
+                                    ]
+                                },
+                                "fu_ftdsyn": {
+                                    "title": "4d. Behavioral variant FTD (bvFTD) syndrome",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_lbdsyn": {
+                                    "title": "4e. Lewy body dementia syndrome",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_namndem": {
+                                    "title": "4f. Non-amnestic multidomain dementia, not PCA, PPA, bvFTD, or DLB syndrome",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                }
+                            }
+                        }
+                    }
+                },
+                "fu_note_d1_6": {
+                    "title": "5.  If the subject does not have normal cognition or behavior and is not clinically demented, indicate the type of cognitive impairment below. \nMCI CORE CLINICAL CRITERIA  \n - Is the subject, the co-participant, or a clinician concerned about a change in cognition compared to the subject's   \n - Is there impairment in one or more cognitive domains (memory, language, executive function, attention, and  \n visuospatial skills)?  \n- Is there largely preserved independence in functional abilities (no change from prior manner of functioning or uses   \n  minimal aids or assistance)?",
+                    "description": "Select one syndrome from 5a-5e as being Present (all others will default to Absent in the NACC database), and then CONTINUE TO QUESTION 6.  If you select MCI below, it should meet the MCI core clinical criteria outlined above.",
+                    "type": "object",
+                    "properties": {
+                        "fu_mciamem": {
+                            "title": "5a. Amnestic MCI, single domain (aMCI SD)",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_mciaplus": {
+                            "title": "5b. Amnestic MCI, multiple domains (aMCI MD)",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_note_d1_8": {
+                            "title": "CHECK YES for at least one additional domain (besides memory): ",
+                            "type": "object",
+                            "properties": {
+                                "fu_mciaplan": {
+                                    "title": "5b1. Language",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mciapatt": {
+                                    "title": "5b2. Attention",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mciapex": {
+                                    "title": "5b3. Executive",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mciapvis": {
+                                    "title": "5b4. Visuospatial",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                }
+                            }
+                        },
+                        "fu_mcinon1": {
+                            "title": "5c. Non-amnestic MCI, single domain (naMCI SD)",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_note_d1_9": {
+                            "title": "CHECK YES to indicate the affected domain:",
+                            "type": "object",
+                            "properties": {
+                                "fu_mci1lan": {
+                                    "title": "5c1. Language",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mci1att": {
+                                    "title": "5c2. Attention",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mci1ex": {
+                                    "title": "5c3.  Executive",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mci1vis": {
+                                    "title": "5c4. Visuospatial",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                }
+                            }
+                        },
+                        "fu_mcinon2": {
+                            "title": "5d. Non-amnestic MCI, multiple domains (naMCI MD)",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_note_d1_10": {
+                            "title": "CHECK YES for at least two domains:",
+                            "type": "object",
+                            "properties": {
+                                "fu_mci2lan": {
+                                    "title": "5d1 Language",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mci2att": {
+                                    "title": "5d2. Attention",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mci2ex": {
+                                    "title": "5d3. Executive",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                },
+                                "fu_mci2vis": {
+                                    "title": "5d4. Visuospatial",
+                                    "type": "string",
+                                    "enum": [
+                                        "0 No",
+                                        "1 Yes"
+                                    ]
+                                }
+                            }
+                        },
+                        "fu_impnomci": {
+                            "title": "5e. Cognitively impaired, not MCI",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        }
+                    }
+                }
+            }
+        },
+        "fu_sec2": {
+            "title": "SECTION 2: Biomarkers, imaging, and genetics",
+            "description": "Section 2 must be completed for all subjects",
+            "type": "object",
+            "properties": {
+                "fu_biomarker_findings": {
+                    "title": "6. Indicate neurodegenerative biomarker status, using local standards for positivity.\nBiomarker Findings",
+                    "type": "object",
+                    "properties": {
+                        "fu_amylpet": {
+                            "title": "6a. Abnormally elevated amyloid on PET",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_amylcsf": {
+                            "title": "6b. Abnormally low amyloid in CSF",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_fdgad": {
+                            "title": "6c. FDG-PET pattern of AD",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_hippatr": {
+                            "title": "6d. Hippocampal atrophy",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_taupetad": {
+                            "title": "6e. Tau PET evidence for AD",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_csftau": {
+                            "title": "6f. Abnormally elevated CSF tau or ptau",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_fdgftld": {
+                            "title": "6g. FDG-PET evidence for frontal or anterior temporal hypometabolism for FTLD",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_tpetftld": {
+                            "title": "6h. Tau PET evidence for FTLD",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_mrftld": {
+                            "title": "6i. Structural MR evidence for frontal or anterior temporal atrophy for FTLD",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_datscan": {
+                            "title": "6j. Dopamine transporter scan (DATscan) evidence for Lewy body disease",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown, not assessed"
+                            ]
+                        },
+                        "fu_othbiom": {
+                            "title": "6k. Other neurodegenerative biomarker",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes"
+                            ]
+                        },
+                        "fu_othbiomx": {
+                            "title": "6k1. If other biomarker findings present, please specify:",
+                            "type": "string"
+                        }
+                    }
+                },
+                "fu_image_findings": {
+                    "title": "7. Is there evidence for cerebrovascular disease (CVD) on imaging? \nImaging Findings",
+                    "type": "object",
+                    "properties": {
+                        "fu_imaglinf": {
+                            "title": "7a. Large vessel infarct(s)",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
+                            ]
+                        },
+                        "fu_imaglac": {
+                            "title": "7b. Lacunar infarct(s)",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
+                            ]
+                        },
+                        "fu_imagmach": {
+                            "title": "7c. Macrohemorrhage(s)",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
+                            ]
+                        },
+                        "fu_imagmich": {
+                            "title": "7d. Microhemorrhage(s)",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
+                            ]
+                        },
+                        "fu_imagmwmh": {
+                            "title": "7e. Moderate white-matter hyperintensity (CHS score 5-6)",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
+                            ]
+                        },
+                        "fu_imagewmh": {
+                            "title": "7f. Extensive white-matter hyperintensity (CHS score 7-8+)",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Unknown/not assessed"
+                            ]
+                        }
+                    }
+                },
+                "fu_admut": {
+                    "title": "8. Does the subject have a dominantly inherited AD mutation (PSEN1, PSEN2, APP)?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown/not assessed"
+                    ]
+                },
+                "fu_ftldmut": {
+                    "title": "9. Does the subject have a hereditary FTLD mutation (e.g, GRN, VCP, TARBP, FUS, C9orf72, CHMP2B, MAPT)?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown/not assessed"
+                    ]
+                },
+                "fu_othmut": {
+                    "title": "10. Does the subject have a hereditary mutation other than AD or FTLD mutation?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown/not assessed"
+                    ]
+                },
+                "fu_othmutx": {
+                    "title": "10a.  If question 10 is 1 Yes, please specify hereditary mutation other than AD or FTLD mutation.",
+                    "type": "string"
+                }
+            }
+        },
+        "fu_sec3": {
+            "title": "SECTION 3: Etiologic diagnoses",
+            "description": "Section 3 must be filled out for all subjects. Indicate presumptive etiologic diagnoses of the cognitive disorder and             whether a given diagnosis is a primary, contributing, or non-contributing cause of the observed impairment, based             on the clinician's best judgment. Select one or more diagnoses as Present; all others will default to Absent in the             NACC database. Only one diagnosis should be selected as 1=Primary.             For subjects with normal cognition: Indicate the presence of any diagnoses by marking Present, and leave the             questions on whether the diagnosis was primary, contributing, or non-contributing blank. Subjects with positive             biomarkers but no clinical symptoms of Alzheimer's disease, Lewy body disease, or frontotemporal lobar             degeneration should not have these diagnoses marked as Present. Instead, the biomarker data from Section 2 can             be used to identify the presence of preclinical disease.",
+            "type": "object",
+            "properties": {
+                "fu_etio_diag": {
+                    "title": "Etiologic diagnoses",
+                    "description": "Section 3 must be filled out for all subjects.  Indicate presumptive etiologic diagnoses of the cognitive disorder and whether a given diagnosis is a primary, contributing, or non-contributing cause of the observed impairment, based on the clinician's best judgment.  Select one or more diagnoses as Present; all others will default to Absent in the NACC database.  Only one diagnosis should be selected as 1=Primary.For subjects with normal cognition:  Indicate the presence of any diagnoses by marking Present, and leave the questions on whether the diagnosis was primary, contributing, or non-contributing blank.  Subjects with positive biomarkers but no clinical symptoms of Alzheimer's disease, Lewy body disease, or frontotemporal lobar degeneration should not have these  diagnoses marked as Present.  Instead, the biomarker data from Section 2 can be used to identify the presence of preclinical disease. ",
+                    "type": "object",
+                    "properties": {
+                        "fu_alzdis": {
+                            "title": "11. Alzheimer's disease",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_alzdisif": {
+                            "title": "11a. If Alzheimer's disease present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributin"
+                            ]
+                        },
+                        "fu_lbdis": {
+                            "title": "12. Lewy body disease",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_lbdif": {
+                            "title": "12a. If Lewy body disease present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributin"
+                            ]
+                        },
+                        "fu_park": {
+                            "title": "12b.  Parkinson's disease",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_msa": {
+                            "title": "13. Multiple system atrophy",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_msaif": {
+                            "title": "13a.  If Multiple system atrophy present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributin"
+                            ]
+                        },
+                        "fu_note_d1_13": {
+                            "title": "14. Frontotemporal lobar degeneration",
+                            "type": "object",
+                            "properties": {
+                                "fu_psp": {
+                                    "title": "14a. Progressive supranuclear palsy (PSP)",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_pspif": {
+                                    "title": "14a1.  If Progressive supranuclear palsy (PSP) is present, is it primary, contributing or non-contributing?",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Primary",
+                                        "2 Contributing",
+                                        "3 Non-contributin"
+                                    ]
+                                },
+                                "fu_cort": {
+                                    "title": "14b. Corticobasal degeneration (CBD)",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_cortif": {
+                                    "title": "14b1. If Corticobasal degeneration (CBD) is present, is it primary, contributing or non-contributing?",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Primary",
+                                        "2 Contributing",
+                                        "3 Non-contributin"
+                                    ]
+                                },
+                                "fu_ftldmo": {
+                                    "title": "14c. FTLD with motor neuron disease",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_ftldmoif": {
+                                    "title": "14c1. If FTLD with motor neuron disease is present, is it primary, contributing or non-contributing?",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Primary",
+                                        "2 Contributing",
+                                        "3 Non-contributin"
+                                    ]
+                                },
+                                "fu_ftldnos": {
+                                    "title": "14d. FTLD NOS",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Present",
+                                        "0 Absent"
+                                    ]
+                                },
+                                "fu_ftldnoif": {
+                                    "title": "14d1. If FTLD NOS is present, is it primary, contributing or non-contributing?",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Primary",
+                                        "2 Contributing",
+                                        "3 Non-contributin"
+                                    ]
+                                },
+                                "fu_ftldsubt": {
+                                    "title": "14e.  If FTLD (Questions 14a-14d) is Present, specify FTLD subtype:",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Tauopathy",
+                                        "2 TDP-43 proteinopathy",
+                                        "3 Other (SPECIFY):",
+                                        "9 Unknown"
+                                    ]
+                                },
+                                "fu_ftldsubx": {
+                                    "title": "14e1.  Other FTLD, specify",
+                                    "type": "string"
+                                }
+                            }
+                        },
+                        "fu_cvd": {
+                            "title": "15. Vascular Brain injury (based on clinical or imaging evidence)",
+                            "type": "string",
+                            "description": "If significant vascular brain injury is absent, SKIP TO QUESTION 16.",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_cvdif": {
+                            "title": "15a. If vascular brain injury is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_prevstk": {
+                            "title": "15b. Previous symptomatic stroke?",
+                            "type": "string",
+                            "enum": [
+                                "0 No (SKIP TO QUESTION 15c)",
+                                "1 Yes"
+                            ]
+                        },
+                        "fu_strokedec": {
+                            "title": "15b1.  Temporal relationship between stroke and cognitive decline?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes"
+                            ]
+                        },
+                        "fu_stkimag": {
+                            "title": "15b2. Confirmation of stroke by neuroimaging?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown; no relevant imaging data available"
+                            ]
+                        },
+                        "fu_infnetw": {
+                            "title": "15c.  Is there imaging evidence of cystic infarction in cognitive network(s)?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown; no relevant imaging data available"
+                            ]
+                        },
+                        "fu_infwmh": {
+                            "title": "15d.  Is there imaging evidence of cystic infarction, imaging evidence of extensive white matter hyperintensity (CHS grade 7-8+), and impairment in executive function? ",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown; no relevant imaging data available"
+                            ]
+                        },
+                        "fu_esstrem": {
+                            "title": "16. Essential tremor",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_esstreif": {
+                            "title": "16a. If essential tremor is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_downs": {
+                            "title": "17. Down syndrome",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_downsif": {
+                            "title": "17a. If Down syndrome is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_hunt": {
+                            "title": "18. Huntington's disease",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_huntif": {
+                            "title": "18a. If Huntington's disease is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_prion": {
+                            "title": "19. Prion disease (CJD, other)",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_prionif": {
+                            "title": "19a. If Prion's disease is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_brninj": {
+                            "title": "20. Traumatic brain injury",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_brninjif": {
+                            "title": "20a. If Traumatic brain injury is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_brnincte": {
+                            "title": "20b. If traumatic brain injury present, does the subject have symptoms consistent with chronic traumatic encephalopathy?",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_hyceph": {
+                            "title": "21. Normal-pressure hydrocephalus",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_hycephif": {
+                            "title": "21a. If Normal-pressure hydrocephalus is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_epilep": {
+                            "title": "22. Epilepsy",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_epilepif": {
+                            "title": "22a. If Epilepsy is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_neop": {
+                            "title": "23. CNS neoplasm",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_neopif": {
+                            "title": "23a. If CNS neoplasm present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_neopstat": {
+                            "title": "23b. CNS neoplasm, benign or malignant?",
+                            "type": "string",
+                            "enum": [
+                                "1 Benign",
+                                "2 Malignant"
+                            ]
+                        },
+                        "fu_hiv": {
+                            "title": "24. Human immunodeficiency virus (HIV)",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_hivif": {
+                            "title": "24a. If Human immunodeficiency virus (HIV) is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_othcog": {
+                            "title": "25.  Cognitive impairment due to other neurologic, genetic, or infectious conditions not listed above",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_othcogif": {
+                            "title": "25a. If other cognitive impairment present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_othcogx": {
+                            "title": "25b.  Cognitive impairment due to other neurologic, genetic, or infectious conditions not listed above.  If Present, specify:  ",
+                            "type": "string"
+                        }
+                    }
+                },
+                "fu_conditions": {
+                    "title": "Condition",
+                    "type": "object",
+                    "properties": {
+                        "fu_dep": {
+                            "title": "26.  Active depression",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_depif": {
+                            "title": "26a. If active depression is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_deptreat": {
+                            "title": "26b.  If active depression present, select one:",
+                            "type": "string",
+                            "enum": [
+                                "0 Untreated",
+                                "1 Treated with medication and/or counseling"
+                            ]
+                        },
+                        "fu_bipoldx": {
+                            "title": "27.  Bipolar disorder",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_bipoldif": {
+                            "title": "27a. If bipolar disorder is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_schizop": {
+                            "title": "28.  Schizophrenia or other psychosis",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_schizoif": {
+                            "title": "28a. If Schizophrenia or other psychosis is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_anxiet": {
+                            "title": "29.  Anxiety disorder",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_anxietif": {
+                            "title": "29a. If Anxiety disorder is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_delir": {
+                            "title": "30. Delirium",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_delirif": {
+                            "title": "30a. If Delirium is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_ptsddx": {
+                            "title": "31. Post-traumatic stress disorder (PTSD)",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_ptsddxif": {
+                            "title": "31a. If Post-traumatic stress disorder is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_othpsy": {
+                            "title": "32.  Other psychiatric disease",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_othpsyif": {
+                            "title": "32a. If other psychiatric disease is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_othpsyx": {
+                            "title": "32b. If other psychiatric disease is present, please specify:",
+                            "type": "string"
+                        },
+                        "fu_alcdem": {
+                            "title": "33. Cognitive impairment due to alcohol abuse",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_alcdemif": {
+                            "title": "33a. If cognitive impairment due to alcohol abuse is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_alcabuse": {
+                            "title": "33b. Current alcohol abuse:",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "9 Unknown"
+                            ]
+                        },
+                        "fu_impsub": {
+                            "title": "34. Cognitive impairment due to other substance abuse",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_impsubif": {
+                            "title": "34a. If Cognitive impairment due to other substance abuse is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_dysill": {
+                            "title": "35. Cognitive impairment due to systemic disease/medical illness (as indicated on Form D2)",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_dysillif": {
+                            "title": "35a. If Cognitive impairment due to systemic disease/medical illness is present, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_meds": {
+                            "title": "36. Cognitive impairment due to medications",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_medsif": {
+                            "title": "36a. If Cognitive impairment due to medications, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_cogoth": {
+                            "title": "37. Cognitive impairment NOS",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_cogothif": {
+                            "title": "37a. If Cognitive impairment NOS, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_cogothx": {
+                            "title": "37b. If Cognitive impairment NOS present, specify:",
+                            "type": "string"
+                        },
+                        "fu_cogoth2": {
+                            "title": "38. Cognitive impairment NOS",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_cogot2f": {
+                            "title": "38a. If Cognitive impairment NOS, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_cogot2x": {
+                            "title": "38b. If Cognitive impairment NOS present, specify:",
+                            "type": "string"
+                        },
+                        "fu_cogoth3": {
+                            "title": "39. Cognitive impairment NOS",
+                            "type": "string",
+                            "enum": [
+                                "1 Present",
+                                "0 Absent"
+                            ]
+                        },
+                        "fu_cogot3f": {
+                            "title": "39a. If Cognitive impairment NOS, is it primary, contributing or non-contributing?",
+                            "type": "string",
+                            "enum": [
+                                "1 Primary",
+                                "2 Contributing",
+                                "3 Non-contributing"
+                            ]
+                        },
+                        "fu_cogot3x": {
+                            "title": "39b. If Cognitive impairment NOS present, specify:",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_dxmethod": {
+            "title": "1. Diagnosis method - responses in this form are based on diagnosis by:"
+        },
+        "fu_sec1.fu_normcog": {
+            "title": "2. Does the subject have normal cognition (global CDR=0 and/or neuropsychological testing within normal range) and normal behavior (i.e., the subject does not exhibit behavior sufficient to diagnose MCI or dementia due to FTLD or LBD)? "
+        },
+        "fu_sec1.fu_demented": {
+            "title": "3. Does the subject meet the criteria for dementia? "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_amndem": {
+            "title": "4a. Amnestic multidomain dementia syndrome "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_pca": {
+            "title": "4b. Posterior cortical atrophy syndrome (or primary visual presentation) "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ppasyn": {
+            "title": "4c. Primary progressive aphasia (PPA) syndrome "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ppasynt": {
+            "title": "4c1.   "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ftdsyn": {
+            "title": "4d. Behavioral variant FTD (bvFTD) syndrome "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_lbdsyn": {
+            "title": "4e. Lewy body dementia syndrome "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_namndem": {
+            "title": "4f. Non-amnestic multidomain dementia, not PCA, PPA, bvFTD, or DLB syndrome "
+        },
+        "fu_sec1.fu_note_d1_6.fu_mciamem": {
+            "title": "5a. Amnestic MCI, single domain (aMCI SD) "
+        },
+        "fu_sec1.fu_note_d1_6.fu_mciaplus": {
+            "title": "5b. Amnestic MCI, multiple domains (aMCI MD) "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciaplan": {
+            "title": "5b1. Language "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapatt": {
+            "title": "5b2. Attention "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapex": {
+            "title": "5b3. Executive "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapvis": {
+            "title": "5b4. Visuospatial "
+        },
+        "fu_sec1.fu_note_d1_6.fu_mcinon1": {
+            "title": "5c. Non-amnestic MCI, single domain (naMCI SD) "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1lan": {
+            "title": "5c1. Language "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1att": {
+            "title": "5c2. Attention "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1ex": {
+            "title": "5c3.  Executive "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1vis": {
+            "title": "5c4. Visuospatial "
+        },
+        "fu_sec1.fu_note_d1_6.fu_mcinon2": {
+            "title": "5d. Non-amnestic MCI, multiple domains (naMCI MD) "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2lan": {
+            "title": "5d1 Language "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2att": {
+            "title": "5d2. Attention "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2ex": {
+            "title": "5d3. Executive "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2vis": {
+            "title": "5d4. Visuospatial "
+        },
+        "fu_sec1.fu_note_d1_6.fu_impnomci": {
+            "title": "5e. Cognitively impaired, not MCI "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_amylpet": {
+            "title": "6a. Abnormally elevated amyloid on PET "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_amylcsf": {
+            "title": "6b. Abnormally low amyloid in CSF "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_fdgad": {
+            "title": "6c. FDG-PET pattern of AD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_hippatr": {
+            "title": "6d. Hippocampal atrophy "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_taupetad": {
+            "title": "6e. Tau PET evidence for AD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_csftau": {
+            "title": "6f. Abnormally elevated CSF tau or ptau "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_fdgftld": {
+            "title": "6g. FDG-PET evidence for frontal or anterior temporal hypometabolism for FTLD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_tpetftld": {
+            "title": "6h. Tau PET evidence for FTLD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_mrftld": {
+            "title": "6i. Structural MR evidence for frontal or anterior temporal atrophy for FTLD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_datscan": {
+            "title": "6j. Dopamine transporter scan (DATscan) evidence for Lewy body disease "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_othbiom": {
+            "title": "6k. Other neurodegenerative biomarker "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_othbiomx": {
+            "title": "6k1. If other biomarker findings present, please specify: "
+        },
+        "fu_sec2.fu_image_findings.fu_imaglinf": {
+            "title": "7a. Large vessel infarct(s) "
+        },
+        "fu_sec2.fu_image_findings.fu_imaglac": {
+            "title": "7b. Lacunar infarct(s) "
+        },
+        "fu_sec2.fu_image_findings.fu_imagmach": {
+            "title": "7c. Macrohemorrhage(s) "
+        },
+        "fu_sec2.fu_image_findings.fu_imagmich": {
+            "title": "7d. Microhemorrhage(s) "
+        },
+        "fu_sec2.fu_image_findings.fu_imagmwmh": {
+            "title": "7e. Moderate white-matter hyperintensity (CHS score 5-6) "
+        },
+        "fu_sec2.fu_image_findings.fu_imagewmh": {
+            "title": "7f. Extensive white-matter hyperintensity (CHS score 7-8+) "
+        },
+        "fu_sec2.fu_admut": {
+            "title": "8. Does the subject have a dominantly inherited AD mutation (PSEN1, PSEN2, APP)? "
+        },
+        "fu_sec2.fu_ftldmut": {
+            "title": "9. Does the subject have a hereditary FTLD mutation (e.g, GRN, VCP, TARBP, FUS, C9orf72, CHMP2B, MAPT)? "
+        },
+        "fu_sec2.fu_othmut": {
+            "title": "10. Does the subject have a hereditary mutation other than AD or FTLD mutation? "
+        },
+        "fu_sec2.fu_othmutx": {
+            "title": "10a.  If question 10 is 1 Yes, please specify hereditary mutation other than AD or FTLD mutation. "
+        },
+        "fu_sec3.fu_etio_diag.fu_alzdis": {
+            "title": "11. Alzheimer's disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_alzdisif": {
+            "title": "11a. If Alzheimer's disease present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_lbdis": {
+            "title": "12. Lewy body disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_lbdif": {
+            "title": "12a. If Lewy body disease present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_park": {
+            "title": "12b.  Parkinson's disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_msa": {
+            "title": "13. Multiple system atrophy "
+        },
+        "fu_sec3.fu_etio_diag.fu_msaif": {
+            "title": "13a.  If Multiple system atrophy present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_psp": {
+            "title": "14a. Progressive supranuclear palsy (PSP) "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_pspif": {
+            "title": "14a1.  If Progressive supranuclear palsy (PSP) is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_cort": {
+            "title": "14b. Corticobasal degeneration (CBD) "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_cortif": {
+            "title": "14b1. If Corticobasal degeneration (CBD) is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldmo": {
+            "title": "14c. FTLD with motor neuron disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldmoif": {
+            "title": "14c1. If FTLD with motor neuron disease is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldnos": {
+            "title": "14d. FTLD NOS "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldnoif": {
+            "title": "14d1. If FTLD NOS is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldsubt": {
+            "title": "14e.  If FTLD (Questions 14a-14d) is Present, specify FTLD subtype: "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldsubx": {
+            "title": "14e1.  Other FTLD, specify "
+        },
+        "fu_sec3.fu_etio_diag.fu_cvd": {
+            "title": "15. Vascular Brain injury (based on clinical or imaging evidence) "
+        },
+        "fu_sec3.fu_etio_diag.fu_cvdif": {
+            "title": "15a. If vascular brain injury is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_prevstk": {
+            "title": "15b. Previous symptomatic stroke? "
+        },
+        "fu_sec3.fu_etio_diag.fu_strokedec": {
+            "title": "15b1.  Temporal relationship between stroke and cognitive decline? "
+        },
+        "fu_sec3.fu_etio_diag.fu_stkimag": {
+            "title": "15b2. Confirmation of stroke by neuroimaging? "
+        },
+        "fu_sec3.fu_etio_diag.fu_infnetw": {
+            "title": "15c.  Is there imaging evidence of cystic infarction in cognitive network(s)? "
+        },
+        "fu_sec3.fu_etio_diag.fu_infwmh": {
+            "title": "15d.  Is there imaging evidence of cystic infarction, imaging evidence of extensive white matter hyperintensity (CHS grade 7-8+), and impairment in executive function?  "
+        },
+        "fu_sec3.fu_etio_diag.fu_esstrem": {
+            "title": "16. Essential tremor "
+        },
+        "fu_sec3.fu_etio_diag.fu_esstreif": {
+            "title": "16a. If essential tremor is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_downs": {
+            "title": "17. Down syndrome "
+        },
+        "fu_sec3.fu_etio_diag.fu_downsif": {
+            "title": "17a. If Down syndrome is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_hunt": {
+            "title": "18. Huntington's disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_huntif": {
+            "title": "18a. If Huntington's disease is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_prion": {
+            "title": "19. Prion disease (CJD, other) "
+        },
+        "fu_sec3.fu_etio_diag.fu_prionif": {
+            "title": "19a. If Prion's disease is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_brninj": {
+            "title": "20. Traumatic brain injury "
+        },
+        "fu_sec3.fu_etio_diag.fu_brninjif": {
+            "title": "20a. If Traumatic brain injury is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_brnincte": {
+            "title": "20b. If traumatic brain injury present, does the subject have symptoms consistent with chronic traumatic encephalopathy? "
+        },
+        "fu_sec3.fu_etio_diag.fu_hyceph": {
+            "title": "21. Normal-pressure hydrocephalus "
+        },
+        "fu_sec3.fu_etio_diag.fu_hycephif": {
+            "title": "21a. If Normal-pressure hydrocephalus is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_epilep": {
+            "title": "22. Epilepsy "
+        },
+        "fu_sec3.fu_etio_diag.fu_epilepif": {
+            "title": "22a. If Epilepsy is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_neop": {
+            "title": "23. CNS neoplasm "
+        },
+        "fu_sec3.fu_etio_diag.fu_neopif": {
+            "title": "23a. If CNS neoplasm present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_neopstat": {
+            "title": "23b. CNS neoplasm, benign or malignant? "
+        },
+        "fu_sec3.fu_etio_diag.fu_hiv": {
+            "title": "24. Human immunodeficiency virus (HIV) "
+        },
+        "fu_sec3.fu_etio_diag.fu_hivif": {
+            "title": "24a. If Human immunodeficiency virus (HIV) is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_othcog": {
+            "title": "25.  Cognitive impairment due to other neurologic, genetic, or infectious conditions not listed above "
+        },
+        "fu_sec3.fu_etio_diag.fu_othcogif": {
+            "title": "25a. If other cognitive impairment present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_othcogx": {
+            "title": "25b.  Cognitive impairment due to other neurologic, genetic, or infectious conditions not listed above.  If Present, specify:   "
+        },
+        "fu_sec3.fu_conditions.fu_dep": {
+            "title": "26.  Active depression "
+        },
+        "fu_sec3.fu_conditions.fu_depif": {
+            "title": "26a. If active depression is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_deptreat": {
+            "title": "26b.  If active depression present, select one: "
+        },
+        "fu_sec3.fu_conditions.fu_bipoldx": {
+            "title": "27.  Bipolar disorder "
+        },
+        "fu_sec3.fu_conditions.fu_bipoldif": {
+            "title": "27a. If bipolar disorder is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_schizop": {
+            "title": "28.  Schizophrenia or other psychosis "
+        },
+        "fu_sec3.fu_conditions.fu_schizoif": {
+            "title": "28a. If Schizophrenia or other psychosis is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_anxiet": {
+            "title": "29.  Anxiety disorder "
+        },
+        "fu_sec3.fu_conditions.fu_anxietif": {
+            "title": "29a. If Anxiety disorder is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_delir": {
+            "title": "30. Delirium "
+        },
+        "fu_sec3.fu_conditions.fu_delirif": {
+            "title": "30a. If Delirium is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_ptsddx": {
+            "title": "31. Post-traumatic stress disorder (PTSD) "
+        },
+        "fu_sec3.fu_conditions.fu_ptsddxif": {
+            "title": "31a. If Post-traumatic stress disorder is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_othpsy": {
+            "title": "32.  Other psychiatric disease "
+        },
+        "fu_sec3.fu_conditions.fu_othpsyif": {
+            "title": "32a. If other psychiatric disease is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_othpsyx": {
+            "title": "32b. If other psychiatric disease is present, please specify: "
+        },
+        "fu_sec3.fu_conditions.fu_alcdem": {
+            "title": "33. Cognitive impairment due to alcohol abuse "
+        },
+        "fu_sec3.fu_conditions.fu_alcdemif": {
+            "title": "33a. If cognitive impairment due to alcohol abuse is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_alcabuse": {
+            "title": "33b. Current alcohol abuse: "
+        },
+        "fu_sec3.fu_conditions.fu_impsub": {
+            "title": "34. Cognitive impairment due to other substance abuse "
+        },
+        "fu_sec3.fu_conditions.fu_impsubif": {
+            "title": "34a. If Cognitive impairment due to other substance abuse is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_dysill": {
+            "title": "35. Cognitive impairment due to systemic disease/medical illness (as indicated on Form D2) "
+        },
+        "fu_sec3.fu_conditions.fu_dysillif": {
+            "title": "35a. If Cognitive impairment due to systemic disease/medical illness is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_meds": {
+            "title": "36. Cognitive impairment due to medications "
+        },
+        "fu_sec3.fu_conditions.fu_medsif": {
+            "title": "36a. If Cognitive impairment due to medications, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_cogoth": {
+            "title": "37. Cognitive impairment NOS "
+        },
+        "fu_sec3.fu_conditions.fu_cogothif": {
+            "title": "37a. If Cognitive impairment NOS, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_cogothx": {
+            "title": "37b. If Cognitive impairment NOS present, specify: "
+        },
+        "fu_sec3.fu_conditions.fu_cogoth2": {
+            "title": "38. Cognitive impairment NOS "
+        },
+        "fu_sec3.fu_conditions.fu_cogot2f": {
+            "title": "38a. If Cognitive impairment NOS, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_cogot2x": {
+            "title": "38b. If Cognitive impairment NOS present, specify: "
+        },
+        "fu_sec3.fu_conditions.fu_cogoth3": {
+            "title": "39. Cognitive impairment NOS "
+        },
+        "fu_sec3.fu_conditions.fu_cogot3f": {
+            "title": "39a. If Cognitive impairment NOS, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_cogot3x": {
+            "title": "39b. If Cognitive impairment NOS present, specify: "
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "fu_dxmethod": {
+            "title": "1. Diagnosis method - responses in this form are based on diagnosis by:"
+        },
+        "fu_sec1.fu_normcog": {
+            "title": "2. Does the subject have normal cognition (global CDR=0 and/or neuropsychological testing within normal range) and normal behavior (i.e., the subject does not exhibit behavior sufficient to diagnose MCI or dementia due to FTLD or LBD)? "
+        },
+        "fu_sec1.fu_demented": {
+            "title": "3. Does the subject meet the criteria for dementia? "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_amndem": {
+            "title": "4a. Amnestic multidomain dementia syndrome "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_pca": {
+            "title": "4b. Posterior cortical atrophy syndrome (or primary visual presentation) "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ppasyn": {
+            "title": "4c. Primary progressive aphasia (PPA) syndrome "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ppasynt": {
+            "title": "4c1.   "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ftdsyn": {
+            "title": "4d. Behavioral variant FTD (bvFTD) syndrome "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_lbdsyn": {
+            "title": "4e. Lewy body dementia syndrome "
+        },
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_namndem": {
+            "title": "4f. Non-amnestic multidomain dementia, not PCA, PPA, bvFTD, or DLB syndrome "
+        },
+        "fu_sec1.fu_note_d1_6.fu_mciamem": {
+            "title": "5a. Amnestic MCI, single domain (aMCI SD) "
+        },
+        "fu_sec1.fu_note_d1_6.fu_mciaplus": {
+            "title": "5b. Amnestic MCI, multiple domains (aMCI MD) "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciaplan": {
+            "title": "5b1. Language "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapatt": {
+            "title": "5b2. Attention "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapex": {
+            "title": "5b3. Executive "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapvis": {
+            "title": "5b4. Visuospatial "
+        },
+        "fu_sec1.fu_note_d1_6.fu_mcinon1": {
+            "title": "5c. Non-amnestic MCI, single domain (naMCI SD) "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1lan": {
+            "title": "5c1. Language "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1att": {
+            "title": "5c2. Attention "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1ex": {
+            "title": "5c3.  Executive "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1vis": {
+            "title": "5c4. Visuospatial "
+        },
+        "fu_sec1.fu_note_d1_6.fu_mcinon2": {
+            "title": "5d. Non-amnestic MCI, multiple domains (naMCI MD) "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2lan": {
+            "title": "5d1 Language "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2att": {
+            "title": "5d2. Attention "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2ex": {
+            "title": "5d3. Executive "
+        },
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2vis": {
+            "title": "5d4. Visuospatial "
+        },
+        "fu_sec1.fu_note_d1_6.fu_impnomci": {
+            "title": "5e. Cognitively impaired, not MCI "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_amylpet": {
+            "title": "6a. Abnormally elevated amyloid on PET "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_amylcsf": {
+            "title": "6b. Abnormally low amyloid in CSF "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_fdgad": {
+            "title": "6c. FDG-PET pattern of AD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_hippatr": {
+            "title": "6d. Hippocampal atrophy "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_taupetad": {
+            "title": "6e. Tau PET evidence for AD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_csftau": {
+            "title": "6f. Abnormally elevated CSF tau or ptau "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_fdgftld": {
+            "title": "6g. FDG-PET evidence for frontal or anterior temporal hypometabolism for FTLD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_tpetftld": {
+            "title": "6h. Tau PET evidence for FTLD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_mrftld": {
+            "title": "6i. Structural MR evidence for frontal or anterior temporal atrophy for FTLD "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_datscan": {
+            "title": "6j. Dopamine transporter scan (DATscan) evidence for Lewy body disease "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_othbiom": {
+            "title": "6k. Other neurodegenerative biomarker "
+        },
+        "fu_sec2.fu_biomarker_findings.fu_othbiomx": {
+            "title": "6k1. If other biomarker findings present, please specify: "
+        },
+        "fu_sec2.fu_image_findings.fu_imaglinf": {
+            "title": "7a. Large vessel infarct(s) "
+        },
+        "fu_sec2.fu_image_findings.fu_imaglac": {
+            "title": "7b. Lacunar infarct(s) "
+        },
+        "fu_sec2.fu_image_findings.fu_imagmach": {
+            "title": "7c. Macrohemorrhage(s) "
+        },
+        "fu_sec2.fu_image_findings.fu_imagmich": {
+            "title": "7d. Microhemorrhage(s) "
+        },
+        "fu_sec2.fu_image_findings.fu_imagmwmh": {
+            "title": "7e. Moderate white-matter hyperintensity (CHS score 5-6) "
+        },
+        "fu_sec2.fu_image_findings.fu_imagewmh": {
+            "title": "7f. Extensive white-matter hyperintensity (CHS score 7-8+) "
+        },
+        "fu_sec2.fu_admut": {
+            "title": "8. Does the subject have a dominantly inherited AD mutation (PSEN1, PSEN2, APP)? "
+        },
+        "fu_sec2.fu_ftldmut": {
+            "title": "9. Does the subject have a hereditary FTLD mutation (e.g, GRN, VCP, TARBP, FUS, C9orf72, CHMP2B, MAPT)? "
+        },
+        "fu_sec2.fu_othmut": {
+            "title": "10. Does the subject have a hereditary mutation other than AD or FTLD mutation? "
+        },
+        "fu_sec2.fu_othmutx": {
+            "title": "10a.  If question 10 is 1 Yes, please specify hereditary mutation other than AD or FTLD mutation. "
+        },
+        "fu_sec3.fu_etio_diag.fu_alzdis": {
+            "title": "11. Alzheimer's disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_alzdisif": {
+            "title": "11a. If Alzheimer's disease present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_lbdis": {
+            "title": "12. Lewy body disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_lbdif": {
+            "title": "12a. If Lewy body disease present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_park": {
+            "title": "12b.  Parkinson's disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_msa": {
+            "title": "13. Multiple system atrophy "
+        },
+        "fu_sec3.fu_etio_diag.fu_msaif": {
+            "title": "13a.  If Multiple system atrophy present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_psp": {
+            "title": "14a. Progressive supranuclear palsy (PSP) "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_pspif": {
+            "title": "14a1.  If Progressive supranuclear palsy (PSP) is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_cort": {
+            "title": "14b. Corticobasal degeneration (CBD) "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_cortif": {
+            "title": "14b1. If Corticobasal degeneration (CBD) is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldmo": {
+            "title": "14c. FTLD with motor neuron disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldmoif": {
+            "title": "14c1. If FTLD with motor neuron disease is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldnos": {
+            "title": "14d. FTLD NOS "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldnoif": {
+            "title": "14d1. If FTLD NOS is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldsubt": {
+            "title": "14e.  If FTLD (Questions 14a-14d) is Present, specify FTLD subtype: "
+        },
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldsubx": {
+            "title": "14e1.  Other FTLD, specify "
+        },
+        "fu_sec3.fu_etio_diag.fu_cvd": {
+            "title": "15. Vascular Brain injury (based on clinical or imaging evidence) "
+        },
+        "fu_sec3.fu_etio_diag.fu_cvdif": {
+            "title": "15a. If vascular brain injury is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_prevstk": {
+            "title": "15b. Previous symptomatic stroke? "
+        },
+        "fu_sec3.fu_etio_diag.fu_strokedec": {
+            "title": "15b1.  Temporal relationship between stroke and cognitive decline? "
+        },
+        "fu_sec3.fu_etio_diag.fu_stkimag": {
+            "title": "15b2. Confirmation of stroke by neuroimaging? "
+        },
+        "fu_sec3.fu_etio_diag.fu_infnetw": {
+            "title": "15c.  Is there imaging evidence of cystic infarction in cognitive network(s)? "
+        },
+        "fu_sec3.fu_etio_diag.fu_infwmh": {
+            "title": "15d.  Is there imaging evidence of cystic infarction, imaging evidence of extensive white matter hyperintensity (CHS grade 7-8+), and impairment in executive function?  "
+        },
+        "fu_sec3.fu_etio_diag.fu_esstrem": {
+            "title": "16. Essential tremor "
+        },
+        "fu_sec3.fu_etio_diag.fu_esstreif": {
+            "title": "16a. If essential tremor is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_downs": {
+            "title": "17. Down syndrome "
+        },
+        "fu_sec3.fu_etio_diag.fu_downsif": {
+            "title": "17a. If Down syndrome is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_hunt": {
+            "title": "18. Huntington's disease "
+        },
+        "fu_sec3.fu_etio_diag.fu_huntif": {
+            "title": "18a. If Huntington's disease is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_prion": {
+            "title": "19. Prion disease (CJD, other) "
+        },
+        "fu_sec3.fu_etio_diag.fu_prionif": {
+            "title": "19a. If Prion's disease is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_brninj": {
+            "title": "20. Traumatic brain injury "
+        },
+        "fu_sec3.fu_etio_diag.fu_brninjif": {
+            "title": "20a. If Traumatic brain injury is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_brnincte": {
+            "title": "20b. If traumatic brain injury present, does the subject have symptoms consistent with chronic traumatic encephalopathy? "
+        },
+        "fu_sec3.fu_etio_diag.fu_hyceph": {
+            "title": "21. Normal-pressure hydrocephalus "
+        },
+        "fu_sec3.fu_etio_diag.fu_hycephif": {
+            "title": "21a. If Normal-pressure hydrocephalus is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_epilep": {
+            "title": "22. Epilepsy "
+        },
+        "fu_sec3.fu_etio_diag.fu_epilepif": {
+            "title": "22a. If Epilepsy is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_neop": {
+            "title": "23. CNS neoplasm "
+        },
+        "fu_sec3.fu_etio_diag.fu_neopif": {
+            "title": "23a. If CNS neoplasm present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_neopstat": {
+            "title": "23b. CNS neoplasm, benign or malignant? "
+        },
+        "fu_sec3.fu_etio_diag.fu_hiv": {
+            "title": "24. Human immunodeficiency virus (HIV) "
+        },
+        "fu_sec3.fu_etio_diag.fu_hivif": {
+            "title": "24a. If Human immunodeficiency virus (HIV) is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_othcog": {
+            "title": "25.  Cognitive impairment due to other neurologic, genetic, or infectious conditions not listed above "
+        },
+        "fu_sec3.fu_etio_diag.fu_othcogif": {
+            "title": "25a. If other cognitive impairment present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_etio_diag.fu_othcogx": {
+            "title": "25b.  Cognitive impairment due to other neurologic, genetic, or infectious conditions not listed above.  If Present, specify:   "
+        },
+        "fu_sec3.fu_conditions.fu_dep": {
+            "title": "26.  Active depression "
+        },
+        "fu_sec3.fu_conditions.fu_depif": {
+            "title": "26a. If active depression is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_deptreat": {
+            "title": "26b.  If active depression present, select one: "
+        },
+        "fu_sec3.fu_conditions.fu_bipoldx": {
+            "title": "27.  Bipolar disorder "
+        },
+        "fu_sec3.fu_conditions.fu_bipoldif": {
+            "title": "27a. If bipolar disorder is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_schizop": {
+            "title": "28.  Schizophrenia or other psychosis "
+        },
+        "fu_sec3.fu_conditions.fu_schizoif": {
+            "title": "28a. If Schizophrenia or other psychosis is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_anxiet": {
+            "title": "29.  Anxiety disorder "
+        },
+        "fu_sec3.fu_conditions.fu_anxietif": {
+            "title": "29a. If Anxiety disorder is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_delir": {
+            "title": "30. Delirium "
+        },
+        "fu_sec3.fu_conditions.fu_delirif": {
+            "title": "30a. If Delirium is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_ptsddx": {
+            "title": "31. Post-traumatic stress disorder (PTSD) "
+        },
+        "fu_sec3.fu_conditions.fu_ptsddxif": {
+            "title": "31a. If Post-traumatic stress disorder is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_othpsy": {
+            "title": "32.  Other psychiatric disease "
+        },
+        "fu_sec3.fu_conditions.fu_othpsyif": {
+            "title": "32a. If other psychiatric disease is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_othpsyx": {
+            "title": "32b. If other psychiatric disease is present, please specify: "
+        },
+        "fu_sec3.fu_conditions.fu_alcdem": {
+            "title": "33. Cognitive impairment due to alcohol abuse "
+        },
+        "fu_sec3.fu_conditions.fu_alcdemif": {
+            "title": "33a. If cognitive impairment due to alcohol abuse is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_alcabuse": {
+            "title": "33b. Current alcohol abuse: "
+        },
+        "fu_sec3.fu_conditions.fu_impsub": {
+            "title": "34. Cognitive impairment due to other substance abuse "
+        },
+        "fu_sec3.fu_conditions.fu_impsubif": {
+            "title": "34a. If Cognitive impairment due to other substance abuse is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_dysill": {
+            "title": "35. Cognitive impairment due to systemic disease/medical illness (as indicated on Form D2) "
+        },
+        "fu_sec3.fu_conditions.fu_dysillif": {
+            "title": "35a. If Cognitive impairment due to systemic disease/medical illness is present, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_meds": {
+            "title": "36. Cognitive impairment due to medications "
+        },
+        "fu_sec3.fu_conditions.fu_medsif": {
+            "title": "36a. If Cognitive impairment due to medications, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_cogoth": {
+            "title": "37. Cognitive impairment NOS "
+        },
+        "fu_sec3.fu_conditions.fu_cogothif": {
+            "title": "37a. If Cognitive impairment NOS, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_cogothx": {
+            "title": "37b. If Cognitive impairment NOS present, specify: "
+        },
+        "fu_sec3.fu_conditions.fu_cogoth2": {
+            "title": "38. Cognitive impairment NOS "
+        },
+        "fu_sec3.fu_conditions.fu_cogot2f": {
+            "title": "38a. If Cognitive impairment NOS, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_cogot2x": {
+            "title": "38b. If Cognitive impairment NOS present, specify: "
+        },
+        "fu_sec3.fu_conditions.fu_cogoth3": {
+            "title": "39. Cognitive impairment NOS "
+        },
+        "fu_sec3.fu_conditions.fu_cogot3f": {
+            "title": "39a. If Cognitive impairment NOS, is it primary, contributing or non-contributing? "
+        },
+        "fu_sec3.fu_conditions.fu_cogot3x": {
+            "title": "39b. If Cognitive impairment NOS present, specify: "
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "fu_dxmethod": 1.0,
+        "fu_sec1.fu_normcog": 1.0,
+        "fu_sec1.fu_demented": 1.0,
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_amndem": 1.0,
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_pca": 1.0,
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ppasyn": 1.0,
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ppasynt": 1.0,
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_ftdsyn": 1.0,
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_lbdsyn": 1.0,
+        "fu_sec1.fu_note_d1_3.fu_note_d1_5.fu_namndem": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_mciamem": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_mciaplus": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciaplan": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapatt": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapex": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_8.fu_mciapvis": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_mcinon1": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1lan": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1att": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1ex": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_9.fu_mci1vis": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_mcinon2": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2lan": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2att": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2ex": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_note_d1_10.fu_mci2vis": 1.0,
+        "fu_sec1.fu_note_d1_6.fu_impnomci": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_amylpet": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_amylcsf": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_fdgad": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_hippatr": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_taupetad": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_csftau": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_fdgftld": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_tpetftld": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_mrftld": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_datscan": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_othbiom": 1.0,
+        "fu_sec2.fu_biomarker_findings.fu_othbiomx": 1.0,
+        "fu_sec2.fu_image_findings.fu_imaglinf": 1.0,
+        "fu_sec2.fu_image_findings.fu_imaglac": 1.0,
+        "fu_sec2.fu_image_findings.fu_imagmach": 1.0,
+        "fu_sec2.fu_image_findings.fu_imagmich": 1.0,
+        "fu_sec2.fu_image_findings.fu_imagmwmh": 1.0,
+        "fu_sec2.fu_image_findings.fu_imagewmh": 1.0,
+        "fu_sec2.fu_admut": 1.0,
+        "fu_sec2.fu_ftldmut": 1.0,
+        "fu_sec2.fu_othmut": 1.0,
+        "fu_sec2.fu_othmutx": 1.0,
+        "fu_sec3.fu_etio_diag.fu_alzdis": 1.0,
+        "fu_sec3.fu_etio_diag.fu_alzdisif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_lbdis": 1.0,
+        "fu_sec3.fu_etio_diag.fu_lbdif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_park": 1.0,
+        "fu_sec3.fu_etio_diag.fu_msa": 1.0,
+        "fu_sec3.fu_etio_diag.fu_msaif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_psp": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_pspif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_cort": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_cortif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldmo": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldmoif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldnos": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldnoif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldsubt": 1.0,
+        "fu_sec3.fu_etio_diag.fu_note_d1_13.fu_ftldsubx": 1.0,
+        "fu_sec3.fu_etio_diag.fu_cvd": 1.0,
+        "fu_sec3.fu_etio_diag.fu_cvdif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_prevstk": 1.0,
+        "fu_sec3.fu_etio_diag.fu_strokedec": 1.0,
+        "fu_sec3.fu_etio_diag.fu_stkimag": 1.0,
+        "fu_sec3.fu_etio_diag.fu_infnetw": 1.0,
+        "fu_sec3.fu_etio_diag.fu_infwmh": 1.0,
+        "fu_sec3.fu_etio_diag.fu_esstrem": 1.0,
+        "fu_sec3.fu_etio_diag.fu_esstreif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_downs": 1.0,
+        "fu_sec3.fu_etio_diag.fu_downsif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_hunt": 1.0,
+        "fu_sec3.fu_etio_diag.fu_huntif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_prion": 1.0,
+        "fu_sec3.fu_etio_diag.fu_prionif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_brninj": 1.0,
+        "fu_sec3.fu_etio_diag.fu_brninjif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_brnincte": 1.0,
+        "fu_sec3.fu_etio_diag.fu_hyceph": 1.0,
+        "fu_sec3.fu_etio_diag.fu_hycephif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_epilep": 1.0,
+        "fu_sec3.fu_etio_diag.fu_epilepif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_neop": 1.0,
+        "fu_sec3.fu_etio_diag.fu_neopif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_neopstat": 1.0,
+        "fu_sec3.fu_etio_diag.fu_hiv": 1.0,
+        "fu_sec3.fu_etio_diag.fu_hivif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_othcog": 1.0,
+        "fu_sec3.fu_etio_diag.fu_othcogif": 1.0,
+        "fu_sec3.fu_etio_diag.fu_othcogx": 1.0,
+        "fu_sec3.fu_conditions.fu_dep": 1.0,
+        "fu_sec3.fu_conditions.fu_depif": 1.0,
+        "fu_sec3.fu_conditions.fu_deptreat": 1.0,
+        "fu_sec3.fu_conditions.fu_bipoldx": 1.0,
+        "fu_sec3.fu_conditions.fu_bipoldif": 1.0,
+        "fu_sec3.fu_conditions.fu_schizop": 1.0,
+        "fu_sec3.fu_conditions.fu_schizoif": 1.0,
+        "fu_sec3.fu_conditions.fu_anxiet": 1.0,
+        "fu_sec3.fu_conditions.fu_anxietif": 1.0,
+        "fu_sec3.fu_conditions.fu_delir": 1.0,
+        "fu_sec3.fu_conditions.fu_delirif": 1.0,
+        "fu_sec3.fu_conditions.fu_ptsddx": 1.0,
+        "fu_sec3.fu_conditions.fu_ptsddxif": 1.0,
+        "fu_sec3.fu_conditions.fu_othpsy": 1.0,
+        "fu_sec3.fu_conditions.fu_othpsyif": 1.0,
+        "fu_sec3.fu_conditions.fu_othpsyx": 1.0,
+        "fu_sec3.fu_conditions.fu_alcdem": 1.0,
+        "fu_sec3.fu_conditions.fu_alcdemif": 1.0,
+        "fu_sec3.fu_conditions.fu_alcabuse": 1.0,
+        "fu_sec3.fu_conditions.fu_impsub": 1.0,
+        "fu_sec3.fu_conditions.fu_impsubif": 1.0,
+        "fu_sec3.fu_conditions.fu_dysill": 1.0,
+        "fu_sec3.fu_conditions.fu_dysillif": 1.0,
+        "fu_sec3.fu_conditions.fu_meds": 1.0,
+        "fu_sec3.fu_conditions.fu_medsif": 1.0,
+        "fu_sec3.fu_conditions.fu_cogoth": 1.0,
+        "fu_sec3.fu_conditions.fu_cogothif": 1.0,
+        "fu_sec3.fu_conditions.fu_cogothx": 1.0,
+        "fu_sec3.fu_conditions.fu_cogoth2": 1.0,
+        "fu_sec3.fu_conditions.fu_cogot2f": 1.0,
+        "fu_sec3.fu_conditions.fu_cogot2x": 1.0,
+        "fu_sec3.fu_conditions.fu_cogoth3": 1.0,
+        "fu_sec3.fu_conditions.fu_cogot3f": 1.0,
+        "fu_sec3.fu_conditions.fu_cogot3x": 1.0
+    },
+    "changelog": "/profiles/changelogs/fvp_d1v3.md"
+}
