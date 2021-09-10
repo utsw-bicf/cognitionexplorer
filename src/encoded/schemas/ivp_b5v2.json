@@ -1,0 +1,499 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B5: BEHAVIORAL ASSESSMENT Neuropsychiatric Inventory Questionnaire (NPI-Q[1])",
+    "description": "INSTRUCTIONS: This form is to be completed by the clinician or other trained health professional based on co-participant interview, as described by the training video. (This is not to be completed by the subject as a paper-and-pencil self-report.) For information on NPI-Q Interviewer Certification, see UDS Coding Guidebook for Initial Visit Packet, Form B5. Link to NACC Coding Guidebook",
+    "id": "/profiles/uds_ivp_b5v2.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "npiqinf",
+        "del",
+        "hall",
+        "agit",
+        "depd",
+        "anx",
+        "elat",
+        "apa",
+        "disn",
+        "irr",
+        "mot",
+        "nite",
+        "app"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+    
+        {
+            "$ref": "mixins.json#/schema_version"
+          },
+          {
+            "$ref": "mixins.json#/submitted"
+          },
+          {
+            "$ref": "mixins.json#/standard_status"
+          },
+          {
+            "$ref": "mixins.json#/header"
+          },
+          {
+            "$ref": "mixins.json#/examinier_initials"
+          },
+          {
+            "$ref": "mixins.json#/form_status"
+          },
+          {
+            "$ref": "mixins.json#/uuid"
+          }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        
+        "npiqinf": {
+            "title": "1. NPI CO-PARTICIPANT:",
+            
+            "comment": "",
+            "type": "string",
+            "enum": [
+                "1 Spouse",
+                "2 Child",
+                "3 Other (SPECIFY)"
+            ]
+        },
+        "npiqinfx": {
+            "title": "1a If NPI CO-PARTICIPANT other-specify",
+            "description": "(Any text or numbers with the exception of single quotes ('), double quotes (\"), ampersands (&), and percentage signs (%).)",
+            "type": "string"
+        },
+        "del": {
+            "title": "2a. Delusions - Does the patient have false beliefs, such as thinking that others are stealing from him/her or planning to harm him/her in some way?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "delsev": {
+            "title": "2b. If Delusions, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "hall": {
+            "title": "3a. Hallucinations - Does the patient have hallucinations such as false visions or voices? Does he or she seem to hear or see things that are not present?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "hallsev": {
+            "title": "3b. If Hallucinations, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "agit": {
+            "title": "4a. Agitation/aggression - Is the patient resistive to help from others at times, or hard to handle?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "agitsev": {
+            "title": "4b. If Agitation/agression, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "depd": {
+            "title": "5a. Depression/dysphoria - Does the patient seem sad or say that he/she is depressed?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "depdsev": {
+            "title": "5b. If Depression/dysphoria, rate severity ",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "anx": {
+            "title": "6a. Anxiety - Does the patient become upset when separated from you? Does he/she have any other signs of nervousness, such as shortness of breath, sighing, being unable to relax, or feeling excessively tense?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "anxsev": {
+            "title": "6b. If Anxiety, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "elat": {
+            "title": "7a. Elation/euphoria - Does the patient appear to feel too good or act excessively happy? ",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "elatsev": {
+            "title": "7b. If Elation/euphoria, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "apa": {
+            "title": "8a. Apathy/indifference - Does the patient seem less interested in his/her usual activities or in the activities and plans of others?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "apasev": {
+            "title": "8b. If Apathy/indifference, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "disn": {
+            "title": "9a. Disinhibition - Does the patient seem to act impulsively, for example, talking to strangers as if he/she knows them, or saying things that may hurt people's feelings?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "disnsev": {
+            "title": "9b. If Disinhibition, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "irr": {
+            "title": "10a. Irritability/lability - Is the patient impatient and cranky? Does he/she have difficulty coping with delays or waiting for planned activities?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "irrsev": {
+            "title": "10b. If Irritability/lability, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "mot": {
+            "title": "11a. Motor disturbance - Does the patient engage in repetitive activities such as pacing around the house,handling buttons, wrapping string, or doing other things repeatedly?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "motsev": {
+            "title": "11b. If Motor disturbance, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "nite": {
+            "title": "12a. Nighttime behaviors - Does the patient awaken you during the night, rise too early in the morning, or take excessive naps during the day?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "nitesev": {
+            "title": "12b. If Nighttime behaviors, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        },
+        "app": {
+            "title": "13a. Appetite/eating - Has the patient lost or gained weight, or had a change in the type of food he/she likes?",
+            "type": "string",
+            "enum": [
+                "1 Yes",
+                "0 No",
+                "9 Unknown"
+            ]
+        },
+        "appsev": {
+            "title": "13b. If Appetite/eating, rate severity",
+            "type": "string",
+            "enum": [
+                "1 Mild (noticeable, but not a significant change)",
+                "2 Moderate (significant, but not a dramatic change)",
+                "3 Severe (very marked or prominent, a dramatic change)",
+                "9 Unknown"
+            ]
+        }
+    },
+    "facets": {
+       
+        "status": {
+            "title": "Status"
+        },
+        "npiqinf": {
+            "title": "1. NPI CO-PARTICIPANT:"
+        },
+        "npiqinfx": {
+            "title": "1a If NPI CO-PARTICIPANT other-specify"
+        },
+        "del": {
+            "title": "2a. Delusions - Does the patient have false beliefs, such as thinking that others are stealing from him/her or planning to harm him/her in some way?"
+        },
+        "delsev": {
+            "title": "2b. If Delusions, rate severity"
+        },
+        "hall": {
+            "title": "3a. Hallucinations - Does the patient have hallucinations such as false visions or voices? Does he or she seem to hear or see things that are not present?"
+        },
+        "hallsev": {
+            "title": "3b. If Hallucinations, rate severity"
+        },
+        "agit": {
+            "title": "4a. Agitation/aggression - Is the patient resistive to help from others at times, or hard to handle?"
+        },
+        "agitsev": {
+            "title": "4b. If Agitation/agression, rate severity"
+        },
+        "depd": {
+            "title": "5a. Depression/dysphoria - Does the patient seem sad or say that he/she is depressed?"
+        },
+        "depdsev": {
+            "title": "5b. If Depression/dysphoria, rate severity "
+        },
+        "anx": {
+            "title": "6a. Anxiety - Does the patient become upset when separated from you? Does he/she have any other signs of nervousness, such as shortness of breath, sighing, being unable to relax, or feeling excessively tense?"
+        },
+        "anxsev": {
+            "title": "6b. If Anxiety, rate severity"
+        },
+        "elat": {
+            "title": "7a. Elation/euphoria - Does the patient appear to feel too good or act excessively happy? "
+        },
+        "elatsev": {
+            "title": "7b. If Elation/euphoria, rate severity"
+        },
+        "apa": {
+            "title": "8a. Apathy/indifference - Does the patient seem less interested in his/her usual activities or in the activities and plans of others?"
+        },
+        "apasev": {
+            "title": "8b. If Apathy/indifference, rate severity"
+        },
+        "disn": {
+            "title": "9a. Disinhibition - Does the patient seem to act impulsively, for example, talking to strangers as if he/she knows them, or saying things that may hurt people's feelings?"
+        },
+        "disnsev": {
+            "title": "9b. If Disinhibition, rate severity"
+        },
+        "irr": {
+            "title": "10a. Irritability/lability - Is the patient impatient and cranky? Does he/she have difficulty coping with delays or waiting for planned activities?"
+        },
+        "irrsev": {
+            "title": "10b. If Irritability/lability, rate severity"
+        },
+        "mot": {
+            "title": "11a. Motor disturbance - Does the patient engage in repetitive activities such as pacing around the house,handling buttons, wrapping string, or doing other things repeatedly?"
+        },
+        "motsev": {
+            "title": "11b. If Motor disturbance, rate severity"
+        },
+        "nite": {
+            "title": "12a. Nighttime behaviors - Does the patient awaken you during the night, rise too early in the morning, or take excessive naps during the day?"
+        },
+        "nitesev": {
+            "title": "12b. If Nighttime behaviors, rate severity"
+        },
+        "app": {
+            "title": "13a. Appetite/eating - Has the patient lost or gained weight, or had a change in the type of food he/she likes?"
+        },
+        "appsev": {
+            "title": "13b. If Appetite/eating, rate severity"
+        }
+        
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "npiqinf": {
+            "title": "1. NPI CO-PARTICIPANT:"
+        },
+        "npiqinfx": {
+            "title": "1a If NPI CO-PARTICIPANT other-specify"
+        },
+        "del": {
+            "title": "2a. Delusions - Does the patient have false beliefs, such as thinking that others are stealing from him/her or planning to harm him/her in some way?"
+        },
+        "delsev": {
+            "title": "2b. If Delusions, rate severity"
+        },
+        "hall": {
+            "title": "3a. Hallucinations - Does the patient have hallucinations such as false visions or voices? Does he or she seem to hear or see things that are not present?"
+        },
+        "hallsev": {
+            "title": "3b. If Hallucinations, rate severity"
+        },
+        "agit": {
+            "title": "4a. Agitation/aggression - Is the patient resistive to help from others at times, or hard to handle?"
+        },
+        "agitsev": {
+            "title": "4b. If Agitation/agression, rate severity"
+        },
+        "depd": {
+            "title": "5a. Depression/dysphoria - Does the patient seem sad or say that he/she is depressed?"
+        },
+        "depdsev": {
+            "title": "5b. If Depression/dysphoria, rate severity "
+        },
+        "anx": {
+            "title": "6a. Anxiety - Does the patient become upset when separated from you? Does he/she have any other signs of nervousness, such as shortness of breath, sighing, being unable to relax, or feeling excessively tense?"
+        },
+        "anxsev": {
+            "title": "6b. If Anxiety, rate severity"
+        },
+        "elat": {
+            "title": "7a. Elation/euphoria - Does the patient appear to feel too good or act excessively happy? "
+        },
+        "elatsev": {
+            "title": "7b. If Elation/euphoria, rate severity"
+        },
+        "apa": {
+            "title": "8a. Apathy/indifference - Does the patient seem less interested in his/her usual activities or in the activities and plans of others?"
+        },
+        "apasev": {
+            "title": "8b. If Apathy/indifference, rate severity"
+        },
+        "disn": {
+            "title": "9a. Disinhibition - Does the patient seem to act impulsively, for example, talking to strangers as if he/she knows them, or saying things that may hurt people's feelings?"
+        },
+        "disnsev": {
+            "title": "9b. If Disinhibition, rate severity"
+        },
+        "irr": {
+            "title": "10a. Irritability/lability - Is the patient impatient and cranky? Does he/she have difficulty coping with delays or waiting for planned activities?"
+        },
+        "irrsev": {
+            "title": "10b. If Irritability/lability, rate severity"
+        },
+        "mot": {
+            "title": "11a. Motor disturbance - Does the patient engage in repetitive activities such as pacing around the house,handling buttons, wrapping string, or doing other things repeatedly?"
+        },
+        "motsev": {
+            "title": "11b. If Motor disturbance, rate severity"
+        },
+        "nite": {
+            "title": "12a. Nighttime behaviors - Does the patient awaken you during the night, rise too early in the morning, or take excessive naps during the day?"
+        },
+        "nitesev": {
+            "title": "12b. If Nighttime behaviors, rate severity"
+        },
+        "app": {
+            "title": "13a. Appetite/eating - Has the patient lost or gained weight, or had a change in the type of food he/she likes?"
+        },
+        "appsev": {
+            "title": "13b. If Appetite/eating, rate severity"
+        }
+       
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "npiqinf": 1.0,
+        "npiqinfx": 1.0,
+        "del": 1.0,
+        "delsev": 1.0,
+        "hall": 1.0,
+        "hallsev": 1.0,
+        "agit": 1.0,
+        "agitsev": 1.0,
+        "depd": 1.0,
+        "depdsev": 1.0,
+        "anx": 1.0,
+        "anxsev": 1.0,
+        "elat": 1.0,
+        "elatsev": 1.0,
+        "apa": 1.0,
+        "apasev": 1.0,
+        "disn": 1.0,
+        "disnsev": 1.0,
+        "irr": 1.0,
+        "irrsev": 1.0,
+        "mot": 1.0,
+        "motsev": 1.0,
+        "nite": 1.0,
+        "nitesev": 1.0,
+        "app": 1.0,
+        "appsev": 1.0
+    },
+    "changelog": "/profiles/changelogs/ivp_b5v2.md"
+}

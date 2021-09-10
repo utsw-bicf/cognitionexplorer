@@ -1,0 +1,771 @@
+{
+    "title": "NACC Uniform Data Set (UDS) – Initial Visit Packet, Form A3: Subject Family History",
+    "description": "NOTE: This form is to be completed by intake interviewer per \nsubject/informant report.For additional clarification and examples,\nsee UDS Coding Guidebook pages 15–18. Check only one box per question.\n\nFor the following questions:\nDementia refers to progressive loss of memory and cognition, and is often described as senility, dementia,\nAlzheimer’s Disease, hardening of the arteries, or other causes that compromised the subject’s social or\noccupational functioning and from which they did not recover.\nAge at onset refers to the age at which dementia symptoms began, not the age at which the diagnosis was made.\nPlease consider blood relatives only.",
+    "id": "/profiles/ivp_a3v1.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "parents": {
+            "title": "Parents",
+            "type": "object",
+            "properties": {
+                "MOMDEM": {
+                    "title": "1 Did the subject’s mother have dementia (as defined on form), as indicated by symptoms, history or diagnosis?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "MOMONSET": {
+                    "title": "1A If the subject’s mother had dementia, indicate the age at which she developed dementia symptoms (age at onset, as defined on form).",
+                    "description": "25 – 110,888 = NA,999 = Unknown",
+                    "type": "string",
+                    "pattern": "^2[5-9]$|^[3-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                },
+                "MOMAGE": {
+                    "title": "1B If the subject’s mother has dementia and is living, indicate her current age.",
+                    "description": "25 – 110,888 = NA,999 = Unknown",
+                    "type": "string",
+                    "pattern": "^2[5-9]$|^[3-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                },
+                "MOMDAGE": {
+                    "title": "1C If the subject’s mother had dementia and is deceased, indicate her age at death.",
+                    "description": "25 – 110,888 = NA,999 = Unknown",
+                    "type": "string",
+                    "pattern": "^2[5-9]$|^[3-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                },
+                "DADDEM": {
+                    "title": "2 Did the subject’s father have dementia (as defined on form), as indicated by symptoms, history or diagnosis?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "DADONSET": {
+                    "title": "2A If the subject’s father had dementia, indicate the age at which he developed dementia symptoms (age at onset, as defined on form).",
+                    "description": "25 – 110,888 = NA,999 = Unknown",
+                    "type": "string",
+                    "pattern": "^2[5-9]$|^[3-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                },
+                "DADAGE": {
+                    "title": "2B If the subject’s father has dementia and is living, indicate his current age.",
+                    "description": "25 – 110,888 = NA,999 = Unknown",
+                    "type": "string",
+                    "pattern": "^2[5-9]$|^[3-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                },
+                "DADDAGE": {
+                    "title": "2C If the subject’s father had dementia and is deceased, indicate his age at death.",
+                    "description": "25 – 110,888 = NA,999 = Unknown",
+                    "type": "string",
+                    "pattern": "^2[5-9]$|^[3-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                }
+            }
+        },
+        "siblings": {
+            "title": "SIBLINGS",
+            "type": "object",
+            "properties": {
+                "TWIN": {
+                    "title": "3 Is the subject a twin?",
+                    "type": "string",
+                    "enum": [
+                        "0 No",
+                        "1 Yes",
+                        "9 Unknown"
+                    ]
+                },
+                "TWINTYPE": {
+                    "title": "3A If the subject is a twin, indicate type.",
+                    "type": "string",
+                    "enum": [
+                        "1 Monozygotic (i.e., identical)",
+                        "2 Dizygotic (i.e., fraternal)",
+                        "8 N/A",
+                        "9 Unknown"
+                    ]
+                },
+                "SIBS": {
+                    "title": "4 How many full siblings did the subject have?",
+                    "description": "0 – 25, 99 = Unknown",
+                    "type": "string",
+                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^99$"
+                },
+                "SIBSDEM": {
+                    "title": "5 How many of these siblings had dementia (as defined on form), as indicated by symptoms, history or diagnosis?",
+                    "description": "0 – 25, 88 = N/A, 99 = Unknown",
+                    "type": "string",
+                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^99$"
+                },
+                "sibs_info": {
+                    "title": "For each sibling with dementia, indicate age at onset (as defined above) if living or deceased, and current age if living:",
+                    "type": "object",
+                    "properties": {
+                        "SIB1ONS": {
+                            "title": "5A1 Sibling 1 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB1AGE": {
+                            "title": "5A2 Sibling 1 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB2ONS": {
+                            "title": "5B1 Sibling 2 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB2AGE": {
+                            "title": "5B2 Sibling 2 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB3ONS": {
+                            "title": "5C1 Sibling 3 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB3AGE": {
+                            "title": "5C2 Sibling 3 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB4ONS": {
+                            "title": "5D1 Sibling 4 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB4AGE": {
+                            "title": "5D2 Sibling 4 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB5ONS": {
+                            "title": "5E1 Sibling 5 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB5AGE": {
+                            "title": "5E2 Sibling 5 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB6ONS": {
+                            "title": "5F1 Sibling 6 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "SIB6AGE": {
+                            "title": "5F2 Sibling 6 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #5, SIBSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        }
+                    }
+                }
+            }
+        },
+        "children": {
+            "title": "CHILDREN",
+            "type": "object",
+            "properties": {
+                "KIDS": {
+                    "title": "6 How many biological children did the subject have?",
+                    "description": "0 – 25, 99 = Unknown",
+                    "type": "string",
+                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^99$"
+                },
+                "KIDSDEM": {
+                    "title": "7 How many of these children had dementia (as defined on form), as indicated by symptoms, history or diagnosis?",
+                    "description": "0 – 25, 88 = N/A, 99 = Unknown",
+                    "type": "string",
+                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^88$|^99$"
+                },
+                "children_info": {
+                    "title": "For each child with dementia, indicateage at onset (as defined above) if living or deceased, and current age if living:",
+                    "type": "object",
+                    "properties": {
+                        "KID1ONS": {
+                            "title": "7A1 Child 1 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID1AGE": {
+                            "title": "7A2 Child 1 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID2ONS": {
+                            "title": "7B1 Child 2 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID2AGE": {
+                            "title": "7B2 Child 2 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID3ONS": {
+                            "title": "7C1 Child 3 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID3AGE": {
+                            "title": "7C2 Child 3 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID4ONS": {
+                            "title": "7D1 Child 4 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID4AGE": {
+                            "title": "7D2 Child 4 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID5ONS": {
+                            "title": "7E1 Child 5 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID5AGE": {
+                            "title": "7E2 Child 5 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID6ONS": {
+                            "title": "7F1 Child 6 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "KID6AGE": {
+                            "title": "7F2 Child 6 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #7, KIDSDEM = 0, 88 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        }
+                    }
+                }
+            }
+        },
+        "other_relatives": {
+            "title": "OTHER RELATIVES",
+            "type": "object",
+            "properties": {
+                "RELSDEM": {
+                    "title": "8 Number of other blood relatives with dementia (as defined on form) (cousins, aunts, uncles, grandparents, half siblings), as indicated by symptoms, history or diagnosis.",
+                    "description": "0 – 50,99 = Unknown",
+                    "type": "string",
+                    "pattern": "^[0-4]?[0-9]$|^50$|^99$"
+                },
+                "other_relatives_info": {
+                    "title": "For each other blood relative with dementia, indicate age at onset (as defined above) if living or deceased, and current age if living:",
+                    "type": "object",
+                    "properties": {
+                        "REL1ONS": {
+                            "title": "8A1 Relative 1 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL1AGE": {
+                            "title": "8A2 Relative 1 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL2ONS": {
+                            "title": "8B1 Relative 2 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL2AGE": {
+                            "title": "8B2 Relative 2 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL3ONS": {
+                            "title": "8C1 Relative 3 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL3AGE": {
+                            "title": "8C2 Relative 3 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL4ONS": {
+                            "title": "8D1 Relative 4 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL4AGE": {
+                            "title": "8D2 Relative 4 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL5ONS": {
+                            "title": "8E1 Relative 5 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL5AGE": {
+                            "title": "8E2 Relative 5 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL6ONS": {
+                            "title": "8F1 Relative 6 age at onset",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        },
+                        "REL6AGE": {
+                            "title": "8F2 Relative 6 current age if living",
+                            "description": "15 – 110,888 = NA,999 = Age unknown,Blank if #8, RELSDEM = 0 or 99.",
+                            "type": "string",
+                            "pattern": "^1[5-9]$|^[2-9][0-9]$|^10[0-9]$|^110$|^888$|^999$"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "parents.MOMDEM": {
+            "title": "1 Did the subject’s mother have dementia (as defined on form), as indicated by symptoms, history or diagnosis?"
+        },
+        "parents.MOMONSET": {
+            "title": "1A If the subject’s mother had dementia, indicate the age at which she developed dementia symptoms (age at onset, as defined on form)."
+        },
+        "parents.MOMAGE": {
+            "title": "1B If the subject’s mother has dementia and is living, indicate her current age."
+        },
+        "parents.MOMDAGE": {
+            "title": "1C If the subject’s mother had dementia and is deceased, indicate her age at death."
+        },
+        "parents.DADDEM": {
+            "title": "2 Did the subject’s father have dementia (as defined on form), as indicated by symptoms, history or diagnosis?"
+        },
+        "parents.DADONSET": {
+            "title": "2A If the subject’s father had dementia, indicate the age at which he developed dementia symptoms (age at onset, as defined on form)."
+        },
+        "parents.DADAGE": {
+            "title": "2B If the subject’s father has dementia and is living, indicate his current age."
+        },
+        "parents.DADDAGE": {
+            "title": "2C If the subject’s father had dementia and is deceased, indicate his age at death."
+        },
+        "siblings.TWIN": {
+            "title": "3 Is the subject a twin?"
+        },
+        "siblings.TWINTYPE": {
+            "title": "3A If the subject is a twin, indicate type."
+        },
+        "siblings.SIBS": {
+            "title": "4 How many full siblings did the subject have?"
+        },
+        "siblings.SIBSDEM": {
+            "title": "5 How many of these siblings had dementia (as defined on form), as indicated by symptoms, history or diagnosis?"
+        },
+        "siblings.sibs_info.SIB1ONS": {
+            "title": "5A1 Sibling 1 age at onset"
+        },
+        "siblings.sibs_info.SIB1AGE": {
+            "title": "5A2 Sibling 1 current age if living"
+        },
+        "siblings.sibs_info.SIB2ONS": {
+            "title": "5B1 Sibling 2 age at onset"
+        },
+        "siblings.sibs_info.SIB2AGE": {
+            "title": "5B2 Sibling 2 current age if living"
+        },
+        "siblings.sibs_info.SIB3ONS": {
+            "title": "5C1 Sibling 3 age at onset"
+        },
+        "siblings.sibs_info.SIB3AGE": {
+            "title": "5C2 Sibling 3 current age if living"
+        },
+        "siblings.sibs_info.SIB4ONS": {
+            "title": "5D1 Sibling 4 age at onset"
+        },
+        "siblings.sibs_info.SIB4AGE": {
+            "title": "5D2 Sibling 4 current age if living"
+        },
+        "siblings.sibs_info.SIB5ONS": {
+            "title": "5E1 Sibling 5 age at onset"
+        },
+        "siblings.sibs_info.SIB5AGE": {
+            "title": "5E2 Sibling 5 current age if living"
+        },
+        "siblings.sibs_info.SIB6ONS": {
+            "title": "5F1 Sibling 6 age at onset"
+        },
+        "siblings.sibs_info.SIB6AGE": {
+            "title": "5F2 Sibling 6 current age if living"
+        },
+        "children.KIDS": {
+            "title": "6 How many biological children did the subject have?"
+        },
+        "children.KIDSDEM": {
+            "title": "7 How many of these children had dementia (as defined on form), as indicated by symptoms, history or diagnosis?"
+        },
+        "children.children_info.KID1ONS": {
+            "title": "7A1 Child 1 age at onset"
+        },
+        "children.children_info.KID1AGE": {
+            "title": "7A2 Child 1 current age if living"
+        },
+        "children.children_info.KID2ONS": {
+            "title": "7B1 Child 2 age at onset"
+        },
+        "children.children_info.KID2AGE": {
+            "title": "7B2 Child 2 current age if living"
+        },
+        "children.children_info.KID3ONS": {
+            "title": "7C1 Child 3 age at onset"
+        },
+        "children.children_info.KID3AGE": {
+            "title": "7C2 Child 3 current age if living"
+        },
+        "children.children_info.KID4ONS": {
+            "title": "7D1 Child 4 age at onset"
+        },
+        "children.children_info.KID4AGE": {
+            "title": "7D2 Child 4 current age if living"
+        },
+        "children.children_info.KID5ONS": {
+            "title": "7E1 Child 5 age at onset"
+        },
+        "children.children_info.KID5AGE": {
+            "title": "7E2 Child 5 current age if living"
+        },
+        "children.children_info.KID6ONS": {
+            "title": "7F1 Child 6 age at onset"
+        },
+        "children.children_info.KID6AGE": {
+            "title": "7F2 Child 6 current age if living"
+        },
+        "other_relatives.RELSDEM": {
+            "title": "8 Number of other blood relatives with dementia (as defined on form) (cousins, aunts, uncles, grandparents, half siblings), as indicated by symptoms, history or diagnosis."
+        },
+        "other_relatives.other_relatives_info.REL1ONS": {
+            "title": "8A1 Relative 1 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL1AGE": {
+            "title": "8A2 Relative 1 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL2ONS": {
+            "title": "8B1 Relative 2 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL2AGE": {
+            "title": "8B2 Relative 2 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL3ONS": {
+            "title": "8C1 Relative 3 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL3AGE": {
+            "title": "8C2 Relative 3 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL4ONS": {
+            "title": "8D1 Relative 4 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL4AGE": {
+            "title": "8D2 Relative 4 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL5ONS": {
+            "title": "8E1 Relative 5 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL5AGE": {
+            "title": "8E2 Relative 5 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL6ONS": {
+            "title": "8F1 Relative 6 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL6AGE": {
+            "title": "8F2 Relative 6 current age if living"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "parents.MOMDEM": {
+            "title": "1 Did the subject’s mother have dementia (as defined on form), as indicated by symptoms, history or diagnosis?"
+        },
+        "parents.MOMONSET": {
+            "title": "1A If the subject’s mother had dementia, indicate the age at which she developed dementia symptoms (age at onset, as defined on form)."
+        },
+        "parents.MOMAGE": {
+            "title": "1B If the subject’s mother has dementia and is living, indicate her current age."
+        },
+        "parents.MOMDAGE": {
+            "title": "1C If the subject’s mother had dementia and is deceased, indicate her age at death."
+        },
+        "parents.DADDEM": {
+            "title": "2 Did the subject’s father have dementia (as defined on form), as indicated by symptoms, history or diagnosis?"
+        },
+        "parents.DADONSET": {
+            "title": "2A If the subject’s father had dementia, indicate the age at which he developed dementia symptoms (age at onset, as defined on form)."
+        },
+        "parents.DADAGE": {
+            "title": "2B If the subject’s father has dementia and is living, indicate his current age."
+        },
+        "parents.DADDAGE": {
+            "title": "2C If the subject’s father had dementia and is deceased, indicate his age at death."
+        },
+        "siblings.TWIN": {
+            "title": "3 Is the subject a twin?"
+        },
+        "siblings.TWINTYPE": {
+            "title": "3A If the subject is a twin, indicate type."
+        },
+        "siblings.SIBS": {
+            "title": "4 How many full siblings did the subject have?"
+        },
+        "siblings.SIBSDEM": {
+            "title": "5 How many of these siblings had dementia (as defined on form), as indicated by symptoms, history or diagnosis?"
+        },
+        "siblings.sibs_info.SIB1ONS": {
+            "title": "5A1 Sibling 1 age at onset"
+        },
+        "siblings.sibs_info.SIB1AGE": {
+            "title": "5A2 Sibling 1 current age if living"
+        },
+        "siblings.sibs_info.SIB2ONS": {
+            "title": "5B1 Sibling 2 age at onset"
+        },
+        "siblings.sibs_info.SIB2AGE": {
+            "title": "5B2 Sibling 2 current age if living"
+        },
+        "siblings.sibs_info.SIB3ONS": {
+            "title": "5C1 Sibling 3 age at onset"
+        },
+        "siblings.sibs_info.SIB3AGE": {
+            "title": "5C2 Sibling 3 current age if living"
+        },
+        "siblings.sibs_info.SIB4ONS": {
+            "title": "5D1 Sibling 4 age at onset"
+        },
+        "siblings.sibs_info.SIB4AGE": {
+            "title": "5D2 Sibling 4 current age if living"
+        },
+        "siblings.sibs_info.SIB5ONS": {
+            "title": "5E1 Sibling 5 age at onset"
+        },
+        "siblings.sibs_info.SIB5AGE": {
+            "title": "5E2 Sibling 5 current age if living"
+        },
+        "siblings.sibs_info.SIB6ONS": {
+            "title": "5F1 Sibling 6 age at onset"
+        },
+        "siblings.sibs_info.SIB6AGE": {
+            "title": "5F2 Sibling 6 current age if living"
+        },
+        "children.KIDS": {
+            "title": "6 How many biological children did the subject have?"
+        },
+        "children.KIDSDEM": {
+            "title": "7 How many of these children had dementia (as defined on form), as indicated by symptoms, history or diagnosis?"
+        },
+        "children.children_info.KID1ONS": {
+            "title": "7A1 Child 1 age at onset"
+        },
+        "children.children_info.KID1AGE": {
+            "title": "7A2 Child 1 current age if living"
+        },
+        "children.children_info.KID2ONS": {
+            "title": "7B1 Child 2 age at onset"
+        },
+        "children.children_info.KID2AGE": {
+            "title": "7B2 Child 2 current age if living"
+        },
+        "children.children_info.KID3ONS": {
+            "title": "7C1 Child 3 age at onset"
+        },
+        "children.children_info.KID3AGE": {
+            "title": "7C2 Child 3 current age if living"
+        },
+        "children.children_info.KID4ONS": {
+            "title": "7D1 Child 4 age at onset"
+        },
+        "children.children_info.KID4AGE": {
+            "title": "7D2 Child 4 current age if living"
+        },
+        "children.children_info.KID5ONS": {
+            "title": "7E1 Child 5 age at onset"
+        },
+        "children.children_info.KID5AGE": {
+            "title": "7E2 Child 5 current age if living"
+        },
+        "children.children_info.KID6ONS": {
+            "title": "7F1 Child 6 age at onset"
+        },
+        "children.children_info.KID6AGE": {
+            "title": "7F2 Child 6 current age if living"
+        },
+        "other_relatives.RELSDEM": {
+            "title": "8 Number of other blood relatives with dementia (as defined on form) (cousins, aunts, uncles, grandparents, half siblings), as indicated by symptoms, history or diagnosis."
+        },
+        "other_relatives.other_relatives_info.REL1ONS": {
+            "title": "8A1 Relative 1 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL1AGE": {
+            "title": "8A2 Relative 1 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL2ONS": {
+            "title": "8B1 Relative 2 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL2AGE": {
+            "title": "8B2 Relative 2 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL3ONS": {
+            "title": "8C1 Relative 3 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL3AGE": {
+            "title": "8C2 Relative 3 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL4ONS": {
+            "title": "8D1 Relative 4 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL4AGE": {
+            "title": "8D2 Relative 4 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL5ONS": {
+            "title": "8E1 Relative 5 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL5AGE": {
+            "title": "8E2 Relative 5 current age if living"
+        },
+        "other_relatives.other_relatives_info.REL6ONS": {
+            "title": "8F1 Relative 6 age at onset"
+        },
+        "other_relatives.other_relatives_info.REL6AGE": {
+            "title": "8F2 Relative 6 current age if living"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "parents.MOMDEM": 1.0,
+        "parents.MOMONSET": 1.0,
+        "parents.MOMAGE": 1.0,
+        "parents.MOMDAGE": 1.0,
+        "parents.DADDEM": 1.0,
+        "parents.DADONSET": 1.0,
+        "parents.DADAGE": 1.0,
+        "parents.DADDAGE": 1.0,
+        "siblings.TWIN": 1.0,
+        "siblings.TWINTYPE": 1.0,
+        "siblings.SIBS": 1.0,
+        "siblings.SIBSDEM": 1.0,
+        "siblings.sibs_info.SIB1ONS": 1.0,
+        "siblings.sibs_info.SIB1AGE": 1.0,
+        "siblings.sibs_info.SIB2ONS": 1.0,
+        "siblings.sibs_info.SIB2AGE": 1.0,
+        "siblings.sibs_info.SIB3ONS": 1.0,
+        "siblings.sibs_info.SIB3AGE": 1.0,
+        "siblings.sibs_info.SIB4ONS": 1.0,
+        "siblings.sibs_info.SIB4AGE": 1.0,
+        "siblings.sibs_info.SIB5ONS": 1.0,
+        "siblings.sibs_info.SIB5AGE": 1.0,
+        "siblings.sibs_info.SIB6ONS": 1.0,
+        "siblings.sibs_info.SIB6AGE": 1.0,
+        "children.KIDS": 1.0,
+        "children.KIDSDEM": 1.0,
+        "children.children_info.KID1ONS": 1.0,
+        "children.children_info.KID1AGE": 1.0,
+        "children.children_info.KID2ONS": 1.0,
+        "children.children_info.KID2AGE": 1.0,
+        "children.children_info.KID3ONS": 1.0,
+        "children.children_info.KID3AGE": 1.0,
+        "children.children_info.KID4ONS": 1.0,
+        "children.children_info.KID4AGE": 1.0,
+        "children.children_info.KID5ONS": 1.0,
+        "children.children_info.KID5AGE": 1.0,
+        "children.children_info.KID6ONS": 1.0,
+        "children.children_info.KID6AGE": 1.0,
+        "other_relatives.RELSDEM": 1.0,
+        "other_relatives.other_relatives_info.REL1ONS": 1.0,
+        "other_relatives.other_relatives_info.REL1AGE": 1.0,
+        "other_relatives.other_relatives_info.REL2ONS": 1.0,
+        "other_relatives.other_relatives_info.REL2AGE": 1.0,
+        "other_relatives.other_relatives_info.REL3ONS": 1.0,
+        "other_relatives.other_relatives_info.REL3AGE": 1.0,
+        "other_relatives.other_relatives_info.REL4ONS": 1.0,
+        "other_relatives.other_relatives_info.REL4AGE": 1.0,
+        "other_relatives.other_relatives_info.REL5ONS": 1.0,
+        "other_relatives.other_relatives_info.REL5AGE": 1.0,
+        "other_relatives.other_relatives_info.REL6ONS": 1.0,
+        "other_relatives.other_relatives_info.REL6AGE": 1.0
+    },
+    "changelog": "/profiles/changelogs/ivp_a3v1.md"
+}

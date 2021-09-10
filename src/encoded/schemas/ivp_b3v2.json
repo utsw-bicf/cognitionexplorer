@@ -1,0 +1,930 @@
+{
+    "title": "ADC Form B3.1 Unified Parkinson's Disease Rating Scale (UPDRS)-Motor Exam*",
+    "description": "NOTE: This form is to be completed by the clinician or other trained health professional. For additional clarification and examples, see UDS Coding Guidebook Version 2. Check only ONE box per question. *Fahn S, Elton RL, UPDRS Development Committee. The Unified Parkinson's Disease Rating Scale. In Fahn S,Marsden CD, Caine DB, Goldstein M, eds. Recent developments in Parkinson's disease, Vol. 2. Florham Park, NJ: Macmillan Healthcare Infonnation,1987:153-163,293-304. Reproduced by permission of the author.",
+    "id": "/profiles/ivp_b3v2.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "pdnormal"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "pdnormal": {
+            "title": "[Optional] If the clinician completes the UPDRS examination and determines all items are normal, check this box and end form here",
+            "type": "boolean"
+        },
+        "speech": {
+            "title": "1. Speech",
+            "type": "string",
+            "enum": [
+                "0 Normal",
+                "1 Slight loss of expression, diction and/or volume",
+                "2 Monotone, slurred but understandable; moderately impaired",
+                "3 Marked impairment, difficult to understand",
+                "4 Unintelligible",
+                "8 Untestable"
+            ]
+        },
+        "speech_untest": {
+            "title": "Specify reason",
+            "type": "string"
+        },
+        "face_exp": {
+            "title": "2. Facial expression",
+            "type": "string",
+            "enum": [
+                "0 Normal",
+                "1 Minimal hypomimia, could be normal \"poker face\"",
+                "2 Slight but definitely abnormal diminution of facial expression",
+                "3 Moderate hypomimia; lips parted some of the time",
+                "4 Masked or fixed facies with severe or complete loss of facial expression; lips parted ¼ inches or more",
+                "8 Untestable"
+            ]
+        },
+        "face_exp_untest": {
+            "title": "Specify reason",
+            "type": "string"
+        },
+        "trem_at_rest": {
+            "title": "3. Tremor at rest",
+            "type": "object",
+            "properties": {
+                "fac_lip_chin": {
+                    "title": "3a. Face, lips, chin",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight and infrequently present",
+                        "2 Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present",
+                        "3 Moderate in amplitude and present most of the time",
+                        "4 Marked in amplitude and present most of the time",
+                        "8 Untestable"
+                    ]
+                },
+                "fac_lip_chin_untest": {
+                    "title": "Face, lips, chin\nSpecify reason",
+                    "type": "string"
+                },
+                "r_hand": {
+                    "title": "3b. Right hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight and infrequently present",
+                        "2 Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present",
+                        "3 Moderate in amplitude and present most of the time",
+                        "4 Marked in amplitude and present most of the time",
+                        "8 Untestable"
+                    ]
+                },
+                "r_hand_untest": {
+                    "title": "Right hand\nSpecify reason",
+                    "type": "string"
+                },
+                "l_hand": {
+                    "title": "3c. Left hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight and infrequently present",
+                        "2 Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present",
+                        "3 Moderate in amplitude and present most of the time",
+                        "4 Marked in amplitude and present most of the time",
+                        "8 Untestable"
+                    ]
+                },
+                "l_hand_untest": {
+                    "title": "Left hand\nSpecify reason",
+                    "type": "string"
+                },
+                "r_foot": {
+                    "title": "3d. Right foot",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight and infrequently present",
+                        "2 Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present",
+                        "3 Moderate in amplitude and present most of the time",
+                        "4 Marked in amplitude and present most of the time",
+                        "8 Untestable"
+                    ]
+                },
+                "r_foot_untest": {
+                    "title": "Right foot\nSpecify reason",
+                    "type": "string"
+                },
+                "l_foot": {
+                    "title": "3e. Left foot",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight and infrequently present",
+                        "2 Mild in amplitude and persistent; or moderate in amplitude, but only intermittently present",
+                        "3 Moderate in amplitude and present most of the time",
+                        "4 Marked in amplitude and present most of the time",
+                        "8 Untestable"
+                    ]
+                },
+          
+                "l_foot_untest": {
+                    "title": "Left foot\nSpecify reason",
+                    "type": "string"
+                }
+            }
+        },
+        "action_trem_hands": {
+            "title": "4. Action or postural tremor of hands",
+            "type": "object",
+            "properties": {
+                "act_r_hand": {
+                    "title": "4a. Right hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight; present with action",
+                        "2 Moderate in amplitude, present with action",
+                        "3 Moderate in amplitude with posture holding as well as action",
+                        "4 Marked in amplitude; interferes with feeding",
+                        "8 Untestable"
+                    ]
+                },
+                "act_r_hand_untest": {
+                    "title": "Right hand\nSpecify reason",
+                    "type": "string"
+                },
+                "act_l_hand": {
+                    "title": "4b. Left hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight; present with action",
+                        "2 Moderate in amplitude, present with action",
+                        "3 Moderate in amplitude with posture holding as well as action",
+                        "4 Marked in amplitude; interferes with feeding",
+                        "8 Untestable"
+                    ]
+                },
+       
+                "act_l_hand_untest": {
+                    "title": "Left hand\nSpecify reason",
+                    "type": "string"
+                }
+            }
+        },
+        "rigidity": {
+            "title": "5. Rigidity\n(judged on passive movement of major joints with patient relaxed in sitting position; cogwheeling to be ignored)",
+            "type": "object",
+            "properties": {
+                "rig_neck": {
+                    "title": "5a. Neck",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight or detectable only when activated by mirror or other movements",
+                        "2 Mild to moderate",
+                        "3 Marked, but full range of motion easily achieved",
+                        "4 Severe; range of motion achieved with difficulty",
+                        "8 Untestable"
+                    ]
+                },
+                "rig_neck_untest": {
+                    "title": "Neck\nSpecify reason",
+                    "type": "string"
+                },
+                "r_up": {
+                    "title": "5b. Right upper extremity",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight or detectable only when activated by mirror or other movements",
+                        "2 Mild to moderate",
+                        "3 Marked, but full range of motion easily achieved",
+                        "4 Severe; range of motion achieved with difficulty",
+                        "8 Untestable"
+                    ]
+                },
+                "r_up_untest": {
+                    "title": "Right upper extremity\nSpecify reason",
+                    "type": "string"
+                },
+                "l_up": {
+                    "title": "5c. Left upper extremity",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight or detectable only when activated by mirror or other movements",
+                        "2 Mild to moderate",
+                        "3 Marked, but full range of motion easily achieved",
+                        "4 Severe; range of motion achieved with difficulty",
+                        "8 Untestable"
+                    ]
+                },
+                "l_up_untest": {
+                    "title": "Left upper extremity\nSpecify reason",
+                    "type": "string"
+                },
+                "r_low": {
+                    "title": "5d. Right lower extremity",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight or detectable only when activated by mirror or other movements",
+                        "2 Mild to moderate",
+                        "3 Marked, but full range of motion easily achieved",
+                        "4 Severe; range of motion achieved with difficulty",
+                        "8 Untestable"
+                    ]
+                },
+                "r_low_untest": {
+                    "title": "Right lower extremity\nSpecify reason",
+                    "type": "string"
+                },
+                "l_low": {
+                    "title": "5e. Left lower extremity",
+                    "type": "string",
+                    "enum": [
+                        "0 Absent",
+                        "1 Slight or detectable only when activated by mirror or other movements",
+                        "2 Mild to moderate",
+                        "3 Marked, but full range of motion easily achieved",
+                        "4 Severe; range of motion achieved with difficulty",
+                        "8 Untestable"
+                    ]
+                },
+               
+            
+                "l_low_untest": {
+                    "title": "Left lower extremity\nSpecify reason",
+                    "type": "string"
+                }
+            }
+        },
+        "finger_taps": {
+            "title": "6. Finger taps\n(patient taps thumb with index finger in rapid succession)",
+            "type": "object",
+            "properties": {
+                "taps_r": {
+                    "title": "6a. Right hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Normal",
+                        "1 Mild slowing and/or reduction in amplitude",
+                        "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+                        "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement",
+                        "4 Can barely perform the task",
+                        "8 Untestable"
+                    ]
+                },
+                "taps_r_untest": {
+                    "title": "Right hand\nSpecify reason",
+                    "type": "string"
+                },
+                "taps_l": {
+                    "title": "6b. Left hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Normal",
+                        "1 Mild slowing and/or reduction in amplitude",
+                        "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+                        "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement",
+                        "4 Can barely perform the task",
+                        "8 Untestable"
+                    ]
+                },
+            
+                "taps_l_untest": {
+                    "title": "Left hand\nSpecify reason",
+                    "type": "string"
+                }
+            }
+        },
+        "hand_move": {
+            "title": "7. Hand movements\n(patient opens and closes hands in rapid succession)",
+            "type": "object",
+            "properties": {
+                "movem_r": {
+                    "title": "7a, Right hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Normal",
+                        "1 Mild slowing and/or reduction in amplitude",
+                        "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+                        "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement",
+                        "4 Can barely perform the task",
+                        "8 Untestable"
+                    ]
+                },
+                "movem_r_untest": {
+                    "title": "Right hand\nSpecify reason",
+                    "type": "string"
+                },
+                "movem_l": {
+                    "title": "7b. Left hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Normal",
+                        "1 Mild slowing and/or reduction in amplitude",
+                        "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+                        "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement",
+                        "4 Can barely perform the task",
+                        "8 Untestable"
+                    ]
+                },
+          
+                "movem_l_untest": {
+                    "title": "Left hand\nSpecify reason",
+                    "type": "string"
+                }
+            }
+        },
+        "move_of_hands": {
+            "title": "8. Rapid alternating movements of hands\n(pronation-supination movements of hands, vertically and horizontally, with as large an amplitude as possible, both hands simultaneously)",
+            "type": "object",
+            "properties": {
+                "rap_alt_r": {
+                    "title": "8a. Right hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Normal",
+                        "1 Mild slowing and/or reduction in amplitude",
+                        "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+                        "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement",
+                        "4 Can barely perform the task",
+                        "8 Untestable"
+                    ]
+                },
+                "rap_alt_r_untest": {
+                    "title": "Right hand\nSpecify reason",
+                    "type": "string"
+                },
+                "rap_alt_l": {
+                    "title": "8b. Left hand",
+                    "type": "string",
+                    "enum": [
+                        "0 Normal",
+                        "1 Mild slowing and/or reduction in amplitude",
+                        "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+                        "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement",
+                        "4 Can barely perform the task",
+                        "8 Untestable"
+                    ]
+                },
+           
+                "rap_alt_l_untest": {
+                    "title": "Left hand\nSpecify reason",
+                    "type": "string"
+                }
+            }
+        },
+        "leg_agil": {
+            "title": "9. Leg agility\n(patient taps heel on the ground in rapid succession, picking up entire leg; amplitude should be at least 3 inches)",
+            "type": "object",
+            "properties": {
+                "leg_agil_r": {
+                    "title": "9a. Right leg",
+                    "type": "string",
+                    "enum": [
+                        "0 Normal",
+                        "1 Mild slowing and/or reduction in amplitude",
+                        "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+                        "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement",
+                        "4 Can barely perform the task",
+                        "8 Untestable"
+                    ]
+                },
+                "leg_agil_r_untest": {
+                    "title": "Right leg\nSpecify reason",
+                    "type": "string"
+                },
+                "leg_agil_l": {
+                    "title": "9b. Left leg",
+                    "type": "string",
+                    "enum": [
+                        "0 Normal",
+                        "1 Mild slowing and/or reduction in amplitude",
+                        "2 Moderately impaired; definite and early fatiguing; may have occasional arrests in movement",
+                        "3 Severely impaired; frequent hesitation in initiating movements or arrests in ongoing movement",
+                        "4 Can barely perform the task",
+                        "8 Untestable"
+                    ]
+                },
+         
+                "leg_agil_l_untest": {
+                    "title": "Left leg\nSpecify reason",
+                    "type": "string"
+                }
+            }
+        },
+        "arise_chair": {
+            "title": "10. Arising from chair(patient attempts to rise from a straight-backed chair, with arms folded across chest)",
+            "type": "string",
+            "enum": [
+                "0 Normal",
+                "1 Slow; or may need more than one attempt",
+                "2 Pushes self up from arms of seat",
+                "3 Tends to fall back and may have to try more than one time, but can get up without help",
+                "4 Unable to arise without help.",
+                "8 Untestable"
+            ]
+        },
+        "arise_chair_untest": {
+            "title": "Specify reason",
+            "type": "string"
+        },
+        "posture": {
+            "title": "11. Posture",
+            "type": "string",
+            "enum": [
+                "0 Normal",
+                "1 Not quite erect, slightly stooped posture; could be normal for older person",
+                "2 Moderately stooped posture, definitely abnormal; can be slightly leaning to one side",
+                "3 Severely stooped posture with kyphosis; can be moderately leaning to one side",
+                "4 Marked flexion with extreme abnormality of posture",
+                "8 Untestable"
+            ]
+        },
+        "posture_untest": {
+            "title": "Specify reason",
+            "type": "string"
+        },
+        "gait": {
+            "title": "12. Gait",
+            "type": "string",
+            "enum": [
+                "0 Normal",
+                "1 Walks slowly; may shuffle with short steps, but no festination (hastening steps) or propulsion",
+                "2 Walks with difficulty, but requires little or no assistance; may have some festination, short steps, or propulsion",
+                "3 Severe disturbance of gait requiring assistance",
+                "4 Cannot walk at all, even with assistance.",
+                "8 Untestable"
+            ]
+        },
+        "gait_untest": {
+            "title": "Specify reason",
+            "type": "string"
+        },
+        "post_stab": {
+            "title": "13. Posture stability(response to sudden, strong posterior displacement produced by pull on shoulders while patient erect with eyes open and feet slightly apart; patient is prepared)",
+            "type": "string",
+            "enum": [
+                "0 Normal erect",
+                "1 Retropulsion, but recovers unaided",
+                "2 Absence of postural response; would fall if not caught by examiner",
+                "3 Very unstable, tends to lose balance spontaneously",
+                "4 Unable to stand without assistance",
+                "8 Untestable"
+            ]
+        },
+        "post_stab_untest": {
+            "title": "Specify reason",
+            "type": "string"
+        },
+        "bradykin": {
+            "title": "14. Body bradykinesia and hypokinesia(combining slowness, hesitancy, decreased arm swing, small amplitude, and poverty of movement in general)",
+            "type": "string",
+            "enum": [
+                "0 None",
+                "1 Minimal slowness, giving movement a deliberate character; could be normal for some persons; possibly reduced amplitude",
+                "2 Mild degree of slowness and poverty of movement which is definitely abnormal. Alternatively, some reduced amplitude",
+                "3 Moderate slowness, poverty or small amplitude of movement",
+                "4 Marked slowness, poverty or small amplitude of movement",
+                "8 Untestable"
+            ]
+        },
+        "bradykin_untest": {
+            "title": "Specify reason",
+            "type": "string"
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "pdnormal": {
+            "title": "(Optional) UPDRS normal - If the clinician completes the UPDRS examination and determines all items are normal, check this box and end form here"
+        },
+        "speech": {
+            "title": "1. Speech"
+        },
+        "speech_untest": {
+            "title": "Specify reason"
+        },
+        "face_exp": {
+            "title": "2. Facial expression"
+        },
+        "face_exp_untest": {
+            "title": "Specify reason"
+        },
+        "trem_at_rest.fac_lip_chin": {
+            "title": "3a. Face, lips, chin"
+        },
+        "trem_at_rest.fac_lip_chin_untest": {
+            "title": "Face, lips, chin\nSpecify reason"
+        },
+        "trem_at_rest.r_hand": {
+            "title": "3b. Right hand"
+        },
+        "trem_at_rest.r_hand_untest": {
+            "title": "trem_at_rest.right hand\nSpecify reason"
+        },
+        "trem_at_rest.l_hand": {
+            "title": "3c. Left hand"
+        },
+        "trem_at_rest.l_hand_untest": {
+            "title": "trem_at_rest.left hand\nSpecify reason"
+        },
+        "trem_at_rest.r_foot": {
+            "title": "3d. Right foot"
+        },
+        "trem_at_rest.r_foot_untest": {
+            "title": "trem_at_rest.right foot\nSpecify reason"
+        },
+        "trem_at_rest.l_foot": {
+            "title": "3e. Left foot"
+        },
+        "trem_at_rest.l_foot_untest": {
+            "title": "trem_at_rest.left foot\nSpecify reason"
+        },
+        "action_trem_hands.act_r_hand": {
+            "title": "4a. Right hand"
+        },
+        "action_trem_hands.act_r_hand_untest": {
+            "title": "Right hand\nSpecify reason"
+        },
+        "action_trem_hands.act_l_hand": {
+            "title": "4b. Left hand"
+        },
+        "action_trem_hands.act_l_hand_untest": {
+            "title": "Left hand\nSpecify reason"
+        },
+        "rigidity.rig_neck": {
+            "title": "5a. Neck"
+        },
+        "rigidity.rig_neck_untest": {
+            "title": "Neck\nSpecify reason"
+        },
+        "rigidity.r_up": {
+            "title": "5b. Right upper extremity"
+        },
+        "rigidity.r_up_untest": {
+            "title": "rigidity.right upper extremity\nSpecify reason"
+        },
+        "rigidity.l_up": {
+            "title": "5c. Left upper extremity"
+        },
+        "rigidity.l_up_untest": {
+            "title": "rigidity.left upper extremity\nSpecify reason"
+        },
+        "rigidity.r_low": {
+            "title": "5d. Right lower extremity"
+        },
+        "rigidity.r_low_untest": {
+            "title": "rigidity.right lower extremity\nSpecify reason"
+        },
+        "rigidity.l_low": {
+            "title": "5e. Left lower extremity"
+        },
+        "rigidity.l_low_untest": {
+            "title": "rigidity.left lower extremity\nSpecify reason"
+        },
+        "finger_taps.taps_r": {
+            "title": "6a. Right hand"
+        },
+        "finger_taps.taps_r_untest": {
+            "title": "Right hand\nSpecify reason"
+        },
+        "finger_taps.taps_l": {
+            "title": "6b. Left hand"
+        },
+        "finger_taps.taps_l_untest": {
+            "title": "Left hand\nSpecify reason"
+        },
+        "hand_move.movem_r": {
+            "title": "7a, Right hand"
+        },
+        "hand_move.movem_r_untest": {
+            "title": "Right hand\nSpecify reason"
+        },
+        "hand_move.movem_l": {
+            "title": "7b. Left hand"
+        },
+        "hand_move.movem_l_untest": {
+            "title": "Left hand\nSpecify reason"
+        },
+        "move_of_hands.rap_alt_r": {
+            "title": "8a. Right hand"
+        },
+        "move_of_hands.rap_alt_r_untest": {
+            "title": "Right hand\nSpecify reason"
+        },
+        "move_of_hands.rap_alt_l": {
+            "title": "8b. Left hand"
+        },
+        "move_of_hands.rap_alt_l_untest": {
+            "title": "Left hand\nSpecify reason"
+        },
+        "leg_agil.leg_agil_r": {
+            "title": "9a. Right leg"
+        },
+        "leg_agil.leg_agil_r_untest": {
+            "title": "Right leg\nSpecify reason"
+        },
+        "leg_agil.leg_agil_l": {
+            "title": "9b. Left leg"
+        },
+        "leg_agil.leg_agil_l_untest": {
+            "title": "Left leg\nSpecify reason"
+        },
+        "arise_chair": {
+            "title": "10. Arising from chair(patient attempts to rise from a straight-backed chair, with arms folded across chest)"
+        },
+        "arise_chair_untest": {
+            "title": "Specify reason"
+        },
+        "posture": {
+            "title": "11. Posture"
+        },
+        "posture_untest": {
+            "title": "Specify reason"
+        },
+        "gait": {
+            "title": "12. Gait"
+        },
+        "gait_untest": {
+            "title": "Specify reason"
+        },
+        "post_stab": {
+            "title": "13. Posture stability(response to sudden, strong posterior displacement produced by pull on shoulders while patient erect with eyes open and feet slightly apart; patient is prepared)"
+        },
+        "post_stab_untest": {
+            "title": "Specify reason"
+        },
+        "bradykin": {
+            "title": "14. Body bradykinesia and hypokinesia(combining slowness, hesitancy, decreased arm swing, small amplitude, and poverty of movement in general)"
+        },
+        "bradykin_untest": {
+            "title": "Specify reason"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "pdnormal": {
+            "title": "(Optional) UPDRS normal - If the clinician completes the UPDRS examination and determines all items are normal, check this box and end form here"
+        },
+        "speech": {
+            "title": "1. Speech"
+        },
+        "speech_untest": {
+            "title": "Specify reason"
+        },
+        "face_exp": {
+            "title": "2. Facial expression"
+        },
+        "face_exp_untest": {
+            "title": "Specify reason"
+        },
+        "trem_at_rest.fac_lip_chin": {
+            "title": "3a. Face, lips, chin"
+        },
+        "trem_at_rest.fac_lip_chin_untest": {
+            "title": "Face, lips, chin\nSpecify reason"
+        },
+        "trem_at_rest.r_hand": {
+            "title": "3b. Right hand"
+        },
+        "trem_at_rest.r_hand_untest": {
+            "title": "trem_at_rest.right hand\nSpecify reason"
+        },
+        "trem_at_rest.l_hand": {
+            "title": "3c. Left hand"
+        },
+        "trem_at_rest.l_hand_untest": {
+            "title": "trem_at_rest.left hand\nSpecify reason"
+        },
+        "trem_at_rest.r_foot": {
+            "title": "3d. Right foot"
+        },
+        "trem_at_rest.r_foot_untest": {
+            "title": "trem_at_rest.right foot\nSpecify reason"
+        },
+        "trem_at_rest.l_foot": {
+            "title": "3e. Left foot"
+        },
+        "trem_at_rest.l_foot_untest": {
+            "title": "trem_at_rest.left foot\nSpecify reason"
+        },
+        "action_trem_hands.act_r_hand": {
+            "title": "4a. Right hand"
+        },
+        "action_trem_hands.act_r_hand_untest": {
+            "title": "Right hand\nSpecify reason"
+        },
+        "action_trem_hands.act_l_hand": {
+            "title": "4b. Left hand"
+        },
+        "action_trem_hands.act_l_hand_untest": {
+            "title": "Left hand\nSpecify reason"
+        },
+        "rigidity.rig_neck": {
+            "title": "5a. Neck"
+        },
+        "rigidity.rig_neck_untest": {
+            "title": "Neck\nSpecify reason"
+        },
+        "rigidity.r_up": {
+            "title": "5b. Right upper extremity"
+        },
+        "rigidity.r_up_untest": {
+            "title": "rigidity.right upper extremity\nSpecify reason"
+        },
+        "rigidity.l_up": {
+            "title": "5c. Left upper extremity"
+        },
+        "rigidity.l_up_untest": {
+            "title": "rigidity.left upper extremity\nSpecify reason"
+        },
+        "rigidity.r_low": {
+            "title": "5d. Right lower extremity"
+        },
+        "rigidity.r_low_untest": {
+            "title": "rigidity.right lower extremity\nSpecify reason"
+        },
+        "rigidity.l_low": {
+            "title": "5e. Left lower extremity"
+        },
+        "rigidity.l_low_untest": {
+            "title": "rigidity.left lower extremity\nSpecify reason"
+        },
+        "finger_taps.taps_r": {
+            "title": "6a. Right hand"
+        },
+        "finger_taps.taps_r_untest": {
+            "title": "Right hand\nSpecify reason"
+        },
+        "finger_taps.taps_l": {
+            "title": "6b. Left hand"
+        },
+        "finger_taps.taps_l_untest": {
+            "title": "Left hand\nSpecify reason"
+        },
+        "hand_move.movem_r": {
+            "title": "7a, Right hand"
+        },
+        "hand_move.movem_r_untest": {
+            "title": "Right hand\nSpecify reason"
+        },
+        "hand_move.movem_l": {
+            "title": "7b. Left hand"
+        },
+        "hand_move.movem_l_untest": {
+            "title": "Left hand\nSpecify reason"
+        },
+        "move_of_hands.rap_alt_r": {
+            "title": "8a. Right hand"
+        },
+        "move_of_hands.rap_alt_r_untest": {
+            "title": "Right hand\nSpecify reason"
+        },
+        "move_of_hands.rap_alt_l": {
+            "title": "8b. Left hand"
+        },
+        "move_of_hands.rap_alt_l_untest": {
+            "title": "Left hand\nSpecify reason"
+        },
+        "leg_agil.leg_agil_r": {
+            "title": "9a. Right leg"
+        },
+        "leg_agil.leg_agil_r_untest": {
+            "title": "Right leg\nSpecify reason"
+        },
+        "leg_agil.leg_agil_l": {
+            "title": "9b. Left leg"
+        },
+        "leg_agil.leg_agil_l_untest": {
+            "title": "Left leg\nSpecify reason"
+        },
+        "arise_chair": {
+            "title": "10. Arising from chair(patient attempts to rise from a straight-backed chair, with arms folded across chest)"
+        },
+        "arise_chair_untest": {
+            "title": "Specify reason"
+        },
+        "posture": {
+            "title": "11. Posture"
+        },
+        "posture_untest": {
+            "title": "Specify reason"
+        },
+        "gait": {
+            "title": "12. Gait"
+        },
+        "gait_untest": {
+            "title": "Specify reason"
+        },
+        "post_stab": {
+            "title": "13. Posture stability(response to sudden, strong posterior displacement produced by pull on shoulders while patient erect with eyes open and feet slightly apart; patient is prepared)"
+        },
+        "post_stab_untest": {
+            "title": "Specify reason"
+        },
+        "bradykin": {
+            "title": "14. Body bradykinesia and hypokinesia(combining slowness, hesitancy, decreased arm swing, small amplitude, and poverty of movement in general)"
+        },
+        "bradykin_untest": {
+            "title": "Specify reason"
+        }
+    },
+
+    "boost_values": {
+        "patient": 1.0,
+        "status": 1.0,
+        "pdnormal": 1.0,
+        "speech": 1.0,
+        "speech_untest": 1.0,
+        "face_exp": 1.0,
+        "face_exp_untest": 1.0,
+        "trem_at_rest.fac_lip_chin": 1.0,
+        "trem_at_rest.fac_lip_chin_untest": 1.0,
+        "trem_at_rest.r_hand": 1.0,
+        "trem_at_rest.r_hand_untest": 1.0,
+        "trem_at_rest.l_hand": 1.0,
+        "trem_at_rest.l_hand_untest": 1.0,
+        "trem_at_rest.r_foot": 1.0,
+        "trem_at_rest.r_foot_untest": 1.0,
+        "trem_at_rest.l_foot": 1.0,
+        "trem_at_rest.l_foot_untest": 1.0,
+        "action_trem_hands.act_r_hand": 1.0,
+        "action_trem_hands.act_r_hand_untest": 1.0,
+        "action_trem_hands.act_l_hand": 1.0,
+        "action_trem_hands.act_l_hand_untest": 1.0,
+        "rigidity.rig_neck": 1.0,
+        "rigidity.rig_neck_untest": 1.0,
+        "rigidity.r_up": 1.0,
+        "rigidity.r_up_untest": 1.0,
+        "rigidity.l_up": 1.0,
+        "rigidity.l_up_untest": 1.0,
+        "rigidity.r_low": 1.0,
+        "rigidity.r_low_untest": 1.0,
+        "rigidity.l_low": 1.0,
+        "rigidity.l_low_untest": 1.0,
+        "finger_taps.taps_r": 1.0,
+        "finger_taps.taps_r_untest": 1.0,
+        "finger_taps.taps_l": 1.0,
+        "finger_taps.taps_l_untest": 1.0,
+        "hand_move.movem_r": 1.0,
+        "hand_move.movem_r_untest": 1.0,
+        "hand_move.movem_l": 1.0,
+        "hand_move.movem_l_untest": 1.0,
+        "move_of_hands.rap_alt_r": 1.0,
+        "move_of_hands.rap_alt_r_untest": 1.0,
+        "move_of_hands.rap_alt_l": 1.0,
+        "move_of_hands.rap_alt_l_untest": 1.0,
+        "leg_agil.leg_agil_r": 1.0,
+        "leg_agil.leg_agil_r_untest": 1.0,
+        "leg_agil.leg_agil_l": 1.0,
+        "leg_agil.leg_agil_l_untest": 1.0,
+        "arise_chair": 1.0,
+        "arise_chair_untest": 1.0,
+        "posture": 1.0,
+        "posture_untest": 1.0,
+        "gait": 1.0,
+        "gait_untest": 1.0,
+        "post_stab": 1.0,
+        "post_stab_untest": 1.0,
+        "bradykin": 1.0,
+        "bradykin_untest": 1.0
+
+    },
+    "changelog": "/profiles/changelogs/ivp_b3v2.md"
+}

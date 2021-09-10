@@ -1,0 +1,961 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM Z1X: Form Checklist",
+    "description": "INSTRUCTIONS: This form is to be completed by clinic personnel.\nNACC expects and intends that all UDS forms will be attempted on all subjects, but we realize this may be impossible\nwhen the patient is terminally ill, or when there is no co-participant, or for other reasons. An explanation is required\nbelow for forms that are not submitted.\nKEY: If the specified form was not completed, please enter one of the following codes:\n95 = Physical problem\n96 = Cognitive or behavior problem\n97 = Other problem\n98 = Verbal refusal\n*Key for FTLD MODULE ONLY: Allowable codes are 95-98 as above as well as 99=Unknown or inadequate\ninformation.",
+    "id": "/profiles/uds_ivp_z1xv3.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "note_z1x_1",
+        "note_z1x_2",
+        "note_z1x_3",
+        "note_z1x_4",
+        "note_z1x_5",
+        "note_z1x_6",
+        "note_z1x_7",
+        "note_z1x_8",
+        "note_z1x_9",
+        "note_z1x_10",
+        "note_z1x_11",
+        "note_z1x_12",
+        "note_z1x_13",
+        "note_z1x_14",
+        "note_z1x_15",
+        "cls_form"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "ivp_z1x.json#/properties"
+        },
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "note_z1x_1": {
+            "title": "A1 SUBJECT DEMOGRAPHICS",
+            "type": "object",
+            "properties": {
+                "langa1": {
+                    "title": "1a. Language used for A1 Subject Demographics",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_2": {
+            "title": "A2 Co-participant Demographics",
+            "type": "object",
+            "properties": {
+                "a2sub": {
+                    "title": "2b. Submitted A2 Co-participant Demographics",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "a2not": {
+                    "title": "2c. If A2 not submitted, specify reason. (see KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langa2": {
+                    "title": "2a. Language used for A2 Co-Participant Demographics",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_3": {
+            "title": "A3 Subject Family History",
+            "type": "object",
+            "properties": {
+                "a3sub": {
+                    "title": "3b. Submitted A3 Subject Family History",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "a3not": {
+                    "title": "3c. If A3 not submitted, specify reason. (see KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langa3": {
+                    "title": "3a. Language used for A3 Subject Family History",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_4": {
+            "title": "A4 Subject Medications",
+            "type": "object",
+            "properties": {
+                "langa4": {
+                    "title": "4a. Language used for A4 Subject Medications",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "a4sub": {
+                    "title": "4b. Submitted A4 Subject Medications",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "a4not": {
+                    "title": "4c. IfA4  not submitted, specify reason. (see KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                }
+                
+            }
+        },
+        "note_z1x_5": {
+            "title": "A5 Subject Health History",
+            "type": "object",
+            "properties": {
+                "langa5": {
+                    "title": "5a. Language used for A5 Subject Health History",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_6": {
+            "title": "B1 EVALUATION FORM - Physical",
+            "type": "object",
+            "properties": {
+                "b1sub": {
+                    "title": "6b. Submitted B1 EVALUATION FORM - Physical",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "b1not": {
+                    "title": "6c. If B1 not submitted, specify reason. (see KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langb1": {
+                    "title": "6a. Language used for B1 Evaluation Form: Physical",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_7": {
+            "title": "B4 Global Staging - CDR: Standard and Supplemental",
+            "type": "object",
+            "properties": {
+                "langb4": {
+                    "title": "7b. Language used for B4 CDR<sup>®</sup> Plus NACC FTLD",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_8": {
+            "title": "B5 BEHAVIORAL ASSESSMENT NPI-Q",
+            "type": "object",
+            "properties": {
+                "b5sub": {
+                    "title": "8b. Submitted B5 BEHAVIORAL ASSESSMENT NPI-Q",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "b5not": {
+                    "title": "8c. If B5 not submitted, specify reason. (see KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langb5": {
+                    "title": "8a. Language used for B5 Behaviorial Assessment: NPI-Q",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_9": {
+            "title": "B6 BEHAVIORAL ASSESSMENT - GDS",
+            "type": "object",
+            "properties": {
+                "b6sub": {
+                    "title": "9b. Submitted B6 BEHAVIORAL ASSESSMENT - GDS",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "b6not": {
+                    "title": "9c. If B6 not submitted, specify reason. (see KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langb6": {
+                    "title": "9a. Language B6 Behavioral Assessment: GDS",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_10": {
+            "title": "B7 FUNCTIONAL ASSESSMENT - FAS",
+            "type": "object",
+            "properties": {
+                "b7sub": {
+                    "title": "10b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "b7not": {
+                    "title": "10c. If B7 not submitted, specify reason. (see KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langb7": {
+                    "title": "10a. Language used for B7 Functional Assessment: FAS",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_11": {
+            "title": "B8 EVALUATION FORM Neurological Examination Findings",
+            "type": "object",
+            "properties": {
+                "langb8": {
+                    "title": "11a. Language used for B8 Neurological Examination Findings",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_12": {
+            "title": "B9 Clinician Judgment of Symptoms",
+            "type": "object",
+            "properties": {
+                "langb9": {
+                    "title": "12a. Language used for B9  Clinician Judgment of Symptoms",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_13": {
+            "title": "C2 Neuropsychological Battery Scores",
+            "type": "object",
+            "properties": {
+                "langc2": {
+                    "title": "13a. Language used for C2 Neuropsychological Battery Scores",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_14": {
+            "title": "D1 Clinician Diagnosis",
+            "type": "object",
+            "properties": {
+                "langd1": {
+                    "title": "14a. Language used for D1 Clinician Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "note_z1x_15": {
+            "title": "D2 Clinician-assessed Medical Conditions",
+            "type": "object",
+            "properties": {
+                "langd2": {
+                    "title": "15a. Language used for D2 Clinician-assessed Medical Conditions",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "ftld_module": {
+            "title": "FTLD Module",
+            "description": "*Key for FTLD MODULE ONLY:  Allowable codes are 95-98 as above as well as 99=Unknown or inadequate information.\nKEY: If the specified form was not completed, please enter one of the following codes:\n95 = Physical problem\n96 = Cognitive or behavior problem\n97 = Other problem\n98 = Verbal refusal\n99=Unknown or inadequate information",
+            "type": "object",
+            "properties": {
+                "ftda3afs": {
+                    "title": "16b. Submitted A3A Record of Consent for Biologic Specimen Use",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "ftda3afr": {
+                    "title": "16c. If A3a not submitted, specify reason. (see *KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langa3a": {
+                    "title": "16a. Language used for A3A Record of Consent for Biologic Specimen Use",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "langb3f": {
+                    "title": "17a. Language used for B3f Supplemental UPDRS",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "langb9f": {
+                    "title": "18a. Language used for B9F Clinical PPA and bvFTD Features",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "langc1f": {
+                    "title": "19a. Language used for C1F Neuropsychological Battery summary Scores",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "langc2f": {
+                    "title": "20a. Language used for C2F Social Norms Questionnaire",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "langc3f": {
+                    "title": "21a. Language used for C3F Social Behavior Observer Checklist",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "ftdc4fs": {
+                    "title": "22b. Submitted C4F Behavioral Inhibition Scale",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "ftdc4fr": {
+                    "title": "22c. If C4F not submitted, specify reason. (see *KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langc4f": {
+                    "title": "22a. Language used for C4F Behavioral Inhibition Scale",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "ftdc5fs": {
+                    "title": "23b. Submitted C5F Interpersonal Reactivity Index",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "ftdc5fr": {
+                    "title": "23c. If C5F not submitted, specify reason. (see *KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langc5f": {
+                    "title": "23a. Language used for  C5F Interpersonal Reactivity Index",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "ftdc6fs": {
+                    "title": "24b. Submitted C6F Revised Self-monitoring Scale",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "ftdc6fr": {
+                    "title": "24c. If C6F not submitted, specify reason. (see *KEY)",
+                    "type": "string",
+                    "enum": [
+                        "95 - Physical problem",
+                        "96 - Cognitive/behavior problem",
+                        "97 - Other problem",
+                        "98 - Verbal refusal",
+                        "99 - Unknown or inadequate information"
+                    ]
+                },
+                "langc6f": {
+                    "title": "24a. Language used for C6F Revised Self-monitoring Scale",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "lange2f": {
+                    "title": "25a. Language used for E2F Imaging Available",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                },
+                "lange3f": {
+                    "title": "26a. Language used for E3F Imaging in Diagnosis",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        },
+        "cls_form": {
+            "title": "CLS Form, questions display for Hispanic participants",
+            "type": "object",
+            "properties": {
+                "clssub": {
+                    "title": "27b. Submitted CLS Subject's Language History",
+                    "type": "string",
+                    "enum": [
+                        "1 Yes",
+                        "0 No"
+                    ]
+                },
+                "langcls": {
+                    "title": "27a. Language used for CLS Subject's Language History",
+                    "type": "string",
+                    "enum": [
+                        "1 English",
+                        "2 Spanish"
+                    ]
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "note_z1x_1.langa1": {
+            "title": "1a. Language used for A1 Subject Demographics"
+        },
+        "note_z1x_2.a2sub": {
+            "title": "2b. Submitted A2 Co-participant Demographics"
+        },
+        "note_z1x_2.a2not": {
+            "title": "2c. If A2 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_2.langa2": {
+            "title": "2a. Language used for A2 Co-Participant Demographics"
+        },
+        "note_z1x_3.a3sub": {
+            "title": "3b. Submitted A3 Subject Family History"
+        },
+        "note_z1x_3.a3not": {
+            "title": "3c. If A3 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_3.langa3": {
+            "title": "3a. Language used for A3 Subject Family History"
+        },
+        "note_z1x_4.a4sub": {
+            "title": "4b. Submitted A4 Subject Medications"
+        },
+        "note_z1x_4.a4not": {
+            "title": "4c. IfA4  not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_4.langa4": {
+            "title": "4a. Language used for A4 Subject Medications"
+        },
+        "note_z1x_5.langa5": {
+            "title": "5a. Language used for A5 Subject Health History"
+        },
+        "note_z1x_6.b1sub": {
+            "title": "6b. Submitted B1 EVALUATION FORM - Physical"
+        },
+        "note_z1x_6.b1not": {
+            "title": "6c. If B1 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_6.langb1": {
+            "title": "6a. Language used for B1 Evaluation Form: Physical"
+        },
+        "note_z1x_7.langb4": {
+            "title": "7b. Language used for B4 CDR<sup>®</sup> Plus NACC FTLD"
+        },
+        "note_z1x_8.b5sub": {
+            "title": "8b. Submitted B5 BEHAVIORAL ASSESSMENT NPI-Q"
+        },
+        "note_z1x_8.b5not": {
+            "title": "8c. If B5 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_8.langb5": {
+            "title": "8a. Language used for B5 Behaviorial Assessment: NPI-Q"
+        },
+        "note_z1x_9.b6sub": {
+            "title": "9b. Submitted B6 BEHAVIORAL ASSESSMENT - GDS"
+        },
+        "note_z1x_9.b6not": {
+            "title": "9c. If B6 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_9.langb6": {
+            "title": "9a. Language B6 Behavioral Assessment: GDS"
+        },
+        "note_z1x_10.b7sub": {
+            "title": "10b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS"
+        },
+        "note_z1x_10.b7not": {
+            "title": "10c. If B7 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_10.langb7": {
+            "title": "10a. Language used for B7 Functional Assessment: FAS"
+        },
+        "note_z1x_11.langb8": {
+            "title": "11a. Language used for B8 Neurological Examination Findings"
+        },
+        "note_z1x_12.langb9": {
+            "title": "12a. Language used for B9  Clinician Judgment of Symptoms"
+        },
+        "note_z1x_13.langc2": {
+            "title": "13a. Language used for C2 Neuropsychological Battery Scores"
+        },
+        "note_z1x_14.langd1": {
+            "title": "14a. Language used for D1 Clinician Diagnosis"
+        },
+        "note_z1x_15.langd2": {
+            "title": "15a. Language used for D2 Clinician-assessed Medical Conditions"
+        },
+        "ftld_module.ftda3afs": {
+            "title": "16b. Submitted A3A Record of Consent for Biologic Specimen Use"
+        },
+        "ftld_module.ftda3afr": {
+            "title": "16c. If A3a not submitted, specify reason. (see *KEY)"
+        },
+        "ftld_module.langa3a": {
+            "title": "16a. Language used for A3A Record of Consent for Biologic Specimen Use"
+        },
+        "ftld_module.langb3f": {
+            "title": "17a. Language used for B3f Supplemental UPDRS"
+        },
+        "ftld_module.langb9f": {
+            "title": "18a. Language used for B9F Clinical PPA and bvFTD Features"
+        },
+        "ftld_module.langc1f": {
+            "title": "19a. Language used for C1F Neuropsychological Battery summary Scores"
+        },
+        "ftld_module.langc2f": {
+            "title": "20a. Language used for C2F Social Norms Questionnaire"
+        },
+        "ftld_module.langc3f": {
+            "title": "21a. Language used for C3F Social Behavior Observer Checklist"
+        },
+        "ftld_module.ftdc4fs": {
+            "title": "22b. Submitted C4F Behavioral Inhibition Scale"
+        },
+        "ftld_module.ftdc4fr": {
+            "title": "22c. If C4F not submitted, specify reason. (see *KEY)"
+        },
+        "ftld_module.langc4f": {
+            "title": "22a. Language used for C4F Behavioral Inhibition Scale"
+        },
+        "ftld_module.ftdc5fs": {
+            "title": "23b. Submitted C5F Interpersonal Reactivity Index"
+        },
+        "ftld_module.ftdc5fr": {
+            "title": "23c. If C5F not submitted, specify reason. (see *KEY)"
+        },
+        "ftld_module.langc5f": {
+            "title": "23a. Language used for  C5F Interpersonal Reactivity Index"
+        },
+        "ftld_module.ftdc6fs": {
+            "title": "24b. Submitted C6F Revised Self-monitoring Scale"
+        },
+        "ftld_module.ftdc6fr": {
+            "title": "24c. If C6F not submitted, specify reason. (see *KEY)"
+        },
+        "ftld_module.langc6f": {
+            "title": "24a. Language used for C6F Revised Self-monitoring Scale"
+        },
+        "ftld_module.lange2f": {
+            "title": "25a. Language used for E2F Imaging Available"
+        },
+        "ftld_module.lange3f": {
+            "title": "26a. Language used for E3F Imaging in Diagnosis"
+        },
+        "cls_form.clssub": {
+            "title": "27b. Submitted CLS Subject's Language History"
+        },
+        "cls_form.langcls": {
+            "title": "27a. Language used for CLS Subject's Language History"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "note_z1x_1.langa1": {
+            "title": "1a. Language used for A1 Subject Demographics"
+        },
+        "note_z1x_2.a2sub": {
+            "title": "2b. Submitted A2 Co-participant Demographics"
+        },
+        "note_z1x_2.a2not": {
+            "title": "2c. If A2 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_2.langa2": {
+            "title": "2a. Language used for A2 Co-Participant Demographics"
+        },
+        "note_z1x_3.a3sub": {
+            "title": "3b. Submitted A3 Subject Family History"
+        },
+        "note_z1x_3.a3not": {
+            "title": "3c. If A3 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_3.langa3": {
+            "title": "3a. Language used for A3 Subject Family History"
+        },
+        "note_z1x_4.a4sub": {
+            "title": "4b. Submitted A4 Subject Medications"
+        },
+        "note_z1x_4.a4not": {
+            "title": "4c. IfA4  not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_4.langa4": {
+            "title": "4a. Language used for A4 Subject Medications"
+        },
+        "note_z1x_5.langa5": {
+            "title": "5a. Language used for A5 Subject Health History"
+        },
+        "note_z1x_6.b1sub": {
+            "title": "6b. Submitted B1 EVALUATION FORM - Physical"
+        },
+        "note_z1x_6.b1not": {
+            "title": "6c. If B1 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_6.langb1": {
+            "title": "6a. Language used for B1 Evaluation Form: Physical"
+        },
+        "note_z1x_7.langb4": {
+            "title": "7b. Language used for B4 CDR<sup>®</sup> Plus NACC FTLD"
+        },
+        "note_z1x_8.b5sub": {
+            "title": "8b. Submitted B5 BEHAVIORAL ASSESSMENT NPI-Q"
+        },
+        "note_z1x_8.b5not": {
+            "title": "8c. If B5 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_8.langb5": {
+            "title": "8a. Language used for B5 Behaviorial Assessment: NPI-Q"
+        },
+        "note_z1x_9.b6sub": {
+            "title": "9b. Submitted B6 BEHAVIORAL ASSESSMENT - GDS"
+        },
+        "note_z1x_9.b6not": {
+            "title": "9c. If B6 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_9.langb6": {
+            "title": "9a. Language B6 Behavioral Assessment: GDS"
+        },
+        "note_z1x_10.b7sub": {
+            "title": "10b. Submitted B7 FUNCTIONAL ASSESSMENT - FAS"
+        },
+        "note_z1x_10.b7not": {
+            "title": "10c. If B7 not submitted, specify reason. (see KEY)"
+        },
+        "note_z1x_10.langb7": {
+            "title": "10a. Language used for B7 Functional Assessment: FAS"
+        },
+        "note_z1x_11.langb8": {
+            "title": "11a. Language used for B8 Neurological Examination Findings"
+        },
+        "note_z1x_12.langb9": {
+            "title": "12a. Language used for B9  Clinician Judgment of Symptoms"
+        },
+        "note_z1x_13.langc2": {
+            "title": "13a. Language used for C2 Neuropsychological Battery Scores"
+        },
+        "note_z1x_14.langd1": {
+            "title": "14a. Language used for D1 Clinician Diagnosis"
+        },
+        "note_z1x_15.langd2": {
+            "title": "15a. Language used for D2 Clinician-assessed Medical Conditions"
+        },
+        "ftld_module.ftda3afs": {
+            "title": "16b. Submitted A3A Record of Consent for Biologic Specimen Use"
+        },
+        "ftld_module.ftda3afr": {
+            "title": "16c. If A3a not submitted, specify reason. (see *KEY)"
+        },
+        "ftld_module.langa3a": {
+            "title": "16a. Language used for A3A Record of Consent for Biologic Specimen Use"
+        },
+        "ftld_module.langb3f": {
+            "title": "17a. Language used for B3f Supplemental UPDRS"
+        },
+        "ftld_module.langb9f": {
+            "title": "18a. Language used for B9F Clinical PPA and bvFTD Features"
+        },
+        "ftld_module.langc1f": {
+            "title": "19a. Language used for C1F Neuropsychological Battery summary Scores"
+        },
+        "ftld_module.langc2f": {
+            "title": "20a. Language used for C2F Social Norms Questionnaire"
+        },
+        "ftld_module.langc3f": {
+            "title": "21a. Language used for C3F Social Behavior Observer Checklist"
+        },
+        "ftld_module.ftdc4fs": {
+            "title": "22b. Submitted C4F Behavioral Inhibition Scale"
+        },
+        "ftld_module.ftdc4fr": {
+            "title": "22c. If C4F not submitted, specify reason. (see *KEY)"
+        },
+        "ftld_module.langc4f": {
+            "title": "22a. Language used for C4F Behavioral Inhibition Scale"
+        },
+        "ftld_module.ftdc5fs": {
+            "title": "23b. Submitted C5F Interpersonal Reactivity Index"
+        },
+        "ftld_module.ftdc5fr": {
+            "title": "23c. If C5F not submitted, specify reason. (see *KEY)"
+        },
+        "ftld_module.langc5f": {
+            "title": "23a. Language used for  C5F Interpersonal Reactivity Index"
+        },
+        "ftld_module.ftdc6fs": {
+            "title": "24b. Submitted C6F Revised Self-monitoring Scale"
+        },
+        "ftld_module.ftdc6fr": {
+            "title": "24c. If C6F not submitted, specify reason. (see *KEY)"
+        },
+        "ftld_module.langc6f": {
+            "title": "24a. Language used for C6F Revised Self-monitoring Scale"
+        },
+        "ftld_module.lange2f": {
+            "title": "25a. Language used for E2F Imaging Available"
+        },
+        "ftld_module.lange3f": {
+            "title": "26a. Language used for E3F Imaging in Diagnosis"
+        },
+        "cls_form.clssub": {
+            "title": "27b. Submitted CLS Subject's Language History"
+        },
+        "cls_form.langcls": {
+            "title": "27a. Language used for CLS Subject's Language History"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "note_z1x_1.langa1": 1.0,
+        "note_z1x_2.a2sub": 1.0,
+        "note_z1x_2.a2not": 1.0,
+        "note_z1x_2.langa2": 1.0,
+        "note_z1x_3.a3sub": 1.0,
+        "note_z1x_3.a3not": 1.0,
+        "note_z1x_3.langa3": 1.0,
+        "note_z1x_4.a4sub": 1.0,
+        "note_z1x_4.a4not": 1.0,
+        "note_z1x_4.langa4": 1.0,
+        "note_z1x_5.langa5": 1.0,
+        "note_z1x_6.b1sub": 1.0,
+        "note_z1x_6.b1not": 1.0,
+        "note_z1x_6.langb1": 1.0,
+        "note_z1x_7.langb4": 1.0,
+        "note_z1x_8.b5sub": 1.0,
+        "note_z1x_8.b5not": 1.0,
+        "note_z1x_8.langb5": 1.0,
+        "note_z1x_9.b6sub": 1.0,
+        "note_z1x_9.b6not": 1.0,
+        "note_z1x_9.langb6": 1.0,
+        "note_z1x_10.b7sub": 1.0,
+        "note_z1x_10.b7not": 1.0,
+        "note_z1x_10.langb7": 1.0,
+        "note_z1x_11.langb8": 1.0,
+        "note_z1x_12.langb9": 1.0,
+        "note_z1x_13.langc2": 1.0,
+        "note_z1x_14.langd1": 1.0,
+        "note_z1x_15.langd2": 1.0,
+        "ftld_module.ftda3afs": 1.0,
+        "ftld_module.ftda3afr": 1.0,
+        "ftld_module.langa3a": 1.0,
+        "ftld_module.langb3f": 1.0,
+        "ftld_module.langb9f": 1.0,
+        "ftld_module.langc1f": 1.0,
+        "ftld_module.langc2f": 1.0,
+        "ftld_module.langc3f": 1.0,
+        "ftld_module.ftdc4fs": 1.0,
+        "ftld_module.ftdc4fr": 1.0,
+        "ftld_module.langc4f": 1.0,
+        "ftld_module.ftdc5fs": 1.0,
+        "ftld_module.ftdc5fr": 1.0,
+        "ftld_module.langc5f": 1.0,
+        "ftld_module.ftdc6fs": 1.0,
+        "ftld_module.ftdc6fr": 1.0,
+        "ftld_module.langc6f": 1.0,
+        "ftld_module.lange2f": 1.0,
+        "ftld_module.lange3f": 1.0,
+        "cls_form.clssub": 1.0,
+        "cls_form.langcls": 1.0
+    },
+    "changelog": "/profiles/changelogs/ivp_z1xv3.md"
+}
