@@ -1,0 +1,573 @@
+{
+    "title": "NACC Uniform Data Set (UDS) - TELEPHONE FOLLOW UPFORM D2: Clinician-assessed Medical Conditions",
+    "description": "INSTRUCTIONS: This form is to be completed by a physician, physician's assistant, nurse practitioner, or other qualified practitioner. For additional clarification and examples, see UDS Coding Guidebook for Telephone Follow-Up Visit Packet, Form D2. Link to NACC Coding Guidebook.",
+    "id": "/profiles/uds_tvp_d2.json",
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "identifyingProperties": [
+        "uuid"
+    ],
+    "required": [
+        "tele_medical_conditions"
+    ],
+    "additionalProperties": false,
+    "mixinProperties": [
+        {
+            "$ref": "mixins.json#/schema_version"
+        },
+        {
+            "$ref": "mixins.json#/submitted"
+        },
+        {
+            "$ref": "mixins.json#/standard_status"
+        },
+        {
+            "$ref": "mixins.json#/header"
+        },
+        {
+            "$ref": "mixins.json#/examinier_initials"
+        },
+        {
+            "$ref": "mixins.json#/form_status"
+        },
+        {
+            "$ref": "mixins.json#/uuid"
+        }
+    ],
+    "type": "object",
+    "properties": {
+        "schema_version": {
+            "default": "1"
+        },
+        "tele_medical_conditions": {
+            "title": "Medical conditions and procedures",
+            "description": "The following questions should be answered based on review of all available information, including new diagnoses made during the current visit, previous medical records, procedures, laboratory tests, and the clinical exam.",
+            "type": "object",
+            "properties": {
+                "tele_cancer": {
+                    "title": "1. Cancer (excluding non-melanoma skin cancer), primary or metastatic",
+                    "type": "string",
+                    "enum": [
+                        "0 No (SKIP TO QUESTION 2)",
+                        "1 Yes, primary/non-metastatic",
+                        "2 Yes, metastatic",
+                        "8 Not assessed (SKIP TO QUESTION 2)"
+                    ]
+                },
+                "tele_cancsite": {
+                    "title": "1a. If yes, specify the primary site:",
+                    "type": "string"
+                },
+                "tele_cond_present": {
+                    "title": "If any of the conditions below are present (even if successfully treated), please check Yes.",
+                    "type": "object",
+                    "properties": {
+                        "tele_diabet": {
+                            "title": "2. Diabetes",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes, Type I",
+                                "2 Yes, Type II",
+                                "3 Yes, other type(diabetes insipidus, latent autoimmune diabetes/type 1.5, gestational diabetes)",
+                                "9 Not assessed or unknown"
+                            ]
+                        },
+                        "tele_myoinf": {
+                            "title": "3. Myocardial infarct",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_conghrt": {
+                            "title": "4. Congestive heart failure",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_afibrill": {
+                            "title": "5. Atrial fibrillation",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_hypert": {
+                            "title": "6. Hypertension",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_angina": {
+                            "title": "7. Angina",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_hypchol": {
+                            "title": "8. Hypercholesterolemia",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_vb12def": {
+                            "title": "9. B12 deficiency",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_thydis": {
+                            "title": "10. Thyroid disease",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_arth": {
+                            "title": "11. Arthritis If No or Not assessed, SKIP TO QUESTION 12",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_artype": {
+                            "title": "11a. If yes, what type?",
+                            "type": "string",
+                            "enum": [
+                                "1 Rheumatoid",
+                                "2 Osteoarthritis",
+                                "3 Other (SPECIFY BELOW):",
+                                "9 Unknown"
+                            ]
+                        },
+                        "tele_artypex": {
+                            "title": "11a1.  If other type of arthritis SPECIFY:",
+                            "type": "string"
+                        },
+                        "tele_note_d2_3": {
+                            "title": "11b.  If yes, regions affected (check at least one):",
+                            "type": "object",
+                            "properties": {
+                                "tele_artupex": {
+                                    "title": "11b1.  Arthritis region affected",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Upper extremity"
+                                    ]
+                                },
+                                "tele_artloex": {
+                                    "title": "11b2.  Arthritis region affected",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Lower extremity"
+                                    ]
+                                },
+                                "tele_artspin": {
+                                    "title": "11b3.  Arthritis region affected",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Spine"
+                                    ]
+                                },
+                                "tele_artunkn": {
+                                    "title": "11b4.  Arthritis region affected",
+                                    "type": "string",
+                                    "enum": [
+                                        "1 Unknown"
+                                    ]
+                                }
+                            }
+                        },
+                        "tele_urineinc": {
+                            "title": "12. Incontinence - urinary",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_bowlinc": {
+                            "title": "13. Incontinence - bowel",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_sleepap": {
+                            "title": "14. Sleep apnea",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_remdis": {
+                            "title": "15. REM sleep behavior disorder (RBD)",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_hyposom": {
+                            "title": "16. Hyposomnia/insomnia",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_sleepoth": {
+                            "title": "17. Other sleep disorder (SPECIFY BELOW):",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_sleepotx": {
+                            "title": "17a. Specify other sleep disorder:",
+                            "type": "string"
+                        },
+                        "tele_angiocp": {
+                            "title": "18. Carotid procedure: angioplasty, endarterectomy, or stent",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_angiopci": {
+                            "title": "19. Percutaneous coronary intervention: angioplasty and/or stent",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_pacemake": {
+                            "title": "20. Procedure: pacemaker and/or defibrillator",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_hvalve": {
+                            "title": "21. Procedure: heart valve replacement or repair",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_antienc": {
+                            "title": "22. Antibody-mediated encephalopathy",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes",
+                                "8 Not assessed"
+                            ]
+                        },
+                        "tele_antiencx": {
+                            "title": "22a . Specify antibody-mediated encephalopathy",
+                            "type": "string"
+                        },
+                        "tele_othcond": {
+                            "title": "23. Other medical conditions or procedures not listed above (IF YES, SPECIFY BELOW):",
+                            "type": "string",
+                            "enum": [
+                                "0 No",
+                                "1 Yes"
+                            ]
+                        },
+                        "tele_othcondx": {
+                            "title": "23a. If other medical conditions SPECIFY:",
+                            "type": "string"
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "facets": {
+        "status": {
+            "title": "Status"
+        },
+        "tele_medical_conditions.tele_cancer": {
+            "title": "1. Cancer (excluding non-melanoma skin cancer), primary or metastatic"
+        },
+        "tele_medical_conditions.tele_cancsite": {
+            "title": "1a. If yes, specify the primary site:"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_diabet": {
+            "title": "2. Diabetes"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_myoinf": {
+            "title": "3. Myocardial infarct"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_conghrt": {
+            "title": "4. Congestive heart failure"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_afibrill": {
+            "title": "5. Atrial fibrillation"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_hypert": {
+            "title": "6. Hypertension"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_angina": {
+            "title": "7. Angina"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_hypchol": {
+            "title": "8. Hypercholesterolemia"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_vb12def": {
+            "title": "9. B12 deficiency"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_thydis": {
+            "title": "10. Thyroid disease"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_arth": {
+            "title": "11. Arthritis If No or Not assessed, SKIP TO QUESTION 12"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_artype": {
+            "title": "11a. If yes, what type?"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_artypex": {
+            "title": "11a1.  If other type of arthritis SPECIFY:"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artupex": {
+            "title": "11b1.  Arthritis region affected"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artloex": {
+            "title": "11b2.  Arthritis region affected"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artspin": {
+            "title": "11b3.  Arthritis region affected"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artunkn": {
+            "title": "11b4.  Arthritis region affected"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_urineinc": {
+            "title": "12. Incontinence - urinary"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_bowlinc": {
+            "title": "13. Incontinence - bowel"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_sleepap": {
+            "title": "14. Sleep apnea"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_remdis": {
+            "title": "15. REM sleep behavior disorder (RBD)"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_hyposom": {
+            "title": "16. Hyposomnia/insomnia"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_sleepoth": {
+            "title": "17. Other sleep disorder (SPECIFY BELOW):"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_sleepotx": {
+            "title": "17a. Specify other sleep disorder:"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_angiocp": {
+            "title": "18. Carotid procedure: angioplasty, endarterectomy, or stent"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_angiopci": {
+            "title": "19. Percutaneous coronary intervention: angioplasty and/or stent"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_pacemake": {
+            "title": "20. Procedure: pacemaker and/or defibrillator"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_hvalve": {
+            "title": "21. Procedure: heart valve replacement or repair"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_antienc": {
+            "title": "22. Antibody-mediated encephalopathy"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_antiencx": {
+            "title": "22a . Specify antibody-mediated encephalopathy"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_othcond": {
+            "title": "23. Other medical conditions or procedures not listed above (IF YES, SPECIFY BELOW):"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_othcondx": {
+            "title": "23a. If other medical conditions SPECIFY:"
+        }
+    },
+    "columns": {
+        "status": {
+            "title": "Status"
+        },
+        "tele_medical_conditions.tele_cancer": {
+            "title": "1. Cancer (excluding non-melanoma skin cancer), primary or metastatic"
+        },
+        "tele_medical_conditions.tele_cancsite": {
+            "title": "1a. If yes, specify the primary site:"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_diabet": {
+            "title": "2. Diabetes"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_myoinf": {
+            "title": "3. Myocardial infarct"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_conghrt": {
+            "title": "4. Congestive heart failure"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_afibrill": {
+            "title": "5. Atrial fibrillation"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_hypert": {
+            "title": "6. Hypertension"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_angina": {
+            "title": "7. Angina"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_hypchol": {
+            "title": "8. Hypercholesterolemia"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_vb12def": {
+            "title": "9. B12 deficiency"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_thydis": {
+            "title": "10. Thyroid disease"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_arth": {
+            "title": "11. Arthritis If No or Not assessed, SKIP TO QUESTION 12"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_artype": {
+            "title": "11a. If yes, what type?"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_artypex": {
+            "title": "11a1.  If other type of arthritis SPECIFY:"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artupex": {
+            "title": "11b1.  Arthritis region affected"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artloex": {
+            "title": "11b2.  Arthritis region affected"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artspin": {
+            "title": "11b3.  Arthritis region affected"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artunkn": {
+            "title": "11b4.  Arthritis region affected"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_urineinc": {
+            "title": "12. Incontinence - urinary"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_bowlinc": {
+            "title": "13. Incontinence - bowel"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_sleepap": {
+            "title": "14. Sleep apnea"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_remdis": {
+            "title": "15. REM sleep behavior disorder (RBD)"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_hyposom": {
+            "title": "16. Hyposomnia/insomnia"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_sleepoth": {
+            "title": "17. Other sleep disorder (SPECIFY BELOW):"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_sleepotx": {
+            "title": "17a. Specify other sleep disorder:"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_angiocp": {
+            "title": "18. Carotid procedure: angioplasty, endarterectomy, or stent"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_angiopci": {
+            "title": "19. Percutaneous coronary intervention: angioplasty and/or stent"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_pacemake": {
+            "title": "20. Procedure: pacemaker and/or defibrillator"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_hvalve": {
+            "title": "21. Procedure: heart valve replacement or repair"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_antienc": {
+            "title": "22. Antibody-mediated encephalopathy"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_antiencx": {
+            "title": "22a . Specify antibody-mediated encephalopathy"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_othcond": {
+            "title": "23. Other medical conditions or procedures not listed above (IF YES, SPECIFY BELOW):"
+        },
+        "tele_medical_conditions.tele_cond_present.tele_othcondx": {
+            "title": "23a. If other medical conditions SPECIFY:"
+        }
+    },
+    "boost_values": {
+        "patient": 1.0,
+        "tele_medical_conditions.tele_cancer": 1.0,
+        "tele_medical_conditions.tele_cancsite": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_diabet": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_myoinf": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_conghrt": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_afibrill": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_hypert": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_angina": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_hypchol": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_vb12def": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_thydis": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_arth": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_artype": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_artypex": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artupex": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artloex": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artspin": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_note_d2_3.tele_artunkn": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_urineinc": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_bowlinc": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_sleepap": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_remdis": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_hyposom": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_sleepoth": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_sleepotx": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_angiocp": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_angiopci": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_pacemake": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_hvalve": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_antienc": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_antiencx": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_othcond": 1.0,
+        "tele_medical_conditions.tele_cond_present.tele_othcondx": 1.0
+    },
+    "changelog": "/profiles/changelogs/tvp_d2.md"
+}
