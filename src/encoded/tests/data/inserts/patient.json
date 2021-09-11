@@ -1,206 +1,206 @@
 [{
-    "_test": "test patient",
-    "first": "Test-Test",
-    "mi": "B",
-    "last": "Test",
-    "examiner": "DT",
-    "patiddate": "2005-09-09",
-    "category":"1 ADC Core", 
-    "site":"1 UTSW",
-    "gender":  "1 Male",
-    "dob": "1928-09-09",
-     "hand": "1 Right", 
-    "educat": "5",
-    "excmenret": "0 No", 
-    "occupat": "tester",
-    "preflang":  "1 English",
-    "spanish": "1 Yes", 
-    "racial": "1 Alaskan Native",
-    "aitribe": "1 Cherokee",
-    "contact_info":{
-      "p_info": {
-        "p_addr1": "TEST STREET",
-        "p_city": "DALLAS",
-        "p_state": "TX TX",
-        "p_zip": "75235",
-        "p_phone": "",
-        "p_phoneext": "214-346-7878"
-    },
-    "c_cont1": {
-        "c_phone": "214-346-7878"
-    }
-    },
-    
-    "legal_represent": {
-        "lar_hmphone": "123-456-7890",
-        "laremail": "callme@hotmail.com"
-    },
-    "status": "released",
-    "uuid": "e7eb8999-ea7d-4e52-b70f-bd14dee9b19f",
-    "accession": "000000"
+  "_test": "test patient",
+  "first": "Test-Test",
+  "mi": "B",
+  "last": "Test",
+  "examiner": "DT",
+  "patiddate": "2005-09-09",
+  "category":"1 ADC Core", 
+  "site":"1 UTSW",
+  "gender":  "1 Male",
+  "dob": "1928-09-09",
+   "hand": "1 Right", 
+  "educat": "5",
+  "excmenret": "0 No", 
+  "occupat": "tester",
+  "preflang":  "1 English",
+  "spanish": "1 Yes", 
+  "racial": "1 Alaskan Native",
+  "aitribe": "1 Cherokee",
+  "contact_info":{
+    "p_info": {
+      "p_addr1": "TEST STREET",
+      "p_city": "DALLAS",
+      "p_state": "TX TX",
+      "p_zip": "75235",
+      "p_phone": "",
+      "p_phoneext": "214-346-7878"
   },
-  {
-    "_test": "test patient",
-    "first": "Test-Test",
-    "mi": "B",
-    "last": "Test",
-    "examiner": "DT",
-    "patiddate": "2005-09-09",
-    "category":"1 ADC Core", 
-    "site":"1 UTSW",
-    "gender":  "1 Male",
-    "dob": "1928-09-09",
-     "hand": "1 Right", 
-    "educat": "5",
-    "excmenret": "0 No", 
-    "occupat": "tester",
-    "preflang":  "1 English",
-    "spanish": "1 Yes", 
-    "racial": "1 Alaskan Native",
-    "aitribe": "1 Cherokee",
-    "contact_info":{
-      "p_info": {
-        "p_addr1": "TEST STREET",
-        "p_city": "DALLAS",
-        "p_state": "TX TX",
-        "p_zip": "75235",
-        "p_phone": "",
-        "p_phoneext": "214-346-7878"
-    },
-    "c_cont1": {
-        "c_phone": "214-346-7878"
-    }
-    },
-    
-    "legal_represent": {
-        "lar_hmphone": "123-456-7890",
-        "laremail": "callme@hotmail.com"
-    },
-    "status": "released",
-    "uuid": "77aa560a-ea61-4e07-b31f-67bb19f5e6c1",
-    "accession": "000001"
-  },
-  {
-    "_test": "test patient",
-    "first": "Test-Test",
-    "mi": "B",
-    "last": "Test",
-    "examiner": "DT",
-    "patiddate": "2005-09-09",
-    "category":"1 ADC Core", 
-    "site":"1 UTSW",
-    "gender":  "1 Male",
-    "dob": "1928-09-09",
-     "hand": "1 Right", 
-    "educat": "5",
-    "excmenret": "0 No", 
-    "occupat": "tester",
-    "preflang":  "1 English",
-    "spanish": "1 Yes", 
-    "racial": "1 Alaskan Native",
-    "aitribe": "1 Cherokee",
-    "contact_info":{
-      "p_info": {
-        "p_addr1": "TEST STREET",
-        "p_city": "DALLAS",
-        "p_state": "TX TX",
-        "p_zip": "75235",
-        "p_phone": "",
-        "p_phoneext": "214-346-7878"
-    },
-    "c_cont1": {
-        "c_phone": "214-346-7878"
-    }
-    },
-    
-    "legal_represent": {
-        "lar_hmphone": "123-456-7890",
-        "laremail": "callme@hotmail.com"
-    },
-    "status": "released",
-    "uuid": "85fc975d-9837-484d-b452-964b31fed4ab",
-    "accession": "000015"
-  },
-  {
-    "_test": "test patient",
-    "first": "Test-Test",
-    "mi": "B",
-    "last": "Test",
-    "examiner": "DT",
-    "patiddate": "2005-09-09",
-    "category":"1 ADC Core", 
-    "site":"1 UTSW",
-    "gender":  "1 Male",
-    "dob": "1928-09-09",
-     "hand": "1 Right", 
-    "educat": "5",
-    "excmenret": "0 No", 
-    "occupat": "tester",
-    "preflang":  "1 English",
-    "spanish": "1 Yes", 
-    "racial": "1 Alaskan Native",
-    "aitribe": "1 Cherokee",
-    "contact_info":{
-      "p_info": {
-        "p_addr1": "TEST STREET",
-        "p_city": "DALLAS",
-        "p_state": "TX TX",
-        "p_zip": "75235",
-        "p_phone": "",
-        "p_phoneext": "214-346-7878"
-    },
-    "c_cont1": {
-        "c_phone": "214-346-7878"
-    }
-    },
-    
-    "legal_represent": {
-        "lar_hmphone": "123-456-7890",
-        "laremail": "callme@hotmail.com"
-    },
-    "status": "released",
-    "uuid": "d36b9731-d442-4e06-ad33-dbc0c129bbe3",
-    "accession": "000010"
-  },
-  {
-    "_test": "test patient",
-    "first": "Test-Test",
-    "mi": "B",
-    "last": "Test",
-    "examiner": "DT",
-    "patiddate": "2005-09-09",
-    "category":"1 ADC Core", 
-    "site":"1 UTSW",
-    "gender":  "1 Male",
-    "dob": "1928-09-09",
-     "hand": "1 Right", 
-    "educat": "5",
-    "excmenret": "0 No", 
-    "occupat": "tester",
-    "preflang":  "1 English",
-    "spanish": "1 Yes", 
-    "racial": "1 Alaskan Native",
-    "aitribe": "1 Cherokee",
-    "contact_info":{
-      "p_info": {
-        "p_addr1": "TEST STREET",
-        "p_city": "DALLAS",
-        "p_state": "TX TX",
-        "p_zip": "75235",
-        "p_phone": "",
-        "p_phoneext": "214-346-7878"
-    },
-    "c_cont1": {
-        "c_phone": "214-346-7878"
-    }
-    },
-    
-    "legal_represent": {
-        "lar_hmphone": "123-456-7890",
-        "laremail": "callme@hotmail.com"
-    },
-    "status": "released",
-    "uuid": "3b153171-ba41-45ce-bf02-11b210104f02",
-    "accession": "000013"
+  "c_cont1": {
+      "c_phone": "214-346-7878"
   }
-  ]
+  },
+  
+  "legal_represent": {
+      "lar_hmphone": "123-456-7890",
+      "laremail": "callme@hotmail.com"
+  },
+  "status": "released",
+  "uuid": "e7eb8999-ea7d-4e52-b70f-bd14dee9b19f",
+  "accession": "000000"
+},
+{
+  "_test": "test patient",
+  "first": "Test-Test",
+  "mi": "B",
+  "last": "Test",
+  "examiner": "DT",
+  "patiddate": "2005-09-09",
+  "category":"1 ADC Core", 
+  "site":"1 UTSW",
+  "gender":  "1 Male",
+  "dob": "1928-09-09",
+   "hand": "1 Right", 
+  "educat": "5",
+  "excmenret": "0 No", 
+  "occupat": "tester",
+  "preflang":  "1 English",
+  "spanish": "1 Yes", 
+  "racial": "1 Alaskan Native",
+  "aitribe": "1 Cherokee",
+  "contact_info":{
+    "p_info": {
+      "p_addr1": "TEST STREET",
+      "p_city": "DALLAS",
+      "p_state": "TX TX",
+      "p_zip": "75235",
+      "p_phone": "",
+      "p_phoneext": "214-346-7878"
+  },
+  "c_cont1": {
+      "c_phone": "214-346-7878"
+  }
+  },
+  
+  "legal_represent": {
+      "lar_hmphone": "123-456-7890",
+      "laremail": "callme@hotmail.com"
+  },
+  "status": "released",
+  "uuid": "77aa560a-ea61-4e07-b31f-67bb19f5e6c1",
+  "accession": "000001"
+},
+{
+  "_test": "test patient",
+  "first": "Test-Test",
+  "mi": "B",
+  "last": "Test",
+  "examiner": "DT",
+  "patiddate": "2005-09-09",
+  "category":"1 ADC Core", 
+  "site":"1 UTSW",
+  "gender":  "1 Male",
+  "dob": "1928-09-09",
+   "hand": "1 Right", 
+  "educat": "5",
+  "excmenret": "0 No", 
+  "occupat": "tester",
+  "preflang":  "1 English",
+  "spanish": "1 Yes", 
+  "racial": "1 Alaskan Native",
+  "aitribe": "1 Cherokee",
+  "contact_info":{
+    "p_info": {
+      "p_addr1": "TEST STREET",
+      "p_city": "DALLAS",
+      "p_state": "TX TX",
+      "p_zip": "75235",
+      "p_phone": "",
+      "p_phoneext": "214-346-7878"
+  },
+  "c_cont1": {
+      "c_phone": "214-346-7878"
+  }
+  },
+  
+  "legal_represent": {
+      "lar_hmphone": "123-456-7890",
+      "laremail": "callme@hotmail.com"
+  },
+  "status": "released",
+  "uuid": "85fc975d-9837-484d-b452-964b31fed4ab",
+  "accession": "000015"
+},
+{
+  "_test": "test patient",
+  "first": "Test-Test",
+  "mi": "B",
+  "last": "Test",
+  "examiner": "DT",
+  "patiddate": "2005-09-09",
+  "category":"1 ADC Core", 
+  "site":"1 UTSW",
+  "gender":  "1 Male",
+  "dob": "1928-09-09",
+   "hand": "1 Right", 
+  "educat": "5",
+  "excmenret": "0 No", 
+  "occupat": "tester",
+  "preflang":  "1 English",
+  "spanish": "1 Yes", 
+  "racial": "1 Alaskan Native",
+  "aitribe": "1 Cherokee",
+  "contact_info":{
+    "p_info": {
+      "p_addr1": "TEST STREET",
+      "p_city": "DALLAS",
+      "p_state": "TX TX",
+      "p_zip": "75235",
+      "p_phone": "",
+      "p_phoneext": "214-346-7878"
+  },
+  "c_cont1": {
+      "c_phone": "214-346-7878"
+  }
+  },
+  
+  "legal_represent": {
+      "lar_hmphone": "123-456-7890",
+      "laremail": "callme@hotmail.com"
+  },
+  "status": "released",
+  "uuid": "d36b9731-d442-4e06-ad33-dbc0c129bbe3",
+  "accession": "000010"
+},
+{
+  "_test": "test patient",
+  "first": "Test-Test",
+  "mi": "B",
+  "last": "Test",
+  "examiner": "DT",
+  "patiddate": "2005-09-09",
+  "category":"1 ADC Core", 
+  "site":"1 UTSW",
+  "gender":  "1 Male",
+  "dob": "1928-09-09",
+   "hand": "1 Right", 
+  "educat": "5",
+  "excmenret": "0 No", 
+  "occupat": "tester",
+  "preflang":  "1 English",
+  "spanish": "1 Yes", 
+  "racial": "1 Alaskan Native",
+  "aitribe": "1 Cherokee",
+  "contact_info":{
+    "p_info": {
+      "p_addr1": "TEST STREET",
+      "p_city": "DALLAS",
+      "p_state": "TX TX",
+      "p_zip": "75235",
+      "p_phone": "",
+      "p_phoneext": "214-346-7878"
+  },
+  "c_cont1": {
+      "c_phone": "214-346-7878"
+  }
+  },
+  
+  "legal_represent": {
+      "lar_hmphone": "123-456-7890",
+      "laremail": "callme@hotmail.com"
+  },
+  "status": "released",
+  "uuid": "3b153171-ba41-45ce-bf02-11b210104f02",
+  "accession": "000013"
+}
+]

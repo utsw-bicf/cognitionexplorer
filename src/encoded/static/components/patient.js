@@ -103,10 +103,10 @@ class Patient extends React.Component {
                 <dt>Status</dt>
                 <dd><Status item={context} inline /></dd>
               </div>
-              {context.pic &&<div data-test="pic">
+              {/* {context.pic &&<div data-test="pic">
                 <dt>Patient Initial Category</dt>
                 <dd>{valueOnly(context.pic)}</dd>
-              </div>}
+              </div>} */}
               {context.gender && <div data-test="gender">
                 <dt>Gender</dt>
                 <dd>{valueOnly(context.gender)}</dd>
@@ -115,26 +115,26 @@ class Patient extends React.Component {
                 <dt>Race</dt>
                 <dd>{valueOnly(context.racial)}</dd>
               </div>}
-              { context.ethn && <div data-test="ethn">
+              {/* { context.ethn && <div data-test="ethn">
                 <dt>Spanish, Hispanic or Latino</dt>
                 <dd>{valueOnly(context.ethn)}</dd>
-              </div>}
-              { context.tribe && <div data-test="tribe">
+              </div>} */}
+              {/* { context.tribe && <div data-test="tribe">
                 <dt>Tribe</dt>
                 <dd>{valueOnly(context.tribe)}</dd>
-              </div>}
-              { context.edu && <div data-test="edu">
+              </div>} */}
+              {/* { context.edu && <div data-test="edu">
                 <dt>Years of education</dt>
                 <dd>{context.edu}</dd>
-              </div>}
-              { context.retard && <div data-test="retard">
+              </div>} */}
+              {/* { context.retard && <div data-test="retard">
                 <dt>Exclude Mental Retardation</dt>
                 <dd>{valueOnly(context.retard)}</dd>
-              </div>}
-              {context.occ && <div data-test="occ">
+              </div>} */}
+              {/* {context.occ && <div data-test="occ">
                 <dt>Occupation</dt>
                 <dd>{valueOnly(context.occ)}</dd>
-              </div>}
+              </div>} */}
 
             </dl>
           </PanelBody>
