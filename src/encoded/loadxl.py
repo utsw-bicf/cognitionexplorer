@@ -82,7 +82,6 @@ ORDER = [
     'ivp_d2v2',
     'ivp_e1v2',#pass
     'ivp_z1v2',#pass
-    'ivp_z1xv2',
 
     'fvp_a1v2',#pass
     'fvp_a2v2',#pass

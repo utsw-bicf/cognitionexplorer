@@ -45,6 +45,7 @@ class Ivp_a1v3(Item):
     schema = load_schema("encoded:schemas/ivp_a1v3.json")
     embedded = [
     ]
+    
     STATUS_ACL = {
         'released': [(Allow, 'group.verification', ['view_details'])]
     }
