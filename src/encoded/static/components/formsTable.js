@@ -130,6 +130,8 @@ class FormsTable extends React.Component {
             m1_id: "",
             local_form_name: "",
             local_form_id: "",
+            concussion_history_id:"",
+            concussion_history_name:"",
             moca_name: "",
             moca_id: "",
             updrs_name: "",
@@ -361,8 +363,8 @@ class FormsTable extends React.Component {
             visitObj.z1xv3_name = "ivp_z1xv3"
         }
         if (data.concussion_history.length > 0) {
-            visitObj.local_form_id = data.concussion_history[0]['@id']
-            visitObj.local_form_name = "concussion_history"
+            visitObj.concussion_history_id = data.concussion_history[0]['@id']
+            visitObj.concussion_history_name = "concussion_history"
         }
         if (data.updrs.length > 0) {
             visitObj.updrs_id = data.updrs[0]['@id']
@@ -1142,20 +1144,13 @@ class FormsTable extends React.Component {
                 title: 'Form M1',
                 display: form => <a href={form.m1_id}>{form.m1_name}</a>,
             },
-<<<<<<< HEAD
-          
+           
             local_form_id: {
-=======
-            t1_id: {
-                title: 'Form T1',
-                display: form => <a href={form.t1_id}>{form.t1_name}</a>,
-            },
-            moca_id: {
 
->>>>>>> c1c535b1f... add moca schema, connnet with patients, put on show page
                 title: 'Local Forms',
                 display: form => <div>{form.moca_id && <span><a href={form.moca_id}>{form.moca_name}</a> </span>}
                     {form.updrs_id && <span><a href={form.updrs_id}>{form.updrs_name}</a> </span>}
+                    {form.concussion_history_id && <span><a href={form.concussion_history_id}>{form.concussion_history_name}</a> </span>}
                     {form.visit_contact_id && <span><a href={form.visit_contact_id}>{form.visit_contact_name}</a> </span>}
                     {form.physical_exam_id && <span><a href={form.physical_exam_id}>{form.physical_exam_name}</a> </span>}
                 </div>,
