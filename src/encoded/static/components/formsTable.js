@@ -943,9 +943,9 @@ class FormsTable extends React.Component {
         }
         for (let i = 0; i < data.concussion_history_follow_up.length; i++) {
             let index = followUpVisitTimes.indexOf(data.concussion_history_follow_up[i]["visdate"]) + 1;
-            // console.log(index)
-            forms[index].local_form_id = data.concussion_history_follow_up[i]['@id']
-            forms[index].local_form_name = "fvp_concussion_history"
+            console.log(index)
+            forms[index].concussion_history_follow_up_id = data.concussion_history_follow_up[i]['@id']
+            forms[index].concussion_history_follow_up_name = "concussion_history_follow_up"
         }
         return forms
     }
@@ -1151,6 +1151,7 @@ class FormsTable extends React.Component {
                 display: form => <div>{form.moca_id && <span><a href={form.moca_id}>{form.moca_name}</a> </span>}
                     {form.updrs_id && <span><a href={form.updrs_id}>{form.updrs_name}</a> </span>}
                     {form.concussion_history_id && <span><a href={form.concussion_history_id}>{form.concussion_history_name}</a> </span>}
+                    {form.concussion_history_follow_up_id && <span><a href={form.concussion_history_follow_up_id}>{form.concussion_history_follow_up_name}</a> </span>}
                     {form.visit_contact_id && <span><a href={form.visit_contact_id}>{form.visit_contact_name}</a> </span>}
                     {form.physical_exam_id && <span><a href={form.physical_exam_id}>{form.physical_exam_name}</a> </span>}
                 </div>,
