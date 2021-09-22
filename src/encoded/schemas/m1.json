@@ -303,9 +303,7 @@
     "box_a.changeyr": {
       "title": "1c. Date of status change, year"
     },
-    "box_a.uds_ftld_sect": {
-      "title": "Complete the UDS and FTLD sections below, as appropriate"
-    },
+
     "box_a.uds_ftld_sect.uds_status.protocol": {
       "title": "2a. UDS data collection status changed; subject's new status is (CHECK ONE):"
     },
@@ -392,9 +390,7 @@
     "box_a.changeyr": {
       "title": "1c. Date of status change, year"
     },
-    "box_a.uds_ftld_sect": {
-      "title": "Complete the UDS and FTLD sections below, as appropriate"
-    },
+  
     "box_a.uds_ftld_sect.uds_status.protocol": {
       "title": "2a. UDS data collection status changed; subject's new status is (CHECK ONE):"
     },
@@ -473,7 +469,6 @@
     "box_a.changemo": 1.0,
     "box_a.changedy": 1.0,
     "box_a.changeyr": 1.0,
-    "box_a.uds_ftld_sect": 1.0,
     "box_a.uds_ftld_sect.uds_status.protocol": 1.0,
     "box_a.uds_ftld_sect.uds_status.aconsent": 1.0,
     "box_a.uds_ftld_sect.change_reason.recogim": 1.0,
