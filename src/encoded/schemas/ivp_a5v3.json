@@ -838,7 +838,9 @@
         "medi_cond.arthtypx": {
             "title": "5f1a. Other Arthritis (specify)"
         },
-       
+        "medi_cond.note_a5": {
+            "title": "5f2. Region(s) affected (check all that apply):"
+        },
         "medi_cond.note_a5.arthupex": {
             "title": "5f2a. Region affected: upper extremity"
         },
@@ -1038,7 +1040,9 @@
         "medi_cond.arthtypx": {
             "title": "5f1a. Other Arthritis (specify)"
         },
-     
+        "medi_cond.note_a5": {
+            "title": "5f2. Region(s) affected (check all that apply):"
+        },
         "medi_cond.note_a5.arthupex": {
             "title": "5f2a. Region affected: upper extremity"
         },
@@ -1149,6 +1153,7 @@
         "medi_cond.arthrit": 1.0,
         "medi_cond.arthtype": 1.0,
         "medi_cond.arthtypx": 1.0,
+        "medi_cond.note_a5": 1.0,
         "medi_cond.note_a5.arthupex": 1.0,
     
         "medi_cond.incontu": 1.0,

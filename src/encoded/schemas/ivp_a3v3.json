@@ -6,17 +6,7 @@
     "identifyingProperties": [
         "uuid"
     ],
-    "required": [
-        "afffamm",
-        "fadmut",
-        "fadmuso",
-        "fftdmut",
-        "fftdmuso",
-        "fothmut",
-        "fothmuso",
-        "note_a3_1",
-        "note_a3_2"
-    ],
+   
     "additionalProperties": true,
     "mixinProperties": [
      

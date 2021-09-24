@@ -6,24 +6,7 @@
     "identifyingProperties": [
         "uuid"
     ],
-    "required": [
-        "fu_note_z1x_1",
-        "fu_note_z1x_2",
-        "fu_note_z1x_3",
-        "fu_note_z1x_4",
-        "fu_note_z1x_5",
-        "fu_note_z1x_6",
-        "fu_note_z1x_7",
-        "fu_note_z1x_8",
-        "fu_note_z1x_9",
-        "fu_note_z1x_10",
-        "fu_note_z1x_11",
-        "fu_note_z1x_12",
-        "fu_note_z1x_13",
-        "fu_note_z1x_14",
-        "fu_note_z1x_15",
-        "fu_cls_form"
-    ],
+ 
     "additionalProperties": false,
     "mixinProperties": [
         {

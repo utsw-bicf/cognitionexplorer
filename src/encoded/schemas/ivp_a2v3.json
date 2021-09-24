@@ -8,25 +8,7 @@
         "uuid"
     ],
     "additionalProperties": false,
-    "required": [
-        "patient",
-        "adcid",
-        "visdate",
-        "visitnum",
-        "initials",
-        "inbirmo",
-        "inbiryr",
-        "insex",
-        "inhisp",
-        "inrace",
-        "inrasec",
-        "inrater",
-        "ineduc",
-        "inrelto",
-        "inknown",
-        "inlivwth",
-        "inrely"
-    ],
+    
     "mixinProperties": [
        
         {

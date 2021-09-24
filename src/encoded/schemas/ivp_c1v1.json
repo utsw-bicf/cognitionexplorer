@@ -80,11 +80,18 @@
                     "title": "1C Total MMSE score (using D-L-R-O-W)",
                     "description": "0 – 30 ",
                     "type": "string",
-                    "enum": [
-                        "95 Physical problem",
-                        "96 Cognitive/behavior problem",
-                        "97 Other problem",
-                        "98 Verbal refusal"
+                    "anyOf": [
+                        {
+                            "pattern": "^[0-2]?[0-9]$|^30$||^95$|^96$|^97$|^98$"
+                        },
+                        {
+                            "enum": [
+                                "95 Physical problem",
+                                "96 Cognitive/behavior problem",
+                                "97 Other problem",
+                                "98 Verbal refusal"
+                            ]
+                        }
                     ]
                 }
             }
@@ -138,7 +145,7 @@
                     "title": "3C Total number of story units recalled from this current test administration: ",
                     "description": "(0-25, 88 = N/A)",
                     "type": "string",
-                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^88$"
+                    "pattern": "^[0-1]?[0-9]$|^2[0-5]$|^88$|^95$|^96$|^97$|^98$"
                 }
             }
         },

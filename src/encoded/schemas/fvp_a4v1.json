@@ -325,7 +325,7 @@
                     "type": "number",
                     "minimum": 0.00,
                     "maximum": 99999,
-                    "exclusiveMinimum": true
+                    "exclusiveMinimum": false
                 },
                 "PMDSU": {
                     "title": "1D2 Prescription medication D strength units",

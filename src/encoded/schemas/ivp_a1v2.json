@@ -72,14 +72,14 @@
                 "4 Non-ADC study",
                 "5 Clinic sample",
                 "6 Population sample",
-                "7 Non-ADC media appeal (e.g. Alzheimer’s Association)",
+                "7 Non-ADC media appeal (e.g. Alzheimer's Association)",
                 "8 Other",
                 "9 Unknown"
             ]
         },
         "referx": {
             "title": "3a. Principal referral source, other – specify",
-            "description": "Any text or numbers but cannot use single quotes (‘), double quotes (“), ampersands (&), or percentage signs (%).",
+            "description": "Any text or numbers but cannot use single quotes ('‘), double quotes (“), ampersands (&), or percentage signs (%).",
             "type": "string"
         },
         "prestat": {

@@ -1,8 +1,6 @@
 {
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETFORM B8: NEUROLOGICAL EXAMINATION FINDINGS",
     "description": "INSTRUCTIONS: This form must be completed by a clinician with experience in assessing the neurological signs listed below and in attributing the observed findings to a particular syndrome. Please use your best clinical judgment in assigning the syndrome. For additional clarification and examples, see UDS Coding Guidebook for Initial Visit Packet, Form B8. Link to NACC Coding Guidebook",
-    "comment": " ",
-    "id": "/profiles/uds_ivp_b8.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"

@@ -1,25 +1,12 @@
 {
     "title": "NACC Uniform Data Set (UDS) - INITIAL VISIT PACKETForm C2: Neuropsychological BatterScores",
     "description": "INSTRUCTIONS: This form is to be completed by ADC or clinic staff. For test administration and scoring, see \nInstructions for Neuropsychological Battery Form C2. Link to C2 Instructions . Any new subjects who enroll in \nthe UDS after the implementation of UDS3 must be assessed with the new neuropsychological test battery (Form \nC2).\nKEY: If the subject cannot complete any of the following exams, please give the reason by entering one of the \nfollowing codes:\n95/995=Physical problem\n96/996=Cognitive/behavior problem\n97/997=Other problem\n98/998=Verbal refusal",
-    "id": "/profiles/uds_ivp_c2v3.json",
+    "id": "/profiles/ivp_c2v3.json",
     "$schema": "http://json-schema.org/draft-04/schema#",
     "identifyingProperties": [
         "uuid"
     ],
-    "required": [
-        "moca",
-        "admin_rema_btry",
-        "crft_stry_recl",
-        "bens_cplx_figr",
-        "numb_span_test_fwd",
-        "numb_span_test_bkwd",
-        "category_fluency",
-        "trail_make_test",
-        "crft_stry_recl_dely",
-        "bens_cplx_figr_recl",
-        "mint",
-        "verb_fluency_phone_test"
-    ],
+ 
     "additionalProperties": false,
     "mixinProperties": [
         {

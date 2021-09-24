@@ -136,7 +136,7 @@
             }
         },
         "siblings": {
-            "title": "SIBLNGS",
+            "title": "SIBLINGS",
             "type": "object",
             "properties": {
                 "SIBCHG": {
@@ -156,7 +156,7 @@
                     "type": "object",
                     "properties": {
                         "sib1": {
-                            " title": "Sibling 1",
+                            "title": "Sibling 1",
                             "type": "object",
                             "properties": {
                                 "SIB1YOB": {
@@ -198,7 +198,7 @@
                             }
                         },
                         "sib2": {
-                            " title": "Sibling 2",
+                            "title": "Sibling 2",
                             "type": "object",
                             "properties": {
                                 "SIB2YOB": {
@@ -240,7 +240,7 @@
                             }
                         },
                         "sib3": {
-                            " title": "Sibling 3",
+                            "title": "Sibling 3",
                             "type": "object",
                             "properties": {
                                 "SIB3YOB": {
@@ -282,7 +282,7 @@
                             }
                         },
                         "sib4": {
-                            " title": "Sibling 4",
+                            "title": "Sibling 4",
                             "type": "object",
                             "properties": {
                                 "SIB4YOB": {
@@ -324,7 +324,7 @@
                             }
                         },
                         "sib5": {
-                            " title": "Sibling 5",
+                            "title": "Sibling 5",
                             "type": "object",
                             "properties": {
                                 "SIB5YOB": {
@@ -366,7 +366,7 @@
                             }
                         },
                         "sib6": {
-                            " title": "Sibling 6",
+                            "title": "Sibling 6",
                             "type": "object",
                             "properties": {
                                 "SIB6YOB": {
@@ -408,7 +408,7 @@
                             }
                         },
                         "sib7": {
-                            " title": "Sibling 7",
+                            "title": "Sibling 7",
                             "type": "object",
                             "properties": {
                                 "SIB7YOB": {
@@ -450,7 +450,7 @@
                             }
                         },
                         "sib8": {
-                            " title": "Sibling 8",
+                            "title": "Sibling 8",
                             "type": "object",
                             "properties": {
                                 "SIB8YOB": {
@@ -492,7 +492,7 @@
                             }
                         },
                         "sib9": {
-                            " title": "Sibling 9",
+                            "title": "Sibling 9",
                             "type": "object",
                             "properties": {
                                 "SIB9YOB": {
@@ -534,7 +534,7 @@
                             }
                         },
                         "sib10": {
-                            " title": "Sibling 10",
+                            "title": "Sibling 10",
                             "type": "object",
                             "properties": {
                                 "SIB10YOB": {
@@ -571,7 +571,7 @@
                             }
                         },
                         "sib11": {
-                            " title": "Sibling 11",
+                            "title": "Sibling 11",
                             "type": "object",
                             "properties": {
                                 "SIB11YOB": {
@@ -614,7 +614,7 @@
                             }
                         },
                         "sib12": {
-                            " title": "Sibling 12",
+                            "title": "Sibling 12",
                             "type": "object",
                             "properties": {
                                 "SIB12LIV": {
@@ -650,7 +650,7 @@
                             }
                         },
                         "sib13": {
-                            " title": "Sibling 13",
+                            "title": "Sibling 13",
                             "type": "object",
                             "properties": {
                                 "SIB13YOB": {
@@ -687,7 +687,7 @@
                             }
                         },
                         "sib14": {
-                            " title": "Sibling 14",
+                            "title": "Sibling 14",
                             "type": "object",
                             "properties": {
                                 "SIB14YOB": {
@@ -724,7 +724,7 @@
                             }
                         },
                         "sib15": {
-                            " title": "Sibling 15",
+                            "title": "Sibling 15",
                             "type": "object",
                             "properties": {
                                 "SIB15YOB": {
@@ -761,7 +761,7 @@
                             }
                         },
                         "sib16": {
-                            " title": "Sibling 16",
+                            "title": "Sibling 16",
                             "type": "object",
                             "properties": {
                                 "SIB16YOB": {
@@ -798,7 +798,7 @@
                             }
                         },
                         "sib17": {
-                            " title": "Sibling 17",
+                            "title": "Sibling 17",
                             "type": "object",
                             "properties": {
                                 "SIB17YOB": {
@@ -835,7 +835,7 @@
                             }
                         },
                         "sib18": {
-                            " title": "Sibling 18",
+                            "title": "Sibling 18",
                             "type": "object",
                             "properties": {
                                 "SIB18YOB": {
@@ -872,7 +872,7 @@
                             }
                         },
                         "sib19": {
-                            " title": "Sibling 19",
+                            "title": "Sibling 19",
                             "type": "object",
                             "properties": {
                                 "SIB19YOB": {
@@ -909,7 +909,7 @@
                             }
                         },
                         "sib20": {
-                            " title": "Sibling 20",
+                            "title": "Sibling 20",
                             "type": "object",
                             "properties": {
                                 "SIB20YOB": {
