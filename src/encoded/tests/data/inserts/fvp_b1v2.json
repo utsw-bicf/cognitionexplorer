@@ -9,7 +9,7 @@
         "phys_measr": {
             "fu_height": "36.6",
             "fu_weight": "99",
-            "fu_bpsys": "888",
+            "fu_bpsys": "999",
             "fu_bpdias": "130",
             "fu_hrate": "138"
         },
@@ -35,7 +35,7 @@
         "phys_measr": {
             "fu_height": "36.6",
             "fu_weight": "205",
-            "fu_bpsys": "888",
+            "fu_bpsys": "999",
             "fu_bpdias": "137",
             "fu_hrate": "104"
         },
