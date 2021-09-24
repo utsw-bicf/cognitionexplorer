@@ -77,9 +77,9 @@ ORDER = [
     'ivp_b8v2',#pass
     'ivp_b9v2',#pass
     'ivp_c1v2',#failed
-    'ivp_c2v2',
+    # 'ivp_c2v2', #not in version2
     'ivp_d1v2',#pass
-    'ivp_d2v2',
+    # 'ivp_d2v2',# not in version 2
     'ivp_e1v2',#pass
     'ivp_z1v2',#pass
 
