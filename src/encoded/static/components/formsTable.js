@@ -79,12 +79,10 @@ class FormsTable extends React.Component {
       b9v2_name: "",
       c1v2_id: "",
       c1v2_name: "",
-      c2v2_id: "",
-      c2v2_name: "",
+  
       d1v2_id: "",
       d1v2_name: "",
-      d2v2_id: "",
-      d2v2_name: "",
+   
       e1v2_id: "",
       e1v2_name: "",
       z1v2_id: "",
@@ -468,12 +466,10 @@ class FormsTable extends React.Component {
         b9v2_name: "",
         c1v2_id: "",
         c1v2_name: "",
-        c2v2_id: "",
-        c2v2_name: "",
+     
         d1v2_id: "",
         d1v2_name: "",
-        d2v2_id: "",
-        d2v2_name: "",
+       
         e1v2_id: "",
         e1v2_name: "",
         z1v2_id: "",
@@ -1291,8 +1287,6 @@ class FormsTable extends React.Component {
             {/* {form.b7v1_id && <span><a href={form.b7v1_id}>{form.b7v1_name}</a> </span>} */}
             {/* {form.b8v1_id && <span><a href={form.b8v1_id}>{form.b8v1_name}</a> </span>} */}
             {/* {form.b9v1_id && <span><a href={form.b9v1_id}>{form.b9v1_name}</a> </span>} */}
-
-            
           </div>
         ),
       },
@@ -1301,7 +1295,6 @@ class FormsTable extends React.Component {
         title: "Form C",
         display: (form) => (
           <div>
-           
             {form.c1v3_id && (
               <span>
                 <a href={form.c1v3_id}>{form.c1v3_name}</a>{" "}
@@ -1313,9 +1306,8 @@ class FormsTable extends React.Component {
               </span>
             )}
             {/* {form.c1v2_id && <span><a href={form.c1v2_id}>{form.c1v2_name}</a> </span>} */}
-            
-             {/* {form.c1v1_id && <span><a href={form.c1v1_id}>{form.c1v1_name}</a> </span>} */}
 
+            {/* {form.c1v1_id && <span><a href={form.c1v1_id}>{form.c1v1_name}</a> </span>} */}
           </div>
         ),
       },
@@ -1323,7 +1315,6 @@ class FormsTable extends React.Component {
         title: "Form D",
         display: (form) => (
           <div>
-  
             {form.d1v3_id && (
               <span>
                 <a href={form.d1v3_id}>{form.d1v3_name}</a>{" "}
@@ -1335,8 +1326,7 @@ class FormsTable extends React.Component {
               </span>
             )}
             {/* {form.d1v2_id && <span><a href={form.d1v2_id}>{form.d1v2_name}</a> </span>} */}
-                      {/* {form.d1v1_id && <span><a href={form.d1v1_id}>{form.d1v1_name}</a> </span>} */}
-
+            {/* {form.d1v1_id && <span><a href={form.d1v1_id}>{form.d1v1_name}</a> </span>} */}
           </div>
         ),
       },
@@ -1346,7 +1336,6 @@ class FormsTable extends React.Component {
           <div>
             {/* {form.e1v2_id && <span><a href={form.e1v2_id}>{form.e1v2_name}</a> </span>} */}
             {/* {form.e1v1_id && <span><a href={form.e1v1_id}>{form.e1v1_name}</a> </span>} */}
-
           </div>
         ),
       },
@@ -1355,15 +1344,13 @@ class FormsTable extends React.Component {
         title: "Form Z1x",
         display: (form) => (
           <div>
-           
             {form.z1xv3_id && (
               <span>
                 <a href={form.z1xv3_id}>{form.z1xv3_name}</a>{" "}
               </span>
             )}
             {/* {form.z1v2_id && <span><a href={form.z1v2_id}>{form.z1v2_name}</a> </span>} */}
-             {/* {form.z1v1_id && <span><a href={form.z1v1_id}>{form.z1v1_name}</a> </span>} */}
-
+            {/* {form.z1v1_id && <span><a href={form.z1v1_id}>{form.z1v1_name}</a> </span>} */}
           </div>
         ),
       },
