@@ -4,7 +4,7 @@ import re
 from datetime import datetime
 
 URLS = ["https://test.encodedcc.org"]
-MAX_URLS = 5000
+MAX_URLS = 6000
 def query_list(base_url):
     arr = []
     with open('access-recent.log', mode='r') as log_file:

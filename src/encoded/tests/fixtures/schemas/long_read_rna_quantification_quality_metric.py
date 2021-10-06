@@ -6,7 +6,7 @@ def long_read_rna_quantification_quality_metric_1_2(testapp, analysis_step_run_b
     item = {
         'step_run': analysis_step_run_bam['@id'],
         'quality_metric_of': [file_tsv_1_2['@id']],
-        'genes_detected': 5000,
+        'genes_detected': 6000,
         'award': award['@id'],
         'lab': lab['@id']
     }
