@@ -89,57 +89,57 @@ class FormsTable extends React.Component {
       z1v2_name: "",
       // ================================version 1===========================
 
-      // a1v1_id: "",
-      // a1v1_name: "",
-      // a2v1_id: "",
-      // a2v1_name: "",
-      // a3v1_id: "",
-      // a3v1_name: "",
-      // a4v1_id: "",
-      // a4v1_name: "",
-      // a5v1_id: "",
-      // a5v1_name: "",
-      // b1v1_id: "",
-      // b1v1_name: "",
-      // b2v1_id: "",
-      // b2v1_name: "",
-      // b3v1_id: "",
-      // b3v1_name: "",
-      // b4v1_id: "",
-      // b4v1_name: "",
-      // b5v1_id: "",
-      // b5v1_name: "",
-      // b6v1_id: "",
-      // b6v1_name: "",
-      // b7v1_id: "",
-      // b7v1_name: "",
-      // b8v1_id: "",
-      // b8v1_name: "",
-      // b9v1_id: "",
-      // b9v1_name: "",
-      // c1v1_id: "",
-      // c1v1_name: "",
-      // d1v1_id: "",
-      // d1v1_name: "",
-      // e1v1_id: "",
-      // e1v1_name: "",
-      // z1v1_id: "",
-      // z1v1_name: "",
+      a1v1_id: "",
+      a1v1_name: "",
+      a2v1_id: "",
+      a2v1_name: "",
+      a3v1_id: "",
+      a3v1_name: "",
+      a4v1_id: "",
+      a4v1_name: "",
+      a5v1_id: "",
+      a5v1_name: "",
+      b1v1_id: "",
+      b1v1_name: "",
+      b2v1_id: "",
+      b2v1_name: "",
+      b3v1_id: "",
+      b3v1_name: "",
+      b4v1_id: "",
+      b4v1_name: "",
+      b5v1_id: "",
+      b5v1_name: "",
+      b6v1_id: "",
+      b6v1_name: "",
+      b7v1_id: "",
+      b7v1_name: "",
+      b8v1_id: "",
+      b8v1_name: "",
+      b9v1_id: "",
+      b9v1_name: "",
+      c1v1_id: "",
+      c1v1_name: "",
+      d1v1_id: "",
+      d1v1_name: "",
+      e1v1_id: "",
+      e1v1_name: "",
+      z1v1_id: "",
+      z1v1_name: "",
       // =========================local form===========================
-      m1_name: "",
-      m1_id: "",
-      local_form_name: "",
-      local_form_id: "",
-      concussion_history_id: "",
-      concussion_history_name: "",
-      moca_name: "",
-      moca_id: "",
-      updrs_name: "",
-      updrs_id: "",
-      visit_contact_name: "",
-      visit_contact_id: "",
-      physical_exam_name: "",
-      physical_exam_id: "",
+      // m1_name: "",
+      // m1_id: "",
+      // local_form_name: "",
+      // local_form_id: "",
+      // concussion_history_id: "",
+      // concussion_history_name: "",
+      // moca_name: "",
+      // moca_id: "",
+      // updrs_name: "",
+      // updrs_id: "",
+      // visit_contact_name: "",
+      // visit_contact_id: "",
+      // physical_exam_name: "",
+      // physical_exam_id: "",
     };
 
     // ================================= initial visits version 3====================================
@@ -299,14 +299,14 @@ class FormsTable extends React.Component {
     }
     // =================================initial visits version 1====================================
 
-    // if (data.ivp_a1v1.length > 0) {
-    //   visitObj.a1v1_id = data.ivp_a1v1[0]["@id"];
-    //   visitObj.a1v1_name = "ivp_a1v1";
-    // }
-    // if (data.ivp_a2v1.length > 0) {
-    //   visitObj.a2v1_id = data.ivp_a2v1[0]["@id"];
-    //   visitObj.a2v1_name = "ivp_a2v1";
-    // }
+    if (data.ivp_a1v1.length > 0) {
+      visitObj.a1v1_id = data.ivp_a1v1[0]["@id"];
+      visitObj.a1v1_name = "ivp_a1v1";
+    }
+    if (data.ivp_a2v1.length > 0) {
+      visitObj.a2v1_id = data.ivp_a2v1[0]["@id"];
+      visitObj.a2v1_name = "ivp_a2v1";
+    }
     // if (data.ivp_a3v1.length > 0) {
     //   visitObj.a3v1_id = data.ivp_a3v1[0]["@id"];
     //   visitObj.a3v1_name = "ivp_a3v1";
@@ -315,83 +315,83 @@ class FormsTable extends React.Component {
     //   visitObj.a4v1_id = data.ivp_a4v1[0]["@id"];
     //   visitObj.a4v1_name = "ivp_a4v1";
     // }
-    // if (data.ivp_a5v1.length > 0) {
-    //   visitObj.a5v1_id = data.ivp_a5v1[0]["@id"];
-    //   visitObj.a5v1_name = "ivp_a5v1";
-    // }
-    // if (data.ivp_b1v1.length > 0) {
-    //   visitObj.b1v1_id = data.ivp_b1v1[0]["@id"];
-    //   visitObj.b1v1_name = "ivp_b1v1";
-    // }
-    // if (data.ivp_b2v1.length > 0) {
-    //   visitObj.b2v1_id = data.ivp_b2v1[0]["@id"];
-    //   visitObj.b2v1_name = "ivp_b2v1";
-    // }
-    // if (data.ivp_b3v1.length > 0) {
-    //   visitObj.b3v1_id = data.ivp_b3v1[0]["@id"];
-    //   visitObj.b3v1_name = "ivp_b3v1";
-    // }
-    // if (data.ivp_b4v1.length > 0) {
-    //   visitObj.b4v1_id = data.ivp_b4v1[0]["@id"];
-    //   visitObj.b4v1_name = "ivp_b4v1";
-    // }
-    // if (data.ivp_b5v1.length > 0) {
-    //   visitObj.b5v1_id = data.ivp_b5v1[0]["@id"];
-    //   visitObj.b5v1_name = "ivp_b5v1";
-    // }
-    // if (data.ivp_b6v1.length > 0) {
-    //   visitObj.b6v1_id = data.ivp_b6v1[0]["@id"];
-    //   visitObj.b6v1_name = "ivp_b6v1";
-    // }
-    // if (data.ivp_b7v1.length > 0) {
-    //   visitObj.b7v1_id = data.ivp_b7v1[0]["@id"];
-    //   visitObj.b7v1_name = "ivp_b7v1";
-    // }
-    // if (data.ivp_b8v1.length > 0) {
-    //   visitObj.b8v1_id = data.ivp_b8v1[0]["@id"];
-    //   visitObj.b8v1_name = "ivp_b8v1";
-    // }
-    // if (data.ivp_b9v1.length > 0) {
-    //   visitObj.b9v1_id = data.ivp_b9v1[0]["@id"];
-    //   visitObj.b9v1_name = "ivp_b9v1";
-    // }
-    // if (data.ivp_c1v1.length > 0) {
-    //   visitObj.c1v1_id = data.ivp_c1v1[0]["@id"];
-    //   visitObj.c1v1_name = "ivp_c1v1";
-    // }
-    // if (data.ivp_d1v1.length > 0) {
-    //   visitObj.d1v1_id = data.ivp_d1v1[0]["@id"];
-    //   visitObj.d1v1_name = "ivp_d1v1";
-    // }
-    // if (data.ivp_e1v1.length > 0) {
-    //   visitObj.e1v1_id = data.ivp_e1v1[0]["@id"];
-    //   visitObj.e1v1_name = "ivp_e1v1";
-    // }
-    // if (data.ivp_z1v1.length > 0) {
-    //   visitObj.z1v1_id = data.ivp_z1v1[0]["@id"];
-    //   visitObj.z1v1_name = "ivp_z1v1";
-    // }
+    if (data.ivp_a5v1.length > 0) {
+      visitObj.a5v1_id = data.ivp_a5v1[0]["@id"];
+      visitObj.a5v1_name = "ivp_a5v1";
+    }
+    if (data.ivp_b1v1.length > 0) {
+      visitObj.b1v1_id = data.ivp_b1v1[0]["@id"];
+      visitObj.b1v1_name = "ivp_b1v1";
+    }
+    if (data.ivp_b2v1.length > 0) {
+      visitObj.b2v1_id = data.ivp_b2v1[0]["@id"];
+      visitObj.b2v1_name = "ivp_b2v1";
+    }
+    if (data.ivp_b3v1.length > 0) {
+      visitObj.b3v1_id = data.ivp_b3v1[0]["@id"];
+      visitObj.b3v1_name = "ivp_b3v1";
+    }
+    if (data.ivp_b4v1.length > 0) {
+      visitObj.b4v1_id = data.ivp_b4v1[0]["@id"];
+      visitObj.b4v1_name = "ivp_b4v1";
+    }
+    if (data.ivp_b5v1.length > 0) {
+      visitObj.b5v1_id = data.ivp_b5v1[0]["@id"];
+      visitObj.b5v1_name = "ivp_b5v1";
+    }
+    if (data.ivp_b6v1.length > 0) {
+      visitObj.b6v1_id = data.ivp_b6v1[0]["@id"];
+      visitObj.b6v1_name = "ivp_b6v1";
+    }
+    if (data.ivp_b7v1.length > 0) {
+      visitObj.b7v1_id = data.ivp_b7v1[0]["@id"];
+      visitObj.b7v1_name = "ivp_b7v1";
+    }
+    if (data.ivp_b8v1.length > 0) {
+      visitObj.b8v1_id = data.ivp_b8v1[0]["@id"];
+      visitObj.b8v1_name = "ivp_b8v1";
+    }
+    if (data.ivp_b9v1.length > 0) {
+      visitObj.b9v1_id = data.ivp_b9v1[0]["@id"];
+      visitObj.b9v1_name = "ivp_b9v1";
+    }
+    if (data.ivp_c1v1.length > 0) {
+      visitObj.c1v1_id = data.ivp_c1v1[0]["@id"];
+      visitObj.c1v1_name = "ivp_c1v1";
+    }
+    if (data.ivp_d1v1.length > 0) {
+      visitObj.d1v1_id = data.ivp_d1v1[0]["@id"];
+      visitObj.d1v1_name = "ivp_d1v1";
+    }
+    if (data.ivp_e1v1.length > 0) {
+      visitObj.e1v1_id = data.ivp_e1v1[0]["@id"];
+      visitObj.e1v1_name = "ivp_e1v1";
+    }
+    if (data.ivp_z1v1.length > 0) {
+      visitObj.z1v1_id = data.ivp_z1v1[0]["@id"];
+      visitObj.z1v1_name = "ivp_z1v1";
+    }
     // =================================initial visits local version ====================================
-    if (data.concussion_history.length > 0) {
-      visitObj.concussion_history_id = data.concussion_history[0]["@id"];
-      visitObj.concussion_history_name = "concussion_history";
-    }
-    if (data.updrs.length > 0) {
-      visitObj.updrs_id = data.updrs[0]["@id"];
-      visitObj.updrs_name = "UPDRS";
-    }
-    if (data.visit_contact.length > 0) {
-      visitObj.visit_contact_id = data.visit_contact[0]["@id"];
-      visitObj.visit_contact_name = "visit/contact";
-    }
-    if (data.physical_exam.length > 0) {
-      visitObj.physical_exam_id = data.physical_exam[0]["@id"];
-      visitObj.physical_exam_name = "physical_exam";
-    }
-    if (data.moca.length > 0) {
-      visitObj.moca_id = data.moca[0]["@id"];
-      visitObj.moca_name = "MOCA";
-    }
+    // if (data.concussion_history.length > 0) {
+    //   visitObj.concussion_history_id = data.concussion_history[0]["@id"];
+    //   visitObj.concussion_history_name = "concussion_history";
+    // }
+    // if (data.updrs.length > 0) {
+    //   visitObj.updrs_id = data.updrs[0]["@id"];
+    //   visitObj.updrs_name = "UPDRS";
+    // }
+    // if (data.visit_contact.length > 0) {
+    //   visitObj.visit_contact_id = data.visit_contact[0]["@id"];
+    //   visitObj.visit_contact_name = "visit/contact";
+    // }
+    // if (data.physical_exam.length > 0) {
+    //   visitObj.physical_exam_id = data.physical_exam[0]["@id"];
+    //   visitObj.physical_exam_name = "physical_exam";
+    // }
+    // if (data.moca.length > 0) {
+    //   visitObj.moca_id = data.moca[0]["@id"];
+    //   visitObj.moca_name = "MOCA";
+    // }
     forms[0] = visitObj;
     let followUpVisitTimes = this.getFollowUpVisitTimes(data);
 
@@ -476,57 +476,57 @@ class FormsTable extends React.Component {
         z1v2_name: "",
         // ================================fvp version 1===========================
 
-        // a1v1_id: "",
-        // a1v1_name: "",
-        // a2v1_id: "",
-        // a2v1_name: "",
-        // a3v1_id: "",
-        // a3v1_name: "",
-        // a4v1_id: "",
-        // a4v1_name: "",
-        // a5v1_id: "",
-        // a5v1_name: "",
-        // b1v1_id: "",
-        // b1v1_name: "",
-        // b2v1_id: "",
-        // b2v1_name: "",
-        // b3v1_id: "",
-        // b3v1_name: "",
-        // b4v1_id: "",
-        // b4v1_name: "",
-        // b5v1_id: "",
-        // b5v1_name: "",
-        // b6v1_id: "",
-        // b6v1_name: "",
-        // b7v1_id: "",
-        // b7v1_name: "",
-        // b8v1_id: "",
-        // b8v1_name: "",
-        // b9v1_id: "",
-        // b9v1_name: "",
-        // c1v1_id: "",
-        // c1v1_name: "",
-        // d1v1_id: "",
-        // d1v1_name: "",
-        // e1v1_id: "",
-        // e1v1_name: "",
-        // z1v1_id: "",
-        // z1v1_name: "",
+        a1v1_id: "",
+        a1v1_name: "",
+        a2v1_id: "",
+        a2v1_name: "",
+        a3v1_id: "",
+        a3v1_name: "",
+        a4v1_id: "",
+        a4v1_name: "",
+        a5v1_id: "",
+        a5v1_name: "",
+        b1v1_id: "",
+        b1v1_name: "",
+        b2v1_id: "",
+        b2v1_name: "",
+        b3v1_id: "",
+        b3v1_name: "",
+        b4v1_id: "",
+        b4v1_name: "",
+        b5v1_id: "",
+        b5v1_name: "",
+        b6v1_id: "",
+        b6v1_name: "",
+        b7v1_id: "",
+        b7v1_name: "",
+        b8v1_id: "",
+        b8v1_name: "",
+        b9v1_id: "",
+        b9v1_name: "",
+        c1v1_id: "",
+        c1v1_name: "",
+        d1v1_id: "",
+        d1v1_name: "",
+        e1v1_id: "",
+        e1v1_name: "",
+        z1v1_id: "",
+        z1v1_name: "",
         // =========================fvp local form===========================
-        m1_name: "",
-        m1_id: "",
-        local_form_name: "",
-        local_form_id: "",
-        concussion_history_id: "",
-        concussion_history_name: "",
-        moca_name: "",
-        moca_id: "",
-        updrs_name: "",
-        updrs_id: "",
-        visit_contact_name: "",
-        visit_contact_id: "",
-        physical_exam_name: "",
-        physical_exam_id: "",
+        // m1_name: "",
+        // m1_id: "",
+        // local_form_name: "",
+        // local_form_id: "",
+        // concussion_history_id: "",
+        // concussion_history_name: "",
+        // moca_name: "",
+        // moca_id: "",
+        // updrs_name: "",
+        // updrs_id: "",
+        // visit_contact_name: "",
+        // visit_contact_id: "",
+        // physical_exam_name: "",
+        // physical_exam_id: "",
       };
       forms.push(visitObj);
     }
@@ -753,192 +753,192 @@ class FormsTable extends React.Component {
     }
 
     // =================================follow-up visits version 1====================================
-    // for (let i = 0; i < data.fvp_a1v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_a1v1[i]["visdate"]) + 1;
+    for (let i = 0; i < data.fvp_a1v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_a1v1[i]["visdate"]) + 1;
 
-    //   forms[index].a1v1_id = data.fvp_a1v1[i]["@id"];
-    //   forms[index].a1v1_name = "fvp_a1v1";
+      forms[index].a1v1_id = data.fvp_a1v1[i]["@id"];
+      forms[index].a1v1_name = "fvp_a1v1";
+    }
+    for (let i = 0; i < data.fvp_a2v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_a2v1[i]["visdate"]) + 1;
+
+      forms[index].a2v1_id = data.fvp_a2v1[i]["@id"];
+      forms[index].a2v1_name = "fvp_a2v1";
+    }
+    // for (let i = 0; i < data.fvp_a3v1.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.fvp_a3v1[i]["visdate"]) + 1;
+
+    //   forms[index].a3v1_id = data.fvp_a3v1[i]["@id"];
+    //   forms[index].a3v1_name = "fvp_a3v1";
     // }
-    // for (let i = 0; i < data.fvp_a2v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_a2v1[i]["visdate"]) + 1;
+    // for (let i = 0; i < data.fvp_a4v1.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.fvp_a4v1[i]["visdate"]) + 1;
 
-    //   forms[index].a2v1_id = data.fvp_a2v1[i]["@id"];
-    //   forms[index].a2v1_name = "fvp_a2v1";
+    //   forms[index].a4v1_id = data.fvp_a4v1[i]["@id"];
+    //   forms[index].a4v1_name = "fvp_a4v1";
     // }
-    // // for (let i = 0; i < data.fvp_a3v1.length; i++) {
-    // //   let index = followUpVisitTimes.indexOf(data.fvp_a3v1[i]["visdate"]) + 1;
+    for (let i = 0; i < data.fvp_a5v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_a5v1[i]["visdate"]) + 1;
 
-    // //   forms[index].a3v1_id = data.fvp_a3v1[i]["@id"];
-    // //   forms[index].a3v1_name = "fvp_a3v1";
-    // // }
-    // // for (let i = 0; i < data.fvp_a4v1.length; i++) {
-    // //   let index = followUpVisitTimes.indexOf(data.fvp_a4v1[i]["visdate"]) + 1;
+      forms[index].a5v1_id = data.fvp_a5v1[i]["@id"];
+      forms[index].a5v1_name = "fvp_a5v1";
+    }
+    for (let i = 0; i < data.fvp_b1v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b1v1[i]["visdate"]) + 1;
 
-    // //   forms[index].a4v1_id = data.fvp_a4v1[i]["@id"];
-    // //   forms[index].a4v1_name = "fvp_a4v1";
-    // // }
-    // for (let i = 0; i < data.fvp_a5v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_a5v1[i]["visdate"]) + 1;
+      forms[index].b1v1_id = data.fvp_b1v1[i]["@id"];
+      forms[index].b1v1_name = "fvp_b1v1";
+    }
+    for (let i = 0; i < data.fvp_b2v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b2v1[i]["visdate"]) + 1;
 
-    //   forms[index].a5v1_id = data.fvp_a5v1[i]["@id"];
-    //   forms[index].a5v1_name = "fvp_a5v1";
-    // }
-    // for (let i = 0; i < data.fvp_b1v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b1v1[i]["visdate"]) + 1;
+      forms[index].b2v1_id = data.fvp_b2v1[i]["@id"];
+      forms[index].b2v1_name = "fvp_b2v1";
+    }
+    for (let i = 0; i < data.fvp_b3v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b3v1[i]["visdate"]) + 1;
 
-    //   forms[index].b1v1_id = data.fvp_b1v1[i]["@id"];
-    //   forms[index].b1v1_name = "fvp_b1v1";
-    // }
-    // for (let i = 0; i < data.fvp_b2v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b2v1[i]["visdate"]) + 1;
+      forms[index].b3v1_id = data.fvp_b3v1[i]["@id"];
+      forms[index].b3v1_name = "fvp_b3v1";
+    }
+    for (let i = 0; i < data.fvp_b4v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b4v1[i]["visdate"]) + 1;
 
-    //   forms[index].b2v1_id = data.fvp_b2v1[i]["@id"];
-    //   forms[index].b2v1_name = "fvp_b2v1";
-    // }
-    // for (let i = 0; i < data.fvp_b3v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b3v1[i]["visdate"]) + 1;
+      forms[index].b4v1_id = data.fvp_b4v1[i]["@id"];
+      forms[index].b4v1_name = "fvp_b4v1";
+    }
+    for (let i = 0; i < data.fvp_b5v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b5v1[i]["visdate"]) + 1;
 
-    //   forms[index].b3v1_id = data.fvp_b3v1[i]["@id"];
-    //   forms[index].b3v1_name = "fvp_b3v1";
-    // }
-    // for (let i = 0; i < data.fvp_b4v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b4v1[i]["visdate"]) + 1;
+      forms[index].b5v1_id = data.fvp_b5v1[i]["@id"];
+      forms[index].b5v1_name = "fvp_b5v1";
+    }
+    for (let i = 0; i < data.fvp_b6v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b6v1[i]["visdate"]) + 1;
 
-    //   forms[index].b4v1_id = data.fvp_b4v1[i]["@id"];
-    //   forms[index].b4v1_name = "fvp_b4v1";
-    // }
-    // for (let i = 0; i < data.fvp_b5v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b5v1[i]["visdate"]) + 1;
+      forms[index].b6v1_id = data.fvp_b6v1[i]["@id"];
+      forms[index].b6v1_name = "fvp_b6v1";
+    }
+    for (let i = 0; i < data.fvp_b7v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b7v1[i]["visdate"]) + 1;
 
-    //   forms[index].b5v1_id = data.fvp_b5v1[i]["@id"];
-    //   forms[index].b5v1_name = "fvp_b5v1";
-    // }
-    // for (let i = 0; i < data.fvp_b6v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b6v1[i]["visdate"]) + 1;
+      forms[index].b7v1_id = data.fvp_b7v1[i]["@id"];
+      forms[index].b7v1_name = "fvp_b7v1";
+    }
+    for (let i = 0; i < data.fvp_b8v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b8v1[i]["visdate"]) + 1;
 
-    //   forms[index].b6v1_id = data.fvp_b6v1[i]["@id"];
-    //   forms[index].b6v1_name = "fvp_b6v1";
-    // }
-    // for (let i = 0; i < data.fvp_b7v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b7v1[i]["visdate"]) + 1;
+      forms[index].b8v1_id = data.fvp_b8v1[i]["@id"];
+      forms[index].b8v1_name = "fvp_b8v1";
+    }
+    for (let i = 0; i < data.fvp_b9v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_b9v1[i]["visdate"]) + 1;
 
-    //   forms[index].b7v1_id = data.fvp_b7v1[i]["@id"];
-    //   forms[index].b7v1_name = "fvp_b7v1";
-    // }
-    // for (let i = 0; i < data.fvp_b8v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b8v1[i]["visdate"]) + 1;
+      forms[index].b9v1_id = data.fvp_b9v1[i]["@id"];
+      forms[index].b9v1_name = "fvp_b9v1";
+    }
+    for (let i = 0; i < data.fvp_c1v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_c1v1[i]["visdate"]) + 1;
 
-    //   forms[index].b8v1_id = data.fvp_b8v1[i]["@id"];
-    //   forms[index].b8v1_name = "fvp_b8v1";
-    // }
-    // for (let i = 0; i < data.fvp_b9v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_b9v1[i]["visdate"]) + 1;
+      forms[index].c1v1_id = data.fvp_c1v1[i]["@id"];
+      forms[index].c1v1_name = "fvp_c1v1";
+    }
+    for (let i = 0; i < data.fvp_d1v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_d1v1[i]["visdate"]) + 1;
 
-    //   forms[index].b9v1_id = data.fvp_b9v1[i]["@id"];
-    //   forms[index].b9v1_name = "fvp_b9v1";
-    // }
-    // for (let i = 0; i < data.fvp_c1v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_c1v1[i]["visdate"]) + 1;
+      forms[index].d1v1_id = data.fvp_d1v1[i]["@id"];
+      forms[index].d1v1_name = "fvp_d1v1";
+    }
+    for (let i = 0; i < data.fvp_e1v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_e1v1[i]["visdate"]) + 1;
 
-    //   forms[index].c1v1_id = data.fvp_c1v1[i]["@id"];
-    //   forms[index].c1v1_name = "fvp_c1v1";
-    // }
-    // for (let i = 0; i < data.fvp_d1v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_d1v1[i]["visdate"]) + 1;
+      forms[index].e1v1_id = data.fvp_e1v1[i]["@id"];
+      forms[index].e1v1_name = "fvp_e1v1";
+    }
+    for (let i = 0; i < data.fvp_z1v1.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_z1v1[i]["visdate"]) + 1;
 
-    //   forms[index].d1v1_id = data.fvp_d1v1[i]["@id"];
-    //   forms[index].d1v1_name = "fvp_d1v1";
-    // }
-    // for (let i = 0; i < data.fvp_e1v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_e1v1[i]["visdate"]) + 1;
-
-    //   forms[index].e1v1_id = data.fvp_e1v1[i]["@id"];
-    //   forms[index].e1v1_name = "fvp_e1v1";
-    // }
-    // for (let i = 0; i < data.fvp_z1v1.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_z1v1[i]["visdate"]) + 1;
-
-    //   forms[index].z1v1_id = data.fvp_z1v1[i]["@id"];
-    //   forms[index].z1v1_name = "fvp_z1v1";
-    // }
+      forms[index].z1v1_id = data.fvp_z1v1[i]["@id"];
+      forms[index].z1v1_name = "fvp_z1v1";
+    }
 
     // =================================telephone follow-up visits====================================
 
-    for (let i = 0; i < data.tvp_a1.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_a1[i]["visdate"]) + 1;
+    // for (let i = 0; i < data.tvp_a1.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_a1[i]["visdate"]) + 1;
 
-      forms[index].a1_id = data.tvp_a1[i]["@id"];
-      forms[index].a1_name = "tvp_a1";
-    }
-    for (let i = 0; i < data.tvp_a3.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_a3[i]["visdate"]) + 1;
+    //   forms[index].a1_id = data.tvp_a1[i]["@id"];
+    //   forms[index].a1_name = "tvp_a1";
+    // }
+    // for (let i = 0; i < data.tvp_a3.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_a3[i]["visdate"]) + 1;
 
-      forms[index].a3_id = data.tvp_a3[i]["@id"];
-      forms[index].a3_name = "tvp_a3";
-    }
-    for (let i = 0; i < data.tvp_z1x.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_z1x[i]["visdate"]) + 1;
-      forms[index].z1x_id = data.tvp_z1x[i]["@id"];
-      forms[index].z1x_name = "tvp_z1x";
-    }
+    //   forms[index].a3_id = data.tvp_a3[i]["@id"];
+    //   forms[index].a3_name = "tvp_a3";
+    // }
+    // for (let i = 0; i < data.tvp_z1x.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_z1x[i]["visdate"]) + 1;
+    //   forms[index].z1x_id = data.tvp_z1x[i]["@id"];
+    //   forms[index].z1x_name = "tvp_z1x";
+    // }
 
-    for (let i = 0; i < data.tvp_d2.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_d2[i]["visdate"]) + 1;
+    // for (let i = 0; i < data.tvp_d2.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_d2[i]["visdate"]) + 1;
 
-      forms[index].d2_id = data.tvp_d2[i]["@id"];
-      forms[index].d2_name = "tvp_d2";
-    }
+    //   forms[index].d2_id = data.tvp_d2[i]["@id"];
+    //   forms[index].d2_name = "tvp_d2";
+    // }
 
-    for (let i = 0; i < data.tvp_t1.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_t1[i]["visdate"]) + 1;
-      console.log(index);
-      forms[index].t1_id = data.tvp_t1[i]["@id"];
-      forms[index].t1_name = "tvp_t1";
-    }
-    for (let i = 0; i < data.tvp_b4.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_b4[i]["visdate"]) + 1;
+    // for (let i = 0; i < data.tvp_t1.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_t1[i]["visdate"]) + 1;
+    //   console.log(index);
+    //   forms[index].t1_id = data.tvp_t1[i]["@id"];
+    //   forms[index].t1_name = "tvp_t1";
+    // }
+    // for (let i = 0; i < data.tvp_b4.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_b4[i]["visdate"]) + 1;
 
-      forms[index].b4_id = data.tvp_b4[i]["@id"];
-      forms[index].b4_name = "tvp_b4";
-    }
-    for (let i = 0; i < data.tvp_b7.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_b7[i]["visdate"]) + 1;
+    //   forms[index].b4_id = data.tvp_b4[i]["@id"];
+    //   forms[index].b4_name = "tvp_b4";
+    // }
+    // for (let i = 0; i < data.tvp_b7.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_b7[i]["visdate"]) + 1;
 
-      forms[index].b7_id = data.tvp_b7[i]["@id"];
-      forms[index].b7_name = "tvp_b7";
-    }
-    for (let i = 0; i < data.tvp_b5.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_b5[i]["visdate"]) + 1;
+    //   forms[index].b7_id = data.tvp_b7[i]["@id"];
+    //   forms[index].b7_name = "tvp_b7";
+    // }
+    // for (let i = 0; i < data.tvp_b5.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_b5[i]["visdate"]) + 1;
 
-      forms[index].b5_id = data.tvp_b5[i]["@id"];
-      forms[index].b5_name = "tvp_b5";
-    }
-    for (let i = 0; i < data.tvp_a2.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_a2[i]["visdate"]) + 1;
+    //   forms[index].b5_id = data.tvp_b5[i]["@id"];
+    //   forms[index].b5_name = "tvp_b5";
+    // }
+    // for (let i = 0; i < data.tvp_a2.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_a2[i]["visdate"]) + 1;
 
-      forms[index].a2_id = data.tvp_a2[i]["@id"];
-      forms[index].a2_name = "tvp_a2";
-    }
+    //   forms[index].a2_id = data.tvp_a2[i]["@id"];
+    //   forms[index].a2_name = "tvp_a2";
+    // }
 
-    for (let i = 0; i < data.tvp_a4.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.tvp_a4[i]["visdate"]) + 1;
+    // for (let i = 0; i < data.tvp_a4.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.tvp_a4[i]["visdate"]) + 1;
 
-      forms[index].a4_id = data.tvp_a4[i]["@id"];
-      forms[index].a4_name = "tvp_a4";
-    }
+    //   forms[index].a4_id = data.tvp_a4[i]["@id"];
+    //   forms[index].a4_name = "tvp_a4";
+    // }
 
     // =================================follow-up visits local version====================================
-    for (let i = 0; i < data.concussion_history_follow_up.length; i++) {
-      let index =
-        followUpVisitTimes.indexOf(
-          data.concussion_history_follow_up[i]["visdate"]
-        ) + 1;
-      console.log(index);
-      forms[index].concussion_history_follow_up_id =
-        data.concussion_history_follow_up[i]["@id"];
-      forms[index].concussion_history_follow_up_name =
-        "concussion_history_follow_up";
-    }
+    // for (let i = 0; i < data.concussion_history_follow_up.length; i++) {
+    //   let index =
+    //     followUpVisitTimes.indexOf(
+    //       data.concussion_history_follow_up[i]["visdate"]
+    //     ) + 1;
+    //   console.log(index);
+    //   forms[index].concussion_history_follow_up_id =
+    //     data.concussion_history_follow_up[i]["@id"];
+    //   forms[index].concussion_history_follow_up_name =
+    //     "concussion_history_follow_up";
+    // }
     return forms;
   }
 
@@ -1064,100 +1064,100 @@ class FormsTable extends React.Component {
     );
 
     // ===============================follow-up visits version 1=====================================
-    // data.fvp_a1v1.forEach((element) =>
+    data.fvp_a1v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_a2v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    // data.fvp_a3v1.forEach((element) =>
     //   followUpVisitTimes.push(element["visdate"])
     // );
-    // data.fvp_a2v1.forEach((element) =>
+    // data.fvp_a4v1.forEach((element) =>
     //   followUpVisitTimes.push(element["visdate"])
     // );
-    // // data.fvp_a3v1.forEach((element) =>
-    // //   followUpVisitTimes.push(element["visdate"])
-    // // );
-    // // data.fvp_a4v1.forEach((element) =>
-    // //   followUpVisitTimes.push(element["visdate"])
-    // // );
-    // data.fvp_a5v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b1v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b2v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b3v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b4v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b5v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b6v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b7v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b8v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_b9v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_c1v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_d1v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_e1v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
-    // data.fvp_z1v1.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
+    data.fvp_a5v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b1v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b2v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b3v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b4v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b5v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b6v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b7v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b8v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_b9v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_c1v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_d1v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_e1v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
+    data.fvp_z1v1.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
     // =============================telephone follow-up visits==========================
-    data.tvp_a1.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
-    data.tvp_a2.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
-    data.tvp_a3.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
-    data.tvp_b5.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
+    // data.tvp_a1.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
+    // data.tvp_a2.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
+    // data.tvp_a3.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
+    // data.tvp_b5.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
 
-    data.tvp_a1.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
-    data.tvp_z1x.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
-    data.tvp_d2.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
-    data.tvp_t1.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
-    data.tvp_b4.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
-    data.tvp_b7.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
+    // data.tvp_a1.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
+    // data.tvp_z1x.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
+    // data.tvp_d2.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
+    // data.tvp_t1.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
+    // data.tvp_b4.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
+    // data.tvp_b7.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
 
-    data.tvp_a4.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
+    // data.tvp_a4.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
     // ===========================follow-up visits local forms==============================
-    data.concussion_history_follow_up.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
+  //   data.concussion_history_follow_up.forEach((element) =>
+  //     followUpVisitTimes.push(element["visdate"])
+  //   );
     followUpVisitTimes = [...new Set(followUpVisitTimes)];
     followUpVisitTimes = Array.from(followUpVisitTimes);
     followUpVisitTimes.sort(function (a, b) {
@@ -1212,11 +1212,11 @@ class FormsTable extends React.Component {
             {form.a4v2_id && <span><a href={form.a4v2_id}>{form.a4v2_name}</a> </span>}
             {form.a5v2_id && <span><a href={form.a5v2_id}>{form.a5v2_name}</a> </span>}
 
-            {/* {form.a1v1_id && <span><a href={form.a1v1_id}>{form.a1v1_name}</a> </span>} */}
-            {/* {form.a2v1_id && <span><a href={form.a2v1_id}>{form.a2v1_name}</a> </span>} */}
+            {form.a1v1_id && <span><a href={form.a1v1_id}>{form.a1v1_name}</a> </span>}
+            {form.a2v1_id && <span><a href={form.a2v1_id}>{form.a2v1_name}</a> </span>}
             {/* {form.a3v1_id && <span><a href={form.a3v1_id}>{form.a3v1_name}</a> </span>} */}
             {/* {form.a4v1_id && <span><a href={form.a4v1_id}>{form.a4v1_name}</a> </span>} */}
-            {/* {form.a5v1_id && <span><a href={form.a5v1_id}>{form.a5v1_name}</a> </span>} */}
+            {form.a5v1_id && <span><a href={form.a5v1_id}>{form.a5v1_name}</a> </span>}
           </div>
         ),
       },
@@ -1278,15 +1278,15 @@ class FormsTable extends React.Component {
             {form.b8v2_id && <span><a href={form.b8v2_id}>{form.b8v2_name}</a> </span>}
             {form.b9v2_id && <span><a href={form.b9v2_id}>{form.b9v2_name}</a> </span>}
 
-            {/* {form.b1v1_id && <span><a href={form.b1v1_id}>{form.b1v1_name}</a> </span>} */}
-            {/* {form.b2v1_id && <span><a href={form.b2v1_id}>{form.b2v1_name}</a> </span>} */}
-            {/* {form.b3v1_id && <span><a href={form.b3v1_id}>{form.b3v1_name}</a> </span>} */}
-            {/* {form.b4v1_id && <span><a href={form.b4v1_id}>{form.b4v1_name}</a> </span>} */}
-            {/* {form.b5v1_id && <span><a href={form.b5v1_id}>{form.b5v1_name}</a> </span>} */}
-            {/* {form.b6v1_id && <span><a href={form.b6v1_id}>{form.b6v1_name}</a> </span>} */}
-            {/* {form.b7v1_id && <span><a href={form.b7v1_id}>{form.b7v1_name}</a> </span>} */}
-            {/* {form.b8v1_id && <span><a href={form.b8v1_id}>{form.b8v1_name}</a> </span>} */}
-            {/* {form.b9v1_id && <span><a href={form.b9v1_id}>{form.b9v1_name}</a> </span>} */}
+            {form.b1v1_id && <span><a href={form.b1v1_id}>{form.b1v1_name}</a> </span>}
+            {form.b2v1_id && <span><a href={form.b2v1_id}>{form.b2v1_name}</a> </span>}
+            {form.b3v1_id && <span><a href={form.b3v1_id}>{form.b3v1_name}</a> </span>}
+            {form.b4v1_id && <span><a href={form.b4v1_id}>{form.b4v1_name}</a> </span>}
+            {form.b5v1_id && <span><a href={form.b5v1_id}>{form.b5v1_name}</a> </span>}
+            {form.b6v1_id && <span><a href={form.b6v1_id}>{form.b6v1_name}</a> </span>}
+            {form.b7v1_id && <span><a href={form.b7v1_id}>{form.b7v1_name}</a> </span>}
+            {form.b8v1_id && <span><a href={form.b8v1_id}>{form.b8v1_name}</a> </span>}
+            {form.b9v1_id && <span><a href={form.b9v1_id}>{form.b9v1_name}</a> </span>}
           </div>
         ),
       },
@@ -1307,7 +1307,7 @@ class FormsTable extends React.Component {
             )}
             {form.c1v2_id && <span><a href={form.c1v2_id}>{form.c1v2_name}</a> </span>}
 
-            {/* {form.c1v1_id && <span><a href={form.c1v1_id}>{form.c1v1_name}</a> </span>} */}
+            {form.c1v1_id && <span><a href={form.c1v1_id}>{form.c1v1_name}</a> </span>}
           </div>
         ),
       },
@@ -1326,7 +1326,7 @@ class FormsTable extends React.Component {
               </span>
             )}
             {form.d1v2_id && <span><a href={form.d1v2_id}>{form.d1v2_name}</a> </span>}
-            {/* {form.d1v1_id && <span><a href={form.d1v1_id}>{form.d1v1_name}</a> </span>} */}
+            {form.d1v1_id && <span><a href={form.d1v1_id}>{form.d1v1_name}</a> </span>}
           </div>
         ),
       },
@@ -1335,7 +1335,7 @@ class FormsTable extends React.Component {
         display: (form) => (
           <div>
             {form.e1v2_id && <span><a href={form.e1v2_id}>{form.e1v2_name}</a> </span>}
-            {/* {form.e1v1_id && <span><a href={form.e1v1_id}>{form.e1v1_name}</a> </span>} */}
+            {form.e1v1_id && <span><a href={form.e1v1_id}>{form.e1v1_name}</a> </span>}
           </div>
         ),
       },
@@ -1350,60 +1350,60 @@ class FormsTable extends React.Component {
               </span>
             )}
             {form.z1v2_id && <span><a href={form.z1v2_id}>{form.z1v2_name}</a> </span>}
-            {/* {form.z1v1_id && <span><a href={form.z1v1_id}>{form.z1v1_name}</a> </span>} */}
+            {form.z1v1_id && <span><a href={form.z1v1_id}>{form.z1v1_name}</a> </span>}
           </div>
         ),
       },
-      t1_id: {
-        title: "Form T1",
-        display: (form) => <div>{<a href={form.t1_id}>{form.t1_name}</a>}</div>,
-      },
-      m1_id: {
-        title: "Form M1",
-        display: (form) => <a href={form.m1_id}>{form.m1_name}</a>,
-      },
+      // t1_id: {
+      //   title: "Form T1",
+      //   display: (form) => <div>{<a href={form.t1_id}>{form.t1_name}</a>}</div>,
+      // },
+      // m1_id: {
+      //   title: "Form M1",
+      //   display: (form) => <a href={form.m1_id}>{form.m1_name}</a>,
+      // },
 
-      local_form_id: {
-        title: "Local Forms",
-        display: (form) => (
-          <div>
-            {form.moca_id && (
-              <span>
-                <a href={form.moca_id}>{form.moca_name}</a>{" "}
-              </span>
-            )}
-            {form.updrs_id && (
-              <span>
-                <a href={form.updrs_id}>{form.updrs_name}</a>{" "}
-              </span>
-            )}
-            {form.concussion_history_id && (
-              <span>
-                <a href={form.concussion_history_id}>
-                  {form.concussion_history_name}
-                </a>{" "}
-              </span>
-            )}
-            {form.concussion_history_follow_up_id && (
-              <span>
-                <a href={form.concussion_history_follow_up_id}>
-                  {form.concussion_history_follow_up_name}
-                </a>{" "}
-              </span>
-            )}
-            {form.visit_contact_id && (
-              <span>
-                <a href={form.visit_contact_id}>{form.visit_contact_name}</a>{" "}
-              </span>
-            )}
-            {form.physical_exam_id && (
-              <span>
-                <a href={form.physical_exam_id}>{form.physical_exam_name}</a>{" "}
-              </span>
-            )}
-          </div>
-        ),
-      },
+      // local_form_id: {
+      //   title: "Local Forms",
+      //   display: (form) => (
+      //     <div>
+      //       {form.moca_id && (
+      //         <span>
+      //           <a href={form.moca_id}>{form.moca_name}</a>{" "}
+      //         </span>
+      //       )}
+      //       {form.updrs_id && (
+      //         <span>
+      //           <a href={form.updrs_id}>{form.updrs_name}</a>{" "}
+      //         </span>
+      //       )}
+      //       {form.concussion_history_id && (
+      //         <span>
+      //           <a href={form.concussion_history_id}>
+      //             {form.concussion_history_name}
+      //           </a>{" "}
+      //         </span>
+      //       )}
+      //       {form.concussion_history_follow_up_id && (
+      //         <span>
+      //           <a href={form.concussion_history_follow_up_id}>
+      //             {form.concussion_history_follow_up_name}
+      //           </a>{" "}
+      //         </span>
+      //       )}
+      //       {form.visit_contact_id && (
+      //         <span>
+      //           <a href={form.visit_contact_id}>{form.visit_contact_name}</a>{" "}
+      //         </span>
+      //       )}
+      //       {form.physical_exam_id && (
+      //         <span>
+      //           <a href={form.physical_exam_id}>{form.physical_exam_name}</a>{" "}
+      //         </span>
+      //       )}
+      //     </div>
+      //   ),
+      // },
     };
     return (
       <SortTablePanel>
