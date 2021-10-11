@@ -159,10 +159,10 @@ class FormsTable extends React.Component {
       visitObj.a3v3_name = "ivp_a3v3";
     }
 
-    if (data.ivp_a4v3.length > 0) {
-      visitObj.a4v3_id = data.ivp_a4v3[0]["@id"];
-      visitObj.a4v3_name = "ivp_a4v3";
-    }
+    // if (data.ivp_a4v3.length > 0) {
+    //   visitObj.a4v3_id = data.ivp_a4v3[0]["@id"];
+    //   visitObj.a4v3_name = "ivp_a4v3";
+    // }
 
     if (data.ivp_a5v3.length > 0) {
       visitObj.a5v3_id = data.ivp_a5v3[0]["@id"];
@@ -553,12 +553,12 @@ class FormsTable extends React.Component {
       forms[index].a3v3_name = "fvp_a3v3";
     }
 
-    for (let i = 0; i < data.fvp_a4v3.length; i++) {
-      let index = followUpVisitTimes.indexOf(data.fvp_a4v3[i]["visdate"]) + 1;
+    // for (let i = 0; i < data.fvp_a4v3.length; i++) {
+    //   let index = followUpVisitTimes.indexOf(data.fvp_a4v3[i]["visdate"]) + 1;
 
-      forms[index].a4v3_id = data.fvp_a4v3[i]["@id"];
-      forms[index].a4v3_name = "fvp_a4v3";
-    }
+    //   forms[index].a4v3_id = data.fvp_a4v3[i]["@id"];
+    //   forms[index].a4v3_name = "fvp_a4v3";
+    // }
 
     for (let i = 0; i < data.fvp_b1v3.length; i++) {
       let index = followUpVisitTimes.indexOf(data.fvp_b1v3[i]["visdate"]) + 1;
@@ -957,9 +957,9 @@ class FormsTable extends React.Component {
       followUpVisitTimes.push(element["visdate"])
     );
 
-    data.fvp_a4v3.forEach((element) =>
-      followUpVisitTimes.push(element["visdate"])
-    );
+    // data.fvp_a4v3.forEach((element) =>
+    //   followUpVisitTimes.push(element["visdate"])
+    // );
 
     data.fvp_b1v3.forEach((element) =>
       followUpVisitTimes.push(element["visdate"])
@@ -1201,11 +1201,11 @@ class FormsTable extends React.Component {
               </span>
             )}
 
-            {form.a4v3_id && (
+            {/* {form.a4v3_id && (
               <span>
                 <a href={form.a4v3_id}>{form.a4v3_name}</a>{" "}
               </span>
-            )}
+            )} */}
             {form.a1v2_id && <span><a href={form.a1v2_id}>{form.a1v2_name}</a> </span>}
             {form.a2v2_id && <span><a href={form.a2v2_id}>{form.a2v2_name}</a> </span>}
             {form.a3v2_id && <span><a href={form.a3v2_id}>{form.a3v2_name}</a> </span>}

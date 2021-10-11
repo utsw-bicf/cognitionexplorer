@@ -58,7 +58,7 @@ class Patient(Item):
         'ivp_a1v3',
         'ivp_a2v3',
         'ivp_a3v3',
-        'ivp_a4v3',
+        # 'ivp_a4v3',
         'ivp_a5v3',
         'ivp_b1v3',
         'ivp_b4v3',
@@ -74,7 +74,7 @@ class Patient(Item):
         'fvp_a1v3',
         'fvp_a2v3',
         'fvp_a3v3',
-        'fvp_a4v3',
+        # 'fvp_a4v3',
         'fvp_b1v3',
         'fvp_b4v3',
         'fvp_b5v3',
@@ -183,7 +183,7 @@ class Patient(Item):
         'ivp_a1v3': ('Ivp_a1v3', 'patient'),
         'ivp_a2v3': ('Ivp_a2v3', 'patient'),
         'ivp_a3v3': ('Ivp_a3v3', 'patient'),
-        'ivp_a4v3': ('Ivp_a4v3', 'patient'),
+        # 'ivp_a4v3': ('Ivp_a4v3', 'patient'),
         'ivp_a5v3': ('Ivp_a5v3', 'patient'),
         'ivp_b1v3': ('Ivp_b1v3', 'patient'),
         'ivp_b4v3': ('Ivp_b4v3', 'patient'),
@@ -199,7 +199,7 @@ class Patient(Item):
         'fvp_a1v3': ('Fvp_a1v3', 'patient'),
         'fvp_a2v3': ('Fvp_a2v3', 'patient'),
         'fvp_a3v3': ('Fvp_a3v3', 'patient'),
-        'fvp_a4v3': ('Fvp_a4v3', 'patient'),
+        # 'fvp_a4v3': ('Fvp_a4v3', 'patient'),
         'fvp_b1v3': ('Fvp_b1v3', 'patient'),
         'fvp_b4v3': ('Fvp_b4v3', 'patient'),
         'fvp_b5v3': ('Fvp_b5v3', 'patient'),
@@ -345,16 +345,16 @@ class Patient(Item):
     def ivp_a3v3(self, request, ivp_a3v3):
         return paths_filtered_by_status(request, ivp_a3v3)
 
-    @calculated_property(schema={
-        "title": "Ivp_a4v3",
-        "type": "array",
-        "items": {
-            "type": 'string',
-            "linkTo": "Ivp_a4v3"
-        },
-    })
-    def ivp_a4v3(self, request, ivp_a4v3):
-        return paths_filtered_by_status(request, ivp_a4v3)
+    # @calculated_property(schema={
+    #     "title": "Ivp_a4v3",
+    #     "type": "array",
+    #     "items": {
+    #         "type": 'string',
+    #         "linkTo": "Ivp_a4v3"
+    #     },
+    # })
+    # def ivp_a4v3(self, request, ivp_a4v3):
+    #     return paths_filtered_by_status(request, ivp_a4v3)
 
     @calculated_property(schema={
         "title": "Ivp_a5v3",
@@ -521,16 +521,16 @@ class Patient(Item):
     def fvp_a3v3(self, request, fvp_a3v3):
         return paths_filtered_by_status(request, fvp_a3v3)
 
-    @calculated_property(schema={
-        "title": "Fvp_a4v3",
-        "type": "array",
-        "items": {
-            "type": 'string',
-            "linkTo": "Fvp_a4v3"
-        },
-    })
-    def fvp_a4v3(self, request, fvp_a4v3):
-        return paths_filtered_by_status(request, fvp_a4v3)
+    # @calculated_property(schema={
+    #     "title": "Fvp_a4v3",
+    #     "type": "array",
+    #     "items": {
+    #         "type": 'string',
+    #         "linkTo": "Fvp_a4v3"
+    #     },
+    # })
+    # def fvp_a4v3(self, request, fvp_a4v3):
+    #     return paths_filtered_by_status(request, fvp_a4v3)
 
     @calculated_property(schema={
         "title": "Fvp_b1v3",
