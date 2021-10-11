@@ -154,15 +154,15 @@ class FormsTable extends React.Component {
       visitObj.a2v3_name = "ivp_a2v3";
     }
 
-    // if (data.ivp_a3v3.length > 0) {
-    //   visitObj.a3v3_id = data.ivp_a3v3[0]["@id"];
-    //   visitObj.a3v3_name = "ivp_a3v3";
-    // }
+    if (data.ivp_a3v3.length > 0) {
+      visitObj.a3v3_id = data.ivp_a3v3[0]["@id"];
+      visitObj.a3v3_name = "ivp_a3v3";
+    }
 
-    // if (data.ivp_a4v3.length > 0) {
-    //   visitObj.a4v3_id = data.ivp_a4v3[0]["@id"];
-    //   visitObj.a4v3_name = "ivp_a4v3";
-    // }
+    if (data.ivp_a4v3.length > 0) {
+      visitObj.a4v3_id = data.ivp_a4v3[0]["@id"];
+      visitObj.a4v3_name = "ivp_a4v3";
+    }
 
     if (data.ivp_a5v3.length > 0) {
       visitObj.a5v3_id = data.ivp_a5v3[0]["@id"];
@@ -546,19 +546,19 @@ class FormsTable extends React.Component {
       forms[index].a2v3_name = "fvp_a2v3";
     }
 
-    // for (let i = 0; i < data.fvp_a3v3.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_a3v3[i]["visdate"]) + 1;
+    for (let i = 0; i < data.fvp_a3v3.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_a3v3[i]["visdate"]) + 1;
 
-    //   forms[index].a3v3_id = data.fvp_a3v3[i]["@id"];
-    //   forms[index].a3v3_name = "fvp_a3v3";
-    // }
+      forms[index].a3v3_id = data.fvp_a3v3[i]["@id"];
+      forms[index].a3v3_name = "fvp_a3v3";
+    }
 
-    // for (let i = 0; i < data.fvp_a4v3.length; i++) {
-    //   let index = followUpVisitTimes.indexOf(data.fvp_a4v3[i]["visdate"]) + 1;
+    for (let i = 0; i < data.fvp_a4v3.length; i++) {
+      let index = followUpVisitTimes.indexOf(data.fvp_a4v3[i]["visdate"]) + 1;
 
-    //   forms[index].a4v3_id = data.fvp_a4v3[i]["@id"];
-    //   forms[index].a4v3_name = "fvp_a4v3";
-    // }
+      forms[index].a4v3_id = data.fvp_a4v3[i]["@id"];
+      forms[index].a4v3_name = "fvp_a4v3";
+    }
 
     for (let i = 0; i < data.fvp_b1v3.length; i++) {
       let index = followUpVisitTimes.indexOf(data.fvp_b1v3[i]["visdate"]) + 1;
@@ -953,13 +953,13 @@ class FormsTable extends React.Component {
       followUpVisitTimes.push(element["visdate"])
     );
 
-    // data.fvp_a3v3.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
+    data.fvp_a3v3.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
 
-    // data.fvp_a4v3.forEach((element) =>
-    //   followUpVisitTimes.push(element["visdate"])
-    // );
+    data.fvp_a4v3.forEach((element) =>
+      followUpVisitTimes.push(element["visdate"])
+    );
 
     data.fvp_b1v3.forEach((element) =>
       followUpVisitTimes.push(element["visdate"])
