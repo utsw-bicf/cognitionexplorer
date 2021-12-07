@@ -48,7 +48,7 @@ const portal = {
                 { id: 'patientmatrix', title: 'Patient Matrix', url: '/matrix/?type=Patient&status=released' },
                 { id: 'sampletmatrix', title: 'Biospecimen Matrix', url: '/matrix/?type=Biospecimen&status=released' },
                 { id: 'sep-mm-2' },
-                { id: 'publications', title: 'Publications', url: '/searchv2_quick/?type=Publication&status=public' },
+                { id: 'publications', title: 'Publications', url: '/search/?type=Publication&status=released' },
             ],
         },
         {
@@ -296,7 +296,7 @@ class App extends React.Component {
             languageDictionary: {
                 title: 'Log in to KCE',
             },
-            allowedConnections: ['KCE'],
+            allowedConnections: ['google-oauth2'],
         });
         this.lock.on('authenticated', this.handleAuth0Login);
 
@@ -315,7 +315,6 @@ class App extends React.Component {
                 lockElements[0].appendChild(privacyDiv);
             }
         });
-
 
         // Initialize browesr history mechanism
         if (this.constructor.historyEnabled()) {
