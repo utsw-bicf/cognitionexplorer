@@ -90,7 +90,7 @@
     "js-cookie": "^2.2.1",
     "jsonschema": "^1.2.6",
     "marked": "^0.3.3",
-    "moment": "^2.25.3",
+    "moment": "^2.29.4",
     "pluralize": "^7.0.0",
     "prop-types": "^15.7.2",
     "pubsub-js": "^1.8.0",
